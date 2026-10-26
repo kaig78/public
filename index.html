@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Kai's Pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a single shelf of cards — reading pages first, then small tools. */
+:root{
+  --bg:#f3f0ea; --card:#fbfaf7; --ink:#1f1d1a; --muted:#6c665d; --line:#ddd6ca; --accent:#7a3b2e; --lock:#8a7a5c;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --ui:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#161411; --card:#1f1c18; --ink:#ece6dc; --muted:#a39b8e; --line:#35302a; --accent:#e0a08f; --lock:#c2b08c; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--ui);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:760px;margin:0 auto;padding-block:clamp(40px,8vh,88px) 64px}
+h1{font:500 clamp(2.4rem,7vw,3.6rem)/1 var(--display);margin:0;letter-spacing:-.01em}
+.lede{color:var(--muted);margin:12px 0 0;max-width:52ch}
+h2{font:600 .72rem/1 var(--ui);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:44px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+a.card{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);
+  border-radius:10px;padding:18px 18px 16px;transition:transform .15s,border-color .15s}
+a.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+a.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.card h3{font:500 1.45rem/1.15 var(--display);margin:0}
+.card p{margin:0;color:var(--muted);font-size:.94rem}
+.meta{margin-top:auto;padding-top:10px;font:500 .74rem/1 var(--ui);letter-spacing:.06em;color:var(--muted);display:flex;gap:6px;align-items:center}
+.meta.locked{color:var(--lock)}
+.meta svg{width:12px;height:12px}
+footer{margin-top:56px;color:var(--muted);font-size:.85rem}
+@media (prefers-reduced-motion:reduce){a.card{transition:none}a.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Kai's Pages</h1>
+  <p class="lede">Reading notes, a book list, an Advent calendar and a few small tools. Pages marked with a lock ask for a password.</p>
+
+  <h2>Reading</h2>
+  <div class="grid">
+    <a class="card" href="advent/"><h3>Honest Advent</h3><p>A short reading for each day from 1 to 24 December.</p><span class="meta locked"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="card" href="next-shelf/"><h3>Next Shelf</h3><p>New and upcoming books, picked each quarter.</p><span class="meta locked"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="card" href="strengths/"><h3>Strengths</h3><p>A reading plan and the challenges behind it.</p><span class="meta locked"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="card" href="vibe/"><h3>Vibe, Annotated</h3><p>Notes on Adam Grant's book about how connection works.</p><span class="meta">Open</span></a>
+  </div>
+
+  <h2>Tools</h2>
+  <div class="grid">
+    <a class="card" href="https://gym-calendar-tau.vercel.app/"><h3>Gym Calendar</h3><p>Gym and food days, weight and body fat, week by week.</p><span class="meta">Open</span></a>
+    <a class="card" href="https://kaig78.github.io/team-checkin/"><h3>Team Check-in</h3><p>Mood, highlight and challenge for a team round, with a timer.</p><span class="meta">Open</span></a>
+  </div>
+
+  <footer>kaig78.github.io/public</footer>
+</main>
+</body>
+</html>
