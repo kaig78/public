@@ -6,58 +6,96 @@
 <meta name="robots" content="noindex">
 <title>Kai's Pages</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: a single shelf of cards — reading pages first, then small tools. */
+/* Layout: dark canvas with slow colour fields; a grid of tiles, each with its own colour pair that glows under the cursor. */
 :root{
-  --bg:#f3f0ea; --card:#fbfaf7; --ink:#1f1d1a; --muted:#6c665d; --line:#ddd6ca; --accent:#7a3b2e; --lock:#8a7a5c;
-  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --bg:#0c0b10; --tile:#16151c; --ink:#f4f2f8; --muted:#a6a2b4; --line:rgba(255,255,255,.08);
+  --display:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;
   --ui:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  color-scheme:light;
+  color-scheme:dark;
 }
-@media (prefers-color-scheme:dark){:root{
-  --bg:#161411; --card:#1f1c18; --ink:#ece6dc; --muted:#a39b8e; --line:#35302a; --accent:#e0a08f; --lock:#c2b08c; color-scheme:dark}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--ui);
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--ui);overflow-x:hidden;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-main{max-width:760px;margin:0 auto;padding-block:clamp(40px,8vh,88px) 64px}
-h1{font:500 clamp(2.4rem,7vw,3.6rem)/1 var(--display);margin:0;letter-spacing:-.01em}
-.lede{color:var(--muted);margin:12px 0 0;max-width:52ch}
-h2{font:600 .72rem/1 var(--ui);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:44px 0 14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-a.card{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);
-  border-radius:10px;padding:18px 18px 16px;transition:transform .15s,border-color .15s}
-a.card:hover{transform:translateY(-2px);border-color:var(--accent)}
-a.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.card h3{font:500 1.45rem/1.15 var(--display);margin:0}
-.card p{margin:0;color:var(--muted);font-size:.94rem}
-.meta{margin-top:auto;padding-top:10px;font:500 .74rem/1 var(--ui);letter-spacing:.06em;color:var(--muted);display:flex;gap:6px;align-items:center}
-.meta.locked{color:var(--lock)}
-.meta svg{width:12px;height:12px}
+
+/* drifting colour fields behind everything */
+.aurora{position:fixed;inset:-20vmax;z-index:0;pointer-events:none;filter:blur(70px);opacity:.55}
+.aurora i{position:absolute;width:48vmax;height:48vmax;border-radius:50%;mix-blend-mode:screen;animation:drift 26s ease-in-out infinite alternate}
+.aurora i:nth-child(1){background:#ff3d7f;left:5%;top:0}
+.aurora i:nth-child(2){background:#3d6bff;right:0;top:15%;animation-duration:32s}
+.aurora i:nth-child(3){background:#00c2a8;left:30%;bottom:-5%;animation-duration:38s}
+@keyframes drift{to{transform:translate(8vmax,-6vmax) scale(1.15)}}
+
+main{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding-block:clamp(48px,9vh,96px) 64px}
+h1{font:700 clamp(2.8rem,9vw,5.2rem)/.95 var(--display);letter-spacing:-.03em;margin:0;
+  background:linear-gradient(100deg,#fff 10%,#ffb2d0 40%,#9fb6ff 70%,#7ff0dc 95%);-webkit-background-clip:text;background-clip:text;color:transparent;text-wrap:balance}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:44px}
+
+.tile{--c1:#fff;--c2:#888;--mx:50%;--my:50%;position:relative;display:flex;flex-direction:column;gap:8px;min-height:190px;
+  padding:22px 20px 18px;border-radius:20px;background:var(--tile);color:inherit;text-decoration:none;isolation:isolate;overflow:hidden;
+  border:1px solid var(--line);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+/* soft colour wash that is always there */
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(120% 90% at 100% 0%,color-mix(in srgb,var(--c1) 34%,transparent),transparent 60%),
+             radial-gradient(90% 80% at 0% 100%,color-mix(in srgb,var(--c2) 26%,transparent),transparent 60%)}
+/* spotlight that follows the cursor */
+.tile::after{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .35s;
+  background:radial-gradient(260px circle at var(--mx) var(--my),color-mix(in srgb,var(--c1) 55%,transparent),transparent 65%)}
+.tile:hover,.tile:focus-visible{transform:translateY(-6px);border-color:color-mix(in srgb,var(--c1) 70%,transparent);
+  box-shadow:0 18px 50px -12px color-mix(in srgb,var(--c1) 60%,transparent),0 0 0 1px color-mix(in srgb,var(--c2) 40%,transparent);outline:none}
+.tile:hover::after,.tile:focus-visible::after{opacity:1}
+
+.dot{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--c1),var(--c2));
+  box-shadow:0 6px 18px -4px color-mix(in srgb,var(--c1) 70%,transparent);transition:transform .35s}
+.tile:hover .dot{transform:rotate(-8deg) scale(1.08)}
+.tile h2{font:700 1.45rem/1.1 var(--display);letter-spacing:-.01em;margin:10px 0 0}
+.tile p{margin:0;color:var(--muted);font-size:.93rem}
+.lock{margin-top:auto;padding-top:10px;display:flex;align-items:center;gap:6px;font:600 .72rem/1 var(--ui);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lock svg{width:12px;height:12px}
+.tile:hover .lock{color:var(--ink)}
+
+/* colour pairs */
+.advent{--c1:#ff4d6d;--c2:#ffb347}
+.shelf{--c1:#2ee6b6;--c2:#b6f05a}
+.strengths{--c1:#8f6bff;--c2:#4da3ff}
+.worship{--c1:#ffb03a;--c2:#ff5fa2}
+.mixes{--c1:#ff3dd4;--c2:#22d3ee}
+.vibe{--c1:#ff7a45;--c2:#ff4fa0}
+.gym{--c1:#3ee07a;--c2:#18c6e0}
+.team{--c1:#5aa9ff;--c2:#7b5cff}
+
 footer{margin-top:56px;color:var(--muted);font-size:.85rem}
-@media (prefers-reduced-motion:reduce){a.card{transition:none}a.card:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){.aurora i{animation:none}.tile,.dot{transition:none}.tile:hover{transform:none}}
 </style>
 </head>
 <body>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
 <main>
   <h1>Kai's Pages</h1>
 
-  <h2>Reading</h2>
   <div class="grid">
-    <a class="card" href="advent/"><h3>Honest Advent</h3><p>A short reading for each day from 1 to 24 December.</p><span class="meta locked"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
-    <a class="card" href="next-shelf/"><h3>Next Shelf</h3><p>New and upcoming books, picked each quarter.</p><span class="meta locked"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
-    <a class="card" href="strengths/"><h3>Strengths</h3><p>A reading plan and the challenges behind it.</p><span class="meta locked"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
-    <a class="card" href="worship/"><h3>Worship</h3><p>The songs from Passion City Church Sundays, without the sermon.</p><span class="meta locked"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
-    <a class="card" href="vibe/"><h3>Vibe, Annotated</h3><p>Notes on Adam Grant's book about how connection works.</p><span class="meta">Open</span></a>
-  </div>
-
-  <h2>Tools</h2>
-  <div class="grid">
-    <a class="card" href="https://gym-calendar-tau.vercel.app/"><h3>Gym Calendar</h3><p>Gym and food days, weight and body fat, week by week.</p><span class="meta locked"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
-    <a class="card" href="https://kaig78.github.io/team-checkin/"><h3>Team Check-in</h3><p>Mood, highlight and challenge for a team round, with a timer.</p><span class="meta">Open</span></a>
+    <a class="tile advent" href="advent/"><span class="dot"></span><h2>Honest Advent</h2><p>A short reading for each day from 1 to 24 December.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile shelf" href="next-shelf/"><span class="dot"></span><h2>Next Shelf</h2><p>New and upcoming books, picked each quarter.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile strengths" href="strengths/"><span class="dot"></span><h2>Strengths</h2><p>A reading plan and the challenges behind it.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile worship" href="worship/"><span class="dot"></span><h2>Worship Music</h2><p>The songs from Passion City Church Sundays.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile mixes" href="mixes/"><span class="dot"></span><h2>Mixes</h2><p>DJ sets and radio mixes.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile vibe" href="vibe/"><span class="dot"></span><h2>Vibe, Annotated</h2><p>Notes on Adam Grant's book about how connection works.</p><span class="lock">Open</span></a>
+    <a class="tile gym" href="https://gym-calendar-tau.vercel.app/"><span class="dot"></span><h2>Gym Calendar</h2><p>Gym and food days, weight and body fat, week by week.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile team" href="https://kaig78.github.io/team-checkin/"><span class="dot"></span><h2>Team Check-in</h2><p>Mood, highlight and challenge for a team round, with a timer.</p><span class="lock">Open</span></a>
   </div>
 
   <footer>kaig78.github.io/public</footer>
 </main>
+<script>
+// spotlight follows the pointer inside each tile
+document.querySelectorAll(".tile").forEach(t => t.addEventListener("pointermove", e => {
+  const r = t.getBoundingClientRect();
+  t.style.setProperty("--mx", (e.clientX - r.left) + "px");
+  t.style.setProperty("--my", (e.clientY - r.top) + "px");
+}));
+</script>
 </body>
 </html>
