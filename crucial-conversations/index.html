@@ -1,0 +1,1341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Crucial Conversations – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from the cover: its red field and gold arrows.
+   Red = violence, blue = silence, teal = dialogue, gold = your path, plum = theirs. */
+:root {
+  --paper: #f7f5f2;
+  --paper-2: #eeeae5;
+  --card: #ffffff;
+  --ink: #1a1614;
+  --ink-2: #4e4743;
+  --ink-3: #7d7570;
+  --rule: #ddd7d0;
+
+  --red: #c4162a;
+  --blue: #2e64b5;
+  --teal: #12806a;
+  --gold: #b07800;
+  --plum: #7a46b8;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #141112;
+    --paper-2: #1d191a;
+    --card: #221d1f;
+    --ink: #f1ecea;
+    --ink-2: #bdb4b1;
+    --ink-3: #8f8582;
+    --rule: #352e30;
+    --red: #ff6473;
+    --blue: #7ea9ff;
+    --teal: #45d0a8;
+    --gold: #f2b63c;
+    --plum: #b48cff;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #141112;
+  --paper-2: #1d191a;
+  --card: #221d1f;
+  --ink: #f1ecea;
+  --ink-2: #bdb4b1;
+  --ink-3: #8f8582;
+  --rule: #352e30;
+  --red: #ff6473;
+  --blue: #7ea9ff;
+  --teal: #45d0a8;
+  --gold: #f2b63c;
+  --plum: #b48cff;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Colour helpers */
+.c-red  { --c: var(--red); }
+.c-blue { --c: var(--blue); }
+.c-teal { --c: var(--teal); }
+.c-gold { --c: var(--gold); }
+.c-plum { --c: var(--plum); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(46px, 8.6vw, 112px);
+  font-weight: 900;
+  font-stretch: 70%;
+  line-height: .86;
+  letter-spacing: -.02em;
+  margin-left: -.03em;
+  overflow-wrap: break-word;
+}
+.hero h1 span { display: block; }
+.hero h1 .r { color: var(--red); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 600 / 955;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 10, 14, .38), 0 8px 18px -10px rgba(40, 10, 14, .26);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.poolband { position: relative; margin-top: 28px; }
+.poolband canvas { display: block; width: 100%; height: 130px; }
+.poolband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-head { font-family: var(--display); font-weight: 750; fill: var(--ink); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+/* ---------- Idea section ---------- */
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.def {
+  font-family: var(--display); font-stretch: 100%; font-weight: 600; font-size: 17px; line-height: 1.45;
+  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 14px 0;
+  display: grid; gap: 6px;
+}
+.def em { font-family: var(--body); font-weight: 400; font-size: 18px; color: var(--ink-2); }
+.three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.three div { border-radius: 6px; padding: 14px; display: grid; gap: 4px; border: 1px solid color-mix(in srgb, var(--c) 35%, var(--rule)); }
+.three b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 18px; color: var(--c); }
+.three span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+/* Principles table */
+table.pr { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 820px; font-size: 15.5px; line-height: 1.42; }
+table.pr th, table.pr td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.pr thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.pr tbody th { width: 210px; }
+table.pr tbody th .nm { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; color: var(--c); display: block; letter-spacing: -.01em; }
+table.pr tbody th .ch { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); font-weight: 400; }
+table.pr tbody tr td:first-of-type { box-shadow: none; }
+table.pr tbody tr th { border-left: 4px solid var(--c); }
+table.pr td.q { font-style: italic; color: var(--ink-2); }
+table.pr tbody tr:hover td, table.pr tbody tr:hover th { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* decoder (what they say / mean) */
+.decode { display: grid; gap: 0; }
+.decode .row { display: grid; grid-template-columns: 112px minmax(0, 1fr) minmax(0, 1fr); gap: 14px; padding: 12px 0; border-top: 1px solid var(--rule); align-items: start; }
+.decode .row:first-child { border-top: 0; }
+.decode b { font-family: var(--display); font-weight: 800; font-stretch: 100%; font-size: 15px; color: var(--c); }
+.decode q { font-style: italic; font-size: 15px; quotes: "“" "”"; }
+.decode span { font-size: 14.5px; color: var(--ink-2); }
+.decode .hd { font-family: var(--mono); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+
+/* don't / do script */
+.dd { display: grid; gap: 8px; }
+.dd p { border-radius: 6px; padding: 12px 14px; font-size: 16px; line-height: 1.45; }
+.dd p .label { font-size: 11px; display: block; margin-bottom: 2px; }
+.dd .dont { background: color-mix(in srgb, var(--red) 9%, var(--card)); border-left: 3px solid var(--red); }
+.dd .do { background: color-mix(in srgb, var(--teal) 10%, var(--card)); border-left: 3px solid var(--teal); }
+
+/* steps (CRIB, STATE) */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; }
+.steps .k {
+  width: 44px; height: 44px; border-radius: 6px; display: grid; place-items: center;
+  font-family: var(--display); font-weight: 900; font-stretch: 100%; font-size: 24px;
+  background: color-mix(in srgb, var(--c) 14%, var(--card)); color: var(--c); border: 1.5px solid var(--c);
+}
+.steps b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 17px; display: block; line-height: 1.25; }
+.steps span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.steps .what { font-family: var(--mono); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+
+/* clever stories */
+.clever { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.clever > div { background: var(--card); padding: 18px; display: grid; gap: 10px; align-content: start; }
+.clever h5 { font-family: var(--display); font-size: 20px; font-weight: 850; font-stretch: 105%; margin: 0; color: var(--red); }
+.clever .says { font-style: italic; font-size: 16px; }
+.clever .fix { border-top: 1px dashed var(--rule); padding-top: 10px; display: grid; gap: 4px; }
+.clever .fix b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 15px; color: var(--teal); }
+.clever .fix span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+/* Goldilocks */
+.gold { display: grid; gap: 10px; }
+.gold .set { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.gold .set div { border-radius: 6px; padding: 10px 12px; font-size: 14.5px; line-height: 1.4; display: grid; gap: 4px; align-content: start; }
+.gold .soft { background: color-mix(in srgb, var(--blue) 9%, var(--card)); }
+.gold .right { background: color-mix(in srgb, var(--teal) 13%, var(--card)); box-shadow: inset 0 0 0 1.5px var(--teal); }
+.gold .hard { background: color-mix(in srgb, var(--red) 9%, var(--card)); }
+.gold .label { font-size: 10.5px; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 16px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--ink); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* dialogue scripts */
+.script { display: grid; gap: 8px; font-size: 16px; line-height: 1.45; }
+.script p { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 10px; }
+.script p > b { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); padding-top: 3px; }
+.script .tag { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--teal); white-space: nowrap; }
+.script .bad .tag { color: var(--red); }
+.script hr { border: 0; border-top: 1px dashed var(--rule); margin: 4px 0; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tough cases */
+.cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 10px; }
+.case { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+.case .yb { font-family: var(--mono); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--red); }
+.case b { font-family: var(--display); font-weight: 800; font-stretch: 100%; font-size: 17px; line-height: 1.2; }
+.case span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.lessons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.lessons div { border-radius: 6px; padding: 14px; border: 1px dashed color-mix(in srgb, var(--c) 60%, var(--rule)); display: grid; gap: 4px; }
+.lessons b { font-family: var(--display); font-weight: 800; font-stretch: 105%; color: var(--c); }
+.lessons span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 220px; order: -1; transform: rotate(-1.2deg); }
+  .two, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit, .clever { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .three, .compare, .lessons { grid-template-columns: 1fr; }
+  .gold .set { grid-template-columns: 1fr; }
+  .decode .row { grid-template-columns: 1fr; gap: 4px; }
+  .script p { grid-template-columns: 1fr; gap: 2px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Patterson, Grenny, McMillan &amp; Switzler · McGraw-Hill, 2nd ed. 2012</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#principles">Seven principles</a>
+    <a href="#why">Why</a>
+    <a href="#me-first">Me first</a>
+    <a href="#talk">Talk &amp; act</a>
+    <a href="#yeah-but">Yeah, but</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span class="r">Crucial</span><span>Conversations</span></h1>
+    <p class="sub">Tools for talking when stakes are high</p>
+    <p class="dek">When opinions differ, stakes are high and emotions run strong, most of us go quiet or go on the attack. The authors studied the people who do neither, and found that what they do can be learned.</p>
+    <div class="byline label">
+      <span>11 chapters</span><span>7 principles</span><span>17 tough cases</span><span>~65,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Crucial Conversations, second edition: white serif title on a red field, with two gold arrows pointing toward each other">
+</div>
+
+<div class="poolband" aria-hidden="true">
+  <canvas id="pool"></canvas>
+  <div class="ends label"><span>Your meaning</span><span>The shared pool</span><span>Their meaning</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Most chronic problems are conversations nobody is having well</h2>
+  </div>
+  <div class="two">
+    <div class="prose">
+      <p>A conversation turns <strong>crucial</strong> when three things come together: the stakes are high, opinions differ, and emotions run strong. It could be asking for a promotion, a fence dispute with a neighbour, or telling a surgeon he's about to operate on the wrong limb.</p>
+      <p>Faced with one, we can avoid it, handle it badly, or handle it well. The irony is that the more a conversation matters, the worse we tend to do. Adrenaline diverts blood from the brain to the arms and legs, the moment usually comes as a surprise, and few of us have ever watched someone do it well.</p>
+      <p>The authors' bold claim, which they call the <strong>Law of Crucial Conversations</strong>: at the heart of almost every chronic problem in teams, organisations and relationships sits a crucial conversation people aren't holding, or aren't holding well.</p>
+      <p>What the best people share is a refusal of the <strong>Fool's Choice</strong>, the belief that you have to pick between telling the truth and keeping a friend. They want to be 100&nbsp;percent honest and 100&nbsp;percent respectful at the same time, and they get there through <a href="#ch2">dialogue</a>.</p>
+    </div>
+    <div class="fig">
+      <div class="def">
+        <span class="label">Definition</span>
+        <span>Crucial conversation: a discussion between two or more people where</span>
+        <em>(1) stakes are high, (2) opinions vary and (3) emotions run strong.</em>
+      </div>
+      <div class="three">
+        <div class="c-blue"><b>Avoid it</b><span>Email instead of walking down the hall. Change the subject.</span></div>
+        <div class="c-red"><b>Botch it</b><span>Yell, withdraw, say things you regret later.</span></div>
+        <div class="c-teal"><b>Handle it well</b><span>Get every view into the open while keeping it safe.</span></div>
+      </div>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat"><span class="big num">&lt;1 in 12</span><p>Odds that a nurse speaks up when a doctor skips a safety step. 84% said they regularly see shortcuts or broken rules.</p></div>
+        <div class="stat"><span class="big num">~90%</span><p>Accuracy in predicting which of 2,200 projects would fail, from whether people could hold five specific conversations.</p></div>
+        <div class="stat" style="grid-column:1/-1"><span class="big num">93%</span><p>Of 4,000+ respondents said bullying, dishonest or incompetent colleagues were effectively "untouchable".</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part 1 · Chapters 1–2</span>
+      <h3>Why</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>What's a Crucial Conversation?</b>When it matters most, we do our worst</a></li>
+        <li><span>02</span><a href="#ch2"><b>Mastering Crucial Conversations</b>Fill the Pool of Shared Meaning</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 2 · Chapters 3–6</span>
+      <h3>Me first</h3>
+      <ol>
+        <li><span>03</span><a href="#ch3"><b>Start with Heart</b>Know what you really want</a></li>
+        <li><span>04</span><a href="#ch4"><b>Learn to Look</b>Spot silence, violence and your own style</a></li>
+        <li><span>05</span><a href="#ch5"><b>Make It Safe</b>Restore purpose and respect</a></li>
+        <li><span>06</span><a href="#ch6"><b>Master My Stories</b>Your story, not their act, makes you mad</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 3 · Chapters 7–11</span>
+      <h3>Talk &amp; act</h3>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>STATE My Path</b>Speak persuasively, not abrasively</a></li>
+        <li><span>08</span><a href="#ch8"><b>Explore Others' Paths</b>Listen when others blow up or clam up</a></li>
+        <li><span>09</span><a href="#ch9"><b>Move to Action</b>Decide how to decide, then follow up</a></li>
+        <li><span>10</span><a href="#yeah-but"><b>Yeah, But</b>Seventeen tough cases</a></li>
+        <li><span>11</span><a href="#ch11"><b>Putting It All Together</b>Prepare and coach yourself</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEVEN PRINCIPLES ============ -->
+<section id="principles">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Seven principles of dialogue</h2>
+    <p class="lede">The middle of the book is one long sequence. Four principles prepare you and keep the conversation safe. Two cover talking and listening. The last turns the talk into results. The final chapter boils them down to questions you can ask yourself in the moment.</p>
+  </div>
+  <div class="tablecard">
+    <div class="scroll-x">
+      <table class="pr">
+        <thead>
+          <tr><th scope="col">Principle</th><th scope="col">What you do</th><th scope="col">Skills and tools</th><th scope="col">Ask yourself</th></tr>
+        </thead>
+        <tbody>
+          <tr class="c-gold"><th scope="row"><span class="nm">Start with Heart</span><span class="ch">ch. 3 · me first</span></th><td>Keep your motives on track when your body wants to win, punish or hide.</td><td>Focus on what you really want. Refuse the Fool's Choice; search for the <em>and</em>.</td><td class="q">What do I want for me, for them, for the relationship? How would I act if I really wanted that?</td></tr>
+          <tr class="c-gold"><th scope="row"><span class="nm">Learn to Look</span><span class="ch">ch. 4 · notice</span></th><td>Watch the conditions of the conversation as well as its content.</td><td>Spot the moment it turns crucial, signs of silence or violence, and your own Style Under Stress.</td><td class="q">Are we in dialogue, or playing games?</td></tr>
+          <tr class="c-teal"><th scope="row"><span class="nm">Make It Safe</span><span class="ch">ch. 5 · restore</span></th><td>Step out of the content, rebuild safety, step back in.</td><td>Apologise, Contrast, or create a Mutual Purpose with CRIB.</td><td class="q">Do they think I care about their goals? Do they think I respect them?</td></tr>
+          <tr class="c-gold"><th scope="row"><span class="nm">Master My Stories</span><span class="ch">ch. 6 · emotions</span></th><td>Take charge of the feelings that drive you out of dialogue.</td><td>Retrace your Path to Action. Catch Victim, Villain and Helpless stories. Tell the rest of the story.</td><td class="q">What's the fact? What's the story? Why would a reasonable, rational, decent person do this?</td></tr>
+          <tr class="c-red"><th scope="row"><span class="nm">STATE My Path</span><span class="ch">ch. 7 · speak</span></th><td>Say the risky thing frankly and safely.</td><td>Share facts, Tell your story, Ask for others' paths, Talk tentatively, Encourage testing.</td><td class="q">Am I leading with facts? Am I really open to being wrong?</td></tr>
+          <tr class="c-plum"><th scope="row"><span class="nm">Explore Others' Paths</span><span class="ch">ch. 8 · listen</span></th><td>Help people who've gone silent or violent tell you what's really going on.</td><td>Ask, Mirror, Paraphrase, Prime (AMPP). Then Agree, Build, Compare (ABC).</td><td class="q">Am I actively inviting their view, even when it's hostile?</td></tr>
+          <tr class="c-blue"><th scope="row"><span class="nm">Move to Action</span><span class="ch">ch. 9 · results</span></th><td>Turn a full pool into decisions and follow-through.</td><td>Decide how to decide. Agree who does what by when, and how you'll follow up.</td><td class="q">How will we decide? Who does what by when? How will we check?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Adapted from the book's "Coaching for Crucial Conversations" table</span></div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="why">
+  <span class="label partno">Part 1 · Chapters 1–2</span>
+  <h2>Why it matters</h2>
+  <p class="lede">The authors started by asking 20,000 people to name the colleagues who really got things done. The ones named thirty or more times turned out to share a single skill: they could talk openly about risky topics without wrecking relationships.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">What's a Crucial Conversation?</span></div>
+  <div class="body">
+    <div>
+      <h3>When it matters most, we do our worst</h3>
+      <p class="idea">We're wired for fight or flight, caught by surprise, and short of good role models. So we pick strategies that create exactly what we don't want.</p>
+    </div>
+    <ul class="points">
+      <li>Three things work against us. We're <strong>designed wrong</strong>: adrenaline sends blood to the muscles and away from reasoning. We're <strong>under pressure</strong>: the moment comes out of nowhere and has to be handled in real time. And we're <strong>stumped</strong>: most of us have only seen how not to do it.</li>
+      <li>Our tactics backfire. A partner who feels neglected drops sarcastic hints, which makes the other person want to be home even less. Cubicle-mates who nag each other end up neater and messier than ever.</li>
+      <li>The stakes reach every part of life. Couples who learned to handle hard talks cut their chance of unhappiness or break-up by more than half. Companies skilled at it respond five times faster to downturns, and each conversation held rather than avoided saves over $1,500 and a full working day.</li>
+      <li>In the best companies, poor performers aren't ignored or quietly transferred. Everyone holds everyone accountable, whatever their level.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Talking skills and survival</h4>
+        <div class="bars">
+          <div class="bar c-red"><div class="row"><span>Melanoma patients without communication training</span><b>~30% died</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+          <div class="bar c-teal"><div class="row"><span>Patients who met six times to learn to express themselves</span><b>9% died</b></div><div class="track"><div class="fill" style="width:30%"></div></div></div>
+        </div>
+        <p class="cap">Five-year follow-up after standard treatment. A modest skill gain went with a two-thirds drop in the death rate. A separate study found long-married couples who argued constantly had weaker immune systems.</p>
+        <p class="src">Source: studies cited in ch. 1</p>
+      </div>
+      <div class="fig">
+        <h4>Common crucial conversations</h4>
+        <div class="chips">
+          <span class="chip">Ending a relationship</span><span class="chip">Feedback to the boss</span><span class="chip">A colleague's work</span><span class="chip">A friend's unpaid loan</span><span class="chip">A rebellious teen</span><span class="chip">Missed commitments</span><span class="chip">A bad review</span><span class="chip">Interfering in-laws</span><span class="chip">Personal hygiene</span><span class="chip">Substance abuse</span>
+        </div>
+        <p class="cap">Many start low-stakes. They become crucial as emotions build and the relationship sours.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Mastering Crucial Conversations</span></div>
+  <div class="body">
+    <div>
+      <h3>Dialogue is the free flow of meaning</h3>
+      <p class="idea">Everyone arrives with a private pool of opinions, feelings and theories. Skilled people make it safe for all of it to flow into a shared one.</p>
+    </div>
+    <ul class="points">
+      <li>The bigger the <strong>Pool of Shared Meaning</strong>, the smarter the group. With more accurate information, people make better choices. The authors call it a measure of a group's IQ.</li>
+      <li>People also act on decisions they helped shape. Those who sat silently rarely commit; they comply on the surface and resist quietly afterwards. Time spent filling the pool is repaid by faster, more united action.</li>
+      <li>When we don't know how to share meaning, we play games. <strong>Silence</strong> withholds it: the cold shoulder, sarcasm, hints. <strong>Violence</strong> forces it in: monologues, discrediting others, borrowing the boss's power.</li>
+      <li>Dialogue isn't decision by consensus. The boss may still decide. But whoever decides, a fuller pool means a better choice made with more conviction.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three ways to treat the pool</h4>
+      <svg viewBox="0 0 600 240" role="img" aria-label="Three panels. Silence: two people's cups have lids and only a thin trickle reaches the shared bowl, which is almost empty. Violence: one cup pours a heavy stream while the other is shut, so the bowl fills with one colour and splashes over. Dialogue: both cups pour, and the bowl fills with both colours mixed.">
+        <defs>
+          <clipPath id="bowl0"><path d="M40 120 A60 56 0 0 0 160 120 Z"/></clipPath>
+          <clipPath id="bowl1"><path d="M240 120 A60 56 0 0 0 360 120 Z"/></clipPath>
+          <clipPath id="bowl2"><path d="M440 120 A60 56 0 0 0 560 120 Z"/></clipPath>
+        </defs>
+        <!-- panel 1: silence -->
+        <g>
+          <path d="M18 30 h40 l-6 32 h-28 z" fill="color-mix(in srgb, var(--gold) 20%, transparent)" stroke="var(--gold)" stroke-width="2"/>
+          <line x1="14" y1="28" x2="62" y2="28" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M142 30 h40 l-6 32 h-28 z" fill="color-mix(in srgb, var(--plum) 20%, transparent)" stroke="var(--plum)" stroke-width="2"/>
+          <line x1="138" y1="28" x2="186" y2="28" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M52 64 Q70 100 92 150" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="2 5"/>
+          <path d="M148 64 Q130 100 108 150" fill="none" stroke="var(--plum)" stroke-width="1.5" stroke-dasharray="2 5"/>
+          <rect x="30" y="164" width="140" height="20" fill="color-mix(in srgb, var(--teal) 40%, transparent)" clip-path="url(#bowl0)"/>
+          <path d="M40 120 A60 56 0 0 0 160 120" fill="none" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="34" y1="120" x2="166" y2="120" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+          <text x="100" y="208" text-anchor="middle" font-size="13" class="t-head" style="fill:var(--blue)">Silence</text>
+          <text x="100" y="226" text-anchor="middle" font-size="11">meaning held back</text>
+        </g>
+        <!-- panel 2: violence -->
+        <g>
+          <path d="M218 30 h40 l-6 32 h-28 z" fill="color-mix(in srgb, var(--gold) 20%, transparent)" stroke="var(--gold)" stroke-width="2"/>
+          <path d="M342 30 h40 l-6 32 h-28 z" fill="color-mix(in srgb, var(--plum) 20%, transparent)" stroke="var(--plum)" stroke-width="2"/>
+          <line x1="338" y1="28" x2="386" y2="28" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M252 64 Q262 100 290 132" fill="none" stroke="var(--gold)" stroke-width="11" stroke-linecap="round"/>
+          <rect x="230" y="114" width="140" height="70" fill="color-mix(in srgb, var(--gold) 55%, transparent)" clip-path="url(#bowl1)"/>
+          <circle cx="232" cy="108" r="3.5" fill="var(--gold)"/><circle cx="222" cy="98" r="2.5" fill="var(--gold)"/>
+          <circle cx="368" cy="106" r="3.5" fill="var(--gold)"/><circle cx="378" cy="95" r="2.5" fill="var(--gold)"/>
+          <circle cx="356" cy="96" r="2" fill="var(--gold)"/>
+          <path d="M240 120 A60 56 0 0 0 360 120" fill="none" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="234" y1="120" x2="366" y2="120" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+          <text x="300" y="208" text-anchor="middle" font-size="13" class="t-head" style="fill:var(--red)">Violence</text>
+          <text x="300" y="226" text-anchor="middle" font-size="11">meaning forced in</text>
+        </g>
+        <!-- panel 3: dialogue -->
+        <g>
+          <path d="M418 30 h40 l-6 32 h-28 z" fill="color-mix(in srgb, var(--gold) 20%, transparent)" stroke="var(--gold)" stroke-width="2"/>
+          <path d="M542 30 h40 l-6 32 h-28 z" fill="color-mix(in srgb, var(--plum) 20%, transparent)" stroke="var(--plum)" stroke-width="2"/>
+          <path d="M452 64 Q462 100 484 128" fill="none" stroke="var(--gold)" stroke-width="5" stroke-linecap="round"/>
+          <path d="M548 64 Q538 100 516 128" fill="none" stroke="var(--plum)" stroke-width="5" stroke-linecap="round"/>
+          <rect x="430" y="126" width="140" height="60" fill="color-mix(in srgb, var(--teal) 50%, transparent)" clip-path="url(#bowl2)"/>
+          <circle cx="474" cy="146" r="3" fill="var(--gold)"/><circle cx="500" cy="158" r="3" fill="var(--plum)"/>
+          <circle cx="522" cy="140" r="3" fill="var(--gold)"/><circle cx="488" cy="166" r="3" fill="var(--plum)"/>
+          <circle cx="536" cy="152" r="3" fill="var(--plum)"/><circle cx="462" cy="134" r="3" fill="var(--plum)"/>
+          <circle cx="510" cy="132" r="3" fill="var(--gold)"/>
+          <path d="M440 120 A60 56 0 0 0 560 120" fill="none" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="434" y1="120" x2="566" y2="120" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+          <text x="500" y="208" text-anchor="middle" font-size="13" class="t-head" style="fill:var(--teal)">Dialogue</text>
+          <text x="500" y="226" text-anchor="middle" font-size="11">meaning flows freely</text>
+        </g>
+      </svg>
+      <p class="cap">In one hospital, seven people wondered why a surgeon was working on the foot of a woman admitted for a tonsillectomy. None of them said so. "Individually smart people can do collectively stupid things" when the pool stays shallow.</p>
+    </div>
+    <div class="fig">
+      <h4>The Fool's Choice, and the way out</h4>
+      <svg viewBox="0 0 520 200" role="img" aria-label="A path from 'crucial moment' forks. The upper branch reads: be honest, lose the relationship. The lower branch reads: keep the peace, lose the result. A third, straight path in the middle reads: search for the and, honest and respectful.">
+        <circle cx="40" cy="100" r="12" fill="var(--ink)"/>
+        <text x="40" y="132" text-anchor="middle" font-size="11">crucial</text>
+        <text x="40" y="146" text-anchor="middle" font-size="11">moment</text>
+        <path d="M54 94 C120 60 150 34 230 34 H300" fill="none" stroke="var(--red)" stroke-width="3"/>
+        <path d="M54 106 C120 140 150 166 230 166 H300" fill="none" stroke="var(--blue)" stroke-width="3"/>
+        <path d="M56 100 H470" fill="none" stroke="var(--teal)" stroke-width="4" stroke-dasharray="10 6"/>
+        <path d="M470 92 L486 100 L470 108 Z" fill="var(--teal)"/>
+        <text x="310" y="30" font-size="12.5" class="t-ink">Speak up…</text>
+        <text x="310" y="46" font-size="11.5">and lose the friend</text>
+        <text x="310" y="162" font-size="12.5" class="t-ink">Stay quiet…</text>
+        <text x="310" y="178" font-size="11.5">and lose the result</text>
+        <rect x="150" y="80" width="200" height="40" rx="6" fill="var(--card)" stroke="var(--teal)" stroke-width="1.5"/>
+        <text x="250" y="97" text-anchor="middle" font-size="12.5" class="t-head" style="fill:var(--teal)">Search for the "and"</text>
+        <text x="250" y="112" text-anchor="middle" font-size="10.5">100% honest + 100% respectful</text>
+      </svg>
+      <p class="cap">We learn the Fool's Choice early, when Grandma asks if we like her Brussels-sprout pie and really means "Do you like me?"</p>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>An executive team was deciding where to move its offices. The CEO, Chris, pushed a poor option, and when people questioned it he raised an eyebrow, then a finger, then his voice, until everyone went quiet. Kevin, the only one of eight VPs widely named as influential, asked "Can I check something out with you?" and pointed out, respectfully, that Chris seemed to be breaking his own decision rules to move the office to his hometown. Chris paused, agreed, and restarted the discussion. Everyone had seen the problem. Only Kevin didn't believe he had to choose between candour and respect.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="me-first">
+  <span class="label partno">Part 2 · Chapters 3–6</span>
+  <h2>Work on me first, us second</h2>
+  <p class="lede">The only person you can reliably change is the one in the mirror. Before any clever phrasing, these four chapters get your own motives, attention and emotions into shape, and keep the conversation safe enough to continue.</p>
+</div>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Start with Heart</span></div>
+  <div class="body">
+    <div>
+      <h3>Our behaviour slips because our motives do</h3>
+      <p class="idea">Under pressure, the goal quietly shifts from solving the problem to winning, punishing or keeping the peace. Asking what you really want pulls it back.</p>
+    </div>
+    <ul class="points">
+      <li>Two sisters back from Disneyland both desperately need the hotel bathroom. They spend 25 minutes fighting over who goes first. Both wanted relief; both acted to make sure neither got it.</li>
+      <li>Watch for three motive hijacks: <strong>winning</strong> (correcting details, then needing to be right), <strong>punishing</strong> (wanting the other person to hurt), and <strong>keeping the peace</strong> (accepting a sure bad outcome to dodge an uncomfortable talk).</li>
+      <li>Read your behaviour to find your motive: "What am I doing, and what does it say about what I want right now?" When you name the game, you can stop playing it.</li>
+      <li>Asking a complex question also changes your body. It tells the brain this is a social problem, not a tiger, and sends blood back to the parts that think.</li>
+      <li>Refuse the Fool's Choice in three steps: say what you want, say what you <em>don't</em> want, then join them into one harder question.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The four Start-with-Heart questions</h4>
+        <ol class="steps">
+          <li class="c-gold"><span class="k">1</span><div><b>What do I really want for myself?</b></div></li>
+          <li class="c-gold"><span class="k">2</span><div><b>What do I really want for the other person?</b></div></li>
+          <li class="c-gold"><span class="k">3</span><div><b>What do I really want for the relationship?</b></div></li>
+          <li class="c-teal"><span class="k">4</span><div><b>How would I behave if I really wanted these results?</b></div></li>
+        </ol>
+      </div>
+      <div class="fig">
+        <h4>Building an "and" question</h4>
+        <div class="dd">
+          <p class="do"><span class="label">I want</span>My husband to be more reliable when he makes commitments I depend on.</p>
+          <p class="dont"><span class="label">I don't want</span>A useless, heated argument that creates bad feelings and changes nothing.</p>
+          <p class="do" style="border-left-width:6px"><span class="label">So the real question is</span>How can I talk candidly with him about being dependable <em>and</em> avoid bad feelings and wasted time?</p>
+        </div>
+        <p class="cap">Faced with an <em>and</em> question, people's eyes widen and they start thinking. Most concede there might be a way to get both.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>CEO Greta had pushed cost-cutting for six months. At an all-managers meeting, one man nervously asked about the second office she was having built, rumoured to have $150,000 of furniture. Her jaw tightened and her finger rose like a weapon. Then she asked herself what she really wanted: 200 managers bought into cutting costs. Suddenly the questioner was an ally handing her the chance to address the hypocrisy everyone saw. She thanked him, checked the numbers in the room, admitted she hadn't managed the project as tightly as she asked of others, and the group agreed to halve the cost or cancel it.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Learn to Look</span></div>
+  <div class="body">
+    <div>
+      <h3>Watch the conditions, not just the content</h3>
+      <p class="idea">People rarely get defensive because of what you say. They get defensive when they no longer feel safe. Silence and violence are the signs.</p>
+    </div>
+    <ul class="points">
+      <li>Skilled people <strong>dual-process</strong>: they follow the topic and, at the same time, how people are reacting. It's like an experienced angler who can see a trout under glare that you can't.</li>
+      <li>Learn your early warning cues for when a talk turns crucial. For some it's a tight stomach or dry eyes, for others an emotion, for others catching themselves pointing a finger.</li>
+      <li>When it's safe, you can say almost anything. When it isn't, even "you look good" sounds like an insult. Feedback lands when we trust the person's motives and ability.</li>
+      <li>The hard part: treat an attack as a <em>symptom</em> of fear rather than an attack. Recoding silence and violence as "they don't feel safe" is the pivot for everything after this chapter.</li>
+      <li>Monitor yourself too. The spouse who spits "I'm not angry!" with a bulging forehead vein is a low self-monitor. The book's 33-item <strong>Style Under Stress</strong> test shows which forms of silence and violence you reach for. Scoring high on both is common: most people toggle.</li>
+    </ul>
+    <div class="fig">
+      <h4>Silence and violence are two exits from the same pool</h4>
+      <svg viewBox="0 0 600 210" role="img" aria-label="A horizontal spectrum. On the left in blue, silence: withdrawing, avoiding, masking. In the centre in teal, dialogue. On the right in red, violence: controlling, labeling, attacking. Left arrow says withhold meaning, right arrow says force meaning. Both ends are driven by fear.">
+        <rect x="10" y="70" width="230" height="34" rx="4" fill="color-mix(in srgb, var(--blue) 18%, transparent)"/>
+        <rect x="360" y="70" width="230" height="34" rx="4" fill="color-mix(in srgb, var(--red) 18%, transparent)"/>
+        <rect x="240" y="64" width="120" height="46" rx="6" fill="color-mix(in srgb, var(--teal) 22%, var(--card))" stroke="var(--teal)" stroke-width="2"/>
+        <text x="300" y="86" text-anchor="middle" font-size="13" class="t-head" style="fill:var(--teal)">Dialogue</text>
+        <text x="300" y="101" text-anchor="middle" font-size="10">free flow of meaning</text>
+        <text x="20" y="54" font-size="13" class="t-head" style="fill:var(--blue)">Silence</text>
+        <text x="580" y="54" text-anchor="end" font-size="13" class="t-head" style="fill:var(--red)">Violence</text>
+        <g font-size="11">
+          <circle cx="40" cy="87" r="5" fill="var(--blue)"/><text x="40" y="128" text-anchor="middle">withdrawing</text>
+          <circle cx="120" cy="87" r="5" fill="var(--blue)"/><text x="120" y="128" text-anchor="middle">avoiding</text>
+          <circle cx="200" cy="87" r="5" fill="var(--blue)"/><text x="200" y="128" text-anchor="middle">masking</text>
+          <circle cx="400" cy="87" r="5" fill="var(--red)"/><text x="400" y="128" text-anchor="middle">controlling</text>
+          <circle cx="480" cy="87" r="5" fill="var(--red)"/><text x="480" y="128" text-anchor="middle">labeling</text>
+          <circle cx="560" cy="87" r="5" fill="var(--red)"/><text x="560" y="128" text-anchor="middle">attacking</text>
+        </g>
+        <path d="M230 154 H40" stroke="var(--blue)" stroke-width="2" fill="none"/><path d="M44 148 L32 154 L44 160 Z" fill="var(--blue)"/>
+        <path d="M370 154 H560" stroke="var(--red)" stroke-width="2" fill="none"/><path d="M556 148 L568 154 L556 160 Z" fill="var(--red)"/>
+        <text x="135" y="172" text-anchor="middle" font-size="11">withhold meaning from the pool</text>
+        <text x="465" y="172" text-anchor="middle" font-size="11">force meaning into the pool</text>
+        <text x="300" y="200" text-anchor="middle" font-size="11.5" class="t-ink">Both are driven by the same emotion: fear</text>
+      </svg>
+    </div>
+    <div class="fig">
+      <h4>Decoding the six forms</h4>
+      <div class="decode">
+        <div class="row"><span class="hd">Form</span><span class="hd">What it sounds like</span><span class="hd">What it means</span></div>
+        <div class="row c-blue"><b>Masking</b><q>Your idea is, uh, brilliant. Some ideas come before their time.</q><span>Sarcasm, sugar-coating, understating. Your idea is insane.</span></div>
+        <div class="row c-blue"><b>Avoiding</b><q>Speaking of cost cuts, what if we diluted the coffee?</q><span>Talking around the real issue, like staff inefficiency.</span></div>
+        <div class="row c-blue"><b>Withdrawing</b><q>Excuse me, I've got to take this call.</q><span>Leaving the conversation or the room.</span></div>
+        <div class="row c-red"><b>Controlling</b><q>Everyone knows they offer the worst service on the planet.</q><span>Cutting people off, overstating, speaking in absolutes.</span></div>
+        <div class="row c-red"><b>Labeling</b><q>They're from headquarters. And engineers. Need I say more?</q><span>Dismissing people by stereotype so you needn't argue.</span></div>
+        <div class="row c-red"><b>Attacking</b><q>Try that stupid little stunt and see what happens.</q><span>Belittling and threatening. The goal is now to make them suffer.</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Make It Safe</span></div>
+  <div class="body">
+    <div>
+      <h3>Step out, make it safe, step back in</h3>
+      <p class="idea">The worst ignore safety, the good water down the message, and the best leave the message intact and fix the safety around it.</p>
+    </div>
+    <ul class="points">
+      <li>Safety rests on two conditions. <strong>Mutual Purpose</strong> is the entrance condition: people must believe you care about their goals. When it's missing you get debate, hidden agendas, accusations and circling back.</li>
+      <li><strong>Mutual Respect</strong> is the continuance condition. "Respect is like air": nobody notices it until it's gone, and then it's all anyone can think about. The giveaway is emotion turning from fear to anger.</li>
+      <li>You can respect people you don't approve of by looking for what you share. After a bitter six-month strike, managers and union leaders each listed their goals for the company on flip charts. The lists were nearly identical.</li>
+      <li><strong>Apologise</strong> when you really did violate respect. A genuine apology needs a change of heart, which means giving up saving face.</li>
+      <li><strong>Contrast</strong> when they misread your intent: say what you don't mean first, then what you do. It isn't an apology or a softening; it puts your message in proportion. It works before trouble starts, too.</li>
+      <li><strong>Create a Mutual Purpose</strong> when you truly want different things, using the four CRIB steps.</li>
+    </ul>
+    <div class="fig">
+      <h4>The two conditions of safety</h4>
+      <svg viewBox="0 0 540 220" role="img" aria-label="A road running from left to right. At the start stands a gate labelled Mutual Purpose, the entrance condition: why talk at all? Teal guard rails run along both sides of the rest of the road, labelled Mutual Respect, the continuance condition: can we stay in it?">
+        <path d="M20 90 H520 M20 150 H520" stroke="var(--rule)" stroke-width="2"/>
+        <rect x="20" y="90" width="500" height="60" fill="var(--paper-2)"/>
+        <path d="M150 120 H500" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="12 10"/>
+        <rect x="70" y="58" width="8" height="120" fill="var(--gold)"/>
+        <rect x="112" y="58" width="8" height="120" fill="var(--gold)"/>
+        <rect x="64" y="58" width="62" height="10" rx="2" fill="var(--gold)"/>
+        <path d="M140 84 H520 M140 156 H520" stroke="var(--teal)" stroke-width="4" stroke-linecap="round"/>
+        <g stroke="var(--teal)" stroke-width="2">
+          <line x1="170" y1="78" x2="170" y2="90"/><line x1="250" y1="78" x2="250" y2="90"/><line x1="330" y1="78" x2="330" y2="90"/><line x1="410" y1="78" x2="410" y2="90"/><line x1="490" y1="78" x2="490" y2="90"/>
+          <line x1="170" y1="150" x2="170" y2="162"/><line x1="250" y1="150" x2="250" y2="162"/><line x1="330" y1="150" x2="330" y2="162"/><line x1="410" y1="150" x2="410" y2="162"/><line x1="490" y1="150" x2="490" y2="162"/>
+        </g>
+        <text x="95" y="30" text-anchor="middle" font-size="13" class="t-head" style="fill:var(--gold)">Mutual Purpose</text>
+        <text x="95" y="46" text-anchor="middle" font-size="10.5">entrance: why talk at all?</text>
+        <text x="330" y="50" text-anchor="middle" font-size="13" class="t-head" style="fill:var(--teal)">Mutual Respect</text>
+        <text x="330" y="66" text-anchor="middle" font-size="10.5">continuance: can we stay in it?</text>
+        <text x="95" y="200" text-anchor="middle" font-size="10.5">Do they trust my motives?</text>
+        <text x="330" y="186" text-anchor="middle" font-size="10.5">Do they believe I respect them?</text>
+      </svg>
+      <p class="cap">Diagnose first, because each condition has its own repair. An apology or Contrasting usually restores respect; a purpose problem needs CRIB.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Contrasting in action</h4>
+        <div class="dd">
+          <p class="dont"><span class="label">Don't</span>The last thing I wanted was to suggest I don't value the work you put in, or that I didn't want the VP to see it.</p>
+          <p class="do"><span class="label">Do</span>I think your work has been spectacular. Let me explain what happened with the VP, and get her down here tomorrow to see it.</p>
+        </div>
+        <p class="cap">Said to a team that pulled an all-nighter for a VP tour that never came. The "don't" carries more weight, because it clears the misunderstanding that killed safety.</p>
+      </div>
+      <div class="fig">
+        <h4>CRIB: create a Mutual Purpose</h4>
+        <ol class="steps">
+          <li class="c-teal"><span class="k">C</span><div><b>Commit to seek Mutual Purpose</b><span>"I'll stay in this until we find something that works for both of us."</span></div></li>
+          <li class="c-teal"><span class="k">R</span><div><b>Recognise the purpose behind the strategy</b><span>Movie vs. staying home is a clash of strategies. Underneath: peace and quiet vs. time away from the kids.</span></div></li>
+          <li class="c-teal"><span class="k">I</span><div><b>Invent a Mutual Purpose</b><span>If wants truly clash, move up to a bigger shared goal, such as the family before the promotion.</span></div></li>
+          <li class="c-teal"><span class="k">B</span><div><b>Brainstorm new strategies</b><span>Now look for options that serve everyone, like a quiet drive up the canyon.</span></div></li>
+        </ol>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Jotham wants more intimacy than Yvonne. For years he has sulked and she has given in and then resented him. When she finally raises it, he takes a sarcastic shot and she walks out. Second attempt: she contrasts ("I'm not saying the problem is yours; I think it's ours"), apologises when her wording sounds like blame, and moves through CRIB until they discover they both want the same thing: to feel loved and appreciated, which they each get in different ways. Now there's something to brainstorm about.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Master My Stories</span></div>
+  <div class="body">
+    <div>
+      <h3>Nobody makes you mad. Your story does</h3>
+      <p class="idea">Between what someone does and what you feel, you tell yourself a story in a split second. Since you wrote it, you can rewrite it.</p>
+    </div>
+    <ul class="points">
+      <li>The worst at dialogue are held hostage by their emotions. The good stuff them down, where they leak out as sarcasm. The best act on their emotions by thinking them through.</li>
+      <li>Ten people can watch the same act and feel ten different things, because each adds a different meaning. The same facts support endless stories.</li>
+      <li>Separate fact from story with one test: could you see or hear it? "Gave 95% of the presentation" is a fact. "He doesn't trust me" is a story. Watch for hot words like <em>scowled</em> and <em>sarcastic</em>.</li>
+      <li>Clever stories often begin with a <strong>sellout</strong>, a small moment when we act against our own sense of right. You don't let a merging driver in, then decide he's a jerk. The story comes after, to excuse us.</li>
+      <li>Strong emotions are convincing but, in crucial moments, they are usually wrong. Joseph Grenny describes seeing his son as a monster, asking the questions below, and watching his shoulders drop two inches.</li>
+    </ul>
+    <div class="fig">
+      <h4>The Path to Action</h4>
+      <svg viewBox="0 0 540 210" role="img" aria-label="Four boxes in a row joined by arrows: See and hear, Tell a story, Feel, Act. A long arrow underneath runs back from Act to See and hear, labelled Retrace your path. The Tell a story box is highlighted as the point of control.">
+        <g font-size="13">
+          <rect x="6" y="44" width="110" height="56" rx="6" fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"/>
+          <text x="61" y="70" text-anchor="middle" class="t-head">See &amp; hear</text>
+          <text x="61" y="88" text-anchor="middle" font-size="10">the facts</text>
+          <rect x="146" y="38" width="118" height="68" rx="6" fill="color-mix(in srgb, var(--gold) 18%, var(--card))" stroke="var(--gold)" stroke-width="2.5"/>
+          <text x="205" y="68" text-anchor="middle" class="t-head">Tell a story</text>
+          <text x="205" y="86" text-anchor="middle" font-size="10">meaning + judgment</text>
+          <rect x="294" y="44" width="110" height="56" rx="6" fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"/>
+          <text x="349" y="70" text-anchor="middle" class="t-head">Feel</text>
+          <text x="349" y="88" text-anchor="middle" font-size="10">emotion</text>
+          <rect x="424" y="44" width="110" height="56" rx="6" fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"/>
+          <text x="479" y="70" text-anchor="middle" class="t-head">Act</text>
+          <text x="479" y="88" text-anchor="middle" font-size="10">what you do</text>
+        </g>
+        <g stroke="var(--ink)" stroke-width="1.5" fill="var(--ink)">
+          <line x1="118" y1="72" x2="138" y2="72"/><path d="M136 67 L144 72 L136 77 Z"/>
+          <line x1="266" y1="72" x2="286" y2="72"/><path d="M284 67 L292 72 L284 77 Z"/>
+          <line x1="406" y1="72" x2="416" y2="72"/><path d="M414 67 L422 72 L414 77 Z"/>
+        </g>
+        <text x="270" y="22" text-anchor="middle" font-size="11">in a split second →</text>
+        <path d="M479 108 V144 H61 V114" fill="none" stroke="var(--teal)" stroke-width="2.5"/>
+        <path d="M55 118 L61 106 L67 118 Z" fill="var(--teal)"/>
+        <text x="270" y="166" text-anchor="middle" font-size="12.5" class="t-head" style="fill:var(--teal)">← Retrace your path</text>
+        <text x="205" y="192" text-anchor="middle" font-size="10.5">the only step you control</text>
+        <path d="M205 180 V112" stroke="var(--gold)" stroke-width="1" stroke-dasharray="3 3"/>
+      </svg>
+      <div class="compare">
+        <div><h5>Retrace, step by step</h5><ul><li><b>Act:</b> Am I in silence or violence?</li><li><b>Feel:</b> What am I really feeling? (Angry, or embarrassed and surprised?)</li><li><b>Story:</b> What story is creating this feeling?</li><li><b>See/hear:</b> What evidence supports it?</li></ul></div>
+        <div><h5>Maria's path</h5><ul><li><b>Fact:</b> Louis gave most of the joint presentation and met the boss without her.</li><li><b>Story:</b> He thinks a woman won't be listened to.</li><li><b>Feel:</b> humiliated, angry.</li><li><b>Act:</b> silence plus sarcastic jabs ("Should I whip up a bundt cake too?").</li></ul></div>
+      </div>
+    </div>
+    <div class="fig">
+      <h4>Three clever stories, and the question that completes each</h4>
+      <div class="clever">
+        <div><h5>Victim</h5><p class="says">"It's not my fault."</p><span class="muted" style="font-size:15px">We're innocent sufferers of someone else's bad behaviour, leaving out our own part.</span><div class="fix"><b>Turn victims into actors</b><span>Am I pretending not to notice my role in the problem?</span></div></div>
+        <div><h5>Villain</h5><p class="says">"It's all your fault."</p><span class="muted" style="font-size:15px">A decent person becomes a bonehead or control freak, which licenses us to treat them badly.</span><div class="fix"><b>Turn villains into humans</b><span>Why would a reasonable, rational and decent person do this?</span></div></div>
+        <div><h5>Helpless</h5><p class="says">"There's nothing else I can do."</p><span class="muted" style="font-size:15px">Looks forward and offers only a Fool's Choice, often built on top of a Villain story.</span><div class="fix"><b>Turn the helpless into the able</b><span>What do I really want? What would I do right now if I did?</span></div></div>
+      </div>
+      <p class="cap">Watch the double standard: when we slip, we cite our good intentions; when others do, we invent bad motives. Clever stories let us feel good about behaving badly while getting bad results.</p>
+    </div>
+    <div class="story">
+      <span class="label">How it ended</span>
+      <p>Maria admitted she had meant to ask Louis about the meetings and hadn't. She allowed that he might simply care a lot about quality. Then she booked time to talk. Louis apologised: he'd wanted to warn the boss about controversial parts, and he talks more when he's nervous. They agreed to split the next presentation in halves.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="talk">
+  <span class="label partno">Part 3 · Chapters 7–11</span>
+  <h2>Talk, listen, act</h2>
+  <p class="lede">With your heart and stories in order, you still have to open your mouth, hear the other side and turn the result into something that happens. This is the part most people think of as communication.</p>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">STATE My Path</span></div>
+  <div class="body">
+    <div>
+      <h3>Lead people down your path in the order you travelled it</h3>
+      <p class="idea">Adrenaline makes us start with our ugliest conclusion. Start with the facts instead, and tell the story as a story.</p>
+    </div>
+    <ul class="points">
+      <li>Sharing risky meaning takes <strong>confidence</strong> (say it to the person who needs to hear it, not to your spouse over dinner), <strong>humility</strong> (you don't own the truth) and <strong>skill</strong>.</li>
+      <li>Facts are the least controversial, the most persuasive and the least insulting place to begin. Opening with a shocking conclusion invites others to tell a Villain story about <em>you</em>.</li>
+      <li>Don't stop at the facts, though. The facts plus what you're starting to conclude is what makes the conversation worth having. Don't pile on every unflattering conclusion you've stored up; share the simplest one.</li>
+      <li>Speak tentatively because you really aren't certain, not as a trick. Swap "The fact is" for "In my opinion", and "Everyone knows" for "Three suppliers told me". But tentative isn't wimpy: "Call me crazy, but…" undermines you.</li>
+      <li>The same skills cure the opposite problem: pushing too hard when you're sure you're right. Stacking the deck, appeals to authority and straw men all breed resistance. Keep the belief, soften the delivery.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>STATE</h4>
+        <ol class="steps">
+          <li class="c-gold"><span class="k">S</span><div><span class="what">what</span><b>Share your facts</b><span>"Since I started, you've asked to meet me twice a day, more than anyone else."</span></div></li>
+          <li class="c-gold"><span class="k">T</span><div><span class="what">what</span><b>Tell your story</b><span>"I'm beginning to wonder if you don't trust me."</span></div></li>
+          <li class="c-gold"><span class="k">A</span><div><span class="what">what</span><b>Ask for others' paths</b><span>"Is that what's going on?"</span></div></li>
+          <li class="c-teal"><span class="k">T</span><div><span class="what">how</span><b>Talk tentatively</b><span>State the story as a story, not a fact.</span></div></li>
+          <li class="c-teal"><span class="k">E</span><div><span class="what">how</span><b>Encourage testing</b><span>"What am I missing?" Play devil's advocate against yourself if nobody speaks.</span></div></li>
+        </ol>
+        <p class="cap">Brian's boss Fernando wasn't distrustful: the previous hire kept finishing projects with a key piece missing.</p>
+      </div>
+      <div class="fig">
+        <h4>The Goldilocks test</h4>
+        <div class="gold">
+          <div class="set">
+            <div class="soft"><span class="label">Too soft</span>"This is probably stupid, but…"</div>
+            <div class="hard"><span class="label">Too hard</span>"How come you ripped us off?"</div>
+            <div class="right"><span class="label">Just right</span>"It's starting to look like you're taking this home for your own use. Is that right?"</div>
+          </div>
+          <div class="set">
+            <div class="soft"><span class="label">Too soft</span>"It's probably my fault, but…"</div>
+            <div class="hard"><span class="label">Too hard</span>"You wouldn't trust your own mother to make a one-minute egg!"</div>
+            <div class="right"><span class="label">Just right</span>"I'm starting to feel you don't trust me. If so, I'd like to know what I did to lose it."</div>
+          </div>
+          <div class="set">
+            <div class="soft"><span class="label">Too soft</span>"I'm ashamed to even mention this…"</div>
+            <div class="hard"><span class="label">Too hard</span>"When did you start using hard drugs?"</div>
+            <div class="right"><span class="label">Just right</span>"It's leading me to think you're using drugs. Is there another explanation I'm missing?"</div>
+          </div>
+        </div>
+        <p class="cap">The limit on how strongly you can state a view is how hard you're willing to invite people to challenge it.</p>
+      </div>
+    </div>
+    <div class="fig">
+      <h4>The motel bill, twice</h4>
+      <div class="compare">
+        <div>
+          <h5 style="color:var(--red)">Story first</h5>
+          <div class="script bad">
+            <p><b>Carole</b><span>I can't believe you're doing this to me. You know what I'm talking about.</span></p>
+            <p><b>Bob</b><span>I'm sorry, I don't know what you mean.</span></p>
+            <p><b>Carole</b><span>You're having an affair, and I have proof! <span class="tag">attack</span></span></p>
+          </div>
+        </div>
+        <div>
+          <h5 style="color:var(--teal)">STATE</h5>
+          <div class="script">
+            <p><b>Carole</b><span>There's a $48 charge from the Good Night Motel down the street. <span class="tag">facts</span></span></p>
+            <p><b>Carole</b><span>That's how my sister found out about Phil. I don't have anything to worry about, do I? What do you think it is? <span class="tag">story · ask</span></span></p>
+            <p><b>Carole</b><span>You've given me no reason to doubt you. It would just put my mind at rest to check now. Would that bother you? <span class="tag">contrast · test</span></span></p>
+          </div>
+        </div>
+      </div>
+      <p class="cap">The real explanation: a Chinese restaurant the couple had eaten at that month had the same owner as the motel and used the same card machine.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Explore Others' Paths</span></div>
+  <div class="body">
+    <div>
+      <h3>When they blow up or clam up, get curious</h3>
+      <p class="idea">You join their Path to Action at the end, already in progress. Help them walk it backwards to the facts, where the problem can actually be solved.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Be sincere.</strong> "Did everything go all right?" "Mostly." "Good. Next!" is an invitation that doesn't want an answer.</li>
+      <li><strong>Be curious</strong> at exactly the moment you'd normally get furious, and <strong>stay curious</strong> when their story is unflattering to you. Keep asking why a reasonable, decent person would say this.</li>
+      <li><strong>Be patient.</strong> Adrenaline lingers in the bloodstream after thoughts have changed. Let emotions catch up with the safety you've created.</li>
+      <li>Understanding isn't agreeing. You'll have time to share your path afterwards.</li>
+      <li>If they still won't open up, don't pry. Back off gracefully, or ask what they'd like to see happen.</li>
+    </ul>
+    <div class="fig">
+      <h4>AMPP: four listening tools, each a bigger step</h4>
+      <svg viewBox="0 0 520 260" role="img" aria-label="A staircase of four steps rising from left to right. Step one Ask: invite their view. Step two Mirror: reflect their emotions. Step three Paraphrase: restate their story. Step four Prime: offer your best guess. An arrow along the side indicates rising effort and risk on your part.">
+        <g>
+          <rect x="20" y="186" width="110" height="44" fill="color-mix(in srgb, var(--plum) 14%, var(--card))" stroke="var(--plum)" stroke-width="1.5"/>
+          <rect x="140" y="146" width="110" height="84" fill="color-mix(in srgb, var(--plum) 22%, var(--card))" stroke="var(--plum)" stroke-width="1.5"/>
+          <rect x="260" y="106" width="110" height="124" fill="color-mix(in srgb, var(--plum) 30%, var(--card))" stroke="var(--plum)" stroke-width="1.5"/>
+          <rect x="380" y="66" width="110" height="164" fill="color-mix(in srgb, var(--plum) 40%, var(--card))" stroke="var(--plum)" stroke-width="1.5"/>
+        </g>
+        <g font-size="14" class="t-head">
+          <text x="75" y="212" text-anchor="middle" class="t-head">Ask</text>
+          <text x="195" y="172" text-anchor="middle" class="t-head">Mirror</text>
+          <text x="315" y="132" text-anchor="middle" class="t-head">Paraphrase</text>
+          <text x="435" y="92" text-anchor="middle" class="t-head">Prime</text>
+        </g>
+        <g font-size="10.5">
+          <text x="75" y="176" text-anchor="middle">invite their view</text>
+          <text x="195" y="136" text-anchor="middle">reflect the emotion</text>
+          <text x="315" y="96" text-anchor="middle">restate the story</text>
+          <text x="435" y="56" text-anchor="middle">offer your best guess</text>
+        </g>
+        <path d="M20 244 H500" stroke="var(--ink-3)" stroke-width="1.5"/>
+        <path d="M496 239 L506 244 L496 249 Z" fill="var(--ink-3)"/>
+        <text x="20" y="258" font-size="10.5">more of your own meaning poured in, more risk taken →</text>
+      </svg>
+      <div class="decode">
+        <div class="row c-plum"><b>Ask</b><q>What's going on? I'd really like to hear your view.</q><span>Often enough on its own to break the spiral.</span></div>
+        <div class="row c-plum"><b>Mirror</b><q>You say you're fine, but your voice sounds upset.</q><span>Best when tone and words don't match. Say it calmly.</span></div>
+        <div class="row c-plum"><b>Paraphrase</b><q>So you feel I don't approve of you, and he's one person who does?</q><span>In your own words, shorter. Not parroting.</span></div>
+        <div class="row c-plum"><b>Prime</b><q>Are you thinking we're only doing this for money, and don't care about your lives?</q><span>Priming the pump: a last resort, an act of good faith.</span></div>
+      </div>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Then share yours: remember your ABCs</h4>
+        <ol class="steps">
+          <li class="c-teal"><span class="k">A</span><div><b>Agree</b><span>Most arguments are fights over the 5–10% people disagree on. When you agree, say so and move on. Avoid "violent agreement".</span></div></li>
+          <li class="c-teal"><span class="k">B</span><div><b>Build</b><span>If their view is right but incomplete: "Absolutely. In addition…" rather than "Wrong, you forgot…"</span></div></li>
+          <li class="c-teal"><span class="k">C</span><div><b>Compare</b><span>When you differ: "I think I see it differently. Let me describe how." Then STATE your path.</span></div></li>
+        </ol>
+      </div>
+      <div class="story" style="align-self:start">
+        <span class="label">The story</span>
+        <p>A parent drags teenage Wendy inside after a date with a boy who looks like trouble. She screams "I hate you" and slams her door. Later the parent apologises for embarrassing her, asks, mirrors her "it's no big deal", paraphrases her sense that nobody approves of her, and finally primes: maybe she isn't feeling valued by boys or by her parents right now? After a long silence she asks why she's so ugly, and the real conversation starts.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Move to Action</span></div>
+  <div class="body">
+    <div>
+      <h3>Dialogue isn't decision-making</h3>
+      <p class="idea">A full pool still fails if people assumed different ways of deciding, or if nobody does anything afterwards.</p>
+    </div>
+    <ul class="points">
+      <li>The riskiest moments are the start and the end. At the end, violated expectations creep in. Cara agreed to "a cruise"; Rene booked a specific one and paid a $500 deposit.</li>
+      <li><strong>Decide how to decide.</strong> When authority is clear, the leader or parent chooses the method. When it isn't (should a child repeat a school year?), the method itself is a topic for dialogue.</li>
+      <li>Four questions pick the method: <em>Who cares? Who knows? Who must agree? How many people is it worth involving?</em> Involve as few as possible without hurting quality or support.</li>
+      <li><strong>Make assignments</strong> with four elements: who, does what, by when, and how you'll follow up. There is no "we" in an assignment; "we" means "not me".</li>
+      <li>Be concrete about deliverables. Howard Hughes asked engineers for a steam car with almost no brief, got a car that would boil passengers in a crash, and had it cut into pieces. Point to examples of what you do and don't want.</li>
+      <li><strong>Write it down.</strong> "One dull pencil is worth six sharp minds." Revisit it, and when a promise is broken, that's a new crucial conversation.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Four ways to decide</h4>
+        <svg viewBox="0 0 480 250" role="img" aria-label="A chart with four decision methods along the horizontal axis in order of involvement: command, consult, vote, consensus. A teal line for commitment rises from left to right. A red line for speed falls from left to right. They cross between consult and vote.">
+          <line x1="50" y1="200" x2="460" y2="200" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <line x1="50" y1="30" x2="50" y2="200" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <polyline points="90,170 200,128 310,92 420,46" fill="none" stroke="var(--teal)" stroke-width="3"/>
+          <polyline points="90,48 200,84 310,128 420,176" fill="none" stroke="var(--red)" stroke-width="3" stroke-dasharray="7 5"/>
+          <g fill="var(--teal)"><circle cx="90" cy="170" r="5"/><circle cx="200" cy="128" r="5"/><circle cx="310" cy="92" r="5"/><circle cx="420" cy="46" r="5"/></g>
+          <g fill="var(--red)"><circle cx="90" cy="48" r="5"/><circle cx="200" cy="84" r="5"/><circle cx="310" cy="128" r="5"/><circle cx="420" cy="176" r="5"/></g>
+          <g font-size="12" class="t-ink" text-anchor="middle">
+            <text x="90" y="220" class="t-head">Command</text><text x="200" y="220" class="t-head">Consult</text><text x="310" y="220" class="t-head">Vote</text><text x="420" y="220" class="t-head">Consensus</text>
+          </g>
+          <text x="255" y="242" text-anchor="middle" font-size="10.5">more involvement →</text>
+          <text x="430" y="36" text-anchor="end" font-size="11" style="fill:var(--teal)">commitment</text>
+          <text x="100" y="38" font-size="11" style="fill:var(--red)">speed</text>
+        </svg>
+        <p class="cap">A schematic of the book's trade-off, not measured data. Command: imposed from outside, or handed to someone you trust. Consult: gather input, then a few decide. Vote: for efficiency among good options, only if everyone will back the result. Consensus: for high-stakes, complex issues everyone must support.</p>
+      </div>
+      <div class="fig">
+        <h4>Finish clearly</h4>
+        <ol class="steps">
+          <li class="c-blue"><span class="k">1</span><div><b>Who?</b><span>One named person per task, even when several help.</span></div></li>
+          <li class="c-blue"><span class="k">2</span><div><b>Does what?</b><span>Exact deliverables. Use Contrasting and real examples.</span></div></li>
+          <li class="c-blue"><span class="k">3</span><div><b>By when?</b><span>Goals without deadlines are just directions.</span></div></li>
+          <li class="c-blue"><span class="k">4</span><div><b>How will you follow up?</b><span>An email, a meeting, milestones. People need a chance to account if they're to feel accountable.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ YEAH, BUT ============ -->
+<section id="yeah-but">
+  <div class="sec-head">
+    <span class="label">Chapter 10 · Advice for tough cases</span>
+    <h2>"Yeah, but my situation is different"</h2>
+    <p class="lede">The authors answer the objections they hear most. Two ideas recur: talk about the <em>pattern</em>, not the latest instance, and work on yourself before blaming the other person's nature.</p>
+  </div>
+  <div class="cases">
+    <div class="case"><span class="yb">Yeah, but…</span><b>Subtle harassment</b><span>Own how long you tolerated it, establish Mutual Purpose, then STATE specific behaviours privately and firmly. Go to HR if it's over the line.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>An overly sensitive spouse</b><span>Many couples silently agree never to give feedback. Raise things early, contrast, describe behaviour, ask "Do you see it differently?"</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>Teammates break agreements</b><span>In the best teams everyone speaks up immediately. Waiting for the boss lets the new norm die.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>People defer to me</b><span>Ask a peer, not your reports, what you do that causes it. If it's ghosts of past bosses, raise it openly and reward dissent. You can't command deference away.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>I don't trust them</b><span>Trust comes in degrees, per topic, and in two kinds: motive and ability. Deal with trust around the issue, not the whole person.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>They won't talk about anything serious</b><span>Start small, make it safe, don't nag. Sometimes it's easier to talk about <em>how</em> you talk first.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>Vague but annoying</b><span>Either it isn't worth raising, or you need to pin down the exact behaviours before you can.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>Shows no initiative</b><span>Raise the bar explicitly, using examples of giving up after one try. Stop quietly compensating for them.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>The same problem keeps recurring</b><span>The second conversation isn't about lateness; it's about a broken commitment. Talking about the real issue calms your emotions.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>I need time to calm down</b><span>A mutually agreed time-out isn't silence. But telling others to calm down sounds patronising.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>Endless excuses</b><span>Get a commitment to solve the problem (being on time), not the stated cause (the alarm clock).</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>Insubordination</b><span>Zero tolerance, said immediately and respectfully: step away from the topic and talk about how they're acting.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>I said something horrible</b><span>Stories left alone ferment. Apologise, then STATE your path. Next time, speak before it builds.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>Touchy and personal</b><span>Hygiene, being boring: contrast, show your intent is good, describe specifics, move to solutions.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>Word games</b><span>Hold people to outcomes, not just actions. "Don't do anything that hurts your sister's feelings."</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>No warning</b><span>Set a "no surprises" rule. The first late surprise is a new problem to discuss, whatever the excuse.</span></div>
+    <div class="case"><span class="yb">Yeah, but…</span><b>They break every rule</b><span>Eat the elephant one bite at a time. Pick what bothers you most and is easiest to raise.</span></div>
+  </div>
+</section>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Putting It All Together</span></div>
+  <div class="body">
+    <div>
+      <h3>Two levers do most of the work</h3>
+      <p class="idea">If you remember nothing else, Learn to Look and Make It Safe. Simply noticing you've left dialogue, then doing anything to restore safety, works most of the time.</p>
+    </div>
+    <ul class="points">
+      <li>People who improve keep asking: "Are we playing games, or are we in dialogue?" Teams that share the vocabulary can say "I think we've moved away from dialogue" and recover early.</li>
+      <li>The book's skills are just common ways to build safety. Asking a question, a smile, an apology, a short break: if you know your job is to make it safer, you'll usually find something that helps.</li>
+      <li>You don't need to master everything. Kerry Patterson meets readers who only skimmed the cover and still benefited. Aim for progress, not perfection.</li>
+    </ul>
+    <div class="fig">
+      <h4>All seven principles in one conversation</h4>
+      <p class="cap" style="font-size:16px;color:var(--ink)">A month after their mother's funeral, two siblings have to divide the estate. One cared for her almost alone for four years and wants to be compensated.</p>
+      <div class="script">
+        <p class="bad"><b>You</b><span>We have to sell the cottage. We need the cash to cover my costs from looking after Mom. <span class="tag">story first</span></span></p>
+        <p class="bad"><b>Sister</b><span>Don't start with the guilt. I sent money every month. <span class="tag">violence</span></span></p>
+        <hr>
+        <p><b>You</b><span>I don't want to start an argument or make you feel guilty. I do want to talk about being paid back for the extra load. <span class="tag">heart · look · contrast</span></span></p>
+        <p><b>You</b><span>I spent a lot on her care and did it myself instead of hiring a nurse. I honestly feel I did more day to day. Do you see it differently? <span class="tag">master story · STATE</span></span></p>
+        <p><b>Sister</b><span>Fine. Just send me a bill.</span></p>
+        <p><b>You</b><span>The way you say that, it doesn't sound okay. Do you think I'm not acknowledging what you did? <span class="tag">mirror · prime</span></span></p>
+        <p><b>Sister</b><span>I visited when I could and offered to pay for a nurse. This feels like it's coming out of nowhere.</span></p>
+        <p><b>You</b><span>You're right, you did a lot. There were also costs you didn't see: her new medication cost twice as much. <span class="tag">agree · build</span></span></p>
+        <p><b>You</b><span>I kept a record. Can we go through it tomorrow and agree what's fair? <span class="tag">move to action</span></span></p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Afterword</span>
+    <h2>What the authors learned in ten years</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>The book closes with a note from each author on how their thinking changed in the decade after the first edition. The common thread is humility about the skills: they don't work on autopilot, they don't control anyone, and they pay off over many conversations rather than one.</p>
+      <p>One reader, an IT worker with a heavily tabbed copy, put it best when Al Switzler assumed she must run HR: crucial conversations belong to whoever sees them first.</p>
+    </div>
+    <div class="fig">
+      <div class="lessons">
+        <div class="c-gold"><b>Al Switzler</b><span>We can do our worst when it barely matters, like arguing over a $3 parking fee. There's no cruise control.</span></div>
+        <div class="c-red"><b>Joseph Grenny</b><span>Emotions feel completely true in crucial moments and are almost always wrong. With practice, they're remarkably changeable.</span></div>
+        <div class="c-teal"><b>Kerry Patterson</b><span>Merely recognising "this is a crucial conversation" helps many people behave better. It isn't all-or-nothing.</span></div>
+        <div class="c-plum"><b>Ron McMillan</b><span>If the other person won't engage, dialogue won't happen. But patient respect over weeks usually brings them in.</span></div>
+      </div>
+      <blockquote class="pull" style="font-size:clamp(22px,2.6vw,30px)">"It's not about communication, it's about results."</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Before, during, after</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book's own advice: pick one idea and bring it into your next high-stakes conversation. These are the ones most worth picking.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Before</h3>
+      <div class="tk"><b>Ask the four heart questions</b><span>What do I want for me, for them, for us? How would I act if I really wanted that?</span></div>
+      <div class="tk"><b>Write the "and" question</b><span>What I want + what I don't want = one question that kills the Fool's Choice.</span></div>
+      <div class="tk"><b>Sort facts from story</b><span>Could a camera record it? If not, it's your story. Drop the hot words.</span></div>
+      <div class="tk"><b>Tell the rest of the story</b><span>What's my role? Why would a decent person do this? What would I do right now if I wanted good results?</span></div>
+    </div>
+    <div class="col">
+      <h3>During</h3>
+      <div class="tk"><b>Read silence and violence as fear</b><span>Not as an attack. Step out of the content and fix safety first.</span></div>
+      <div class="tk"><b>Contrast</b><span>"I don't mean… I do mean…" Before trouble, or as first aid.</span></div>
+      <div class="tk"><b>STATE your path</b><span>Facts, then a tentative story, then a sincere "How do you see it?"</span></div>
+      <div class="tk"><b>Ask, mirror, paraphrase, prime</b><span>Then agree where you agree, build where it's incomplete, compare where you differ.</span></div>
+    </div>
+    <div class="col">
+      <h3>After</h3>
+      <div class="tk"><b>Decide how to decide</b><span>Command, consult, vote or consensus, chosen out loud before the decision.</span></div>
+      <div class="tk"><b>Who does what by when</b><span>One name per task, clear deliverables, a deadline and a follow-up.</span></div>
+      <div class="tk"><b>Write it down</b><span>Revisit commitments at the next meeting and hold people to them.</span></div>
+      <div class="tk"><b>Talk about the pattern</b><span>The second time, the topic is the broken promise, not the original slip.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Kerry Patterson, Joseph Grenny, Ron McMillan and Al Switzler, <em>Crucial Conversations: Tools for Talking When Stakes Are High</em>, second edition (McGraw-Hill, 2012). Figures are as reported in the book. Diagrams were drawn for this page; the decision chart is schematic. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero band: meaning flows in from both sides and mixes in a shared pool --- */
+  var canvas = document.getElementById("pool");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  // fixed positions for the mixed drops inside the pool
+  var seed = 11, settled = [];
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  for (var s = 0; s < 34; s++) settled.push([rnd() * 2 - 1, rnd() * 2 - 1, s % 2]);
+
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var mid = hgt / 2, cx = w / 2;
+    var rx = Math.min(w * 0.14, 130), ry = hgt * 0.36;
+    var cols = [css("--gold"), css("--plum")];
+    var teal = css("--teal");
+
+    // the shared pool
+    ctx.globalAlpha = 0.14; ctx.fillStyle = teal;
+    ctx.beginPath(); ctx.ellipse(cx, mid, rx, ry, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.globalAlpha = 0.9; ctx.strokeStyle = teal; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.ellipse(cx, mid, rx, ry, 0, 0, Math.PI * 2); ctx.stroke();
+
+    // drops already mixed in the pool
+    var wob = reduce ? 0 : time * 0.0006;
+    settled.forEach(function (p, i) {
+      var a = p[0], b = p[1];
+      if (a * a + b * b > 0.8) { a *= 0.7; b *= 0.7; }
+      var x = cx + a * rx * 0.85 + Math.sin(wob + i) * 3;
+      var y = mid + b * ry * 0.75 + Math.cos(wob * 1.3 + i) * 2;
+      ctx.globalAlpha = 0.85; ctx.fillStyle = cols[p[2]];
+      ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2); ctx.fill();
+    });
+
+    // streams flowing in from each side
+    var N = 22, drift = reduce ? 0 : time * 0.00007;
+    for (var side = 0; side < 2; side++) {
+      var x0 = side ? w : 0, x1 = side ? cx + rx * 0.6 : cx - rx * 0.6;
+      for (var i = 0; i < N; i++) {
+        var t = ((i / N) + drift + side * 0.013) % 1;
+        var x = x0 + (x1 - x0) * t;
+        var y = mid + Math.sin(t * Math.PI * 3 + i * 1.7 + side * 2) * hgt * 0.28 * (1 - t);
+        var alpha = t > 0.85 ? (1 - t) / 0.15 : Math.min(1, t * 6);
+        ctx.globalAlpha = alpha * 0.9; ctx.fillStyle = cols[side];
+        ctx.beginPath(); ctx.arc(x, y, 2.2 + 1.6 * (1 - t), 0, Math.PI * 2); ctx.fill();
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

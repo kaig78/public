@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Being Logical by D. Q. McInerny – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Paper takes the cover's pale sky blue; the orange rubber band
+   becomes the accent for argument form. Four signal colours: blue = facts, orange = form,
+   green = sound, red = fallacy. */
+:root {
+  --paper: #f2f7f9;
+  --paper-2: #e3edf2;
+  --card: #ffffff;
+  --ink: #13191d;
+  --ink-2: #46535b;
+  --ink-3: #74828a;
+  --rule: #d1dde3;
+
+  --fact: #2a78a6;
+  --form: #c4661a;
+  --sound: #2b8653;
+  --fallacy: #c43838;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0e1418;
+    --paper-2: #162027;
+    --card: #1a242b;
+    --ink: #e8f0f3;
+    --ink-2: #aab9c1;
+    --ink-3: #7f8f97;
+    --rule: #29363e;
+    --fact: #6db6e2;
+    --form: #ffa24f;
+    --sound: #5ccd8c;
+    --fallacy: #ff7676;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0e1418;
+  --paper-2: #162027;
+  --card: #1a242b;
+  --ink: #e8f0f3;
+  --ink-2: #aab9c1;
+  --ink-3: #7f8f97;
+  --rule: #29363e;
+  --fact: #6db6e2;
+  --form: #ffa24f;
+  --sound: #5ccd8c;
+  --fallacy: #ff7676;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--fact); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Signal colour helpers */
+.c-fact    { --c: var(--fact); }
+.c-form    { --c: var(--form); }
+.c-sound   { --c: var(--sound); }
+.c-fallacy { --c: var(--fallacy); }
+.c-mute    { --c: var(--ink-3); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(60px, 10vw, 132px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero h1 span { display: block; }
+.hero h1 span + span { color: var(--form); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 600 / 921;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 30, 45, .35), 0 8px 18px -10px rgba(10, 30, 45, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 120px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-mute { fill: var(--ink-3); }
+.fig svg .t-head { font-family: var(--display); font-weight: 750; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map (five stages) ---------- */
+.map { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 12px; align-content: start; }
+.map h3 { font-size: 22px; font-weight: 850; font-stretch: 112%; letter-spacing: -.01em; line-height: 1.05; }
+.map p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.map li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px; font-size: 15px; line-height: 1.35; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 12.5px; color: var(--ink-3); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; }
+
+/* two-up intro grid */
+.duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* first principles cards */
+.principles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.principle { border-radius: 6px; padding: 16px; display: grid; gap: 6px; align-content: start; border: 1px solid color-mix(in srgb, var(--c) 35%, var(--rule)); }
+.principle b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; color: var(--c); letter-spacing: -.01em; }
+.principle .stated { font-family: var(--mono); font-size: 13px; color: var(--ink); line-height: 1.45; }
+.principle span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* 2x2 matrix */
+.matrix { display: grid; grid-template-columns: 104px 1fr 1fr; grid-template-rows: auto 1fr 1fr; gap: 6px; }
+.matrix .ax { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; }
+.matrix .ax.top { justify-content: center; padding-bottom: 4px; text-align: center; }
+.matrix .ax.side { justify-content: flex-end; text-align: right; padding-right: 6px; }
+.quad { border-radius: 6px; padding: 16px; min-height: 140px; display: grid; align-content: space-between; gap: 10px; border: 1px solid color-mix(in srgb, var(--c) 30%, var(--rule)); }
+.quad h4 { font-size: 21px; font-weight: 850; font-stretch: 110%; color: var(--c); letter-spacing: -.01em; }
+.quad p { font-size: 14.5px; line-height: 1.38; color: var(--ink-2); }
+.quad .what { font-family: var(--mono); font-size: 12px; color: var(--ink); line-height: 1.45; }
+
+/* statement square (A/E/I/O) */
+.square { display: grid; grid-template-columns: 96px 1fr 1fr; grid-template-rows: auto 1fr 1fr; gap: 6px; }
+.square .cell { border-radius: 6px; padding: 14px; background: var(--paper-2); display: grid; gap: 4px; align-content: start; min-height: 96px; }
+.square .cell b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 17px; }
+.square .cell span { font-size: 14px; color: var(--ink-2); line-height: 1.35; }
+.square .cell .ex { font-family: var(--mono); font-size: 12.5px; color: var(--ink); }
+.square .ax { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; }
+.square .ax.top { justify-content: center; }
+.square .ax.side { justify-content: flex-end; text-align: right; padding-right: 6px; }
+
+/* logic notation blocks */
+.logic {
+  font-family: var(--mono); font-size: 14px; line-height: 1.75;
+  background: var(--paper-2); border-radius: 6px; padding: 16px 18px; margin: 0;
+  white-space: pre-wrap; color: var(--ink);
+}
+.logic .k { color: var(--form); }
+.logic .c { color: var(--ink-3); }
+.logic .ok { color: var(--sound); }
+.logic .no { color: var(--fallacy); }
+
+/* conditional forms */
+.forms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.form-card { border-radius: 6px; padding: 16px; display: grid; gap: 10px; align-content: start; border-top: 4px solid var(--c); background: color-mix(in srgb, var(--c) 7%, var(--card)); }
+.form-card .hd { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.form-card b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 18px; }
+.form-card .verdict { font-family: var(--mono); font-size: 12px; letter-spacing: .07em; text-transform: uppercase; color: var(--c); }
+.form-card .logic { background: var(--card); font-size: 13.5px; padding: 12px 14px; }
+.form-card p { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* attitude pairs */
+.pairs { display: grid; gap: 0; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--card); }
+.pair { display: grid; grid-template-columns: 170px minmax(0, 1fr) minmax(0, 1fr); border-top: 1px solid var(--rule); }
+.pair:first-child { border-top: 0; }
+.pair > div { padding: 14px 16px; font-size: 15px; line-height: 1.42; color: var(--ink-2); }
+.pair > div:first-child { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 17px; color: var(--ink); }
+.pair.head > div { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; font-weight: 400; color: var(--ink-3); padding-block: 12px; }
+.pair .good { border-left: 3px solid var(--sound); }
+.pair .bad { border-left: 3px solid var(--fallacy); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* fallacy field guide */
+.families { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.fam { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; letter-spacing: .05em; color: var(--ink-2); }
+.fam i { width: 12px; height: 12px; border-radius: 3px; background: var(--c); display: inline-block; }
+.f-form  { --c: var(--form); }
+.f-proof { --c: var(--fact); }
+.f-div   { --c: var(--fallacy); }
+.f-auth  { --c: #8a5cc7; }
+.f-whole { --c: var(--sound); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .f-auth { --c: #b996ff; } }
+:root[data-theme="dark"] .f-auth { --c: #b996ff; }
+
+table.ft { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 820px; font-size: 15px; line-height: 1.42; }
+table.ft th, table.ft td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--rule); }
+table.ft thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 400; border-bottom: 1px solid var(--ink); }
+table.ft tbody th { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 15.5px; color: var(--ink); width: 200px; border-left: 4px solid var(--c); }
+table.ft tbody th small { display: block; font-family: var(--mono); font-weight: 400; font-size: 11px; letter-spacing: .05em; color: var(--ink-3); margin-top: 3px; }
+table.ft td.ex { font-style: italic; color: var(--ink-2); }
+table.ft td.fix { color: var(--ink); }
+table.ft tbody tr:hover td, table.ft tbody tr:hover th { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+table.ft tr.grp td { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--c); padding-top: 22px; border-bottom: 0; }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* mini fallacy cards inside chapters */
+.fcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 10px; }
+.fcard { border-radius: 6px; padding: 14px 16px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--c); display: grid; gap: 4px; align-content: start; }
+.fcard b { font-family: var(--display); font-weight: 800; font-stretch: 104%; font-size: 17px; }
+.fcard span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+.fcard em { font-size: 14px; color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .map { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 220px; order: -1; transform: rotate(-1.2deg); }
+  .duo, .epilogue, .part { grid-template-columns: 1fr; }
+  .toolkit { grid-template-columns: 1fr; }
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map { grid-template-columns: 1fr; }
+  .matrix, .square { grid-template-columns: 26px 1fr 1fr; }
+  .matrix .ax.side, .square .ax.side { writing-mode: vertical-rl; transform: rotate(180deg); justify-content: center; padding: 0; }
+  .quad { padding: 12px; min-height: 120px; }
+  .quad h4 { font-size: 18px; }
+  .principles, .forms, .compare { grid-template-columns: 1fr; }
+  .pair { grid-template-columns: 1fr; }
+  .pair.head { display: none; }
+  .pair > div:first-child { padding-bottom: 4px; }
+  .pair .good, .pair .bad { margin: 0 16px 10px; padding: 4px 0 4px 12px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · D. Q. McInerny · Random House, 2004</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#mind">Mind</a>
+    <a href="#principles">Principles</a>
+    <a href="#argument">Argument</a>
+    <a href="#pitfalls">Pitfalls</a>
+    <a href="#fallacies">Fallacies</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span>Being</span><span>Logical</span></h1>
+    <p class="sub">A guide to good thinking</p>
+    <p class="dek">A slim handbook in the spirit of Strunk and White. McInerny's claim is that logic is the habit of matching what you think and say to the way things actually are, more than a set of rules.</p>
+    <div class="byline label">
+      <span>5 parts</span><span>66 short sections</span><span>28 fallacies</span><span>~34,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Being Logical by D. Q. McInerny: a single orange rubber band lying on a pale blue background">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="band"></canvas>
+  <div class="ends label"><span>Loose thinking</span><span>Held together</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Logic is about reality before it is about rules</h2>
+  </div>
+  <div class="duo">
+    <div class="prose">
+      <p>McInerny teaches logic the way a coach teaches a sport. The voice is direct, the examples are homely (spilled milk, a leaky pipe, Louise out for a run), and he keeps returning to the obvious, because the obvious is what we most often skip.</p>
+      <p>His central thread is <strong>correspondence</strong>. Things exist first. Our ideas are faithful or unfaithful copies of them. Words carry those ideas to other people. A statement is true when it matches what is actually the case, and an argument is good when true statements are linked in a structure that carries their truth forward.</p>
+      <p>So "being logical" means more than reasoning consistently. A mind can be perfectly consistent from a false starting point. For McInerny logic is aimed at <em>truth</em>, and every chapter is about keeping thought tied to the world.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The book at a glance</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat c-fact"><span class="big num">4</span><p>First principles that every act of reasoning relies on and none can prove.</p></div>
+        <div class="stat c-form"><span class="big num">2</span><p>Tests for every argument: are the premises true, and is the form valid?</p></div>
+        <div class="stat c-fallacy"><span class="big num">28</span><p>Typical ways reasoning goes wrong, from affirming the consequent to simplistic reasoning.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--form)">
+        <span class="label">The line he keeps returning to</span>
+        <p>If you are unsure whether "the dog is in the garage" is true, thinking harder about dogs and garages won't settle it. Go and look in the garage. Truth is settled out in the world, not in your head.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part 1</span>
+      <h3>Preparing the mind</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Attention and facts</b></a></li>
+        <li><span>02</span><a href="#ch2"><b>Thing, idea, word</b></a></li>
+        <li><span>03</span><a href="#ch3"><b>Say it plainly</b></a></li>
+        <li><span>04</span><a href="#ch4"><b>Truth</b></a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 2</span>
+      <h3>Basic principles</h3>
+      <ol>
+        <li><span>05</span><a href="#ch5"><b>Four first principles</b></a></li>
+        <li><span>06</span><a href="#ch6"><b>Causes</b></a></li>
+        <li><span>07</span><a href="#ch7"><b>Definition and generalizing</b></a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 3</span>
+      <h3>Argument</h3>
+      <ol>
+        <li><span>08</span><a href="#ch8"><b>Premises and conclusions</b></a></li>
+        <li><span>09</span><a href="#ch9"><b>Statements and comparisons</b></a></li>
+        <li><span>10</span><a href="#ch10"><b>True and valid</b></a></li>
+        <li><span>11</span><a href="#ch11"><b>If/then, either/or</b></a></li>
+        <li><span>12</span><a href="#ch12"><b>The syllogism</b></a></li>
+        <li><span>13</span><a href="#ch13"><b>Induction, judging, building</b></a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 4</span>
+      <h3>Sources of illogic</h3>
+      <ol>
+        <li><span>14</span><a href="#ch14"><b>Bad mental postures</b></a></li>
+        <li><span>15</span><a href="#ch15"><b>Emotion, purpose, sincerity</b></a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 5</span>
+      <h3>Forms of illogic</h3>
+      <ol>
+        <li><span>16</span><a href="#ch16"><b>Broken forms</b></a></li>
+        <li><span>17</span><a href="#ch17"><b>Proof that isn't</b></a></li>
+        <li><span>18</span><a href="#ch18"><b>Changing the subject</b></a></li>
+        <li><span>19</span><a href="#ch19"><b>Borrowed authority</b></a></li>
+        <li><span>20</span><a href="#ch20"><b>Wholes and parts</b></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="mind">
+  <span class="label partno">Part 1 · Sections 1–10</span>
+  <h2>Preparing the mind</h2>
+  <p class="lede">Before any rule of inference, three habits: pay attention, respect facts, and keep your ideas and words honest. Logic has nothing to work on until they're in place.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Be Attentive · Get the Facts Straight</span></div>
+  <div class="body">
+    <div>
+      <h3>Attention costs something</h3>
+      <p class="idea">Most reasoning errors start earlier, with a situation we skimmed instead of read.</p>
+    </div>
+    <ul class="points">
+      <li>Familiarity is the trap. We assume today repeats yesterday and misread what's in front of us. Strictly speaking no situation repeats. "Pay attention" is apt wording: it takes effort, and you can't be attentive and passive at once. Don't just look, see. Don't just hear, listen.</li>
+      <li>A fact is something made or done, with a stubborn existence of its own. There are two kinds: <strong>things</strong> (the White House) and <strong>events</strong> (Lincoln's assassination). Things are more basic, because events are made of things and their actions.</li>
+      <li>The surest evidence of a thing is to go and look at it. For most events we have to rely on <strong>indirect evidence</strong> (documents, photographs, eyewitnesses), so everything depends on how authentic and reliable the sources are.</li>
+      <li>Facts can be <strong>objective</strong> (public, in principle checkable by anyone) or <strong>subjective</strong> (your headache). I can know about your headache only by trusting you, so subjective facts stand or fall with the person reporting them. You can even get your own subjective facts wrong through self-delusion or rationalization.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Ideas · Origins · Matching</span></div>
+  <div class="body">
+    <div>
+      <h3>First the thing, then the idea, then the word</h3>
+      <p class="idea">An idea is clear when it faithfully reflects its object. A word works when it faithfully carries the idea.</p>
+    </div>
+    <div class="fig">
+      <h4>The chain of knowledge</h4>
+      <svg viewBox="0 0 640 210" role="img" aria-label="Three boxes in a row joined by arrows. First: the thing, an actual cat, an objective fact. Second: the idea of a cat in the mind, a subjective fact. Third: the word cat, which communicates the idea. A dashed arrow loops from the word back to the thing, labelled: to test a word or idea, go back to the thing.">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker>
+          <marker id="arr-f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--fact)"/></marker>
+        </defs>
+        <text x="105" y="18" text-anchor="middle" font-size="11" class="t-mute">1 · OBJECTIVE FACT</text>
+        <rect x="20" y="28" width="170" height="112" rx="8" fill="color-mix(in srgb, var(--fact) 10%, transparent)" stroke="var(--fact)" stroke-width="2"/>
+        <path d="M86 68 L91 46 L102 62 Z M108 62 L119 46 L124 68 Z" fill="var(--fact)"/>
+        <circle cx="105" cy="80" r="23" fill="var(--fact)"/>
+        <circle cx="97" cy="77" r="3" fill="var(--card)"/><circle cx="113" cy="77" r="3" fill="var(--card)"/>
+        <text x="105" y="128" text-anchor="middle" font-size="12" class="t-ink">an actual cat</text>
+
+        <text x="320" y="18" text-anchor="middle" font-size="11" class="t-mute">2 · IDEA (IN THE MIND)</text>
+        <ellipse cx="320" cy="78" rx="78" ry="42" fill="color-mix(in srgb, var(--form) 10%, transparent)" stroke="var(--form)" stroke-width="2"/>
+        <circle cx="282" cy="132" r="7" fill="none" stroke="var(--form)" stroke-width="1.6"/>
+        <circle cx="270" cy="146" r="4" fill="none" stroke="var(--form)" stroke-width="1.4"/>
+        <text x="320" y="74" text-anchor="middle" font-size="12" class="t-ink">the idea</text>
+        <text x="320" y="92" text-anchor="middle" font-size="12" class="t-ink">of a cat</text>
+
+        <text x="535" y="18" text-anchor="middle" font-size="11" class="t-mute">3 · WORD</text>
+        <rect x="450" y="28" width="170" height="112" rx="8" fill="var(--paper-2)" stroke="var(--ink)" stroke-width="2"/>
+        <text x="535" y="94" text-anchor="middle" font-size="30" class="t-ink" style="font-family:var(--body);font-style:italic">“cat”</text>
+
+        <line x1="194" y1="84" x2="236" y2="84" stroke="var(--ink-3)" stroke-width="1.8" marker-end="url(#arr)"/>
+        <line x1="402" y1="84" x2="446" y2="84" stroke="var(--ink-3)" stroke-width="1.8" marker-end="url(#arr)"/>
+        <path d="M535 146 C535 196, 105 196, 105 148" fill="none" stroke="var(--fact)" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#arr-f)"/>
+        <text x="320" y="205" text-anchor="middle" font-size="11.5" style="fill:var(--fact)">to test a word or an idea, go back to the thing</text>
+      </svg>
+      <p class="cap">"Cat" is a <strong>simple idea</strong>: one idea, one kind of object, easy to check. "Democracy" is a <strong>complex idea</strong>: it draws on many things at once (people, constitutions, institutions, history), so it stays clear only if you keep touching base with all of them.</p>
+    </div>
+    <ul class="points">
+      <li>We know the world <em>through</em> our ideas, but our ideas aren't what we know. They are the means, not the end. The quickest way to clarify an idea is to look through it at the thing it represents.</li>
+      <li>We favour our own ideas like our own children, but every idea owes its existence to something outside the mind. The longer we attend to ideas while ignoring where they came from, the more we see a projected world instead of the real one.</li>
+      <li>Bad ideas don't just happen. They come from carelessness, or worse, from deliberately ignoring facts. A bad idea can still be informative, but about the person who holds it, not about the world.</li>
+      <li>When you can't find the right word, the problem is usually the idea. Clarify the idea against its object and the word tends to arrive. You can describe an imaginary Lilliput in perfect words. All they reveal is the state of your mind.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Communication · Vagueness · Evasion</span></div>
+  <div class="body">
+    <div>
+      <h3>Say it plainly</h3>
+      <p class="idea">Logic begins with the statement: a sentence you can answer with "true" or "false". You can't judge a statement you can't understand.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Make background explicit.</strong> Don't assume the audience knows what you know. When in doubt, err on the side of saying too much.</li>
+      <li><strong>Speak in complete sentences.</strong> "Dog turtle" links ideas without saying how. "The dog bit the turtle" is a statement.</li>
+      <li><strong>Don't pass off evaluations as facts.</strong> "The Pearce Building is on Main Street" is true or false. "The Pearce Building is ugly" mixes subjective and objective elements and has to be argued for.</li>
+      <li><strong>Drop double negatives.</strong> "It is not unlikely she'd be welcome" means "she'd be welcome", so say that.</li>
+      <li><strong>Fit the language to the audience.</strong> Don't talk down to people and don't talk over their heads. You can only do that if you know who's listening.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Vague vs. ambiguous</h4>
+        <div class="compare" style="border:0">
+          <div class="c-fact"><h5>Vague: blurred referent</h5><ul><li>"People don't like music like that." Which people, what music?</li><li>"They say he won't run again." Who are "they"?</li><li>The more general the word, the vaguer it gets. Rich words like <em>love</em>, <em>fairness</em> and <em>democracy</em> need to be defined before you use them.</li></ul></div>
+          <div class="c-form"><h5>Ambiguous: two meanings</h5><ul><li>A trail sign reads BEAR TO THE RIGHT. Is it a direction or a grizzly warning?</li><li>The fix is to spell it out: "Keep left. Grizzly bears on the right-hand trail."</li></ul></div>
+        </div>
+        <p class="cap">"Vague" comes from Latin for <em>wandering</em>. Both faults let a word wander between ideas instead of settling on one.</p>
+      </div>
+      <div class="fig">
+        <h4>Evasive language changes its user too</h4>
+        <p class="cap" style="font-size:16px;color:var(--ink)">Euphemism has a place, but words like "final solution", "re-education" and "cultural revolution" were used to hide atrocities.</p>
+        <p class="cap">McInerny sees two harms. Evasive language deceives the audience, and over time it distorts the speaker's own sense of reality: we shape language, and language shapes us back. Shocking language is juvenile when it only aims to shock, but it beats evasive language if it gets people to the truth.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Truth</span></div>
+  <div class="body">
+    <div>
+      <h3>Truth is correspondence</h3>
+      <p class="idea">The whole purpose of reasoning is to arrive at the truth, and the truth is something we can actually reach.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Ontological truth</strong> is the truth of being: the lamp on the desk is really there. <strong>Logical truth</strong> is the truth of statements. The second rests on the first, because what makes a statement true is what exists.</li>
+      <li>"The boat is tied to the pier" is true if there is a boat, there is a pier, and the boat really is tied to it. A true statement declares a correspondence between ideas in the mind and states of affairs in the world.</li>
+      <li>The <strong>coherence theory</strong> (a statement is true if it fits an established system) is legitimate only when the system itself corresponds to reality. A claim that fits a dubious theory is just as dubious.</li>
+      <li>Lying is more a psychological failure than a logical one. The liar knows that A is B and deliberately says A is not B.</li>
+      <li>It would be absurd to treat truth as forever pursued and never reached. That would make the whole activity pointless.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="principles">
+  <span class="label partno">Part 2 · Sections 1–8</span>
+  <h2>The basic principles</h2>
+  <p class="lede">The governing truths of logic, and the habits that follow from them: never stop short at an immediate cause, define your terms, and say exactly how much you mean.</p>
+</div>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">First Principles · Gray Areas</span></div>
+  <div class="body">
+    <div>
+      <h3>Four truths you can't prove and can't do without</h3>
+      <p class="idea">First principles are self-evident. Once you understand one, your response is "of course". That is exactly why they can't be proven: there's nothing more basic to prove them from.</p>
+    </div>
+    <div class="fig">
+      <h4>The first principles of logic (and of reason itself)</h4>
+      <div class="principles">
+        <div class="principle tint c-fact"><b>Identity</b><span class="stated">A thing is what it is.</span><span>Reality is made of distinct individuals. An apple is an apple, not an orange.</span></div>
+        <div class="principle tint c-form"><b>Excluded middle</b><span class="stated">Between being and non-being there is no middle state.</span><span>Becoming isn't a halfway house. Elaine isn't becoming Elaine. She is becoming a better musician.</span></div>
+        <div class="principle tint c-sound"><b>Sufficient reason</b><span class="stated">There is a sufficient reason for everything.</span><span>Nothing in the physical world explains itself. Something causes it to exist, or to exist in the way it does.</span></div>
+        <div class="principle tint c-fallacy"><b>Contradiction</b><span class="stated">Nothing can both be and not be at the same time and in the same respect.</span><span>You can be in New York in body and in San Francisco in mind, but not in both cities in body.</span></div>
+      </div>
+      <p class="cap">McInerny's focus is contradiction. Avoiding contradiction amounts to avoiding falsehood. We sometimes hold contradictory beliefs on purpose by not looking at the facts ("don't bother me with the facts, I've made up my mind"). That isn't reasoning. It's <strong>rationalization</strong>, reasoning in the service of falsehood.</p>
+    </div>
+    <div class="story">
+      <span class="label">Real gray areas, manufactured gray areas</span>
+      <p>Life has real gray areas, and they should be accepted cheerfully. But gray only exists because black and white do. If you can't see clear alternatives, that doesn't mean none exist. Don't project your own uncertainty onto the world. The fact that you recognise uncertainty shows you have known certainty, so certainty is possible here too, eventually.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Explanations · Causes</span></div>
+  <div class="body">
+    <div>
+      <h3>Trace effects back to causes, and keep going</h3>
+      <p class="idea">Everything has an explanation eventually. To know a cause is often to be able to control it, and through it the effect.</p>
+    </div>
+    <ul class="points">
+      <li>Every effect carries the mark of its cause, so you can size up a cause by studying the effect. Milk is all over the kitchen floor. The three ants on the counter couldn't have done it, and neither could the canary. The neighbour's cat in the yard could. That's not proof, but the cat is now "under serious suspicion".</li>
+      <li>Causes come in series. If A causes B and B causes C, fixing B leaves the problem in place. Laziness and impatience both push us towards the quick fix.</li>
+      <li>A thing is understood more fully the more of its four causes you can name. Not everything has all four. An idea, for example, has no material cause.</li>
+      <li>Among efficient causes, the <strong>principal</strong> cause (the cellist) matters more than the <strong>instrumental</strong> cause (the cello), although both are needed. A great player can do more with a poor instrument than a poor player can with a great one. Don't invest in instruments and neglect the people who play them.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Don't stop short in the search for causes</h4>
+        <svg viewBox="0 0 560 200" role="img" aria-label="A causal chain of three circles: A, leaky pipe, causes B, a full bucket under the sink, which causes C, a bad smell. Below C, a red arrow labelled quick fix points back to B: empty the bucket, and the smell returns. Below A, a green label reads real fix: repair the pipe.">
+          <defs>
+            <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker>
+            <marker id="arr2r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--fallacy)"/></marker>
+          </defs>
+          <circle cx="80" cy="70" r="44" fill="color-mix(in srgb, var(--sound) 14%, transparent)" stroke="var(--sound)" stroke-width="2.5"/>
+          <circle cx="280" cy="70" r="44" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="2"/>
+          <circle cx="480" cy="70" r="44" fill="color-mix(in srgb, var(--fallacy) 12%, transparent)" stroke="var(--fallacy)" stroke-width="2"/>
+          <text x="80" y="66" text-anchor="middle" font-size="26" class="t-ink t-head">A</text>
+          <text x="280" y="66" text-anchor="middle" font-size="26" class="t-ink t-head">B</text>
+          <text x="480" y="66" text-anchor="middle" font-size="26" class="t-ink t-head">C</text>
+          <text x="80" y="88" text-anchor="middle" font-size="11">leaky pipe</text>
+          <text x="280" y="88" text-anchor="middle" font-size="11">full bucket</text>
+          <text x="480" y="88" text-anchor="middle" font-size="11">bad smell</text>
+          <line x1="128" y1="70" x2="232" y2="70" stroke="var(--ink-3)" stroke-width="1.8" marker-end="url(#arr2)"/>
+          <line x1="328" y1="70" x2="432" y2="70" stroke="var(--ink-3)" stroke-width="1.8" marker-end="url(#arr2)"/>
+          <text x="180" y="60" text-anchor="middle" font-size="10" class="t-mute">causes</text>
+          <text x="380" y="60" text-anchor="middle" font-size="10" class="t-mute">causes</text>
+          <path d="M470 118 C450 150, 310 150, 290 120" fill="none" stroke="var(--fallacy)" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arr2r)"/>
+          <text x="380" y="166" text-anchor="middle" font-size="11" style="fill:var(--fallacy)">quick fix: empty the bucket</text>
+          <text x="380" y="182" text-anchor="middle" font-size="10.5" class="t-mute">the smell comes back</text>
+          <text x="80" y="140" text-anchor="middle" font-size="11" style="fill:var(--sound)">real fix:</text>
+          <text x="80" y="156" text-anchor="middle" font-size="11" style="fill:var(--sound)">repair the pipe</text>
+        </svg>
+        <p class="cap">Sam can keep emptying the reeking bucket under the sink, or he can fix the pipe that keeps filling it. B is the immediate cause of the smell. A is the ultimate one.</p>
+      </div>
+      <div class="fig">
+        <h4>Four causes of a birdhouse</h4>
+        <svg viewBox="0 0 520 250" role="img" aria-label="A simple birdhouse in the centre with four labels. Top left, efficient cause: who made it, Fred. Top right, material cause: what it is made of, pine, nails and paint. Bottom left, formal cause: what makes it a birdhouse, its configuration. Bottom right, final cause: what it is for, shelter and nesting for birds.">
+          <path d="M210 112 L260 66 L310 112 L310 196 L210 196 Z" fill="color-mix(in srgb, var(--form) 16%, var(--card))" stroke="var(--form)" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M200 116 L260 58 L320 116" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="260" cy="138" r="13" fill="var(--ink)"/>
+          <line x1="260" y1="164" x2="260" y2="176" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+          <line x1="260" y1="196" x2="260" y2="236" stroke="var(--ink-3)" stroke-width="3"/>
+          <line x1="150" y1="44" x2="222" y2="96" stroke="var(--rule)" stroke-width="1.5"/>
+          <line x1="370" y1="44" x2="300" y2="96" stroke="var(--rule)" stroke-width="1.5"/>
+          <line x1="150" y1="196" x2="212" y2="170" stroke="var(--rule)" stroke-width="1.5"/>
+          <line x1="370" y1="196" x2="308" y2="170" stroke="var(--rule)" stroke-width="1.5"/>
+          <text x="10" y="22" font-size="13" class="t-head" style="fill:var(--fact)">Efficient cause</text>
+          <text x="10" y="40" font-size="11">who made it: Fred</text>
+          <text x="510" y="22" text-anchor="end" font-size="13" class="t-head" style="fill:var(--form)">Material cause</text>
+          <text x="510" y="40" text-anchor="end" font-size="11">pine, nails, paint</text>
+          <text x="10" y="200" font-size="13" class="t-head" style="fill:var(--fallacy)">Formal cause</text>
+          <text x="10" y="218" font-size="11">the shape that makes it</text>
+          <text x="10" y="233" font-size="11">a birdhouse, not a file box</text>
+          <text x="510" y="200" text-anchor="end" font-size="13" class="t-head" style="fill:var(--sound)">Final cause</text>
+          <text x="510" y="218" text-anchor="end" font-size="11">what it's for: shelter</text>
+          <text x="510" y="233" text-anchor="end" font-size="11">and nesting for birds</text>
+        </svg>
+        <p class="cap">McInerny takes this Aristotelian scheme from the efficient cause, which most of us mean by "cause", out to purpose, material and form.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Define · Categorical · Generalize</span></div>
+  <div class="body">
+    <div>
+      <h3>Define your terms, then say how much you mean</h3>
+      <p class="idea">Defining a term is giving its object a precise location: first the class it belongs to, then what sets it apart.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Two-step definition</h4>
+<pre class="logic"><span class="c">term</span>  = <span class="k">proximate genus</span>  + specific difference
+
+man     = <span class="k">animal</span>          + rational
+justice = <span class="k">social virtue</span>   + rendering each their due
+fear    = <span class="k">emotion</span>         + that makes us withdraw
+                            from perceived danger</pre>
+        <p class="cap">The genus should be the <em>nearest</em> class. Toys are in the toy box, the room, the house and Lansing, Iowa, but the toy box is the useful answer. "Thing" or "concept" is too broad. When you don't yet know something's nature well enough to define it, give a careful <strong>description</strong> instead.</p>
+      </div>
+      <div class="fig">
+        <h4>Four kinds of general statement</h4>
+        <div class="square" role="img" aria-label="Two by two grid. Columns: affirmative, negative. Rows: universal, particular. Universal affirmative: all whales are mammals. Universal negative: no fish have feet. Particular affirmative: some mammals are arboreal. Particular negative: some potatoes are not new.">
+          <span></span>
+          <span class="ax top">Affirmative</span>
+          <span class="ax top">Negative</span>
+          <span class="ax side">Universal</span>
+          <div class="cell tint c-fact"><b>All S are P</b><span class="ex">All whales are mammals.</span><span>Precise, with no exceptions.</span></div>
+          <div class="cell tint c-fact"><b>No S are P</b><span class="ex">No fish have feet.</span><span>Severs subject from predicate completely.</span></div>
+          <span class="ax side">Particular</span>
+          <div class="cell"><b>Some S are P</b><span class="ex">Some mammals are arboreal.</span><span>"Some" could mean 2% or 99%.</span></div>
+          <div class="cell"><b>Some S are not P</b><span class="ex">Some potatoes are not new.</span><span>Severs only part of the class.</span></div>
+        </div>
+        <p class="cap"><strong>Quantity</strong> (universal or particular) and <strong>quality</strong> (affirmative or negative) are the two dials of every statement. A trap: "All dogs are not mongrels" looks universal but means <em>not all</em>, so it's a particular negative.</p>
+      </div>
+    </div>
+    <ul class="points">
+      <li><strong>Speak categorically only when you're certain.</strong> "The radio is in the back seat" gives knowledge. "The radio may be in the back seat" doesn't. But a categorical form doesn't make something fact: "The Cubs are the best team in baseball" is an opinion in confident clothing.</li>
+      <li><strong>Make qualifiers explicit.</strong> "Carthaginians are cruel" implies <em>all</em> without saying so, which leaves the speaker an escape hatch. Say "all" or "some".</li>
+      <li><strong>Be as precise as your knowledge allows.</strong> "Sixteen percent of runners finished in under two hours" beats "some runners were fast".</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="argument">
+  <span class="label partno">Part 3 · Sections 1–19</span>
+  <h2>Argument: the language of logic</h2>
+  <p class="lede">An argument is reasoning made public. The heart of it is the inferential move: accepting one statement as true because of another. This is the longest part of the book.</p>
+</div>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Founding an Argument</span></div>
+  <div class="body">
+    <div>
+      <h3>Premises hold up a conclusion</h3>
+      <p class="idea">However complicated an argument gets, it has only two parts: supporting statements and a supported one.</p>
+    </div>
+    <div class="fig">
+      <h4>Anatomy of an argument</h4>
+      <svg viewBox="0 0 620 230" role="img" aria-label="Two premise cards on the left, marked by because and since: every tree has a root system, and the cottonwood next door is a tree. Arrows converge on a conclusion card on the right, marked by therefore: the cottonwood next door has a root system. Under the premises: must be true and relevant. Under the conclusion: one point, no bigger than the premises allow.">
+        <defs>
+          <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--form)"/></marker>
+        </defs>
+        <text x="20" y="16" font-size="11" class="t-mute">PREMISES · "because", "since"</text>
+        <rect x="20" y="26" width="250" height="56" rx="6" fill="color-mix(in srgb, var(--fact) 10%, var(--card))" stroke="var(--fact)" stroke-width="2"/>
+        <text x="36" y="50" font-size="12.5" class="t-ink">Every tree has a</text>
+        <text x="36" y="68" font-size="12.5" class="t-ink">root system.</text>
+        <rect x="20" y="110" width="250" height="56" rx="6" fill="color-mix(in srgb, var(--fact) 10%, var(--card))" stroke="var(--fact)" stroke-width="2"/>
+        <text x="36" y="134" font-size="12.5" class="t-ink">The cottonwood next</text>
+        <text x="36" y="152" font-size="12.5" class="t-ink">door is a tree.</text>
+        <path d="M274 54 C320 54, 330 96, 384 96" fill="none" stroke="var(--form)" stroke-width="2.2" marker-end="url(#arr3)"/>
+        <path d="M274 138 C320 138, 330 104, 384 104" fill="none" stroke="var(--form)" stroke-width="2.2" marker-end="url(#arr3)"/>
+        <text x="326" y="122" text-anchor="middle" font-size="10.5" style="fill:var(--form)">inference</text>
+        <text x="390" y="56" font-size="11" class="t-mute">CONCLUSION · "therefore"</text>
+        <rect x="390" y="66" width="220" height="68" rx="6" fill="color-mix(in srgb, var(--sound) 12%, var(--card))" stroke="var(--sound)" stroke-width="2.5"/>
+        <text x="406" y="94" font-size="12.5" class="t-ink">The cottonwood next door</text>
+        <text x="406" y="113" font-size="12.5" class="t-ink">has a root system.</text>
+        <text x="20" y="196" font-size="11">must be true · must be relevant ·</text>
+        <text x="20" y="212" font-size="11">must be wide enough to contain the conclusion</text>
+        <text x="390" y="160" font-size="11">one point is best ·</text>
+        <text x="390" y="176" font-size="11">claims no more than</text>
+        <text x="390" y="192" font-size="11">the premises allow</text>
+      </svg>
+      <p class="cap">Logical indicators mark the roles: <em>because, since, on account of</em> for premises, and <em>therefore, thus, so</em> for conclusions. An argument can also explain rather than prove ("Because he kept fighting with his boss, Dave was transferred to Houston"). Even then, the explanation only works if the premise is true.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Universal → particular is safe.</strong> If every dog is carnivorous, then some dogs are. If you know something about the whole group, you know it about any part. The conclusion follows <em>necessarily</em>.</li>
+      <li><strong>Particular → universal is not.</strong> "Some women are mothers" can't support "every woman is a mother". A part can't contain the whole. You can still go from part to whole, but only to a <em>probable</em> conclusion. Every Clare native I've met has red hair, so it <em>may be</em> that they all do. McInerny calls the overreach one of humanity's "favorite fallacies".</li>
+      <li>Avoid multiple conclusions. The strongest arguments try to make a single point.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Predication · Negatives · Comparison</span></div>
+  <div class="body">
+    <div>
+      <h3>Joining ideas, separating them, and comparing them</h3>
+      <p class="idea">A statement is the mind's most basic comparison: it relates a subject to a predicate. It's sound when the link it makes is a real link in the world.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Predication</strong> attributes something to something else. "Measles is infectious" is sound because the two ideas really belong together. "Jane Austen wrote <em>Persuasion</em> in New Hampshire" is false because they don't.</li>
+      <li><strong>Negative statements</strong> disconnect ideas: completely ("No philosophers are infallible") or partly ("Some North Dakotans don't read Dickens"). Where the same thing can be said either way, the affirmative is more direct and points attention at what <em>is</em> the case. Negatives are good for correcting sweeping claims ("Not every artist is neurotic"). Softening a blunt verdict with a negative ("perhaps not the most prudent decision") can be fine. Let circumstances decide how blunt to be.</li>
+      <li><strong>Comparison</strong> is how thought works at all. No two things are so alike that they stop being two, and none are so unlike that they share nothing (at least they both exist). What counts is the <em>significance</em> of the shared traits, not their number. Tell an audience everything mice and elephants have in common and leave out size, and you've misled them.</li>
+      <li><strong>Argument by analogy</strong>: A and B share traits R through Y. A also has Z, so B probably has Z too. It's useful when B can't be inspected directly, as with a planned military operation compared to Vietnam. The conclusion is probable at best, and only as strong as the significance of the shared traits.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Sound Argument · Truth & Relevance of Premises</span></div>
+  <div class="body">
+    <div>
+      <h3>Sound means true content in a valid form</h3>
+      <p class="idea">Truth belongs to statements. Validity belongs to the structure that links them. A sound argument needs both.</p>
+    </div>
+    <div class="fig">
+      <h4>Truth × validity</h4>
+      <div class="matrix" role="img" aria-label="Two by two matrix. Columns: valid form, invalid form. Rows: true premises, false premises. True and valid: sound, conclusion guaranteed. True but invalid: the squirrel and chipmunk example, conclusion doesn't follow. False but valid: garbage in, garbage out, every dog has three heads. False and invalid: nothing to salvage.">
+        <span></span>
+        <span class="ax top">Valid form</span>
+        <span class="ax top">Invalid form</span>
+        <span class="ax side">True premises</span>
+        <div class="quad tint c-sound"><h4>Sound</h4><p>The conclusion is guaranteed. This is the only box where you've proved something.</p><span class="what">Every tree has roots · the cottonwood is a tree → it has roots</span></div>
+        <div class="quad tint c-form"><h4>Broken structure</h4><p>Every premise is true, yet the conclusion is false or merely lucky.</p><span class="what">Squirrels are mammals · chipmunks are mammals → chipmunks are squirrels</span></div>
+        <span class="ax side">False premises</span>
+        <div class="quad tint c-fallacy"><h4>Garbage in, garbage out</h4><p>Perfect mechanics, but water in the gas tank. Validity alone gets you nowhere.</p><span class="what">Every dog has three heads · collies are dogs → collies have three heads</span></div>
+        <div class="quad tint c-mute"><h4>Nothing to salvage</h4><p>False content in a broken form. A true conclusion here would be pure accident.</p><span class="what">—</span></div>
+      </div>
+      <p class="cap">"Valid" means the structure is such that <em>if</em> the premises are true, the conclusion must be true. It says nothing about whether they actually are.</p>
+    </div>
+    <ul class="points">
+      <li>Why argue at all instead of trusting an expert? Because with a sound argument you <em>see for yourself</em>. You know the reasons behind your knowledge.</li>
+      <li><strong>True isn't enough. Premises must also be relevant.</strong> Pierre Poseur was an All-American, made his first million before thirty, and has a winning smile. All true, and none of it bears on whether he should be governor. His opponent's Peace Corps service, law career, two terms as mayor and twelve years in the legislature do.</li>
+      <li><strong>Facts vs. values.</strong> "Musicians make music" can ground a solid argument. "Musicians are superior people" can't, because evaluations can be argued over endlessly. A value judgment is as reliable as the facts under it: trust Robert Frost on poetry and Ted Williams on baseball, but not the other way round.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Conjunctive · Disjunctive · Conditional</span></div>
+  <div class="body">
+    <div>
+      <h3>"And", "or", and "if… then"</h3>
+      <p class="idea">The simple compound arguments, each with a clear set of valid moves. The conditional is the one we use most and misuse most.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Conjunctive: A · B</h4>
+<pre class="logic"><span class="c">Anne is a sophomore AND majors in biology.</span>
+A · B          A · B
+<span class="k">∴ A</span>            <span class="k">∴ B</span></pre>
+        <p class="cap">It's a package deal. If the whole is true, each part is true, so you can't deny either half.</p>
+      </div>
+      <div class="fig">
+        <h4>Disjunctive: A ∨ B (exclusive)</h4>
+<pre class="logic"><span class="c">Arden took the train OR the plane.</span>
+A ∨ B    A ∨ B    A ∨ B    A ∨ B
+A        B        ¬A       ¬B
+<span class="k">∴ ¬B     ∴ ¬A     ∴ B      ∴ A</span></pre>
+        <p class="cap">This needs a minor premise telling you which side holds. "Either A or B" also promises that one of them <em>is</em> true. If you mean "neither", say so.</p>
+      </div>
+    </div>
+    <div class="fig">
+      <h4>Conditional: if A, then B</h4>
+      <div class="forms">
+        <div class="form-card c-sound">
+          <div class="hd"><b>Affirming the antecedent</b><span class="verdict">valid</span></div>
+<pre class="logic">If Louise is running, she is moving.
+She is running.
+<span class="ok">∴ She is moving.</span></pre>
+        </div>
+        <div class="form-card c-sound">
+          <div class="hd"><b>Denying the consequent</b><span class="verdict">valid</span></div>
+<pre class="logic">If Louise is running, she is moving.
+She is not moving.
+<span class="ok">∴ She is not running.</span></pre>
+        </div>
+        <div class="form-card c-fallacy">
+          <div class="hd"><b>Denying the antecedent</b><span class="verdict">invalid</span></div>
+<pre class="logic">If Louise is running, she is moving.
+She is not running.
+<span class="no">∴ She is not moving.</span></pre>
+          <p>She could be walking, rocking in a chair or rolling over in her sleep.</p>
+        </div>
+        <div class="form-card c-fallacy">
+          <div class="hd"><b>Affirming the consequent</b><span class="verdict">invalid</span></div>
+<pre class="logic">If Louise is running, she is moving.
+She is moving.
+<span class="no">∴ She is running.</span></pre>
+          <p>Running is one way to move, not the only one.</p>
+        </div>
+      </div>
+      <p class="cap">The strict conditional needs a <em>necessary</em> link between antecedent and consequent: you can't run without moving. Most everyday if/thens aren't like that. "If it's nice on Thursday we'll picnic" can fail in many ways. They still have value, but their conclusions are probable, and only as strong as the link. A friend's "If I win the lottery I'll give it all to charity" carries a very big <em>if</em>. "If Uncle Louis comes to town he'll want Schmidty's" rests on fifteen years of evidence.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Syllogism · Form · Quantity · Quality</span></div>
+  <div class="body">
+    <div>
+      <h3>The syllogism: relating a part to a whole</h3>
+      <p class="idea">If M is part of P and S is part of M, then S is part of P. You can literally see the conclusion follow.</p>
+    </div>
+<pre class="logic" style="max-width:60ch"><span class="c">major premise</span>   Every <span class="k">M</span> is P     <span class="c">Every NFL player is a professional athlete.</span>
+<span class="c">minor premise</span>   Every S is <span class="k">M</span>     <span class="c">The Vikings are NFL players.</span>
+<span class="c">conclusion</span>    ∴ Every S is P     <span class="c">The Vikings are professional athletes.</span>
+
+<span class="k">M</span> = middle term (appears in both premises, never in the conclusion)
+P = major term · S = minor term · exactly three terms, no more</pre>
+    <div class="fig">
+      <h4>Why some syllogisms work and others only look like they do</h4>
+      <svg viewBox="0 0 690 250" role="img" aria-label="Three Euler diagrams. First, valid: circle S inside circle M inside circle P, so S must be inside P. Second, undistributed middle: chipmunks and squirrels are two separate circles both inside the large circle mammals, so nothing links them. Third, two particular premises: P overlaps part of M and S overlaps another part of M, with no overlap between P and S, so no conclusion follows.">
+        <text x="115" y="16" text-anchor="middle" font-size="11" style="fill:var(--sound)">VALID</text>
+        <circle cx="115" cy="122" r="92" fill="color-mix(in srgb, var(--fact) 8%, transparent)" stroke="var(--fact)" stroke-width="2"/>
+        <circle cx="115" cy="142" r="60" fill="color-mix(in srgb, var(--form) 12%, transparent)" stroke="var(--form)" stroke-width="2"/>
+        <circle cx="115" cy="162" r="28" fill="color-mix(in srgb, var(--sound) 22%, transparent)" stroke="var(--sound)" stroke-width="2"/>
+        <text x="115" y="50" text-anchor="middle" font-size="14" class="t-ink t-head">P</text>
+        <text x="115" y="100" text-anchor="middle" font-size="14" class="t-ink t-head">M</text>
+        <text x="115" y="167" text-anchor="middle" font-size="14" class="t-ink t-head">S</text>
+        <text x="115" y="234" text-anchor="middle" font-size="10.5">S inside M inside P</text>
+
+        <text x="345" y="16" text-anchor="middle" font-size="11" style="fill:var(--fallacy)">UNDISTRIBUTED MIDDLE</text>
+        <circle cx="345" cy="122" r="92" fill="color-mix(in srgb, var(--form) 8%, transparent)" stroke="var(--form)" stroke-width="2"/>
+        <circle cx="308" cy="138" r="32" fill="color-mix(in srgb, var(--sound) 18%, transparent)" stroke="var(--sound)" stroke-width="2"/>
+        <circle cx="384" cy="138" r="32" fill="color-mix(in srgb, var(--fact) 16%, transparent)" stroke="var(--fact)" stroke-width="2"/>
+        <text x="345" y="66" text-anchor="middle" font-size="12" class="t-ink">M: mammals</text>
+        <text x="308" y="142" text-anchor="middle" font-size="10.5" class="t-ink">chipmunks</text>
+        <text x="384" y="142" text-anchor="middle" font-size="10.5" class="t-ink">squirrels</text>
+        <text x="345" y="234" text-anchor="middle" font-size="10.5">same box, no link between them</text>
+
+        <text x="575" y="16" text-anchor="middle" font-size="11" style="fill:var(--fallacy)">TWO PARTICULARS</text>
+        <circle cx="575" cy="122" r="58" fill="color-mix(in srgb, var(--form) 10%, transparent)" stroke="var(--form)" stroke-width="2"/>
+        <circle cx="520" cy="96" r="40" fill="color-mix(in srgb, var(--fact) 12%, transparent)" stroke="var(--fact)" stroke-width="2"/>
+        <circle cx="630" cy="150" r="40" fill="color-mix(in srgb, var(--sound) 14%, transparent)" stroke="var(--sound)" stroke-width="2"/>
+        <text x="575" y="126" text-anchor="middle" font-size="13" class="t-ink t-head">M</text>
+        <text x="506" y="92" text-anchor="middle" font-size="13" class="t-ink t-head">P</text>
+        <text x="646" y="160" text-anchor="middle" font-size="13" class="t-ink t-head">S</text>
+        <text x="575" y="218" text-anchor="middle" font-size="10.5">some M are P · some S are M</text>
+        <text x="575" y="234" text-anchor="middle" font-size="10.5">→ P and S may never meet</text>
+      </svg>
+      <p class="cap">The middle term has to cover its <em>whole</em> class (be "distributed") at least once, or it can't connect the other two. The predicate of an affirmative statement never covers its whole class. "Every squirrel is a mammal" doesn't mean every mammal is a squirrel. So when "mammal" sits in the predicate of both premises, it links nothing. A wool cap and a wool sweater are both wool, and they are still not the same thing.</p>
+    </div>
+    <div class="fig">
+      <h4>Rules of thumb for conclusions</h4>
+      <div class="pairs">
+        <div class="pair head"><div>Rule</div><div>Broken</div><div>Kept</div></div>
+        <div class="pair"><div>Don't go wider than the premises</div><div class="bad">Every chemist is a scientist. Every chemist is hardworking. ∴ Every hardworking person is a scientist.</div><div class="good">A term that is universal in the conclusion must be universal in the premises.</div></div>
+        <div class="pair"><div>Two particulars → nothing</div><div class="bad">Some teenagers study Spanish. Some chess champions are teenagers. ∴ Some chess champions study Spanish.</div><div class="good">Probably true, but not proved. At least one premise must be universal.</div></div>
+        <div class="pair"><div>Two negatives → nothing</div><div class="bad">No men are daughters. No waitresses are men. ∴ No waitresses are daughters.</div><div class="good">Being separated from the same group doesn't separate two groups from each other.</div></div>
+        <div class="pair"><div>A negative conclusion needs a negative premise</div><div class="bad">Every bird is a vertebrate. Chickadees are birds. ∴ Chickadees are not vertebrates.</div><div class="good">No Pennsylvanians are Californians. Every Scrantonian is a Pennsylvanian. ∴ No Scrantonians are Californians.</div></div>
+      </div>
+      <p class="cap">An invalid form can still be used honestly if you state its conclusion as probable. Halverson and Policinski were both at the Chicago conference, so it's possible they met.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Induction · Assessing · Constructing</span></div>
+  <div class="body">
+    <div>
+      <h3>Deduction unpacks, induction gathers</h3>
+      <p class="idea">The real difference: deduction can yield necessary conclusions, induction only probable ones. Yet induction supplies deduction with its starting points.</p>
+    </div>
+    <div class="fig">
+      <h4>Two directions of reasoning</h4>
+      <svg viewBox="0 0 640 250" role="img" aria-label="Left, deduction: a wide band at the top reads every tree has a root system, narrowing like a funnel down to one point: this cottonwood has roots, labelled necessary. Right, induction: five dots at the bottom, each a dog that shied from a hand lowered from above, with lines rising to a dashed box at the top: dogs tend to shy from a hand above the head, labelled probable.">
+        <text x="160" y="16" text-anchor="middle" font-size="11" style="fill:var(--form)">DEDUCTION · general → particular</text>
+        <path d="M30 34 L290 34 L180 196 L140 196 Z" fill="color-mix(in srgb, var(--form) 12%, transparent)" stroke="var(--form)" stroke-width="2" stroke-linejoin="round"/>
+        <text x="160" y="60" text-anchor="middle" font-size="12" class="t-ink">Every tree has a root system</text>
+        <text x="160" y="110" text-anchor="middle" font-size="11">+ the cottonwood is a tree</text>
+        <circle cx="160" cy="214" r="9" fill="var(--sound)"/>
+        <text x="160" y="240" text-anchor="middle" font-size="11.5" style="fill:var(--sound)">this cottonwood has roots: necessary</text>
+
+        <text x="480" y="16" text-anchor="middle" font-size="11" style="fill:var(--fact)">INDUCTION · particulars → general</text>
+        <rect x="360" y="32" width="240" height="50" rx="6" fill="color-mix(in srgb, var(--fact) 8%, transparent)" stroke="var(--fact)" stroke-width="2" stroke-dasharray="6 4"/>
+        <text x="480" y="53" text-anchor="middle" font-size="11.5" class="t-ink">dogs tend to shy from a hand</text>
+        <text x="480" y="70" text-anchor="middle" font-size="11.5" class="t-ink">lowered over their head</text>
+        <g stroke="var(--fact)" stroke-width="1.4" stroke-opacity=".6">
+          <line x1="384" y1="190" x2="440" y2="86"/><line x1="432" y1="190" x2="460" y2="86"/><line x1="480" y1="190" x2="480" y2="86"/><line x1="528" y1="190" x2="500" y2="86"/><line x1="576" y1="190" x2="520" y2="86"/>
+        </g>
+        <g fill="var(--fact)">
+          <circle cx="384" cy="196" r="9"/><circle cx="432" cy="196" r="9"/><circle cx="480" cy="196" r="9"/><circle cx="528" cy="196" r="9"/><circle cx="576" cy="196" r="9"/>
+        </g>
+        <text x="480" y="226" text-anchor="middle" font-size="11">five dogs, two nieces, one experiment</text>
+        <text x="480" y="242" text-anchor="middle" font-size="11.5" style="fill:var(--fact)">conclusion: probable</text>
+      </svg>
+      <p class="cap">Harry noticed his golden retriever flinch when one niece reached down over its head, then accept the other niece's open hand raised from below. He repeated the test with all five dogs and got the same result every time. His conclusion is tentative and fair. Science runs on exactly this. A hypothesis says where to look, and the sample has to be big enough to hold all the variety of the whole group.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Assessing an argument, in order</h4>
+<pre class="logic"><span class="k">1.</span> Is there an argument at all?
+   <span class="c">A point repeated loudly is not a conclusion.</span>
+   <span class="c">An unsupported claim is just an opinion.</span>
+<span class="k">2.</span> Are the premises true?
+   <span class="c">Watch for claims that are nearly true.</span>
+<span class="k">3.</span> Are they relevant and strong enough?
+<span class="k">4.</span> Is the structure valid?
+   <span class="c">Does it claim necessity it doesn't have?</span>
+<span class="k">5.</span> Does it match how things actually are?</pre>
+      </div>
+      <div class="fig">
+        <h4>Constructing one</h4>
+        <ul class="points" style="font-size:16px">
+          <li>Know your single point, then put your effort into the premises.</li>
+          <li>Check every fact beforehand. A claim with several parts must be true in all of them. If your candidate served in Vietnam but wasn't a Marine and never won the Purple Heart, the whole argument collapses.</li>
+          <li>Cut weak premises. They distract from strong ones. Even among strong premises, fewer gives sharper focus.</li>
+          <li>Know your audience. Telling a British audience that Burns is "a Buckeye from birth" won't land. Logic is a science, but persuasion is an art.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 4 ============ -->
+<div class="part" id="pitfalls">
+  <span class="label partno">Part 4 · Sections 1–9</span>
+  <h2>Where illogic comes from</h2>
+  <p class="lede">Some errors are accidents and some are carelessness. The more serious ones come from fixed attitudes that warp reasoning before it starts.</p>
+</div>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">Skepticism · Agnosticism · Cynicism · Narrowness</span></div>
+  <div class="body">
+    <div>
+      <h3>Every bad posture has a healthy twin</h3>
+      <p class="idea">The problem is never doubt, caution or focus as such. It's turning a fitting response into a permanent stance.</p>
+    </div>
+    <div class="pairs">
+      <div class="pair head"><div>Attitude</div><div>Healthy form</div><div>Corrosive form</div></div>
+      <div class="pair"><div>Skepticism</div><div class="good">Selective doubt: hold off judging until there's enough evidence, especially when the premises look shaky.</div><div class="bad">Doubt as a worldview. "There is no truth" refutes itself. "Truth exists but we can't reach it" amounts to the same thing.</div></div>
+      <div class="pair"><div>Agnosticism</div><div class="good">Honestly admitting ignorance after real investigation.</div><div class="bad">Evasive agnosticism: "I don't know" used as an excuse when you never bothered to look.</div></div>
+      <div class="pair"><div>Cynic / naive optimist</div><div class="good">Estimates that follow the evidence, whether good or bad.</div><div class="bad">Judging before engaging. The cynic writes off the debate in advance. The optimist meets someone for an hour and sees Helen of Troy, Madame Curie and Emily Dickinson in one.</div></div>
+      <div class="pair"><div>Narrow / open</div><div class="good">Limiting a search on rational grounds to save effort, and eventually committing.</div><div class="bad">Ruling options out from prejudice, or staying so open that you never commit. Tolerating everything means valuing nothing.</div></div>
+    </div>
+    <div class="fig">
+      <h4>The pearl earring on the football field</h4>
+      <svg viewBox="0 0 600 220" role="img" aria-label="A football field seen from above with yard lines. A narrow orange strip down the middle, about one tenth of the field, is labelled the only strip you agreed to search. A small white pearl lies far to the right, outside the strip.">
+        <rect x="20" y="20" width="560" height="160" rx="4" fill="color-mix(in srgb, var(--sound) 16%, var(--card))" stroke="var(--sound)" stroke-width="2"/>
+        <g stroke="var(--card)" stroke-width="1.5" stroke-opacity=".9">
+          <line x1="76" y1="20" x2="76" y2="180"/><line x1="132" y1="20" x2="132" y2="180"/><line x1="188" y1="20" x2="188" y2="180"/><line x1="244" y1="20" x2="244" y2="180"/><line x1="300" y1="20" x2="300" y2="180"/><line x1="356" y1="20" x2="356" y2="180"/><line x1="412" y1="20" x2="412" y2="180"/><line x1="468" y1="20" x2="468" y2="180"/><line x1="524" y1="20" x2="524" y2="180"/>
+        </g>
+        <rect x="272" y="20" width="56" height="160" fill="color-mix(in srgb, var(--form) 45%, transparent)" stroke="var(--form)" stroke-width="2"/>
+        <circle cx="486" cy="66" r="8" fill="#fbfbf7" stroke="var(--ink)" stroke-width="1.5"/>
+        <path d="M486 74 q-4 12 -18 20" fill="none" stroke="var(--ink-3)" stroke-width="1.2"/>
+        <text x="440" y="110" font-size="11" class="t-ink">the earring</text>
+        <text x="300" y="204" text-anchor="middle" font-size="11.5" style="fill:var(--form)">the only strip you decided to search: 10% of the field</text>
+      </svg>
+      <p class="cap">Narrowing a search arbitrarily throws away 90% of your chances. The opposite failure is just as real. In Chesterton's line, an open mind, like an open mouth, should eventually close on something.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Emotion · Purpose · Quarrels · Sincerity · Common Sense</span></div>
+  <div class="body">
+    <div>
+      <h3>Reason leads, emotion comes along</h3>
+      <p class="idea">The stronger the feeling, the harder it is to think clearly. The aim is to keep reason in front, not to cut emotion out.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Emotion.</strong> Reason and emotion share the same home, and no idea is free of feeling. But a conclusion should be accepted because it's true, not because it feels good. His rule of thumb is never to appeal directly to emotions. Bring people to where they can see for themselves.</li>
+      <li><strong>The reason for reasoning.</strong> Some notorious criminals reasoned flawlessly from false premises. Consistency isn't logic. Logic serves truth. Using argument to vent, get even or score points misuses it, and winning "at all costs" is a price nobody can afford.</li>
+      <li><strong>The limits of sincerity.</strong> You must mean what you argue. Arguing a position you don't hold is an abuse of reason. But sincerity doesn't make you right. You can be completely sincere and still dead wrong.</li>
+      <li><strong>Common sense.</strong> Logic is more than common sense, but it grows out of it: a respect for the obvious, for language that reveals rather than conceals, and for the difference between a cat and a kangaroo.</li>
+    </ul>
+    <div class="compare">
+      <div class="c-sound"><h5>Argument</h5><ul><li>Rational discourse</li><li>The aim is to get at the truth</li><li>Both sides ideally work together to find it</li><li>Addresses the claim</li></ul></div>
+      <div class="c-fallacy"><h5>Quarrel</h5><ul><li>A contest of wills</li><li>The aim is to get at the other person</li><li>Someone has to lose</li><li>Don't waste energy arguing with people who won't or can't argue</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 5 ============ -->
+<div class="part" id="fallacies">
+  <span class="label partno">Part 5 · 28 fallacies</span>
+  <h2>The forms of illogic</h2>
+  <p class="lede">Bad reasoning falls into recognisable patterns. Learning them sharpens your sense of good reasoning and protects you when someone uses them on you. Fallacies are dangerous because they are often <em>more</em> persuasive than sound arguments, usually because they go straight for the emotions.</p>
+</div>
+
+<section style="padding-top:40px" aria-label="Field guide to the 28 fallacies">
+  <div class="families" style="margin-bottom:16px">
+    <span class="fam f-form"><i></i>Broken form (formal)</span>
+    <span class="fam f-proof"><i></i>Proof that isn't</span>
+    <span class="fam f-div"><i></i>Changing the subject</span>
+    <span class="fam f-auth"><i></i>Borrowed authority</span>
+    <span class="fam f-whole"><i></i>Wholes, parts and ends</span>
+  </div>
+  <div class="tablecard">
+    <div class="scroll-x">
+      <table class="ft">
+        <thead><tr><th scope="col">Fallacy</th><th scope="col">What goes wrong</th><th scope="col">Book's example</th><th scope="col">The counter</th></tr></thead>
+        <tbody>
+          <tr class="grp f-form"><td colspan="4">Formal · the structure fails</td></tr>
+          <tr class="f-form"><th scope="row">Denying the antecedent<small>§1</small></th><td>If A then B; not A; so not B.</td><td class="ex">Louise isn't running, so she isn't moving.</td><td class="fix">Ask whether there are other ways to get B.</td></tr>
+          <tr class="f-form"><th scope="row">Affirming the consequent<small>§2</small></th><td>If A then B; B; so A.</td><td class="ex">Louise is moving, so she's running.</td><td class="fix">Ask what else could produce B.</td></tr>
+          <tr class="f-form"><th scope="row">Undistributed middle<small>§3 · guilt by association</small></th><td>The middle term never covers its whole class, so it links nothing.</td><td class="ex">Some Nazis were in the Kaiser Club; Hans was in it; so Hans was a Nazi.</td><td class="fix">Draw the circles. Sharing a group isn't identity.</td></tr>
+          <tr class="f-form"><th scope="row">Equivocation<small>§4</small></th><td>A word with two meanings smuggles in a fourth term.</td><td class="ex">Fans make noise; Madame Butterfly used her fan. Don Juan, the "great lover", was therefore an altruist.</td><td class="fix">Define key terms and stick to the definition.</td></tr>
+          <tr class="grp f-proof"><td colspan="4">Proof that isn't · the support is missing or faked</td></tr>
+          <tr class="f-proof"><th scope="row">Begging the question<small>§5 · incl. arguing in a circle</small></th><td>Assumes the very point to be proved.</td><td class="ex">"Shirley is a liar because she's given to prevarication." Determinism proves no free will, which proves determinism.</td><td class="fix">Restate the premise in plain words. Is it the conclusion in disguise?</td></tr>
+          <tr class="f-proof"><th scope="row">False assumptions<small>§6</small></th><td>Starts from something demonstrably false, or assumes the audience knows what it doesn't.</td><td class="ex">Any argument resting on a premise the facts contradict.</td><td class="fix">Make as few assumptions as possible.</td></tr>
+          <tr class="f-proof"><th scope="row">Inability to disprove ≠ proof<small>§22</small></th><td>"You can't prove me wrong, so I'm right."</td><td class="ex">Dr. Willing on intelligent life in space.</td><td class="fix">Absence of disproof leaves the question open.</td></tr>
+          <tr class="f-proof"><th scope="row">False dilemma<small>§23</small></th><td>Presents two options where there are several, to create false urgency.</td><td class="ex">"A isn't pleasant, but the only alternative is B, and B is awful."</td><td class="fix">List the options yourself.</td></tr>
+          <tr class="f-proof"><th scope="row">Post hoc ergo propter hoc<small>§24</small></th><td>B came after A, so A caused B.</td><td class="ex">The caveman who decided birdsong makes the sun rise.</td><td class="fix">Coming first is a clue to cause, not proof of it.</td></tr>
+          <tr class="grp f-div"><td colspan="4">Changing the subject · attention is diverted</td></tr>
+          <tr class="f-div"><th scope="row">Straw man<small>§7</small></th><td>Deliberately distorts the opponent's argument to make it easy to knock down.</td><td class="ex">Any rebuttal of a position nobody holds.</td><td class="fix">State their case so they'd agree with it, then answer that.</td></tr>
+          <tr class="f-div"><th scope="row">Ad hominem<small>§11</small></th><td>Attacks the person instead of the argument, usually because the attacker is losing.</td><td class="ex">Airing an opponent's private life in a debate.</td><td class="fix">Respond to the argument, never the arguer.</td></tr>
+          <tr class="f-div"><th scope="row">Red herring<small>§19</small></th><td>Brings in an emotionally charged, irrelevant issue.</td><td class="ex">Louis, losing a fertilizer debate, brings up the department's denied pay raise.</td><td class="fix">Name the detour and return to the question.</td></tr>
+          <tr class="f-div"><th scope="row">Laughter as diversion<small>§20</small></th><td>Ridicules the argument or the arguer instead of answering.</td><td class="ex">Mocking a speech impediment.</td><td class="fix">Even for a silly argument, show why it fails.</td></tr>
+          <tr class="f-div"><th scope="row">Tears as diversion<small>§21</small></th><td>Plays on sympathy to bury the issue.</td><td class="ex">At a school-tax meeting, he spends his time lamenting his own unhappy school days.</td><td class="fix">The more charged the topic, the tighter the hold on emotion.</td></tr>
+          <tr class="f-div"><th scope="row">Substituting force for reason<small>§12</small></th><td>Uses power or coercion instead of evidence.</td><td class="ex">People can be made to act, not to believe.</td><td class="fix">Only the force of reason actually persuades.</td></tr>
+          <tr class="grp f-auth"><td colspan="4">Borrowed authority · something other than the evidence decides</td></tr>
+          <tr class="f-auth"><th scope="row">Using and abusing tradition<small>§8</small></th><td>"We've always done it this way", or its mirror: "it's old, so drop it".</td><td class="ex">Habit kept or discarded purely for its age.</td><td class="fix">Judge the practice, not its history.</td></tr>
+          <tr class="f-auth"><th scope="row">Two wrongs make a right<small>§9</small></th><td>It was done before, so it's fine to do now.</td><td class="ex">"They did it first, so we can pay them back in kind."</td><td class="fix">Two wrongs make two wrongs. Judge the act itself.</td></tr>
+          <tr class="f-auth"><th scope="row">Democratic fallacy<small>§10</small></th><td>Most people believe it, so it's true.</td><td class="ex">A majority holding black to be white.</td><td class="fix">Majorities can be right or wrong. Truth isn't voted on.</td></tr>
+          <tr class="f-auth"><th scope="row">Abusing expertise<small>§13</small></th><td>Experts' word without their reasons, or experts outside their field.</td><td class="ex">Three professors endorse the Acme Program without giving a reason. A famous musician on global warming.</td><td class="fix">Ask for the experts' argument, and check it's their field.</td></tr>
+          <tr class="f-auth"><th scope="row">Considering only the source<small>§15</small></th><td>A bad source, so everything from it must be bad.</td><td class="ex">Rejecting Peter Petri's application because he went to "Vacuous U".</td><td class="fix">Note the source, then judge the thing itself.</td></tr>
+          <tr class="grp f-whole"><td colspan="4">Wholes, parts and ends · reality gets reduced or distorted</td></tr>
+          <tr class="f-whole"><th scope="row">Quantifying quality<small>§14</small></th><td>Treats the number as the thing.</td><td class="ex">The thermometer says it's hotter today, but it feels cooler. Love and justice have no mass or velocity.</td><td class="fix">Numbers describe qualities, they don't replace them.</td></tr>
+          <tr class="f-whole"><th scope="row">Stopping short at analysis<small>§16</small></th><td>Takes things apart and never puts them back together.</td><td class="ex">Ed can strip any car, but has never reassembled one that runs.</td><td class="fix">Follow analysis with synthesis.</td></tr>
+          <tr class="f-whole"><th scope="row">Reductionism<small>§17</small></th><td>Treats a whole as nothing but some of its parts.</td><td class="ex">"The body is just chemicals." Defining a person by their flaws.</td><td class="fix">A whole is more than its parts.</td></tr>
+          <tr class="f-whole"><th scope="row">Misclassification<small>§18</small></th><td>Puts a thing in the wrong group, usually from inattention.</td><td class="ex">A miscatalogued library book, lost for years.</td><td class="fix">Identify the thing properly before classifying it.</td></tr>
+          <tr class="f-whole"><th scope="row">Special pleading<small>§25</small></th><td>Leaves out the evidence against you.</td><td class="ex">A loving history of Carefree College that skips every embarrassment.</td><td class="fix">Put the unflattering facts on the table.</td></tr>
+          <tr class="f-whole"><th scope="row">Expediency<small>§26</small></th><td>Judges a means only by whether it gets results.</td><td class="ex">"It doesn't matter how we get there."</td><td class="fix">Ask how you got to the bottom line.</td></tr>
+          <tr class="f-whole"><th scope="row">Avoiding conclusions<small>§27</small></th><td>Treats all questions as unanswerable and argues for the sake of talking.</td><td class="ex">Endless debate that never commits to anything.</td><td class="fix">Some questions are open. Not every question is.</td></tr>
+          <tr class="f-whole"><th scope="row">Simplistic reasoning<small>§28</small></th><td>Simplifies a complex reality until it's distorted, often to give people the easy answer they want.</td><td class="ex">Calling gray black or white.</td><td class="fix">If it's black, say black. If gray, say gray.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">§ numbers follow Part Five of the book</span></div>
+  </div>
+</section>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Formal fallacies · §1–4</span></div>
+  <div class="body">
+    <div>
+      <h3>Broken forms</h3>
+      <p class="idea">The four formal fallacies all mirror a rule from Part Three. If you know the valid form, the invalid one stands out.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Denying the antecedent</strong> and <strong>affirming the consequent</strong> are the two invalid twins of the conditional (see <a href="#ch11">chapter 11</a>). Both assume A is the <em>only</em> way to get B.</li>
+      <li><strong>Undistributed middle</strong>, also known as guilt by association. Belonging to a club that had Nazi members may raise questions about Hans, but it proves nothing.</li>
+      <li><strong>Equivocation</strong> looks like a three-term syllogism but has four, because one word quietly changes meaning between the premises. Restate each premise in what it really means ("Love of neighbour is altruism. Don Juan was a philanderer.") and there's nowhere left to go.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">§5–6, 22–24</span></div>
+  <div class="body">
+    <div>
+      <h3>Proof that isn't</h3>
+      <p class="idea">These look like arguments but skip the work of supporting the conclusion.</p>
+    </div>
+    <div class="fcards">
+      <div class="fcard f-proof"><b>Begging the question</b><span>"All the people at the table had shaved heads; Jim was at the table…" You could only know "all" if you already knew about Jim.</span><em>Circular arguments hide by putting pages between the two halves.</em></div>
+      <div class="fcard f-proof"><b>False assumption</b><span>Assumptions are fine as working tools, as long as they don't contradict themselves or the facts. A false starting point can only lead to a false conclusion.</span></div>
+      <div class="fcard f-proof"><b>"You can't disprove it"</b><span>The question is still open. Lack of proof against a view isn't proof for it.</span></div>
+      <div class="fcard f-proof"><b>False dilemma</b><span>From the Greek for "two possibilities". It manufactures urgency so you'll pick the lesser evil the arguer chose for you.</span></div>
+      <div class="fcard f-proof"><b>Post hoc</b><span>The fuse burns, then the dynamite explodes, so order in time is relevant to cause. It just isn't enough on its own.</span></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">§7, 11–12, 19–21</span></div>
+  <div class="body">
+    <div>
+      <h3>Changing the subject</h3>
+      <p class="idea">The diversion fallacies don't try to answer the argument. They try to make the audience forget it.</p>
+    </div>
+    <div class="fcards">
+      <div class="fcard f-div"><b>Straw man</b><span>Honest misreadings happen with complicated arguments. The fallacy is a <em>deliberate</em> distortion.</span></div>
+      <div class="fcard f-div"><b>Ad hominem</b><span>It can win the room. But by preventing a fair hearing, you didn't win the argument in any logical sense.</span></div>
+      <div class="fcard f-div"><b>Red herring</b><span>Two faults: it appeals to emotion rather than reason, and the issue it raises has nothing to do with the question.</span></div>
+      <div class="fcard f-div"><b>Laughter and tears</b><span>Ridicule dismisses an argument and pathos drowns it. Neither engages it.</span></div>
+      <div class="fcard f-div"><b>Force</b><span>You can coerce behaviour, but you can't coerce belief. In argument, coercion always backfires.</span></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch19">
+  <div class="gutter"><span class="chno">19</span><span class="label">§8–10, 13, 15</span></div>
+  <div class="body">
+    <div>
+      <h3>Borrowed authority</h3>
+      <p class="idea">Age, precedent, majorities, credentials and reputations are all worth noting. None of them settles the matter.</p>
+    </div>
+    <ul class="points">
+      <li>Tradition cuts both ways. A practice's age is no reason to keep it, and no reason to drop it either. It may have lasted <em>because</em> it's good. Judge the practice itself.</li>
+      <li>"It's all right to do ___ because ___ has already been done" turns precedent into permission. What others did is of historical interest only.</li>
+      <li>Majority opinion is interesting sociology, but it doesn't make anything true. It is hard to stand against a crowd, which is what makes this fallacy so persuasive.</li>
+      <li>Appealing to genuine experts in their own field is legitimate. The strongest expert evidence includes the experts' <em>reasons</em>. A bare "trust us" amounts to "don't ask questions".</li>
+      <li>A bad source makes a bad product likely, not certain. Look at where Mr. Petri studied, then look at Mr. Petri.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch20">
+  <div class="gutter"><span class="chno">20</span><span class="label">§14, 16–18, 25–28</span></div>
+  <div class="body">
+    <div>
+      <h3>Wholes, parts and ends</h3>
+      <p class="idea">The last group distorts reality by cutting it down: to numbers, to parts, to the convenient facts, to the bottom line, or to an easy answer.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Quantifying quality.</strong> We measure blue as a wavelength, but what we see is blue. A number gives a false sense that we know a quality better. The most important things (love, beauty, kindness, justice, freedom, peace) may resist measurement altogether.</li>
+      <li><strong>Analysis without synthesis.</strong> The parts of a clock piled on a table are not a clock. Understanding means knowing how the parts make the whole.</li>
+      <li><strong>Reductionism</strong> picks some of the parts and calls them the whole, as when someone lists a person's faults and claims to have shown who they are.</li>
+      <li><strong>Special pleading and expediency</strong> both serve a goal at truth's expense: one by leaving out facts, the other by ignoring everything about a means except whether it works.</li>
+      <li><strong>Avoiding conclusions</strong> uses reason to undermine reason. Some problems may be unsolvable, but not problems as such.</li>
+      <li><strong>Simplistic reasoning</strong> exploits audiences who want easy answers. Don't tell people what they want to hear. Tell them what is true.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ AFTERWORD ============ -->
+<section id="afterword">
+  <div class="sec-head">
+    <span class="label">Afterword</span>
+    <h2>Logic is learned by practice</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>McInerny ends where a coach would. Knowing the fallacies matters, but mastering the positive principles matters more, and that only happens by using them. Every waking hour gives you a chance.</p>
+      <p>He borrows Pindar's advice to "become what you are", meaning become human. Being logical isn't the whole of being human, he says, but it is a very important part of it.</p>
+    </div>
+    <div>
+      <p class="pull">The only thing really worth feeling good about is the truth.</p>
+      <span class="label">From Part Four, "Emotion and Argument"</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the book's guidance</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book is already a manual, so this is the short version: twelve habits worth keeping.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Before you argue</h3>
+      <div class="tk"><b>Go and check the garage</b><span>Settle a fact by looking at the world, not by thinking harder about your ideas.</span></div>
+      <div class="tk"><b>Define the slippery words</b><span>Name the genus, then the difference. Do it for justice, fairness, love: any word your argument depends on.</span></div>
+      <div class="tk"><b>Say "all" or "some"</b><span>Make the quantity explicit and claim only as much as you know.</span></div>
+      <div class="tk"><b>Find the root cause</b><span>Ask "and what caused that?" until you reach the leaky pipe.</span></div>
+    </div>
+    <div class="col">
+      <h3>Building an argument</h3>
+      <div class="tk"><b>Make one point</b><span>A single conclusion, and premises that are true, relevant and wide enough to contain it.</span></div>
+      <div class="tk"><b>Run both tests</b><span>Are the premises true? Is the form valid? Only "yes" to both is sound.</span></div>
+      <div class="tk"><b>Label probable as probable</b><span>Induction, analogy and everyday if/thens can't give certainty. Say "may".</span></div>
+      <div class="tk"><b>Cut the weak premises</b><span>Fewer, stronger reasons, chosen for the audience in front of you.</span></div>
+    </div>
+    <div class="col">
+      <h3>When someone argues at you</h3>
+      <div class="tk"><b>Is there an argument at all?</b><span>A claim repeated loudly is an opinion. Find the premises before you engage.</span></div>
+      <div class="tk"><b>Draw the circles</b><span>Do the two groups really connect, or do they just share a box? Is there another way to get B?</span></div>
+      <div class="tk"><b>Notice the detour</b><span>Attacks on the person, red herrings, jokes and tears are all signs the argument is being avoided.</span></div>
+      <div class="tk"><b>Argue, don't quarrel</b><span>Aim at the truth, not the person, and leave alone those who won't reason.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of D. Q. McInerny, <em>Being Logical: A Guide to Good Thinking</em> (Random House, 2004). Examples are the book's own. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero band: a rubber band, slack on the left, pulled taut around pins on the right --- */
+  var canvas = document.getElementById("band");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : 1 - Math.pow(1 - t, 3); }
+  function strand(x, side, t) {
+    var u = x / w;
+    var slack = 1 - ease((u - 0.08) / 0.58);         // 1 = loose, 0 = taut
+    var gap = hgt * 0.16;
+    var wob = Math.sin(x * 0.021 + t * (side > 0 ? 1.1 : 0.8) + side) * 0.6
+            + Math.sin(x * 0.047 - t * 0.7 + side * 2) * 0.4;
+    return hgt / 2 + side * gap + wob * hgt * 0.3 * slack;
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var t = reduce ? 0 : time * 0.0012;
+    var x0 = 16, x1 = w - 28;
+    ctx.lineWidth = 5; ctx.lineCap = "round"; ctx.lineJoin = "round";
+    ctx.strokeStyle = css("--form");
+    ctx.beginPath();
+    for (var x = x0; x <= x1; x += 2) {
+      var y = strand(x, -1, t);
+      if (x === x0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    var yTopEnd = strand(x1, -1, t), yBotEnd = strand(x1, 1, t);
+    ctx.arc(x1, (yTopEnd + yBotEnd) / 2, (yBotEnd - yTopEnd) / 2, -Math.PI / 2, Math.PI / 2);
+    for (var x2 = x1; x2 >= x0; x2 -= 2) ctx.lineTo(x2, strand(x2, 1, t));
+    var yT0 = strand(x0, -1, t), yB0 = strand(x0, 1, t);
+    ctx.quadraticCurveTo(x0 - 12, (yT0 + yB0) / 2, x0, yT0);
+    ctx.stroke();
+    // pins that hold the taut end: premises and a conclusion
+    ctx.fillStyle = css("--ink");
+    [0.74, 0.86].forEach(function (p) {
+      var px = p * w;
+      ctx.beginPath(); ctx.arc(px, strand(px, -1, t) + 7, 4, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(px, strand(px, 1, t) - 7, 4, 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.fillStyle = css("--sound");
+    ctx.beginPath(); ctx.arc(x1, hgt / 2, 5, 0, Math.PI * 2); ctx.fill();
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

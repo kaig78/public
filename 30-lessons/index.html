@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>30 Lessons for Living by Karl Pillemer – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Six theme colours, one per chapter of lessons, borrowed from
+   the cover's red, orange and blue argyle. */
+:root {
+  --paper: #f6f4ee;
+  --paper-2: #ece8de;
+  --card: #ffffff;
+  --ink: #18161a;
+  --ink-2: #4c4950;
+  --ink-3: #7b7780;
+  --rule: #dbd6ca;
+
+  /* the six themes */
+  --love: #c8372a;
+  --work: #2556a8;
+  --kids: #c9620a;
+  --age: #16806b;
+  --regret: #5a45b0;
+  --joy: #9a7004;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #121114;
+    --paper-2: #1b1a1e;
+    --card: #1f1e23;
+    --ink: #efedf2;
+    --ink-2: #b4b1bb;
+    --ink-3: #87848e;
+    --rule: #302e36;
+    --love: #ff7a6b;
+    --work: #78a5ff;
+    --kids: #ffa04d;
+    --age: #4fd1b0;
+    --regret: #ab96ff;
+    --joy: #f0c53f;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #121114;
+  --paper-2: #1b1a1e;
+  --card: #1f1e23;
+  --ink: #efedf2;
+  --ink-2: #b4b1bb;
+  --ink-3: #87848e;
+  --rule: #302e36;
+  --love: #ff7a6b;
+  --work: #78a5ff;
+  --kids: #ffa04d;
+  --age: #4fd1b0;
+  --regret: #ab96ff;
+  --joy: #f0c53f;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--work); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Theme colour helpers */
+.c-love   { --c: var(--love); }
+.c-work   { --c: var(--work); }
+.c-kids   { --c: var(--kids); }
+.c-age    { --c: var(--age); }
+.c-regret { --c: var(--regret); }
+.c-joy    { --c: var(--joy); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .8;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero h1 .big { display: block; font-size: clamp(120px, 23vw, 270px); color: var(--love); }
+.hero h1 .rest { display: block; font-size: clamp(40px, 6.4vw, 82px); line-height: .92; letter-spacing: -.025em; margin-top: 10px; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 304 / 500;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(30, 16, 20, .35), 0 8px 18px -10px rgba(30, 16, 20, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.argyle { position: relative; margin-top: 28px; }
+.argyle canvas { display: block; width: 100%; height: 120px; }
+.argyle .ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 6px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--c, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* The five lessons of a chapter */
+.lessons { display: grid; gap: 12px; }
+.lesson {
+  display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 4px 14px;
+  padding: 16px 18px; border-radius: 6px;
+  background: color-mix(in srgb, var(--c) 6%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--c) 26%, var(--rule));
+  scroll-margin-top: 16px;
+}
+.lesson .n {
+  font-family: var(--display); font-weight: 900; font-stretch: 62%; font-size: 44px; line-height: .85;
+  color: var(--c); font-variant-numeric: tabular-nums; grid-row: span 2;
+}
+.lesson b { font-family: var(--display); font-weight: 750; font-stretch: 102%; font-size: 19px; line-height: 1.2; }
+.lesson p { font-size: 16.5px; line-height: 1.5; color: var(--ink-2); }
+.lesson.bonus { background: transparent; border-style: dashed; }
+.lesson.bonus .n { font-size: 15px; font-family: var(--mono); font-weight: 500; letter-spacing: .06em; padding-top: 4px; }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+.axis { position: relative; height: 18px; margin-top: 2px; }
+.axis span { position: absolute; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.axis span:first-child { transform: none; }
+.barwrap { position: relative; display: grid; gap: 14px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- The 30-lesson map ---------- */
+.map { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+.map .col { border-top: 4px solid var(--c); padding-top: 12px; display: grid; gap: 12px; align-content: start; }
+.map h3 { font-size: 21px; font-weight: 850; font-stretch: 112%; letter-spacing: -.01em; color: var(--c); line-height: 1.05; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.map li a {
+  display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 6px; text-decoration: none;
+  padding: 8px 10px; border-radius: 4px; background: color-mix(in srgb, var(--c) 8%, var(--card));
+  font-family: var(--display); font-weight: 650; font-stretch: 96%; font-size: 14.5px; line-height: 1.25;
+  transition: background .2s;
+}
+.map li a:hover { background: color-mix(in srgb, var(--c) 20%, var(--card)); }
+.map li span { font-family: var(--mono); font-weight: 500; font-size: 12px; color: var(--c); padding-top: 2px; font-variant-numeric: tabular-nums; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 7px 13px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* fight tips */
+.tips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px; counter-reset: tip; }
+.tips li { counter-increment: tip; background: var(--paper-2); border-radius: 6px; padding: 12px 14px; font-size: 15px; line-height: 1.4; color: var(--ink-2); display: grid; gap: 4px; }
+.tips li::before { content: "Tip " counter(tip); font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--c); }
+.tips b { font-family: var(--display); font-weight: 750; font-stretch: 100%; color: var(--ink); font-size: 16px; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* ten questions */
+.questions { margin: 0; padding: 0; list-style: none; counter-reset: q; display: grid; gap: 0; }
+.questions li { counter-increment: q; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 10px; padding: 12px 0; border-top: 1px solid var(--rule); font-size: 17px; line-height: 1.45; }
+.questions li:first-child { border-top: 0; }
+.questions li::before { content: counter(q, decimal-leading-zero); font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 4px; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--c, var(--rule)); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1080px) {
+  .map { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .epilogue, .part { grid-template-columns: 1fr; }
+  .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 640px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare { grid-template-columns: 1fr; }
+  .lesson { grid-template-columns: 40px minmax(0, 1fr); padding: 14px; }
+  .lesson .n { font-size: 36px; }
+}
+@media (max-width: 400px) {
+  .map { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Karl Pillemer · Hudson Street Press, 2011</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#lessons">30 lessons</a>
+    <a href="#love-work">Love &amp; work</a>
+    <a href="#family-age">Family &amp; age</a>
+    <a href="#how-to-live">How to live</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span class="big">30</span><span class="rest">Lessons for Living</span></h1>
+    <p class="sub">Tried and true advice from the wisest Americans</p>
+    <p class="dek">A Cornell gerontologist asked more than a thousand people over 65 what they'd learned about life. Their answers were surprisingly consistent, and often not what younger people expect.</p>
+    <div class="byline label">
+      <span>8 chapters</span><span>6 themes</span><span>30 lessons</span><span>~1,200 elders</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of 30 Lessons for Living by Karl Pillemer: the title in a white frame on a red, orange and blue argyle pattern">
+</div>
+
+<div class="argyle" aria-hidden="true">
+  <canvas id="argyle"></canvas>
+  <div class="ends label"><span>Year 1</span><span>Year 90, looking back</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Ask the people who have already lived it</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Pillemer spent thirty years studying older people's problems: caregiving, chronic pain, nursing homes. At fifty he started to wonder whether he'd missed the most useful question. Instead of asking what goes wrong in old age, why not ask old people what they know about living?</p>
+      <p>He calls them <strong>the experts</strong>. They're not gurus or celebrities. They've simply been where younger people haven't, and many lived through the Depression, World War II, poverty and loss. From the end of the road, they can see which choices worked out and which ones didn't.</p>
+      <p>What they say often goes against conventional wisdom. Some of it sounds liberal (tolerance, skepticism about money and status), some conservative (marriage as a lifelong commitment). The real gap is in how they think about <a href="#l26">time</a>.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Where the lessons came from</span>
+      <svg viewBox="0 0 560 262" role="img" aria-label="Four sources feed into one circle. About 500 written answers, about 80 pilot interviews, 314 random-sample phone interviews with an average age of 74, and about 240 in-depth interviews with an average age of 81 combine into about 1,200 elders. That pool is distilled into a grid of six themes with five lessons each, 30 lessons in total.">
+        <g style="fill:var(--paper-2);stroke:var(--rule)">
+          <rect x="0" y="8" width="232" height="48" rx="5"/>
+          <rect x="0" y="72" width="232" height="48" rx="5"/>
+          <rect x="0" y="136" width="232" height="48" rx="5"/>
+          <rect x="0" y="200" width="232" height="48" rx="5"/>
+        </g>
+        <text x="12" y="28" font-size="12.5" style="fill:var(--ink);font-weight:500">~500 written answers</text>
+        <text x="12" y="45" font-size="10">letters and a project website</text>
+        <text x="12" y="92" font-size="12.5" style="fill:var(--ink);font-weight:500">~80 pilot interviews</text>
+        <text x="12" y="109" font-size="10">face to face, all walks of life</text>
+        <text x="12" y="156" font-size="12.5" style="fill:var(--ink);font-weight:500">314 phone interviews</text>
+        <text x="12" y="173" font-size="10">random national sample, avg. 74</text>
+        <text x="12" y="220" font-size="12.5" style="fill:var(--ink);font-weight:500">~240 in-depth interviews</text>
+        <text x="12" y="237" font-size="10">nominated as wise, avg. age 81</text>
+        <g style="stroke:var(--ink-3)" stroke-width="1.3" fill="none">
+          <path d="M232 32 C 262 32, 262 112, 282 120"/>
+          <path d="M232 96 C 256 96, 262 120, 280 126"/>
+          <path d="M232 160 C 256 160, 262 136, 280 134"/>
+          <path d="M232 224 C 262 224, 262 146, 282 140"/>
+        </g>
+        <circle cx="336" cy="130" r="56" style="fill:color-mix(in srgb, var(--love) 14%, var(--card));stroke:var(--love)" stroke-width="2"/>
+        <text x="336" y="128" text-anchor="middle" font-size="22" style="fill:var(--ink);font-family:var(--display);font-weight:850">~1,200</text>
+        <text x="336" y="148" text-anchor="middle" font-size="10.5">elders, 65+</text>
+        <g style="stroke:var(--ink-3)" stroke-width="1.5" fill="none"><path d="M394 130 H410"/><path d="M405 125 L411 130 L405 135"/></g>
+        <text x="488" y="60" text-anchor="middle" font-size="10">distilled into</text>
+        <g id="grid30"></g>
+        <text x="488" y="206" text-anchor="middle" font-size="11" style="fill:var(--ink)">6 themes × 5 lessons</text>
+        <text x="488" y="222" text-anchor="middle" font-size="10">= 30 lessons</text>
+      </svg>
+      <p class="cap">Pillemer read the transcripts again and again and pulled out the advice that came up most often. It's a qualitative study, not a vote count, and all the names in the book are pseudonyms.</p>
+      <p class="src">Source: the Legacy Project, Cornell University, appendix</p>
+    </div>
+  </div>
+
+  <div class="figrow" style="margin-top:24px">
+    <div class="fig">
+      <span class="label">The combined experience behind the advice</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat c-love"><span class="big num" style="color:var(--love)">30,000</span><p>years of marriage, many of them in marriages of 50 years or more</p></div>
+        <div class="stat"><span class="big num" style="color:var(--work)">50,000</span><p>years of work, from carhop and farmhand to CEO</p></div>
+        <div class="stat"><span class="big num" style="color:var(--kids)">~3,000</span><p>children raised between them</p></div>
+      </div>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“It's my responsibility to be as happy as I can be, right here, today.”</blockquote>
+      <span class="label">June Driscoll, nearly 90, a full-care nursing home resident and the woman who started the project</span>
+      <p class="cap">She grew up in a shack with a dirt floor, raised six children and worked until she was "bone tired". Now she was nearly blind and needed help with everything, and she was cheerful. Pillemer wanted to know where that came from.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE 30 LESSONS ============ -->
+<section id="lessons">
+  <div class="sec-head">
+    <span class="label">The book at a glance</span>
+    <h2>All 30 lessons</h2>
+    <p class="lede">Six areas of life with five lessons each, plus a bonus "postscript" at the end of each chapter. Tap a lesson to jump to it.</p>
+  </div>
+  <div class="map">
+    <div class="col c-love">
+      <span class="label">Ch. 2 · Marriage</span>
+      <h3>Great Together</h3>
+      <ol>
+        <li><a href="#l1"><span>01</span>Marry someone a lot like you</a></li>
+        <li><a href="#l2"><span>02</span>Friendship matters as much as romance</a></li>
+        <li><a href="#l3"><span>03</span>Don't keep score</a></li>
+        <li><a href="#l4"><span>04</span>Talk to each other</a></li>
+        <li><a href="#l5"><span>05</span>Commit to marriage itself</a></li>
+      </ol>
+    </div>
+    <div class="col c-work">
+      <span class="label">Ch. 3 · Work</span>
+      <h3>Glad to Get Up</h3>
+      <ol>
+        <li><a href="#l6"><span>06</span>Choose for meaning, not money</a></li>
+        <li><a href="#l7"><span>07</span>Keep looking for work you love</a></li>
+        <li><a href="#l8"><span>08</span>Make the most of a bad job</a></li>
+        <li><a href="#l9"><span>09</span>People skills beat brains</a></li>
+        <li><a href="#l10"><span>10</span>Everyone needs autonomy</a></li>
+      </ol>
+    </div>
+    <div class="col c-kids">
+      <span class="label">Ch. 4 · Children</span>
+      <h3>Nobody's Perfect</h3>
+      <ol>
+        <li><a href="#l11"><span>11</span>It's all about time</a></li>
+        <li><a href="#l12"><span>12</span>Have favourites, never show it</a></li>
+        <li><a href="#l13"><span>13</span>Don't hit your kids</a></li>
+        <li><a href="#l14"><span>14</span>Avoid a rift at all costs</a></li>
+        <li><a href="#l15"><span>15</span>Take the lifelong view</a></li>
+      </ol>
+    </div>
+    <div class="col c-age">
+      <span class="label">Ch. 5 · Aging</span>
+      <h3>Find the Magic</h3>
+      <ol>
+        <li><a href="#l16"><span>16</span>Old age beats your fears</a></li>
+        <li><a href="#l17"><span>17</span>Plan to need your body for 100 years</a></li>
+        <li><a href="#l18"><span>18</span>Don't worry about dying</a></li>
+        <li><a href="#l19"><span>19</span>Stay connected</a></li>
+        <li><a href="#l20"><span>20</span>Plan where you'll live</a></li>
+      </ol>
+    </div>
+    <div class="col c-regret">
+      <span class="label">Ch. 6 · Regrets</span>
+      <h3>Look Everyone in the Eye</h3>
+      <ol>
+        <li><a href="#l21"><span>21</span>Always be honest</a></li>
+        <li><a href="#l22"><span>22</span>Say yes to opportunities</a></li>
+        <li><a href="#l23"><span>23</span>Travel more</a></li>
+        <li><a href="#l24"><span>24</span>Choose a mate with extreme care</a></li>
+        <li><a href="#l25"><span>25</span>Say it now</a></li>
+      </ol>
+    </div>
+    <div class="col c-joy">
+      <span class="label">Ch. 7 · Happiness</span>
+      <h3>Choose Happiness</h3>
+      <ol>
+        <li><a href="#l26"><span>26</span>Time is of the essence</a></li>
+        <li><a href="#l27"><span>27</span>Happiness is a choice</a></li>
+        <li><a href="#l28"><span>28</span>Worry is time wasted</a></li>
+        <li><a href="#l29"><span>29</span>Think small</a></li>
+        <li><a href="#l30"><span>30</span>Have faith</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="love-work">
+  <span class="label partno">Part 1 · Chapters 2–3 · Lessons 1–10</span>
+  <h2>Love and work</h2>
+  <p class="lede">Freud said love and work are the cornerstones of a happy life. The experts agree, and they're blunter than most advice books about what goes wrong in both.</p>
+</div>
+
+<article class="chapter c-love" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Great Together</span></div>
+  <div class="body">
+    <div>
+      <h3>Lessons for a happy marriage</h3>
+      <p class="idea">Marriage is hard even when it works. Each lesson is a way of making it a little easier.</p>
+    </div>
+    <div class="lessons">
+      <div class="lesson" id="l1"><span class="n">01</span><b>Marry someone a lot like you</b><p>This was close to unanimous, across politics, class and race. What counts is having the same <strong>core values</strong>: money, children, honesty, how to live. A fight over an expensive golf club is really a fight about values. To find a match you have to know your own values first. And forget about changing your partner after the wedding. It almost never happens.</p></div>
+      <div class="lesson" id="l2"><span class="n">02</span><b>Friendship is as important as romantic love</b><p>"I married my best friend" was the most common secret. The intense passion fades, so ask yourselves: if we weren't in love, would we be friends? One expert put it this way: your spouse should be the kid you most wanted to play with on the playground.</p></div>
+      <div class="lesson" id="l3"><span class="n">03</span><b>Don't keep score</b><p>"Give and take" doesn't mean fifty-fifty. Both partners give 100 percent, and in a hard year it may be 90/10. Ask yourself each morning what you could do to make your partner's day a little happier.</p></div>
+      <div class="lesson" id="l4"><span class="n">04</span><b>Talk to each other</b><p>The most common regret about a marriage was a spouse who couldn't or wouldn't talk. Fights are inevitable. One couple married 67 years still has two a week. What matters is how you have them, and you can find out whether someone can communicate before you marry them.</p></div>
+      <div class="lesson" id="l5"><span class="n">05</span><b>Don't just commit to your partner, commit to marriage itself</b><p>The experts married expecting it to be for life, and that expectation carried them through bad stretches. Many came close to leaving and are grateful they stayed. The exceptions are clear: abuse, repeated infidelity, or conflict that truly can't be resolved.</p></div>
+      <div class="lesson bonus" id="l5b"><span class="n">BONUS</span><b>Don't go to bed angry</b><p>Never go to sleep without saying "I love you", even through gritted teeth. You never know what will happen in the night.</p></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Not 50/50, but 100/100</h4>
+        <svg viewBox="0 0 480 214" role="img" aria-label="Top: one bar split in half, labelled keeping score, each partner gives 50 percent. Bottom: two full-length bars, labelled the experts' version, each partner gives 100 percent.">
+          <text x="0" y="16" font-size="12" style="fill:var(--ink)">Keeping score</text>
+          <rect x="0" y="26" width="238" height="28" rx="3" style="fill:color-mix(in srgb, var(--love) 30%, var(--card));stroke:var(--love)"/>
+          <rect x="242" y="26" width="238" height="28" rx="3" style="fill:color-mix(in srgb, var(--joy) 30%, var(--card));stroke:var(--joy)"/>
+          <text x="119" y="45" text-anchor="middle" font-size="11.5" style="fill:var(--ink)">you · 50%</text>
+          <text x="361" y="45" text-anchor="middle" font-size="11.5" style="fill:var(--ink)">me · 50%</text>
+          <text x="240" y="76" text-anchor="middle" font-size="11" style="fill:var(--ink-3)">"I did my half. Where's yours?"</text>
+          <text x="0" y="112" font-size="12" style="fill:var(--ink)">The experts' version</text>
+          <rect x="0" y="122" width="420" height="26" rx="3" style="fill:var(--love)"/>
+          <rect x="0" y="154" width="420" height="26" rx="3" style="fill:var(--joy)"/>
+          <text x="430" y="140" font-size="12" style="fill:var(--ink)">100%</text>
+          <text x="430" y="172" font-size="12" style="fill:var(--ink)">100%</text>
+          <text x="0" y="206" font-size="11" style="fill:var(--ink-3)">two horses leaning into the same harness</text>
+        </svg>
+        <p class="cap">Albert Folsom, married 59 years, pointed to a statue in his town museum: two workhorses straining against one load, titled "As of One Mind". That, he said, was his marriage.</p>
+      </div>
+      <div class="fig">
+        <h4>How long-married couples fight</h4>
+        <ul class="tips">
+          <li><b>Get out of the house</b>A drive or a walk takes the heat out of it.</li>
+          <li><b>Write it, then bin it</b>Write the angry letter, reread it the next day, throw it away.</li>
+          <li><b>Talk to the sheep</b>Let off steam alone first. One farmer went to the barn.</li>
+          <li><b>Ban the teasing</b>One couple agreed to stop for good when it turned nasty.</li>
+          <li><b>Take the floor</b>One talks for five minutes. The other repeats it back until they get it right.</li>
+          <li><b>Who cares more?</b>Ask which of you this matters to more, and let the other one give way.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Sandy Hudgens married just before her husband shipped out. He fought in Patton's army at the Battle of the Bulge and came home a different man. He was withdrawn, couldn't sleep and was no longer the cheerful singer she'd married. There were years when leaving seemed reasonable. She stayed and kept trying, and they had twenty good years together at the end. She calls them a bonus for both of them.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-work" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Glad to Get Up in the Morning</span></div>
+  <div class="body">
+    <div>
+      <h3>Lessons for a fulfilling career</h3>
+      <p class="idea">On no topic were the experts more adamant: years spent in a job you dread are a tragic waste.</p>
+    </div>
+    <div class="lessons">
+      <div class="lesson" id="l6"><span class="n">06</span><b>Choose a career for the intrinsic rewards, not the money</b><p>People who chose a field for the pay tend to look back and ask "What have I done?" Earning less and enjoying the work is, to the experts, an easy trade. There will always be someone richer, so if money is the goal you'll always lose the comparison.</p></div>
+      <div class="lesson" id="l7"><span class="n">07</span><b>Don't give up on looking for a job that makes you happy</b><p>Taking the wrong job isn't the tragedy. Staying in it is. Spend a year or two learning a field, and if it's wrong, move on, whatever your age.</p></div>
+      <div class="lesson" id="l8"><span class="n">08</span><b>Make the most of a bad job</b><p>You can't always love your job, but you can learn from any job. Watch everything, do the work well anyway, and take pride in it. Even a terrible boss is useful: he's a bad example.</p></div>
+      <div class="lesson" id="l9"><span class="n">09</span><b>Emotional intelligence trumps every other kind</b><p>Technical brilliance doesn't protect you if you can't get on with people. Pillemer saw a star academic voted out by his own colleagues. The experts value patience, humility, holding back judgment, and seeing the issue from the other side.</p></div>
+      <div class="lesson" id="l10"><span class="n">10</span><b>Everyone needs autonomy</b><p>Asked to choose between a regimented job and a lower-paid one where they could plan their own day, the experts chose freedom. Purpose and autonomy go together. A man who worked his way up from changing tires to owning the store called it his best job: he was finally his own boss.</p></div>
+      <div class="lesson bonus" id="l10b"><span class="n">BONUS</span><b>The first thing in the morning</b><p>The test is simple. If you dread leaving for work most mornings, take it seriously. It may be time for a change.</p></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Look out the window, not in the mirror</h4>
+        <svg viewBox="0 0 460 232" role="img" aria-label="Left: an oval mirror showing one person, labelled mirror, you see only yourself. Right: a four-pane window with six people in different colours outside, labelled window, you see the people around you.">
+          <ellipse cx="100" cy="94" rx="62" ry="82" style="fill:var(--paper-2);stroke:var(--ink)" stroke-width="3"/>
+          <circle cx="100" cy="76" r="15" style="fill:var(--ink-3)"/>
+          <rect x="78" y="96" width="44" height="40" rx="18" style="fill:var(--ink-3)"/>
+          <text x="100" y="204" text-anchor="middle" font-size="13" style="fill:var(--ink)">Mirror</text>
+          <text x="100" y="222" text-anchor="middle" font-size="11">you see only yourself</text>
+          <rect x="256" y="14" width="190" height="160" rx="2" style="fill:color-mix(in srgb, var(--work) 8%, var(--card));stroke:var(--ink)" stroke-width="3"/>
+          <g id="window-people"></g>
+          <path d="M351 14 V174 M256 94 H446" style="stroke:var(--ink)" stroke-width="3"/>
+          <text x="351" y="204" text-anchor="middle" font-size="13" style="fill:var(--ink)">Window</text>
+          <text x="351" y="222" text-anchor="middle" font-size="11">you see the people around you</text>
+        </svg>
+        <p class="cap">Father Jim gave this advice to priests going through dark periods. Pillemer found it useful for anyone whose ego is caught up in their job. Comparing yourself to others clouds your judgment. Turn your attention to the people you work with.</p>
+      </div>
+      <div class="fig">
+        <h4>The cost of a job you dislike</h4>
+        <div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="stat"><span class="big num" style="color:var(--work)">~2,000</span><p>hours a year at work: lost lifetime if you hate it</p></div>
+          <div class="stat"><span class="big num" style="color:var(--work)">1–2</span><p>years to learn a field before deciding it isn't for you</p></div>
+        </div>
+        <div class="compare">
+          <div><h5>Rod</h5><ul><li>Took the safe corporate job</li><li>Left on time every day to protect his health</li><li>Retired early, comfortable</li><li><strong style="color:var(--ink)">Never felt passion or purpose</strong></li></ul></div>
+          <div><h5 style="color:var(--work)">Vincent</h5><ul><li>Similar background, same era</li><li>On a beach at 32, told his wife he wanted to write</li><li>Took the financial risk</li><li><strong style="color:var(--ink)">A life he calls wonderful</strong></li></ul></div>
+        </div>
+        <p class="cap">Pillemer calls these two interviews mirror images. The difference was saying yes at the right moment. (From lesson 22.)</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Martin Sanderson grew up poor during the Depression and dreamed of flying after Lindbergh crossed the Atlantic. The military was segregated, and at first Black men couldn't fly for the air force. He became one of the Tuskegee Airmen and flew combat missions. He says he was afraid, and anyone being shot at who wasn't afraid had no sense. His advice is to refuse to let other people's limits decide what you do.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="family-age">
+  <span class="label partno">Part 2 · Chapters 4–5 · Lessons 11–20</span>
+  <h2>Family and growing old</h2>
+  <p class="lede">Raising kids looks completely different from the other end, when what you most want is for your adult children to enjoy your company. Aging looks different too: much better than the young fear, if you prepare for it.</p>
+</div>
+
+<article class="chapter c-kids" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Nobody's Perfect</span></div>
+  <div class="body">
+    <div>
+      <h3>Lessons for a lifetime of parenting</h3>
+      <p class="idea">Pillemer pushed past platitudes and asked: what do you know about raising children that younger parents don't?</p>
+    </div>
+    <div class="lessons">
+      <div class="lesson" id="l11"><span class="n">11</span><b>It's all about time</b><p>Children want you far more than anything money can buy. The happiest memories are of shared activities: building a shed, fishing trips, ball games. It's worth earning less to have that time. One mother's regret was being so lost in work thoughts on the drive home that she didn't hear the little voices in the back seat.</p></div>
+      <div class="lesson" id="l12"><span class="n">12</span><b>It's normal to have favourites, but never show it</b><p>In Pillemer's research, about 70% of mothers can name the child they feel closest to. That's natural, so don't feel guilty about it. But keep it to yourself. Ninety-year-olds still remember a parent saying "she's the pretty one."</p></div>
+      <div class="lesson" id="l13"><span class="n">13</span><b>Don't hit your kids</b><p>Pillemer expected a "spare the rod" generation. Most experts instead said they regretted any spanking they'd done, and research backs them up. A third or more never hit their children, and those children turned out fine.</p></div>
+      <div class="lesson" id="l14"><span class="n">14</span><b>Avoid a rift at all costs</b><p>An estranged child was among the deepest pain anyone described. Rifts usually start over something that felt huge at the time, like a remarriage, a lifestyle or a child coming out, and was almost never worth losing the relationship.</p></div>
+      <div class="lesson" id="l15"><span class="n">15</span><b>Take a lifelong view of relationships with children</b><p>The years from 30 to 50 pass in what Pillemer calls the "middle-aged blur". After that come decades of relationship with adult children. Make today's decisions with that future in mind: children who like you and want to be around you.</p></div>
+      <div class="lesson bonus" id="l15b"><span class="n">BONUS</span><b>Abandon perfection</b><p>They tried to raise perfect children by Dr. Spock and found it doesn't work that way. Be good enough. Let children make mistakes and learn from them.</p></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The blur is short; the relationship is long</h4>
+        <svg viewBox="0 0 560 206" role="img" aria-label="A timeline of a parent's age from 25 to 95. A short band from about 30 to 50 is labelled kids at home, the middle-aged blur. A much longer band from 50 to 95 is labelled relationship with adult children, often 40 years or more.">
+          <text x="147" y="48" text-anchor="middle" font-size="11" style="fill:var(--ink-3);font-style:italic">the middle-aged blur</text>
+          <rect x="76" y="58" width="143" height="34" rx="3" style="fill:color-mix(in srgb, var(--kids) 22%, var(--card));stroke:var(--kids)" stroke-width="1.5"/>
+          <text x="147" y="80" text-anchor="middle" font-size="11.5" style="fill:var(--ink)">kids at home</text>
+          <rect x="219" y="100" width="321" height="34" rx="3" style="fill:var(--kids)"/>
+          <text x="379" y="122" text-anchor="middle" font-size="11.5" style="fill:var(--card)">adult children: often 40+ years</text>
+          <line x1="40" y1="152" x2="540" y2="152" style="stroke:var(--ink-3)" stroke-width="1"/>
+          <g style="stroke:var(--ink-3)" stroke-width="1">
+            <line x1="76" y1="148" x2="76" y2="156"/><line x1="147" y1="148" x2="147" y2="156"/><line x1="219" y1="148" x2="219" y2="156"/><line x1="290" y1="148" x2="290" y2="156"/><line x1="361" y1="148" x2="361" y2="156"/><line x1="433" y1="148" x2="433" y2="156"/><line x1="504" y1="148" x2="504" y2="156"/>
+          </g>
+          <g font-size="11" text-anchor="middle">
+            <text x="76" y="172">30</text><text x="147" y="172">40</text><text x="219" y="172">50</text><text x="290" y="172">60</text><text x="361" y="172">70</text><text x="433" y="172">80</text><text x="504" y="172">90</text>
+          </g>
+          <text x="290" y="196" text-anchor="middle" font-size="10.5" style="fill:var(--ink-3)">parent's age</text>
+        </svg>
+        <p class="cap">Essie plays cutthroat pinochle every other Sunday with her daughter. Nobody lets anybody win. That's the payoff the experts mean. Illustrative timeline, not data.</p>
+      </div>
+      <div class="fig">
+        <h4>Favouritism is common; showing it does lasting harm</h4>
+        <div class="barwrap">
+          <div class="bar c-kids"><div class="row"><span>Mothers who name the child they're most emotionally close to</span><b>~70%</b></div><div class="track"><div class="fill" style="width:70%"></div></div></div>
+          <div class="bar c-kids"><div class="row"><span>Mothers who name one child they're most comfortable confiding in</span><b>75%+</b></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+        <p class="cap">Almost every parent first says "I love them all equally." The data, and the experts after a little prodding, say otherwise. The harm isn't in feeling it. It's in comparisons the children hear.</p>
+        <p class="src">Source: Pillemer and Suitor's survey of mothers and adult children, ch. 4</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Mike Hoyt was as traditional as the experts come: work, family, sports. When his son came out, his first reaction was to worry about what people in town would say. He now calls that selfish and stupid. He and his wife changed their views and kept their son. Gwen Hagerman faced worse: her daughter had an affair with Gwen's second husband. After a few estranged years she decided it was the only daughter she had. Helping with the grandchildren brought them back together, and they're friends today.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-age" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Find the Magic</span></div>
+  <div class="body">
+    <div>
+      <h3>Lessons for aging fearlessly and well</h3>
+      <p class="idea">The young fear old age most. The old fear it least.</p>
+    </div>
+    <div class="lessons">
+      <div class="lesson" id="l16"><span class="n">16</span><b>Being old is much better than you think</b><p>Some experts said they're happier now than ever. They have more clarity, they've let go of things that once seemed vital, and they no longer feel responsible for their grown children's choices. Each decade brought opportunities the previous one didn't have.</p></div>
+      <div class="lesson" id="l17"><span class="n">17</span><b>Act now like you'll need your body for a hundred years</b><p>Their point isn't about dying sooner. It's about living for decades with chronic illness. "You've got to die sometime" ignores the long, painful middle, which the whole family lives through too. Smoking and heavy drinking came up again and again.</p></div>
+      <div class="lesson" id="l18"><span class="n">18</span><b>Don't worry about dying, the experts don't</b><p>Believers and atheists alike described acceptance and curiosity, not terror. What worried them was practical: getting the will done, the boxes of papers and the photo albums nobody will want.</p></div>
+      <div class="lesson" id="l19"><span class="n">19</span><b>Stay connected</b><p>Retirement, widowhood and moving away all shrink your social circle. The experts are deliberate about it: see someone every day, accept every invitation, stay curious, keep learning.</p></div>
+      <div class="lesson" id="l20"><span class="n">20</span><b>Plan ahead about where you'll live (and your parents too)</b><p>Decide before a crisis forces the decision. Many who moved into senior communities said it brought more company and freedom, not less. Readers under sixty should read this one for their parents.</p></div>
+      <div class="lesson bonus" id="l20b"><span class="n">BONUS</span><b>Abandon the fight against aging</b><p>Skip the gimmicks. Accept and adapt. If you can't run as fast, run slower, but keep running.</p></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Accept and adapt</h4>
+        <svg viewBox="0 0 520 210" role="img" aria-label="Five mountains in a row, labelled 40s, 50s, 60s, 70s and 80s. Each is a little lower than the one before, and each has a flag on its summit, showing that the climbs get smaller but never stop.">
+          <text x="0" y="14" font-size="11" style="fill:var(--ink-3)">same friends, same range, lower peaks</text>
+          <g style="fill:color-mix(in srgb, var(--age) 18%, var(--card));stroke:var(--age)" stroke-width="2" stroke-linejoin="round">
+            <path d="M8 176 L58 34 L108 176 Z"/>
+            <path d="M112 176 L160 56 L208 176 Z"/>
+            <path d="M212 176 L260 78 L308 176 Z"/>
+            <path d="M312 176 L360 98 L408 176 Z"/>
+            <path d="M412 176 L460 116 L508 176 Z"/>
+          </g>
+          <g style="stroke:var(--ink)" stroke-width="1.5">
+            <line x1="58" y1="34" x2="58" y2="16"/><line x1="160" y1="56" x2="160" y2="38"/><line x1="260" y1="78" x2="260" y2="60"/><line x1="360" y1="98" x2="360" y2="80"/><line x1="460" y1="116" x2="460" y2="98"/>
+          </g>
+          <g style="fill:var(--joy)">
+            <path d="M58 16 l14 5 l-14 5 z"/><path d="M160 38 l14 5 l-14 5 z"/><path d="M260 60 l14 5 l-14 5 z"/><path d="M360 80 l14 5 l-14 5 z"/><path d="M460 98 l14 5 l-14 5 z"/>
+          </g>
+          <line x1="0" y1="176" x2="520" y2="176" style="stroke:var(--rule)"/>
+          <g font-size="11.5" text-anchor="middle">
+            <text x="58" y="196">40s</text><text x="160" y="196">50s</text><text x="260" y="196">60s</text><text x="360" y="196">70s</text><text x="460" y="196">80s</text>
+          </g>
+        </svg>
+        <p class="cap">Priscilla Linares and four friends meet every year in the Adirondacks. She could have stayed angry that she can't climb the tall peaks anymore. Instead she hikes the ones she can. Illustrative diagram, not data.</p>
+      </div>
+      <div class="fig">
+        <h4>Staying connected, on purpose</h4>
+        <div class="chips">
+          <span class="chip c-age">See someone every day</span>
+          <span class="chip c-age">Accept every invitation</span>
+          <span class="chip c-age">Stay curious</span>
+          <span class="chip c-age">Keep learning</span>
+          <span class="chip c-age">Fill the weekend by Wednesday</span>
+        </div>
+        <p class="cap">After her husband died, Sandy Hudgens noticed she was getting isolated and made a rule to accept every invitation, whatever it was. Another widow no longer likes an open weekend. If nothing is planned by Wednesday, she starts calling people. Both habits work at any age, and the experts warn that circles start to shrink in middle age.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="how-to-live">
+  <span class="label partno">Part 3 · Chapters 6–8 · Lessons 21–30</span>
+  <h2>How to live</h2>
+  <p class="lede">The last two chapters zoom out: what people regret at the end, and the worldview underneath all thirty lessons, which comes down to knowing that time is short.</p>
+</div>
+
+<article class="chapter c-regret" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">I Can Look Everyone in the Eye</span></div>
+  <div class="body">
+    <div>
+      <h3>Lessons for a life without regrets</h3>
+      <p class="idea">You probably can't avoid every regret, but you can make the big ones less likely.</p>
+    </div>
+    <div class="lessons">
+      <div class="lesson" id="l21"><span class="n">21</span><b>Always be honest</b><p>Out of every possible virtue, honesty came up again and again. Dishonesty costs you sleep. One man who cut corners on import duties still remembers lying awake. Infidelity came up as a lifelong regret. The chapter's title is the payoff: being able to look everyone in the eye.</p></div>
+      <div class="lesson" id="l22"><span class="n">22</span><b>Say yes to opportunities</b><p>Say yes unless you have a really solid reason to say no. Don't turn down a promotion, a move or a chance just because it scares you or because you don't meet every requirement on paper. People trap themselves inside what they think their limits are.</p></div>
+      <div class="lesson" id="l23"><span class="n">23</span><b>Travel more</b><p>Travel was one of the most common regrets. Many grew up never leaving their county, and the war showed them the world. Don't wait for retirement, because your partner may not be there. Make a list of places, and line it up against the years you'll be able to travel comfortably.</p></div>
+      <div class="lesson" id="l24"><span class="n">24</span><b>Choose a mate with extreme care</b><p>A bad match causes decades of regret. Don't rush. People in love are on their best behaviour, so take the time to see what's underneath. Look as far into the future as you can, and ask yourself honestly why you're marrying.</p></div>
+      <div class="lesson" id="l25"><span class="n">25</span><b>Say it now</b><p>The lasting regrets were about things left unsaid, not things said. Say "I love you", apologise, ask your parents the questions only they can answer. "Send flowers to the living."</p></div>
+      <div class="lesson bonus" id="l25b"><span class="n">BONUS</span><b>Lighten up</b><p>When an old choice still bothers you after many years, the experts give you permission to forgive yourself. Be kind to others, and gentle with yourself.</p></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Some regrets can be fixed later. Some can't.</h4>
+        <svg viewBox="0 0 560 222" role="img" aria-label="Three horizontal bars over an age axis from 20 to 90. More education stays open almost the whole way, fading late. Travel is solid until about 75 and fades out by about 85. Saying what matters stops abruptly at an unknown point, marked with a question mark, because the other person can be gone without warning.">
+          <defs>
+            <linearGradient id="fadeEdu" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" style="stop-color:var(--regret);stop-opacity:.9"/>
+              <stop offset=".6" style="stop-color:var(--regret);stop-opacity:.9"/>
+              <stop offset="1" style="stop-color:var(--regret);stop-opacity:.15"/>
+            </linearGradient>
+            <linearGradient id="fadeTravel" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" style="stop-color:var(--regret);stop-opacity:.9"/>
+              <stop offset=".76" style="stop-color:var(--regret);stop-opacity:.9"/>
+              <stop offset="1" style="stop-color:var(--regret);stop-opacity:0"/>
+            </linearGradient>
+          </defs>
+          <text x="0" y="36" font-size="12" style="fill:var(--ink)">More education</text>
+          <rect x="150" y="22" width="390" height="22" rx="3" style="fill:url(#fadeEdu)"/>
+          <text x="0" y="86" font-size="12" style="fill:var(--ink)">Travel</text>
+          <rect x="150" y="72" width="362" height="22" rx="3" style="fill:url(#fadeTravel)"/>
+          <text x="0" y="136" font-size="12" style="fill:var(--ink)">Say what matters</text>
+          <rect x="150" y="122" width="240" height="22" rx="3" style="fill:var(--regret)"/>
+          <line x1="392" y1="114" x2="392" y2="152" style="stroke:var(--love)" stroke-width="2.5"/>
+          <text x="402" y="138" font-size="13" style="fill:var(--love);font-weight:500">? ends without warning</text>
+          <line x1="150" y1="168" x2="540" y2="168" style="stroke:var(--ink-3)"/>
+          <g font-size="11" text-anchor="middle">
+            <text x="150" y="186">20</text><text x="206" y="186">30</text><text x="261" y="186">40</text><text x="317" y="186">50</text><text x="373" y="186">60</text><text x="429" y="186">70</text><text x="484" y="186">80</text><text x="540" y="186">90</text>
+          </g>
+          <text x="345" y="210" text-anchor="middle" font-size="10.5" style="fill:var(--ink-3)">your age · the window for a do-over</text>
+        </svg>
+        <p class="cap">Pillemer's point is that unmet goals like education can often be made up late in life. Words left unsaid can't be once the person is gone. Travel falls in between: plan for comfortable travel until about 80, unless you turn out to be the exception. Illustrative diagram, not data.</p>
+      </div>
+      <div class="fig">
+        <h4>Two widowers, two kinds of travel</h4>
+        <div class="compare">
+          <div><h5>Waited</h5><ul><li>Jack Baltar and Lynne planned to travel in retirement</li><li>She died of cancer soon after</li><li>He went alone on bus tours through the Rockies</li><li><strong style="color:var(--ink)">"Less fun going alone"</strong></li></ul></div>
+          <div><h5 style="color:var(--regret)">Went anyway</h5><ul><li>Rosemary Brewster's husband was on dialysis for eight years</li><li>She did his treatments at night and swapped bags on bus breaks</li><li>Saskatchewan, British Columbia, New Orleans</li><li><strong style="color:var(--ink)">"We didn't stop traveling"</strong></li></ul></div>
+        </div>
+        <p class="cap">Another expert who keeps falling on trips (in Russia, in Italy) says she's willing to fall in Germany too if she has to.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Hal Phipps was married 55 years and is still grieving his wife three years after her death. She was stoic and so was he, and they rarely said the big things out loud. His one regret is that he never told her often enough that she was the only woman he ever wanted to marry. His advice to younger people: say it.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-joy" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Choose Happiness</span></div>
+  <div class="body">
+    <div>
+      <h3>Lessons for living like an expert</h3>
+      <p class="idea">The final five aren't about one area of life. They're the outlook behind all the others.</p>
+    </div>
+    <div class="lessons">
+      <div class="lesson" id="l26"><span class="n">26</span><b>Time is of the essence</b><p>This is the heart of the book. The experts know deeply that life is short, and it shapes every other lesson. Stop saying "I can't wait until…". There are no wheelchair ramps to the bottom of the Grand Canyon, so go while you can walk.</p></div>
+      <div class="lesson" id="l27"><span class="n">27</span><b>Happiness is a choice, not a condition</b><p>Instead of being "happy if only…", choose to be happy anyway, every day, despite your problems. Nearly everyone over seventy has lived through tragedy, which is why this advice carries weight from them. Many could name the moment they decided.</p></div>
+      <div class="lesson" id="l28"><span class="n">28</span><b>Time spent worrying is time wasted</b><p>The experts were unambiguous here: looking back, worry is time they wish they'd spent on something else. Worry dwells on threats that haven't arrived. Problem solving acts on ones that have. Prepare for what you can, then let the rest go.</p></div>
+      <div class="lesson" id="l29"><span class="n">29</span><b>Think small</b><p>Waiting for big milestones to make you happy is a trap. Enjoy small daily pleasures instead: a morning coffee, deer outside the window. Gratitude comes naturally once you know your days are limited. Why wait until you're eighty to learn it?</p></div>
+      <div class="lesson" id="l30"><span class="n">30</span><b>Have faith</b><p>For most experts, faith was central. It gave them community, ritual and strength in the worst times. Even non-believers valued the rituals. Cora Jenkins, 97, described the ideal as a faith that is "deep but unfanatical".</p></div>
+      <div class="lesson bonus" id="l30b"><span class="n">BONUS</span><b>The golden rule</b><p>In the end it comes down to who you helped. One expert said people who lived only for themselves leave no ripples, and nobody comes to their funerals.</p></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Worrying vs. preparing</h4>
+        <div class="compare">
+          <div><h5>Worry</h5><ul><li>Happens when there's nothing concrete to deal with</li><li>Goes over what <em>might</em> happen, again and again</li><li>Uses up energy and changes nothing</li><li><strong style="color:var(--ink)">Regretted as wasted time</strong></li></ul></div>
+          <div><h5 style="color:var(--joy)">Problem solving</h5><ul><li>Deals with something that's actually happening</li><li>Writes the speech, practises the piece</li><li>Then lets go: "This too will pass"</li><li><strong style="color:var(--ink)">Leaves you free</strong></li></ul></div>
+        </div>
+        <p class="cap">One expert's version: if the doctor might have bad news, don't worry yet, because you don't know. If he gives you bad news, worrying still won't help, so deal with it.</p>
+      </div>
+      <div class="fig">
+        <h4>Small, daily, on purpose</h4>
+        <div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="stat"><span class="big num" style="color:var(--joy)">10</span><p>things Flora Turnbull, 80, would like to try each day: a wish list, not a to-do list. Maybe one works out.</p></div>
+          <div class="stat"><span class="big num" style="color:var(--joy)">0</span><p>funerals Harriet Wagner, 75, plans to attend. She goes to her friends' parties instead, "so we're here now".</p></div>
+        </div>
+        <p class="cap">Mary, paralysed and left blind by a massive stroke in her prime, decided early on that she wouldn't throw herself pity parties.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Ruth Helm, whose love story opens the marriage chapter, lost her 21-year-old daughter Sherry in a plane crash in the 1970s. For two years she went through each day mechanically and escaped into sleep. Then her other daughter came home from college and told her: Mom, you're always so sad, it makes me want to run away from you. That day Ruth chose to be happy, for the family she still had. Her neighbours now assume she's never had a bad day in her life.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ THE LAST LESSON ============ -->
+<section id="last">
+  <div class="sec-head">
+    <span class="label">Chapter 8 · The last lesson</span>
+    <h2>Go and ask an elder</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>Most of the experts were pessimistic about the book. They believed their advice was good, but they'd come to think the young see them as irrelevant. Our social lives are sorted by age: almost all our friends are within ten years of us, and few thirty-year-olds invite a seventy-year-old over to watch the game.</p>
+      <p>Pillemer's last lesson is to close that gap yourself. The average age of his interviewees was about the average American life span, and within ten years fewer than a quarter of them will still be alive. His daughter and son-in-law took his question list to a 94-year-old aunt they'd known for 35 years. They spent an hour on it and learned more about her than in all the years before.</p>
+      <p>Asking for <em>lessons</em> rather than stories gets you deeper answers.</p>
+    </div>
+    <div class="fig">
+      <h4>Three lives back to the Revolution</h4>
+      <svg viewBox="0 0 560 196" role="img" aria-label="A timeline from 1760 to 2030 with four overlapping lifespans. Someone who remembered the Revolutionary War, about 1768 to 1858. A grandfather born about 1850 who told stories of the Civil War. The interviewee, born 1908 and interviewed at 102. And you, from about 1990. Each life overlaps the next.">
+        <g style="stroke:var(--rule)" stroke-width="1" stroke-dasharray="3 4">
+          <line x1="51" y1="12" x2="51" y2="150"/>
+          <line x1="215" y1="12" x2="215" y2="150"/>
+          <line x1="482" y1="12" x2="482" y2="150"/>
+        </g>
+        <rect x="35" y="20" width="173" height="24" rx="3" style="fill:color-mix(in srgb, var(--work) 16%, var(--card));stroke:var(--work)" stroke-dasharray="4 3"/>
+        <text x="41" y="36" font-size="10.5" style="fill:var(--ink)">Remembered the Revolution</text>
+        <rect x="193" y="52" width="154" height="24" rx="3" style="fill:color-mix(in srgb, var(--age) 16%, var(--card));stroke:var(--age)" stroke-dasharray="4 3"/>
+        <text x="199" y="68" font-size="10.5" style="fill:var(--ink)">Grandfather, b. ~1850</text>
+        <rect x="274" y="84" width="208" height="24" rx="3" style="fill:color-mix(in srgb, var(--love) 16%, var(--card));stroke:var(--love)"/>
+        <text x="280" y="100" font-size="10.5" style="fill:var(--ink)">Interviewee, b. 1908 (102)</text>
+        <rect x="443" y="116" width="97" height="24" rx="3" style="fill:color-mix(in srgb, var(--joy) 22%, var(--card));stroke:var(--joy)"/>
+        <text x="449" y="132" font-size="10.5" style="fill:var(--ink)">You</text>
+        <line x1="20" y1="158" x2="540" y2="158" style="stroke:var(--ink-3)"/>
+        <g font-size="10.5" text-anchor="middle">
+          <text x="51" y="176">1776</text><text x="215" y="176">1861</text><text x="482" y="176">2010</text>
+        </g>
+        <text x="20" y="192" font-size="10" style="fill:var(--ink-3)">dashed = approximate</text>
+      </svg>
+      <p class="cap">Pillemer's oldest interviewee was born in 1908. Her grandfather, born around 1850, told her about the Civil War first hand. The oldest people he knew as a child would have remembered the Revolutionary War. That's how practical wisdom used to be passed on: through lives that overlap.</p>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:24px">
+    <h4>Ten questions to ask the experts in your life</h4>
+    <ol class="questions">
+      <li>What are the most important lessons you've learned over the course of your life? <span class="muted">(If they're stuck: if a young person asked what you've learned in your years, what would you say?)</span></li>
+      <li>What advice do you have about getting and staying married? What mistakes should young people avoid? What would you tell a couple thinking of calling it quits?</li>
+      <li>What advice do you have about raising children, and what mistakes should parents avoid?</li>
+      <li>What have you learned about finding fulfilling work and succeeding in a career?</li>
+      <li>Did a difficult or stressful experience teach you something important? What?</li>
+      <li>Looking back, were there turning points that changed the course of your life? Which choices taught you the most?</li>
+      <li>What do you know now about living a happy life that you didn't know at twenty?</li>
+      <li>What are the major values or principles you live by?</li>
+      <li>Have you learned any lessons about staying healthy?</li>
+      <li>What advice would you give people about growing older?</li>
+    </ol>
+    <p class="src">From the list at the end of chapter 8</p>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Putting the 30 lessons to work</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book is full of advice you can act on right away. These are the habits that came up most often, grouped by when to start.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Every day</h3>
+      <div class="tk c-love"><b>Start with the other person</b><span>Before the morning rush, ask what you could do to make your partner's day a little happier.</span></div>
+      <div class="tk c-love"><b>Don't go to sleep angry</b><span>Say "I love you" anyway. You never know what the night brings.</span></div>
+      <div class="tk c-joy"><b>Choose your attitude</b><span>When you notice you're slipping, count your blessings. It sounds simple, and the experts say it works.</span></div>
+      <div class="tk c-joy"><b>Make a list of ten small things</b><span>A wish list for the day, not a to-do list. Notice the small pleasures.</span></div>
+    </div>
+    <div class="col">
+      <h3>This month</h3>
+      <div class="tk c-regret"><b>Say the unsaid thing</b><span>Call the parent, write the apology, send the flowers while they can still be enjoyed.</span></div>
+      <div class="tk c-work"><b>Run the morning test</b><span>If you've dreaded going to work for months, start looking. And in the meantime, find something to learn where you are.</span></div>
+      <div class="tk c-kids"><b>Trade money for time</b><span>Do one shared project with each child, side by side. Keep favourites to yourself.</span></div>
+      <div class="tk c-age"><b>Accept every invitation</b><span>Fill the weekend by Wednesday. Stay curious and keep learning.</span></div>
+    </div>
+    <div class="col">
+      <h3>This year</h3>
+      <div class="tk c-regret"><b>Book the trip</b><span>Line up your list of places against the years you'll be able to travel comfortably.</span></div>
+      <div class="tk c-regret"><b>Say yes</b><span>To the next opportunity that scares you, unless you have a solid reason to say no.</span></div>
+      <div class="tk c-age"><b>Act like you'll need your body at 100</b><span>Quit smoking, move, see the doctor. It's about the quality of the last decades, not just how many.</span></div>
+      <div class="tk c-age"><b>Have the housing conversation</b><span>With your parents, and eventually yourself, before a crisis makes the choice for you.</span></div>
+      <div class="tk"><b>Interview an elder</b><span>Take the ten questions above to the oldest person you know. Ask for lessons, not just stories.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Karl Pillemer, <em>30 Lessons for Living: Tried and True Advice from the Wisest Americans</em> (Hudson Street Press, 2011). Figures are as reported in the book. All names are the book's pseudonyms. Diagrams were drawn for this page, and the illustrative ones are labelled. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  var themes = ["--love", "--work", "--kids", "--age", "--regret", "--joy"];
+
+  /* --- 6 × 5 lesson grid in the method diagram --- */
+  var g = document.getElementById("grid30");
+  if (g) {
+    for (var c = 0; c < 6; c++) for (var r = 0; r < 5; r++) {
+      el("rect", { x: 418 + c * 24, y: 70 + r * 24, width: 20, height: 20, rx: 3, style: "fill:var(" + themes[c] + ")" }, g);
+    }
+  }
+
+  /* --- People outside the window --- */
+  var wp = document.getElementById("window-people");
+  if (wp) {
+    var spots = [[282, 54], [322, 66], [380, 50], [418, 62], [300, 132], [404, 134]];
+    spots.forEach(function (s, i) {
+      el("circle", { cx: s[0], cy: s[1], r: 8, style: "fill:var(" + themes[i % 6] + ")" }, wp);
+      el("rect", { x: s[0] - 10, y: s[1] + 11, width: 20, height: 18, rx: 8, style: "fill:var(" + themes[i % 6] + ")" }, wp);
+    });
+  }
+
+  /* --- Hero: argyle band, one diamond per year of a 90-year life --- */
+  var canvas = document.getElementById("argyle");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  var YEARS = 90, PERIOD = 14000;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var cols = themes.map(css), ink3 = css("--ink-3"), rule = css("--rule");
+    var n = Math.max(18, Math.min(YEARS, Math.floor(w / 13)));  // fewer, wider diamonds on narrow screens
+    var dw = w / n, mid = hgt / 2, half = hgt / 2 - 6;
+    // how far through life the "now" marker is (0 → 1), loops
+    var t = reduce ? 0.62 : ((time % PERIOD) / PERIOD);
+    var lived = t * n;
+    for (var i = 0; i < n; i++) {
+      var cx = dw * i + dw / 2;
+      var band = Math.floor(i / n * 6);          // six stretches of life, six theme colours
+      ctx.beginPath();
+      ctx.moveTo(cx, mid - half); ctx.lineTo(cx + dw / 2, mid); ctx.lineTo(cx, mid + half); ctx.lineTo(cx - dw / 2, mid); ctx.closePath();
+      if (i < Math.floor(lived)) {
+        ctx.globalAlpha = 0.9; ctx.fillStyle = cols[band]; ctx.fill();
+      } else if (i === Math.floor(lived)) {
+        ctx.globalAlpha = 0.25 + 0.65 * (lived % 1); ctx.fillStyle = cols[band]; ctx.fill();
+      } else {
+        ctx.globalAlpha = 1; ctx.strokeStyle = rule; ctx.lineWidth = 1; ctx.stroke();
+      }
+    }
+    // argyle stitching: dashed diagonals over the diamonds
+    ctx.globalAlpha = 0.55; ctx.strokeStyle = ink3; ctx.lineWidth = 1; ctx.setLineDash([3, 4]);
+    for (var j = 0; j <= n; j++) {
+      var x = dw * j;
+      ctx.beginPath(); ctx.moveTo(x - dw / 2, mid - half); ctx.lineTo(x + dw / 2, mid + half); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x + dw / 2, mid - half); ctx.lineTo(x - dw / 2, mid + half); ctx.stroke();
+    }
+    ctx.setLineDash([]); ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

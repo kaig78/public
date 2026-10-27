@@ -1,0 +1,1427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Top Five Regrets of the Dying by Bronnie Ware – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from the cover's woodcut: cream paper, dandelion gold,
+   sky blue, leaf green. Each of the five regrets keeps one colour all the way down the page. */
+:root {
+  --paper: #f7f5ec;
+  --paper-2: #eeebdd;
+  --card: #fffefa;
+  --ink: #1c2227;
+  --ink-2: #4a5257;
+  --ink-3: #7b8285;
+  --rule: #dad6c6;
+
+  /* the five regrets */
+  --r1: #a87f00;
+  --r2: #2a74a0;
+  --r3: #c4523a;
+  --r4: #3b8538;
+  --r5: #8b4f9f;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #101312;
+    --paper-2: #191d1b;
+    --card: #1d2220;
+    --ink: #eeeee6;
+    --ink-2: #b4b9b2;
+    --ink-3: #868c86;
+    --rule: #2d3330;
+    --r1: #f0c83c;
+    --r2: #6db7de;
+    --r3: #ff8a6f;
+    --r4: #7fcf72;
+    --r5: #c79be0;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #101312;
+  --paper-2: #191d1b;
+  --card: #1d2220;
+  --ink: #eeeee6;
+  --ink-2: #b4b9b2;
+  --ink-3: #868c86;
+  --rule: #2d3330;
+  --r1: #f0c83c;
+  --r2: #6db7de;
+  --r3: #ff8a6f;
+  --r4: #7fcf72;
+  --r5: #c79be0;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--r2); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Regret colour helpers */
+.c-r1 { --c: var(--r1); }
+.c-r2 { --c: var(--r2); }
+.c-r3 { --c: var(--r3); }
+.c-r4 { --c: var(--r4); }
+.c-r5 { --c: var(--r5); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 125%;
+  font-size: clamp(22px, 3.2vw, 38px);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  display: block;
+  margin-bottom: 6px;
+}
+.hero h1 {
+  font-size: clamp(64px, 12vw, 150px);
+  font-weight: 900;
+  font-stretch: 100%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.03em;
+}
+.hero h1 .of {
+  display: block;
+  font-family: var(--body);
+  font-style: italic;
+  font-weight: 400;
+  font-size: .36em;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin-top: .22em;
+  color: var(--r1);
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 900;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(30, 30, 10, .35), 0 8px 18px -10px rgba(30, 30, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.seedband { position: relative; margin-top: 28px; }
+.seedband canvas { display: block; width: 100%; height: 130px; }
+.seedband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+.intro-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--c, var(--ink));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(40px, 6.6vw, 86px);
+  font-weight: 900;
+  font-stretch: 118%;
+  line-height: .92;
+  letter-spacing: -.03em;
+}
+.part h2 em { font-style: normal; color: var(--c, var(--ink)); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+.part .quote {
+  font-family: var(--body);
+  font-style: italic;
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--c, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter .gutter .who { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--ink-2); margin-top: 6px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--c, var(--ink));
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg text.ink { fill: var(--ink); }
+.fig svg text.strong { font-family: var(--display); font-weight: 700; fill: var(--ink); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li > span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+.map li .pip { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: 0; }
+
+/* ---------- Regret table ---------- */
+table.rt { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 980px; font-size: 15.5px; line-height: 1.42; }
+table.rt th, table.rt td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.rt thead th { border-bottom: 0; padding-bottom: 16px; }
+table.rt thead th.rh { border-top: 5px solid var(--c); background: color-mix(in srgb, var(--c) 9%, var(--card)); }
+table.rt thead .nm { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 21px; color: var(--c); letter-spacing: -.01em; display: block; line-height: 1.1; }
+table.rt thead .tag { font-family: var(--mono); font-size: 12px; color: var(--ink-2); font-weight: 400; display: block; margin-top: 6px; }
+table.rt tbody th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; width: 140px; padding-top: 17px; }
+table.rt tbody td { color: var(--ink); }
+table.rt tbody td.q { font-style: italic; }
+table.rt tbody tr:hover td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+table.rt .hl { font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* chased vs mattered */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .no li { text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--r3) 70%, transparent); color: var(--ink-3); }
+
+/* Doris's friends */
+.friends { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.friend { border-radius: 6px; padding: 14px 12px; display: grid; gap: 6px; align-content: start; border: 1px solid var(--rule); background: var(--paper-2); }
+.friend .face { width: 34px; height: 34px; border-radius: 50%; background: var(--rule); position: relative; }
+.friend .face::after { content: ""; position: absolute; left: 10px; top: 14px; width: 14px; height: 7px; border-bottom: 2px solid var(--card); border-radius: 0 0 8px 8px; }
+.friend b { font-family: var(--display); font-weight: 800; font-size: 17px; }
+.friend span { font-size: 13.5px; color: var(--ink-2); line-height: 1.35; }
+.friend.found { background: color-mix(in srgb, var(--r4) 14%, var(--card)); border-color: color-mix(in srgb, var(--r4) 50%, var(--rule)); }
+.friend.found .face { background: var(--r4); }
+.friend.msg .face { background: color-mix(in srgb, var(--r4) 45%, var(--rule)); }
+.friend.gone { opacity: .7; }
+.friend.gone .face { background: transparent; box-shadow: inset 0 0 0 2px var(--rule); }
+.friend.gone .face::after { display: none; }
+
+/* five boxes */
+.boxes { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+.box { width: 92px; height: 70px; border-radius: 3px; background: color-mix(in srgb, var(--r2) 18%, var(--card)); border: 1.5px solid var(--r2); display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--mono); font-size: 11.5px; line-height: 1.25; color: var(--ink); padding: 4px; position: relative; }
+.box::before { content: ""; position: absolute; left: 50%; top: -1.5px; width: 18px; height: 8px; margin-left: -9px; background: var(--r2); opacity: .35; }
+.gone-stuff { display: flex; gap: 6px; flex-wrap: wrap; }
+.gone-stuff span { font-family: var(--mono); font-size: 12px; color: var(--ink-3); text-decoration: line-through; padding: 3px 8px; border: 1px dashed var(--rule); border-radius: 3px; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 16px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--c, var(--rule)); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.smile { display: grid; gap: 4px; }
+.smile b { font-family: var(--display); font-weight: 900; font-stretch: 120%; font-size: clamp(30px, 4vw, 46px); line-height: 1; letter-spacing: -.02em; }
+.smile b:nth-child(2) { color: var(--r1); }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro-grid, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+  .chapter .gutter .who { margin: 0 0 4px; }
+  .friends { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare { grid-template-columns: 1fr; }
+  .box { width: 78px; height: 62px; font-size: 10.5px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .kicker, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero h1 { animation-delay: .04s; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Bronnie Ware · Hay House, 2012</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#regrets">Five regrets</a>
+    <a href="#road-in">Her road in</a>
+    <a href="#r1">The bedsides</a>
+    <a href="#road-out">Her road out</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <span class="kicker">The top five</span>
+    <h1>Regrets<span class="of">of the dying</span></h1>
+    <p class="sub">A life transformed by the dearly departing</p>
+    <p class="dek">A palliative carer sat with people in their last weeks and kept hearing the same five regrets. This book is their stories, and what she changed in her own life because of them.</p>
+    <div class="byline label">
+      <span>21 chapters</span><span>5 regrets</span><span>17 people cared for</span><span>a memoir, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Top Five Regrets of the Dying by Bronnie Ware: a woodcut of yellow dandelions and white seed heads against a blue sky, seeds drifting away">
+</div>
+
+<div class="seedband" aria-hidden="true">
+  <canvas id="seeds"></canvas>
+  <div class="ends label"><span>A whole life</span><span>Letting go</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>The dying are clear about what mattered</h2>
+  </div>
+  <div class="intro-grid">
+    <div class="prose">
+      <p>Bronnie Ware left a banking career she never liked, drifted through island bar jobs and English pubs, and ended up, almost by accident, as a live-in carer for people who were dying at home. She had no nursing background. What she had was patience, a meditation practice and a habit of really listening.</p>
+      <p>Over years of twelve-hour shifts she noticed that, when people had time to look back over their lives, the same regrets came up again and again. She wrote a short blog post listing the five most common. It spread around the world and became this book.</p>
+      <p>The book is not a list with commentary. It's a memoir. Each regret gets three chapters: one about the patient who first spoke it, and two about the patients and episodes from Bronnie's own life that taught her the same lesson from another angle. Her own story runs alongside, from <a href="#road-in">an unexpected career</a> to <a href="#road-out">her own darkest point</a> and what came after.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The book in numbers</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat"><span class="big num" style="color:var(--r1)">5</span><p>Regrets she heard most often at the bedside. Not every patient had them, but they came up again and again.</p></div>
+        <div class="stat"><span class="big num" style="color:var(--r2)">17</span><p>People whose care fills the book, from a 94-year-old Holocaust survivor to a mother in her forties.</p></div>
+        <div class="stat"><span class="big num" style="color:var(--r4)">2</span><p>Short workshops (hand washing and lifting) were the only formal training she received.</p></div>
+      </div>
+      <div class="story" style="--c:var(--r1)">
+        <span class="label">How the book began</span>
+        <p>At a folk festival, a magazine editor called Cec encouraged her to write about her songwriting class in a jail. It reminded her how much she loved writing, so she started a blog. One of its first posts was a short piece on the regrets of her dying patients. A year later she checked her site statistics and found the post being shared across the world and translated into other languages.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Chapters 1–3</span>
+      <h3>Her road in</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>From the Tropics to the Snow</b>An island, a pub, and Agnes</a></li>
+        <li><span>02</span><a href="#ch2"><b>An Unexpected Career Path</b>Ruth, and her first death</a></li>
+        <li><span>03</span><a href="#ch3"><b>Honesty and Surrender</b>Stella, and letting go of control</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 4–18</span>
+      <h3>The five regrets</h3>
+      <ol>
+        <li class="c-r1"><span>1</span><a href="#r1"><b><i class="pip"></i>Living true to myself</b>Grace · Anthony · Florence</a></li>
+        <li class="c-r2"><span>2</span><a href="#r2"><b><i class="pip"></i>Not working so hard</b>John · Pearl · Charlie</a></li>
+        <li class="c-r3"><span>3</span><a href="#r3"><b><i class="pip"></i>Expressing my feelings</b>Jozsef · Jude · Nanci</a></li>
+        <li class="c-r4"><span>4</span><a href="#r4"><b><i class="pip"></i>Staying in touch with friends</b>Doris · Elizabeth · Harry</a></li>
+        <li class="c-r5"><span>5</span><a href="#r5"><b><i class="pip"></i>Letting myself be happier</b>Rosemary · Cath · Lenny</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 19–21</span>
+      <h3>Her road out</h3>
+      <ol>
+        <li><span>19</span><a href="#ch19"><b>Changing Times</b>Teaching songwriting in a women's jail</a></li>
+        <li><span>20</span><a href="#ch20"><b>Darkness and Dawn</b>Depression, and the turning point</a></li>
+        <li><span>21</span><a href="#epilogue"><b>No Regrets</b>What the five add up to</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIVE REGRETS ============ -->
+<section id="regrets">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Five regrets, five practices</h2>
+    <p class="lede">Each regret is a choice made, or avoided, years before the end. Ware turns each one around into something you can practise while you still have time.</p>
+  </div>
+
+  <div class="intro-grid">
+    <div class="fig">
+      <h4>What they said, and what to do instead</h4>
+      <svg viewBox="0 0 480 300" role="img" aria-label="Five rows, one per regret. Lived others' expectations becomes live true to yourself. Worked too hard becomes find balance and simplify. Kept feelings in becomes say it now. Lost touch with friends becomes make time for friends. Didn't let myself be happy becomes choose happiness daily.">
+        <g font-size="12">
+          <g transform="translate(0,10)">
+            <circle cx="18" cy="22" r="16" fill="var(--r1)"/><text x="18" y="26.5" text-anchor="middle" style="fill:var(--card);font-family:var(--display);font-weight:800" font-size="14">1</text>
+            <text x="44" y="26" class="ink">Lived others' expectations</text>
+            <path d="M262 22 h30 m-7 -5 l7 5 l-7 5" stroke="var(--ink-3)" stroke-width="1.5" fill="none"/>
+            <text x="302" y="26" class="strong" font-size="13.5" style="fill:var(--r1)">Live true to yourself</text>
+          </g>
+          <g transform="translate(0,66)">
+            <circle cx="18" cy="22" r="16" fill="var(--r2)"/><text x="18" y="26.5" text-anchor="middle" style="fill:var(--card);font-family:var(--display);font-weight:800" font-size="14">2</text>
+            <text x="44" y="26" class="ink">Worked too hard</text>
+            <path d="M262 22 h30 m-7 -5 l7 5 l-7 5" stroke="var(--ink-3)" stroke-width="1.5" fill="none"/>
+            <text x="302" y="26" class="strong" font-size="13.5" style="fill:var(--r2)">Find balance, simplify</text>
+          </g>
+          <g transform="translate(0,122)">
+            <circle cx="18" cy="22" r="16" fill="var(--r3)"/><text x="18" y="26.5" text-anchor="middle" style="fill:var(--card);font-family:var(--display);font-weight:800" font-size="14">3</text>
+            <text x="44" y="26" class="ink">Kept feelings in</text>
+            <path d="M262 22 h30 m-7 -5 l7 5 l-7 5" stroke="var(--ink-3)" stroke-width="1.5" fill="none"/>
+            <text x="302" y="26" class="strong" font-size="13.5" style="fill:var(--r3)">Say it now</text>
+          </g>
+          <g transform="translate(0,178)">
+            <circle cx="18" cy="22" r="16" fill="var(--r4)"/><text x="18" y="26.5" text-anchor="middle" style="fill:var(--card);font-family:var(--display);font-weight:800" font-size="14">4</text>
+            <text x="44" y="26" class="ink">Lost touch with friends</text>
+            <path d="M262 22 h30 m-7 -5 l7 5 l-7 5" stroke="var(--ink-3)" stroke-width="1.5" fill="none"/>
+            <text x="302" y="26" class="strong" font-size="13.5" style="fill:var(--r4)">Make time for friends</text>
+          </g>
+          <g transform="translate(0,234)">
+            <circle cx="18" cy="22" r="16" fill="var(--r5)"/><text x="18" y="26.5" text-anchor="middle" style="fill:var(--card);font-family:var(--display);font-weight:800" font-size="14">5</text>
+            <text x="44" y="26" class="ink">Didn't let myself be happy</text>
+            <path d="M262 22 h30 m-7 -5 l7 5 l-7 5" stroke="var(--ink-3)" stroke-width="1.5" fill="none"/>
+            <text x="302" y="26" class="strong" font-size="13.5" style="fill:var(--r5)">Choose happiness daily</text>
+          </g>
+        </g>
+      </svg>
+      <p class="cap">The common thread is courage. Each regret came from fear: of other people's opinion, of not having enough, of being rejected, of being a burden, of not deserving joy. Each practice asks for a small act of bravery, repeated.</p>
+    </div>
+
+    <div class="fig">
+      <h4>What people chased, and what they talked about at the end</h4>
+      <div class="compare">
+        <div>
+          <h5>What filled their years</h5>
+          <ul class="no">
+            <li>Keeping up appearances</li>
+            <li>The next promotion, "just one more year"</li>
+            <li>A bigger house and more savings</li>
+            <li>Staying busy so they wouldn't have to feel</li>
+            <li>Being right, being in control</li>
+          </ul>
+        </div>
+        <div>
+          <h5>What they spoke about</h5>
+          <ul>
+            <li>The people they loved, and whether those people knew it</li>
+            <li>Friends they'd lost track of</li>
+            <li>Time with their partner and children</li>
+            <li>Small pleasures: a bath, birdsong, a song</li>
+            <li>Whether they had been themselves</li>
+          </ul>
+        </div>
+      </div>
+      <p class="cap">Ware is careful not to preach. Many patients had good lives and few regrets. But almost none of them, looking back, wished they'd had more possessions or more status.</p>
+    </div>
+  </div>
+
+  <div class="tablecard" style="margin-top:24px">
+    <div class="scroll-x">
+      <table class="rt">
+        <thead>
+          <tr>
+            <th scope="col"><span class="label">Compare</span></th>
+            <th scope="col" class="rh c-r1"><span class="nm">1 · True to myself</span><span class="tag">courage to be yourself</span></th>
+            <th scope="col" class="rh c-r2"><span class="nm">2 · Worked too hard</span><span class="tag">balance and simplicity</span></th>
+            <th scope="col" class="rh c-r3"><span class="nm">3 · My feelings</span><span class="tag">honest expression</span></th>
+            <th scope="col" class="rh c-r4"><span class="nm">4 · My friends</span><span class="tag">staying in touch</span></th>
+            <th scope="col" class="rh c-r5"><span class="nm">5 · Be happier</span><span class="tag">permission to be happy</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">In their words</th><td class="q">"I wish I'd had the courage to live a life true to myself, not the life others expected of me."</td><td class="q">"I wish I hadn't worked so hard."</td><td class="q">"I wish I'd had the courage to express my feelings."</td><td class="q">"I wish I had stayed in touch with my friends."</td><td class="q">"I wish I had let myself be happier."</td></tr>
+          <tr><th scope="row">First heard from</th><td class="hl">Grace, in her eighties, freed from a controlling husband weeks before her diagnosis</td><td class="hl">John, who kept postponing retirement until his wife fell ill</td><td class="hl">Jozsef, 94, who worked so he wouldn't have to show his feelings</td><td class="hl">Doris, alone in a nursing home, missing four old friends</td><td class="hl">Rosemary, a tough executive who never felt she deserved joy</td></tr>
+          <tr><th scope="row">Underneath it</th><td>Fear of judgment, family expectations, keeping up appearances</td><td>Identity tied to a role; fear there won't be enough; proving yourself</td><td>Fear of being hurt or rejected; walls built after pain</td><td>Busyness, drift, and assuming people will always be there</td><td>Habit, guilt, and a belief that happiness has to be earned</td></tr>
+          <tr><th scope="row">What it cost</th><td>A lifetime of small surrenders that can't be bought back at the end</td><td>Years with a partner and children that were spent at work</td><td>Family who never really knew them</td><td>No one who knew them well at the end</td><td>Decades of seriousness, when the lightness was there to choose</td></tr>
+          <tr><th scope="row">Companion chapters</th><td>Anthony: a product of his environment. Florence: trapped in a mansion by paranoia.</td><td>Pearl: purpose over salary. Charlie: a simpler life, and telling his son he's enough.</td><td>Jude: a letter to an estranged mother. Nanci: moments of clarity through Alzheimer's.</td><td>Elizabeth: old friends found in time. Harry: "allow yourself" time with friends.</td><td>Cath: happiness is now, not after the goal. Lenny: "It's been a good life."</td></tr>
+          <tr><th scope="row">Bronnie's version</th><td>Years in banking jobs she hated, to avoid her family's ridicule</td><td>Twelve-hour shifts with no time off; years before she found work with heart</td><td>Walls around her heart; too proud to ask friends for a bed when homeless</td><td>Lonely years, and a mountain trip with the wrong company</td><td>A serious illness, and later deep depression, before she chose joy daily</td></tr>
+          <tr><th scope="row">The practice</th><td>Notice whose approval you're living for. Change your environment if it keeps you small.</td><td>Make room for the people and things you'd miss. Own less. Find purpose in your work.</td><td>Say it now, without expecting a particular reaction. Forgive yourself for what's past.</td><td>Make regular time for friends, especially the ones who know you well.</td><td>Choose happiness as a daily habit. Be grateful in the moment. Let yourself be silly.</td></tr>
+          <tr><th scope="row">Ask yourself</th><td class="q">Whose expectations am I still living up to?</td><td class="q">What would I keep if I could only keep five boxes?</td><td class="q">Who needs to hear something from me this week?</td><td class="q">Who would I want at my bedside, and when did we last speak?</td><td class="q">What would I enjoy if I believed I deserved it?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Each regret keeps its colour down the page</span></div>
+  </div>
+
+  <div class="figrow" style="margin-top:24px">
+    <div class="fig">
+      <h4>Regrets are planted early and felt late</h4>
+      <svg viewBox="0 0 520 270" role="img" aria-label="A lifeline from age 20 to the end of life. Five coloured bars show when the choices behind each regret are usually made: living to others' expectations from the late teens to mid thirties, overwork from thirty to the sixties, unexpressed feelings across the whole life, drifting from friends from thirty to sixty, and not choosing happiness across the whole life. All five lines converge at the bedside on the right.">
+        <g font-size="11">
+          <line x1="40" y1="230" x2="470" y2="230" stroke="var(--rule)" stroke-width="1.5"/>
+          <g fill="var(--ink-3)">
+            <text x="40" y="250" text-anchor="middle">20</text>
+            <text x="126" y="250" text-anchor="middle">30</text>
+            <text x="212" y="250" text-anchor="middle">40</text>
+            <text x="298" y="250" text-anchor="middle">50</text>
+            <text x="384" y="250" text-anchor="middle">60</text>
+            <text x="470" y="250" text-anchor="middle">70+</text>
+          </g>
+          <g stroke="var(--rule)" stroke-width="1"><path d="M126 226v8M212 226v8M298 226v8M384 226v8"/></g>
+        </g>
+        <!-- bars -->
+        <g stroke-linecap="round">
+          <line x1="22" y1="30" x2="170" y2="30" stroke="var(--r1)" stroke-width="12"/>
+          <line x1="126" y1="70" x2="410" y2="70" stroke="var(--r2)" stroke-width="12"/>
+          <line x1="40" y1="110" x2="470" y2="110" stroke="var(--r3)" stroke-width="12" stroke-dasharray="2 14"/>
+          <line x1="126" y1="150" x2="384" y2="150" stroke="var(--r4)" stroke-width="12"/>
+          <line x1="40" y1="190" x2="470" y2="190" stroke="var(--r5)" stroke-width="12" stroke-dasharray="2 14"/>
+        </g>
+        <!-- convergence -->
+        <g fill="none" stroke-width="1.2" stroke-dasharray="3 3" opacity=".8">
+          <path d="M170 30 C 330 30, 450 60, 500 110" stroke="var(--r1)"/>
+          <path d="M410 70 C 460 72, 480 90, 500 110" stroke="var(--r2)"/>
+          <path d="M470 110 L 500 110" stroke="var(--r3)"/>
+          <path d="M384 150 C 450 150, 480 130, 500 110" stroke="var(--r4)"/>
+          <path d="M470 190 C 490 180, 495 140, 500 110" stroke="var(--r5)"/>
+        </g>
+        <circle cx="500" cy="110" r="9" fill="var(--ink)"/>
+        <text x="500" y="88" text-anchor="middle" font-size="11" class="ink">the bedside</text>
+        <g font-size="11">
+          <text x="22" y="16">expected path chosen</text>
+          <text x="126" y="56">career years</text>
+          <text x="40" y="96">unspoken feelings, all along</text>
+          <text x="126" y="136">busy years, friends drift</text>
+          <text x="40" y="176">happiness postponed, all along</text>
+        </g>
+      </svg>
+      <p class="cap">Illustrative, drawn from the stories in the book rather than from data. The choices behind each regret are usually made decades earlier, often without noticing. That's why the book is written for the living, not the dying.</p>
+    </div>
+    <div class="fig">
+      <h4>But almost everyone found peace</h4>
+      <p class="pull" style="font-size:clamp(24px,2.8vw,32px)">Regret was a stage, not the ending.</p>
+      <p class="cap" style="font-size:16px;color:var(--ink)">Patients moved through denial, anger, fear and grief before reaching acceptance. Nearly all of them got there, and forgave themselves for the choices they'd made. Ware's point is that this peace doesn't have to wait for the last weeks.</p>
+      <p class="cap">She also argues that our culture hides death away in hospitals and nursing homes, so people reach the end unprepared, and families don't know how to talk about it. Several families in the book refused to tell a parent they were dying. Each time, the patient already knew, and the honesty, once it came, was a relief.</p>
+      <div class="chips">
+        <span class="chip" style="--c:var(--ink-3);font-size:14px;padding:5px 11px">Denial</span><span class="chip" style="--c:var(--ink-3);font-size:14px;padding:5px 11px">Fear</span><span class="chip" style="--c:var(--ink-3);font-size:14px;padding:5px 11px">Anger</span><span class="chip" style="--c:var(--ink-3);font-size:14px;padding:5px 11px">Remorse</span><span class="chip" style="--c:var(--r4);font-size:14px;padding:5px 11px">Acceptance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART: ROAD IN ============ -->
+<div class="part" id="road-in">
+  <span class="label partno">Chapters 1–3</span>
+  <h2>Her road in</h2>
+  <p class="lede">Before the regrets, Ware explains how a restless ex-banker with no training ended up at the bedsides of the dying, and the two lessons that shaped her: honesty, and surrender.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">From the Tropics to the Snow</span><span class="who">Agnes</span></div>
+  <div class="body">
+    <div>
+      <h3>A nomad finds she likes looking after people</h3>
+      <p class="idea">Helping an old woman walk steadily was more rewarding than pulling beers for drunk men.</p>
+    </div>
+    <ul class="points">
+      <li>After more than a decade in banking, Ware quit on a whim during a diving holiday. She chose two tropical islands off a map and spent two years working in an island bar, losing track of what day of the week it was.</li>
+      <li>She then moved to Europe and England. Arriving in London nearly broke, she borrowed ten pounds and a sofa from a friend and had a live-in pub job in Surrey within a day.</li>
+      <li>Her first care job was as a live-in companion to Agnes, an elderly farmer's mother in the English countryside. Their week ran on routine: shopping, bingo, lunch with her daughter, a visit to the farm's butcher shop.</li>
+      <li>Agnes's lost false teeth became a running joke between them. When Agnes heard why Ware was vegetarian, she declared herself one on the spot, to her cattle-farming family's dismay.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The scene</span>
+      <p>When Ware went back to visit, Agnes had a new Australian carer. The very first thing Agnes's son had asked her at the interview was whether she was a vegetarian.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">An Unexpected Career Path</span><span class="who">Ruth</span></div>
+  <div class="body">
+    <div>
+      <h3>Society hides death, so no one is ready for it</h3>
+      <p class="idea">If we face our own death honestly before it comes, we change our priorities while there's still time.</p>
+    </div>
+    <ul class="points">
+      <li>Back in Australia she returned to banking, made lists of what she was good at and what she loved, and felt her creative side pushing through. A long relationship ended; she took a job as a live-in companion "for now", to work from the heart.</li>
+      <li>Her first client was Ruth, in a harbour-side Sydney home. Ware spoiled her like a grandmother: foot massages, manicures, tea at the bedside. A month in, she was told Ruth was dying. She had never seen a dead person.</li>
+      <li>Her employer's only advice was "You'll be right." The night Ruth died, an Irish carer sat with her and explained that in Ireland the room would be full of family. Ruth opened her eyes, looked at Ware, and went. Then took one more huge breath, which nobody had warned her about.</li>
+      <li>She learned to stop judging families. Ruth's daughter left before the end; Ware assumed it was fear, then learned Ruth had wanted her to go.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The lesson</span>
+      <p>Living around the clock with a dying client exhausted her. She decided to go home between shifts from then on. Being able to step back, she says, is what let her keep doing the work for years.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Honesty and Surrender</span><span class="who">Stella</span></div>
+  <div class="body">
+    <div>
+      <h3>Surrender isn't giving up. It takes courage.</h3>
+      <p class="idea">When trying to control the outcome hurts more than letting go, you finally let go, and things start to move.</p>
+    </div>
+    <ul class="points">
+      <li>Stella, a yoga teacher for forty years, asked Ware on day one whether she meditated. When she heard "twice a day", she said she'd been waiting for her and could die now.</li>
+      <li>But Stella couldn't die. She was ready, and frustrated, and no longer able to meditate. Ware told her the story of her own leaps of faith: living in a jeep by a river with fifty dollars, fear building until she finally gave up trying to control things, and a job offer arriving days later.</li>
+      <li>Stella saw she was trying to control the moment of her own death. She let go. Her husband lay beside her, and after hours in a coma she opened her eyes and smiled at something no one else could see.</li>
+      <li>Ware had lied to the family about her experience because she needed the work. Years later she told them and apologised. After Stella she resolved never to lie to a client again.</li>
+    </ul>
+    <div class="fig">
+      <h4>The pattern Ware kept repeating</h4>
+      <svg viewBox="0 0 400 290" role="img" aria-label="A cycle with four stages. A leap of faith leads to fear and the urge to control. That leads to surrender, letting go. Surrender leads to flow, where help arrives. Flow leads to the next leap of faith.">
+        <circle cx="200" cy="145" r="96" fill="none" stroke="var(--rule)" stroke-width="2"/>
+        <g fill="none" stroke="var(--ink-3)" stroke-width="2">
+          <path d="M243 58 a 96 96 0 0 1 52 60"/><path d="M289 109 l6 9 l2 -10"/>
+          <path d="M290 182 a 96 96 0 0 1 -52 50"/><path d="M247 232 l-9 0 l6 -8"/>
+          <path d="M157 232 a 96 96 0 0 1 -52 -60"/><path d="M109 181 l-4 -9 l-2 10"/>
+          <path d="M110 108 a 96 96 0 0 1 52 -52"/><path d="M152 55 l10 1 l-7 7"/>
+        </g>
+        <g>
+          <circle cx="200" cy="49" r="34" fill="var(--card)" stroke="var(--r1)" stroke-width="2.5"/>
+          <text x="200" y="46" text-anchor="middle" font-size="11" class="ink">leap of</text><text x="200" y="60" text-anchor="middle" font-size="11" class="ink">faith</text>
+          <circle cx="296" cy="145" r="34" fill="var(--card)" stroke="var(--r3)" stroke-width="2.5"/>
+          <text x="296" y="142" text-anchor="middle" font-size="11" class="ink">fear &amp;</text><text x="296" y="156" text-anchor="middle" font-size="11" class="ink">control</text>
+          <circle cx="200" cy="241" r="34" fill="var(--r4)"/>
+          <text x="200" y="245" text-anchor="middle" font-size="11" style="fill:var(--card);font-weight:500">surrender</text>
+          <circle cx="104" cy="145" r="34" fill="var(--card)" stroke="var(--r2)" stroke-width="2.5"/>
+          <text x="104" y="142" text-anchor="middle" font-size="11" class="ink">help</text><text x="104" y="156" text-anchor="middle" font-size="11" class="ink">arrives</text>
+        </g>
+        <text x="200" y="141" text-anchor="middle" font-size="11">the same loop,</text>
+        <text x="200" y="156" text-anchor="middle" font-size="11">again and again</text>
+      </svg>
+      <p class="cap">Ware describes this loop many times: the jeep by the river, recording her first album without the money, homelessness between house-sits. Each time the struggle ended when she stopped trying to force the outcome. She admits the pattern is also partly self-made, and later in the book she learns to break it.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ REGRET 1 ============ -->
+<div class="part c-r1" id="r1">
+  <span class="label partno">Regret 1 · Chapters 4–6</span>
+  <div>
+    <p class="quote">"I wish I'd had the courage to live a life true to myself, not the life others expected of me."</p>
+    <h2>Live <em>true</em> to yourself</h2>
+  </div>
+  <p class="lede">The most common regret of all. When people look back and see dreams they never tried for, it hurts most, because those dreams were left alone out of choices they made, or didn't make.</p>
+</div>
+
+<article class="chapter c-r1" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Regret 1</span><span class="who">Grace</span></div>
+  <div class="body">
+    <div>
+      <h3>Waiting for permission until it's too late</h3>
+      <p class="idea">Grace waited fifty years to be free. She got a few days.</p>
+    </div>
+    <ul class="points">
+      <li>Grace, a tiny woman in her eighties, had spent more than fifty years married to a controlling man. She dreamed of travel, independence and a simple, happy life, but kept up appearances and did what was expected.</li>
+      <li>When her husband went into a nursing home, she was finally free and still healthy. Within days she fell ill. The diagnosis was terminal, an illness linked to decades of his smoking in their home. A month later she was bedridden.</li>
+      <li>She was furious with herself, not him: "Why didn't I just do what I wanted?" She made Ware promise, more than once, never to let anyone stop her living the way she wanted.</li>
+      <li>Ware shares her own version: years in banking jobs she hated, kept mainly to avoid ridicule from family members who treated her as the black sheep: a swimmer among horse riders, a vegetarian on a sheep farm, a nomad among settlers.</li>
+      <li>Her way out was compassion. People who belittle others are passing on their own pain. Like the Buddha's line about refusing a gift, criticism you don't accept stays with the giver. Compassion for herself was the hardest part, and took years.</li>
+    </ul>
+    <div class="fig">
+      <h4>Grace's life, to scale</h4>
+      <svg viewBox="0 0 520 150" role="img" aria-label="A long grey bar labelled more than fifty years living the expected life, followed by a very thin gold sliver labelled free, followed by a short coral section labelled terminal illness, about a month to bedridden.">
+        <rect x="0" y="54" width="452" height="34" rx="2" fill="var(--ink-3)" opacity=".45"/>
+        <rect x="452" y="54" width="6" height="34" fill="var(--r1)"/>
+        <rect x="460" y="54" width="40" height="34" rx="2" fill="var(--r3)"/>
+        <text x="12" y="76" font-size="12" class="ink">50+ years of the expected life</text>
+        <path d="M455 50 V 26" stroke="var(--r1)" stroke-width="1.5"/>
+        <text x="455" y="18" text-anchor="end" font-size="11" style="fill:var(--r1)">free, at last: a few days</text>
+        <path d="M480 92 V 116" stroke="var(--r3)" stroke-width="1.5"/>
+        <text x="500" y="132" text-anchor="end" font-size="11" style="fill:var(--r3)">diagnosis → bedridden in a month</text>
+      </svg>
+      <p class="cap">The gold sliver is drawn wider than it really was, or it wouldn't show. Her last song request went to Ware's guitar; Ware later dedicated a song on her first album to her, with Grace's family in the audience.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r1" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Products of Our Environment</span><span class="who">Anthony</span></div>
+  <div class="body">
+    <div>
+      <h3>Where you live shapes who you become</h3>
+      <p class="idea">You can't always change your circumstances, but you can choose the environments you put yourself in.</p>
+    </div>
+    <ul class="points">
+      <li>Anthony was in his late thirties, the indulged son of a wealthy family, with a reckless past of fast cars and fights. One dangerous act left him with damaged organs and limbs, needing permanent care.</li>
+      <li>Ware read to him: books about the Middle East, then spiritual classics. For a while he was curious and engaged. Then he moved into a nursing home full of elderly residents and drab walls, and stopped trying.</li>
+      <li>He refused outings, even family gatherings, and aged decades in a few years. He died there. His brother said he just "couldn't be bothered".</li>
+      <li>Ware reflects on how much we absorb from our surroundings: the friend who gets a promotion and starts chasing more, her own twenties in a party scene, and a terrifying night on ecstasy at a London rave that ended any interest in drugs.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The takeaway</span>
+      <p>Anthony's failure wasn't that he tried and failed. It was that he gave himself no chance to change at all. Ware resolved to choose surroundings that supported the life she wanted, and to stay mindful about the power of that choice.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r1" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Trappings</span><span class="who">Florence</span></div>
+  <div class="body">
+    <div>
+      <h3>We build our own cages, and can take them apart</h3>
+      <p class="idea">Florence was trapped by paranoia, then by bed rails. Ware was trapped by her own fears of performing.</p>
+    </div>
+    <ul class="points">
+      <li>The first time Ware arrived, Florence chased her down the driveway with a broom. A month later she'd been sedated and hospitalised, and Ware came back to a harbour-side mansion buried in filth, with a year's supply of tinned food in the pantry.</li>
+      <li>Florence came from very old money. After her husband went to jail and then died, her paranoia that everyone wanted her fortune had nothing left to check it. Now she was kept in a hospital bed with the sides up, screaming to be let out.</li>
+      <li>Ware's own cage was creative. Photography led to music, and music meant performing, which terrified her. She played to noisy pubs, learned to calm her nerves with meditation, and finally stopped fearing the stage when she saw it as giving to the audience.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The scene</span>
+      <p>One afternoon two carers lowered Florence's bed rails. The screaming stopped mid-breath. She smiled, asked how their day had been, and walked them around her overgrown garden, pulling creepers off the flowers and explaining that gardens need constant love and time.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ REGRET 2 ============ -->
+<div class="part c-r2" id="r2">
+  <span class="label partno">Regret 2 · Chapters 7–9</span>
+  <div>
+    <p class="quote">"I wish I hadn't worked so hard."</p>
+    <h2>Find <em>balance</em></h2>
+  </div>
+  <p class="lede">Ware calls these some of the most common words she heard. People missed their partner's company and their children's youth, often for money and status they didn't need.</p>
+</div>
+
+<article class="chapter c-r2" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Regret 2</span><span class="who">John</span></div>
+  <div class="body">
+    <div>
+      <h3>"Someday" ran out</h3>
+      <p class="idea">We plan as if we have all the time in the world. We don't, and neither do the people we love.</p>
+    </div>
+    <ul class="points">
+      <li>John, a successful businessman, took Ware to lunch at a fancy restaurant in a pink dress so his friends could see his glamorous carer. Underneath the mischief, he was dying, and full of regret.</li>
+      <li>Once the children left home, his wife Margaret asked him to retire. They had plenty of money. For fifteen years he said they might need more. She read travel brochures and waited.</li>
+      <li>When he finally agreed, with twelve months to go, she fell ill within four months and died before his planned retirement date. He spent his retirement full of guilt.</li>
+      <li>His honest diagnosis: he was scared. His role had come to define him. Lying on his balcony, he saw that just being a good person was enough.</li>
+    </ul>
+    <div class="fig">
+      <h4>John and Margaret's last plans</h4>
+      <svg viewBox="0 0 520 190" role="img" aria-label="On the left, fifteen small ticks labelled fifteen years of 'not yet'. Then a twelve-month bar labelled agreed to retire. A marker at month four reads she falls ill. A marker at month nine reads she dies. The end of the bar at month twelve reads the planned retirement date, which they never reached together.">
+        <g fill="var(--ink-3)" opacity=".7">
+          <rect x="0" y="70" width="4" height="22"/><rect x="11" y="70" width="4" height="22"/><rect x="22" y="70" width="4" height="22"/><rect x="33" y="70" width="4" height="22"/><rect x="44" y="70" width="4" height="22"/><rect x="55" y="70" width="4" height="22"/><rect x="66" y="70" width="4" height="22"/><rect x="77" y="70" width="4" height="22"/><rect x="88" y="70" width="4" height="22"/><rect x="99" y="70" width="4" height="22"/><rect x="110" y="70" width="4" height="22"/><rect x="121" y="70" width="4" height="22"/><rect x="132" y="70" width="4" height="22"/><rect x="143" y="70" width="4" height="22"/><rect x="154" y="70" width="4" height="22"/>
+        </g>
+        <text x="0" y="56" font-size="11">15 years of "not yet"</text>
+        <text x="0" y="112" font-size="11">she asks him to retire</text>
+        <rect x="190" y="70" width="300" height="22" rx="2" style="fill:color-mix(in srgb, var(--r2) 22%, var(--card))" stroke="var(--r2)" stroke-width="1.5"/>
+        <rect x="190" y="70" width="100" height="22" rx="2" fill="var(--r2)"/>
+        <text x="190" y="56" font-size="11" style="fill:var(--r2)">he agrees: 12 months to go</text>
+        <path d="M290 96 V 128" stroke="var(--r3)" stroke-width="1.5"/>
+        <text x="290" y="144" font-size="11" text-anchor="middle" style="fill:var(--r3)">month 4: she falls ill</text>
+        <path d="M415 96 V 160" stroke="var(--ink)" stroke-width="1.5"/>
+        <circle cx="415" cy="81" r="5" fill="var(--ink)"/>
+        <text x="415" y="176" font-size="11" text-anchor="middle" class="ink">month 9: she dies</text>
+        <path d="M490 66 V 30" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <text x="520" y="22" font-size="11" text-anchor="end">planned retirement</text>
+      </svg>
+      <p class="cap">Timeline as John told it. The travel they had planned never happened.</p>
+    </div>
+    <div class="story">
+      <span class="label">His last advice</span>
+      <p>"Don't work too hard. Try to maintain balance." Then, with a grin, a second piece of advice: never throw out the pink dress.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r2" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Purpose and Intention</span><span class="who">Pearl</span></div>
+  <div class="body">
+    <div>
+      <h3>Work with purpose pays in ways a salary can't</h3>
+      <p class="idea">Pearl's only regret was the years she spent in an average job.</p>
+    </div>
+    <ul class="points">
+      <li>Pearl, diagnosed just before turning sixty-three, had already lost her husband in an accident and her daughter to leukaemia at eight. She refused to play the victim: "People play the victim forever. But who are they kidding?"</li>
+      <li>After those losses she threw herself into an ordinary job. A chance favour for a customer led her into a community project. Within a year she'd quit to do it full time, for less money, and called it her life's work.</li>
+      <li>Her view of money: it follows intention. People stay in the wrong job because they assume they can't earn doing what they love. When you love the work, you're more open to the money arriving.</li>
+      <li>Ware's proof: days before recording her first album she still didn't have the money. She surrendered, went to a café, and a near-stranger offered to fund it.</li>
+    </ul>
+    <div class="story">
+      <span class="label">Pearl's challenge</span>
+      <p>Ware had found work with heart, Pearl said, so she had no excuse. Nobody gets to lie on their deathbed wishing they'd worked it out sooner.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r2" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Simplicity</span><span class="who">Charlie</span></div>
+  <div class="body">
+    <div>
+      <h3>Need less, and you need to work less</h3>
+      <p class="idea">You don't need more money to be happy. You need to need less.</p>
+    </div>
+    <ul class="points">
+      <li>Charlie's adult children, Greg and Maryanne, had a screaming match over his bed about the will. Greg had resented his sister for decades because she'd lived the life she wanted while he worked to prove himself.</li>
+      <li>Charlie always praised Greg for a job well done, but had never told him directly that he was proud of who he was. At 78, he was nervous about saying it: "I've had no practice."</li>
+      <li>He also argued for a simpler life: people work too hard to buy things they don't need. Communities that share need fewer resources.</li>
+      <li>Ware explained her own simplicity. After years of moving, she gave away nearly everything and drove off with five boxes in a tiny car.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Everything she kept</h4>
+        <div class="boxes" role="img" aria-label="Five boxes: favourite books, more favourite books, music, clothes, and a few treasured things. Below them, crossed out: furniture, storage unit, household goods.">
+          <div class="box">favourite books</div><div class="box">more books</div><div class="box">music</div><div class="box">clothes</div><div class="box">a few treasures</div>
+        </div>
+        <div class="gone-stuff"><span>furniture</span><span>storage unit</span><span>most household goods</span></div>
+        <p class="cap">She stopped paying for storage after a year and kept only the books she'd reread or lend. It let her say yes to every house-sit and leap.</p>
+      </div>
+      <div class="fig">
+        <h4>A year later</h4>
+        <p class="cap" style="font-size:16px;color:var(--ink)">Charlie told Greg he was already enough, with nothing to prove. They cried and held hands. After Charlie died, Greg's family sold their big house, moved to a country town, took a lower salary, and got an extra hour and a half a day with the children.</p>
+        <p class="pull" style="font-size:clamp(24px,2.8vw,32px);color:var(--r2)">"Keep it Simple."</p>
+        <span class="label">How Greg signed off his email to Ware</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ REGRET 3 ============ -->
+<div class="part c-r3" id="r3">
+  <span class="label partno">Regret 3 · Chapters 10–12</span>
+  <div>
+    <p class="quote">"I wish I'd had the courage to express my feelings."</p>
+    <h2>Say it <em>now</em></h2>
+  </div>
+  <p class="lede">Many people held back their feelings to keep the peace or avoid being hurt. They settled for less than they could have had, and some carried bitterness for years.</p>
+</div>
+
+<article class="chapter c-r3" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Regret 3</span><span class="who">Jozsef</span></div>
+  <div class="body">
+    <div>
+      <h3>Providing isn't the same as being known</h3>
+      <p class="idea">"They don't know me." Jozsef gave his family a comfortable life, but never himself.</p>
+    </div>
+    <ul class="points">
+      <li>Jozsef, 94, and his wife Gizela had survived the Holocaust and rebuilt their lives in Australia. He threw himself into his business. Stories of the camps came out only in fragments.</li>
+      <li>His family, and even his doctor, refused to tell him he was dying. Down to a tub of yoghurt a day, he asked Ware directly. Remembering Stella, she told him the truth. He thanked her.</li>
+      <li>Then came the regret. He had worked so he wouldn't have to show his feelings. His family had a good life, but they didn't know him, and now he was too weak to change it.</li>
+      <li>Soon after, his son replaced Ware with a cheaper carer. Jozsef died a week later.</li>
+      <li>Ware contrasts this with her grandmother. Raised eleven siblings from age thirteen, covered for teenage Bronnie's shoplifting, and talked openly with her about death. When Gran died, there was nothing left unsaid, and a last letter from her arrived in the post that same day.</li>
+    </ul>
+    <div class="story">
+      <span class="label">Her decision</span>
+      <p>Sitting in a park, watching children play together without any walls, she decided she would never end up like Jozsef. The walls around her own heart had to come down.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r3" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">No Guilt</span><span class="who">Jude</span></div>
+  <div class="body">
+    <div>
+      <h3>Say it while you can, and you can die without guilt</h3>
+      <p class="idea">You can't control how others respond. You can make sure you've said it.</p>
+    </div>
+    <ul class="points">
+      <li>Jude, in her forties, came from great wealth and was cut off by her mother for marrying Edward, an artist from a working-class family. A progressive illness was taking her mobility, and now her speech.</li>
+      <li>On good days she talked as much as she could. Tell people you love them, and tell them now, she said. Those who are dying need to know everything has been said; those left behind need it even more.</li>
+      <li>A friend of hers had died suddenly the year before, and many people were left with things they'd never told her.</li>
+      <li>Ware admitted her own reluctance to ask for help. Between house-sits, out of work and out of money, she slept in her car rather than ask friends for a bed. After a pod of dolphins lifted her spirits, Edward called with work. Next time, she phoned friends first. They were glad to help.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The letter</span>
+      <p>Jude wrote her mother a letter full of love and happy memories, with nothing negative in it. Edward delivered it. Her mother turned up a few days later and sat at Jude's side every day until the end. Afterwards she built a relationship with her granddaughter.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r3" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Gifts in Disguise</span><span class="who">Nanci</span></div>
+  <div class="body">
+    <div>
+      <h3>Keep talking, even when no one seems to hear</h3>
+      <p class="idea">Honesty is always rewarded, though rarely in the way you expect.</p>
+    </div>
+    <ul class="points">
+      <li>Nanci had Alzheimer's and spoke in jumbled language. Ware stood up for her when a night carer gave her freezing cold showers in midwinter.</li>
+      <li>She chatted to Nanci every day as if she understood: about the beach, and about a saxophone player she passed on her walks. For months there was no response.</li>
+      <li>Then, twice, Nanci came back. Once she looked Ware in the eye and thanked her with complete clarity. Another day, after hearing about the saxophone man, she hummed a tune for ages.</li>
+      <li>Ware applies the lesson to her own friendships. Honesty ended one friendship that had only been held together by habit, and deepened another. Either way, the relationships left were truer.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The warning</span>
+      <p>Assuming people know how you feel, or will always be there, is a big risk. They could be gone in an hour. So could you.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ REGRET 4 ============ -->
+<div class="part c-r4" id="r4">
+  <span class="label partno">Regret 4 · Chapters 13–15</span>
+  <div>
+    <p class="quote">"I wish I had stayed in touch with my friends."</p>
+    <h2>Keep your <em>friends</em></h2>
+  </div>
+  <p class="lede">In their last weeks, people often didn't realise how much old friendships meant until they couldn't track them down. Love and relationships were what mattered at the end.</p>
+</div>
+
+<article class="chapter c-r4" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Regret 4</span><span class="who">Doris</span></div>
+  <div class="body">
+    <div>
+      <h3>A little time can change the end of a life</h3>
+      <p class="idea">Doris burst into tears at the first cheerful face she'd seen in four months.</p>
+    </div>
+    <ul class="points">
+      <li>On an occasional shift in a private nursing home, Ware met staff who cared and staff who didn't: one refused to swap a resident's lamb for the chicken he'd ordered.</li>
+      <li>Doris, whose only daughter lived in Japan, missed her old friends most of all. They'd drifted apart as life got busy. Ware offered to look for them online.</li>
+      <li>Ware knew loneliness from the inside. In her own lonely years she had felt it as a physical ache, with Kris Kristofferson's "Sunday Morning Coming Down" as her theme song, and had at times thought about not going on.</li>
+    </ul>
+    <div class="fig">
+      <h4>Doris's four friends</h4>
+      <div class="friends" role="img" aria-label="Four friends. Elsie was found but had had a stroke, so a message was passed on through her son. Two friends had already died. Lorraine was found and Doris spoke to her on the phone.">
+        <div class="friend msg"><span class="face"></span><b>Elsie</b><span>Found, but had had a stroke and couldn't speak. Doris dictated a message; her son read it to her and she smiled.</span></div>
+        <div class="friend gone"><span class="face"></span><b>Friend 2</b><span>Had already died.</span></div>
+        <div class="friend gone"><span class="face"></span><b>Friend 3</b><span>Had already died.</span></div>
+        <div class="friend found"><span class="face"></span><b>Lorraine</b><span>Tracked down through a former neighbour. They talked and laughed on the phone like young women.</span></div>
+      </div>
+      <p class="cap">After the call to Lorraine, Ware went for a swim, still on a high. When she came home there was a message. Doris had died in her sleep that afternoon. She died happy.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r4" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">True Friends</span><span class="who">Elizabeth</span></div>
+  <div class="body">
+    <div>
+      <h3>The right friends for the right moment</h3>
+      <p class="idea">Drinking friends were the wrong friends for dying.</p>
+    </div>
+    <ul class="points">
+      <li>Elizabeth, about 55, was dying of an illness caused by fifteen years of alcoholism. Her family locked away the drink, banned her drinking friends, and didn't tell her she was dying.</li>
+      <li>She asked Ware for honesty and got it. Once she knew, the family's denial cracked too, and some real healing happened between them.</li>
+      <li>Her regret: drink had pushed out her real friends, who stopped coming once the drinking took over. The friends who stayed didn't judge her because they drank too.</li>
+      <li>Ware remembered a perfect night in a mountain cabin with pleasant but shallow acquaintances. It was a perfect place, she wrote, with the wrong people.</li>
+    </ul>
+    <div class="story">
+      <span class="label">In time</span>
+      <p>A week before she died, her husband and son contacted two old friends. They came, Elizabeth apologised, and they stayed for hours. On her last morning both women were in the room with her family. "Don't lose touch with the friends you value most," she told Ware.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r4" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Allow Yourself</span><span class="who">Harry</span></div>
+  <div class="body">
+    <div>
+      <h3>Friendship isn't a duty, it's a gift to yourself</h3>
+      <p class="idea">Staying in touch is not the point. Enjoying their company is.</p>
+    </div>
+    <ul class="points">
+      <li>Harry, widowed for twenty years, stayed busy and well after retirement through sporting and social clubs. A steady stream of cheerful mates visited him. His anxious son tried to control every part of his care.</li>
+      <li>He believed you need people your own age even when family comes first. Good friends accept you as you are and remind you who you were.</li>
+      <li>Ware took a week off to join an 80-kilometre walk through farmland and ancient sites. She came back clearer and found Harry still alive.</li>
+      <li>He asked how much time she was giving her friends each week. When she answered, he said, "It's not enough."</li>
+    </ul>
+    <div class="story">
+      <span class="label">His words</span>
+      <p>It isn't just about staying in touch, Harry said. It's about allowing yourself the gift of their company. He died in his sleep a few nights later.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ REGRET 5 ============ -->
+<div class="part c-r5" id="r5">
+  <span class="label partno">Regret 5 · Chapters 16–18</span>
+  <div>
+    <p class="quote">"I wish I had let myself be happier."</p>
+    <h2>Let yourself be <em>happy</em></h2>
+  </div>
+  <p class="lede">The most surprising regret. Many people didn't realise until the end that happiness is a choice. They stayed stuck in old patterns and the comfort of familiarity, pretending to others and to themselves that they were content.</p>
+</div>
+
+<article class="chapter c-r5" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Regret 5</span><span class="who">Rosemary</span></div>
+  <div class="body">
+    <div>
+      <h3>Permission, not circumstances</h3>
+      <p class="idea">"I just didn't think I deserved it." Rosemary had to learn to let happiness in.</p>
+    </div>
+    <ul class="points">
+      <li>Rosemary escaped a violent marriage when divorce was still a scandal, moved to the city, and became an executive in a global company long before women did that. Life had hardened her. She bullied her carers.</li>
+      <li>When she screamed at Ware to get out, Ware sat down beside her, put an arm around her and stayed, as long as she was treated with respect. Rosemary asked her to stay.</li>
+      <li>She hated Ware humming: "I hate that you're happy all the time." Ware told her happiness is a choice she tries to make each day, and suggested she pretend to be happy for half an hour and see if she enjoyed it.</li>
+      <li>Ware had her own reasons. Facing surgery for a serious illness, she chose instead to work on her own healing with meditation and visualisation, and says the illness never came back. She doesn't present it as advice for anyone else.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The change</span>
+      <p>Bit by bit Rosemary softened. She laughed at herself ("Oh, wasn't I a tyrant?") and began to like her lighter side. When she died, a relative asked Ware if she'd been happy at the end. Ware could truthfully say yes.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r5" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">Happiness Is Now</span><span class="who">Cath</span></div>
+  <div class="body">
+    <div>
+      <h3>Not after the goal. Along the way.</h3>
+      <p class="idea">Cath loved her work but kept postponing joy until the result was achieved.</p>
+    </div>
+    <ul class="points">
+      <li>Cath, a philosopher by temperament who ran projects for troubled young people, cried for an hour in her last bath. Then she heard a bird outside, and its mate answering, and smiled.</li>
+      <li>She came to see gratitude as a powerful force. Ware had kept a gratitude journal for twenty years, but it took practice to feel thankful in the moment, not just at night.</li>
+      <li>Her friends kept trying to be cheerful for her. Ware told them they didn't have to carry it. They just had to let her be honest about how she felt, and the tears that followed brought them closer.</li>
+      <li>Cath's one regret was putting too much weight on outcomes and missing the happiness available in the work itself.</li>
+      <li>She also told Ware to "get back to the living", and the idea of teaching songwriting in a jail took shape.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The tram ride home</span>
+      <p>After Cath died, Ware rode a tram past laughing people on a warm evening. She wasn't thinking of the past or the future. Happiness is now, she wrote, and that is where she was.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r5" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">A Matter of Perspective</span><span class="who">Lenny</span></div>
+  <div class="body">
+    <div>
+      <h3>"It's been a good life"</h3>
+      <p class="idea">Lenny lost almost everyone he loved and still called his life good. Happiness depends on choice far more than circumstance.</p>
+    </div>
+    <ul class="points">
+      <li>Lenny's parents died before he was fourteen and he lost touch with his siblings. Then came Rita, the love of his life, and four children.</li>
+      <li>His eldest son was killed in Vietnam. A daughter died in a car accident in Canada six months after moving there. His youngest son was lost to mental illness. Rita died in her late forties.</li>
+      <li>He worked too hard to numb the pain, he admitted. But what he wanted to talk about was love.</li>
+      <li>His parting advice: don't worry about the little stuff. None of it matters, only love.</li>
+    </ul>
+    <div class="fig">
+      <h4>Circumstance vs. perspective</h4>
+      <svg viewBox="0 0 520 220" role="img" aria-label="Lenny's life from left to right. A gold line stays high across the whole width, labelled it's been a good life. Below it, a series of downward markers for losses: parents before fourteen, siblings lost, eldest son in Vietnam, daughter in Canada, youngest son to mental illness, Rita in her late forties. One upward marker shows meeting Rita at twenty-two.">
+        <line x1="0" y1="150" x2="520" y2="150" stroke="var(--rule)" stroke-width="1.5"/>
+        <path d="M0 40 C 80 46, 160 34, 260 40 S 440 30, 520 34" fill="none" stroke="var(--r1)" stroke-width="3.5" stroke-linecap="round"/>
+        <text x="520" y="22" text-anchor="end" font-size="12" style="fill:var(--r1);font-family:var(--body);font-style:italic">"It's been a good life."</text>
+        <g stroke="var(--r3)" stroke-width="1.5" fill="var(--r3)">
+          <path d="M30 150 V 182"/><circle cx="30" cy="186" r="4"/>
+          <path d="M80 150 V 172"/><circle cx="80" cy="176" r="4"/>
+          <path d="M240 150 V 192"/><circle cx="240" cy="196" r="4"/>
+          <path d="M300 150 V 182"/><circle cx="300" cy="186" r="4"/>
+          <path d="M350 150 V 172"/><circle cx="350" cy="176" r="4"/>
+          <path d="M400 150 V 196"/><circle cx="400" cy="200" r="4"/>
+        </g>
+        <g stroke="var(--r4)" stroke-width="1.5" fill="var(--r4)"><path d="M140 150 V 112"/><circle cx="140" cy="108" r="5"/></g>
+        <g font-size="10.5">
+          <text x="30" y="206" text-anchor="middle">parents</text>
+          <text x="80" y="166" text-anchor="start" dx="6">siblings</text>
+          <text x="140" y="98" text-anchor="middle" style="fill:var(--r4)">meets Rita, 22</text>
+          <text x="240" y="216" text-anchor="middle">son, Vietnam</text>
+          <text x="300" y="176" text-anchor="start" dx="6">daughter</text>
+          <text x="350" y="166" text-anchor="start" dx="6">son, illness</text>
+          <text x="400" y="216" text-anchor="middle">Rita dies</text>
+        </g>
+      </svg>
+      <p class="cap">Not to scale. The losses sit below the line; the way he summed up his life sits above it.</p>
+    </div>
+    <div class="story">
+      <span class="label">The last smile</span>
+      <p>A volunteer called Roy had been reading Lenny Bible passages he didn't want. On Lenny's last afternoon both Roy and Ware were there. Lenny opened his eyes and smiled at Ware with what she describes as pure love. Roy closed his Bible and said his life would never be the same.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ ROAD OUT ============ -->
+<div class="part" id="road-out">
+  <span class="label partno">Chapters 19–20</span>
+  <h2>Her road out</h2>
+  <p class="lede">The lessons from the bedside took years to land in her own life. Before they did, Ware had to leave the work, take on a new challenge, and go through the darkest period of her life.</p>
+</div>
+
+<article class="chapter" id="ch19">
+  <div class="gutter"><span class="chno">19</span><span class="label">Changing Times</span><span class="who">The women's jail</span></div>
+  <div class="body">
+    <div>
+      <h3>Back to the living</h3>
+      <p class="idea">The inmates were treated for their crimes, never for the wounds underneath.</p>
+    </div>
+    <ul class="points">
+      <li>Exhausted by palliative care, she secured philanthropic funding to teach songwriting in a women's prison in New South Wales, and finally rented a home of her own, furnished from roadside collections and garage sales.</li>
+      <li>Her first class was hostile until she started improvising silly rhymes. The laughter broke the ice for good, helped by a shared love of Emmylou Harris.</li>
+      <li>The women wrote songs of anger and grief, and later of hope. One wrote to her son about how proud she was of him. Very few classes ended without tears.</li>
+      <li>After about a year the funding ran out, and so did she. Most of her first students had been released. She moved back to the country, near her ageing parents.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch20">
+  <div class="gutter"><span class="chno">20</span><span class="label">Darkness and Dawn</span><span class="who">Bronnie</span></div>
+  <div class="body">
+    <div>
+      <h3>The darkest hour before the dawn</h3>
+      <p class="idea">Healing means facing the pain directly, and turning your compassion towards yourself.</p>
+    </div>
+    <ul class="points">
+      <li>Living on the land brought up pain buried since childhood: decades of criticism from the people whose love she most needed. She fell into deep depression and woke up crying before she'd had a single thought.</li>
+      <li>Friends kept offering fixes. What helps, she says, is acceptance and patience from people who just let you be where you are.</li>
+      <li>Meditation twice a day and a social worker who reminded her to be compassionate towards herself helped her gradually take ownership of her thoughts.</li>
+      <li>At her lowest point she wrote a farewell note and planned to end her life. The phone rang at that exact moment, a cold call about ambulance insurance, and it broke the spell. She calls it the biggest turning point of her life.</li>
+    </ul>
+    <div class="story">
+      <span class="label">A note on this chapter</span>
+      <p>Ware writes about suicide openly and without drama, as the moment she chose life. If any of this is close to home, talking to someone you trust or a local crisis line is a good first step.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE / NO REGRETS ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Chapter 21 · No Regrets</span>
+    <h2>Clean the glass and let the light out</h2>
+    <p class="lede">Ware's depression lifted almost overnight. She held a small fire ceremony to say goodbye to her old self, and doors began to open: her writing, her music, a loving relationship and, in the last pages, a baby on the way.</p>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>The final chapter goes through the regrets one last time and turns each into encouragement. Being yourself takes courage, but so does living a life that isn't yours. Simplicity is freedom. Expressing feelings gets easier with practice, and other people's reactions are their responsibility. Friends hold your history. Happiness can be steered toward, one day at a time.</p>
+      <p>Then she reminds the reader that almost every patient found peace in the end, and forgave themselves. That peace is available now. Kindness and forgiveness, towards others and especially yourself, are where it starts.</p>
+      <p>She also says learning to <strong>receive</strong> was one of her hardest lessons. Natural givers often feel they don't deserve help, and that blocks the very things they've been working for.</p>
+      <div class="smile" style="margin-top:12px">
+        <b>Smile and Know.</b>
+        <b>Thank and Know.</b>
+        <span class="label" style="margin-top:8px">The words she pinned around her home through the last dark stretch</span>
+      </div>
+    </div>
+    <div class="fig">
+      <h4>The light globe</h4>
+      <svg viewBox="0 0 480 230" role="img" aria-label="Three light bulbs. The first is clear and glowing, labelled born. The second is covered in dark blotches, labelled muck thrown on, and we join in. The third is clean and glowing brightly with rays, labelled cleaned off, slowly.">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+            <stop offset="0%" stop-color="var(--r1)" stop-opacity=".9"/>
+            <stop offset="100%" stop-color="var(--r1)" stop-opacity=".12"/>
+          </radialGradient>
+        </defs>
+        <!-- bulb 1 -->
+        <g transform="translate(80,0)">
+          <circle cx="0" cy="80" r="44" fill="url(#glow)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <rect x="-16" y="122" width="32" height="26" rx="3" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <path d="M-16 130 h32 M-16 138 h32" stroke="var(--ink-3)" stroke-width="1"/>
+          <text x="0" y="176" text-anchor="middle" font-size="12" class="ink">born</text>
+          <text x="0" y="194" text-anchor="middle" font-size="10.5">clear and bright</text>
+        </g>
+        <!-- bulb 2 -->
+        <g transform="translate(240,0)">
+          <circle cx="0" cy="80" r="44" fill="url(#glow)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <g fill="var(--ink)" opacity=".82">
+            <circle cx="-18" cy="62" r="16"/><circle cx="10" cy="56" r="14"/><circle cx="22" cy="82" r="16"/><circle cx="-4" cy="96" r="18"/><circle cx="-26" cy="88" r="12"/><circle cx="4" cy="76" r="12"/><circle cx="28" cy="62" r="8"/><circle cx="-30" cy="72" r="8"/>
+          </g>
+          <rect x="-16" y="122" width="32" height="26" rx="3" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <path d="M-16 130 h32 M-16 138 h32" stroke="var(--ink-3)" stroke-width="1"/>
+          <text x="0" y="176" text-anchor="middle" font-size="12" class="ink">muck thrown on</text>
+          <text x="0" y="194" text-anchor="middle" font-size="10.5">and we join in</text>
+        </g>
+        <!-- bulb 3 -->
+        <g transform="translate(400,0)">
+          <g stroke="var(--r1)" stroke-width="2.5" stroke-linecap="round">
+            <path d="M0 18 v-14"/><path d="M-44 36 l-10 -10"/><path d="M44 36 l10 -10"/><path d="M-62 80 h-14"/><path d="M62 80 h14"/><path d="M-46 122 l-10 10"/><path d="M46 122 l10 10"/>
+          </g>
+          <circle cx="0" cy="80" r="44" fill="var(--r1)" opacity=".85" stroke="var(--r1)" stroke-width="1.5"/>
+          <rect x="-16" y="122" width="32" height="26" rx="3" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <path d="M-16 130 h32 M-16 138 h32" stroke="var(--ink-3)" stroke-width="1"/>
+          <text x="0" y="176" text-anchor="middle" font-size="12" class="ink">cleaned off, slowly</text>
+          <text x="0" y="194" text-anchor="middle" font-size="10.5">brighter than before</text>
+        </g>
+        <g fill="none" stroke="var(--ink-3)" stroke-width="1.5">
+          <path d="M140 80 h36 m-7 -5 l7 5 l-7 5"/><path d="M300 80 h36 m-7 -5 l7 5 l-7 5"/>
+        </g>
+      </svg>
+      <p class="cap">Her closing parable. We're born like clear glass globes. Other people throw their muck on us; it's theirs, not ours, but we believe it and start throwing some on ourselves. Cleaning it off takes patience, and the people still in the dark may throw more. But the light kept growing underneath the whole time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the book's last pages</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Ware sums it up herself: be who you are, find balance, speak honestly, value those you love, and allow yourself to be happy. Here is what that looks like in practice.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Live your own life</h3>
+      <div class="tk c-r1"><b>Name the expectation</b><span>Write down whose approval a big decision is really for. If it isn't yours, that's the first thing to change.</span></div>
+      <div class="tk c-r1"><b>Choose your surroundings</b><span>Spend time in places and with people who support the life you want. Environment shapes you whether you choose it or not.</span></div>
+      <div class="tk c-r2"><b>Pack five boxes</b><span>Imagine keeping only what fits in five. Owning less means needing less money, which means working less.</span></div>
+      <div class="tk c-r2"><b>Look for purpose, not just pay</b><span>Work that matters to you tends to bring what you need. Take a step back for a run-up if you have to.</span></div>
+    </div>
+    <div class="col">
+      <h3>Say it, and stay close</h3>
+      <div class="tk c-r3"><b>Say it this week</b><span>Love, pride, an apology. Tell people who they are, not just what they did well, as Charlie finally did.</span></div>
+      <div class="tk c-r3"><b>Let go of the reaction</b><span>Their response is their business. Your peace comes from having said it.</span></div>
+      <div class="tk c-r3"><b>Be honest about death</b><span>Don't hide a diagnosis from someone who is dying. They usually know already, and the truth brings relief.</span></div>
+      <div class="tk c-r4"><b>Book time with friends</b><span>Treat it as a gift to yourself, not an obligation. Keep the friends who know you well and accept you as you are.</span></div>
+    </div>
+    <div class="col">
+      <h3>Let yourself be happy</h3>
+      <div class="tk c-r5"><b>Choose it daily</b><span>Some days you can't. Choose it on the days you can, and be gentle with yourself on the others.</span></div>
+      <div class="tk c-r5"><b>Be grateful in the moment</b><span>A breeze, a bird, a bath. Notice it as it happens, not just in the journal at night.</span></div>
+      <div class="tk c-r5"><b>Enjoy the way, not just the result</b><span>Don't postpone joy until the project is done. Cath said that was her one mistake.</span></div>
+      <div class="tk c-r4"><b>Learn to receive</b><span>Accept help and kindness. Givers who can't receive block the very things they've worked for.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Bronnie Ware, <em>The Top Five Regrets of the Dying: A Life Transformed by the Dearly Departing</em> (Hay House, 2012; first published by Balboa Press, 2011). Most patient names are the pseudonyms used in the book. Diagrams were drawn for this page and are illustrative, not data. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero band: dandelion seeds drifting off a seed head --- */
+  var canvas = document.getElementById("seeds");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  var seed = 11;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  var seeds = [];
+  for (var i = 0; i < 38; i++) {
+    seeds.push({ off: rnd(), lane: rnd() * 2 - 1, wob: rnd() * Math.PI * 2, spin: rnd() * Math.PI * 2, gold: rnd() < .22 });
+  }
+  function drawSeed(x, y, ang, col, s) {
+    ctx.save();
+    ctx.translate(x, y); ctx.rotate(ang);
+    ctx.strokeStyle = col; ctx.lineWidth = 1.1;
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 9 * s); ctx.stroke();      // stalk
+    ctx.beginPath(); ctx.arc(0, 10 * s, 1.4 * s, 0, Math.PI * 2); ctx.fillStyle = col; ctx.fill();
+    for (var k = -3; k <= 3; k++) {                                              // pappus
+      var a = -Math.PI / 2 + k * 0.32;
+      ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(Math.cos(a) * 7 * s, Math.sin(a) * 7 * s); ctx.stroke();
+    }
+    ctx.restore();
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var ink = css("--ink-3"), gold = css("--r1");
+    var cx = Math.min(70, w * .12), cy = hgt * .58, R = Math.min(34, hgt * .27);
+    // stem + seed head
+    ctx.strokeStyle = css("--r4"); ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.quadraticCurveTo(cx - 6, hgt * .85, cx - 2, hgt); ctx.stroke();
+    ctx.strokeStyle = ink; ctx.lineWidth = 1;
+    for (var j = 0; j < 40; j++) {
+      var a = (j / 40) * Math.PI * 2;
+      if (Math.cos(a) > .55 && Math.abs(Math.sin(a)) < .6) continue;            // gap where seeds have flown
+      ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + Math.cos(a) * R, cy + Math.sin(a) * R); ctx.stroke();
+    }
+    ctx.beginPath(); ctx.arc(cx, cy, 3.5, 0, Math.PI * 2); ctx.fillStyle = ink; ctx.fill();
+    // drifting seeds
+    var t = reduce ? 0 : time * 0.000045;
+    var span = w - cx;
+    seeds.forEach(function (sd) {
+      var p = (sd.off + t) % 1;                                                  // 0 → 1 along the band
+      var x = cx + R * .6 + p * span;
+      var rise = Math.pow(p, .8) * hgt * .38;
+      var y = cy - rise + sd.lane * hgt * .22 * Math.min(1, p * 3) + Math.sin(p * 9 + sd.wob + t * 40) * 6;
+      var fade = p < .06 ? p / .06 : (p > .9 ? (1 - p) / .1 : 1);
+      ctx.globalAlpha = fade * (sd.gold ? .95 : .7);
+      drawSeed(x, y, Math.sin(p * 6 + sd.spin) * .5, sd.gold ? gold : ink, .9 + sd.lane * .15);
+    });
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

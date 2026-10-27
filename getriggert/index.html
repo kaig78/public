@@ -1,0 +1,1367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Getriggert? by Anouk Algermissen – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Warm cream and amber come from the cover; "fire" (rust) and "ice"
+   (slate blue) are the book's two reaction styles, and the traffic-light trio maps calm,
+   tense and triggered. */
+:root {
+  --paper: #f6f3ec;
+  --paper-2: #ece6da;
+  --card: #fffdf8;
+  --ink: #1d1a16;
+  --ink-2: #514a40;
+  --ink-3: #847a6c;
+  --rule: #ddd5c6;
+
+  --gold: #c47a1a;   /* the cover's title colour */
+  --fire: #c2491d;
+  --ice: #2f6f9e;
+  --amber: #b97a0e;
+  --calm: #3f7f55;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #14120f;
+    --paper-2: #1d1a16;
+    --card: #221e19;
+    --ink: #f1ece3;
+    --ink-2: #bdb3a4;
+    --ink-3: #8d8475;
+    --rule: #343029;
+    --gold: #e8a04a;
+    --fire: #ff7a4d;
+    --ice: #78b4e6;
+    --amber: #f0b23e;
+    --calm: #79c393;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14120f;
+  --paper-2: #1d1a16;
+  --card: #221e19;
+  --ink: #f1ece3;
+  --ink-2: #bdb3a4;
+  --ink-3: #8d8475;
+  --rule: #343029;
+  --gold: #e8a04a;
+  --fire: #ff7a4d;
+  --ice: #78b4e6;
+  --amber: #f0b23e;
+  --calm: #79c393;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Colour helpers */
+.c-fire  { --c: var(--fire); }
+.c-ice   { --c: var(--ice); }
+.c-amber { --c: var(--amber); }
+.c-calm  { --c: var(--calm); }
+.c-gold  { --c: var(--gold); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(44px, 9.6vw, 120px);
+  font-weight: 900;
+  font-stretch: 85%;
+  line-height: .86;
+  letter-spacing: -.03em;
+  margin-left: -.03em;
+  text-transform: uppercase;
+}
+.hero h1 .q { color: var(--gold); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 933;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 28, 10, .35), 0 8px 18px -10px rgba(40, 28, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.ripples { position: relative; margin-top: 28px; }
+.ripples canvas { display: block; width: 100%; height: 120px; }
+.ripples .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Relationship themes */
+.themes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 10px; }
+.theme { border-radius: 6px; padding: 14px 16px; background: var(--paper-2); display: grid; gap: 4px; align-content: start; }
+.theme b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 17px; line-height: 1.2; }
+.theme span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* Annotated dialogue */
+.dlg { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.dlg li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 2px 14px; }
+.dlg .who { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); padding-top: 4px; }
+.dlg .line { font-size: 16.5px; line-height: 1.45; }
+.dlg .tag { grid-column: 2; font-family: var(--mono); font-size: 12px; color: var(--c, var(--ink-3)); }
+.dlg .tag::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--ink-3)); margin-right: 8px; vertical-align: 1px; }
+
+/* if-then style block */
+.ifthen {
+  font-family: var(--mono); font-size: 14px; line-height: 1.8;
+  background: var(--paper-2); border-radius: 6px; padding: 18px 20px; margin: 0;
+  white-space: pre-wrap; color: var(--ink);
+}
+.ifthen .k { color: var(--gold); }
+.ifthen .c { color: var(--ink-3); }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 7px 13px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); color: var(--ink); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* traffic light */
+.lights { display: grid; gap: 10px; }
+.light { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 14px; align-items: center; }
+.light i { width: 34px; height: 34px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 22%, transparent); }
+.light b { font-family: var(--display); font-weight: 800; font-stretch: 105%; display: block; font-size: 16.5px; }
+.light span { font-size: 15px; color: var(--ink-2); line-height: 1.4; }
+
+/* signal cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px; }
+.card { border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; background: var(--card); }
+.card b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 17px; }
+.card p { font-size: 14.5px; color: var(--ink-2); line-height: 1.45; }
+.card .tiger { font-family: var(--mono); font-size: 12px; color: var(--fire); }
+
+/* translation table / generic tables */
+table.tt { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 15.5px; line-height: 1.42; }
+table.tt th, table.tt td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--rule); }
+table.tt thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tt tbody th { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16px; }
+table.tt tbody tr:last-child th, table.tt tbody tr:last-child td { border-bottom: 0; }
+table.tt.wide { min-width: 820px; }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; max-width: 100%; overflow: hidden; }
+.arrowcell { color: var(--ink-3); font-family: var(--mono); width: 30px; }
+
+/* trigger chain */
+.chain { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; counter-reset: step; }
+.chain li { position: relative; border-radius: 6px; padding: 14px 14px 16px; background: color-mix(in srgb, var(--c) 12%, var(--card)); border-top: 4px solid var(--c); display: grid; gap: 6px; align-content: start; counter-increment: step; }
+.chain li::before { content: "Step " counter(step); font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.chain b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 17px; }
+.chain span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+/* numbered steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: start; }
+.steps li::before { content: counter(s); width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-family: var(--mono); font-size: 13px; background: var(--c, var(--ink)); color: var(--paper); }
+.steps b { font-family: var(--display); font-weight: 750; font-stretch: 100%; display: block; font-size: 16.5px; line-height: 1.3; }
+.steps span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+/* pillars */
+.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.pillar { border-radius: 6px; padding: 16px; background: color-mix(in srgb, var(--c) 12%, var(--card)); display: grid; gap: 6px; align-content: start; }
+.pillar .big { font-family: var(--display); font-weight: 900; font-stretch: 120%; font-size: 40px; line-height: 1; color: var(--c); }
+.pillar b { font-family: var(--display); font-weight: 800; font-size: 17px; }
+.pillar span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.tkgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 10px; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .two, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter > * { min-width: 0; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+  .chain { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare, .compare.three, .pillars, .chain { grid-template-columns: 1fr; }
+  .dlg li { grid-template-columns: 1fr; }
+  .dlg .tag { grid-column: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Anouk Algermissen · mvg, 2024</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#layers">Three layers</a>
+    <a href="#understand">Understand</a>
+    <a href="#foundation">Build</a>
+    <a href="#grow">Grow</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1>Getriggert<span class="q">?</span></h1>
+    <p class="sub">Triggered? How we strengthen our relationships by regulating our emotions and communicating more calmly</p>
+    <p class="dek">Couples therapist Anouk Algermissen argues that most couples don't lack the right words. Old hurts and fast, automatic self-protection get in the way, and both can be worked with.</p>
+    <div class="byline label">
+      <span>14 chapters</span><span>3 parts</span><span>Read in German</span><span>~63,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Getriggert? by Anouk Algermissen: the title in amber capitals over pale concentric rings, with a large faint question mark and an orange badge promising communication tools from couples therapy">
+</div>
+
+<div class="ripples" aria-hidden="true">
+  <canvas id="ripples"></canvas>
+  <div class="ends label"><span>A trigger hits</span><span>Regulated, back in contact</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Bad communication is a symptom</h2>
+  </div>
+  <div class="two">
+    <div class="prose">
+      <p>Hannah and Timo come to therapy saying communication is their problem. Algermissen disagrees. At the start of their relationship they talked easily, so they know how. What has changed is everything that now gets in the way: hurts that were never repaired, a darker picture of each other, and emotions that take over in seconds.</p>
+      <p>Her answer has two parts that run through the whole book: <strong>regulate your emotions</strong> so they don't knock you off course, and <strong>build understanding</strong> for yourself and the other person. Better phrasing only helps once those two are in place. Words without feeling behind them are, in her phrase, empty shells.</p>
+      <p>The book follows a couples-therapy process. Part 1 <a href="#understand">diagnoses</a> why talking gets hard. Part 2 builds the <a href="#foundation">foundation</a>: notice, classify, change. Part 3 shows how couples <a href="#grow">grow together</a> and stay out of the old loop. Exercises come throughout, and she asks you to do them as you go.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Numbers the book works with</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat"><span class="big num">11m → 40</span><p>Sensory impressions hit us every second; about 40 reach awareness. The body signals that warn of a trigger usually stay in the unconscious rest.</p></div>
+        <div class="stat"><span class="big num">20–30%</span><p>How full the "emotion glass" gets from the situation itself. When a trigger adds feelings from the past, it overflows.</p></div>
+        <div class="stat"><span class="big num">30 s–3 min</span><p>Suggested length of a timed pause once one partner notices they're in the yellow zone.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--gold)">
+        <span class="label">The opening scene</span>
+        <p>Hannah sees the bin is full: "You forgot to take out the rubbish." Timo: "I'll do it later." Three lines on, it's about who does all the cleaning and who always overreacts. The first sentences swapped information. After that they were only defending themselves, and the conversation had become about winning.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part 1</span>
+      <h3>Understand the problem</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Communication Is the Problem</b>Or only the symptom</a></li>
+        <li><span>02</span><a href="#ch2"><b>What Nobody Teaches Us</b>Every small fight is about something bigger</a></li>
+        <li><span>03</span><a href="#ch3"><b>Why Can't It Just Be Easy?</b>Unrepaired hurts change how we see each other</a></li>
+        <li><span>04</span><a href="#ch4"><b>What Hardly Anyone Knows</b>Fire, ice and the middle way</a></li>
+        <li><span>05</span><a href="#ch5"><b>So What's the Solution?</b>Listen for the grinding</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 2</span>
+      <h3>Build the foundation</h3>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Recognising the Old Protective Strategy</b>Step 1: notice</a></li>
+        <li><span>07</span><a href="#ch7"><b>The Experiences That Hold Us Captive</b>Step 2: understand where it comes from</a></li>
+        <li><span>08</span><a href="#ch8"><b>How the Past Shapes Us</b>Your trigger plan</a></li>
+        <li><span>09</span><a href="#ch9"><b>Finding a New Strategy</b>Step 3: first aid and aftercare</a></li>
+        <li><span>10</span><a href="#ch10"><b>The Understanding Formula</b>Calm, open, understanding</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 3</span>
+      <h3>Grow together</h3>
+      <ol>
+        <li><span>11</span><a href="#ch11"><b>Repairing What Broke</b>Talk early, repair after</a></li>
+        <li><span>12</span><a href="#ch12"><b>The Positive Cycle</b>Five couples who broke out</a></li>
+        <li><span>13</span><a href="#ch13"><b>Typical Problems and Fixes</b>Ten common snags</a></li>
+        <li><span>14</span><a href="#ch14"><b>In Closing</b>Six points to keep</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THREE LAYERS ============ -->
+<section id="layers">
+  <div class="sec-head">
+    <span class="label">The core model</span>
+    <h2>Every hard conversation has three layers</h2>
+    <p class="lede">We argue about the holiday flat, but that's only the tip. Underneath sit the big relationship themes, and in the moment, the emotions that make us react on autopilot.</p>
+  </div>
+
+  <div class="two">
+    <div class="fig">
+      <h4>The iceberg of a small argument</h4>
+      <svg viewBox="0 0 460 330" role="img" aria-label="An iceberg. Above the waterline, a small tip labelled the topic: booking the holiday flat. Below the water, a much larger mass in two bands: the big relationship themes such as pressure, not being seen, being left alone; and beneath that, the emotions in the moment such as anger, hurt and freezing, which make us reactive.">
+        <rect x="0" y="92" width="460" height="238" fill="color-mix(in srgb, var(--ice) 10%, transparent)"/>
+        <line x1="0" y1="92" x2="460" y2="92" stroke="var(--ice)" stroke-width="1.5"/>
+        <polygon points="190,92 214,50 238,30 262,54 286,92" fill="var(--card)" stroke="var(--ink-3)" stroke-width="1.5"/>
+        <polygon points="190,92 286,92 332,138 362,210 342,282 272,320 178,314 108,272 92,200 128,132" fill="var(--card)" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="0"/>
+        <line x1="104" y1="200" x2="358" y2="200" stroke="var(--rule)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="300" y="40" font-size="12.5" style="fill:var(--ink)">1 · The topic</text>
+        <text x="300" y="57" font-size="11" style="fill:var(--ink-3)">booking the holiday flat</text>
+        <text x="228" y="132" text-anchor="middle" font-size="12.5" style="fill:var(--gold)">2 · The big themes</text>
+        <text x="228" y="152" text-anchor="middle" font-size="11">pressure · being seen</text>
+        <text x="228" y="168" text-anchor="middle" font-size="11">being left alone · respect</text>
+        <text x="228" y="232" text-anchor="middle" font-size="12.5" style="fill:var(--fire)">3 · Emotions right now</text>
+        <text x="228" y="252" text-anchor="middle" font-size="11">anger · hurt · freezing</text>
+        <text x="228" y="270" text-anchor="middle" font-size="11">→ we turn reactive</text>
+        <text x="10" y="84" font-size="11" style="fill:var(--ink-3)">what is said</text>
+        <text x="10" y="110" font-size="11" style="fill:var(--ice)">what is meant</text>
+      </svg>
+      <p class="cap">Algermissen draws on three models: Watzlawick's point that every message has a content and a relationship side, the sender–receiver model in which what is sent isn't always what arrives, and the iceberg. The part that steers the conversation is the part nobody says out loud.</p>
+    </div>
+
+    <div class="fig">
+      <h4>What the holiday-flat fight was really about</h4>
+      <div class="chips">
+        <span class="chip c-amber">the flat</span>
+        <span class="chip c-ice">pressure</span>
+        <span class="chip c-ice">being seen</span>
+        <span class="chip c-ice">equal footing</span>
+        <span class="chip c-ice">being patronised</span>
+        <span class="chip c-fire">understanding</span>
+        <span class="chip c-fire">responsibility</span>
+        <span class="chip c-fire">being left alone</span>
+        <span class="chip">lost closeness</span>
+      </div>
+      <p class="cap">Hannah wants to book; Timo wants to look first. Within eight lines Hannah says nothing would get done without her, Timo says it always goes her way, and the holiday is off. Timo's subtext: <em>I feel pressured and you decide over my head.</em> Hannah's: <em>everything lands on me, and when you pull back it feels like a slap.</em></p>
+      <span class="label">Signs a conversation is about more than its topic</span>
+      <ul class="points" style="font-size:16px">
+        <li>Strong emotions appear out of nowhere</li>
+        <li>You feel misunderstood, and keep repeating yourself</li>
+        <li>Problems don't get solved, although both try</li>
+        <li>Everyone digs in, and the words sting</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:24px">
+    <h4>Eight relationship themes that keep coming back</h4>
+    <div class="themes">
+      <div class="theme"><b>Missing empathy, not being seen</b><span>Marie feels she's talking to a block of ice when she opens up, and now expects nothing.</span></div>
+      <div class="theme"><b>Missing support</b><span>Feza's husband forgets the one thing she asked for: "Typical. Is that too much to ask?"</span></div>
+      <div class="theme"><b>Little trust or security</b><span>Richard catches himself glancing at his girlfriend's phone when a colleague's name comes up.</span></div>
+      <div class="theme"><b>Loneliness</b><span>Nadia's partner leaves without saying goodbye. Sadness flips into "I don't need you anyway."</span></div>
+      <div class="theme"><b>Not feeling desired</b><span>Karl's partner barely touches him. He decides something is wrong with him.</span></div>
+      <div class="theme"><b>Not being a priority</b><span>For Paul, work and tennis always come first. Eva longs to be number one.</span></div>
+      <div class="theme"><b>Missing freedom</b><span>Hendrik feels smothered and snaps whenever his partner seems to cling.</span></div>
+      <div class="theme"><b>Little appreciation</b><span>Sarah: "When did you last hold me? When did we last have time just for us?"</span></div>
+    </div>
+    <p class="cap">Most couples have only a few of these, but they run like a red thread through years of arguments. Small things matter because they hit these themes.</p>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="understand">
+  <span class="label partno">Part 1 · Chapters 1–5</span>
+  <h2>Understand the problem</h2>
+  <p class="lede">Why do people who give friends wise advice, stay calm with annoying colleagues and open up easily to strangers lose all those skills with the person closest to them?</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Communication Is the Problem</span></div>
+  <div class="body">
+    <div>
+      <h3>The words were never the problem</h3>
+      <p class="idea">Couples knew how to talk at the start. What blocks them later are repeated hurts that have turned into trigger points.</p>
+    </div>
+    <ul class="points">
+      <li>"Triggered" means two things. In everyday speech it just means annoyed or frustrated. In clinical psychology it's a cue that brings a past feeling back into the present, as in a war veteran's flashback. The book deals with a milder but very common kind, the wounds left by childhood, school or earlier relationships.</li>
+      <li>Her examples: a child who learns that love comes only with achievement; a pupil who eats lunch alone every day and concludes they're strange; someone who was cheated on and now anticipates betrayal every time their partner goes out.</li>
+      <li>A typical sign is the fight over a trifle. In seconds a conversation moves from swapping information to winning, and if one of you has to win, you're no longer on the same team.</li>
+      <li>Common shapes: ping-pong blame, where every complaint is answered with the other's faults; passive-aggressive digs that feel like "many small knife pricks"; and no longer really talking at all. In each, talking produces frustration instead of closeness. Communication turns into a weapon instead of a bridge.</li>
+      <li>"Just be nicer to each other" doesn't work. Couples in these loops already regret their fights. They just end up in the same place next time, with one more hurt and a little more distance.</li>
+      <li>Why can the therapist find calm words when the couple can't? Two and a half reasons: she isn't emotionally involved, she sets out to understand each person, and (the half reason) she's trained. Regulating emotion and building understanding become the book's two threads.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The quiet version</span>
+      <p>Elli and Francesca never fight. Friends call them the model couple. But they only discuss the weather and their jobs. Francesca doesn't know Elli is often lonely; Elli doesn't know Francesca feels hemmed in by their routines. When Francesca comes home late once again, Elli, close to tears, says: "You do what you want anyway." Not every damaging pattern is loud.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">What Nobody Teaches Us</span></div>
+  <div class="body">
+    <div>
+      <h3>We operate on the heart without training</h3>
+      <p class="idea">Imagine starting medical school and being sent straight into heart surgery. That's how we're sent into relationships.</p>
+    </div>
+    <ul class="points">
+      <li>It isn't your fault that communication is hard. Nobody teaches it, and many people even see it as a bad sign if a relationship takes work.</li>
+      <li>Algermissen quotes therapist Esther Perel: the quality of our relationships determines the quality of our lives. A meta-analysis she cites links working on relationships to better mental health.</li>
+      <li>In any one conversation we usually talk on three levels: the apparent subject, the big themes nobody names, and the emotions rising in the moment that make us reactive.</li>
+      <li>Watch for meaning that doesn't arrive. When Timo asks "Why are you putting on so much pressure?", he's sending <em>I'm tense, I'd like a calmer talk</em>. Hannah probably receives <em>you're getting on my nerves</em>.</li>
+      <li>Exercise: recall the last bad conversation with anyone (a parent, a friend). What was the spark? What did you want to get across that didn't land? What one heading would describe it?</li>
+      <li>Hurts are hard to spot in other people because they're hidden under anger or apparent indifference. For now, the point is only to sense that we're often discussing several important things at once.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“The quality of our relationships determines the quality of our lives.”</blockquote>
+      <span class="label">Esther Perel, quoted by Algermissen (my translation)</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Why Can't It Just Be Easy?</span></div>
+  <div class="body">
+    <div>
+      <h3>Unrepaired hurts change the picture we have of each other</h3>
+      <p class="idea">Negative feelings signal unmet needs. They also fire off fast protective reactions, and those hurt the other person's needs in turn.</p>
+    </div>
+    <ul class="points">
+      <li>Driving home from therapy, Hannah wants to talk it through and Timo, overloaded, goes quiet. Both stew. When he nearly misses a cyclist, it all comes out: "You don't look out for anyone!" / "You've been talking at me the whole time!" Calmer, he could have said <em>it's been a long day, give me a few minutes</em>; she could have said <em>that really scared me</em>.</li>
+      <li>The ping-pong runs like this: Hannah criticises a trifle, which undercuts Timo's need to be valued. He withdraws and turns away. She feels punished, so her anger rises, which hurts him more. Each one's protection is the other's injury.</li>
+      <li>John Gottman calls the result <strong>negative sentiment override</strong>: unhappy couples see even neutral moments through a dark lens, so a harmless comment reads as an attack. Add the <strong>negativity bias</strong>, our tendency to weigh bad experiences more than good ones, and the hurts stay vivid while the good moments fade.</li>
+      <li>The turning point comes when you're more annoyed by your partner's reaction than by the issue. "The dirty dishes annoy me" becomes "<em>you</em> annoy me." From then on, the other person is the problem.</li>
+      <li>The picture shifts slowly: from "you're on my side" to "mostly reliable, sometimes selfish" to "I have to watch out for you." The benefit of the doubt shrinks. Warning signs: sentences that start with "always", the feeling of "I knew it", and no alternative explanation for what the other did.</li>
+      <li>Who started it and who did more only become questions when both people feel unsafe. Relaxed people don't need to prove the other is the problem.</li>
+      <li>Avoiding hot topics (Elli and Francesca) and pushing them at full speed both fail. You can't build good communication by ignoring problems or by forcing them.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>How flow turns into friction</h4>
+        <svg viewBox="0 0 520 260" role="img" aria-label="A line chart of closeness over the course of a relationship in eight stages. It rises from getting to know each other to coming closer and familiarity, dips at the first rupture and recovers partly, then falls through everyday life and stagnation to escalation and separation. A note says each unrepaired hurt adds weight.">
+          <defs>
+            <linearGradient id="arcline" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" style="stop-color:var(--calm)"/>
+              <stop offset=".45" style="stop-color:var(--amber)"/>
+              <stop offset="1" style="stop-color:var(--fire)"/>
+            </linearGradient>
+          </defs>
+          <line x1="30" y1="20" x2="30" y2="214" stroke="var(--rule)" stroke-width="1.5"/>
+          <text x="36" y="22" font-size="10.5" style="fill:var(--ink-3)">closer</text>
+          <text x="36" y="212" font-size="10.5" style="fill:var(--ink-3)">apart</text>
+          <polygon points="40,214 40,120 102,80 164,55 226,100 288,108 350,142 412,180 474,206 474,214" fill="color-mix(in srgb, var(--amber) 9%, transparent)"/>
+          <polyline points="40,120 102,80 164,55 226,100 288,108 350,142 412,180 474,206" fill="none" stroke="url(#arcline)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="40" cy="120" r="4.5" fill="var(--calm)"/>
+          <circle cx="102" cy="80" r="4.5" fill="var(--calm)"/>
+          <circle cx="164" cy="55" r="4.5" fill="var(--calm)"/>
+          <circle cx="226" cy="100" r="4.5" fill="var(--amber)"/>
+          <circle cx="288" cy="108" r="4.5" fill="var(--amber)"/>
+          <circle cx="350" cy="142" r="4.5" fill="var(--fire)"/>
+          <circle cx="412" cy="180" r="4.5" fill="var(--fire)"/>
+          <circle cx="474" cy="206" r="4.5" fill="var(--fire)"/>
+          <text x="300" y="56" font-size="11" style="fill:var(--ink-2)">each unrepaired hurt</text>
+          <text x="300" y="72" font-size="11" style="fill:var(--ink-2)">adds weight</text>
+          <g font-size="10" text-anchor="middle">
+            <text x="40" y="234">Getting</text><text x="40" y="246">to know</text>
+            <text x="102" y="234">Coming</text><text x="102" y="246">closer</text>
+            <text x="164" y="234">Familiar</text>
+            <text x="226" y="234">First</text><text x="226" y="246">rupture</text>
+            <text x="288" y="234">Everyday</text>
+            <text x="350" y="234">Stagnant</text>
+            <text x="412" y="234">Escalate</text>
+            <text x="474" y="234">Separate</text>
+          </g>
+        </svg>
+        <p class="cap">The eight stages Algermissen describes. There's rarely a clear turning point, which is why couples don't notice they need to change something.</p>
+      </div>
+      <div class="fig">
+        <h4>Finish the sentence</h4>
+<pre class="ifthen"><span class="c">// how has your picture of the other changed?</span>
+<span class="k">They hurt me because</span> …
+  … I don't matter to them any more
+  … they only look out for themselves
+  … they want to get back at me
+  … they just want to do their own thing</pre>
+        <p class="cap">Whatever comes to mind first shows how far the picture has shifted. Only if you pause and question it can you respond differently.</p>
+        <div class="story" style="border-color:var(--ice)">
+          <span class="label">The river</span>
+          <p>Early on, communication flows like a river: whatever you send reaches the other bank. Over time, driftwood from unprocessed hurts piles up. Less and less gets through, until it feels like you no longer speak the same language.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">What Hardly Anyone Knows</span></div>
+  <div class="body">
+    <div>
+      <h3>Communication is only as strong as how we handle emotion</h3>
+      <p class="idea">Too little feeling is cold; too much is escalation. The aim is calm, not cold, and open, not explosive.</p>
+    </div>
+
+    <div class="fig">
+      <h4>Fire, ice and the middle way</h4>
+      <svg viewBox="0 0 520 170" role="img" aria-label="A horizontal spectrum from ice on the left, in blue, to fire on the right, in rust. Ice: shuts feelings away, cold, out of reach, leads to no closeness. Fire: lets feelings flood out, loud and attacking, leads to escalation. A dashed box in the middle marks the middle way: calm, not cold; open, not explosive; leads to connection.">
+        <defs>
+          <linearGradient id="fireice" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" style="stop-color:var(--ice)"/>
+            <stop offset=".5" style="stop-color:var(--paper-2)"/>
+            <stop offset="1" style="stop-color:var(--fire)"/>
+          </linearGradient>
+        </defs>
+        <rect x="20" y="50" width="480" height="28" rx="14" fill="url(#fireice)"/>
+        <rect x="186" y="40" width="148" height="48" rx="8" fill="none" stroke="var(--calm)" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="20" y="32" font-size="13" style="fill:var(--ice)">ICE</text>
+        <text x="260" y="32" text-anchor="middle" font-size="13" style="fill:var(--calm)">THE MIDDLE WAY</text>
+        <text x="500" y="32" text-anchor="end" font-size="13" style="fill:var(--fire)">FIRE</text>
+        <g font-size="11.5">
+          <text x="20" y="112">shuts feelings away</text>
+          <text x="20" y="129">cold, out of reach</text>
+          <text x="20" y="150" style="fill:var(--ice)">→ no closeness</text>
+          <text x="260" y="112" text-anchor="middle">calm, not cold</text>
+          <text x="260" y="129" text-anchor="middle">open, not explosive</text>
+          <text x="260" y="150" text-anchor="middle" style="fill:var(--calm)">→ connection</text>
+          <text x="500" y="112" text-anchor="end">lets feelings flood out</text>
+          <text x="500" y="129" text-anchor="end">loud, attacking</text>
+          <text x="500" y="150" text-anchor="end" style="fill:var(--fire)">→ escalation</text>
+        </g>
+      </svg>
+      <p class="cap">Many people lean one way under stress, and some swing between both. Hannah is fire, Timo is ice. Each has what the other lacks: she's in touch with her feelings, he can stay calm. That's what they admired in each other at the start.</p>
+    </div>
+
+    <ul class="points">
+      <li><strong>Ice</strong> often works well at the office. These people are efficient, cheerful and full of practical advice. Their partners say things like "he's there, but somehow absent." Everyday logistics get discussed; depth never comes.</li>
+      <li>Timo walks on eggshells. He keeps quiet about what bothers him to offer "as little surface as possible." The therapist turns it around: the further he withdraws, the harder Hannah pursues, because to her it feels like contact being withdrawn, even punishment.</li>
+      <li>Men in particular are still taught to stay cool and rational. A boxed note cites Australian research on men after suicide attempts who said that as boys they had no room to show vulnerability (a trigger warning comes with it).</li>
+      <li>Learned phrases like "I feel under pressure" help only if they carry real feeling. Words without emotion are just shells.</li>
+      <li>The <strong>key-and-lock principle</strong>: rational problems need rational answers, and emotional problems need emotional ones. Mixing them up is a classic: she wanted empathy and got a three-point plan. Say what you need first, for example "I just want to tell you how I feel; I don't need a solution yet."</li>
+      <li><strong>Fire</strong>: Hannah says she sometimes only "wakes up" when it's all over, like coming out of a tunnel. There is a gap between trigger and outburst, and that's where change is possible. Her first signal is heat rising from her chest to her face.</li>
+      <li>Treat change like training for a muscle goal: short-term costs (getting off the couch, facing feelings) for long-term gains you can't see at first.</li>
+    </ul>
+
+    <div class="compare">
+      <div class="c-ice"><h5>Signs you're running on ice</h5><ul><li>You go stiff in conversations</li><li>You fear how the other will react</li><li>You distance yourself inside</li><li>You want to escape emotional moments</li></ul></div>
+      <div class="c-fire"><h5>Early warnings of fire</h5><ul><li>Heat in the body, sweaty palms</li><li>Restlessness, tingling, pressure on the chest</li><li>Kneading hands, clenched jaw</li><li>Tight shoulders, rushing in the ears</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">So What's the Solution?</span></div>
+  <div class="body">
+    <div>
+      <h3>Listen for the grinding before it turns into a fight</h3>
+      <p class="idea">The moment someone feels attacked, hurt or unseen, you have an emotional problem first, whatever the topic.</p>
+    </div>
+    <ul class="points">
+      <li>Feelings matter less when you're calmly drawing up a plan. They take the lead when the goal is closeness, being understood or helping with something emotional. Many people misread the situation as a rational problem.</li>
+      <li>Algermissen's name for the tipping point is the <strong>Knirschgefühl</strong>, the grinding feeling: the moment a conversation suddenly feels wrong. Signs: repeating yourself, going in circles, irritation, frustration, the sense that what you say isn't landing, a conversation that loses its lightness.</li>
+      <li>The grinding means you've missed each other emotionally and are pulling in two directions. Catch it and you can avoid both the fight and new hurts. Ignore it and it builds to escalation.</li>
+      <li>She caught herself in the same trap days after writing the chapter: her partner talked about a stressful work week, she started handing out tips, and they went round in circles. She laughed, came back and said, "We missed the grinding. You don't want advice, do you?" The tension dropped immediately.</li>
+      <li>A better version of Hannah and Timo's talk isn't perfect. Timo still proposes a plan and gets a bit snippy, but Hannah states her goal ("I don't want a plan right now") and he asks "What can I do?" She answers: "Just listen." Imperfect communication can still change the outcome.</li>
+      <li>Practise on low-stakes topics first, like a hike, the weekly shop or choosing a film. If you start with your sorest themes, you're more likely to fail and lose heart.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Decoding the colleague conversation</h4>
+      <ol class="dlg">
+        <li><span class="who">Hannah</span><span class="line">My colleague behaved badly again today. I can't stand it any more.</span><span class="tag c-amber">emotional problem: pressure at work</span></li>
+        <li><span class="who">Timo</span><span class="line">Raise it with your boss. It's been going on forever.</span><span class="tag c-ice">a fix for an apparently rational problem</span></li>
+        <li><span class="who">Hannah</span><span class="line">I can't. They're friends, it would get around.</span><span class="tag c-amber">grinding 1: suggestion rejected</span></li>
+        <li><span class="who">Timo</span><span class="line">You're not pillorying anyone. You have to say something at work, as often as you complain to me.</span><span class="tag c-amber">grinding 2: repetition</span></li>
+        <li><span class="who">Hannah</span><span class="line">You don't get it. Your job's easy.</span><span class="tag c-amber">grinding 3: defence</span></li>
+        <li><span class="who">Timo</span><span class="line">Then change something! But you do what you want anyway.</span><span class="tag c-fire">big theme: my opinion isn't heard</span></li>
+        <li><span class="who">Hannah</span><span class="line">You never really listen. It's pointless talking to you.</span><span class="tag c-fire">big theme: you're cold, unempathetic</span></li>
+      </ol>
+      <p class="cap">He wanted to solve, she wanted to share. Neither noticed they had different goals, so the talk ground its way down to their oldest themes.</p>
+    </div>
+
+    <div class="compare three">
+      <div class="c-gold"><h5>1 · Name your goal</h5><ul><li>"I'm asking because I want to solve this, not to attack you."</li><li>"I'm quiet because I'm looking for the right words, not to shut you out."</li></ul></div>
+      <div class="c-amber"><h5>2 · Call out the grinding</h5><ul><li>"We're going in circles. Do you actually want a solution?"</li><li>"Feel that grinding? Something's off." Hannah, hungry: "I'm in a grinding mood."</li></ul></div>
+      <div class="c-calm"><h5>3 · Name feelings</h5><ul><li>"I'm pretty tense. Can we take a short break?"</li><li>Good ones too: "It's lovely sitting here with you tonight."</li></ul></div>
+    </div>
+    <p class="muted" style="max-width:var(--measure);font-size:16.5px">End of Part 1 checklist. <strong>Understand:</strong> what are your themes, and how has your picture of the other changed? <strong>Feel:</strong> team fire, how do you notice emotions boiling up? Team ice, what keeps you from opening up? <strong>Communicate:</strong> watch for the grinding and say your intention up front.</p>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="foundation">
+  <span class="label partno">Part 2 · Chapters 6–10</span>
+  <h2>Build the foundation</h2>
+  <p class="lede">Insight works on easy topics. The spots with the most hurt need a method: notice, classify, change, and only then talk and solve.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">The Old Protective Strategy</span></div>
+  <div class="body">
+    <div>
+      <h3>Your brain treats losing connection like a sabre-toothed tiger</h3>
+      <p class="idea">Fight, flight and freeze buy short-term safety and cost long-term closeness. The way out starts with noticing sooner.</p>
+    </div>
+    <ul class="points">
+      <li>The brain learns from danger: after a near-miss with a car, your pulse rises the next time you cross while looking at your phone. For a social species, being cut off from the group was as deadly as a predator. Attachment is a basic need.</li>
+      <li>Edward Tronick's <strong>Still Face experiment</strong> shows it: when a mother suddenly stops reacting, her baby first tries everything to get her back, then turns away. Even a blank face is enough.</li>
+      <li>Conflict with someone close can register as a threat to the bond, so the brain switches to fight, flight or freeze, fast and automatic. That's why you "forget" every good technique exactly when you need it. "Triggered" means high activation because an old wound was hit.</li>
+      <li>Hannah fights: <em>you're pulling away, so I'll attack before you can hurt me</em>. Timo flees or freezes: <em>if I wall myself off, you can't reach me</em>. Neither gets what they want, which is closeness and understanding.</li>
+      <li>Timo objects that he knows his partner isn't a sabre-toothed tiger. Hannah jokes that he runs from her as if she were one, and he grins: "Your attacks are my sabre-toothed tiger." Hers is withdrawal of love and being left alone. Everyone should know their own tiger.</li>
+      <li>The three steps out are learned like the piano: theory, then clumsy practice, then gradual fluency, with wrong notes on bad days. Step one is <strong>noticing</strong>. About 11 million impressions hit us each second and only around 40 become conscious, so the signals need training.</li>
+      <li>Not every danger mode is loud. Going cold and distant is protection too, and for Hannah it's a warning sign that Timo is fleeing inward.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Exit in the yellow zone</h4>
+      <svg viewBox="0 0 520 260" role="img" aria-label="Chart of emotional activation over the course of a conversation, divided into three bands: green at the bottom for calm and open, yellow in the middle for tense with little capacity, red at the top for in the tunnel. A dashed line rises steadily into the red zone without a pause. A solid green line follows it until the yellow zone, where a dot marks noticing the signal and taking a 30 second to 3 minute pause, after which the line falls back into green.">
+        <rect x="50" y="20" width="450" height="70" fill="color-mix(in srgb, var(--fire) 13%, transparent)"/>
+        <rect x="50" y="90" width="450" height="60" fill="color-mix(in srgb, var(--amber) 15%, transparent)"/>
+        <rect x="50" y="150" width="450" height="70" fill="color-mix(in srgb, var(--calm) 12%, transparent)"/>
+        <text x="58" y="40" font-size="11.5" style="fill:var(--fire)">RED · stressed, in the tunnel</text>
+        <text x="58" y="108" font-size="11.5" style="fill:var(--amber)">YELLOW · tense, little capacity</text>
+        <text x="58" y="168" font-size="11.5" style="fill:var(--calm)">GREEN · calm, open</text>
+        <path d="M50,208 C150,200 220,150 272,116 S400,40 500,30" fill="none" stroke="var(--fire)" stroke-width="2.5" stroke-dasharray="6 5"/>
+        <path d="M50,208 C150,200 220,150 272,116 C300,120 320,176 362,186 S450,180 500,176" fill="none" stroke="var(--calm)" stroke-width="3"/>
+        <circle cx="272" cy="116" r="6" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/>
+        <text x="282" y="140" font-size="11" style="fill:var(--ink)">notice the signal →</text>
+        <text x="282" y="155" font-size="11" style="fill:var(--ink)">pause 30 s–3 min</text>
+        <text x="420" y="58" font-size="11" text-anchor="middle" style="fill:var(--fire)">no pause</text>
+        <text x="440" y="200" font-size="11" text-anchor="middle" style="fill:var(--calm)">with pause</text>
+        <line x1="50" y1="220" x2="500" y2="220" stroke="var(--ink-3)" stroke-width="1"/>
+        <text x="500" y="242" font-size="11" text-anchor="end" style="fill:var(--ink-3)">the conversation goes on →</text>
+        <text x="50" y="242" font-size="11" style="fill:var(--ink-3)">activation ↑</text>
+      </svg>
+      <p class="cap">The pressure traffic light. Yellow is where you can still turn off. By red you only react. Hannah's yellow is "restless and annoyed". She used to stay quiet there so as not to be the one starting a fight, which only made the pressure climb.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card"><b>Murat, 39</b><p>Alone with his two kids, he feels a knot tightening in his stomach and starts grinding his teeth. Then the orders and criticism break out.</p><span class="tiger">his tiger: helplessness, losing control</span></div>
+      <div class="card"><b>Sybell, 20</b><p>On the drive to her mother's she wants to turn back. Sweaty hands at the door; in the argument her voice fails and she goes silent.</p><span class="tiger">her tiger: conflict that could damage the bond</span></div>
+      <div class="card"><b>Jörg, 51</b><p>Passed over by a new boss, he comes home charged up. One snippy remark from his wife, a tingle in his chest, and he sees red.</p><span class="tiger">his tiger: being ignored or belittled</span></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>A pause that works</h4>
+        <ol class="steps c-calm" style="--c:var(--calm)">
+          <li><div><b>Spot your signal and say so</b><span>"I'm in the yellow zone. I want to sort this out with you, but I can't listen right now. Give me a minute?"</span></div></li>
+          <li><div><b>Agree a length and time it</b><span>Anywhere from 30 seconds to three minutes. Some couples use a phone timer, and a code word helps.</span></div></li>
+          <li><div><b>Breathe, don't just wait</b><span>Breathe deep into the belly, hold a few seconds, breathe out through the mouth. Repeat.</span></div></li>
+          <li><div><b>Ask yourself</b><span>What put me under pressure? What feeling came up? Which theme was hit? What is my partner trying to tell me? What's our shared goal?</span></div></li>
+          <li><div><b>Restart with the answer</b><span>"That last sentence touched our theme of not being wanted. Could you hold my hand for a moment?"</span></div></li>
+          <li><div><b>Check the pressure</b><span>Still high? Take a longer break or postpone. Never carry on while both are triggered.</span></div></li>
+        </ol>
+      </div>
+      <div class="fig">
+        <h4>Three ways to train noticing</h4>
+        <div class="lights">
+          <div class="light c-calm"><i></i><div><b>Reflection questions</b><span>Each morning or at night (or while brushing your teeth): how high is my pressure, how heavy was today, did I hit a trigger? Plot it 1–10 if you like.</span></div></div>
+          <div class="light c-amber"><i></i><div><b>Pressure traffic light</b><span>Place yourself in green, yellow or red, and tell people when you move into yellow. Some couples put coloured stickers on a shared calendar.</span></div></div>
+          <div class="light c-fire"><i></i><div><b>Body scan</b><span>A few minutes a day, travel through your body: tingling, tension, pulling, pain? What happens if you consciously let go or breathe into it?</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Experiences That Hold Us Captive</span></div>
+  <div class="body">
+    <div>
+      <h3>Behind the anger is an older hurt</h3>
+      <p class="idea">Each partner reacts not only to the moment, but to everything that happened between them, and long before them.</p>
+    </div>
+    <ul class="points">
+      <li>Timo's family never argued. As a small boy he was sent to his room when he was angry or sad, until he learned to go there himself. So a raised voice means a state of emergency: the bond is at stake, and maybe she's about to leave.</li>
+      <li>"Criticism doesn't have to be shouted to hit you." His father always found something wrong with his performance, and Timo just tried harder. With Hannah he tries to put things right with advice. When that never works, a counter-reaction grows: defiance, "nobody asks me," and finally "I don't care."</li>
+      <li>Elli's first girlfriend lost interest. Elli tried everything (gifts, caring for her parents, reading every wish from her eyes) and was still left for someone new. Now when Francesca makes plans without her, fear of loss surges and she clings. The sense of urgency, <em>I have to do something NOW</em>, is the mark of danger mode.</li>
+      <li>Francesca grew up with rigid rules and a family that wouldn't accept her sexuality. She built a wall to survive their accusations. When she feels hemmed in, the wall goes back up and she turns cold. The colder she gets, the more Elli clings.</li>
+      <li>Hannah is the eldest of four. Her father worked and her mother had her own problems, so Hannah ran the family. She swore never to be as dependent as her mother, and she hates asking for help. When she does ask and Timo forgets, she's angry at herself for depending on him, and the anger keeps him away.</li>
+      <li>Anger often lies over a more vulnerable feeling, like a wounded animal baring its teeth. Hannah's real feeling is being left to fight alone. While only the anger shows, Timo can never learn what these "little things" mean to her.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The pursue–withdraw loop</h4>
+        <svg viewBox="0 0 460 300" role="img" aria-label="A loop between two circles. Left, Hannah, in rust: feels alone, attacks. Right, Timo, in blue: feels he failed, withdraws. An arrow across the top from Hannah to Timo reads gets louder, criticises. An arrow along the bottom from Timo to Hannah reads goes quiet, freezes, leaves. In the middle: each one's protection is the other's trigger.">
+          <defs>
+            <marker id="ah-fire" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--fire)"/></marker>
+            <marker id="ah-ice" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--ice)"/></marker>
+          </defs>
+          <path d="M150,118 C200,48 260,48 312,118" fill="none" stroke="var(--fire)" stroke-width="2.5" marker-end="url(#ah-fire)"/>
+          <path d="M310,184 C260,254 200,254 150,184" fill="none" stroke="var(--ice)" stroke-width="2.5" marker-end="url(#ah-ice)"/>
+          <circle cx="108" cy="150" r="46" fill="color-mix(in srgb, var(--fire) 14%, var(--card))" stroke="var(--fire)" stroke-width="2"/>
+          <circle cx="352" cy="150" r="46" fill="color-mix(in srgb, var(--ice) 14%, var(--card))" stroke="var(--ice)" stroke-width="2"/>
+          <text x="108" y="146" text-anchor="middle" font-size="14" style="fill:var(--ink)">Hannah</text>
+          <text x="108" y="164" text-anchor="middle" font-size="10.5">fire</text>
+          <text x="352" y="146" text-anchor="middle" font-size="14" style="fill:var(--ink)">Timo</text>
+          <text x="352" y="164" text-anchor="middle" font-size="10.5">ice</text>
+          <text x="230" y="40" text-anchor="middle" font-size="11.5" style="fill:var(--fire)">gets louder, criticises</text>
+          <text x="230" y="276" text-anchor="middle" font-size="11.5" style="fill:var(--ice)">goes quiet, freezes, leaves</text>
+          <text x="108" y="218" text-anchor="middle" font-size="10.5">feels alone</text>
+          <text x="108" y="232" text-anchor="middle" font-size="10.5">→ attacks</text>
+          <text x="352" y="218" text-anchor="middle" font-size="10.5">feels he failed</text>
+          <text x="352" y="232" text-anchor="middle" font-size="10.5">→ withdraws</text>
+          <text x="230" y="146" text-anchor="middle" font-size="11" style="fill:var(--ink-3)">each one's protection</text>
+          <text x="230" y="162" text-anchor="middle" font-size="11" style="fill:var(--ink-3)">is the other's trigger</text>
+        </svg>
+        <p class="cap">The full sequence: she gets louder; his tension rises and he goes quiet; she feels rejected and criticises; he feels he's failed again and withdraws further; she loses contact and gets louder; he freezes. Eventually he turns defiant and passive-aggressive, she attacks, and he flees.</p>
+      </div>
+      <div class="fig">
+        <h4>Translate the reaction into the need</h4>
+        <div class="tablecard" style="border:0">
+          <table class="tt">
+            <thead><tr><th scope="col">When I…</th><th class="arrowcell" aria-hidden="true"></th><th scope="col">…I actually need</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" style="color:var(--fire)">get angry</th><td class="arrowcell">=</td><td>more support</td></tr>
+              <tr><th scope="row" style="color:var(--fire)">nag</th><td class="arrowcell">=</td><td>open conversations</td></tr>
+              <tr><th scope="row" style="color:var(--fire)">repeat myself</th><td class="arrowcell">=</td><td>to feel heard</td></tr>
+              <tr><th scope="row" style="color:var(--ice)">go cold</th><td class="arrowcell">=</td><td>more interest in my view</td></tr>
+              <tr><th scope="row" style="color:var(--ice)">cling</th><td class="arrowcell">=</td><td>to feel loved</td></tr>
+              <tr><th scope="row" style="color:var(--ice)">give one-word answers</th><td class="arrowcell">=</td><td>to be understood</td></tr>
+              <tr><th scope="row" style="color:var(--ice)">neglect the relationship</th><td class="arrowcell">=</td><td>more passion</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cap">The first three are Hannah's own; the rest are examples for the reader. Writing your own version makes it easier to look behind the armour.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">How the Past Shapes Us</span></div>
+  <div class="body">
+    <div>
+      <h3>When present and past pour into the same glass, it overflows</h3>
+      <p class="idea">A trigger feels different from a normal feeling: more intense, rigid and fast. That's the sign something old has joined in.</p>
+    </div>
+    <ul class="points">
+      <li>Concepts like the inner child, attachment styles and triggers share one idea: a cue in the present links to an experience from the past and sets off strong feelings and behaviour. Therapists call that link an <strong>affect bridge</strong>.</li>
+      <li>Timo doesn't want to blame his parents. He doesn't have to: this is about understanding, not fault. Most parents do their best, and school, a first love or a past relationship can shape us just as much.</li>
+      <li>"Every time I think Hannah is overreacting, I've hit a trigger?" Not guaranteed, but it's a good starting point for a conversation, as long as nobody raises it from above.</li>
+      <li>Fixating on the current topic and blanking out the past usually fails. Sometimes you need a wide-angle lens on your life to see what you're looking at.</li>
+      <li>The <strong>trigger plan</strong> puts the parts of one pattern on paper. Pick a situation where you reacted strongly, picture it vividly, then go through the five steps below and fill in sentences like "I feel my trigger first in…" and "The intensity comes from a time when I…".</li>
+      <li>If it doesn't fit yet, choose another situation, write only the parts that feel right, repeat it another day, or do it with someone you trust. "When I can't think straight, I'm triggered" is a fine start.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The emotion glass</h4>
+        <svg viewBox="0 0 460 270" role="img" aria-label="Two glasses. The left glass, labelled an ordinary annoyance, is filled about a quarter with amber liquid for the situation itself. The right glass, labelled a trigger, has the same amber quarter at the bottom, then a large rust layer above it for feelings from the past, filling it to the brim and spilling over both sides.">
+          <defs>
+            <clipPath id="g1"><polygon points="70,40 170,40 160,220 80,220"/></clipPath>
+            <clipPath id="g2"><polygon points="290,40 390,40 380,220 300,220"/></clipPath>
+          </defs>
+          <g clip-path="url(#g1)">
+            <rect x="60" y="176" width="120" height="50" fill="color-mix(in srgb, var(--amber) 55%, var(--card))"/>
+          </g>
+          <g clip-path="url(#g2)">
+            <rect x="280" y="176" width="120" height="50" fill="color-mix(in srgb, var(--amber) 55%, var(--card))"/>
+            <rect x="280" y="40" width="120" height="136" fill="color-mix(in srgb, var(--fire) 50%, var(--card))"/>
+          </g>
+          <polygon points="70,40 170,40 160,220 80,220" fill="none" stroke="var(--ink-2)" stroke-width="2"/>
+          <polygon points="290,40 390,40 380,220 300,220" fill="none" stroke="var(--ink-2)" stroke-width="2"/>
+          <path d="M290,40 C280,38 276,52 278,70 C279,86 274,100 270,112" fill="none" stroke="color-mix(in srgb, var(--fire) 60%, var(--card))" stroke-width="7" stroke-linecap="round"/>
+          <path d="M390,40 C400,38 404,56 402,76 C401,92 406,106 410,124" fill="none" stroke="color-mix(in srgb, var(--fire) 60%, var(--card))" stroke-width="7" stroke-linecap="round"/>
+          <path d="M296,40 C320,30 360,30 384,40" fill="color-mix(in srgb, var(--fire) 50%, var(--card))" stroke="none"/>
+          <circle cx="268" cy="130" r="4" fill="color-mix(in srgb, var(--fire) 60%, var(--card))"/>
+          <circle cx="412" cy="142" r="4" fill="color-mix(in srgb, var(--fire) 60%, var(--card))"/>
+          <text x="120" y="244" text-anchor="middle" font-size="12.5" style="fill:var(--ink)">an ordinary annoyance</text>
+          <text x="340" y="244" text-anchor="middle" font-size="12.5" style="fill:var(--ink)">a trigger</text>
+          <text x="120" y="262" text-anchor="middle" font-size="10.5" style="fill:var(--amber)">the situation: ~20–30%</text>
+          <text x="340" y="262" text-anchor="middle" font-size="10.5" style="fill:var(--fire)">+ old hurts from the past</text>
+        </svg>
+        <p class="cap">From outside the reaction looks out of proportion. Add the feelings from the past and it makes sense.</p>
+      </div>
+      <div class="fig">
+        <h4>Six common trigger combinations</h4>
+        <div class="tablecard" style="border:0">
+          <table class="tt">
+            <thead><tr><th scope="col">Feeling</th><th scope="col">Behaviour</th><th scope="col">Where it came from (example)</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Not heard</th><td>Attack</td><td>Hardly anyone cared as a child; learned to fight</td></tr>
+              <tr><th scope="row">Fear of abandonment</th><td>Control</td><td>An earlier betrayal in the relationship</td></tr>
+              <tr><th scope="row">Guilt</th><td>Shutting down</td><td>Taught to keep negative feelings private</td></tr>
+              <tr><th scope="row">Hemmed in</th><td>Withdrawal</td><td>An ex who took over completely</td></tr>
+              <tr><th scope="row">Not good enough</th><td>Ignoring own needs</td><td>An ex who said you'd never measure up</td></tr>
+              <tr><th scope="row">Powerless</th><td>Freezing</td><td>Measured only by performance as a child</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="fig">
+      <h4>Your trigger plan in five steps</h4>
+      <ol class="chain">
+        <li class="c-calm"><b>Body signals</b><span>Heat, sweaty palms, pressure on the chest, clenched jaw, no eye contact, foot tapping…</span></li>
+        <li class="c-gold"><b>Relationship theme</b><span>Missing empathy, support, trust, security, priority, freedom, appreciation…</span></li>
+        <li class="c-amber"><b>Feeling</b><span>Excluded, alone, never doing it right, a disappointment, replaceable, guilty, powerless…</span></li>
+        <li class="c-fire"><b>Behaviour</b><span>Attack, control, criticism, flight, freezing, coldness, sarcasm, passive aggression…</span></li>
+        <li class="c-ice"><b>Background</b><span>Where did I learn this? Since when? "My opinion was never heard." "It was my job that everyone was fine."</span></li>
+      </ol>
+      <p class="cap">What you write down is your old strategy, run as a survival mechanism and practised for years without being questioned. Now you can see what it looks like and where it came from.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Finding a New Strategy</span></div>
+  <div class="body">
+    <div>
+      <h3>Don't fight the trigger. Tend the wound.</h3>
+      <p class="idea">You can't delete experiences or the feelings they set off. You can change what you do when they arrive.</p>
+    </div>
+    <ul class="points">
+      <li>A common mistake at this stage is putting pressure on yourself never to fall back, and condemning your patterns. Trying to feel "nothing" takes enormous energy, and the pressure comes out later as an explosion or as love slowly going cold. She compares it to a car crusher.</li>
+      <li>Patterns once had a purpose. A child with a hot-tempered father learns to read every mood and stay invisible. Thirty years later the same adult is hypersensitive to bad atmosphere and can't voice a need. Therapist Terrence Real calls this part the <strong>adaptive child</strong>. Sort behaviour into "helpful" and "no longer helpful," not good and bad.</li>
+      <li>The same goes for the "what do others think of me" voice: it grew up as protection against criticism from a demanding parent or coach. Criticising yourself for being self-critical only doubles the pressure.</li>
+      <li>You'd never leave a burnt hand on the stove. You'd cool it, put ointment on it and bandage it. Emotional wounds deserve the same: stop when you notice an emergency, calm the body, understand what happened, then talk.</li>
+      <li>Tell your partner what you're doing before you do it. Getting up and leaving without a word can itself hurt the other person.</li>
+      <li>Timo goes onto the balcony, breathes, watches people below, reads his pattern on his phone, and tells himself on the way back in, "We're a team." Hannah makes tea, writes down what she wants to say, reads her notebook and pictures the overwhelmed little girl in her. Timo learns his tone matters too: "You're getting loud again" said from above lands as "you're the problem."</li>
+    </ul>
+
+    <div class="fig">
+      <h4>First aid: four ways to bring activation down</h4>
+      <div class="cards">
+        <div class="card" style="border-top:4px solid var(--fire)"><b>1 · Move</b><p>Shake yourself out, walk round the block, squats, push-ups, stairs, a short HIIT round. Also loosen a body that has frozen mid-talk.</p><span class="label">"I need to move, my tension's getting too high."</span></div>
+        <div class="card" style="border-top:4px solid var(--amber)"><b>2 · Shift attention</b><p>Count breaths, solve a sudoku, name everything starting with L, recite lyrics, say the alphabet backwards. Not social media, which floods the brain.</p><span class="label">"Want to count to 100 with me?"</span></div>
+        <div class="card" style="border-top:4px solid var(--ice)"><b>3 · Make distance</b><p>Balcony, garden, the next room, a walk, or a calming safe place you visit in your mind with all your senses.</p><span class="label">"Back in ten minutes. I want to sort this out today."</span></div>
+        <div class="card" style="border-top:4px solid var(--calm)"><b>4 · Use the senses</b><p>Ice cubes in your hand, cold water on your wrists, frozen peas on your chest, something sour or spicy, a scented oil, loud music.</p><span class="label">"This oil always helps me. Want to try?"</span></div>
+      </div>
+    </div>
+
+    <div class="compare">
+      <div class="c-fire"><h5>First aid: lower the intensity</h5><ul><li>Spot the warning signal and pause</li><li>Use one or two of the four strategies</li><li>Check: calmer, but is the feeling still in your body?</li></ul></div>
+      <div class="c-calm"><h5>Aftercare: understand and soothe</h5><ul><li>Read your trigger plan (keep it where you go to calm down)</li><li>Make contact with the hurt part: a child, a wounded animal, a colour</li><li>Picture a wise, loving figure going to it, or write it all down and reread it as if a friend wrote it</li><li>Return with: what triggered me, which wound was hit, what would help me now?</li></ul></div>
+    </div>
+
+    <div class="story">
+      <span class="label">What coming back can sound like</span>
+      <p>"I just ran straight into my pattern, sorry. Those last sentences hit me so hard I couldn't think. I've felt alone a lot lately and that went right into the wound. I'm calmer now, we can keep talking. Just be a bit careful with me there. Could we hug for a moment?"</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">The Understanding Formula</span></div>
+  <div class="body">
+    <div>
+      <h3>Where understanding ends, the fight begins</h3>
+      <p class="idea">Even calm couples go round in circles if both still want to win. First both people need to feel understood.</p>
+    </div>
+    <ul class="points">
+      <li>Most couples skip this step and try to settle disputes without having understood each other, like doing a jigsaw blindfolded. Think of a sports team: you listen to a teammate's criticism because you're still playing for the same goal.</li>
+      <li>Three early signs that understanding has broken: <strong>repetition</strong> (you wouldn't need to say it again if you felt understood), <strong>tempo</strong> (faster speech, interrupting, firing arguments) and <strong>body language</strong> (crossed arms, narrowed eyes, loud sighs).</li>
+      <li>In session, the day after Timo phoned from the street to say he was off to see his friend Andreas, both are asked whether they feel understood. "No!" they say in unison. So that comes first.</li>
+      <li>Hannah, asked to dig deeper, finds the common denominator: being left alone, "like always." Timo takes her hand.</li>
+      <li>Understanding works short term (it defuses a tense moment) and long term: you start to see the wound behind the coping behaviour and take less personally. Where "he just doesn't love me" used to be the explanation, there's now a better one.</li>
+      <li>You don't have to share the other person's opinion to understand them.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>VOR communication: the condition for solving anything</h4>
+      <div class="pillars">
+        <div class="pillar c-gold"><span class="big">V</span><b>Verständnisvoll · understanding</b><span>You know the background, can feel what the other feels, take their view seriously, and say so.</span></div>
+        <div class="pillar c-ice"><span class="big">O</span><b>Offen · open</b><span>There's room inside you for their opinion. Open people ask follow-up questions because they want to get it.</span></div>
+        <div class="pillar c-calm"><span class="big">R</span><b>Ruhig · calm</b><span>The opposite of triggered. Feelings stay below a threshold, which is what the regulation strategies are for.</span></div>
+      </div>
+      <p class="cap">The German acronym also means "before": this conversation comes before the one about the actual issue, and it always goes to the top of the list.</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Speak and mirror</h4>
+        <ol class="steps" style="--c:var(--gold)">
+          <li><div><b>Prepare alone</b><span>Where do I not yet feel understood? What information is my partner missing?</span></div></li>
+          <li><div><b>Book a talk just for understanding</b><span>Not for solving current problems. Get calm and open first, then each picks one important topic.</span></div></li>
+          <li><div><b>Speak without interruption</b><span>"I think you don't know the story that makes this so hard for me." The listener lets it in emotionally.</span></div></li>
+          <li><div><b>Ask, then mirror</b><span>"What I heard is… For you it feels as if… When you feel X, it shows up as Y."</span></div></li>
+          <li><div><b>Swap when the speaker feels understood</b><span>Let it sink in for a few days and use what you learned next time things get tense.</span></div></li>
+        </ol>
+      </div>
+      <div class="fig">
+        <h4>Two more exercises</h4>
+<pre class="ifthen"><span class="c">// What if: test where the trigger sits</span>
+<span class="k">What if</span> I went out with friends
+  but told you a day ahead?
+<span class="k">What if</span> I came home late
+  but texted on the way?
+
+<span class="c">// Role swap: speak as your partner, in "I"</span>
+Hannah (as Timo): "When she gets louder
+  I feel I'm not allowed to speak, and I
+  worry it's about to escalate again."</pre>
+        <p class="cap">The swap quickly shows what you've understood and what you haven't. If unsure, ask for help.</p>
+      </div>
+    </div>
+
+    <div class="tablecard">
+      <div class="scroll-x">
+        <table class="tt wide">
+          <thead><tr><th scope="col">Person</th><th scope="col">Old pattern</th><th scope="col">Way in</th><th scope="col">Regulation</th><th scope="col">What they communicate</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Tessa</th><td>Swallows "I'm not loved" until the pressure bursts out as attacks</td><td>Reflects on the fight in the evening on the couch</td><td>Inner child: a photo of herself at five, playing alone in the garden</td><td>Tells her partner what she needs and shows the vulnerable side</td></tr>
+            <tr><th scope="row">Fatima</th><td>Feels unfairly criticised, goes silent and resists</td><td>A humorous signal line: "I'm stuck in the ice age"</td><td>A long walk with her favourite music</td><td>Explains her hurt calmly and says what she understood of his side</td></tr>
+            <tr><th scope="row">Max</th><td>"Being a disappointment + criticising": the feeling hits like a punch, he turns harsh</td><td>Remembers he never wanted to be like his critical grandfather</td><td>Writes his thoughts and feelings down</td><td>Admits he feels like a disappointment, and that he knows how it feels on the other side</td></tr>
+            <tr><th scope="row">Ivan</th><td>Caught between his mother and his fiancée, he shuts down and just endures</td><td>Talks to his fiancée before each visit: he'll be tense, don't take it personally</td><td>Sport afterwards to clear the pressure in his chest</td><td>Opens up, talks hard situations through and asks how she feels</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Where understanding ends, the fight begins.”</blockquote>
+      <span class="label">Anouk Algermissen (my translation). Part 2 in one line: notice → classify → change → communicate and solve</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="grow">
+  <span class="label partno">Part 3 · Chapters 11–14</span>
+  <h2>Grow together</h2>
+  <p class="lede">Handling hot moments is only half of it. The other half is keeping fights from building up, repairing them when they happen, and keeping a good loop going.</p>
+</div>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Repairing What Broke</span></div>
+  <div class="body">
+    <div>
+      <h3>What broke has to be repaired</h3>
+      <p class="idea">Raise things while pressure is low. After a fight, hold a repair talk instead of just carrying on.</p>
+    </div>
+    <ul class="points">
+      <li>A conversation has limited resources. If 90% goes on calming down, little is left for solving. So talk about what bothers you early, before it ferments.</li>
+      <li>Two ways to find your themes: a <strong>journal</strong> at least weekly (when did I say nothing although something bothered me, and how does it tie to my triggers?) and <strong>meditation</strong>, where after the itchy legs and to-do lists the bigger themes surface.</li>
+      <li>Timo, on a quiet Sunday, writes a "weekly reflection": she planned the weekend without asking him, which fits his theme of not being seen. Conflict fear sends him to the balcony to calm down. He texts her to suggest a speak-and-mirror talk that evening. Midway he catches himself: "Wait, I only said the criticism. What I'd wish instead is that we plan it together." Hannah: "Phew, I nearly started justifying myself."</li>
+      <li>Without repair, gaps between fights get shorter: each hurt makes you quicker to feel attacked, quicker to strike, and more suspicious.</li>
+      <li>In a repair talk, content and blame don't matter. Look at the problem together instead of making each other the problem. Anger and boundaries are allowed, but staying stuck in blame fixes nothing.</li>
+      <li>Start with understanding and drop the "but". "I see your side. <em>But</em> you have to consider…" cancels itself. People stop listening after the second sentence if they don't appear in it.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The repair conversation in six steps</h4>
+        <ol class="steps" style="--c:var(--calm)">
+          <li><div><b>Regulate and reflect alone</b><span>What hurt me, which theme was hit, what should I say? Test: could I really let their view into my heart? If not, you're not ready.</span></div></li>
+          <li><div><b>Set a concrete time</b><span>Soon. Reconnecting has priority.</span></div></li>
+          <li><div><b>Agree what happened</b><span>Find a shared story, e.g. "We didn't notice it slipping, a misunderstanding caught us, and we both fell into our old patterns."</span></div></li>
+          <li><div><b>Find the tipping point</b><span>Where did a normal talk become a fight? Which warning signals did each of you miss?</span></div></li>
+          <li><div><b>Understand the other first</b><span>"Maybe you were as hurt as I was. I know how hard it is for you when I go cold."</span></div></li>
+          <li><div><b>Say your view and wishes</b><span>Be concrete: what hurt, which trigger, what should change in future.</span></div></li>
+        </ol>
+      </div>
+      <div class="fig">
+        <h4>Before, during and after a fight</h4>
+        <div class="compare three" style="grid-template-columns:1fr">
+          <div class="c-calm"><h5>Before</h5><ul><li>Reflection questions</li><li>Journal</li><li>Talk regularly</li></ul></div>
+          <div class="c-amber"><h5>During</h5><ul><li>VOR communication</li><li>Name the grinding</li><li>Take pauses</li><li>Regulation strategies</li></ul></div>
+          <div class="c-ice"><h5>After</h5><ul><li>Regulation strategies</li><li>Repair conversation</li><li>VOR communication</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">The Positive Cycle</span></div>
+  <div class="body">
+    <div>
+      <h3>From vicious circle to a cycle of appreciation</h3>
+      <p class="idea">Every couple has resources, things that give strength and connect them. Reactivate them on purpose and keep talking about the hard stuff.</p>
+    </div>
+    <ul class="points">
+      <li>Hannah and Timo now sit close together on the couch. Timo feels his opinion counts when they plan; Hannah sees him pitch in and listen. What's missing is a fixed time for deeper talks.</li>
+      <li>Early on, their best conversations happened walking his parents' dog. Evenings are too tiring, so they settle on Saturday-morning walks.</li>
+      <li>Ask yourselves: what keeps us stuck, and which behaviour of A sets off which feeling in B? What helps us move towards each other? What routines keep us in the good loop?</li>
+      <li>Setbacks are part of it. Two of the five couples below relapse under pressure and find their way back.</li>
+    </ul>
+    <div class="tablecard">
+      <div class="scroll-x">
+        <table class="tt wide">
+          <thead><tr><th scope="col">Couple</th><th scope="col">Vicious circle</th><th scope="col">The jump</th><th scope="col">Staying in the good loop</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Hannah and Timo</th><td>She feels unsupported and attacks; he feels belittled and withdraws</td><td>She regulates and understands his retreat; he shows his feelings</td><td>Saturday walks; his journal; her sport to shed work stress; she asks for his view</td></tr>
+            <tr><th scope="row">Elli and Francesca</th><td>Francesca seeks freedom, Elli clings, Francesca snipes: a closeness–distance trap</td><td>A long understanding talk; Elli voices wishes without hemming her in</td><td>Relapse when Elli's mother falls ill; Francesca shows she can be relied on. They take turns planning outings and keep their own time.</td></tr>
+            <tr><th scope="row">Antonia and Yasin</th><td>He's absorbed by work; she turns snippy and passive-aggressive; he retreats further</td><td>She learns to name her need for closeness; he looks behind her anger</td><td>He plans date nights and finishes tasks before they talk; never leaving without a goodbye kiss</td></tr>
+            <tr><th scope="row">Evelyn and Jannik</th><td>His jealousy and accusations; she hides things; he grows more suspicious</td><td>He works through his trigger plan and explains where it comes from</td><td>Relapse on holiday, then a repair talk. He shakes out tension mid-talk; they phone on the way home from work.</td></tr>
+            <tr><th scope="row">Torben and Emanuel</th><td>Torben carries everything and blames; Emanuel withdraws, leaving more on Torben</td><td>Repair talks and weekly reflection; Torben lets go of responsibility</td><td>Monthly long car rides to Torben's nephew in the country as a safety net</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Typical Problems and Fixes</span></div>
+  <div class="body">
+    <div>
+      <h3>Ten common snags</h3>
+      <p class="idea">A reference chapter to come back to when something stalls.</p>
+    </div>
+    <div class="tkgrid">
+      <div class="tk"><b>1 · Too stressed for the relationship</b><span>Refill your own reserves at least once a week, and put relationship talks in the calendar.</span></div>
+      <div class="tk"><b>2 · Conflict fear stops me starting</b><span>Write your thoughts down, turn them into a letter or message, then prepare for a spoken talk.</span></div>
+      <div class="tk"><b>3 · I can't control my emotions</b><span>Learn your warning signals better, use regulation preventively, and run "What if" together.</span></div>
+      <div class="tk"><b>4 · My partner can't take criticism</b><span>Criticism may be part of their trigger. Ask what it means to them and what would help.</span></div>
+      <div class="tk"><b>5 · I struggle to name my needs</b><span>Ask yourself daily what you want. Find where the belief "my needs burden others" came from.</span></div>
+      <div class="tk"><b>6 · What I say doesn't land</b><span>In danger mode nothing new goes in. Make sure you're both calm, then repeat it. Try speak and mirror.</span></div>
+      <div class="tk"><b>7 · No time for all this</b><span>Start with one small ritual: a conscious hug, a kind text, a call on the way to work.</span></div>
+      <div class="tk"><b>8 · Setbacks</b><span>"We got out once, we can do it again." Remember how, reread the book, make a plan together.</span></div>
+      <div class="tk"><b>9 · We can't find solutions</b><span>Check your VOR first. Then look for what works for both and what neither wants.</span></div>
+      <div class="tk"><b>10 · We miss the exit point</b><span>Plan important talks. Set a one-hour timer and a repeating five-minute one to check activation.</span></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">In Closing</span></div>
+  <div class="body">
+    <div>
+      <h3>Not perfection, but the next attempt</h3>
+      <p class="idea">Combine emotion regulation with understanding for the other person's inner world, and you're on the right path.</p>
+    </div>
+    <ul class="points">
+      <li>In their last session Hannah describes the armour of anger she wore and how she had to learn to stay with herself and show her soft core. Timo describes his wall and how he became more self-assured by speaking up before things escalate.</li>
+      <li>What helped most: for Timo, time to reflect, and when he skips it the old problems return within weeks. For Hannah, deep talks where both actively listen.</li>
+      <li>What they'll tell themselves next time. Hannah: <em>give him a chance, regulate, and remember that "it's all his fault" only drives you apart</em>. Timo: <em>she's as sad and hurt as I am; we work as a team</em>.</li>
+      <li>Her closing message: be patient, getting tangled up is normal, and those moments are the chance to get closer. It doesn't matter who is right, only that you come together as a team.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the book's exercises</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book closes with six points in quick succession. Here they are with the exercises that go with them, grouped by what they do.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Notice</h3>
+      <div class="tk"><b>See your dynamic from above</b><span>Which themes have built up? How do you interpret the other's behaviour? What does each of you add to the loop?</span></div>
+      <div class="tk"><b>Learn your warning signals</b><span>Body scan, daily reflection questions, and the green–yellow–red light, shared with your partner.</span></div>
+      <div class="tk"><b>Listen for the grinding</b><span>Repetition, going in circles, irritation. Say it out loud: "It's grinding."</span></div>
+      <div class="tk"><b>Write your trigger plan</b><span>Body signal → theme → feeling → behaviour → background. Keep it where you go to calm down.</span></div>
+    </div>
+    <div class="col">
+      <h3>Calm</h3>
+      <div class="tk"><b>Pause in yellow</b><span>Announce it, 30 seconds to 3 minutes, timed, breathing, then the reflection questions.</span></div>
+      <div class="tk"><b>Pick your first aid</b><span>Movement, attention shift, distance or senses. Test a few and note your favourites.</span></div>
+      <div class="tk"><b>Do the aftercare</b><span>Reread your plan, comfort the hurt part, return with "what triggered me and what would help."</span></div>
+      <div class="tk"><b>Accept, don't fight</b><span>The pattern once protected you. Sort it into "no longer helpful," not "bad."</span></div>
+    </div>
+    <div class="col">
+      <h3>Connect</h3>
+      <div class="tk"><b>VOR before solving</b><span>Understanding, open, calm. If either doesn't feel understood, that's the first job.</span></div>
+      <div class="tk"><b>Speak and mirror</b><span>Plus "What if" and the role swap, to learn each other's triggers.</span></div>
+      <div class="tk"><b>Repair every fight</b><span>Six steps, a shared story, "I understand you" first, no "but".</span></div>
+      <div class="tk"><b>Make openness a routine</b><span>A weekly walk, drive or date night where feelings and needs get said early.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Anouk Algermissen, <em>Getriggert? Wie wir unsere Beziehungen stärken, indem wir unsere Emotionen regulieren und gelassener kommunizieren</em> (mvg Verlag, 2024), read in the German edition. Quotes and terms are my translations. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  function hex(c) {
+    c = c.replace("#", "");
+    if (c.length === 3) c = c.split("").map(function (x) { return x + x; }).join("");
+    var n = parseInt(c, 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+  function mix(a, b, t) {
+    return "rgb(" + [0, 1, 2].map(function (i) { return Math.round(a[i] + (b[i] - a[i]) * t); }).join(",") + ")";
+  }
+
+  /* --- Hero: ripples from a trigger point, tight and hot near the source, wide and calm further out --- */
+  var canvas = document.getElementById("ripples");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, cols = null;
+  function readCols() { cols = [hex(css("--fire")), hex(css("--amber")), hex(css("--ice"))]; }
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function colourAt(u) {
+    return u < 0.45 ? mix(cols[0], cols[1], u / 0.45) : mix(cols[1], cols[2], (u - 0.45) / 0.55);
+  }
+  var RINGS = 16;
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var cx = Math.min(56, w * 0.06), cy = hgt / 2, maxR = w * 1.02;
+    var phase = reduce ? 0 : (time * 0.00006) % 1;
+    for (var k = 0; k < RINGS; k++) {
+      var u = (k / RINGS + phase) % 1;               // 0 at the source → 1 far out
+      var r = 6 + maxR * Math.pow(u, 1.55);          // tight near the source, wide apart later
+      ctx.beginPath();
+      ctx.ellipse(cx, cy, r, Math.max(2, r * 0.32), 0, 0, Math.PI * 2);
+      ctx.strokeStyle = colourAt(u);
+      ctx.globalAlpha = 0.95 - u * 0.6;
+      ctx.lineWidth = 3.2 - u * 2.2;
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+    ctx.beginPath();
+    ctx.arc(cx, cy, 5, 0, Math.PI * 2);
+    ctx.fillStyle = mix(cols[0], cols[0], 0);  // the trigger point
+    ctx.fill();
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  readCols(); size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  var recolour = function () { readCols(); draw(performance.now()); };
+  if (mq.addEventListener) mq.addEventListener("change", recolour);
+  new MutationObserver(recolour).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

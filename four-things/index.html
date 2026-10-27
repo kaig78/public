@@ -1,0 +1,1429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Four Things That Matter Most by Ira Byock – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from the cover: cream linen paper, the red-orange
+   title, the brass of the compass, the crimson ribbon, and the steel of the needle.
+   Each of the Four Things (plus good-bye) gets one of them. */
+:root {
+  --paper: #f6f3ee;
+  --paper-2: #ebe5dc;
+  --card: #fffdf9;
+  --ink: #1d1714;
+  --ink-2: #51463f;
+  --ink-3: #7f736a;
+  --rule: #dcd3c7;
+
+  /* the four things + good-bye */
+  --forgive: #c4452a;
+  --thanks: #946812;
+  --love: #ad2b55;
+  --bye: #3b6579;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #14110f;
+    --paper-2: #1e1a17;
+    --card: #231e1b;
+    --ink: #f1ebe4;
+    --ink-2: #bdb2a7;
+    --ink-3: #8e8379;
+    --rule: #362f2a;
+    --forgive: #ff7b55;
+    --thanks: #e2b552;
+    --love: #ff6f98;
+    --bye: #7db6d1;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14110f;
+  --paper-2: #1e1a17;
+  --card: #231e1b;
+  --ink: #f1ebe4;
+  --ink-2: #bdb2a7;
+  --ink-3: #8e8379;
+  --rule: #362f2a;
+  --forgive: #ff7b55;
+  --thanks: #e2b552;
+  --love: #ff6f98;
+  --bye: #7db6d1;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--bye); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Colour helpers: one per phrase */
+.c-forgive { --c: var(--forgive); }
+.c-thanks  { --c: var(--thanks); }
+.c-love    { --c: var(--love); }
+.c-bye     { --c: var(--bye); }
+.tint { background: color-mix(in srgb, var(--c) 10%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 650; font-size: clamp(18px, 2vw, 24px); color: var(--forgive); margin-bottom: 10px; display: block; }
+.hero h1 {
+  font-size: clamp(60px, 11vw, 140px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 921;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 20, 10, .35), 0 8px 18px -10px rgba(40, 20, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.waveband { position: relative; margin-top: 28px; }
+.waveband canvas { display: block; width: 100%; height: 120px; }
+.waveband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--c, var(--ink));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; color: var(--c, var(--ink-3)); }
+.part .epigraph { grid-column: 1 / -1; font-style: italic; color: var(--ink-2); max-width: 60ch; font-size: 17px; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--c, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--c, var(--ink));
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg text.serif { font-family: var(--body); fill: var(--ink); }
+.fig svg text.disp { font-family: var(--display); font-weight: 800; fill: var(--ink); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--c, var(--ink)); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 24px; font-weight: 850; font-stretch: 112%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px; font-size: 15.5px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 15.5px; }
+
+/* ---------- The eleven words ---------- */
+.two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.phrases { display: grid; gap: 4px; }
+.phrase { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--rule); }
+.phrase:first-child { border-top: 0; }
+.phrase b {
+  font-family: var(--display); font-weight: 850; font-stretch: 110%;
+  font-size: clamp(28px, 3.6vw, 44px); line-height: 1; letter-spacing: -.02em; color: var(--c);
+}
+.phrase span { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); text-align: right; }
+.phrase.bye b { color: var(--ink-2); font-weight: 700; font-style: normal; }
+
+/* what forgiveness is / isn't */
+.predict { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.predict ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.predict li { display: flex; gap: 10px; align-items: baseline; font-size: 16px; }
+.predict li::before { font-family: var(--mono); font-size: 13px; width: 16px; flex: none; }
+.predict .no li { color: var(--ink-3); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--forgive) 70%, transparent); }
+.predict .no li::before { content: "✕"; color: var(--forgive); text-decoration: none; }
+.predict .yes li::before { content: "✓"; color: var(--bye); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .say { font-style: italic; font-size: 17px; color: var(--ink); }
+
+/* the 3x5 index card */
+.card35 {
+  position: relative;
+  max-width: 420px;
+  aspect-ratio: 5 / 3;
+  background:
+    linear-gradient(transparent 0 34px, color-mix(in srgb, var(--forgive) 55%, transparent) 34px 35.5px, transparent 35.5px),
+    repeating-linear-gradient(transparent 0 25px, color-mix(in srgb, var(--bye) 22%, transparent) 25px 26px);
+  background-color: #fffef8;
+  color: #2a2420;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 14px 28px -14px rgba(40, 20, 10, .4);
+  transform: rotate(-1.2deg);
+  padding: 8px 22px 12px 22px;
+  font-family: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+  font-size: 19px;
+  line-height: 26px;
+}
+.card35 .hd { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; color: #8a7c70; height: 26px; display: block; }
+.card35 ol { margin: 4px 0 0; padding-left: 22px; }
+:root[data-theme="dark"] .card35 { background-color: #f3eee2; }
+
+/* chips: ways to say it */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15.5px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); }
+.chip.solid { background: color-mix(in srgb, var(--c) 14%, var(--card)); }
+
+/* eulogy list */
+.eulogy { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.eulogy li { font-family: var(--display); font-weight: 750; font-stretch: 104%; font-size: 19px; line-height: 1.25; padding-left: 28px; position: relative; }
+.eulogy li::before { content: "→"; position: absolute; left: 0; color: var(--c); }
+
+/* biography of joy */
+.joy { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 8px; }
+.joy div { border-radius: 6px; padding: 14px; background: color-mix(in srgb, var(--thanks) calc(6% + var(--i) * 4%), var(--card)); display: grid; gap: 4px; align-content: start; }
+.joy b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 16px; }
+.joy span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* letter */
+.letter { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; display: grid; gap: 10px; max-width: 56ch; font-style: italic; color: var(--ink); }
+.letter p { font-size: 17.5px; }
+.letter .sig { font-style: normal; font-family: var(--mono); font-size: 13px; color: var(--ink-3); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--c, var(--ink)); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.cases div { border-radius: 6px; padding: 14px; border: 1px dashed color-mix(in srgb, var(--c) 60%, var(--rule)); display: grid; gap: 4px; align-content: start; }
+.cases b { font-family: var(--display); font-weight: 800; font-stretch: 105%; color: var(--c); }
+.cases span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .two-col, .epilogue, .part { grid-template-columns: 1fr; }
+  .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter > * { min-width: 0; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .predict, .compare, .cases { grid-template-columns: 1fr; }
+  .card35 { font-size: 16px; line-height: 22px; padding: 6px 16px 10px; }
+  .card35 .hd { height: 22px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Ira Byock · 10th anniversary edition</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#framework">Four Things</a>
+    <a href="#forgiveness">Forgiveness</a>
+    <a href="#thanks">Thank you</a>
+    <a href="#love">I love you</a>
+    <a href="#goodbye">Good-bye</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <span class="kicker">The</span>
+    <h1><span>Four</span><span>Things</span></h1>
+    <p class="sub">That matter most: a book about living</p>
+    <p class="dek">A palliative care doctor's case that four short sentences can complete any relationship, and that nobody needs a deathbed to say them.</p>
+    <div class="byline label">
+      <span>23 chapters</span><span>5 parts</span><span>4 sentences, 11 words</span><span>~60,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Four Things That Matter Most by Ira Byock: red-orange serif title on cream linen, a small brass compass, and a red ribbon reading A Book About Living">
+</div>
+
+<div class="waveband" aria-hidden="true">
+  <canvas id="rings"></canvas>
+  <div class="ends label"><span>Things left unsaid</span><span>Nothing left unsaid</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Say the obvious before it's too late</h2>
+  </div>
+  <div class="two-col">
+    <div class="prose">
+      <p>Ira Byock spent his career in emergency rooms and then in hospice and palliative care. Ask someone on the way into surgery or into a third round of chemo what's on their mind, he says, and the answer is always the people they love. Always. Facing death shows that relationships are what we treasure most.</p>
+      <p>The book boils what dying people taught him down to four sentences: <strong>Please forgive me. I forgive you. Thank you. I love you.</strong> Eleven words in all. Byock adds a fifth act, <strong>good-bye</strong>, said as a blessing rather than a reflex.</p>
+      <p>His point isn't that these words are magic. It's that we assume the people we love already know, and then someone dies suddenly and we're left with doubts. A saying in his field sums it up: <em>it's always too soon, until it's too late.</em> So he argues for stating the obvious now, with parents, children, partners and friends, while everyone is well.</p>
+      <p>The rest of the book is stories, mostly from people at the end of life. Each part takes one of the Four Things, then a final part on <a href="#goodbye">saying good-bye</a>.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The whole method</span>
+      <div class="phrases">
+        <div class="phrase c-forgive"><b>Please forgive me.</b><span>mend</span></div>
+        <div class="phrase c-forgive"><b style="opacity:.72">I forgive you.</b><span>mend</span></div>
+        <div class="phrase c-thanks"><b>Thank you.</b><span>tend</span></div>
+        <div class="phrase c-love"><b>I love you.</b><span>celebrate</span></div>
+        <div class="phrase c-bye bye"><b>…and good-bye.</b><span>bless</span></div>
+      </div>
+      <div class="story c-love">
+        <span class="label">The author's own test</span>
+        <p>Byock's mother read the galleys of this book, so the two of them sat down for the conversation. Even for the man who wrote it, it wasn't easy. He apologised for the worry he caused her as a hitchhiking, protesting college student, forgave her for smothering him, thanked her for a list of specific memories, and they said "I love you". Years later she died of a heart attack at the wheel, with no chance to say good-bye. He still misses her, but nothing important was left unsaid.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col c-bye" style="--c:var(--ink)">
+      <span class="label">Part 1</span>
+      <h3>The Four Things</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Saying the Four Things</b>Eleven words, any time</a></li>
+        <li><span>02</span><a href="#ch2"><b>The Healing Power of Words</b>Don't squelch the hard talk</a></li>
+        <li><span>03</span><a href="#ch3"><b>Completing Relationships</b>Complete isn't the same as ended</a></li>
+        <li><span>04</span><a href="#ch4"><b>Transformations</b>Depth, not length</a></li>
+      </ol>
+    </div>
+    <div class="col c-forgive">
+      <span class="label">Part 2</span>
+      <h3>Forgiveness</h3>
+      <ol>
+        <li><span>05</span><a href="#ch5"><b>Loved Ones Live On Inside Us</b>A tale of two siblings</a></li>
+        <li><span>06</span><a href="#ch6"><b>Resolving a Legacy of Pain</b>It can stop with me</a></li>
+        <li><span>07</span><a href="#ch7"><b>The Emotional Economics of Forgiveness</b>Pay once, not forever</a></li>
+        <li><span>08</span><a href="#ch8"><b>Extreme Acts of Forgiveness</b>Forgive without absolving</a></li>
+        <li><span>09</span><a href="#ch9"><b>Forgiving Yourself</b>Mercy for the main character</a></li>
+        <li><span>10</span><a href="#ch10"><b>Living with Uncertainty and Illness</b>Being sick isn't undignified</a></li>
+        <li><span>11</span><a href="#ch11"><b>A Legacy of Pain and Anger</b>A son's eulogy</a></li>
+      </ol>
+    </div>
+    <div class="col c-thanks">
+      <span class="label">Part 3</span>
+      <h3>Thank You</h3>
+      <ol>
+        <li><span>12</span><a href="#ch12"><b>Practicing Gratitude</b>A biography of joy</a></li>
+        <li><span>13</span><a href="#ch13"><b>The Unexpected Grace of Reconnection</b>Thanks through dementia</a></li>
+        <li><span>14</span><a href="#ch14"><b>The Family Dynamics of Gratitude</b>Gaining a family</a></li>
+      </ol>
+    </div>
+    <div class="col c-love">
+      <span class="label">Part 4</span>
+      <h3>I Love You</h3>
+      <ol>
+        <li><span>15</span><a href="#ch15"><b>Creative Ways of Saying the Four Things</b>A shave as a love letter</a></li>
+        <li><span>16</span><a href="#ch16"><b>Loving the Body</b>Care without conditions</a></li>
+        <li><span>17</span><a href="#ch17"><b>Living Every Day as if It Were Your First—or Last</b>Champagne and chocolate</a></li>
+        <li><span>18</span><a href="#ch18"><b>Lives Intertwined with Love</b>What does love ask now?</a></li>
+        <li><span>19</span><a href="#ch19"><b>Saying I Love You… Not in So Many Words</b>Shoulder to shoulder</a></li>
+      </ol>
+    </div>
+    <div class="col c-bye">
+      <span class="label">Part 5</span>
+      <h3>Good-bye</h3>
+      <ol>
+        <li><span>20</span><a href="#ch20"><b>Nothing Left Unsaid</b>Before a son goes to war</a></li>
+        <li><span>21</span><a href="#ch21"><b>The Mysterious Magic of Some Good-byes</b>Waiting to let go</a></li>
+        <li><span>22</span><a href="#ch22"><b>Good-byes That Are Gifts Through Time</b>Letters for later</a></li>
+        <li><span>23</span><a href="#ch23"><b>Good-byes That Celebrate Life</b>A party at the end</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FRAMEWORK ============ -->
+<section id="framework">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Mend, tend, celebrate, bless</h2>
+    <p class="lede">Byock describes the Four Things as tools for mending, tending and celebrating a relationship. Said together, they close the circle. Good-bye sits in the middle: it comes from "God be with you", a blessing you can give at any parting.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="fig">
+      <h4>Four sentences close the circle</h4>
+      <svg viewBox="0 0 520 440" role="img" aria-label="A ring split into four arcs. Top right, red-orange: please forgive me, mend by asking. Bottom right, lighter red-orange: I forgive you, mend by releasing. Bottom left, brass: thank you, tend. Top left, crimson: I love you, celebrate. In the centre, inside a dashed circle: good-bye, God be with you.">
+        <circle cx="260" cy="220" r="100" fill="color-mix(in srgb, var(--bye) 8%, transparent)" stroke="var(--bye)" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <g fill="none" stroke-width="22" stroke-linecap="butt">
+          <path d="M267.3 80.2 A140 140 0 0 1 399.8 212.7" stroke="var(--forgive)"/>
+          <path d="M399.8 227.3 A140 140 0 0 1 267.3 359.8" stroke="var(--forgive)" stroke-opacity=".55"/>
+          <path d="M252.7 359.8 A140 140 0 0 1 120.2 227.3" stroke="var(--thanks)"/>
+          <path d="M120.2 212.7 A140 140 0 0 1 252.7 80.2" stroke="var(--love)"/>
+        </g>
+        <text class="disp" x="260" y="218" text-anchor="middle" font-size="26" style="font-stretch:110%">Good-bye</text>
+        <text x="260" y="242" text-anchor="middle" font-size="11.5" style="fill:var(--bye)">"God be with you"</text>
+
+        <text class="serif" x="392" y="66" font-size="16">Please forgive me</text>
+        <text x="392" y="84" font-size="10.5" style="fill:var(--forgive)">MEND · ASK</text>
+        <text class="serif" x="392" y="384" font-size="16">I forgive you</text>
+        <text x="392" y="402" font-size="10.5" style="fill:var(--forgive)">MEND · RELEASE</text>
+        <text class="serif" x="128" y="384" font-size="16" text-anchor="end">Thank you</text>
+        <text x="128" y="402" font-size="10.5" text-anchor="end" style="fill:var(--thanks)">TEND</text>
+        <text class="serif" x="128" y="66" font-size="16" text-anchor="end">I love you</text>
+        <text x="128" y="84" font-size="10.5" text-anchor="end" style="fill:var(--love)">CELEBRATE</text>
+      </svg>
+      <p class="cap">"Complete" is not the same as "over". A relationship is complete when it feels reconciled and at peace, when nothing is left undone or unsaid. Like a closed circle, it can be whole and keep going.</p>
+    </div>
+
+    <div class="fig c-forgive">
+      <h4>Forgiveness, as Byock means it</h4>
+      <div class="predict">
+        <div>
+          <span class="label">It is not</span>
+          <ul class="no" style="margin-top:10px"><li>Excusing what they did</li><li>Absolution or letting them off</li><li>"Forgive and forget" (that's amnesia)</li><li>A feeling you have to wait for</li><li>Something the other person must earn</li></ul>
+        </div>
+        <div>
+          <span class="label">It is</span>
+          <ul class="yes" style="margin-top:10px"><li>Remembering, and choosing anyway</li><li>Accepting that the past can't change</li><li>An act of will, said before it's felt</li><li>Mostly for you, not for them</li><li>A one-time payment that ends a debt</li></ul>
+        </div>
+      </div>
+      <p class="cap">He quotes Lily Tomlin: forgiveness means giving up all hope for a better past. Anger is legitimate, and he doesn't try to talk anyone out of it. He just wants people to know they have other options.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="part1">
+  <span class="label partno">Part 1 · Chapters 1–4</span>
+  <h2>The Four Things</h2>
+  <p class="lede">What the Four Things are, why words heal, and what it means to complete a relationship. The stories here show people changing, sometimes in their last hours.</p>
+  <p class="epigraph">"For of all sad words of tongue or pen, the saddest are these: 'It might have been!'" (John Greenleaf Whittier)</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Saying the Four Things</span></div>
+  <div class="body">
+    <div>
+      <h3>Eleven words that work at any time</h3>
+      <p class="idea">The specter of death shows that our relationships are our most precious possessions. You don't need the specter to act on it.</p>
+    </div>
+    <ul class="points">
+      <li>People Byock meets in hospitals regret what they never said to a parent or friend who died. They can't change that, but the regret often pushes them to speak up before the next loss.</li>
+      <li><strong>Stating the obvious is underrated.</strong> We're all someone's son or daughter, at six or at ninety-six. Even a loving bond can feel unfinished if a parent dies without ever saying it out loud.</li>
+      <li><strong>Good-bye is a practice.</strong> The word comes from "God be with you". Turning a reflexive "bye" into a conscious blessing takes only a moment.</li>
+      <li><strong>Imagination limits healing.</strong> When a relationship has been marred by betrayal, we tend to assume repair is impossible, and that becomes self-fulfilling. True stories of unlikely reconciliations widen what we think is possible.</li>
+      <li>A close call often dissolves old grudges overnight. Byock's argument is that you can borrow that clarity without the close call.</li>
+    </ul>
+    <div class="fig">
+      <h4>When to say them: earlier than you think</h4>
+      <svg viewBox="0 0 640 200" role="img" aria-label="A timeline with five points: every day, departures, a diagnosis, the last days, and after a death. A marker shows that most people start at the last days. An arrow spanning the whole line says the Four Things fit anywhere along it.">
+        <defs><marker id="arr1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--bye)"/></marker></defs>
+        <line x1="60" y1="52" x2="604" y2="52" stroke="var(--bye)" stroke-width="2.5" marker-end="url(#arr1)"/>
+        <text x="60" y="38" font-size="11" style="fill:var(--bye)">BYOCK: SAY THEM ANYWHERE ALONG HERE</text>
+        <line x1="30" y1="110" x2="610" y2="110" stroke="var(--rule)" stroke-width="2"/>
+        <g>
+          <circle cx="70" cy="110" r="8" fill="var(--bye)"/>
+          <circle cx="195" cy="110" r="8" fill="var(--bye)"/>
+          <circle cx="320" cy="110" r="8" fill="var(--bye)"/>
+          <circle cx="445" cy="110" r="10" fill="var(--forgive)"/>
+          <circle cx="570" cy="110" r="8" fill="var(--bye)" fill-opacity=".45"/>
+        </g>
+        <path d="M445 76 L439 66 L451 66 z" fill="var(--forgive)"/>
+        <text x="445" y="88" text-anchor="middle" font-size="10" style="fill:var(--forgive)">MOST PEOPLE START HERE</text>
+        <g font-size="12" text-anchor="middle">
+          <text class="serif" x="70" y="140" font-size="14">Every day</text>
+          <text class="serif" x="195" y="140" font-size="14">Departures</text>
+          <text class="serif" x="320" y="140" font-size="14">A diagnosis</text>
+          <text class="serif" x="445" y="140" font-size="14">The last days</text>
+          <text class="serif" x="570" y="140" font-size="14">After a death</text>
+        </g>
+        <g font-size="10.5" text-anchor="middle">
+          <text x="70" y="160">bedtime,</text><text x="70" y="174">the front door</text>
+          <text x="195" y="160">trips, moves,</text><text x="195" y="174">deployments</text>
+          <text x="320" y="160">dementia: say it</text><text x="320" y="174">early and often</text>
+          <text x="445" y="160">possible, but</text><text x="445" y="174">time is short</text>
+          <text x="570" y="160">letters, the</text><text x="570" y="174">empty chair</text>
+        </g>
+      </svg>
+      <p class="cap">"It's never too soon. Don't wait." Thousands of people leave home every day without knowing it's their last. Byock's advice is to keep relationships current so a sudden death doesn't leave you with what-ifs.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">The Healing Power of Words</span></div>
+  <div class="body">
+    <div>
+      <h3>Words are a doctor's best tool</h3>
+      <p class="idea">A doctor can't heal a relationship any more than he can make grass grow. He can prepare the ground, plant seeds and keep watch. Words do most of that work.</p>
+    </div>
+    <ul class="points">
+      <li>We don't just avoid talk about illness and death, we shut it down by reflex. When someone sick says "sometimes I wish it were over", we say "don't talk like that", as automatically as saying "bless you".</li>
+      <li>Those offhand remarks are often an <strong>invitation to listen</strong>. Take it.</li>
+      <li>If you don't know what to say, first just <strong>show up</strong>. Being there tells someone they matter. Then the Four Things give you words.</li>
+      <li>Isolation hurts more than most physical symptoms. Short of execution, solitary confinement is the harshest punishment Western law allows, and that tells you something.</li>
+      <li>Saying the Four Things also shapes your relationship with someone after they die. People who have been central to us stay in our thoughts and our dreams.</li>
+    </ul>
+    <div class="fig">
+      <h4>A hard remark: squelch it, or open it</h4>
+      <div class="compare">
+        <div>
+          <span class="label">They say</span>
+          <p class="say">"Sometimes I just wish it would be over."</p>
+        </div>
+        <div>
+          <span class="label">The reflex</span>
+          <p class="say">"Oh, don't talk like that."</p>
+          <ul><li>Feels kind</li><li>Ends the conversation</li><li>Leaves them alone with it</li></ul>
+        </div>
+      </div>
+      <div class="compare" style="margin-top:-10px">
+        <div>
+          <span class="label">The opening</span>
+          <p class="say">"Tell me more about that."</p>
+        </div>
+        <div>
+          <span class="label">What it allows</span>
+          <ul><li>Fears get said out loud</li><li>Unfinished business surfaces</li><li>Room for the Four Things</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Edwina Hargis came into Byock's ER with a leaking aortic aneurysm she had known about for years. She had long ago decided against surgery. With hours left, Byock suggested her family say the Four Things. Her daughter said that her stoic, ranch-raised mother rarely talked about feelings, then leaned over the rail and said "I love you, Mom." That evening the daughter came back to thank the staff: her mother had told each child how proud she was, something they'd never heard. "I never realized just how much words could mean."</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Completing Relationships</span></div>
+  <div class="body">
+    <div>
+      <h3>Complete doesn't mean over</h3>
+      <p class="idea">A relationship can end and stay incomplete, or be complete and never end. The goal is the second kind.</p>
+    </div>
+    <ul class="points">
+      <li>People say they feel complete when, if they died tomorrow, they would have no regrets and nothing left undone or unsaid.</li>
+      <li>You don't need a diagnosis to <strong>"come current"</strong> in your relationships. Healthy people feel the same pull to set things right.</li>
+      <li>Saying words you don't fully feel can bring the feeling back. Love that seemed dead may only be dormant.</li>
+    </ul>
+    <div class="fig">
+      <h4>Ended vs. complete</h4>
+      <svg viewBox="0 0 480 220" role="img" aria-label="Left: a grey circle with a gap at the top labelled unsaid, captioned ended but still incomplete. Right: a closed circle made of four coloured arcs, captioned complete and still going.">
+        <path d="M151 46.3 A62 62 0 1 1 89 46.3" fill="none" stroke="var(--ink-3)" stroke-width="7" stroke-linecap="round"/>
+        <text x="120" y="38" text-anchor="middle" font-size="10.5" style="fill:var(--forgive)">unsaid</text>
+        <g fill="none" stroke-width="7">
+          <path d="M360 38 A62 62 0 0 1 422 100" stroke="var(--forgive)"/>
+          <path d="M422 100 A62 62 0 0 1 360 162" stroke="var(--forgive)" stroke-opacity=".55"/>
+          <path d="M360 162 A62 62 0 0 1 298 100" stroke="var(--thanks)"/>
+          <path d="M298 100 A62 62 0 0 1 360 38" stroke="var(--love)"/>
+        </g>
+        <text class="serif" x="120" y="194" text-anchor="middle" font-size="15">Ended, still incomplete</text>
+        <text x="120" y="212" text-anchor="middle" font-size="10.5">a sudden death, an estrangement</text>
+        <text class="serif" x="360" y="194" text-anchor="middle" font-size="15">Complete, still going</text>
+        <text x="360" y="212" text-anchor="middle" font-size="10.5">whole, even after a death</text>
+      </svg>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Mr. Polansky could imagine asking forgiveness from his dying wife, and even forgiving her years of affairs. He would not say "I love you". A grief counsellor suggested something small: when she was asleep, picture the young woman he married and whisper it to her back. He did. The feeling came back, he woke her and said it, and she told him he was her rock and had saved her. He called her last weeks the best of their last twenty years together.</p>
+    </div>
+    <div class="story">
+      <span class="label">And another</span>
+      <p>Herb Cahill was a distant, short-tempered father who lived like a boarder in his own home. After a Navy friend and his barber died, he went round to his children and friends, apologised, said he loved them and paid off long-forgotten debts. A few months later, perfectly healthy, he was killed in a freak workshop accident. His daughter's lesson: it's never too late to say what needs saying, and never too early.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Transformations</span></div>
+  <div class="body">
+    <div>
+      <h3>Measure time by its depth, not its length</h3>
+      <p class="idea">Dying people still grow. Byock sees these changes not as deathbed conversions but as leaps in personal development.</p>
+    </div>
+    <ul class="points">
+      <li>Close to death, people lose patience with pretence, including their own. Hard, suspicious people often soften.</li>
+      <li>Healing a broken relationship in the last hours can rewrite its history for everyone involved.</li>
+      <li>When there's no rift to heal, the Four Things are a way to grieve a shared future and celebrate a shared past.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The card that changed a family</h4>
+        <div class="card35" role="img" aria-label="A lined 3 by 5 index card with four handwritten lines: please forgive me, I forgive you, thank you, I love you.">
+          <span class="hd">FOR STEVE · THE FOUR THINGS</span>
+          <ol><li>Please forgive me</li><li>I forgive you</li><li>Thank you</li><li>I love you</li></ol>
+        </div>
+        <p class="cap">Steve Morris, a Montana cowboy and lifelong smoker dying of emphysema, was frightened, breathless and estranged from his family. When Byock told him about the Four Things he said, "Write those down for me, will ya?" Byock used a card from his shirt pocket.</p>
+      </div>
+      <div class="story" style="align-self:center">
+        <span class="label">What happened next</span>
+        <p>At Sunday dinner Steve told his family he hadn't always been the best father or husband, then read the Four Things off the card in his own words. His anxiety loosened its grip. His grown daughter said it was the first time she and her siblings could show their father affection openly. In dying, Byock writes, Steve was becoming well within himself.</p>
+        <p>In Baltimore, a chaplain used the same four sentences to guide a first and only meeting between a man dying of AIDS and the teenage daughter he'd just learned he had. They talked for an hour. He died three hours later. She now knows her father loved her.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part c-forgive" id="forgiveness">
+  <span class="label partno">Part 2 · Chapters 5–11</span>
+  <h2>Forgiveness</h2>
+  <p class="lede">The two hardest of the Four Things. Byock defines forgiveness as accepting the past as it was so it stops controlling the future. Hate and blame are a ball and chain. Forgiving is how you take them off.</p>
+  <p class="epigraph">"Forgiving presupposes remembering." (Paul Tillich)</p>
+</div>
+
+<article class="chapter c-forgive" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Loved Ones Live On Inside Us</span></div>
+  <div class="body">
+    <div>
+      <h3>The relationship outlives the person</h3>
+      <p class="idea">You can complete a relationship after someone dies. It's just much easier while they're alive.</p>
+    </div>
+    <ul class="points">
+      <li>Everyone carries some emotional scars. A careless remark from a parent or sibling can "pick the scab" decades later.</li>
+      <li>Emotional healing works like healing a wound: clean out what's toxic between two people, and the natural drive to reconnect does the rest.</li>
+      <li>"People live on within us" isn't a greeting-card line. The people closest to us shape how we see the world and show up in our dreams long after they die.</li>
+      <li>Paul, Byock suggests, will probably also need to forgive himself, for still being angry at a father who was as powerless against depression as against cancer.</li>
+    </ul>
+    <div class="fig">
+      <h4>Same father, two endings</h4>
+      <div class="compare">
+        <div>
+          <span class="label">Carla</span>
+          <h5>Said everything</h5>
+          <ul><li>Spent long days at her father's hospital bed</li><li>He apologised for being so needy; she apologised for not being able to fix it</li><li>"By then we had said everything"</li><li>Today: comfort and a sense of resolution</li></ul>
+        </div>
+        <div>
+          <span class="label">Paul</span>
+          <h5>An argument over a game</h5>
+          <ul><li>Arrived later, in the middle of exams</li><li>Fought with his father over watching a Celtics game</li><li>His father died before they could talk it through</li><li>Today: still wrestling with him inside</li></ul>
+        </div>
+      </div>
+      <p class="cap">Anthony, a cellist who never got his orchestra seat, was the "sweetest man" and one of the unhappiest, a secret drinker prone to depression. He died of pancreatic cancer within two weeks. Carla now leaves her children a note every time she travels, ending "I love you to infinity and back", and has written letters for them in case she dies mid-argument.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-forgive" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Resolving a Legacy of Pain</span></div>
+  <div class="body">
+    <div>
+      <h3>It can stop with me</h3>
+      <p class="idea">Hurt gets handed down blindly, generation to generation. Forgiveness is a way of saying "enough".</p>
+    </div>
+    <ul class="points">
+      <li>Jennifer's mother, Mary, was proud, cold and never said sorry. Dying of lung cancer that had spread to her brain, she was losing speech, sight and hearing.</li>
+      <li>Jennifer asked her plainly, "Are you happy when I come to visit?" Mary couldn't say "I made mistakes", but she managed "there were mistakes". For her, that took real strength.</li>
+      <li>Then she named the pattern: her own mother had been "a destructive force", and she'd passed it on. She pointed to her grandson playing on the floor and said it would stop with him.</li>
+      <li>Jennifer saw that stopping it was now her job, and that it started with treating herself with patience. Forgiving her mother turned out to be a way of forgiving herself.</li>
+    </ul>
+    <div class="fig">
+      <h4>Breaking the chain</h4>
+      <svg viewBox="0 0 600 210" role="img" aria-label="Four circles in a row: Mary's mother, Mary, Jennifer, and Jennifer's son. Red arrows labelled anger, coldness pass from the grandmother to Mary to Jennifer. The red line from Jennifer to her son is cut by a bar labelled stops here. A crimson dashed arc above carries the good stuff on to the son.">
+        <defs><marker id="arr6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--forgive)"/></marker>
+        <marker id="arr6b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--love)"/></marker></defs>
+        <g stroke="var(--forgive)" stroke-width="3">
+          <line x1="104" y1="110" x2="182" y2="110" marker-end="url(#arr6)"/>
+          <line x1="254" y1="110" x2="332" y2="110" marker-end="url(#arr6)"/>
+          <line x1="404" y1="110" x2="440" y2="110"/>
+        </g>
+        <line x1="446" y1="96" x2="446" y2="124" stroke="var(--ink)" stroke-width="4"/>
+        <text x="446" y="146" text-anchor="middle" font-size="10" style="fill:var(--ink)">STOPS HERE</text>
+        <text x="143" y="100" text-anchor="middle" font-size="10" style="fill:var(--forgive)">anger</text>
+        <text x="293" y="100" text-anchor="middle" font-size="10" style="fill:var(--forgive)">coldness</text>
+        <path d="M380 76 Q 450 10 516 74" fill="none" stroke="var(--love)" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#arr6b)"/>
+        <text x="448" y="28" text-anchor="middle" font-size="10.5" style="fill:var(--love)">the good stuff passes on</text>
+        <g stroke="var(--ink)" stroke-width="1.5">
+          <circle cx="70" cy="110" r="32" fill="color-mix(in srgb, var(--forgive) 22%, var(--card))"/>
+          <circle cx="220" cy="110" r="32" fill="color-mix(in srgb, var(--forgive) 15%, var(--card))"/>
+          <circle cx="370" cy="110" r="32" fill="color-mix(in srgb, var(--forgive) 8%, var(--card))"/>
+          <circle cx="530" cy="110" r="26" fill="color-mix(in srgb, var(--love) 12%, var(--card))"/>
+        </g>
+        <g text-anchor="middle">
+          <text class="serif" x="70" y="172" font-size="14">Mary's mother</text>
+          <text class="serif" x="220" y="172" font-size="14">Mary</text>
+          <text class="serif" x="370" y="172" font-size="14">Jennifer</text>
+          <text class="serif" x="530" y="172" font-size="14">Her son</text>
+          <text x="70" y="190" font-size="10">"a destructive force"</text>
+          <text x="220" y="190" font-size="10">dying, says sorry</text>
+          <text x="370" y="190" font-size="10">"I must stop it"</text>
+          <text x="530" y="190" font-size="10">18 months old</text>
+        </g>
+      </svg>
+      <p class="cap">"I know that you are the way you are, because I am the way I am, because my mother was the way she was." Mary then hugged her daughter and called her "the artist of my life". That evening Jennifer spent five hours finishing the communion dress her mother had been sewing.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-forgive" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">The Emotional Economics of Forgiveness</span></div>
+  <div class="body">
+    <div>
+      <h3>Pay once, or keep paying forever</h3>
+      <p class="idea">You don't need to feel forgiveness to give it. It's a cold, practical decision to stop carrying a debt.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Pain explains behaviour.</strong> Walk with a stone in your shoe and your whole life bends around it. People carry emotional stones far bigger. What we see is their behaviour, not their pain.</li>
+      <li>Byock's private trick: picture the person who infuriates you as a baby, open and trusting, and ask what on earth happened to them.</li>
+      <li><strong>Refusing to forgive is choosing to stay in debt.</strong> If someone never pays back a loan, you can resent it every time you see them, or write it off once and be done.</li>
+      <li>Forgiving someone who reacts badly still helps. A good-faith attempt completes your side of the relationship.</li>
+    </ul>
+    <div class="fig">
+      <h4>The economics, drawn out</h4>
+      <svg viewBox="0 0 520 260" role="img" aria-label="Line chart, illustrative. The horizontal axis is time, the vertical axis is what it costs you. A red curve labelled carry the grudge rises slowly, then steeply. A steel-blue line labelled forgive once stays flat, steps up once at the decision to forgive, then stays flat.">
+        <line x1="50" y1="220" x2="496" y2="220" stroke="var(--rule)" stroke-width="1.5"/>
+        <line x1="50" y1="220" x2="50" y2="24" stroke="var(--rule)" stroke-width="1.5"/>
+        <text x="496" y="242" text-anchor="end" font-size="10.5">TIME →</text>
+        <text x="36" y="122" text-anchor="middle" font-size="10.5" transform="rotate(-90 36 122)">WHAT IT COSTS YOU</text>
+        <path d="M50 214 C 200 204, 330 156, 490 34" fill="none" stroke="var(--forgive)" stroke-width="3"/>
+        <path d="M50 214 H150 V170 H490" fill="none" stroke="var(--bye)" stroke-width="3"/>
+        <line x1="150" y1="226" x2="150" y2="150" stroke="var(--ink-3)" stroke-width="1" stroke-dasharray="3 4"/>
+        <text x="156" y="146" font-size="10.5" style="fill:var(--bye)">decide to forgive:</text>
+        <text x="156" y="160" font-size="10.5" style="fill:var(--bye)">one-time cost</text>
+        <text x="480" y="30" text-anchor="end" font-size="11" style="fill:var(--forgive)">carry the grudge: it compounds</text>
+        <text x="480" y="188" text-anchor="end" font-size="11" style="fill:var(--bye)">forgive once: the debt is closed</text>
+      </svg>
+      <p class="src">Illustration of Byock's metaphor, not data</p>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Avi's father Simon left before he was born and spent his childhood publicly snubbing him. When Simon was dying, a counsellor asked Avi to say the Four Things. He shouted that she was crazy. She kept going: he could hate Simon and still forgive him, because otherwise he'd pay for his father's cruelty for the rest of his life. Avi said sorry for never being good enough, forgave his father's coldness, and, unable to say it as a statement, asked "I love you?" Simon cried, hugged him for the first time and said it back. Months later Avi realised he had been turning into his father with his own children. Forgiving Simon broke that.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-forgive" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Extreme Acts of Forgiveness</span></div>
+  <div class="body">
+    <div>
+      <h3>Forgive without absolving</h3>
+      <p class="idea">Distance and disdain are legitimate choices. But hate keeps you chained to the person you despise.</p>
+    </div>
+    <ul class="points">
+      <li>Maeve's father sexually abused her as a child. As a teenager she attempted suicide, ran away to an aunt, and eventually told her. The aunt confronted him; he stopped drinking and went into therapy.</li>
+      <li>Years later, with his counsellor present, he admitted everything and said he wasn't worthy to ask forgiveness. Over time she gave it: "I could forgive him, but I couldn't absolve him."</li>
+      <li>Two things made it possible: her own long therapy, and his full admission. Without that, she says, she might never have spoken to him again.</li>
+      <li>Some survivors reach out and meet only denial. Even then, a good-faith effort completes their side and frees them from the what-ifs.</li>
+      <li>Forgiveness here is <strong>self-care</strong>, not a gift to the abuser. Byock urges anyone this deeply hurt to find a skilled counsellor rather than go it alone.</li>
+    </ul>
+    <div class="story">
+      <span class="label">In her words</span>
+      <p>Maeve flew from Pittsburgh to sit with her father in a Montana nursing home in his last days. "The most important thing I did was to decide and declare that I was going to become whole."</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-forgive" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Forgiving Yourself</span></div>
+  <div class="body">
+    <div>
+      <h3>Read your life as a novel</h3>
+      <p class="idea">Nobody reaches the end of life perfect. We will all die imperfect, and that's not a failing, it's being human.</p>
+    </div>
+    <ul class="points">
+      <li>Susan Armstrong was a hospice volunteer, a runner and the mother of a six-year-old when ALS took her body apart faster than she could adapt. Her real torment was guilt: what had she done to cause it?</li>
+      <li>She bristled at the copies of <em>Tuesdays with Morrie</em> people gave her: "I'm not Morrie!" Nobody would write a book about how calmly she handled it. Eventually she stopped asking "why me?" and turned her energy outward, to the people who gave her life meaning.</li>
+      <li><strong>The novel exercise:</strong> imagine your life as a long novel with a chapter or two left. You can see the hero's circumstances and good intentions. Wouldn't you feel mercy? Now extend that mercy to yourself. Nobody has ever said no.</li>
+      <li>Until you feel worthy, others can love you but you won't be able to feel it. Self-acceptance can't wait for a better version of you.</li>
+    </ul>
+    <p class="pull" style="color:var(--forgive)">You are worthy of love right here, right now.</p>
+  </div>
+</article>
+
+<article class="chapter c-forgive" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Living with Uncertainty and Illness</span></div>
+  <div class="body">
+    <div>
+      <h3>Your main diagnosis is being mortal</h3>
+      <p class="idea">You can't be ill perfectly. Being sick and dependent isn't undignified. It's what every body eventually does.</p>
+    </div>
+    <ul class="points">
+      <li>Our obsession with healthy living has a side effect: when we get sick, we feel it's our fault. We ask "was he wearing a seat belt?" to protect ourselves from our own fragility.</li>
+      <li>To a smoker dying of lung cancer, Byock says: did you think you'd have lived forever if you'd never smoked?</li>
+      <li>We never call a baby's total dependence undignified. Why call it that at ninety? Dignity lies in accepting help graciously.</li>
+      <li>Byock's father, thin from pancreatic cancer, refused a hot dog with his son because he looked sick and thought he smelled bad. The unfairness of being embarrassed for being ill stayed with Byock.</li>
+      <li><strong>Let them care for you.</strong> You're already a burden to the people who love you, and that's normal. Refusing care only shifts the cost onto them, for the rest of their lives.</li>
+    </ul>
+    <div class="fig">
+      <h4>The wheel exercise</h4>
+      <svg viewBox="0 0 470 240" role="img" aria-label="Two wheels. The first has the phrase I am not a bad person written around its rim, labelled step one. An arrow labelled then raise the bar leads to the second wheel, with I am a good person written around its rim, labelled step two.">
+        <defs>
+          <path id="rimA" d="M30 112 A86 86 0 1 1 202 112 A86 86 0 1 1 30 112"/>
+          <path id="rimB" d="M268 112 A86 86 0 1 1 440 112 A86 86 0 1 1 268 112"/>
+          <marker id="arr10" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker>
+        </defs>
+        <circle cx="116" cy="112" r="98" fill="none" stroke="var(--ink-3)" stroke-width="1.5"/>
+        <circle cx="116" cy="112" r="72" fill="color-mix(in srgb, var(--ink-3) 8%, transparent)" stroke="var(--ink-3)" stroke-width="1"/>
+        <text class="serif" font-size="14.5"><textPath href="#rimA">I am not a bad person · I am not a bad person · I am not a bad person ·</textPath></text>
+        <text class="disp" x="116" y="108" text-anchor="middle" font-size="18">Step 1</text>
+        <text x="116" y="128" text-anchor="middle" font-size="10">relax, eyes closed</text>
+
+        <line x1="218" y1="112" x2="252" y2="112" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#arr10)"/>
+        <text x="235" y="224" text-anchor="middle" font-size="10">THEN RAISE THE BAR</text>
+
+        <circle cx="354" cy="112" r="98" fill="none" stroke="var(--forgive)" stroke-width="2"/>
+        <circle cx="354" cy="112" r="72" fill="color-mix(in srgb, var(--forgive) 10%, transparent)" stroke="var(--forgive)" stroke-width="1"/>
+        <text class="serif" font-size="14.5"><textPath href="#rimB">I am a good person · I am a good person · I am a good person · I am a good person ·</textPath></text>
+        <text class="disp" x="354" y="108" text-anchor="middle" font-size="18">Step 2</text>
+        <text x="354" y="128" text-anchor="middle" font-size="10">the goal</text>
+      </svg>
+      <p class="cap">For patients stuck in feeling worthless, Byock asks: "Who have you killed this week?" Nobody has yet convinced him they're wretched. Then he teaches this meditation. Many find even step one squirm-inducing.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-forgive" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">A Legacy of Pain and Anger</span></div>
+  <div class="body">
+    <div>
+      <h3>A son's eulogy</h3>
+      <p class="idea">Seeing a parent as a broken victim of older hurts turns rage into sadness, and then into peace.</p>
+    </div>
+    <ul class="points">
+      <li>Archer Reynolds, a huge former Army trainer, grew up with a charming father who drank, lied, hit him and never talked about anything real. They didn't speak for twenty years.</li>
+      <li>When his father got cancer, Archer set one condition: call me yourself, sober, no jokes. To his shock, his father did. Archer brought his children, who instantly loved "Super Papa". At the door his father whispered, "I'm sorry this took so long."</li>
+      <li>On the last visit they said all four, simply: "I love you." "I'm sorry I wasn't a better son." "I'm sorry I wasn't a better father." Archer's father fell asleep while hearing about his grandson's snake collection.</li>
+      <li>The line that changed Archer came from Jennifer's story in chapter 6: <em>I am the one who must stop it.</em> His wife says he went from "AB to AA". He now mentors a young player who chose not to retaliate after being stabbed.</li>
+    </ul>
+    <div class="fig c-forgive">
+      <h4>From Archer's eulogy for his father</h4>
+      <ul class="eulogy">
+        <li>Don't wait twenty years to have a real conversation with the people you love.</li>
+        <li>Don't wait twenty years to say sorry.</li>
+        <li>Don't wait twenty years to forgive.</li>
+        <li>Don't wait twenty years to ask for forgiveness.</li>
+        <li>Don't wait twenty years to tell the people you love that you love them.</li>
+      </ul>
+      <p class="cap">Some relatives were furious that he aired his father's dark side at the funeral. His answer: without those last visits, it would have been an angry eulogy. "I never would have missed him had we not said the Four Things."</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part c-thanks" id="thanks">
+  <span class="label partno">Part 3 · Chapters 12–14</span>
+  <h2>Thank you</h2>
+  <p class="lede">"She knows how much I appreciate her." Byock's reply: good, then it'll take no time at all to tell her again. People who are meant to know they're appreciated often don't, and being thanked completes something too.</p>
+  <p class="epigraph">"There is more hunger for love and appreciation in this world than for bread." (Mother Teresa)</p>
+</div>
+
+<article class="chapter c-thanks" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Practicing Gratitude</span></div>
+  <div class="body">
+    <div>
+      <h3>Gratitude is a way of seeing</h3>
+      <p class="idea">Name what you've been given and you notice how much you already have. Gratitude and joy are fused.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Be specific.</strong> "Thank you for being you" is fine to start. Then name the exact things. No mumbling.</li>
+      <li><strong>Learn to receive it.</strong> Taking in a heartfelt thank-you closes the loop that began when you were generous.</li>
+      <li><strong>Bedtime inventory.</strong> Before your child or partner falls asleep, list what they did today that touched you.</li>
+      <li>Byock prescribes "Vitamin J": joy, daily, even if it feels self-indulgent. When he asks dying patients what brought them joy as children, they often smile or laugh, even in pain.</li>
+    </ul>
+    <div class="fig">
+      <h4>Write a biography of joy</h4>
+      <div class="joy">
+        <div style="--i:0"><b>Small child</b><span>How did joy feel in your body? Did you giggle, sing?</span></div>
+        <div style="--i:1"><b>Growing up</b><span>Birthdays, a special trip, a morning you still remember</span></div>
+        <div style="--i:2"><b>Teens</b><span>A recital, a goal, a close moment with a parent, first love</span></div>
+        <div style="--i:3"><b>Adulthood</b><span>Where did joy go? What still brings it back?</span></div>
+        <div style="--i:4"><b>Now</b><span>Babies, friends, old movies, comic strips: book them in</span></div>
+      </div>
+      <p class="src">Technique from Jungian psychiatrist Verena Kast, used by Byock with grieving and dying patients</p>
+    </div>
+    <div class="story c-thanks">
+      <span class="label">The story</span>
+      <p>Ernesto, a former migrant farm worker turned school janitor, was dying of colon cancer in a Missoula trailer. Byock worried that machismo would get in the way of the Four Things. It didn't. Ernesto called himself "un hombre afortunado", a lucky man. His daughters were the first in the family to graduate college. On Byock's last visit, as he reached the door, Ernesto waved him back, pulled him down and kissed his cheek: "Te amo, Doctor. Gracias, mi amigo." His wife said he'd never kissed a man in his life.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-thanks" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">The Unexpected Grace of Reconnection</span></div>
+  <div class="body">
+    <div>
+      <h3>Say it even if they can't hear it</h3>
+      <p class="idea">The lesson of dementia: say the Four Things early and often. And keep saying them, because small miracles happen.</p>
+    </div>
+    <ul class="points">
+      <li>Grace was fiercely independent into her nineties (she turned down a marriage proposal at eighty-something). Then Alzheimer's took her, and she no longer knew her granddaughter Laurie, calling her "Ma'am".</li>
+      <li>Laurie organised a Thanksgiving dinner that went badly. Back at the nursing home, she felt selfish: the day had been for her, not her grandmother.</li>
+      <li>Then, for a minute or so, Grace looked straight at her: "Thank you, Princess. I'm sorry this is so hard." She said she loved her and that Laurie had brought her so much <em>naches</em>, joy. Then she was gone again.</li>
+      <li>There's no neurological explanation for these flashes, but Byock has heard dozens. Thanks are worth giving whether or not they're received. Parents of infants who died tell him it mattered to thank their baby.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-thanks" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">The Family Dynamics of Gratitude</span></div>
+  <div class="body">
+    <div>
+      <h3>Gratitude dissolves old walls</h3>
+      <p class="idea">"Dysfunctional family" is redundant. Families are messy, but relationships keep changing, and that's the hope.</p>
+    </div>
+    <ul class="points">
+      <li>Arlene never trusted her stepfather, Conrad, a surgeon who had been "smitten" with her shy mother while still married. She greeted news of his dying with "Good!"</li>
+      <li>His brother told her something she'd never noticed: in over twenty-five years, Conrad's own children had never once been invited to her mother's home. Her mother was simply too shy. Arlene invited them that night, apologised to her stepsister, and they both cried.</li>
+      <li>In his last days, confused, Conrad kissed her mother and asked her to marry him again. "He is the great love of your life, isn't he?" Arlene asked. Her resentment fell away.</li>
+      <li>She thanked Conrad for making her mother happy and kissed him for the first time. He said, "I know. I know." He'd always seen her hostility and quietly let her have her feelings.</li>
+    </ul>
+    <p class="pull" style="color:var(--thanks)">"It took Conrad's dying for me to discover that I really have a family."</p>
+    <span class="label">Arlene</span>
+  </div>
+</article>
+
+<!-- ============ PART 4 ============ -->
+<div class="part c-love" id="love">
+  <span class="label partno">Part 4 · Chapters 15–19</span>
+  <h2>I love you</h2>
+  <p class="lede">Arguably the most important sentence in any language, and often the hardest to say. When the words won't come, people find other ways, through touch, care, time and work.</p>
+  <p class="epigraph">"Love is its own because!" (a high school student in one of Byock's classes)</p>
+</div>
+
+<article class="chapter c-love" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Creative Ways of Saying the Four Things</span></div>
+  <div class="body">
+    <div>
+      <h3>A shave can say it</h3>
+      <p class="idea">The point is to get forgiveness, thanks and love across in a way the other person understands. The more explicit, the better, but there's no single right way.</p>
+    </div>
+    <ul class="points">
+      <li>Gunter came from stoic German Lutheran farmers, where hugs barely touched. "Yes, but what if you're Lutheran?" he asked Byock, half joking.</li>
+      <li>At the nursing home his dying father, a careful planner, sent Gunter's wife out and asked: "Son, would you please shave me?" Gunter understood he was really asking to be touched.</li>
+      <li>He used a hot towel, his father's old brush and soap, and realised they were reversing the morning his father taught him to shave at thirteen. He kept shaving him every day, then fed him and helped with the toilet. "The best time we've ever had together."</li>
+      <li>Physical love isn't only sexual. Think of a parent bathing a baby. Touching sick people for their comfort and pleasure is wholesome, and we don't do nearly enough of it.</li>
+    </ul>
+    <div class="fig c-love">
+      <h4>Ways to say the Four Things</h4>
+      <div class="chips">
+        <span class="chip solid">Say it face to face</span>
+        <span class="chip">Write a letter</span>
+        <span class="chip">Record a message</span>
+        <span class="chip solid">Touch: a shave, a back rub</span>
+        <span class="chip">Feed them their favourite food</span>
+        <span class="chip">Time side by side</span>
+        <span class="chip">Notes for later birthdays</span>
+        <span class="chip solid">Just show up</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-love" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Loving the Body</span></div>
+  <div class="body">
+    <div>
+      <h3>Love all of them, body included</h3>
+      <p class="idea">When we love someone, we have to love their animal nature and their eventual dependence too, and one day our own.</p>
+    </div>
+    <ul class="points">
+      <li>Horace and Louise Whitman were fundamentalist Christians who learned at the same moment that their son Mike was gay and dying of AIDS.</li>
+      <li>They didn't hesitate: they took him home. Horace told him, "I can't condone it. I love you, son. That will never change." Mike chose their home over friends' to give them back their role as parents.</li>
+      <li>It wasn't tidy. They wanted a public recantation; his friends felt shut out. But Byock can't forget Horace gently cleaning his son's sores three times a day without a word of reproach.</li>
+      <li>We keep the dying at arm's length partly from magical thinking, as if death were contagious. Byock's joke: we're all HMG positive, carriers of the human mortality gene.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-love" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">Every Day as if It Were Your First—or Last</span></div>
+  <div class="body">
+    <div>
+      <h3>Champagne and chocolate</h3>
+      <p class="idea">Accepting the unacceptable can open a door. Once nothing is left unsaid, the remaining time becomes a celebration.</p>
+    </div>
+    <ul class="points">
+      <li>Gabrielle had leukaemia, went into remission after three hard years, relapsed, then developed lymphoma. Her family had dealt with each step but always pictured her death somewhere far off.</li>
+      <li>One night at 4 a.m. her mother, Yvette, saw the nurses rushing to make things quiet rather than to save her. She and Gabrielle's father climbed into the bed, cradled her, and asked her forgiveness for pushing her so hard about school. They thanked her, told her she was a gift, and gave her permission to go.</li>
+      <li>In the morning Gabrielle, just sixteen, woke up bright: "I would really like some champagne and some Hershey's Kisses." The nurses got her home. In front of the Christmas tree her siblings had decorated, she declared it spectacular, ate some chocolate and died.</li>
+      <li>Byock's reading: be innocent again. Drop the pretence and see each day as the first day of the world.</li>
+    </ul>
+    <p class="pull" style="color:var(--love)">"It was the worst thing, and yet it was the most intimate and important time."</p>
+    <span class="label">Yvette, on her daughter's last night</span>
+  </div>
+</article>
+
+<article class="chapter c-love" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">Lives Intertwined with Love</span></div>
+  <div class="body">
+    <div>
+      <h3>What does love ask of me now?</h3>
+      <p class="idea">Love can be a deliberate strategy for unbearable loss. When grief hits, ask what the most loving move is: toward them, toward others, toward yourself.</p>
+    </div>
+    <ul class="points">
+      <li>Lisa and Linda were identical twins who could finish each other's sentences. When Linda got breast cancer, Lisa had preventive mastectomies too, drove her to chemo and raised all four boys between them.</li>
+      <li>Over seven years of cancer and treatment, Lisa's one guilt was talking Linda into a last round of chemo she didn't want. "She might have been ready years earlier, but we weren't."</li>
+      <li>They never formally said the Four Things; they didn't need to. Lisa's only regret: she wishes she'd said "I love you" more often. She keeps Linda's last thank-you notes. "You are my guardian angel and best friend."</li>
+      <li>Grief looks different in different people. Linda's husband gave away her clothes within two weeks and started dating. Byock's view: maybe that's avoidance, but so what?</li>
+    </ul>
+    <div class="story c-love">
+      <span class="label">Byock borrows Thoreau</span>
+      <p>"There is no remedy for love but to love more."</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-love" id="ch19">
+  <div class="gutter"><span class="chno">19</span><span class="label">Not in So Many Words</span></div>
+  <div class="body">
+    <div>
+      <h3>Shoulder to shoulder</h3>
+      <p class="idea">Some people, men especially, say the most important things while looking the same way, not at each other.</p>
+    </div>
+    <ul class="points">
+      <li>Peter's father and grandfather were tough German stoics. Their currency was time together and their language was carpentry, plumbing and hunting trips.</li>
+      <li>Peter mostly learned how proud his father was second-hand, from neighbours. The only direct compliment came one morning in a duck blind: "You're a pretty damn good teacher."</li>
+      <li>That same morning: "I'm glad you went to college and didn't go to 'Nam." Peter asked if he'd been worried. "You're my only son." That was the whole "I love you".</li>
+      <li>When dementia set in, Peter kept taking him hunting (with an empty gun) and fishing, waiting for rare flashes of clarity, and said "I love you" and "thank you" all the time.</li>
+    </ul>
+    <div class="fig">
+      <h4>Two ways of talking</h4>
+      <svg viewBox="0 0 480 200" role="img" aria-label="Left: two simple figures facing each other with gaze lines meeting between them, labelled face to face, words carry it. Right: two figures side by side, both looking toward a horizon on the right, gaze lines parallel, labelled shoulder to shoulder, time and work carry it.">
+        <g fill="var(--love)">
+          <circle cx="60" cy="70" r="13"/><path d="M42 140 Q42 92 60 92 Q78 92 78 140 z"/>
+          <circle cx="170" cy="70" r="13" fill-opacity=".6"/><path d="M152 140 Q152 92 170 92 Q188 92 188 140 z" fill-opacity=".6"/>
+        </g>
+        <g stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="3 4">
+          <line x1="76" y1="68" x2="110" y2="76"/>
+          <line x1="154" y1="68" x2="120" y2="76"/>
+        </g>
+        <text x="115" y="88" text-anchor="middle" font-size="16" style="fill:var(--love)">♥</text>
+        <line x1="290" y1="140" x2="470" y2="140" stroke="var(--rule)" stroke-width="2"/>
+        <path d="M430 140 Q445 120 460 140" fill="none" stroke="var(--bye)" stroke-width="1.5"/>
+        <g fill="var(--love)">
+          <circle cx="300" cy="70" r="13"/><path d="M282 140 Q282 92 300 92 Q318 92 318 140 z"/>
+          <circle cx="342" cy="70" r="13" fill-opacity=".6"/><path d="M324 140 Q324 92 342 92 Q360 92 360 140 z" fill-opacity=".6"/>
+        </g>
+        <g stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="3 4">
+          <line x1="316" y1="68" x2="440" y2="104"/>
+          <line x1="358" y1="68" x2="446" y2="96"/>
+        </g>
+        <text class="serif" x="115" y="170" text-anchor="middle" font-size="15">Face to face</text>
+        <text x="115" y="188" text-anchor="middle" font-size="10.5">words carry it</text>
+        <text class="serif" x="360" y="170" text-anchor="middle" font-size="15">Shoulder to shoulder</text>
+        <text x="360" y="188" text-anchor="middle" font-size="10.5">time and work carry it</text>
+      </svg>
+      <p class="cap">Neither is wrong. Byock notes women more often feel words are needed. Peter, who has been in counselling, does both: he speaks his feelings and also keeps showing up for the fishing trips.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 5 ============ -->
+<div class="part c-bye" id="goodbye">
+  <span class="label partno">Part 5 · Chapters 20–23</span>
+  <h2>Good-bye</h2>
+  <p class="lede">Good-byes are what we dread most. But every parting reminds us that life is precious. Protect yourself from that pain by never loving fully, and you're only half alive.</p>
+  <p class="epigraph">"To every thing there is a season… a time to be born, and a time to die." (Ecclesiastes)</p>
+</div>
+
+<div class="letter" style="margin-top:36px">
+  <span class="label" style="font-style:normal">Daniel's last letter to his mother (excerpt)</span>
+  <p>This last part of my life could have been very unpleasant, but it wasn't. In fact, in many ways, it has been the best part of my life… If anyone ever asks you if I went to heaven, tell them this: I just came from there.</p>
+  <span class="sig">Daniel Schumann, who died young after a full, well-travelled life</span>
+</div>
+
+<article class="chapter c-bye" id="ch20">
+  <div class="gutter"><span class="chno">20</span><span class="label">Nothing Left Unsaid</span></div>
+  <div class="body">
+    <div>
+      <h3>Before a son goes to war</h3>
+      <p class="idea">Not every good-bye comes before a death. Any departure is a chance to complete things.</p>
+    </div>
+    <ul class="points">
+      <li>Reverend John Williams, a former Marine chaplain who had seen Vietnam, heard Byock speak years earlier. When his son Matthew left for Iraq, he and his wife took him into the study.</li>
+      <li>John told Matthew he was proud of the man he'd become, asked forgiveness for angry words in his teenage years, forgave him for the mischief, thanked him for being their son and told him he loved him. Matthew, unusually solemn, said it all back.</li>
+      <li>His mother: "As big as you are, you've been my baby. I can't protect you anymore." Matthew: "Maybe this is my time to protect you."</li>
+      <li>Matthew came back wounded but recovering. If he hadn't, his parents said, they'd have known he went knowing how loved he was.</li>
+    </ul>
+    <div class="fig c-bye">
+      <h4>Byock's test question</h4>
+      <p class="pull" style="max-width:none;font-size:clamp(22px,2.6vw,30px)">If someone you love were in intensive care tomorrow, awake but unable to speak, would either of you worry about something left unsaid?</p>
+      <p class="cap">If yes, today is a good day to make the Four Things explicit.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-bye" id="ch21">
+  <div class="gutter"><span class="chno">21</span><span class="label">The Mysterious Magic of Some Good-byes</span></div>
+  <div class="body">
+    <div>
+      <h3>Some people seem to wait</h3>
+      <p class="idea">People can postpone death for a wedding, a grandchild or a farewell. Hospice staff see it constantly.</p>
+    </div>
+    <ul class="points">
+      <li>Researchers in San Diego found deaths dip before holidays like Passover and the Harvest Moon Festival, then rise just after, but only in the groups that celebrate them.</li>
+      <li>Sandy Cummings, a fit thirty-five-year-old, collapsed at a bowling alley. His heart was restarted, but his cortex was gone. For weeks he lingered with no awareness.</li>
+      <li>His father asked Byock to end it. Byock refused: allowing death is one thing, causing it is another. Then he asked whether anything would have been left undone had Sandy died instantly.</li>
+      <li>His father said yes: these weeks had let them tell Sandy they loved him, hear stories that showed them who he'd become, and come to love his wife. Byock drove home. As he walked in the door, the phone rang. Sandy had died.</li>
+    </ul>
+    <div class="story c-bye">
+      <span class="label">Byock's stance</span>
+      <p>"I know that I do not know." He doesn't claim to explain it. He just stands with families at the threshold and honours the mystery.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-bye" id="ch22">
+  <div class="gutter"><span class="chno">22</span><span class="label">Good-byes That Are Gifts Through Time</span></div>
+  <div class="body">
+    <div>
+      <h3>A good-bye that lasts a lifetime</h3>
+      <p class="idea">You can send love into the future. Keep it separate from the will, and keep advice light.</p>
+    </div>
+    <ul class="points">
+      <li>Wills complicate messages of love because money is attached. Use letters, recordings or envelopes to be opened on birthdays, graduations or weddings.</li>
+      <li>Give unconditional love and good wishes rather than detailed instructions. The world your children live in will be different from the one you know.</li>
+      <li>A week before she died, Susan Armstrong, almost totally paralysed by ALS, picked at her wedding ring until her husband understood: take it. She was saying good-bye and freeing him to love again. He now wears both rings.</li>
+      <li>With four friends, Susan made gifts and letters for her daughter, Allison, to open on each birthday into adulthood. The first card began "Dear Smoochie-girl…"</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-bye" id="ch23">
+  <div class="gutter"><span class="chno">23</span><span class="label">Good-byes That Celebrate Life</span></div>
+  <div class="body">
+    <div>
+      <h3>Celebrations are better when the guest of honour is there</h3>
+      <p class="idea">When there's nothing left to say, "celebration happens". No need to wait for the memorial service.</p>
+    </div>
+    <ul class="points">
+      <li>Rose, ninety-three, called her daughter in Montana and announced she was coming early: she wanted to see Missoula one more time. Her granddaughter, who had hated studying in Spain, came home the same week.</li>
+      <li>Two days later Rose was in hospital with a trapped hernia. She chose comfort over surgery. When told it was St. Patrick's, the Irish Catholic beamed: "I am where I need to be."</li>
+      <li>Her room filled with flowers and calls. She held court like a queen bee: "God bless that Jeffrey." She thanked her family for putting up with her, and apologised with a smirk for imposing, adding that it sure was a good thing she came.</li>
+      <li>After her death, her daughters found her copy of Byock's earlier book, with asterisks next to <em>Please forgive me, I forgive you, Thank you, I love you</em> and <em>Good-bye</em>. They're convinced she planned it.</li>
+    </ul>
+    <div class="story c-bye">
+      <span class="label">The closing parable</span>
+      <p>A tourist visiting a famous rabbi finds one small room, books, a table and a bench. "Rabbi, where is your furniture?" "Where is yours?" "But I'm only a visitor here." "So am I."</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Afterword and the anniversary introduction</span>
+    <h2>A practice, not a script</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>Writing the book changed Byock. The Four Things became something like a meditation: a way to keep forgiveness, gratitude and love in mind, not just sentences to say once. He admits he's still working on it. He was nicknamed "Irascible" in high school.</p>
+      <p>The biggest change was in how he apologises. He used to say "I'm sorry that you felt hurt". Now he believes a real apology means owning the embarrassment of being wrong. That discomfort is what gives an apology its power: it tells the other person the relationship is worth it.</p>
+      <p>He also widens the lens. His generation is caring for its parents in smaller, scattered families, through long chronic illnesses, with an ageing population on the way. How we care for the frailest people will be the moral test. Practising the Four Things is a place to start.</p>
+    </div>
+    <div class="fig">
+      <h4>Hard cases readers asked about</h4>
+      <div class="cases">
+        <div class="c-bye"><b>They've already died</b><span>Talk to them in an empty chair, write a letter and send it off, or notice them in your dreams. One TV anchor drove all night to a mission chapel and said it all to his late father.</span></div>
+        <div class="c-thanks"><b>They have dementia</b><span>Treat the diagnosis as an alarm: visit and talk now. Later, say it anyway. Feelings get through when words don't.</span></div>
+        <div class="c-forgive"><b>You can't feel forgiveness yet</b><span>Say it first. It's an act of will. The feeling often follows.</span></div>
+        <div class="c-love"><b>They deny or won't engage</b><span>A sincere attempt completes your half. You're free of the should-haves either way.</span></div>
+      </div>
+      <p class="cap">Byock keeps one line from Gandhi in mind: be the change you want to see. If enough people expand forgiveness, gratitude and love in their own relationships, it echoes across generations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the stories</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book is mostly stories, but its advice is consistent. These are the practices that recur.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col c-forgive">
+      <h3>Mend</h3>
+      <div class="tk"><b>Apologise in the active voice</b><span>"I was wrong, please forgive me", not "I'm sorry you felt hurt". Own the embarrassment.</span></div>
+      <div class="tk"><b>Forgive as a decision</b><span>Say it before you feel it. It's a one-time cost that ends a lifelong debt.</span></div>
+      <div class="tk"><b>Picture them as a baby</b><span>Then ask what pain turned them into this. Behaviour is often an adaptation to hurt.</span></div>
+      <div class="tk"><b>Read your life as a novel</b><span>Give the main character, you, the mercy you'd give anyone else in that story.</span></div>
+    </div>
+    <div class="col c-thanks">
+      <h3>Tend</h3>
+      <div class="tk"><b>State the obvious, specifically</b><span>"She knows" isn't enough. Name what they did. Repetition never hurts.</span></div>
+      <div class="tk"><b>Do a bedtime inventory</b><span>List what your child or partner did today that touched you.</span></div>
+      <div class="tk"><b>Write a biography of joy</b><span>Trace what delighted you at each age, then take your daily Vitamin J.</span></div>
+      <div class="tk"><b>Let people care for you</b><span>When you're ill, accept help. It's good for them, not just for you.</span></div>
+    </div>
+    <div class="col c-love">
+      <h3>Celebrate &amp; part</h3>
+      <div class="tk"><b>Say "I love you" in your own language</b><span>Words, a letter, a recorded message, a shave, a fishing trip.</span></div>
+      <div class="tk"><b>Turn good-bye into a blessing</b><span>Remember it means "God be with you". Mean it at the door.</span></div>
+      <div class="tk"><b>Leave letters for later</b><span>Separate from the will, for birthdays, graduations, a wedding. Love, not instructions.</span></div>
+      <div class="tk"><b>Keep relationships current</b><span>Ask: if they were in ICU tomorrow, would anything be left unsaid? Then say it today.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Ira Byock, M.D., <em>The Four Things That Matter Most: A Book About Living</em>, 10th anniversary edition (Atria Books). Stories are condensed from the book; names are those Byock uses, many of them changed. Diagrams were drawn for this page and are illustrations, not data. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero band: broken rings close into whole circles, left to right --- */
+  var canvas = document.getElementById("rings");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : 1 - Math.pow(1 - t, 3); }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var cols = [css("--forgive"), css("--forgive"), css("--thanks"), css("--love")];
+    var alphas = [0.95, 0.55, 0.95, 0.95];
+    var bye = css("--bye");
+    var r = Math.min(hgt * 0.3, 32);
+    var step = r * 3.2;
+    var n = Math.max(2, Math.floor((w - 2 * r) / step) + 1);
+    var span = (n - 1) * step;
+    var x0 = (w - span) / 2;
+    var mid = hgt / 2;
+    var t = reduce ? 0 : time * 0.00035;
+    ctx.lineCap = "round";
+    for (var i = 0; i < n; i++) {
+      var u = i / (n - 1);
+      var s = ease((u - 0.06) / 0.78);     // how complete this ring is
+      var cx = x0 + i * step;
+      var gap = (1 - s) * 0.78 + 0.015;     // share of each quarter left open
+      var rot = t * (1 - 0.7 * s) + i * 0.9 * (1 - s) - Math.PI / 2;
+      if (s > 0.96) {
+        ctx.globalAlpha = 0.12 * (s - 0.96) / 0.04;
+        ctx.fillStyle = bye;
+        ctx.beginPath(); ctx.arc(cx, mid, r - 3, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.lineWidth = 3 + s * 1.5;
+      for (var k = 0; k < 4; k++) {
+        var a0 = rot + k * Math.PI / 2 + gap * Math.PI / 4;
+        var a1 = a0 + (Math.PI / 2) * (1 - gap);
+        ctx.beginPath();
+        ctx.arc(cx, mid, r, a0, a1);
+        ctx.strokeStyle = cols[k];
+        ctx.globalAlpha = alphas[k] * (0.45 + 0.55 * s);
+        ctx.stroke();
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

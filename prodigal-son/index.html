@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Return of the Prodigal Son by Henri Nouwen – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from Rembrandt's canvas: ochre for the younger son's
+   tunic, cold slate for the elder son's constricted light, red for the father's cloak,
+   and the cover's blue for home. */
+:root {
+  --paper: #f7f3ec;
+  --paper-2: #ede6da;
+  --card: #fffdf8;
+  --ink: #1d1712;
+  --ink-2: #54483d;
+  --ink-3: #85776a;
+  --rule: #ddd3c4;
+
+  /* the three figures + home */
+  --young: #a8700a;
+  --elder: #56677a;
+  --father: #b3261e;
+  --home: #1f7db5;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #14100c;
+    --paper-2: #1e1813;
+    --card: #231c16;
+    --ink: #f2ebe0;
+    --ink-2: #c3b6a5;
+    --ink-3: #938575;
+    --rule: #3a3128;
+    --young: #e6a93c;
+    --elder: #9db0c4;
+    --father: #ff6b5a;
+    --home: #5cb8ef;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14100c;
+  --paper-2: #1e1813;
+  --card: #231c16;
+  --ink: #f2ebe0;
+  --ink-2: #c3b6a5;
+  --ink-3: #938575;
+  --rule: #3a3128;
+  --young: #e6a93c;
+  --elder: #9db0c4;
+  --father: #ff6b5a;
+  --home: #5cb8ef;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--home); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Figure colour helpers */
+.c-young  { --c: var(--young); }
+.c-elder  { --c: var(--elder); }
+.c-father { --c: var(--father); }
+.c-home   { --c: var(--home); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(54px, 10.5vw, 132px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.03em;
+}
+.hero h1 .pre {
+  display: block;
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 700;
+  font-stretch: 100%;
+  letter-spacing: -.005em;
+  line-height: 1.1;
+  margin: 0 0 .35em .08em;
+  color: var(--ink-2);
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 800;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 20, 10, .38), 0 8px 18px -10px rgba(40, 20, 10, .28);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.glowband { position: relative; margin-top: 28px; }
+.glowband canvas { display: block; width: 100%; height: 120px; }
+.glowband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--c, var(--ink));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part h2 em { font-style: normal; color: var(--c); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-mute { fill: var(--ink-3); }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 36px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--c, var(--ink)); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* painting legend */
+.legend { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; }
+.legend li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; font-size: 15px; line-height: 1.4; color: var(--ink-2); }
+.legend li b { font-family: var(--display); font-weight: 750; font-stretch: 100%; color: var(--ink); display: block; font-size: 16px; }
+.legend .n { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; background: var(--c, var(--ink-3)); color: var(--card); margin-top: 1px; }
+
+/* bystander postures */
+.postures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.postures div { border-radius: 6px; padding: 12px; background: var(--paper-2); display: grid; gap: 2px; align-content: start; }
+.postures b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 17px; }
+.postures span { font-size: 13.5px; color: var(--ink-2); line-height: 1.35; }
+
+/* if-list (the world's conditional love) */
+.ifthen {
+  font-family: var(--mono); font-size: 14px; line-height: 1.8;
+  background: var(--paper-2); border-radius: 6px; padding: 18px 20px; margin: 0;
+  white-space: pre-wrap; color: var(--ink);
+}
+.ifthen .k { color: var(--father); }
+.ifthen .c { color: var(--ink-3); }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 6px 12px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); color: var(--c, var(--ink)); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* posture table: father vs elder son */
+.vs { display: grid; gap: 0; }
+.vs .row { display: grid; grid-template-columns: 110px minmax(0, 1fr) minmax(0, 1fr); gap: 14px; padding: 10px 0; border-top: 1px solid var(--rule); align-items: baseline; font-size: 15px; line-height: 1.4; }
+.vs .row:first-child { border-top: 0; }
+.vs .row.head span { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 16px; }
+.vs .row > span:first-child { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+
+/* flipped questions */
+.flip { display: grid; gap: 10px; }
+.flip .q { display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr); gap: 10px; align-items: center; font-size: 16px; }
+.flip .q span:first-child { color: var(--ink-3); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--elder) 70%, transparent); }
+.flip .q span:nth-child(2) { font-family: var(--mono); color: var(--father); text-align: center; }
+.flip .q span:last-child { font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+
+/* gifts */
+.gifts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.gifts div { border-radius: 6px; padding: 14px; border: 1px solid color-mix(in srgb, var(--father) 35%, var(--rule)); background: color-mix(in srgb, var(--father) 7%, var(--card)); display: grid; gap: 4px; align-content: start; }
+.gifts b { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 20px; color: var(--father); }
+.gifts span { font-size: 14px; color: var(--ink-2); line-height: 1.35; }
+
+/* three ways legend */
+.steps3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.steps3 div { border-top: 3px solid var(--father); padding-top: 10px; display: grid; gap: 4px; align-content: start; }
+.steps3 b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; }
+.steps3 span { font-size: 14.5px; color: var(--ink-2); line-height: 1.45; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 3px solid var(--c, var(--ink)); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.wants { display: grid; gap: 8px; }
+.wants div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; }
+.wants span { background: var(--card); padding: 10px 12px; font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+.wants span:last-child { background: color-mix(in srgb, var(--father) 8%, var(--card)); color: var(--ink); }
+.wants .hd span { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); background: var(--paper-2); }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro2, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+  .postures, .gifts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare, .legend, .steps3 { grid-template-columns: 1fr; }
+  .vs .row { grid-template-columns: 1fr 1fr; }
+  .vs .row > span:first-child { grid-column: 1 / -1; }
+  .flip .q { grid-template-columns: 1fr; gap: 2px; }
+  .flip .q span:nth-child(2) { text-align: left; }
+  .wants div { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Henri J. M. Nouwen · Doubleday, 1992</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#painting">The painting</a>
+    <a href="#younger">Younger son</a>
+    <a href="#elder">Elder son</a>
+    <a href="#father">Father</a>
+    <a href="#toolkit">Practices</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span class="pre">The Return of the</span>Prodigal Son</h1>
+    <p class="sub">A story of homecoming</p>
+    <p class="dek">A priest falls for a poster of Rembrandt's painting and spends years discovering that he is each figure in it: the son who ran away, the son who stayed and resented it, and the father he is called to become.</p>
+    <div class="byline label">
+      <span>9 chapters</span><span>3 parts</span><span>1 painting</span><span>3 figures to become</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Return of the Prodigal Son by Henri J. M. Nouwen: the outline of a house in light blue on a deep blue background">
+</div>
+
+<div class="glowband" aria-hidden="true">
+  <canvas id="walk"></canvas>
+  <div class="ends label"><span>Home</span><span>A distant country</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>One painting, three people, and all of them are you</h2>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p>In 1983 Henri Nouwen, a Dutch priest who had taught at Notre Dame, Yale and Harvard, was worn out after a six-week US lecture tour on violence in Central America. Visiting L'Arche in Trosly, France, a community where people with intellectual disabilities live with their assistants, he saw a poster on a friend's door: an old man in a red cloak laying his hands on the shoulders of a kneeling, ragged boy. It was a detail from Rembrandt's <em>The Return of the Prodigal Son</em>, and he couldn't look away.</p>
+      <p>The book follows the parable from Luke 15 through three stages of his own life. First he saw himself as the <strong style="color:var(--young)">younger son</strong>, exhausted and longing to be held. Then a friend asked whether he wasn't more like the <strong style="color:var(--elder)">elder son</strong>, the dutiful one who never left and quietly resented it. Finally another friend told him he was called to become the <strong style="color:var(--father)">father</strong>.</p>
+      <p>Underneath runs one claim: we are loved before we do anything, and most of our restlessness comes from forgetting it. Coming home means letting ourselves be found, then becoming the one who welcomes others.</p>
+    </div>
+    <div class="fig">
+      <h4>Three stages of one journey</h4>
+      <svg viewBox="0 0 480 200" role="img" aria-label="Three circles connected by arrows. One: the younger son, the one who left, Nouwen in 1983. Two: the elder son, the one who stayed, a friend's hunch. Three: the father, the one who waits, a friend's challenge.">
+        <defs>
+          <marker id="ar-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--ink-3)"/></marker>
+        </defs>
+        <line x1="124" y1="62" x2="194" y2="62" style="stroke:var(--ink-3)" stroke-width="1.5" marker-end="url(#ar-ink)"/>
+        <line x1="284" y1="62" x2="354" y2="62" style="stroke:var(--ink-3)" stroke-width="1.5" marker-end="url(#ar-ink)"/>
+        <circle cx="80" cy="62" r="38" style="fill:color-mix(in srgb, var(--young) 16%, transparent);stroke:var(--young)" stroke-width="2.5"/>
+        <circle cx="240" cy="62" r="38" style="fill:color-mix(in srgb, var(--elder) 16%, transparent);stroke:var(--elder)" stroke-width="2.5"/>
+        <circle cx="400" cy="62" r="38" style="fill:color-mix(in srgb, var(--father) 16%, transparent);stroke:var(--father)" stroke-width="2.5"/>
+        <text x="80" y="71" text-anchor="middle" font-size="24" style="font-family:var(--display);font-weight:800;fill:var(--young)">I</text>
+        <text x="240" y="71" text-anchor="middle" font-size="24" style="font-family:var(--display);font-weight:800;fill:var(--elder)">II</text>
+        <text x="400" y="71" text-anchor="middle" font-size="24" style="font-family:var(--display);font-weight:800;fill:var(--father)">III</text>
+        <text x="80" y="128" text-anchor="middle" font-size="14" class="t-ink">Younger son</text>
+        <text x="80" y="148" text-anchor="middle" font-size="12">the one who left</text>
+        <text x="80" y="166" text-anchor="middle" font-size="12" class="t-mute">wants to be held</text>
+        <text x="240" y="128" text-anchor="middle" font-size="14" class="t-ink">Elder son</text>
+        <text x="240" y="148" text-anchor="middle" font-size="12">the one who stayed</text>
+        <text x="240" y="166" text-anchor="middle" font-size="12" class="t-mute">dutiful, resentful</text>
+        <text x="400" y="128" text-anchor="middle" font-size="14" class="t-ink">Father</text>
+        <text x="400" y="148" text-anchor="middle" font-size="12">the one who waits</text>
+        <text x="400" y="166" text-anchor="middle" font-size="12" class="t-mute">blesses, asks nothing</text>
+      </svg>
+      <p class="cap">His friend Bart Gavigan triggered the second stage: <em>“I wonder if you are not more like the elder son.”</em> Sue Mosteller of L'Arche Daybreak triggered the third: whichever son you are, <em>“you are called to become the father.”</em></p>
+    </div>
+  </div>
+
+  <div class="stats" style="margin-top:28px">
+    <div class="stat"><span class="big num">1983</span><p>Nouwen first sees the poster on a door at L'Arche in Trosly.</p></div>
+    <div class="stat"><span class="big num">4 h+</span><p>Time he spent in front of the original at the Hermitage in July 1986.</p></div>
+    <div class="stat"><span class="big num">8 × 6 ft</span><p>The canvas is larger than life. Catherine the Great bought it in 1766.</p></div>
+    <div class="stat"><span class="big num">c. 1669</span><p>Painted near the end of Rembrandt's life, after he had lost almost everything.</p></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col c-young">
+      <span class="label">Part I</span>
+      <h3 style="color:var(--young)">The Younger Son</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Rembrandt and the Younger Son</b>The painter was once the prodigal</a></li>
+        <li><span>02</span><a href="#ch2"><b>The Younger Son Leaves</b>Leaving is going deaf to love</a></li>
+        <li><span>03</span><a href="#ch3"><b>The Younger Son's Return</b>Claiming a sonship you can't earn</a></li>
+      </ol>
+    </div>
+    <div class="col c-elder">
+      <span class="label">Part II</span>
+      <h3 style="color:var(--elder)">The Elder Son</h3>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>Rembrandt and the Elder Son</b>The bitter witness on the right</a></li>
+        <li><span>05</span><a href="#ch5"><b>The Elder Son Leaves</b>Lost without ever leaving home</a></li>
+        <li><span>06</span><a href="#ch6"><b>The Elder Son's Return</b>Trust and gratitude as disciplines</a></li>
+      </ol>
+    </div>
+    <div class="col c-father">
+      <span class="label">Part III</span>
+      <h3 style="color:var(--father)">The Father</h3>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>Rembrandt and the Father</b>A near-blind man who sees with his hands</a></li>
+        <li><span>08</span><a href="#ch8"><b>The Father Welcomes Home</b>A love that never compares</a></li>
+        <li><span>09</span><a href="#ch9"><b>The Father Calls for a Celebration</b>Choosing joy on purpose</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE PAINTING ============ -->
+<section id="painting">
+  <div class="sec-head">
+    <span class="label">Prologue · Encounter with a painting</span>
+    <h2>Who stands where on Rembrandt's canvas</h2>
+    <p class="lede">The poster showed only the embrace. At the Hermitage Nouwen saw the whole picture: four onlookers, and a wide dark gap between the father and the tall man on the right.</p>
+  </div>
+
+  <div class="intro2">
+    <div class="fig">
+      <svg viewBox="0 0 480 360" role="img" aria-label="Schematic of the painting. On the left, in a pool of warm light, the father in a red cloak bends over his kneeling younger son, hands on the son's shoulders. In the background two women by an arch, and a small carved flute player in the wall. In the middle a seated man. On the right the tall elder son stands stiffly with a staff and clasped hands, in colder light. A wide empty space separates father and elder son.">
+        <defs>
+          <radialGradient id="ps-glow" cx="0.29" cy="0.62" r="0.48">
+            <stop offset="0" stop-color="#f6cf7a" stop-opacity=".75"/>
+            <stop offset=".5" stop-color="#c8872f" stop-opacity=".22"/>
+            <stop offset="1" stop-color="#c8872f" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect x="0" y="0" width="480" height="360" rx="4" fill="#2a1c12"/>
+        <rect x="0" y="0" width="480" height="360" rx="4" fill="url(#ps-glow)"/>
+        <!-- arch and the women in the background -->
+        <path d="M214 176 V74 Q252 34 290 74 V176" fill="none" stroke="#5c4530" stroke-width="3"/>
+        <path d="M226 176 Q224 112 238 104 Q252 112 250 176 Z" fill="#4a3624"/>
+        <circle cx="238" cy="94" r="9" fill="#9a7a56"/>
+        <path d="M290 150 Q290 92 302 86 Q314 92 314 150 Z" fill="#3e2e20"/>
+        <circle cx="302" cy="76" r="8" fill="#7d6347"/>
+        <!-- carved flute player -->
+        <rect x="258" y="118" width="14" height="22" rx="2" fill="#4d3a28" stroke="#6b5238"/>
+        <!-- father -->
+        <path d="M86 304 Q78 176 132 128 Q186 150 198 304 Z" fill="#a8281d"/>
+        <circle cx="136" cy="114" r="15" fill="#e7c08a"/>
+        <!-- younger son -->
+        <ellipse cx="140" cy="250" rx="40" ry="34" fill="#c9a050"/>
+        <circle cx="140" cy="210" r="14" fill="#ecd3a3"/>
+        <ellipse cx="114" cy="218" rx="9" ry="6" fill="#e7c08a"/>
+        <ellipse cx="166" cy="218" rx="8" ry="6" fill="#f0d2a6"/>
+        <ellipse cx="112" cy="300" rx="14" ry="6" fill="#8a6a3e"/>
+        <ellipse cx="164" cy="302" rx="14" ry="6" fill="#6b4e2c"/>
+        <line x1="150" y1="304" x2="178" y2="300" stroke="#3a2a1a" stroke-width="2"/>
+        <line x1="174" y1="252" x2="194" y2="266" stroke="#e1c784" stroke-width="3" stroke-linecap="round"/>
+        <!-- seated steward -->
+        <path d="M276 304 Q276 240 300 232 Q324 240 326 304 Z" fill="#6b4a2c"/>
+        <circle cx="300" cy="218" r="12" fill="#d8b07a"/>
+        <circle cx="302" cy="252" r="5" fill="#d8b07a"/>
+        <!-- elder son -->
+        <path d="M366 338 L372 132 Q392 114 412 132 L420 338 Z" fill="#7e271e"/>
+        <circle cx="392" cy="110" r="14" fill="#cfc4b4"/>
+        <circle cx="392" cy="184" r="7" fill="#3a2a1f"/>
+        <line x1="376" y1="190" x2="368" y2="342" stroke="#c9b48c" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- the open space -->
+        <line x1="206" y1="340" x2="358" y2="340" stroke="#e1c784" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <text x="282" y="330" text-anchor="middle" font-size="12" style="fill:#efe1c6">the open space</text>
+        <!-- number markers -->
+        <g font-size="12" text-anchor="middle">
+          <circle cx="166" cy="104" r="10" fill="#fff6e6"/><text x="166" y="108" style="fill:#2a1c12">1</text>
+          <circle cx="92" cy="252" r="10" fill="#fff6e6"/><text x="92" y="256" style="fill:#2a1c12">2</text>
+          <circle cx="434" cy="116" r="10" fill="#fff6e6"/><text x="434" y="120" style="fill:#2a1c12">3</text>
+          <circle cx="336" cy="214" r="10" fill="#fff6e6"/><text x="336" y="218" style="fill:#2a1c12">4</text>
+          <circle cx="216" cy="56" r="10" fill="#fff6e6"/><text x="216" y="60" style="fill:#2a1c12">5</text>
+          <circle cx="286" cy="128" r="10" fill="#fff6e6"/><text x="286" y="132" style="fill:#2a1c12">6</text>
+        </g>
+      </svg>
+      <p class="src">Schematic drawn for this page. Rembrandt, The Return of the Prodigal Son, c. 1668–69, State Hermitage Museum, St Petersburg.</p>
+    </div>
+    <div class="fig">
+      <h4>The figures</h4>
+      <ol class="legend">
+        <li class="c-father"><span class="n">1</span><span><b>The father</b>Nearly blind, in a wide red cloak, bent over his son. All the light gathers on his hands.</span></li>
+        <li class="c-young"><span class="n">2</span><span><b>The younger son</b>Shaved head, torn tunic, one bare scarred foot, one broken sandal. He still wears his short sword.</span></li>
+        <li class="c-elder"><span class="n">3</span><span><b>The elder son</b>Tall and upright, dressed like his father, holding a staff. His hands are clasped and his light is cold.</span></li>
+        <li><span class="n">4</span><span><b>The seated man</b>A steward beating his breast. In Rembrandt's tradition he stands for the tax collectors and sinners.</span></li>
+        <li><span class="n">5</span><span><b>Two women</b>Half in shadow by an arch. One may be the mother.</span></li>
+        <li><span class="n">6</span><span><b>A carved flute player</b>The only sign of the party. Rembrandt painted the joy as light instead of music.</span></li>
+      </ol>
+      <p class="cap">Art historian Barbara Joan Haeger showed that painters of Rembrandt's era linked this parable to the one about the Pharisee and the tax collector. That makes the tall man the elder son, standing in for the Pharisees and scribes who had complained that Jesus <em>“welcomes sinners and eats with them”</em>.</p>
+    </div>
+  </div>
+
+  <div class="figrow" style="margin-top:24px">
+    <div class="fig">
+      <h4>Four ways of not getting involved</h4>
+      <div class="postures">
+        <div><b>Staring</b><span>The seated man, looking at no one in particular</span></div>
+        <div><b>Gazing</b><span>A woman in the background, leaning on the arch</span></div>
+        <div><b>Watching</b><span>A second woman, further back in the dark</span></div>
+        <div><b>Looking</b><span>The tall man, hands gripping each other, judging</span></div>
+      </div>
+      <p class="cap">Nouwen recognised himself in all four. As a professor he had explained the spiritual life for twenty years while staying safely in the observer's seat. Explaining something gave him a sense of control. Kneeling and letting himself be held did not.</p>
+    </div>
+    <div class="fig">
+      <h4>Moving from onlooker to participant</h4>
+      <div class="prose" style="gap:.7em">
+        <p class="muted" style="font-size:16px">In 1985 he left Harvard for a year at Trosly. In August 1986 he joined L'Arche Daybreak in Toronto as its pastor, and hung the poster where he worked.</p>
+        <p class="muted" style="font-size:16px">Soon after he arrived, Linda, a young woman with Down's syndrome, hugged him and said “Welcome”, as she does with every newcomer. She knew nothing of his books or his reputation. Each time, he had to choose between explaining such gestures away and accepting them as an invitation onto the platform.</p>
+        <p class="muted" style="font-size:16px">He calls the platform <em>“the place beyond earning, deserving, and rewarding”</em>. Receiving love, he found, is often harder than giving it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="story" style="margin-top:28px;--c:var(--young)">
+    <span class="label">The story · Saturday, 26 July 1986</span>
+    <p>Alexei Briantsev, head of restoration at the Hermitage, let Nouwen in by a side door and told the guard to leave him alone with the painting. On his second visit Nouwen moved a velvet chair to get out of the glare. The young guard ordered it back, so he sat on the floor, then on a radiator, until a tour guide scolded him for that too. Alexei left, then returned with a large gilded armchair just for him. Leaving, Nouwen thanked the guard and saw in his face “a man like myself: afraid, but with a great desire to be forgiven.”</p>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part c-young" id="younger">
+  <span class="label partno">Part I · Chapters 1–3</span>
+  <h2>The <em>younger</em> son</h2>
+  <p class="lede">Asking for your inheritance while your father is alive means wishing him dead. Nouwen treats it as the shape of every flight from home: looking elsewhere for a love you already have.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Rembrandt and the Younger Son</span></div>
+  <div class="body">
+    <div>
+      <h3>The painter had been the prodigal first</h3>
+      <p class="idea">Only someone who had lost almost everything could paint a homecoming like this one.</p>
+    </div>
+    <ul class="points">
+      <li>The young Rembrandt was brash, sure of his genius, extravagant and greedy for fame. At about thirty he painted himself with his wife Saskia as the prodigal in a brothel: drunk, glass raised, sneering at the viewer.</li>
+      <li>Then came the losses. A son died in 1635, two daughters in 1638 and 1640, and Saskia in 1642. A bitter relationship with his son's nurse ended in court. His popularity fell, and in 1656 he was declared insolvent. His house and collection were auctioned in 1657–58.</li>
+      <li>The suffering didn't make him bitter, says Nouwen. It made him see. His late self-portraits look inward, and his light moves from glittering chains and helmets to a glow that seems to come from inside his subjects.</li>
+      <li>Hendrickje Stoffels, his later partner, died in 1663. His son Titus married and then died in 1668. Rembrandt died poor and alone in 1669, survived by a daughter, a daughter-in-law and a granddaughter.</li>
+      <li>The kneeling son in rags is, in a sense, the once-celebrated artist who has learned that the glory he gathered was vanity.</li>
+    </ul>
+    <div class="fig">
+      <h4>From outer splendour to inner light</h4>
+      <svg viewBox="0 0 480 240" role="img" aria-label="Timeline of Rembrandt's life from 1606 to 1669. A curve for outer splendour rises to a peak around 1640 and falls. A curve for inner light stays low until about 1650 then rises steeply to the end. Markers: 1636 brothel self-portrait, 1642 Saskia dies, 1656 insolvent, 1668 Titus dies.">
+        <line x1="40" y1="190" x2="440" y2="190" style="stroke:var(--ink-3)" stroke-width="1.5"/>
+        <g style="stroke:var(--rule)" stroke-dasharray="3 4" stroke-width="1">
+          <line x1="230.5" y1="28" x2="230.5" y2="190"/>
+          <line x1="268.6" y1="46" x2="268.6" y2="190"/>
+          <line x1="357.5" y1="28" x2="357.5" y2="190"/>
+          <line x1="433.7" y1="46" x2="433.7" y2="190"/>
+        </g>
+        <path d="M40 162 C140 152, 200 52, 262 52 S360 150, 440 178" fill="none" style="stroke:var(--young)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M40 182 C200 182, 300 178, 340 150 S410 62, 440 48" fill="none" style="stroke:var(--father)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="440" cy="48" r="5" style="fill:var(--father)"/>
+        <text x="230.5" y="22" text-anchor="middle" font-size="11">brothel self-portrait</text>
+        <text x="272" y="42" font-size="11">Saskia dies</text>
+        <text x="357.5" y="22" text-anchor="middle" font-size="11">insolvent</text>
+        <text x="428" y="42" text-anchor="end" font-size="11">Titus dies</text>
+        <g font-size="11" text-anchor="middle" class="t-mute">
+          <text x="40" y="208">1606</text>
+          <text x="230.5" y="208">1636</text>
+          <text x="268.6" y="208">1642</text>
+          <text x="357.5" y="208">1656</text>
+          <text x="401.9" y="208">1663</text>
+          <text x="440" y="208">1669</text>
+        </g>
+        <text x="40" y="232" font-size="11" class="t-mute">born</text>
+        <text x="440" y="232" text-anchor="end" font-size="11" class="t-mute">dies; the Prodigal Son is among his last works</text>
+      </svg>
+      <p class="cap"><span class="dot c-young"></span> outer splendour &nbsp; <span class="dot c-father"></span> inner light. A schematic of Nouwen's reading, not a measurement. As the outward glamour of Rembrandt's life collapsed, the light in his work moved inward. The dot marks the Prodigal Son, painted in his final years.</p>
+    </div>
+    <div class="story c-young">
+      <span class="label">The contrast</span>
+      <p>Rembrandt painted himself as the prodigal twice, about thirty years apart. At thirty he is the son in the tavern, feathered cap and sword, enjoying himself. At the end of his life his face is gone from the picture. What remains is his soul, in the old father bending over the son.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">The Younger Son Leaves</span></div>
+  <div class="body">
+    <div>
+      <h3>Leaving home is going deaf to the voice of love</h3>
+      <p class="idea">Home is the inner place where you can hear yourself called beloved. You leave every time you start trying to earn that love somewhere else.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A radical rejection.</strong> Scholar Kenneth Bailey asked villagers from Morocco to India whether a son could demand his inheritance from a living father. The answer was always: never. It would mean the son wanted his father dead. The younger son breaks with his family and his whole community.</li>
+      <li><strong>Deaf to the voice of love.</strong> The voice that says <em>“You are my Beloved”</em> is soft. Like the voice Elijah heard after the storm, earthquake and fire, it is a gentle breeze. It can be heard only by those who let themselves be touched.</li>
+      <li>Other voices are loud and seductive: prove you're worth something; be successful, popular, powerful. They are the voices Jesus heard in the desert. Nouwen heard them from parents, teachers, colleagues and, above all, the media.</li>
+      <li><strong>Searching where it can't be found.</strong> The world's love is always conditional, and those conditions enslave. Nouwen calls the result addiction: wealth, status, consumption and sex chased as if they could fill the deepest need.</li>
+      <li>The father let him go anyway. Love can't force someone to stay. That freedom to leave is itself a sign of how much the son is loved.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The world's love comes with conditions</h4>
+<pre class="ifthen"><span class="c">// the world says</span>
+I love you <span class="k">if</span> you are good-looking
+I love you <span class="k">if</span> you are intelligent
+I love you <span class="k">if</span> you have good connections
+I love you <span class="k">if</span> you produce, sell and buy
+
+<span class="c">// home says</span>
+You are my Beloved.</pre>
+        <p class="cap">It's impossible to meet every “if”, so the search never ends. Trying, failing and trying again is how the world keeps you hooked.</p>
+      </div>
+      <div class="fig">
+        <h4>Signs you've left home</h4>
+        <div class="chips c-father">
+          <span class="chip">anger</span><span class="chip">resentment</span><span class="chip">jealousy</span><span class="chip">revenge</span><span class="chip">lust</span><span class="chip">greed</span><span class="chip">rivalry</span>
+        </div>
+        <p class="cap">When Nouwen watched his own mind, he found few moments free of these. A little criticism made him angry, a little rejection depressed him, a little praise lifted him. He felt <em>“like a small boat on the ocean”</em>, which showed him he believed the world defined him.</p>
+        <p class="cap">The real question underneath, he says, is simple: <strong>to whom do I belong?</strong></p>
+      </div>
+    </div>
+    <div class="story c-young">
+      <span class="label">The stillness</span>
+      <p>In a 1636 etching Rembrandt had shown the scene full of motion, with the father running and the son throwing himself down. The late painting is completely still. The father's touch reads as a permanent blessing rather than a single moment.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">The Younger Son's Return</span></div>
+  <div class="body">
+    <div>
+      <h3>He turns home on the one thing he never sold</h3>
+      <p class="idea">Losing everything brought him down to the bedrock of who he was: still his father's child.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Being lost.</strong> His shaved head looks like a prisoner's. He wears only an undergarment, and his feet show the long road. Yet he still wears his short sword, the badge of his noble birth. He was willing to eat pig food, but he never sold that.</li>
+      <li>Once no one in the far country cared whether he lived, he understood he was on the road to death. What turned him around was the rediscovery of his deepest self.</li>
+      <li><strong>Claiming childhood.</strong> “I no longer deserve to be called your son” shows he knows he had a dignity to lose. Nouwen lived his own version when an obsessive friendship collapsed. He had to choose between self-destruction and trusting the love that was waiting at home.</li>
+      <li>Judas and Peter were both lost. Judas, in the painting's terms, sold his sword. Peter held onto it and came back weeping. The voice that says <em>I am no good, I am a nobody</em> is the one that leads to death.</li>
+      <li><strong>The long way home.</strong> The son rehearses a speech and plans to settle for being a hired hand. It's repentance, but a self-serving kind: he still pictures a harsh father. Nouwen notices how much of his own inner life goes into speeches like this, rehearsed for people who aren't there.</li>
+      <li>Receiving forgiveness is one of the hardest things in spiritual life. A hired hand can keep his distance and complain about his pay. A son has to accept being fully restored.</li>
+      <li>The way back is a <strong>second childhood</strong>: an innocence reached by choice, along the lines of the Beatitudes. A friend looked at the son's wet, shaved head and saw a newborn. Nouwen went further and saw Jesus himself as a prodigal, who left the Father's house to bring the lost children home.</li>
+    </ul>
+    <div class="fig">
+      <h4>How lostness deepens, and where it bottoms out</h4>
+      <svg viewBox="0 0 480 340" role="img" aria-label="A staircase descending in seven steps: not sure I have a safe home; others seem better off; try hard to please and succeed; fail and feel jealous, succeed and feel anxious; suspicious, defensive, a victim; no one can be trusted; did anyone ever love me. At the bottom a bedrock line reads: I am still my father's child. An arrow on the right points back up, labelled turn home.">
+        <defs>
+          <marker id="ar-young" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--young)"/></marker>
+        </defs>
+        <g font-size="13">
+          <rect x="0" y="14" width="26" height="40" style="fill:color-mix(in srgb, var(--home) 85%, var(--ink-3))"/>
+          <text x="36" y="40" class="t-ink">Not sure I have a safe home</text>
+          <rect x="26" y="54" width="26" height="40" style="fill:color-mix(in srgb, var(--home) 72%, var(--ink-3))"/>
+          <text x="62" y="80" class="t-ink">Others seem better off</text>
+          <rect x="52" y="94" width="26" height="40" style="fill:color-mix(in srgb, var(--home) 58%, var(--ink-3))"/>
+          <text x="88" y="120" class="t-ink">Try hard to please and succeed</text>
+          <rect x="78" y="134" width="26" height="40" style="fill:color-mix(in srgb, var(--home) 45%, var(--ink-3))"/>
+          <text x="114" y="160" class="t-ink">Fail: jealous. Succeed: anxious</text>
+          <rect x="104" y="174" width="26" height="40" style="fill:color-mix(in srgb, var(--home) 32%, var(--ink-3))"/>
+          <text x="140" y="200" class="t-ink">Suspicious, defensive, a victim</text>
+          <rect x="130" y="214" width="26" height="40" style="fill:color-mix(in srgb, var(--home) 18%, var(--ink-3))"/>
+          <text x="166" y="240" class="t-ink">“No one can be trusted”</text>
+          <rect x="156" y="254" width="26" height="40" style="fill:var(--ink-3)"/>
+          <text x="192" y="280" class="t-ink">“Did anyone ever love me?”</text>
+        </g>
+        <line x1="0" y1="304" x2="470" y2="304" style="stroke:var(--young)" stroke-width="4" stroke-linecap="round"/>
+        <text x="235" y="328" text-anchor="middle" font-size="13" style="fill:var(--young)">bedrock: “I am still my father’s child”</text>
+        <line x1="458" y1="292" x2="458" y2="22" style="stroke:var(--young)" stroke-width="2" marker-end="url(#ar-young)"/>
+        <text x="448" y="160" text-anchor="middle" font-size="12" transform="rotate(-90 448 160)" style="fill:var(--young)">turn home</text>
+      </svg>
+      <p class="cap">Nouwen's own description of the sequence. The further from home, the harder it is to hear the voice that calls you beloved, and the more you get pulled into the world's power games. The turn comes only at the bottom, when he remembers who he is.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Receiving forgiveness requires a total willingness to let God be God.”</blockquote>
+      <span class="label">Nouwen on why the son plans to settle for being a servant</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part c-elder" id="elder">
+  <span class="label partno">Part II · Chapters 4–6</span>
+  <h2>The <em>elder</em> son</h2>
+  <p class="lede">He never left, never wasted a coin, and still stands outside the light. Nouwen, the eldest child, a dutiful priest since the age of six, finds this the harder figure to face, and the harder conversion.</p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Rembrandt and the Elder Son</span></div>
+  <div class="body">
+    <div>
+      <h3>Rembrandt put the bitter brother in the picture</h3>
+      <p class="idea">In the parable the elder son isn't there for the embrace. Rembrandt added him anyway, and made him the main witness.</p>
+    </div>
+    <ul class="points">
+      <li>Some critics doubted who the tall man was, and some doubted Rembrandt even painted him. Haeger's study settled it for Nouwen: Rembrandt was following <em>“not the letter but the spirit”</em> of the text.</li>
+      <li>Putting the elder son in the frame turns the painting into a choice. He can still step into the light or walk away, and so can the viewer.</li>
+      <li>Rembrandt was the elder son too. Recent biographers, Gary Schwartz above all, describe a difficult, calculating and vengeful man who wasted years on petty lawsuits.</li>
+      <li>The worst episode: he gathered testimony to have his former partner Geertje Dircx committed to an asylum, then paid an agent to keep her there. In 1649, as this began, he painted nothing.</li>
+      <li>A sensual man who repents is easy to like. A resentful man is much harder, and Rembrandt was both. Nouwen concludes that the hardest conversion is the one for the son who stayed home.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">The Elder Son Leaves</span></div>
+  <div class="body">
+    <div>
+      <h3>You can get lost without leaving home</h3>
+      <p class="idea">Outwardly he did everything right. Inwardly he drifted just as far as his brother.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Standing with clasped hands.</strong> The embrace sits on the left of the canvas, and the elder son dominates the right. Between them is a wide empty space that asks to be closed.</li>
+      <li>Nouwen suggests a better title: <em>the parable of the lost sons</em>. The elder brother's work has become slavery and his obedience a burden.</li>
+      <li><strong>Lost in resentment.</strong> Nouwen admits a secret envy of people who live the disobedient life he never dared to. When a friend who had only recently become a Christian criticised his prayer life, he was furious, and that anger showed him his own captivity.</li>
+      <li>The younger son's lostness is visible and easy to understand. The elder son's hides behind virtue. Nouwen asks which does more damage, lust or resentment. He sees so much judgement among the “saints” and so much frozen anger among people anxious to avoid sin.</li>
+      <li><strong>Without joy.</strong> The elder son hears music and immediately suspects he's been left out. <em>Joy and resentment cannot coexist.</em></li>
+      <li><strong>An open-ended question.</strong> The parable ends before we learn what he does. Nouwen found his own resentment “attached to the underside” of his virtues. He couldn't pull it out without pulling up the virtues too, and he concluded that this healing has to come from above.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Same red cloak, opposite posture</h4>
+      <div class="vs">
+        <div class="row head"><span></span><span style="color:var(--father)">The father</span><span style="color:var(--elder)">The elder son</span></div>
+        <div class="row"><span>Body</span><span>Bends over his son</span><span>Stands stiff, propped by a long staff</span></div>
+        <div class="row"><span>Cloak</span><span>Wide, open, sheltering</span><span>Hangs flat against his body</span></div>
+        <div class="row"><span>Hands</span><span>Spread out, touching, blessing</span><span>Clasped together at his chest, in shadow</span></div>
+        <div class="row"><span>Light</span><span>Flows through his whole body into the son</span><span>Cold, held on the face, the body left dark</span></div>
+      </div>
+      <p class="cap">Both are bearded, and the light on the elder son's face links him to his father. He resembles his father and is called into the same light, but he can't be forced into it.</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The complaint that feeds itself</h4>
+        <svg viewBox="0 0 440 310" role="img" aria-label="A loop of four stages. The complaint: I did more and got less. Voice it, hoping for pity. Others pull back, because complainers are hard to live with. Feel even more rejected, which returns to the complaint. In the middle: joy can no longer evoke joy.">
+          <defs>
+            <marker id="ar-elder" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--elder)"/></marker>
+          </defs>
+          <g fill="none" style="stroke:var(--elder)" stroke-width="2.5" marker-end="url(#ar-elder)">
+            <path d="M254.2 56 A100 100 0 0 1 314 115.8"/>
+            <path d="M314 184.2 A100 100 0 0 1 254.2 244"/>
+            <path d="M185.8 244 A100 100 0 0 1 126 184.2"/>
+            <path d="M126 115.8 A100 100 0 0 1 185.8 56"/>
+          </g>
+          <g style="fill:var(--elder)">
+            <circle cx="220" cy="50" r="7"/><circle cx="320" cy="150" r="7"/><circle cx="220" cy="250" r="7"/><circle cx="120" cy="150" r="7"/>
+          </g>
+          <text x="220" y="18" text-anchor="middle" font-size="13" class="t-ink">The complaint</text>
+          <text x="220" y="35" text-anchor="middle" font-size="12">“I did more, got less”</text>
+          <text x="332" y="146" font-size="13" class="t-ink">Voice it,</text>
+          <text x="332" y="163" font-size="12">hoping for pity</text>
+          <text x="220" y="276" text-anchor="middle" font-size="13" class="t-ink">Others pull back</text>
+          <text x="220" y="293" text-anchor="middle" font-size="12">complainers are hard to live with</text>
+          <text x="108" y="146" text-anchor="end" font-size="13" class="t-ink">Feel even</text>
+          <text x="108" y="163" text-anchor="end" font-size="12">more rejected</text>
+          <text x="220" y="146" text-anchor="middle" font-size="12" class="t-mute" font-style="italic">joy can no longer</text>
+          <text x="220" y="163" text-anchor="middle" font-size="12" class="t-mute" font-style="italic">evoke joy</text>
+        </svg>
+        <p class="cap">Complaining always brings the opposite of what it seeks. Self-righteousness and self-rejection reinforce each other until you feel like the most misunderstood person alive.</p>
+      </div>
+      <div class="fig">
+        <h4>Two ways to be lost</h4>
+        <div class="compare">
+          <div class="c-young"><h5>Younger son</h5><ul><li>Lust, greed, wasted money</li><li>Obvious to everyone, including himself</li><li>Hits bottom and turns around</li><li>A classic failure with a clear way back</li></ul></div>
+          <div class="c-elder"><h5>Elder son</h5><ul><li>Resentment, judgement, envy</li><li>Hidden behind obedience and hard work</li><li>Erupts only when the father rejoices</li><li>Tied to his virtues, so it's hard to uproot</li></ul></div>
+        </div>
+        <p class="cap">His last words to his father, “this son of yours”, show the cost. He has disowned his brother and sees his father as a slave-driver. At home, he has become a stranger.</p>
+      </div>
+    </div>
+
+    <div class="story c-elder">
+      <span class="label">The story</span>
+      <p>Feeling lonely one evening, Nouwen asked a friend to go out with him. The friend said he had no time. A little later Nouwen found him at a party at another friend's house. The friend warmly said, “Welcome, join us.” Nouwen was so hurt at not having been told that he walked out and slammed the door. The joy in the room had become a reason for resentment.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">The Elder Son's Return</span></div>
+  <div class="body">
+    <div>
+      <h3>The father goes out to him too</h3>
+      <p class="idea">No rebuke, no defence, just “child, you are with me always, and all I have is yours.” The way back runs through trust and gratitude.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A possible conversion.</strong> The father leaves the party to plead with the elder son, just as he ran to the younger. Luke's word for son here, <em>teknon</em>, is affectionate: it means “child”. The father's love doesn't depend on how the story ends.</li>
+      <li>Nouwen admits he belongs with the scribes and Pharisees: learned, respected, called “reverend”, quick to judge. He wonders whether he has <em>“already had his reward”</em>. The answer is that the father doesn't love the younger son more.</li>
+      <li><strong>Letting go of rivalry.</strong> The father never compares his sons. He loves the younger one's passion even without obedience, and the elder one's obedience even without passion. Outside the light, siblings, spouses and friends turn into rivals.</li>
+      <li><strong>Through trust and gratitude.</strong> You can't free yourself from frozen anger, but you can let yourself be found. Trust says <em>God is looking for you</em>, against the dark voice that says you're taken for granted. Gratitude is the opposite of resentment.</li>
+      <li>Gratitude can be a <strong>discipline</strong>. You can choose it while your feelings are still hurt, and each choice makes the next one easier. He quotes an Estonian proverb: whoever doesn't give thanks for little won't give thanks for much.</li>
+      <li>Both take a leap of faith: a gentle letter to someone who won't forgive you, a call to someone who rejected you.</li>
+      <li><strong>The true elder son</strong> is Jesus: completely obedient yet never a slave, with no distance, fear or envy between him and the Father.</li>
+    </ul>
+    <div class="fig">
+      <h4>The two disciplines</h4>
+      <div class="compare">
+        <div class="c-elder"><h5>The dark voice says</h5><ul><li>He prefers the sinner who comes back from his escapades</li><li>He takes me for granted</li><li>I'm not his favourite</li><li>I don't get what I deserve</li></ul></div>
+        <div class="c-father"><h5>Trust and gratitude answer</h5><ul><li>He is looking for me and won't rest until he finds me</li><li>“You are with me always”</li><li>Every child is a favourite</li><li>All I have is a gift, so give thanks even for little</li></ul></div>
+      </div>
+    </div>
+    <div class="story c-elder">
+      <span class="label">The story</span>
+      <p>While hitchhiking, Nouwen was hit by a car and nearly died. In hospital he saw he wasn't free to die while still holding the complaint that he hadn't been loved enough. When his elderly father flew in from Holland, Nouwen told him for the first time that he loved him and was grateful. His father, surprised, smiled. For Nouwen it was the elder son's return: he could let his dad be a good but limited man, and look to God for unlimited love.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part c-father" id="father">
+  <span class="label partno">Part III · Chapters 7–9</span>
+  <h2>The <em>father</em></h2>
+  <p class="lede">The tour guides at the Hermitage got it right in under a minute: this is a painting of the compassionate father. It could have been called “The Welcome by the Compassionate Father”.</p>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Rembrandt and the Father</span></div>
+  <div class="body">
+    <div>
+      <h3>A near-blind old man who sees with his hands</h3>
+      <p class="idea">Rembrandt captured the most divine in the most human: the face and hands of God, painted by someone who had buried most of his family.</p>
+    </div>
+    <ul class="points">
+      <li>Rembrandt had always been drawn to old people, and late in life to blind ones, such as Tobit and Simeon, whom he painted as the true seers. His light moved inward.</li>
+      <li>Luke says the father ran. Rembrandt, near death, painted him still, recognising his son with the inner eye. His hands are the instruments of that seeing.</li>
+      <li>The father would like to warn his children and pull them back, but his love is too great to force anything. That is why God suffers: he gives his children the freedom to leave.</li>
+      <li>His only authority is <strong>the authority of compassion</strong>. He lets his children's sins pierce his heart. To bless, from the Latin <em>benedicere</em>, means to say good things. He wants to say them with his hands more than his mouth.</li>
+      <li>The hands are the true centre of the painting. All the light falls on them. Nouwen came to see them as the hands that had held him all his life, through parents, teachers, friends and healers.</li>
+      <li>This is a self-portrait of Rembrandt's soul rather than his face. He outlived his wife, three sons, two daughters and two partners. Titus died at twenty-six, soon after his wedding. <em>Rembrandt was the son, he became the father.</em></li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">The Father Welcomes Home</span></div>
+  <div class="body">
+    <div>
+      <h3>Father and mother, and a love that never compares</h3>
+      <p class="idea">The two hands are different. Together they show a God who holds like a father and caresses like a mother.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Father and mother.</strong> The father's left hand is strong and muscular, with spread fingers that grip. The right is refined and tender, fingers close together, made to stroke and console. Some see the right as close to the bride's hand in Rembrandt's <em>The Jewish Bride</em>, from the same years.</li>
+      <li>A friend, Richard White, pointed out that the tender hand matches the son's bare, wounded foot, and the strong hand his sandalled foot. One protects his vulnerability, the other strengthens his resolve.</li>
+      <li>The red cloak is first a tent for a tired traveller, then the wings of a mother bird: <em>“as a hen gathers her chicks”</em>. The homecoming becomes a return to the womb, a second birth.</li>
+      <li><strong>No more or less.</strong> We live surrounded by grades, scores and rankings, so a love that doesn't compare is hard to believe. Nouwen still bristled at the parable of the vineyard workers paid the same for one hour as for a full day. God asks, <em>“Why should you be envious because I am generous?”</em></li>
+      <li><strong>The heart of God.</strong> In all three parables of Luke 15 (the lost sheep, the lost coin, the lost son), God takes the initiative. He is the one searching, and we are the ones hiding.</li>
+      <li><strong>A first and everlasting love.</strong> Nouwen once treated low self-esteem as a virtue. Now he thinks the real sin is denying God's first love and our original goodness. Consumer economies, he notes, make money from people who feel small.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The two hands</h4>
+        <svg viewBox="0 0 440 260" role="img" aria-label="Two hands side by side. The left hand has spread, strong fingers and is labelled holds and confirms; it corresponds to the sandalled foot, strength. The right hand has slender fingers held together and is labelled caresses and consoles; it corresponds to the bare, scarred foot, the wound.">
+          <!-- strong hand: spread fingers -->
+          <g style="fill:var(--father)">
+            <rect x="113" y="22" width="13" height="44" rx="6.5" transform="rotate(-26 120 84)"/>
+            <rect x="113" y="16" width="13" height="48" rx="6.5" transform="rotate(-9 120 84)"/>
+            <rect x="113" y="16" width="13" height="48" rx="6.5" transform="rotate(9 120 84)"/>
+            <rect x="113" y="24" width="13" height="42" rx="6.5" transform="rotate(26 120 84)"/>
+            <rect x="113" y="44" width="13" height="36" rx="6.5" transform="rotate(-72 120 92)"/>
+            <ellipse cx="120" cy="88" rx="32" ry="27"/>
+          </g>
+          <!-- tender hand: fingers together -->
+          <g style="fill:color-mix(in srgb, var(--father) 42%, var(--card))">
+            <rect x="303" y="24" width="9" height="46" rx="4.5"/>
+            <rect x="313" y="18" width="9" height="52" rx="4.5"/>
+            <rect x="323" y="20" width="9" height="50" rx="4.5"/>
+            <rect x="333" y="28" width="9" height="42" rx="4.5"/>
+            <rect x="296" y="60" width="9" height="30" rx="4.5" transform="rotate(-38 300 75)"/>
+            <ellipse cx="322" cy="88" rx="24" ry="24"/>
+          </g>
+          <text x="120" y="142" text-anchor="middle" font-size="14" class="t-ink">left hand</text>
+          <text x="120" y="160" text-anchor="middle" font-size="12">holds · confirms</text>
+          <text x="322" y="142" text-anchor="middle" font-size="14" class="t-ink">right hand</text>
+          <text x="322" y="160" text-anchor="middle" font-size="12">caresses · consoles</text>
+          <line x1="120" y1="170" x2="120" y2="196" style="stroke:var(--ink-3)" stroke-dasharray="3 3"/>
+          <line x1="322" y1="170" x2="322" y2="196" style="stroke:var(--ink-3)" stroke-dasharray="3 3"/>
+          <!-- sandalled foot -->
+          <ellipse cx="120" cy="212" rx="36" ry="12" style="fill:var(--young)"/>
+          <line x1="100" y1="201" x2="100" y2="223" style="stroke:var(--ink)" stroke-width="2"/>
+          <line x1="124" y1="200" x2="124" y2="224" style="stroke:var(--ink)" stroke-width="2"/>
+          <!-- bare, scarred foot -->
+          <ellipse cx="322" cy="212" rx="36" ry="12" style="fill:color-mix(in srgb, var(--young) 35%, var(--card));stroke:var(--young)" stroke-width="1.5"/>
+          <path d="M306 208 l8 6 l6 -6 l8 6" fill="none" style="stroke:var(--father)" stroke-width="1.8"/>
+          <text x="120" y="246" text-anchor="middle" font-size="12">sandalled foot: strength</text>
+          <text x="322" y="246" text-anchor="middle" font-size="12">bare foot: the wound</text>
+        </svg>
+        <p class="cap">Schematic, not a copy of the painting. One hand grips with a father's firmness, the other strokes with a mother's tenderness. Each rests over the side of the son that needs it.</p>
+      </div>
+      <div class="fig">
+        <h4>Turning the questions around</h4>
+        <div class="flip">
+          <div class="q"><span>How do I find God?</span><span>→</span><span>How do I let myself be found?</span></div>
+          <div class="q"><span>How do I know God?</span><span>→</span><span>How do I let myself be known?</span></div>
+          <div class="q"><span>How do I love God?</span><span>→</span><span>How do I let myself be loved?</span></div>
+        </div>
+        <p class="cap">For most of his life Nouwen had worked hard at finding God. The painting turned the search around: God is the shepherd out looking, the woman sweeping the house for her coin, the father watching the road. The new question is whether he believes he is worth looking for.</p>
+      </div>
+    </div>
+    <div class="story c-father">
+      <span class="label">The story</span>
+      <p>A young man whom everyone admired was thrown into depression by one critical remark from a friend. For years he had climbed higher and thought, <em>this isn't really me; one day it will all come crashing down</em>. Nouwen saw how common this is. Behind much confidence and competitiveness is a heart that isn't sure it's loved.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">The Father Calls for a Celebration</span></div>
+  <div class="body">
+    <div>
+      <h3>Nothing is good enough, so throw a party</h3>
+      <p class="idea">The father doesn't let his son finish the apology. He's in a hurry to give him the best of everything.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Giving the very best.</strong> The father heads off the request to be made a hired hand. He forgives without questions and calls out “Quick!”, which Nouwen reads as God's eagerness to begin something new.</li>
+      <li><strong>An invitation to joy.</strong> Jesus keeps describing the kingdom as a banquet. In each of the three lost-and-found parables the finder says “Rejoice with me”. Joy is meant to be shared.</li>
+      <li>Nouwen admits he is better prepared for bad news. A friend of his returns from his travels and talks only about small, hidden joys. Choosing joy, Nouwen decides, is a discipline: you celebrate every small sign of the kingdom instead of waiting until everything is well.</li>
+      <li><strong>Not without sorrow.</strong> Cynics call trust naive and forgiveness sentimental. People who know God's joy don't deny the dark, but they decide not to live in it. Every thought, word and act can be cynical or joyful.</li>
+      <li>A child doesn't stay a child. The returning son comes back to become a father himself. Nouwen calls this <strong>the call beyond the call</strong> to return.</li>
+    </ul>
+    <div class="fig">
+      <h4>What he rehearsed vs. what he got</h4>
+      <div class="compare" style="margin-bottom:4px">
+        <div class="c-young"><h5>The son's plan</h5><ul><li>“I have sinned against heaven and against you”</li><li>“I no longer deserve to be called your son”</li><li>“Treat me as one of your hired men”</li></ul></div>
+        <div class="c-father"><h5>The father's answer</h5><ul><li>Sees him from far off and runs to him</li><li>Embraces and kisses him before the speech is done</li><li>Never mentions the past</li></ul></div>
+      </div>
+      <div class="gifts">
+        <div><b>Robe</b><span>The best one, kept for an honoured guest</span></div>
+        <div><b>Ring</b><span>The sign that he is an heir</span></div>
+        <div><b>Sandals</b><span>Bare feet meant a slave. Shoes mean a free son.</span></div>
+        <div><b>Calf</b><span>The one fattened for a special occasion: a party like no other</span></div>
+      </div>
+      <p class="cap">Nouwen links it to Zechariah's vision, in which the high priest Joshua's dirty clothes are replaced with clean robes. It is an investiture rather than a pardon.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Joy never denies the sadness, but transforms it to a fertile soil for more joy.”</blockquote>
+      <span class="label">Nouwen, on living with people with disabilities at Daybreak</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ CONCLUSION ============ -->
+<section id="conclusion">
+  <div class="sec-head">
+    <span class="label">Conclusion · Becoming the father</span>
+    <h2>The return home is a call to become the one who waits</h2>
+    <p class="lede">“Be compassionate as your Father is compassionate.” Nouwen calls this possibly the most radical thing Jesus said. Being forgiven isn't the end. You are an heir, and an heir takes the father's place.</p>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p><strong>A lonely step.</strong> For years the father had been “the other” for Nouwen: the one he would return to and be forgiven by, still slightly fearsome. Fear of a punishing God is, he says, one of the great human tragedies. As long as the father frightens you, he stays outside you. Nobody becomes a father without first being a son, but every son has to choose deliberately to step beyond childhood. Church and consumer culture both make it easy to stay a dependent child.</p>
+      <p>One day Nouwen looked in the mirror and saw his own father's face. All the differences he had invested so much in suddenly seemed small. He was the successor, now admired, feared and misunderstood by others as his dad had been by him.</p>
+      <p><strong>The fatherhood of compassion</strong> has nothing to do with power. Nouwen catches himself wanting his advice followed, his help thanked, his money used his way and his good deeds remembered. The father in the painting has been emptied of all that. His only concern is his children.</p>
+      <p>That emptiness is frightening: no power, no success, no easy satisfaction. Nouwen calls it <em>“dreadful”</em>, and also the place of true freedom, where there is nothing left to lose. He felt it sitting with a dying friend, with no questions about the past and no worries about the future.</p>
+    </div>
+    <div class="fig">
+      <h4>Three ways to become the father</h4>
+      <svg viewBox="0 0 480 220" role="img" aria-label="A person on the left faces a brick wall made of arguments, hurt and pride. One: a dashed line of sight passes over the wall, grief. Two: an arc arrow climbs over the wall, forgiveness. Three: an arrow leads into an open house on the right, generosity.">
+        <defs>
+          <marker id="ar-father" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--father)"/></marker>
+        </defs>
+        <line x1="10" y1="190" x2="470" y2="190" style="stroke:var(--rule)" stroke-width="2"/>
+        <!-- person -->
+        <circle cx="60" cy="128" r="11" style="fill:var(--ink)"/>
+        <line x1="60" y1="142" x2="60" y2="170" style="stroke:var(--ink)" stroke-width="7" stroke-linecap="round"/>
+        <line x1="60" y1="168" x2="52" y2="188" style="stroke:var(--ink)" stroke-width="5" stroke-linecap="round"/>
+        <line x1="60" y1="168" x2="68" y2="188" style="stroke:var(--ink)" stroke-width="5" stroke-linecap="round"/>
+        <!-- wall -->
+        <g style="fill:var(--paper-2);stroke:var(--ink-3)" stroke-width="1">
+          <rect x="180" y="90" width="30" height="20"/><rect x="210" y="90" width="30" height="20"/>
+          <rect x="180" y="110" width="15" height="20"/><rect x="195" y="110" width="30" height="20"/><rect x="225" y="110" width="15" height="20"/>
+          <rect x="180" y="130" width="30" height="20"/><rect x="210" y="130" width="30" height="20"/>
+          <rect x="180" y="150" width="15" height="20"/><rect x="195" y="150" width="30" height="20"/><rect x="225" y="150" width="15" height="20"/>
+          <rect x="180" y="170" width="30" height="20"/><rect x="210" y="170" width="30" height="20"/>
+        </g>
+        <text x="210" y="210" text-anchor="middle" font-size="12" class="t-mute">the wall</text>
+        <!-- house -->
+        <path d="M356 190 V132 L400 98 L444 132 V190 Z" style="fill:color-mix(in srgb, var(--father) 14%, var(--card));stroke:var(--father)" stroke-width="2"/>
+        <rect x="390" y="152" width="20" height="38" style="fill:color-mix(in srgb, var(--young) 55%, var(--card))"/>
+        <!-- 1 grief: line of sight -->
+        <line x1="70" y1="124" x2="374" y2="118" style="stroke:var(--ink-3)" stroke-width="1.5" stroke-dasharray="2 5"/>
+        <!-- 2 forgiveness: climb over -->
+        <path d="M86 160 Q210 -6 336 160" fill="none" style="stroke:var(--father)" stroke-width="2.5" marker-end="url(#ar-father)"/>
+        <!-- 3 generosity: into the house -->
+        <line x1="340" y1="178" x2="384" y2="178" style="stroke:var(--father)" stroke-width="2.5" marker-end="url(#ar-father)"/>
+        <g font-size="12" text-anchor="middle">
+          <circle cx="128" cy="112" r="11" style="fill:var(--ink-3)"/><text x="128" y="116" style="fill:var(--card)">1</text>
+          <circle cx="210" cy="56" r="11" style="fill:var(--father)"/><text x="210" y="60" style="fill:var(--card)">2</text>
+          <circle cx="360" cy="160" r="11" style="fill:var(--father)"/><text x="360" y="164" style="fill:var(--card)">3</text>
+        </g>
+      </svg>
+      <div class="steps3">
+        <div><b>1 · Grief</b><span>Let the world's waywardness, your own included, pierce your heart. <em>Much of praying is grieving.</em> It lets you see past the wall to how much people suffer.</span></div>
+        <div><b>2 · Forgiveness</b><span>Climb over the wall of arguments, hurt and pride, without demanding an apology, an explanation or praise for being forgiving.</span></div>
+        <div><b>3 · Generosity</b><span>Give yourself, not just things. The word shares a root with <em>genus</em>, kin. <em>Generosity creates the family it believes in.</em></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue · Living the painting</span>
+    <h2>L'Arche made him live all three roles</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>Nouwen never expected the people who would bless him to be men and women with intellectual disabilities. In L'Arche's endless welcomes, hugs, songs and festive meals he lived the <strong style="color:var(--young)">younger son's</strong> return. The blessing of God and the blessing of the poor turned out to be the same.</p>
+      <p>Community life also brought out the <strong style="color:var(--elder)">elder son</strong>: jealousy, anger, feeling left out. People who don't hide their feelings gave him no room to hide his. <em>“Their handicap unveils my own.”</em></p>
+      <p>The hardest gift was the call to be the <strong style="color:var(--father)">father</strong>. As the community's pastor he already had the title. Now he had to live up to it. The community didn't need another brother or playmate. It needed someone at home with open hands when people came back tired, ashamed or excited.</p>
+      <p>He felt he couldn't do it alone. Then he heard: <em>“The Child will take you by the hand and lead you to fatherhood.”</em> The weakest people, he concludes, need a father and also teach him how to be one.</p>
+    </div>
+    <div class="fig">
+      <h4>What the child in him wants, and what the father does</h4>
+      <div class="wants">
+        <div class="hd"><span>The child in me wants…</span><span>The father in the painting…</span></div>
+        <div><span>to see clearly what's going on</span><span>is half blind and sees with the heart</span></div>
+        <div><span>to go after them, to the far country or the fields</span><span>stays home and waits</span></div>
+        <div><span>to hear the whole story and ask questions</span><span>asks nothing and only blesses</span></div>
+        <div><span>to be remembered, invited, informed</span><span>needs nothing back from them</span></div>
+      </div>
+      <p class="cap">His summary: “Who is going to be home when they return?” The joy of fatherhood is hidden, and the pain is obvious, which is why few people claim it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Reflective practices</span>
+    <h2>Practices for each figure</h2>
+    <p class="lede">The book is a meditation rather than a how-to, but the disciplines Nouwen names are concrete. These are the ones he returns to most, grouped by figure.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col c-young">
+      <h3>The younger son in you</h3>
+      <div class="tk"><b>Notice when you've left</b><span>Anger, resentment, jealousy, revenge, greed and rivalry are signs you're living in the far country.</span></div>
+      <div class="tk"><b>Ask: to whom do I belong?</b><span>If a little criticism floors you and a little praise lifts you, the world is defining you.</span></div>
+      <div class="tk"><b>Find the quiet voice</b><span>Make room for solitude and prayer, where “you are my Beloved” can be heard. It isn't in the storm.</span></div>
+      <div class="tk"><b>Keep your sword</b><span>Refuse the voice that says <em>I am no good</em>. Lost dignity is still dignity.</span></div>
+      <div class="tk"><b>Drop the rehearsed speech</b><span>Notice the imaginary conversations where you justify yourself. Let yourself be fully forgiven instead of settling for being a servant.</span></div>
+    </div>
+    <div class="col c-elder">
+      <h3>The elder son in you</h3>
+      <div class="tk"><b>Name the complaint</b><span>“I did so much and got so little.” Catch it early, because it feeds on itself.</span></div>
+      <div class="tk"><b>Stop comparing</b><span>A love that doesn't compare means there's no scoreboard to lose on. Every child is a favourite.</span></div>
+      <div class="tk"><b>Practise trust</b><span>Tell yourself, against the dark voice: someone is looking for me and wants me home.</span></div>
+      <div class="tk"><b>Choose gratitude deliberately</b><span>Even while you're still hurt. Give thanks for small things and the next choice gets easier.</span></div>
+      <div class="tk"><b>Take one leap</b><span>Write a gentle letter or make a call to someone who hasn't forgiven or has rejected you.</span></div>
+    </div>
+    <div class="col c-father">
+      <h3>Becoming the father</h3>
+      <div class="tk"><b>Grieve</b><span>Let other people's suffering and waywardness reach your heart before you judge it.</span></div>
+      <div class="tk"><b>Forgive by climbing over</b><span>Don't wait for an apology or an explanation, and don't ask for credit for forgiving.</span></div>
+      <div class="tk"><b>Give yourself, not just things</b><span>Treat even people who hurt you as kin. Generosity creates the family it believes in.</span></div>
+      <div class="tk"><b>Bless</b><span>Say good things to people, with your hands as much as your words.</span></div>
+      <div class="tk"><b>Be home, and celebrate</b><span>Be the one who is there when others return, and look for small, hidden joys to lift up.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Henri J. M. Nouwen, <em>The Return of the Prodigal Son: A Story of Homecoming</em> (Doubleday, 1992; Image Books edition). Short quotations are from the book. Diagrams are schematic and drawn for this page. The painting itself (Rembrandt, c. 1668–69, State Hermitage Museum) is not reproduced. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  function rgba(hex, a) {
+    var h = hex.replace("#", "");
+    if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+    var n = parseInt(h, 16);
+    return "rgba(" + (n >> 16 & 255) + "," + (n >> 8 & 255) + "," + (n & 255) + "," + a + ")";
+  }
+
+  /* --- Hero: a figure walks home from the far country into the light;
+         the elder son stands just outside it --- */
+  var canvas = document.getElementById("walk");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  var CYCLE = 12000;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : 1 - Math.pow(1 - t, 2.2); }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var mid = hgt * 0.62;
+    var homeX = Math.max(34, w * 0.08);
+    var farX = w - 10;
+    var cyc = reduce ? 0.9 : (time % CYCLE) / CYCLE;
+    var walk = ease(cyc / 0.72);
+    function yAt(x) {
+      var u = Math.max(0, (x - homeX) / (farX - homeX));
+      return mid + Math.sin(x / 46) * hgt * 0.13 * u;
+    }
+    var young = css("--young"), elder = css("--elder"), father = css("--father");
+
+    // the light around the embrace
+    var glowR = hgt * 1.25 + w * 0.06;
+    var strength = 0.22 + 0.5 * walk;
+    var g = ctx.createRadialGradient(homeX, mid, 0, homeX, mid, glowR);
+    g.addColorStop(0, rgba(young, strength));
+    g.addColorStop(0.45, rgba(young, strength * 0.35));
+    g.addColorStop(1, rgba(young, 0));
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, w, hgt);
+
+    // the road from the far country
+    ctx.save();
+    ctx.setLineDash([2, 7]);
+    ctx.lineWidth = 2; ctx.lineCap = "round";
+    ctx.strokeStyle = rgba(css("--ink-3"), 0.7);
+    ctx.beginPath();
+    for (var x = homeX + 16; x <= farX; x += 3) {
+      var y = yAt(x);
+      if (x === homeX + 16) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    ctx.restore();
+
+    // the father: a bent red cloak with a head
+    ctx.fillStyle = father;
+    ctx.beginPath();
+    ctx.arc(homeX, mid + 12, 17, Math.PI, 0);
+    ctx.lineTo(homeX + 17, mid + 14); ctx.lineTo(homeX - 17, mid + 14); ctx.closePath();
+    ctx.fill();
+    ctx.beginPath(); ctx.arc(homeX + 4, mid - 10, 6, 0, Math.PI * 2); ctx.fill();
+
+    // the elder son: upright, a little apart, cold
+    var ex = homeX + Math.min(140, Math.max(70, w * 0.13));
+    ctx.strokeStyle = elder; ctx.fillStyle = elder; ctx.lineCap = "round";
+    ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.moveTo(ex, mid - 12); ctx.lineTo(ex, mid + 14); ctx.stroke();
+    ctx.beginPath(); ctx.arc(ex, mid - 21, 5.5, 0, Math.PI * 2); ctx.fill();
+    ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(ex - 7, mid - 4); ctx.lineTo(ex - 9, mid + 15); ctx.stroke();
+
+    // the younger son walking home
+    var sx = farX - (farX - (homeX + 20)) * walk;
+    var sy = walk >= 1 ? mid + 8 : yAt(sx);
+    var fadeIn = reduce ? 1 : Math.min(1, cyc / 0.04);
+    var fadeOut = reduce ? 1 : (cyc > 0.95 ? Math.max(0, (1 - cyc) / 0.05) : 1);
+    ctx.globalAlpha = fadeIn * fadeOut;
+    ctx.fillStyle = young;
+    ctx.beginPath(); ctx.arc(sx, sy, 6.5, 0, Math.PI * 2); ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

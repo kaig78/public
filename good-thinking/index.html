@@ -1,0 +1,1524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Good Thinking by David Robert Grimes – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from the cover's chalk: sage for logic, red for risk,
+   yellow for thinking, blue for the world it can save. */
+:root {
+  --paper: #f4f5f3;
+  --paper-2: #e8eae7;
+  --card: #ffffff;
+  --ink: #17202b;
+  --ink-2: #48525e;
+  --ink-3: #75808b;
+  --rule: #d5d9dc;
+
+  /* the four chalk colours */
+  --logic: #2f7d6f;
+  --risk: #c8322b;
+  --think: #a87800;
+  --world: #2668b8;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #10151c;
+    --paper-2: #18202a;
+    --card: #1b2430;
+    --ink: #eef1f4;
+    --ink-2: #b0bac4;
+    --ink-3: #85909b;
+    --rule: #2b3541;
+    --logic: #8fcdb9;
+    --risk: #ff6f61;
+    --think: #ffd43d;
+    --world: #64b1ff;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #10151c;
+  --paper-2: #18202a;
+  --card: #1b2430;
+  --ink: #eef1f4;
+  --ink-2: #b0bac4;
+  --ink-3: #85909b;
+  --rule: #2b3541;
+  --logic: #8fcdb9;
+  --risk: #ff6f61;
+  --think: #ffd43d;
+  --world: #64b1ff;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--world); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Chalk colour helpers */
+.c-logic { --c: var(--logic); }
+.c-risk  { --c: var(--risk); }
+.c-think { --c: var(--think); }
+.c-world { --c: var(--world); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(64px, 11.5vw, 150px);
+  font-weight: 900;
+  font-stretch: 118%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero h1 span { display: block; }
+.hero h1 .hl { color: var(--think); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 872;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 20, 40, .4), 0 8px 18px -10px rgba(10, 20, 40, .28);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.waveband { position: relative; margin-top: 28px; }
+.waveband canvas { display: block; width: 100%; height: 120px; }
+.waveband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(40px, 6.6vw, 88px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .lede em.q { display: block; margin-top: 10px; font-size: 17px; color: var(--ink-3); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* Fallacy tags under a chapter title */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.tag {
+  font-family: var(--mono); font-size: 12px; letter-spacing: .03em;
+  padding: 3px 9px; border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--c, var(--ink)) 55%, var(--rule));
+  color: var(--ink);
+  background: color-mix(in srgb, var(--c, var(--ink)) 8%, var(--card));
+}
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+.axis { position: relative; height: 18px; margin-top: 2px; }
+.axis span { position: absolute; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.axis span:first-child { transform: none; }
+.barwrap { position: relative; display: grid; gap: 14px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 24px; font-weight: 850; font-stretch: 112%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+/* ---------- Big idea ---------- */
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Fallacy family map */
+.fmap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.fam { border-radius: 6px; padding: 14px; border: 1px solid color-mix(in srgb, var(--c) 35%, var(--rule)); display: grid; gap: 8px; align-content: start; }
+.fam h4 { font-size: 17px; font-weight: 850; font-stretch: 108%; color: var(--c); letter-spacing: -.005em; }
+.fam .what { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); letter-spacing: .03em; }
+.fam ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: 14.5px; line-height: 1.35; color: var(--ink); }
+
+/* Syllogism blocks */
+.syl {
+  font-family: var(--mono); font-size: 14px; line-height: 1.75;
+  background: var(--paper-2); border-radius: 6px; padding: 16px 18px; margin: 0;
+  white-space: pre-wrap; color: var(--ink);
+}
+.syl .k { color: var(--ink-3); }
+.syl .ok { color: var(--logic); }
+.syl .bad { color: var(--risk); }
+.syl .c { color: var(--ink-3); }
+
+/* valid / sound grid */
+.vs { display: grid; grid-template-columns: 104px 1fr 1fr; grid-template-rows: auto 1fr 1fr; gap: 6px; }
+.vs .cell { border-radius: 6px; padding: 14px; background: var(--paper-2); display: grid; gap: 4px; align-content: start; min-height: 104px; }
+.vs .cell b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 18px; }
+.vs .cell span { font-size: 14px; color: var(--ink-2); line-height: 1.35; }
+.vs .cell.good { background: color-mix(in srgb, var(--logic) 14%, var(--card)); box-shadow: inset 0 0 0 2px var(--logic); }
+.vs .cell.good b { color: var(--logic); }
+.vs .ax { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; }
+.vs .ax.top { justify-content: center; }
+.vs .ax.side { justify-content: flex-end; text-align: right; padding-right: 6px; }
+
+/* Monty Hall grid */
+.mh { display: grid; grid-template-columns: 78px repeat(3, minmax(0, 1fr)); gap: 4px; font-family: var(--mono); font-size: 12.5px; }
+.mh span { padding: 9px 6px; border-radius: 4px; text-align: center; }
+.mh .h { color: var(--ink-3); letter-spacing: .06em; }
+.mh .st { background: var(--paper-2); color: var(--ink-2); }
+.mh .sw { background: color-mix(in srgb, var(--think) 22%, var(--card)); color: var(--ink); }
+
+/* predictor list */
+.predict { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.predict ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.predict li { display: flex; gap: 10px; align-items: baseline; font-size: 16px; }
+.predict li::before { font-family: var(--mono); font-size: 13px; width: 16px; flex: none; }
+.predict .no li { color: var(--ink-2); }
+.predict .no li::before { content: "✕"; color: var(--risk); }
+.predict .yes li::before { content: "✓"; color: var(--logic); }
+
+/* numbered checklists */
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: ck; }
+.checks li { counter-increment: ck; display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 8px; font-size: 15.5px; line-height: 1.45; color: var(--ink-2); }
+.checks li::before { content: counter(ck, decimal-leading-zero); font-family: var(--mono); font-size: 12px; color: var(--c, var(--ink-3)); padding-top: 3px; }
+.checks li b { font-family: var(--display); font-weight: 750; font-stretch: 100%; color: var(--ink); }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 16px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--ink); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+/* six questions */
+.six { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.six div { border-radius: 6px; padding: 16px; border-top: 4px solid var(--c); background: color-mix(in srgb, var(--c) 8%, var(--card)); display: grid; gap: 6px; align-content: start; }
+.six b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; color: var(--ink); }
+.six .q { font-style: italic; font-size: 16px; line-height: 1.4; }
+.six .p { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); letter-spacing: .04em; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr 1fr; }
+  .fmap, .six { grid-template-columns: 1fr 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map, .toolkit, .fmap, .six { grid-template-columns: 1fr; }
+  .vs { grid-template-columns: 26px 1fr 1fr; }
+  .vs .ax.side { writing-mode: vertical-rl; transform: rotate(180deg); justify-content: center; padding: 0; }
+  .predict, .compare { grid-template-columns: 1fr; }
+  .mh { grid-template-columns: 62px repeat(3, minmax(0, 1fr)); font-size: 11px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · David Robert Grimes · The Experiment, 2021</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#reason">Reason</a>
+    <a href="#rhetoric">Rhetoric</a>
+    <a href="#mind">Mind</a>
+    <a href="#numbers">Numbers</a>
+    <a href="#media">Media</a>
+    <a href="#science">Science</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span>Good</span><span class="hl">Thinking</span></h1>
+    <p class="sub">Why flawed logic puts us all at risk, and how critical thinking can save the world</p>
+    <p class="dek">A physicist and cancer researcher tours the ways our reasoning breaks, from murderous popes to measles outbreaks, and argues that the fix is a habit anyone can learn.</p>
+    <div class="byline label">
+      <span>21 chapters</span><span>6 parts</span><span>~40 fallacies and biases</span><span>~115,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Good Thinking by David Robert Grimes: chalk drawings on a dark blackboard, with the title in yellow inside a scribbled speech bubble and arrows linking 'why flawed logic', 'puts us all at risk', 'and how critical thinking' and 'can save the world'">
+</div>
+
+<div class="waveband" aria-hidden="true">
+  <canvas id="signal"></canvas>
+  <div class="ends label"><span>Anecdote, rumour, noise</span><span>Evidence</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Reason before you react</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>The book opens with two men who probably saved the world. In 1983 Soviet officer <strong>Stanislav Petrov</strong> saw his early-warning system report five incoming American missiles. A real first strike would have been an all-out barrage, not five missiles, and ground radar showed nothing. He judged it a malfunction and didn't pass it up the chain. He was right. In 1962 <strong>Vasili Arkhipov</strong>, on a Soviet submarine overheating under US depth charges, refused to approve a nuclear torpedo. Both were under extreme stress, and both stopped to think.</p>
+      <p>The opposite story is Mao's campaign against sparrows. Millions of people killed the birds to protect grain. China's leading ornithologist warned that sparrows mostly ate insects, and he was sent to hard labour. Without them locusts took the crops, and the famine of 1959–61 killed somewhere between 15 and 45 million people. Grimes calls this the politician's syllogism: <em>something must be done; this is something; therefore this must be done.</em></p>
+      <p>His case is that our minds are powerful but full of trapdoors, and the information age has made them easier to fall through. Rationality isn't the same as intelligence. Clever people suffer from "dysrationalia" as often as anyone. But it can be trained. The book is a field guide, built from stories rather than theory, to six kinds of failure, and the method that guards against them.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Why it matters now</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat"><span class="big num" style="color:var(--risk)">126k</span><p>contested news stories in a 2018 <em>Science</em> study. Falsehood spread farther, faster and deeper than truth in every category, most of all politics.</p></div>
+        <div class="stat"><span class="big num" style="color:var(--think)">59%</span><p>of links shared on social media are shared by people who haven't read them.</p></div>
+        <div class="stat"><span class="big num" style="color:var(--world)">1</span><p>bad belief rarely travels alone. Quine's "web of belief": accept that vaccines cause autism and you must also distrust doctors, regulators and science.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--think)">
+        <span class="label">The motto Grimes keeps returning to</span>
+        <p>There's no shame in being wrong. The only shame is refusing to correct yourself. The aim isn't perfect thinking, just being a little less wrong, a little more often.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:32px">
+    <h4>A map of the trapdoors</h4>
+    <div class="fmap">
+      <div class="fam tint c-logic"><h4>1 · Broken logic</h4><span class="what">the argument's structure fails</span><ul><li>Affirming the consequent</li><li>Undistributed middle</li><li>Affirming the disjunct</li><li>Non sequitur</li><li>Cherry-picking, anecdotes</li></ul></div>
+      <div class="fam tint c-risk"><h4>2 · Dubious rhetoric</h4><span class="what">the premises are rigged</span><ul><li>Argument from authority</li><li>Reductive cause, false dilemma</li><li>Post hoc ergo propter hoc</li><li>No True Scotsman, appeal to nature</li><li>Ad hominem, straw man, circularity</li></ul></div>
+      <div class="fam tint c-think"><h4>3 · Trapdoors of the mind</h4><span class="what">our own equipment misleads us</span><ul><li>Motivated reasoning, dissonance</li><li>False and implanted memories</li><li>Apophenia, pareidolia, ideomotor</li><li>Forer effect, placebo, nocebo</li><li>Dunning–Kruger</li></ul></div>
+      <div class="fam tint c-world"><h4>4 · Misleading numbers</h4><span class="what">statistics without context</span><ul><li>Base-rate neglect (Bayes)</li><li>Prosecutor's fallacy</li><li>Simpson's paradox, confounders</li><li>Relative vs. absolute risk</li><li>Significance chasing</li></ul></div>
+      <div class="fam tint c-risk"><h4>5 · Media distortion</h4><span class="what">how we hear about things</span><ul><li>False balance</li><li>Manufactured doubt</li><li>Echo chambers, filter bubbles</li><li>Disinformation</li><li>Celebrity and wellness gurus</li></ul></div>
+      <div class="fam tint c-logic"><h4>6 · Fake science</h4><span class="what">the look without the method</span><ul><li>Pathological science</li><li>Unfalsifiable claims</li><li>Cargo-cult science</li><li>Conspiracy as special pleading</li><li>Cynicism dressed as scepticism</li></ul></div>
+    </div>
+    <p class="cap">One group per part of the book. Parts 1 and 2 are about arguments, part 3 about the person making them, parts 4 and 5 about the information we're given, and part 6 about the method that ties it together.</p>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part 1</span>
+      <h3>Without Reason</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>An Indecent Proposition</b>Valid isn't the same as true</a></li>
+        <li><span>02</span><a href="#ch2"><b>Stripped to the Absurd</b>Contradictions, 5G, online mobs</a></li>
+        <li><span>03</span><a href="#ch3"><b>It Does Not Follow</b>Anecdotes and cherry-picking</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 2</span>
+      <h3>The Pure and Simple Truth?</h3>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>The Devil in the Details</b>Authority, single causes, false choices</a></li>
+        <li><span>05</span><a href="#ch5"><b>Smoke without Fire</b>After it, therefore because of it</a></li>
+        <li><span>06</span><a href="#ch6"><b>The Nature of the Beast</b>Essentialism and attacking the person</a></li>
+        <li><span>07</span><a href="#ch7"><b>Bait and Switch</b>Straw men and circular arguments</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 3</span>
+      <h3>Trapdoors of the Mind</h3>
+      <ol>
+        <li><span>08</span><a href="#ch8"><b>Schrödinger's Bin Laden</b>Believing what suits us</a></li>
+        <li><span>09</span><a href="#ch9"><b>The Memory Remains</b>Memory is rebuilt, not replayed</a></li>
+        <li><span>10</span><a href="#ch10"><b>Daggers of the Mind</b>Seeing patterns that aren't there</a></li>
+        <li><span>11</span><a href="#ch11"><b>Great Expectations</b>What we expect, we experience</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 4</span>
+      <h3>Lies, Damned Lies, and Statistics</h3>
+      <ol>
+        <li><span>12</span><a href="#ch12"><b>Chance Encounters</b>Probability and Bayes</a></li>
+        <li><span>13</span><a href="#ch13"><b>Sifting the Signal</b>Correlation, confounders, tests</a></li>
+        <li><span>14</span><a href="#ch14"><b>Size Matters</b>Absolute risk and significance</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 5</span>
+      <h3>News of the World</h3>
+      <ol>
+        <li><span>15</span><a href="#ch15"><b>Skewing the Balance</b>False balance, manufactured doubt</a></li>
+        <li><span>16</span><a href="#ch16"><b>Tales from the Echo Chamber</b>Biased samples, filter bubbles</a></li>
+        <li><span>17</span><a href="#ch17"><b>The Outrage Machine</b>Bad sources and disinformation</a></li>
+        <li><span>18</span><a href="#ch18"><b>Bad Influencers</b>Celebrity, wellness, nonsense</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 6</span>
+      <h3>The Candle in the Dark</h3>
+      <ol>
+        <li><span>19</span><a href="#ch19"><b>The Edge of Science</b>Falsifiability and Occam's razor</a></li>
+        <li><span>20</span><a href="#ch20"><b>Rise of the Cargo Cult</b>The costume of science</a></li>
+        <li><span>21</span><a href="#ch21"><b>A Healthy Skepticism</b>Six questions for any claim</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="reason">
+  <span class="label partno">Part 1 · Chapters 1–3</span>
+  <h2>Without reason</h2>
+  <p class="lede">Formal fallacies: arguments whose structure is broken, so the conclusion doesn't follow even if every premise is true.<em class="q">"He, who will not reason, is a bigot; he, who cannot, is a fool; and he, who dares not, is a slave." William Drummond</em></p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">An Indecent Proposition</span></div>
+  <div class="body">
+    <div>
+      <h3>An argument can be valid and still be nonsense</h3>
+      <p class="idea">For a conclusion to be trustworthy, the logic has to be valid and the premises have to be true. Most bad arguments fail one test while passing the other.</p>
+      <div class="tags c-logic"><span class="tag">valid vs. sound</span><span class="tag">affirming the consequent</span><span class="tag">heuristics</span></div>
+    </div>
+    <ul class="points">
+      <li>In January 897 Pope Stephen VI put his dead predecessor Formosus on trial, the corpse propped up in papal robes. Formosus didn't defend himself, so he was found guilty. The "logic" rested on a premise nobody should accept: that an innocent man would always speak up.</li>
+      <li>Heuristics, our fast rules of thumb, are fine for spotting a snake in the grass. They're poor tools for geopolitics or health care. Those need slow, deliberate reasoning.</li>
+      <li><strong>Affirming the consequent</strong> (the converse error) turns "X implies Y" into "Y implies X". All men are mortal, Socrates was mortal, so Socrates was a man. The conclusion is true, but the argument would equally prove that Socrates was a dog.</li>
+      <li>Adverts run on a hidden converse error: successful, attractive people own this car, so owning the car makes you one of them.</li>
+      <li>Conspiracy theories use it as armour. "If there's a cover-up, official reports will deny it. The reports deny it. So there's a cover-up." Every debunking becomes evidence. About 15% of Americans still believe 9/11 was an inside job.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Valid and true are different questions</h4>
+        <div class="vs" role="img" aria-label="Two by two grid. Columns: logic valid or invalid. Rows: premises true or false. Valid with true premises is sound, the only trustworthy case. Valid with false premises gives Socrates is a time-travelling robot. Invalid with true premises gives Socrates was a dog. Invalid with false premises is worthless.">
+          <span></span><span class="ax top">Logic valid</span><span class="ax top">Logic invalid</span>
+          <span class="ax side">Premises true</span>
+          <div class="cell good"><b>Sound</b><span>The conclusion has to be true. The only case you can rely on.</span></div>
+          <div class="cell"><b>Unsound</b><span>"Socrates was mortal, so he was a dog."</span></div>
+          <span class="ax side">Premises false</span>
+          <div class="cell"><b>Unsound</b><span>"Greek philosophers are time-travelling killer robots, so Socrates is one."</span></div>
+          <div class="cell"><b>Worthless</b><span>Wrong at both ends.</span></div>
+        </div>
+      </div>
+      <div class="fig">
+        <h4>Affirming the consequent</h4>
+        <svg viewBox="0 0 440 250" role="img" aria-label="Euler diagram. A large circle labelled Europe contains a small circle labelled Paris. A dot labelled you, in Dublin, sits inside Europe but outside Paris, showing that being in Europe doesn't put you in Paris.">
+          <ellipse cx="220" cy="120" rx="200" ry="104" fill="color-mix(in srgb, var(--world) 10%, transparent)" stroke="var(--world)" stroke-width="2"/>
+          <text x="220" y="36" text-anchor="middle" font-size="13" style="fill:var(--world)">EUROPE · 500 million people</text>
+          <circle cx="150" cy="128" r="46" fill="color-mix(in srgb, var(--think) 22%, transparent)" stroke="var(--think)" stroke-width="2"/>
+          <text x="150" y="124" text-anchor="middle" font-size="12" style="fill:var(--ink)">PARIS</text>
+          <text x="150" y="140" text-anchor="middle" font-size="10">2.2 million</text>
+          <circle cx="310" cy="138" r="8" fill="var(--risk)"/>
+          <text x="310" y="166" text-anchor="middle" font-size="12" style="fill:var(--ink)">you, in Dublin</text>
+          <text x="220" y="246" text-anchor="middle" font-size="11">All of Paris is in Europe. Not all of Europe is in Paris.</text>
+        </svg>
+<pre class="syl"><span class="k">P1</span> Paris is in Europe.
+<span class="k">P2</span> I am in Europe.
+<span class="bad">∴  I am in Paris.</span>  <span class="c">// the arrow only runs one way</span></pre>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>As a 17-year-old student protesting the Iraq war, Grimes was half-persuaded by a classmate's 9/11 theories. What saved him was context. His father, a structural engineer, explained that steel doesn't need to melt to fail, because heat weakens it long before it melts. And having grown up in Saudi Arabia, he had seen the religious extremism that produced the hijackers. Later he published a model showing that large conspiracies leak quickly. Within hours, people emailed to say the paper proved he was part of the conspiracy.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Stripped to the Absurd</span></div>
+  <div class="body">
+    <div>
+      <h3>Contradictions are alarms, and we're good at ignoring them</h3>
+      <p class="idea">If a claim leads to an absurd result, the claim is wrong. That's reductio ad absurdum, and it's one of the sharpest tools in reasoning.</p>
+      <div class="tags c-logic"><span class="tag">reductio ad absurdum</span><span class="tag">undistributed middle</span><span class="tag">affirming the disjunct</span><span class="tag">positive conclusion from negative premises</span></div>
+    </div>
+    <ul class="points">
+      <li>The Pythagoreans worshipped whole-number ratios. One of their own, Hippasus, assumed √2 could be written as a fraction and showed that this leads to a contradiction. So √2 is irrational. Legend says he was drowned for it.</li>
+      <li>Mobile phones, Wi-Fi and 5G use low-energy, non-ionising radio waves. Only high-energy (ionising) radiation, such as UV or X-rays, can break chemical bonds and damage DNA. The WHO and FDA find no evidence that phones cause cancer.</li>
+      <li>The scare rests on the <strong>undistributed middle</strong>: all radio waves are electromagnetic radiation; some electromagnetic radiation causes cancer; therefore radio waves cause cancer. The middle term only covers "some", so nothing follows. By the same logic, Jimi Hendrix was an ancient Greek philosopher, because both are dead.</li>
+      <li>The BioInitiative Report that fed these fears was never peer reviewed. When a 2017 paper in a respectable journal cited it, Grimes and a colleague told the journal, and Grimes notes that one of a scientist's most useful jobs is helping reporters kill bad stories.</li>
+      <li><strong>Affirming the disjunct</strong>: "Either you're wrong or I'm wrong. You're wrong. So I'm right." Both could be wrong.</li>
+      <li><strong>Positive conclusion from negative premises</strong>: "I don't do that; bad people do that; so I'm good." It's the logic of the online mob, which feels more virtuous the harder it attacks.</li>
+    </ul>
+    <div class="fig">
+      <h4>The undistributed middle, drawn out</h4>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;align-items:center">
+        <svg viewBox="0 0 440 250" role="img" aria-label="Euler diagram. A large circle labelled electromagnetic radiation contains two separate smaller circles: radio waves, Wi-Fi and 5G on the left, and ionising radiation such as UV, X-rays and gamma rays on the right, labelled can damage DNA. The two small circles don't overlap.">
+          <ellipse cx="220" cy="125" rx="208" ry="112" fill="none" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <text x="220" y="32" text-anchor="middle" font-size="12">ELECTROMAGNETIC RADIATION</text>
+          <circle cx="128" cy="132" r="64" fill="color-mix(in srgb, var(--world) 16%, transparent)" stroke="var(--world)" stroke-width="2"/>
+          <text x="128" y="124" text-anchor="middle" font-size="12" style="fill:var(--ink)">radio · Wi-Fi</text>
+          <text x="128" y="140" text-anchor="middle" font-size="12" style="fill:var(--ink)">phones · 5G</text>
+          <text x="128" y="160" text-anchor="middle" font-size="10">non-ionising</text>
+          <circle cx="312" cy="132" r="64" fill="color-mix(in srgb, var(--risk) 16%, transparent)" stroke="var(--risk)" stroke-width="2"/>
+          <text x="312" y="124" text-anchor="middle" font-size="12" style="fill:var(--ink)">UV · X-ray</text>
+          <text x="312" y="140" text-anchor="middle" font-size="12" style="fill:var(--ink)">gamma</text>
+          <text x="312" y="160" text-anchor="middle" font-size="10" style="fill:var(--risk)">can damage DNA</text>
+        </svg>
+<pre class="syl"><span class="k">P1</span> All radio waves are EM radiation.
+<span class="k">P2</span> <u>Some</u> EM radiation causes cancer.
+<span class="bad">∴  Radio waves cause cancer.</span>
+
+<span class="c">// "some" never says which part.
+// The middle term isn't distributed,
+// so the two circles needn't touch.</span></pre>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>In 2012 Lindsey Stone, a well-liked care worker for adults with learning disabilities, kept up a running joke with friends of doing the opposite of what signs said. At Arlington National Cemetery she posed pretending to shout beneath a sign asking for silence and respect. Stripped of context, the photo went viral. She lost her job, received death and rape threats, and didn't leave home for a long time. Her tormentors felt more righteous the louder they shouted, then moved on to the next target.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">It Does Not Follow</span></div>
+  <div class="body">
+    <div>
+      <h3>The plural of anecdote is not data</h3>
+      <p class="idea">Stories are memorable precisely because they're unusual. That makes them the worst possible guide to what usually happens.</p>
+      <div class="tags c-logic"><span class="tag">anecdotal fallacy</span><span class="tag">base-rate neglect</span><span class="tag">survivorship bias</span><span class="tag">cherry-picking</span><span class="tag">fallacy fallacy</span></div>
+    </div>
+    <ul class="points">
+      <li>Testimonials sell. Pfizer's 2006 Lipitor adverts starred Robert Jarvik, billed as inventor of the artificial heart. He hadn't taken the drug before becoming its spokesman. In 2017, a London restaurant called The Shed at Dulwich became TripAdvisor's top-rated in the city. It didn't exist.</li>
+      <li>Original "snake oil" became a byword when Clark Stanley's best-selling version was tested in 1916 and found to contain no snake at all.</li>
+      <li>Every formal fallacy is a <strong>non sequitur</strong>: the conclusion doesn't follow. Rising cancer rates don't mean the world is more toxic. People live long enough to get cancer, which is mainly a disease of age.</li>
+      <li><strong>Cherry-picking</strong> is the engine of the anecdotal fallacy. In a 1997 test, self-described psychics did no better than students at describing crimes from objects, and neither beat chance.</li>
+      <li>Psychics survive on remembered hits and forgotten misses, plus the "rainbow ruse": "You're usually upbeat, but there have been times you were very sad." That fits everyone.</li>
+      <li>A key warning: an argument containing a fallacy doesn't make its conclusion false. Assuming it does is itself a fallacy. Good conclusions can come wrapped in bad reasoning.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Where the bullet holes aren't</h4>
+        <svg id="plane" viewBox="0 0 360 300" role="img" aria-label="Top view of a bomber with red dots for bullet holes scattered over the wings, tail and middle of the fuselage. The engines and cockpit are clean and circled, labelled planes hit here didn't come back."></svg>
+        <p class="cap">In the Second World War, analysts mapped damage on returning bombers and planned to armour the most-hit areas. Statistician Abraham Wald pointed out that planes hit in the engines or cockpit never returned to be counted. The clean areas were the ones to protect. Diagram illustrative, not data.</p>
+      </div>
+      <div class="fig">
+        <h4>Sylvia Browne's record</h4>
+        <div class="barwrap">
+          <div class="bar c-think"><div class="row"><span>Success rate she claimed</span><b>87–90%</b></div><div class="track"><div class="fill" style="width:88.5%"></div></div></div>
+          <div class="bar c-risk"><div class="row"><span>Success rate measured on <em>The Montel Williams Show</em></span><b>0%</b></div><div class="track"><div class="fill" style="width:.6%"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+        <p class="cap">She charged $750 for 20 minutes and earned over $3 million a year. On national TV she told the families of two missing women they would be found alive. Both had been murdered. When challenged, she said only God is right all the time.</p>
+        <p class="src">Source: figures as reported in ch. 3</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="rhetoric">
+  <span class="label partno">Part 2 · Chapters 4–7</span>
+  <h2>The pure and simple truth?</h2>
+  <p class="lede">Informal fallacies: the logic looks fine, but a premise is weak, slippery or loaded. These are the workhorses of persuasion.<em class="q">"The pure and simple truth is rarely pure and never simple." Oscar Wilde</em></p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">The Devil in the Details</span></div>
+  <div class="body">
+    <div>
+      <h3>Experts, single causes and either-or choices</h3>
+      <p class="idea">We crave simple stories with one cause and two sides. Reality rarely offers either, and demagogues know it.</p>
+      <div class="tags c-risk"><span class="tag">argument from authority</span><span class="tag">reductive cause</span><span class="tag">false dilemma</span></div>
+    </div>
+    <ul class="points">
+      <li>Linus Pauling won two Nobel Prizes, then spent decades promoting vitamin C megadoses (he took up to 18,000 mg a day) against colds and cancer. The evidence never backed him, yet the myth lives on. Expertise in one field doesn't carry over to another.</li>
+      <li>The <strong>argument from authority</strong> cuts both ways. Semmelweis's hand-washing findings in 1840s Vienna were resisted by senior doctors. Grimes adds nuance: Semmelweis wasn't the first to suggest washing in lime, and he wrongly claimed that all such disease came from "cadaveric particles". His story shows the next trap too.</li>
+      <li>The <strong>reductive cause fallacy</strong> blames one thing for a complex outcome. After 1918, German generals refused to accept the many reasons for defeat. Ludendorff seized on a British general's phrase: they had been "stabbed in the back". The myth fed the Nazis' scapegoating of Jews, with catastrophic results.</li>
+      <li>The <strong>false dilemma</strong> squeezes a spectrum into two extremes: "you're either with us or against us". It turns up across the political spectrum, from Lenin in 1920 to Arthur Miller's witch-hunting judge in <em>The Crucible</em>.</li>
+    </ul>
+    <div class="fig">
+      <h4>A false dilemma hides the middle</h4>
+      <svg viewBox="0 0 560 190" role="img" aria-label="Top: a line with only two points at either end, labelled with us and against us. Bottom: the same line shaded as a continuous gradient with many points along it, labelled the options that actually exist.">
+        <text x="0" y="16" font-size="12">What the speaker offers</text>
+        <line x1="40" y1="50" x2="520" y2="50" stroke="var(--rule)" stroke-width="2" stroke-dasharray="4 6"/>
+        <circle cx="40" cy="50" r="11" fill="var(--logic)"/><circle cx="520" cy="50" r="11" fill="var(--risk)"/>
+        <text x="40" y="82" text-anchor="middle" font-size="12" style="fill:var(--ink)">with us</text>
+        <text x="520" y="82" text-anchor="middle" font-size="12" style="fill:var(--ink)">against us</text>
+        <text x="0" y="118" font-size="12">What actually exists</text>
+        <defs><linearGradient id="spec" x1="0" x2="1"><stop offset="0" stop-color="var(--logic)"/><stop offset=".5" stop-color="var(--think)"/><stop offset="1" stop-color="var(--risk)"/></linearGradient></defs>
+        <rect x="40" y="140" width="480" height="12" rx="6" fill="url(#spec)" opacity=".85"/>
+        <g fill="var(--card)" stroke="var(--ink)" stroke-width="1.5">
+          <circle cx="64" cy="146" r="6"/><circle cx="118" cy="146" r="6"/><circle cx="170" cy="146" r="6"/><circle cx="236" cy="146" r="6"/><circle cx="282" cy="146" r="6"/><circle cx="330" cy="146" r="6"/><circle cx="392" cy="146" r="6"/><circle cx="446" cy="146" r="6"/><circle cx="498" cy="146" r="6"/>
+        </g>
+        <text x="280" y="180" text-anchor="middle" font-size="11">partly agree · agree with caveats · undecided · different priorities · …</text>
+      </svg>
+      <p class="cap">The appeal is comfort. A simple binary feels like understanding, and it forces the listener to pick a side. That's why it suits demagogues and poisons compromise.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Smoke without Fire</span></div>
+  <div class="body">
+    <div>
+      <h3>"After it" doesn't mean "because of it"</h3>
+      <p class="idea">Our pattern-hungry minds link anything that happens in sequence. Sometimes the link is real. Often it's coincidence, and the cost of mistaking one for the other can be measured in lives.</p>
+      <div class="tags c-risk"><span class="tag">post hoc ergo propter hoc</span><span class="tag">availability heuristic</span><span class="tag">System 1 vs. System 2</span></div>
+    </div>
+    <ul class="points">
+      <li>B.F. Skinner fed pigeons at random intervals. They developed rituals (spinning, head-bobbing) as if their dance caused the food. Superstition is the post hoc fallacy at work.</li>
+      <li>For two thousand years doctors blamed malaria on swampy "bad air", hence the name. The real cause, mosquito-borne parasites, was only found in the 1880s.</li>
+      <li>In 1998 Andrew Wakefield published a study of 12 children and then called a press conference suggesting the MMR vaccine was linked to autism. Journalist Brian Deer later showed the data was falsified. The <em>Lancet</em> retracted the paper and Wakefield was struck off.</li>
+      <li>The damage outlasted him. Each measles case infects 12 to 18 others. The US went from nearly measles-free to 677 cases in 2014. In 2019 the WHO named vaccine hesitancy a top-ten global health threat. In Samoa, coverage fell to 31% after a medical error; a measles outbreak followed.</li>
+      <li>Why did parents believe it? The <strong>availability heuristic</strong>: vaccines had made measles deaths invisible, while autism diagnoses were all around them.</li>
+      <li>Kahneman's fast System 1 jumps to answers; slow System 2 checks them. A bat and ball cost $110, and the bat costs $100 more than the ball. Most people say $10; the answer is $5. More than half of students at Harvard, MIT and Princeton got it wrong.</li>
+    </ul>
+    <div class="fig">
+      <h4>Why the timing fooled people</h4>
+      <svg viewBox="0 0 600 200" role="img" aria-label="Timeline of a child's early years. A marker near the first birthday shows the MMR vaccine. A shaded band in the second year shows when signs of autism are usually first noticed. A dashed arrow from vaccine to band is crossed out, labelled coincidence of timing, not cause. Below, the same band appears for unvaccinated children too.">
+        <line x1="30" y1="90" x2="580" y2="90" stroke="var(--ink-3)" stroke-width="1.5"/>
+        <g font-size="11" text-anchor="middle">
+          <text x="30" y="112">birth</text><text x="210" y="112">1 year</text><text x="390" y="112">2 years</text><text x="570" y="112">3 years</text>
+        </g>
+        <g stroke="var(--ink-3)"><line x1="30" y1="85" x2="30" y2="95"/><line x1="210" y1="85" x2="210" y2="95"/><line x1="390" y1="85" x2="390" y2="95"/><line x1="570" y1="85" x2="570" y2="95"/></g>
+        <rect x="290" y="70" width="170" height="40" rx="4" fill="color-mix(in srgb, var(--think) 26%, transparent)"/>
+        <text x="375" y="62" text-anchor="middle" font-size="11" style="fill:var(--ink)">first signs of autism often noticed</text>
+        <circle cx="222" cy="90" r="9" fill="var(--world)"/>
+        <text x="222" y="62" text-anchor="middle" font-size="11" style="fill:var(--world)">MMR jab</text>
+        <path d="M232 80 Q 260 30 300 74" fill="none" stroke="var(--risk)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <path d="M252 40 l14 14 M266 40 l-14 14" stroke="var(--risk)" stroke-width="2"/>
+        <text x="300" y="152" text-anchor="middle" font-size="12" style="fill:var(--ink)">One follows the other on the calendar. That's all.</text>
+        <text x="300" y="172" text-anchor="middle" font-size="11">Huge studies find the same autism rates in vaccinated and unvaccinated children.</text>
+      </svg>
+      <p class="cap">Schematic timeline, not to scale. The fallacy needs only the sequence. The evidence needs a comparison group.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">The Nature of the Beast</span></div>
+  <div class="body">
+    <div>
+      <h3>Essences that don't exist</h3>
+      <p class="idea">Essentialism, the idea that groups and things have a fixed inner nature, works for triangles. Applied to people, it underpins racism and lets us dismiss arguments by attacking whoever makes them.</p>
+      <div class="tags c-risk"><span class="tag">essentialism</span><span class="tag">No True Scotsman</span><span class="tag">appeal to nature</span><span class="tag">ad hominem</span><span class="tag">tu quoque</span><span class="tag">fundamental attribution error</span></div>
+    </div>
+    <ul class="points">
+      <li>"Race" doesn't carve humans at real joints. In the 1800s the Irish were considered a separate race. Light skin spread across Europe only within the last several thousand years. Genetically, all living humans are close relatives.</li>
+      <li>IQ gaps track nutrition, health and schooling, not ancestry. Kenya's average IQ rose 26 points between 1984 and 1998. Jewish soldiers scored poorly on First World War tests and above average a generation later.</li>
+      <li><strong>No True Scotsman</strong>: "No Scotsman would do such a thing." "This one did." "Then he's no <em>true</em> Scotsman." It protects an idealised group from evidence, and turns up as "un-American", "un-Christian" and so on.</li>
+      <li><strong>Appeal to nature</strong>: natural doesn't mean good (arsenic is natural) and unnatural doesn't mean bad.</li>
+      <li><strong>Ad hominem</strong> attacks the speaker instead of the argument. Galileo's <em>Dialogue</em> made the geocentrist "Simplicio", read as "simpleton", and the Pope took it personally. Galileo spent his last years under house arrest. <strong>Tu quoque</strong> ("you too") is a variant: a smoker who warns you off cigarettes is a hypocrite, but still right.</li>
+      <li>The root is the <strong>fundamental attribution error</strong>: we blame people's character for what is often their circumstances.</li>
+    </ul>
+<pre class="syl"><span class="k">Hamish reads:</span>  "Brighton sex maniac strikes again."
+<span class="k">Hamish says:</span>   "No Scotsman would do such a thing."
+<span class="k">Next day:</span>      The culprit is from Aberdeen.
+<span class="bad">Hamish says:</span>   "No <u>true</u> Scotsman would do such a thing."
+<span class="c">// the definition moves so the belief never has to</span></pre>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Bait and Switch</span></div>
+  <div class="body">
+    <div>
+      <h3>Beat the dummy, claim the win</h3>
+      <p class="idea">A straw man swaps the real argument for a flimsy stand-in that's easy to knock down. Circular reasoning hides the conclusion inside the premises.</p>
+      <div class="tags c-risk"><span class="tag">straw man</span><span class="tag">circular reasoning</span><span class="tag">begging the question</span></div>
+    </div>
+    <ul class="points">
+      <li>Richard Owen, a brilliant but vindictive anatomist, attacked Darwin by implying he claimed humans descended from modern apes. Darwin had argued for a common ancestor. At the 1860 Oxford debate, Bishop Wilberforce asked Huxley whether he was descended from an ape on his grandmother's or grandfather's side. Huxley answered that he'd rather have an ape for a grandfather than a man who used his gifts to obscure the truth.</li>
+      <li>The straw men never stopped. In 2007 two evangelists said evolution must be false because nobody had found a "crocoduck". A 2001 Louisiana resolution condemned "Darwinist ideology" as racist.</li>
+      <li>Straw men also run the other way, overselling a cause. Grimes was caught up in Ireland's cannabis bill, pitched with emotive stories as medicine for conditions where there was no evidence, including cancer. When a parliamentary committee rejected it, its backers cried sabotage. The Irish Cancer Society and Grimes were accused of being pharma shills.</li>
+      <li>Cannabis has real but limited medical uses, such as some forms of epilepsy and nausea. Cancer patients have died after dropping treatment for cannabis oil.</li>
+      <li><strong>Circular reasoning</strong>: "The book is true because the book says so." In <strong>begging the question</strong> the conclusion is assumed in the premises. (Grimes's pet peeve: it doesn't mean "raises the question".)</li>
+    </ul>
+    <div class="compare">
+      <div class="c-logic"><h5 style="color:var(--logic)">What Darwin argued</h5><ul><li>Random variation, some of it heritable</li><li>Better-suited traits spread over generations</li><li>Humans and apes share a distant common ancestor</li></ul></div>
+      <div class="c-risk"><h5 style="color:var(--risk)">What critics knocked down</h5><ul><li>"Humans came from monkeys"</li><li>"Where's the croco-duck?"</li><li>"Evolution says some races are superior"</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="mind">
+  <span class="label partno">Part 3 · Chapters 8–11</span>
+  <h2>Trapdoors of the mind</h2>
+  <p class="lede">The struggle between reason and belief. Our feelings, memories and senses are less reliable narrators than they feel from the inside.<em class="q">"Our own faults are those we are the first to detect, and the last to forgive, in others." Letitia Elizabeth Landon</em></p>
+</div>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Schrödinger's Bin Laden</span></div>
+  <div class="body">
+    <div>
+      <h3>We reason toward what we already believe</h3>
+      <p class="idea">Motivated reasoning isn't a lack of information. It's identity at work: we protect the beliefs that bind us to our group, even when that takes bad maths.</p>
+      <div class="tags c-think"><span class="tag">motivated reasoning</span><span class="tag">confirmation bias</span><span class="tag">cognitive dissonance</span><span class="tag">identity-protective cognition</span></div>
+    </div>
+    <ul class="points">
+      <li>Trofim Lysenko promised Stalin miracle harvests. His ideas suited communist ideology, so they became law. Genetics was banned as "bourgeois" in 1948. His mentor Vavilov died in prison. Lysenkoism wrecked Soviet biology and fed famines, including in China.</li>
+      <li>In 1954 psychologist Leon Festinger joined a cult awaiting rescue by flying saucer before a world-ending flood. When midnight passed with nothing, the group didn't give up. They announced their faith had saved the Earth and began recruiting. Festinger called the discomfort behind this <strong>cognitive dissonance</strong>.</li>
+      <li>Climate denial tracks ideology, especially strong free-market views, more than scientific knowledge. Accepting the science seems to demand regulation. The left has its own blind spots, which Grimes covers in ch. 21.</li>
+      <li>Conspiracy believers can hold contradictory beliefs at once. The more people believed Princess Diana faked her death, the more they also believed she was murdered. Likewise, the more people believed Osama bin Laden was already dead before the raid on his compound, the more they believed he was still alive. That's the chapter title: a Schrödinger's Bin Laden, both dead and alive.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The skin-cream test</h4>
+        <div class="barwrap">
+          <div class="bar c-world"><div class="row"><span>Used the cream: rash improved (223 of 298)</span><b>75%</b></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+          <div class="bar c-logic"><div class="row"><span>No cream: rash improved (107 of 128)</span><b>84%</b></div><div class="track"><div class="fill" style="width:84%"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+        <p class="cap">In Dan Kahan's 2013 Yale study, most people saw "223 improved" and said the cream worked. Comparing ratios shows it didn't. 59% got it wrong. Then the same table was relabelled as gun control and crime. Numerate liberals and conservatives suddenly got it right only when the answer suited their politics. Maths ability stopped predicting who got it right.</p>
+        <p class="src">Source: Kahan et al., as reported in ch. 8</p>
+      </div>
+      <div class="fig">
+        <h4>When a prophecy fails, belief can grow</h4>
+        <ol class="checks c-think" style="--c:var(--think)">
+          <li><span><b>Deep conviction</b> that shapes what you do</span></li>
+          <li><span><b>Commitment</b>: costly actions that are hard to undo (quitting jobs, giving away possessions)</span></li>
+          <li><span><b>A specific, testable belief</b> about the real world</span></li>
+          <li><span><b>Clear disconfirmation</b> that the believer sees</span></li>
+          <li><span><b>Social support</b> from fellow believers</span></li>
+        </ol>
+        <p class="cap">Festinger's conditions for doubling down. With all five in place, people often proselytise harder after the failure. "Tell him you disagree and he turns away. Show him facts and he questions your sources."</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">The Memory Remains</span></div>
+  <div class="body">
+    <div>
+      <h3>Memory is a reconstruction, not a recording</h3>
+      <p class="idea">Every time we recall something we rebuild it, and suggestion, stress and other people's stories can slip in. A confident memory can be completely false.</p>
+      <div class="tags c-think"><span class="tag">confabulation</span><span class="tag">false memories</span><span class="tag">conformity of memory</span><span class="tag">suggestive questioning</span></div>
+    </div>
+    <ul class="points">
+      <li>Grimes once remembered a dramatic event from 2007 in vivid detail, then found in his own diary that it happened to a friend. Oliver Sacks reported the same experience.</li>
+      <li>Elizabeth Loftus showed that false memories can be planted. A doctored photo of a childhood hot-air balloon ride led many subjects to "remember" the ride in detail. Hearing another witness's account changes what we recall ourselves. Trained soldiers under mock interrogation stress misidentified their interrogator.</li>
+      <li>The 1980 book <em>Michelle Remembers</em>, based on hundreds of hours of hypnosis, described satanic ritual abuse that the evidence contradicted. It helped trigger the "satanic panic".</li>
+      <li>In the McMartin preschool case, interviewers told children their friends had already disclosed abuse and rejected their denials. The trial took seven years, cost over $15 million and ended with no convictions. Some of the children later recanted.</li>
+      <li>False memories aren't lies. The person believes them. That's what makes them dangerous in courts and in therapy.</li>
+    </ul>
+    <div class="fig">
+      <h4>How an interview manufactures a memory</h4>
+<pre class="syl"><span class="k">Interviewer:</span> Can you remember the naked pictures?
+<span class="k">Child:</span>       [shakes head no]
+<span class="k">Interviewer:</span> Why don't you think about that for a while? Your memory might come back.
+<span class="c">  …</span>
+<span class="k">Interviewer:</span> Every kid in this picture has come here and told us the yucky secrets.
+<span class="k">Interviewer:</span> How about Naked Movie Star? <span class="bad">Everybody remembered that game.</span></pre>
+      <p class="cap">Excerpted from McMartin interview transcripts quoted in the book. Denials are rejected, social pressure is applied, and the answer is supplied. "Naked Movie Star" turned out to come from a playground rhyme.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Daggers of the Mind</span></div>
+  <div class="body">
+    <div>
+      <h3>Seeing, hearing and feeling what isn't there</h3>
+      <p class="idea">Perception is active guesswork. A brain built to find patterns will find them in static, clouds and rocks on Mars, and our expectations can move our muscles without our knowing.</p>
+      <div class="tags c-think"><span class="tag">apophenia</span><span class="tag">pareidolia</span><span class="tag">feeling of presence</span><span class="tag">sleep paralysis</span><span class="tag">ideomotor effect</span></div>
+    </div>
+    <ul class="points">
+      <li><strong>Apophenia</strong> is seeing meaning in randomness: ghost voices in radio static, satanic messages in records played backwards. In 1990 Judas Priest were taken to court over the suicides of two young fans. The supposed hidden message was found only after hunting through and amplifying dozens of snippets.</li>
+      <li><strong>Pareidolia</strong> is its visual cousin: the 1976 "face on Mars" was an ordinary mesa in better photos, and holy faces appear in toast.</li>
+      <li>Ghostly "presences" come from the brain failing to merge conflicting signals. Shackleton's party felt a "third man" walking with them; exhausted pilots report the same. <strong>Sleep paralysis</strong>, waking while the body is still paralysed for dreaming, likely explains the incubus legends.</li>
+      <li>The <strong>ideomotor effect</strong>: tiny unconscious movements. Faraday showed in the 1850s that sitters, not spirits, moved séance tables. The same effect moves Ouija planchettes and dowsing rods. In 2013 a British businessman was convicted for selling useless dowsing-style "bomb detectors" to Iraq.</li>
+      <li>The tragic version is <strong>facilitated communication</strong>, where a helper guides a disabled person's hand to a keyboard. When the helper and the person were shown different pictures, the "answers" matched what the facilitator saw.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Great Expectations</span></div>
+  <div class="body">
+    <div>
+      <h3>What we expect, we tend to experience</h3>
+      <p class="idea">Belief changes both perception and the body. Vague statements feel personal, sugar pills feel effective, harmless signals feel harmful, and the least informed feel the most certain.</p>
+      <div class="tags c-think"><span class="tag">Forer (Barnum) effect</span><span class="tag">placebo</span><span class="tag">nocebo</span><span class="tag">Dunning–Kruger</span></div>
+    </div>
+    <ul class="points">
+      <li>In 1948 Bertram Forer gave every student the same "personal" profile, stitched together from horoscopes. They rated it highly accurate. "You have a great deal of unused capacity which you have not turned to your advantage." The trick powers astrology and some personality tests.</li>
+      <li>In a 2001 stock-picking contest, a financial astrologer, an investor and a five-year-old each got £5,000. The child, picking at random, beat both. The astrologer lost most.</li>
+      <li>The <strong>placebo</strong> effect (Latin for "I shall please") explains some of alternative medicine's appeal. Much of the rest is regression to the mean: people seek treatment at their worst and then get better anyway.</li>
+      <li>The <strong>nocebo</strong> effect works in reverse. People with "electromagnetic hypersensitivity" suffer real symptoms, but in blinded tests they react to sham sources and not to real ones they don't know about.</li>
+    </ul>
+    <div class="fig">
+      <h4>Least informed, most confident</h4>
+      <div class="barwrap">
+        <div class="bar c-risk"><div class="row"><span>Lowest scorers on an autism knowledge test who thought they knew more than doctors and scientists</span><b>62%</b></div><div class="track"><div class="fill" style="width:62%"></div></div></div>
+        <div class="bar c-risk"><div class="row"><span>Strong believers in a vaccine–autism link who claimed superior knowledge</span><b>71%</b></div><div class="track"><div class="fill" style="width:71%"></div></div></div>
+      </div>
+      <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+      <p class="cap">The Dunning–Kruger effect: the skills you need to be right are the same ones you need to notice you're wrong.</p>
+      <p class="src">Source: 2017 survey, as reported in ch. 11</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 4 ============ -->
+<div class="part" id="numbers">
+  <span class="label partno">Part 4 · Chapters 12–14</span>
+  <h2>Lies, damned lies, and statistics</h2>
+  <p class="lede">Numbers look objective, but they need context. Statistician Frederick Mosteller: it's easy to lie with statistics, but it's easier to lie without them.<em class="q">"Politicians use statistics in the same way that a drunk uses lampposts: for support rather than illumination." Andrew Lang</em></p>
+</div>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Chance Encounters</span></div>
+  <div class="body">
+    <div>
+      <h3>Probability is where intuition fails hardest</h3>
+      <p class="idea">How likely something is depends on how common it was to begin with. Ignore the base rate and an accurate test can mislead, and an expert can put an innocent mother in jail.</p>
+      <div class="tags c-world"><span class="tag">Monty Hall</span><span class="tag">gambler's fallacy</span><span class="tag">Bayes's theorem</span><span class="tag">prosecutor's fallacy</span><span class="tag">false independence</span></div>
+    </div>
+    <ul class="points">
+      <li>In 1990 Marilyn vos Savant said that in the Monty Hall problem you should switch doors. Thousands of readers, many with PhDs, told her she was wrong. She was right.</li>
+      <li>The numbers 1-2-3-4-5-6 are as likely in a lottery as any other set. After 20 heads in a row, the next flip is still 50/50 (though you might question the coin).</li>
+      <li>A 99.99% accurate HIV test, given to a low-risk person, means only a 50% chance they actually have HIV. The same test in a high-risk group is nearly certain. The difference is the base rate.</li>
+      <li>DNA works the same way. A profile shared by 1 in a million people is strong evidence against a suspect found by other means. Search a database of 10 million and you expect about ten innocent matches.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Why switching wins</h4>
+        <div class="mh" role="img" aria-label="Three by three grid of where the car is against which door you first picked. In the three diagonal cells, staying wins. In the other six cells, switching wins.">
+          <span></span><span class="h">PICK A</span><span class="h">PICK B</span><span class="h">PICK C</span>
+          <span class="h">CAR IN A</span><span class="st">stay wins</span><span class="sw">switch wins</span><span class="sw">switch wins</span>
+          <span class="h">CAR IN B</span><span class="sw">switch wins</span><span class="st">stay wins</span><span class="sw">switch wins</span>
+          <span class="h">CAR IN C</span><span class="sw">switch wins</span><span class="sw">switch wins</span><span class="st">stay wins</span>
+        </div>
+        <p class="cap">Your first pick is right only one time in three. The host, who knows where the car is, always opens a goat door, so switching wins the other two times in three.</p>
+      </div>
+      <div class="fig">
+        <h4>Sally Clark and the 1 in 73 million</h4>
+<pre class="syl"><span class="k">Expert claim</span>  P(one cot death) ≈ 1 in 8,543
+<span class="k">so</span>            P(two) = 8,543² ≈ <span class="bad">1 in 73 million</span>
+
+<span class="c">// error 1: the deaths aren't independent.
+//   Shared genes and home raise the odds of a second.
+// error 2: prosecutor's fallacy.
+//   A rare event ≠ a rare chance of innocence.
+//   Double infant murder is rarer still.</span></pre>
+        <p class="cap">Paediatrician Sir Roy Meadow's figure helped convict Sally Clark of murdering her two sons in 1999. The Royal Statistical Society protested. Her second appeal found the prosecution's pathologist had withheld evidence of a bacterial infection. She was freed, but never recovered, and other convictions resting on Meadow's evidence were reviewed.</p>
+      </div>
+    </div>
+    <div class="fig">
+      <h4>Same 99.99% test, two different groups of 10,000 people</h4>
+      <svg viewBox="0 0 640 270" role="img" aria-label="Two frequency trees. Left, low-risk group of 10,000: 1 has HIV and tests positive, 9,999 don't, of whom 1 tests positive by error. So 2 positives, 1 true: 50 percent. Right, high-risk group of 10,000: 150 have HIV and test positive, 9,850 don't, of whom about 1 tests positive. So 151 positives, 150 true: about 99 percent.">
+        <g font-size="12" text-anchor="middle">
+          <text x="160" y="16" style="fill:var(--ink)">LOW-RISK · 1 in 10,000</text>
+          <text x="480" y="16" style="fill:var(--ink)">HIGH-RISK · about 1.5%</text>
+        </g>
+        <g stroke="var(--ink-3)" stroke-width="1.5" fill="none">
+          <path d="M160 46 L80 108"/><path d="M160 46 L240 108"/><path d="M240 132 L240 186"/><path d="M80 132 L80 186"/>
+          <path d="M480 46 L400 108"/><path d="M480 46 L560 108"/><path d="M560 132 L560 186"/><path d="M400 132 L400 186"/>
+        </g>
+        <g font-size="12" text-anchor="middle">
+          <rect x="112" y="26" width="96" height="24" rx="4" fill="var(--paper-2)"/><text x="160" y="43" style="fill:var(--ink)">10,000</text>
+          <rect x="432" y="26" width="96" height="24" rx="4" fill="var(--paper-2)"/><text x="480" y="43" style="fill:var(--ink)">10,000</text>
+          <text x="80" y="118">1 has HIV</text><text x="240" y="118">9,999 don't</text>
+          <text x="400" y="118">150 have HIV</text><text x="560" y="118">9,850 don't</text>
+          <rect x="44" y="186" width="72" height="26" rx="4" fill="color-mix(in srgb, var(--world) 22%, transparent)" stroke="var(--world)"/><text x="80" y="204" style="fill:var(--ink)">1 true +</text>
+          <rect x="204" y="186" width="72" height="26" rx="4" fill="color-mix(in srgb, var(--risk) 18%, transparent)" stroke="var(--risk)"/><text x="240" y="204" style="fill:var(--ink)">1 false +</text>
+          <rect x="356" y="186" width="88" height="26" rx="4" fill="color-mix(in srgb, var(--world) 22%, transparent)" stroke="var(--world)"/><text x="400" y="204" style="fill:var(--ink)">150 true +</text>
+          <rect x="520" y="186" width="80" height="26" rx="4" fill="color-mix(in srgb, var(--risk) 18%, transparent)" stroke="var(--risk)"/><text x="560" y="204" style="fill:var(--ink)">~1 false +</text>
+        </g>
+        <g text-anchor="middle">
+          <text x="160" y="248" font-size="13" style="fill:var(--ink)">positive → 1 in 2 chance of HIV</text>
+          <text x="480" y="248" font-size="13" style="fill:var(--ink)">positive → ~99% chance of HIV</text>
+        </g>
+      </svg>
+      <p class="cap">Counting people instead of using percentages (natural frequencies) makes Bayes's theorem intuitive. The test didn't change; the population did. It's why doctors test people with a reason to be tested.</p>
+      <p class="src">Source: worked example in ch. 12</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Sifting the Signal</span></div>
+  <div class="body">
+    <div>
+      <h3>Correlation is a clue, not a verdict</h3>
+      <p class="idea">Hidden variables can make data say the opposite of the truth. Finding real causes takes detective work, and screening everyone for everything produces a flood of false alarms.</p>
+      <div class="tags c-world"><span class="tag">Simpson's paradox</span><span class="tag">confounding variables</span><span class="tag">correlation ≠ causation</span><span class="tag">sensitivity &amp; specificity</span></div>
+    </div>
+    <ul class="points">
+      <li>In 1973 Berkeley was sued because it admitted 44% of male applicants and only 35% of female ones. Department by department, there was a small bias in favour of women. Women had applied in larger numbers to the most competitive departments. This is <strong>Simpson's paradox</strong>, driven by a lurking variable.</li>
+      <li>Spurious correlations are everywhere. A parody chart links the decline of pirates to global warming. Correlation is still useful as a starting clue that something needs explaining.</li>
+      <li>London's cholera fell when cesspools were closed, which seemed to prove the "bad air" theory. In 1854 John Snow mapped deaths around the Broad Street pump. Local monks and brewery workers, who drank beer, were spared. The pump handle was removed. The well turned out to sit about 1 m from a cesspit. Epidemiology was born.</li>
+      <li>Theranos was valued at $9 billion on the promise of dozens of tests from one drop of blood. The machine didn't work. Even if it had, testing healthy people for everything with no reason to suspect disease guarantees false positives. A short talk with a statistician would have shown that.</li>
+    </ul>
+    <div class="compare">
+      <div class="c-world"><h5 style="color:var(--world)">Sensitivity</h5><ul><li>Of people who <em>have</em> the condition, how many does the test catch?</li><li>Low sensitivity → missed cases (false negatives)</li></ul></div>
+      <div class="c-think"><h5 style="color:var(--think)">Specificity</h5><ul><li>Of people who <em>don't</em> have it, how many does the test correctly clear?</li><li>Low specificity → false alarms (false positives), multiplied across a whole population</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">Size Matters</span></div>
+  <div class="body">
+    <div>
+      <h3>Ask "how much?", not just "is there a link?"</h3>
+      <p class="idea">A risk that sounds frightening as a percentage can be tiny in real terms. And "statistically significant" doesn't mean big, important or even real.</p>
+      <div class="tags c-world"><span class="tag">relative vs. absolute risk</span><span class="tag">effect size</span><span class="tag">p-values</span><span class="tag">regression to the mean</span><span class="tag">publication bias</span></div>
+    </div>
+    <ul class="points">
+      <li>In October 2015 the WHO's cancer agency put processed meat in the same category as tobacco. Headlines screamed that bacon was as bad as smoking. The category measures how sure the evidence is, not how big the risk is.</li>
+      <li>Drug firms prefer relative numbers. Heart attacks dropping from 5 to 4 per 1,000 is a "20% reduction", or an absolute 0.1%.</li>
+      <li>A house that loses 50% one year and gains 50% the next hasn't broken even. It's worth 75% of what it was.</li>
+      <li>A p-value below 0.05 was Ronald Fisher's rough flag for "worth a closer look". Merged with rival frameworks, it hardened into a pass mark. Run enough comparisons and some will pass by chance.</li>
+      <li>"Publish or perish" pressure and journals' taste for positive results push the literature toward false findings. Meta-analyses, which weigh all studies by quality, are the safeguard.</li>
+      <li>Natural frequencies help: "10 in 100 people get this side effect" is understood far better than "a 10% chance".</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Bacon in absolute terms</h4>
+        <svg id="riskdots" viewBox="0 0 400 260" role="img" aria-label="A grid of 1,000 dots representing 1,000 people. 56 dots are yellow: bowel cancers among people who eat the least processed meat. 10 more dots are red: the extra cancers among the heaviest eaters. The remaining 934 dots are grey."></svg>
+        <div class="chips" style="gap:14px;font-family:var(--mono);font-size:12.5px">
+          <span><span class="dot c-think"></span> 56 cases among lightest eaters</span>
+          <span><span class="dot c-risk"></span> +10 among heaviest eaters</span>
+        </div>
+        <p class="cap">Relative risk: 10 ÷ 56 ≈ <strong>18% higher</strong>, the figure in the press release. Absolute risk: 10 more cases per 1,000 people, <strong>1 percentage point</strong>. Both are true. Only one tells you what it means for you.</p>
+        <p class="src">Source: UK lifetime bowel cancer figures as reported in ch. 14</p>
+      </div>
+      <div class="fig">
+        <h4>Warning signs a finding may be false</h4>
+        <ol class="checks" style="--c:var(--world)">
+          <li><span><b>Small studies.</b> Small samples aren't representative and throw up more false positives.</span></li>
+          <li><span><b>Small effects.</b> A tiny effect is easily produced by bias or noise.</span></li>
+          <li><span><b>Many relationships tested</b> without a prior reason. Some will hit by chance.</span></li>
+          <li><span><b>Flexible designs and definitions.</b> Room to adjust lets a negative result become positive.</span></li>
+          <li><span><b>Money or prejudice</b> riding on the answer.</span></li>
+          <li><span><b>A hot field</b> with many teams racing for headline results.</span></li>
+        </ol>
+        <p class="cap">John Ioannidis's six corollaries from his paper on why most published research findings are false. Grimes has worked with Ioannidis on modelling "publish or perish" pressure.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 5 ============ -->
+<div class="part" id="media">
+  <span class="label partno">Part 5 · Chapters 15–18</span>
+  <h2>News of the world</h2>
+  <p class="lede">How the media, and the media we build for ourselves, amplify bad thinking.<em class="q">"Newspapers are unable, seemingly, to discriminate between a bicycle accident and the collapse of civilization." George Bernard Shaw</em></p>
+</div>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Skewing the Balance</span></div>
+  <div class="body">
+    <div>
+      <h3>Two sides aren't always equal</h3>
+      <p class="idea">Balance should match the evidence. Giving a fringe view equal airtime with an overwhelming consensus makes a settled question look open, and that doubt can be manufactured on purpose.</p>
+      <div class="tags c-risk"><span class="tag">false balance</span><span class="tag">manufactured controversy</span><span class="tag">consensus gap</span></div>
+    </div>
+    <ul class="points">
+      <li>In 2016 news outlets treated Trump and Clinton as comparable candidates. Constant falsehoods were weighed against an email-server story as if they were equivalent.</li>
+      <li>Grimes was asked by an Irish radio station to debate Andrew Wakefield. He refused and urged them not to give him a platform. Putting science and pseudoscience side by side signals that the matter is disputed.</li>
+      <li>Lung cancer was under 1% of cancers in 1878, 10% by 1918 and 14% by 1927. German doctor Fritz Lickint linked it to smoking by 1929. When the evidence became overwhelming in the 1950s, the tobacco firms hired PR firm Hill+Knowlton. An internal memo summed up the strategy: "Doubt is our product."</li>
+      <li>Creationists used the same playbook with "teach the controversy", playing on two meanings of "theory". Climate denial is the biggest example. From 1988 to 2002, most articles in four major US papers gave deniers roughly equal space, leaving a wide gap between scientific consensus and public belief.</li>
+    </ul>
+    <div class="fig">
+      <h4>Anatomy of the tobacco industry's 1954 "Frank Statement"</h4>
+      <div class="predict">
+        <div>
+          <span class="label">What it said</span>
+          <ul class="no" style="margin-top:10px">
+            <li>Research shows many possible causes of lung cancer</li>
+            <li>Authorities disagree about the cause</li>
+            <li>There's no proof smoking is one of them</li>
+            <li>The statistics could apply to any part of modern life</li>
+          </ul>
+        </div>
+        <div>
+          <span class="label">The trick behind each line</span>
+          <ul class="yes" style="margin-top:10px">
+            <li>Straw man: frame it as "only mice studies"</li>
+            <li>Many causes don't rule out a major one</li>
+            <li>Shift the burden of proof to an impossible standard</li>
+            <li>Ignore that confounders had already been ruled out</li>
+          </ul>
+        </div>
+      </div>
+      <p class="cap">Published in hundreds of US newspapers on 4 January 1954. It sounded reasonable, and it bought the industry decades.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Tales from the Echo Chamber</span></div>
+  <div class="body">
+    <div>
+      <h3>A huge sample can still be the wrong sample</h3>
+      <p class="idea">When we only hear from people like us, the world looks the way we already think it is. Algorithms speed this up, but the urge is ours.</p>
+      <div class="tags c-risk"><span class="tag">sampling bias</span><span class="tag">filter bubble</span><span class="tag">echo chamber</span><span class="tag">cyberbalkanisation</span></div>
+    </div>
+    <ul class="points">
+      <li>In 1936 the <em>Literary Digest</em> polled 10 million Americans and got 2.4 million replies. It predicted a Landon win, 57% to 43%. Roosevelt won every state except Vermont and Maine. The sample came from its own readers, phone books and car registrations: the well-off of the Depression. George Gallup, with a far smaller but representative sample, got it right and even predicted the <em>Digest</em>'s error.</li>
+      <li>Feed algorithms flatter us with what we already like. But we also curate our own bubbles. Around 40% of users have unfriended or blocked someone over politics. MIT researchers predicted this "cyberbalkanisation" in 1996.</li>
+      <li>66% of millennials get their news mainly from social media, where unchecked rumour sits beside reporting and the loudest voices dominate.</li>
+      <li>AIDS denialism shows the cost. Biologist Peter Duesberg claimed HIV didn't cause AIDS. The London denialist magazine <em>Continuum</em> rejected HIV drugs. By 2001 its entire editorial staff had died of AIDS-related illnesses. South African president Thabo Mbeki appointed denialists to a panel and delayed antiretroviral treatment, with a huge death toll.</li>
+    </ul>
+    <div class="fig">
+      <h4>How an echo chamber feeds itself</h4>
+      <svg viewBox="0 0 560 300" role="img" aria-label="A circular loop of four steps with arrows: we pick sources that agree, algorithms serve more of the same, dissent looks rare or hostile, belief hardens and feels like common sense, then back to picking sources. Outside the loop, a faded box labelled evidence from outside has an arrow that bounces off.">
+        <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--risk)"/></marker></defs>
+        <circle cx="230" cy="150" r="104" fill="none" stroke="color-mix(in srgb, var(--risk) 25%, transparent)" stroke-width="20"/>
+        <g stroke="var(--risk)" stroke-width="2" fill="none" marker-end="url(#arr)">
+          <path d="M268 54 A104 104 0 0 1 330 118"/>
+          <path d="M330 184 A104 104 0 0 1 268 246"/>
+          <path d="M192 246 A104 104 0 0 1 130 184"/>
+          <path d="M130 116 A104 104 0 0 1 192 54"/>
+        </g>
+        <g font-size="12" text-anchor="middle" style="fill:var(--ink)">
+          <rect x="166" y="22" width="128" height="40" rx="4" fill="var(--card)" stroke="var(--rule)"/><text x="230" y="38" style="fill:var(--ink)">we pick sources</text><text x="230" y="54" style="fill:var(--ink)">that agree</text>
+          <rect x="290" y="130" width="140" height="40" rx="4" fill="var(--card)" stroke="var(--rule)"/><text x="360" y="146" style="fill:var(--ink)">algorithms serve</text><text x="360" y="162" style="fill:var(--ink)">more of the same</text>
+          <rect x="166" y="238" width="128" height="40" rx="4" fill="var(--card)" stroke="var(--rule)"/><text x="230" y="254" style="fill:var(--ink)">dissent looks rare</text><text x="230" y="270" style="fill:var(--ink)">or hostile</text>
+          <rect x="30" y="130" width="140" height="40" rx="4" fill="var(--card)" stroke="var(--rule)"/><text x="100" y="146" style="fill:var(--ink)">belief hardens,</text><text x="100" y="162" style="fill:var(--ink)">feels like common sense</text>
+        </g>
+        <rect x="452" y="40" width="96" height="44" rx="4" fill="none" stroke="var(--logic)" stroke-dasharray="4 4"/>
+        <text x="500" y="58" text-anchor="middle" font-size="11" style="fill:var(--logic)">evidence</text>
+        <text x="500" y="74" text-anchor="middle" font-size="11" style="fill:var(--logic)">from outside</text>
+        <path d="M470 90 L400 118" stroke="var(--logic)" stroke-width="1.5" fill="none"/>
+        <path d="M400 118 L440 132" stroke="var(--logic)" stroke-width="1.5" fill="none" stroke-dasharray="3 3"/>
+        <text x="476" y="150" font-size="10.5">bounces off</text>
+      </svg>
+      <p class="cap">An echo chamber is cherry-picking and confirmation bias at group scale. Group agreement can't overrule reality, but it can stop members from seeing it. Illustrative diagram.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">The Outrage Machine</span></div>
+  <div class="body">
+    <div>
+      <h3>Check where it came from, and who gains</h3>
+      <p class="idea">Some misinformation is honest error. Some is made for clicks, and some is made by intelligence services. The defence is the same: check the source before you share.</p>
+      <div class="tags c-risk"><span class="tag">conspiracy echo chambers</span><span class="tag">"just asking questions"</span><span class="tag">hyper-partisan media</span><span class="tag">dezinformatsiya</span></div>
+    </div>
+    <ul class="points">
+      <li>After 20 children and six staff were murdered at Sandy Hook in 2012, "truthers" claimed it was staged to take their guns. Normal reporting errors became "proof". Bereaved parents were stalked and threatened. Lenny Pozner, whose son Noah was killed, set up HONR to fight back and spent years getting harassing material removed.</li>
+      <li>Wild accusations dressed up as questions are a known bad-faith tactic, nicknamed "JAQing off".</li>
+      <li>Online "Targeted Individuals" groups convince people with paranoid delusions that they're being gang-stalked, keeping them from treatment, sometimes with tragic results.</li>
+      <li>Hyper-partisan pages on both sides, some run by the same owners, earn money from outrage. In 2016 Russian troll operations posed as Americans across the political spectrum.</li>
+      <li>The Soviet KGB's "active measures" planted stories to erode trust in the West: that water fluoridation was a plot, and, in Operation INFEKTION, that the US created AIDS. The story first appeared in 1983 in a pro-Soviet Indian newspaper and was relaunched in 1985 with a pseudoscientific report. Versions still circulate, and similar claims surfaced about COVID-19.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">Nullius in verba: take nobody's word for it.</blockquote>
+      <span class="label">Motto of the Royal Society, which Grimes offers as the rule for anything you read before you pass it on</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">Bad Influencers</span></div>
+  <div class="body">
+    <div>
+      <h3>Fame is not expertise</h3>
+      <p class="idea">Celebrities and wellness gurus shape health decisions more than doctors do. The same reach can save lives when it's pointed at the truth.</p>
+      <div class="tags c-risk"><span class="tag">appeal to celebrity</span><span class="tag">wellness pseudoscience</span><span class="tag">pseudo-profound bullshit</span><span class="tag">mere exposure</span></div>
+    </div>
+    <ul class="points">
+      <li>Australian wellness star Belle Gibson said she cured her brain cancer with diet and alternative medicine. Her app, <em>The Whole Pantry</em>, shipped with the Apple Watch. In 2015 it emerged that none of the charities she'd raised money in the name of had been paid, and that she'd never had cancer at all. The media that lifted her up had never asked for evidence.</li>
+      <li>Sites like Natural News and Joseph Mercola's pull millions of visitors, selling supplements alongside anti-vaccine and "Big Pharma" conspiracies.</li>
+      <li>Oprah gave platforms to anti-vaccine campaigner Jenny McCarthy and to <em>The Secret</em>'s "law of attraction". Kim Tinkham, who went on the show to praise her positive-thinking approach to breast cancer instead of the treatment doctors urged, died of the disease. Dr. Oz has promoted products with no evidence. Goop sold a $66 jade egg for women to insert, a product that gynaecologist Jen Gunter publicly criticised.</li>
+      <li>David "Avocado" Wolfe tells his 12 million Facebook followers things like "chocolate is an octave of sun energy". Grimes uses the academic term for this kind of grand-sounding word salad: pseudo-profound bullshit.</li>
+      <li>Merely seeing a claim repeatedly makes it feel truer, so media can't hide behind "just reporting what people say".</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The Jade Goody effect</h4>
+        <div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="stat"><span class="big num" style="color:var(--logic)">+70%</span><p>cervical screening appointments above forecast in March 2009</p></div>
+          <div class="stat"><span class="big num" style="color:var(--logic)">~500k</span><p>extra screenings between her diagnosis and death</p></div>
+        </div>
+        <p class="cap">The 2003 <em>Big Brother</em> contestant, mocked for years, died of cervical cancer in 2009. Coverage of her illness sent young women to be screened. The effect faded with the headlines.</p>
+      </div>
+      <div class="fig">
+        <h4>Used well, fame helps</h4>
+        <p class="cap" style="font-size:16px;color:var(--ink)">In 1956 Elvis Presley got his polio jab at a press conference to encourage teenagers. Roald Dahl, whose daughter died of measles, wrote a moving plea for vaccination.</p>
+        <p class="cap">The catch: the effect follows coverage, not need. Mammogram requests more than doubled after Kylie Minogue's 2005 diagnosis, mostly from young women for whom screening mainly produces false positives.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 6 ============ -->
+<div class="part" id="science">
+  <span class="label partno">Part 6 · Chapters 19–21</span>
+  <h2>The candle in the dark</h2>
+  <p class="lede">What science is and what it isn't. Not a body of facts or a priesthood, but a method for catching our own mistakes.<em class="q">"The first principle is that you must not fool yourself, and you are the easiest person to fool." Richard Feynman</em></p>
+</div>
+
+<article class="chapter" id="ch19">
+  <div class="gutter"><span class="chno">19</span><span class="label">The Edge of Science</span></div>
+  <div class="body">
+    <div>
+      <h3>Trust the method, not the person</h3>
+      <p class="idea">A scientific claim has to stick its neck out: make a prediction that could prove it wrong. Authority counts for nothing when the evidence disagrees, even if you're Lord Kelvin.</p>
+      <div class="tags c-logic"><span class="tag">pathological science</span><span class="tag">Occam's razor</span><span class="tag">falsifiability</span><span class="tag">burden of proof</span></div>
+    </div>
+    <ul class="points">
+      <li>In 1988 <em>Nature</em> published Jacques Benveniste's claim that water "remembers" antibodies diluted out of it, which would support homeopathy. Editor John Maddox sent a team, including magician James Randi, to watch a repeat. Once the samples were blinded, the effect disappeared. A 30C homeopathic dilution would need a planet of water far bigger than the sun to contain one molecule of the original substance.</li>
+      <li>That's <strong>pathological science</strong>: wishful thinking in a lab coat. Occam's razor (prefer the explanation with fewest extra assumptions) would have pointed to error.</li>
+      <li>Kelvin calculated Earth was some tens of millions of years old, too young for evolution and geology. His former assistant John Perry found the flaw in 1895: Kelvin had assumed a solid Earth, but convection inside the planet carries heat far more efficiently. Perry put the age at 2 to 3 billion years or more. Radioactivity later added another heat source Kelvin couldn't have known about. The age is now known to be billions of years. Kelvin's prestige didn't make him right.</li>
+      <li>Karl Popper saw that Marxism and some psychoanalysis could explain any outcome, while Einstein's theory made risky predictions that the 1919 eclipse could have refuted. <strong>Falsifiability</strong> divides science from pseudoscience. Astrology is too vague ever to be wrong.</li>
+    </ul>
+    <div class="fig">
+      <h4>Seven checks for spotting pseudoscience</h4>
+      <ol class="checks" style="--c:var(--logic)">
+        <li><span><b>Quality of evidence.</b> Data and clear methods, or anecdotes and testimonials?</span></li>
+        <li><span><b>Authority.</b> Accepted because of the evidence, or because of who says it?</span></li>
+        <li><span><b>Logic.</b> Does every link in the chain hold? Beware single causes and single cures.</span></li>
+        <li><span><b>Testable claims.</b> Could it be shown wrong? Has anyone independent reproduced it?</span></li>
+        <li><span><b>Totality of evidence.</b> Does it fit everything we know, or only the cherry-picked parts?</span></li>
+        <li><span><b>Occam's razor.</b> Does it need a pile of extra assumptions to survive?</span></li>
+        <li><span><b>Burden of proof.</b> The person making the claim must support it. "You can't prove it's false" doesn't count.</span></li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch20">
+  <div class="gutter"><span class="chno">20</span><span class="label">Rise of the Cargo Cult</span></div>
+  <div class="body">
+    <div>
+      <h3>The costume of science without the substance</h3>
+      <p class="idea">Jargon, charts and lab coats borrow science's authority. What they leave out is the bending-over-backwards honesty about how you might be wrong.</p>
+      <div class="tags c-logic"><span class="tag">cargo-cult science</span><span class="tag">quantum quackery</span><span class="tag">pseudo-forensics</span></div>
+    </div>
+    <ul class="points">
+      <li>After the Second World War, some Pacific islanders built bamboo control towers and runways, copying the rituals that had once brought planes full of cargo. On Tanna, believers still await "John Frum". Feynman used the image for research that copies science's forms but skips its integrity.</li>
+      <li>Science-flavoured scares about aspartame and water fluoridation travel well online. When Irish politicians brought anti-fluoride motions in 2013 quoting scientific-sounding reports, Grimes wrote and debated against them and became a target of abuse.</li>
+      <li>Quantum mysticism borrows the vocabulary of physics that only applies at subatomic scales to sell healing and self-help.</li>
+      <li>Kirk Odom was convicted of a 1981 rape largely on an FBI agent's testimony that a crime-scene hair was a "very rare" exact match. He spent 22 years in prison and nine on parole before DNA retesting cleared him in July 2012, on his 50th birthday. A 2009 National Academy of Sciences report found microscopic hair comparison lacked scientific basis. A joint review then found flawed hair testimony throughout FBI cases.</li>
+    </ul>
+    <div class="compare">
+      <div class="c-logic"><h5 style="color:var(--logic)">Science</h5><ul><li>Hunts for its own errors</li><li>Reports what didn't work</li><li>States its uncertainty</li><li>Invites replication</li></ul></div>
+      <div class="c-risk"><h5 style="color:var(--risk)">Cargo cult</h5><ul><li>Copies the look: terms, graphs, credentials</li><li>Ignores failures</li><li>Claims certainty ("an exact match")</li><li>Treats challenge as attack</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch21">
+  <div class="gutter"><span class="chno">21</span><span class="label">A Healthy Skepticism</span></div>
+  <div class="body">
+    <div>
+      <h3>Scepticism isn't doubting everything</h3>
+      <p class="idea">It's asking "why do we think that?" and following the evidence, including where your own side doesn't want to go.</p>
+      <div class="tags c-logic"><span class="tag">cancer-cure conspiracies</span><span class="tag">selective framing</span><span class="tag">scientific skepticism</span></div>
+    </div>
+    <ul class="points">
+      <li>In 2012 seven-year-old Neon Roberts's mother took him and disappeared to avoid the radiotherapy he urgently needed after brain surgery. A court ordered treatment, and he recovered.</li>
+      <li>About 37% of Americans believe the FDA hides natural cancer cures. The claim fails on all three of its premises. "Cancer" is hundreds of different diseases, not one with a single cure. A cure would be enormously profitable, and natural compounds are patented all the time. And cancer has been with us since ancient Egypt.</li>
+      <li>The "dihydrogen monoxide" spoof lists only true facts about water, framed to sound terrifying. Selective framing does the work.</li>
+      <li>The left has blind spots too. The Chernobyl Forum counted 28 deaths from acute radiation sickness and 15 from thyroid cancer, and found no rise in overall cancer rates or birth defects. Far higher figures circulate in campaigning. Meanwhile fossil fuel pollution kills about 5.5 million people a year. After Fukushima, Germany shut nuclear plants and burned more coal.</li>
+    </ul>
+    <div class="fig">
+      <h4>Six questions to ask of any claim</h4>
+      <div class="six">
+        <div class="c-logic"><b>Reasoning</b><span class="q">Do the premises actually lead to the conclusion?</span><span class="p">Part 1 · formal fallacies</span></div>
+        <div class="c-risk"><b>Rhetoric</b><span class="q">What kind of argument is this? Authority, single cause, emotional appeal?</span><span class="p">Part 2 · informal fallacies</span></div>
+        <div class="c-think"><b>Human factors</b><span class="q">What biases might be at work, including mine?</span><span class="p">Part 3 · the mind</span></div>
+        <div class="c-risk"><b>Sources</b><span class="q">Where did this come from? Can it be traced and verified?</span><span class="p">Part 5 · media</span></div>
+        <div class="c-world"><b>Quantification</b><span class="q">How big is it really? Relative or absolute? Compared to what?</span><span class="p">Part 4 · statistics</span></div>
+        <div class="c-logic"><b>Science</b><span class="q">Is it testable? Does it reflect the whole body of evidence?</span><span class="p">Part 6 · method</span></div>
+      </div>
+      <p class="cap">Grimes's checklist, which happens to retrace the whole book. The most important claims to put through it are your own.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue · "Love truth, but pardon error." Voltaire</span>
+    <h2>Facts aren't enough. People change their own minds.</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>In 1870 naturalist Alfred Russel Wallace accepted a 500-pound bet from flat-Earther John Hampden and proved the Earth's curvature along a six-mile stretch of canal. Hampden refused to accept it, harassed Wallace for years and never paid. Wallace learned that you can't argue some people out of a position they didn't reason their way into.</p>
+      <p>The bigger story is personal. In 2015 an anti-vaccine campaign and a fear-mongering TV documentary scared Irish parents away from the HPV vaccine, which prevents several cancers. Uptake fell from 86.9% to about 50%. What turned it round wasn't more statistics. It was <strong>Laura Brennan</strong>, a young woman dying of cervical cancer, telling her story publicly alongside health officials. Uptake rose again. Laura died in 2019, aged 26. Grimes counted her as a close friend.</p>
+      <p>We feel first and think second, so the facts need a human voice. Most people aren't zealots; the loudest commenters are a tiny fraction. Debate rewards the best performer, not the best evidence. And mocking people never changed a mind.</p>
+    </div>
+    <div class="fig">
+      <h4>Irish HPV vaccine uptake</h4>
+      <div class="barwrap">
+        <div class="bar c-logic"><div class="row"><span>2014, before the scare</span><b>86.9%</b></div><div class="track"><div class="fill" style="width:86.9%"></div></div></div>
+        <div class="bar c-risk"><div class="row"><span>2016, after the documentary</span><b>~50%</b></div><div class="track"><div class="fill" style="width:50%"></div></div></div>
+        <div class="bar c-world"><div class="row"><span>Late 2017, as the campaign and Laura's story spread</span><b>62%</b></div><div class="track"><div class="fill" style="width:62%"></div></div></div>
+      </div>
+      <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+      <p class="src">Source: figures as reported in the epilogue</p>
+      <ul class="points" style="margin-top:6px">
+        <li><strong>We are not our ideas.</strong> Changing your mind is a strength, not a defeat.</li>
+        <li><strong>Use the principle of charity.</strong> Answer the strongest version of the other side's argument, not a straw man.</li>
+        <li><strong>Charity has limits.</strong> It's for good-faith discussion, not for people deliberately spreading falsehoods.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Practical takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Grimes insists the book is a collection of stories, not a textbook. These are the habits the stories teach.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Check the argument</h3>
+      <div class="tk"><b>Test validity and truth separately</b><span>Does the conclusion follow? Are the premises true? You need both.</span></div>
+      <div class="tk"><b>Watch for one-way arrows</b><span>"All X are Y" never means "all Y are X". "Some" never tells you which.</span></div>
+      <div class="tk"><b>Count the misses</b><span>For every impressive hit or survivor, ask about the ones you didn't hear about.</span></div>
+      <div class="tk"><b>Find the hidden third option</b><span>When offered two choices, look for the spectrum in between.</span></div>
+      <div class="tk"><b>Reply to the real argument</b><span>Restate the other side well enough that they'd agree before you answer it.</span></div>
+    </div>
+    <div class="col">
+      <h3>Check yourself</h3>
+      <div class="tk"><b>Notice when a conclusion feels good</b><span>That's when motivated reasoning is most likely. Apply your toughest standards to what you want to believe.</span></div>
+      <div class="tk"><b>Hold memory loosely</b><span>Vivid and confident isn't the same as accurate. Look for records.</span></div>
+      <div class="tk"><b>Let System 2 check System 1</b><span>For anything that matters, slow down and work it out, as with the bat and ball.</span></div>
+      <div class="tk"><b>Be suspicious of your own certainty</b><span>Feeling expert is easiest when you know least.</span></div>
+      <div class="tk"><b>Admit errors fast</b><span>Your identity isn't your opinions. Being less wrong is the goal.</span></div>
+    </div>
+    <div class="col">
+      <h3>Check the information</h3>
+      <div class="tk"><b>Ask for the base rate</b><span>How common was it to begin with? Then think in counts: "out of 1,000 people…"</span></div>
+      <div class="tk"><b>Ask for absolute risk</b><span>"18% higher" may mean 1 extra case in 100.</span></div>
+      <div class="tk"><b>Look for the confounder</b><span>Before accepting a correlation, ask what else could drive both.</span></div>
+      <div class="tk"><b>Weigh balance by evidence</b><span>Two speakers doesn't mean two equal sides.</span></div>
+      <div class="tk"><b>Trace it before you share it</b><span>Read past the headline. Who made it, who profits, and can it be verified?</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of David Robert Grimes, <em>Good Thinking: Why Flawed Logic Puts Us All at Risk and How Critical Thinking Can Save the World</em> (The Experiment, 2021; first published in the UK as <em>The Irrational Ape</em>, 2019). Figures are as reported in the book. Diagrams were drawn for this page, and charts are drawn to the book's numbers. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  var seed = 11;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+
+  /* --- Survivorship bias: bomber with bullet holes --- */
+  var plane = document.getElementById("plane");
+  if (plane) {
+    var body = "var(--paper-2)", edge = "var(--ink-3)";
+    // wings, tail, fuselage
+    el("path", { d: "M20 132 L180 104 L340 132 L340 150 L180 140 L20 150 Z", fill: body, stroke: edge, "stroke-width": 1.5 }, plane);
+    el("path", { d: "M120 252 L180 238 L240 252 L240 264 L180 258 L120 264 Z", fill: body, stroke: edge, "stroke-width": 1.5 }, plane);
+    el("rect", { x: 166, y: 36, width: 28, height: 230, rx: 14, fill: body, stroke: edge, "stroke-width": 1.5 }, plane);
+    // engines
+    [[86, 132], [274, 132]].forEach(function (e) {
+      el("ellipse", { cx: e[0], cy: e[1] - 6, rx: 11, ry: 22, fill: "var(--card)", stroke: edge, "stroke-width": 1.5 }, plane);
+      el("circle", { cx: e[0], cy: e[1] - 6, r: 30, fill: "none", stroke: "var(--logic)", "stroke-width": 1.5, "stroke-dasharray": "4 4" }, plane);
+    });
+    // cockpit
+    el("ellipse", { cx: 180, cy: 52, rx: 9, ry: 12, fill: "var(--card)", stroke: edge, "stroke-width": 1.5 }, plane);
+    el("circle", { cx: 180, cy: 52, r: 26, fill: "none", stroke: "var(--logic)", "stroke-width": 1.5, "stroke-dasharray": "4 4" }, plane);
+    // bullet holes, kept away from engines and cockpit
+    function clear(x, y) {
+      return Math.hypot(x - 86, y - 126) > 32 && Math.hypot(x - 274, y - 126) > 32 && Math.hypot(x - 180, y - 52) > 28;
+    }
+    var holes = 0, tries = 0;
+    while (holes < 46 && tries < 3000) {
+      tries++;
+      var region = rnd(), x, y;
+      if (region < .55) { x = 26 + rnd() * 308; y = 112 + rnd() * 32; if (y < 104 + Math.abs(x - 180) * .17 + 4) continue; }
+      else if (region < .85) { x = 170 + rnd() * 20; y = 84 + rnd() * 170; }
+      else { x = 126 + rnd() * 108; y = 244 + rnd() * 14; }
+      if (!clear(x, y)) continue;
+      el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: 2.6, fill: "var(--risk)" }, plane);
+      holes++;
+    }
+    var t1 = el("text", { x: 180, y: 14, "text-anchor": "middle", "font-size": 11, style: "fill:var(--logic)" }, plane);
+    t1.textContent = "no holes here: these planes didn't come back";
+    var t2 = el("text", { x: 180, y: 296, "text-anchor": "middle", "font-size": 11 }, plane);
+    t2.textContent = "red = damage seen on returning bombers";
+  }
+
+  /* --- Absolute risk: 1,000 dots --- */
+  var rd = document.getElementById("riskdots");
+  if (rd) {
+    var cols = 40, rows = 25, gap = 10, r = 3.4;
+    for (var i = 0; i < cols * rows; i++) {
+      var cx = 5 + (i % cols) * gap, cy = 5 + Math.floor(i / cols) * gap;
+      var fill = i < 56 ? "var(--think)" : i < 66 ? "var(--risk)" : "var(--rule)";
+      el("circle", { cx: cx, cy: cy, r: r, fill: fill }, rd);
+    }
+  }
+
+  /* --- Hero: noise becomes signal --- */
+  var canvas = document.getElementById("signal");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, pts = [];
+  seed = 3;
+  for (var p = 0; p < 170; p++) pts.push({ u: rnd(), a: rnd() * 2 - 1, ph: rnd() * Math.PI * 2, sp: .4 + rnd() * .8 });
+  function size() {
+    var b = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = b.width; hgt = b.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t); }
+  function trend(u) { return hgt * (.78 - .56 * u); }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var t = reduce ? 0 : time * 0.001;
+    var noiseCol = css("--ink-3"), sigCol = css("--think"), lineCol = css("--logic");
+    // points: wide scatter on the left, tight around the trend on the right
+    pts.forEach(function (q) {
+      var s = ease((q.u - .1) / .75);               // how much signal this point carries
+      var spread = hgt * (.46 * (1 - s) + .05 * s);
+      var wob = Math.sin(t * q.sp + q.ph) * (1 - s) * 6;
+      var x = q.u * w;
+      var y = trend(q.u) * s + hgt * .5 * (1 - s) + q.a * spread + wob;
+      ctx.globalAlpha = .35 + .6 * s;
+      ctx.fillStyle = s > .55 ? sigCol : noiseCol;
+      ctx.beginPath(); ctx.arc(x, y, 2.2 + s * .8, 0, Math.PI * 2); ctx.fill();
+    });
+    // the line of best fit fades in where the evidence agrees
+    ctx.globalAlpha = 1;
+    var grad = ctx.createLinearGradient(0, 0, w, 0);
+    grad.addColorStop(0, "rgba(0,0,0,0)");
+    grad.addColorStop(.45, lineCol);
+    grad.addColorStop(1, lineCol);
+    ctx.strokeStyle = grad; ctx.lineWidth = 2.5; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(w * .3, trend(.3)); ctx.lineTo(w, trend(1)); ctx.stroke();
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

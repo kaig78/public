@@ -1,0 +1,1344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Attacking Faulty Reasoning by T. Edward Damer – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Greys from the cover's sky and umbrellas, with its one red umbrella
+   as the accent. Each of the five criteria of a good argument has its own colour. */
+:root {
+  --paper: #f4f4f3;
+  --paper-2: #e8e8e7;
+  --card: #ffffff;
+  --ink: #151517;
+  --ink-2: #4a4a50;
+  --ink-3: #78787f;
+  --rule: #d7d7da;
+
+  /* the five criteria */
+  --struct: #3b5b8c;
+  --relev: #1f8072;
+  --accept: #b0700a;
+  --suffic: #6a4bb0;
+  --rebut: #c41f2e;
+  --red: #c41f2e;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #111113;
+    --paper-2: #1a1a1d;
+    --card: #1f1f23;
+    --ink: #eeeef1;
+    --ink-2: #b3b3bb;
+    --ink-3: #85858e;
+    --rule: #2f2f35;
+    --struct: #82a5df;
+    --relev: #4fc7b3;
+    --accept: #f0b54a;
+    --suffic: #a993ff;
+    --rebut: #ff5c66;
+    --red: #ff5c66;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #111113;
+  --paper-2: #1a1a1d;
+  --card: #1f1f23;
+  --ink: #eeeef1;
+  --ink-2: #b3b3bb;
+  --ink-3: #85858e;
+  --rule: #2f2f35;
+  --struct: #82a5df;
+  --relev: #4fc7b3;
+  --accept: #f0b54a;
+  --suffic: #a993ff;
+  --rebut: #ff5c66;
+  --red: #ff5c66;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Criterion colour helpers */
+.c-s { --c: var(--struct); }
+.c-r { --c: var(--relev); }
+.c-a { --c: var(--accept); }
+.c-u { --c: var(--suffic); }
+.c-b { --c: var(--rebut); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(44px, 8.4vw, 108px);
+  font-weight: 900;
+  font-stretch: 110%;
+  line-height: .86;
+  letter-spacing: -.03em;
+  margin-left: -.03em;
+}
+.hero h1 span { display: block; }
+.hero h1 .red { color: var(--red); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 888;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(16, 16, 20, .4), 0 8px 18px -10px rgba(16, 16, 20, .28);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.rainband { position: relative; margin-top: 28px; }
+.rainband canvas { display: block; width: 100%; height: 130px; }
+.rainband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .chno.tinted { color: var(--c); }
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--c, var(--ink));
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+/* ---------- Criteria ---------- */
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+table.cr { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 900px; font-size: 15.5px; line-height: 1.42; }
+table.cr th, table.cr td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.cr thead th { border-bottom: 0; padding-bottom: 16px; }
+table.cr thead th.cr-h { border-top: 5px solid var(--c); background: color-mix(in srgb, var(--c) 9%, var(--card)); }
+table.cr thead .nm { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 22px; color: var(--c); letter-spacing: -.01em; display: block; }
+table.cr thead .tag { font-family: var(--mono); font-size: 12px; color: var(--ink-2); font-weight: 400; display: block; margin-top: 4px; }
+table.cr tbody th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; width: 140px; padding-top: 17px; }
+table.cr tbody td.q { font-style: italic; }
+table.cr tbody tr:hover td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+table.cr .hl { font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* twelve principles */
+.code { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 10px; }
+.pr { border-radius: 6px; padding: 14px 16px; background: var(--card); border: 1px solid var(--rule); display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 2px 8px; align-content: start; }
+.pr i { font-style: normal; font-family: var(--display); font-weight: 900; font-stretch: 70%; font-size: 30px; line-height: 1; grid-row: span 2; color: var(--c, var(--ink)); font-variant-numeric: tabular-nums; }
+.pr b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.pr span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+.pr.crit { border-color: color-mix(in srgb, var(--c) 45%, var(--rule)); background: color-mix(in srgb, var(--c) 7%, var(--card)); }
+.code-key { display: flex; gap: 8px 20px; flex-wrap: wrap; }
+
+/* predictor list */
+.predict { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.predict ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.predict li { display: flex; gap: 10px; align-items: baseline; font-size: 16px; line-height: 1.4; }
+.predict li::before { font-family: var(--mono); font-size: 13px; width: 16px; flex: none; }
+.predict .no li::before { content: "✕"; color: var(--rebut); }
+.predict .yes li::before { content: "✓"; color: var(--relev); }
+
+/* argument in standard form */
+.argform {
+  font-family: var(--mono); font-size: 14px; line-height: 1.75;
+  background: var(--paper-2); border-radius: 6px; padding: 18px 20px; margin: 0;
+  white-space: pre-wrap; color: var(--ink);
+}
+.argform .k { color: var(--red); }
+.argform .c { color: var(--ink-3); }
+.argform .x { color: var(--rebut); font-weight: 500; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 7px 13px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); color: var(--ink); background: transparent; cursor: pointer; line-height: 1.2; }
+.chip[aria-pressed="true"] { background: var(--c, var(--ink)); color: var(--card); }
+:root .chip:not(.c-s):not(.c-r):not(.c-a):not(.c-u):not(.c-b)[aria-pressed="true"] { color: var(--paper); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* family cards inside fallacy chapters */
+.fams { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; }
+.fam { border-radius: 6px; padding: 16px; border: 1px solid color-mix(in srgb, var(--c) 35%, var(--rule)); background: color-mix(in srgb, var(--c) 6%, var(--card)); display: grid; gap: 8px; align-content: start; }
+.fam h4 { font-size: 18px; font-weight: 800; font-stretch: 105%; color: var(--c); }
+.fam p { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.fam ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.fam li { font-family: var(--mono); font-size: 12px; padding: 3px 8px; border-radius: 3px; background: var(--card); border: 1px solid var(--rule); color: var(--ink); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* ---------- Field guide ---------- */
+.guide-tools { display: grid; gap: 14px; padding: 18px 16px; border-bottom: 1px solid var(--rule); }
+.search { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.search input {
+  flex: 1 1 260px; min-width: 0; font: 16px var(--body); color: var(--ink);
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; padding: 10px 12px;
+}
+.search input::placeholder { color: var(--ink-3); }
+table.fg { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 880px; font-size: 15px; line-height: 1.42; }
+table.fg th, table.fg td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--rule); }
+table.fg thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; position: sticky; top: 0; background: var(--card); }
+table.fg tbody th { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16px; width: 200px; border-left: 3px solid var(--c); }
+table.fg td:nth-child(2) { width: 170px; }
+table.fg .crit { display: block; font-family: var(--mono); font-size: 12px; color: var(--c); letter-spacing: .04em; }
+table.fg .crit .dot { margin-right: 6px; }
+table.fg .sub { display: block; font-size: 13.5px; color: var(--ink-3); margin-top: 2px; }
+table.fg td.how { color: var(--ink-2); }
+table.fg tbody tr:hover td, table.fg tbody tr:hover th { background: color-mix(in srgb, var(--c) 5%, var(--card)); }
+.empty { padding: 24px 16px; color: var(--ink-3); }
+
+/* steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 12px; padding: 14px 0; border-top: 1px solid var(--rule); counter-increment: s; }
+.steps li:first-child { border-top: 0; }
+.steps li::before { content: counter(s, decimal-leading-zero); font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 4px; }
+.steps b { font-family: var(--display); font-weight: 750; font-stretch: 100%; display: block; font-size: 17px; }
+.steps span { font-size: 15.5px; color: var(--ink-2); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .two, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .predict, .compare { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · T. Edward Damer · Wadsworth, 6th ed., 2009</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#criteria">Five criteria</a>
+    <a href="#foundations">Foundations</a>
+    <a href="#fallacies">Fallacies</a>
+    <a href="#guide">Field guide</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span>Attacking</span><span>Faulty</span><span class="red">Reasoning</span></h1>
+    <p class="sub">A practical guide to fallacy-free arguments</p>
+    <p class="dek">Damer's claim is that every fallacy is the same mistake underneath: the argument fails one of five tests. Learn the tests and you can spot bad reasoning, fix it, and build arguments that hold up.</p>
+    <div class="byline label">
+      <span>10 chapters</span><span>12 principles</span><span>5 criteria</span><span>60 named fallacies</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Attacking Faulty Reasoning by T. Edward Damer, sixth edition: one red umbrella raised above a crowd of black umbrellas under a grey sky">
+</div>
+
+<div class="rainband" aria-hidden="true">
+  <canvas id="rain"></canvas>
+  <div class="ends label"><span>Arguments that let objections through</span><span>One that holds up</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>A fallacy is a broken test, not an item on a list</h2>
+  </div>
+  <div class="two">
+    <div class="prose">
+      <p>Most logic books hand you a catalogue of mistakes to avoid. Damer thinks that is backwards. A list of don'ts doesn't tell you what a <em>good</em> argument looks like, and it doesn't explain why the mistakes are mistakes.</p>
+      <p>His alternative: a good argument meets <a href="#criteria">five criteria</a>. Its structure is sound, its premises are relevant and acceptable, together they are sufficient, and it rebuts the strongest objections. A <strong>fallacy</strong> is any violation of one of those five. The 60 named fallacies are just the violations that happen often enough to have earned a name. Most faulty reasoning you meet has no name at all, and the five criteria still catch it.</p>
+      <p>The book also teaches how to respond. Each fallacy comes with an "attacking the fallacy" section, and the aim is never to score points. It's to steer the discussion back toward finding the most defensible position.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The book in numbers</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat"><span class="big num">12</span><p>Principles in a code of conduct for a fair discussion.</p></div>
+        <div class="stat"><span class="big num">5</span><p>Criteria every good argument has to meet.</p></div>
+        <div class="stat"><span class="big num">60</span><p>Named fallacies, each filed under the criterion it breaks.</p></div>
+      </div>
+      <div class="story" style="--c:var(--red)">
+        <span class="label">The classroom experiment</span>
+        <p>Near the end of his reasoning course, Damer has the class pick a moral issue it is split on, from gays in the military to vegetarianism. The two sides face each other and argue for three class periods while he only calls out breaches of the code. For more than twenty years, the class has almost always reached complete agreement. It is usually on a third position that is better than either side's starting point.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Chapters 1–4</span>
+      <h3>Foundations</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>A Code of Intellectual Conduct</b>Twelve rules for arguing fairly</a></li>
+        <li><span>02</span><a href="#ch2"><b>What Is an Argument?</b>A claim supported by other claims</a></li>
+        <li><span>03</span><a href="#ch3"><b>What Is a Good Argument?</b>Five criteria</a></li>
+        <li><span>04</span><a href="#ch4"><b>What Is a Fallacy?</b>A violation of a criterion, and how to attack it</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 5–9</span>
+      <h3>The fallacies</h3>
+      <ol>
+        <li><span>05</span><a href="#ch5"><b>Structure</b>Circles, contradictions, bad deductions</a></li>
+        <li><span>06</span><a href="#ch6"><b>Relevance</b>Reasons that don't bear on the point</a></li>
+        <li><span>07</span><a href="#ch7"><b>Acceptability</b>Confusing words, hidden assumptions</a></li>
+        <li><span>08</span><a href="#ch8"><b>Sufficiency</b>Too little evidence, faulty causes</a></li>
+        <li><span>09</span><a href="#ch9"><b>Rebuttal</b>Dodging the other side</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapter 10 + reference</span>
+      <h3>Putting it to work</h3>
+      <ol>
+        <li><span>10</span><a href="#ch10"><b>Writing the Argumentative Essay</b>Five steps from research to resolution</a></li>
+        <li><span>→</span><a href="#guide"><b>Field guide</b>All 60 fallacies, searchable</a></li>
+        <li><span>→</span><a href="#toolkit"><b>Toolkit</b>The habits worth keeping</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIVE CRITERIA ============ -->
+<section id="criteria">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Five tests every argument must pass</h2>
+    <p class="lede">An argument that meets all five is a good one, and you should accept its conclusion. Each test comes in degrees, so applying them is a judgment call. But they give that judgment a shape.</p>
+  </div>
+
+  <div class="two">
+    <div class="fig">
+      <h4>A good argument is an umbrella with no missing panels</h4>
+      <svg viewBox="0 0 520 340" role="img" aria-label="An umbrella whose canopy has five panels: structure, relevance, acceptability, sufficiency and rebuttal. Rain labelled objections falls on it. Under the canopy, a box labelled conclusion stays dry.">
+        <g stroke-linecap="round">
+          <line x1="70" y1="6" x2="62" y2="26" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <line x1="130" y1="0" x2="122" y2="20" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <line x1="190" y1="10" x2="182" y2="30" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <line x1="320" y1="2" x2="312" y2="22" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <line x1="380" y1="12" x2="372" y2="32" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <line x1="440" y1="4" x2="432" y2="24" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <line x1="490" y1="40" x2="482" y2="60" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <line x1="30" y1="44" x2="22" y2="64" stroke="var(--ink-3)" stroke-width="1.5"/>
+        </g>
+        <text x="260" y="14" text-anchor="middle" font-size="11" style="fill:var(--ink-3)">objections</text>
+        <!-- canopy: five panels from apex (260,52) to rim -->
+        <path d="M260 52 L60 190 Q100 172 140 190 Z" fill="color-mix(in srgb, var(--struct) 30%, var(--card))" stroke="var(--struct)" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M260 52 L140 190 Q180 172 220 190 Z" fill="color-mix(in srgb, var(--relev) 30%, var(--card))" stroke="var(--relev)" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M260 52 L220 190 Q260 172 300 190 Z" fill="color-mix(in srgb, var(--accept) 30%, var(--card))" stroke="var(--accept)" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M260 52 L300 190 Q340 172 380 190 Z" fill="color-mix(in srgb, var(--suffic) 30%, var(--card))" stroke="var(--suffic)" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M260 52 L380 190 Q420 172 460 190 Z" fill="color-mix(in srgb, var(--rebut) 30%, var(--card))" stroke="var(--rebut)" stroke-width="2" stroke-linejoin="round"/>
+        <text x="122" y="174" text-anchor="middle" font-size="15" style="fill:var(--ink);font-weight:500">1</text>
+        <text x="190" y="170" text-anchor="middle" font-size="15" style="fill:var(--ink);font-weight:500">2</text>
+        <text x="260" y="168" text-anchor="middle" font-size="15" style="fill:var(--ink);font-weight:500">3</text>
+        <text x="330" y="170" text-anchor="middle" font-size="15" style="fill:var(--ink);font-weight:500">4</text>
+        <text x="398" y="174" text-anchor="middle" font-size="15" style="fill:var(--ink);font-weight:500">5</text>
+        <line x1="260" y1="40" x2="260" y2="52" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M260 190 L260 268 Q260 286 244 286 Q230 286 230 272" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+        <rect x="290" y="226" width="150" height="40" rx="4" fill="var(--ink)"/>
+        <text x="365" y="251" text-anchor="middle" font-size="13" style="fill:var(--paper)">conclusion</text>
+        <text x="365" y="282" text-anchor="middle" font-size="11" style="fill:var(--ink-3)">stays dry</text>
+        <g font-size="11">
+          <circle cx="16" cy="318" r="5" fill="var(--struct)"/><text x="26" y="322">1 Structure</text>
+          <circle cx="116" cy="318" r="5" fill="var(--relev)"/><text x="126" y="322">2 Relevance</text>
+          <circle cx="216" cy="318" r="5" fill="var(--accept)"/><text x="226" y="322">3 Acceptable</text>
+          <circle cx="324" cy="318" r="5" fill="var(--suffic)"/><text x="334" y="322">4 Sufficient</text>
+          <circle cx="430" cy="318" r="5" fill="var(--rebut)"/><text x="440" y="322">5 Rebuttal</text>
+        </g>
+      </svg>
+      <p class="cap">The picture borrows the book's cover. Take away any panel and objections get through. The fifth, rebuttal, is the one Damer says is weakest in almost everyone's arguments, his own included.</p>
+    </div>
+
+    <div class="fig">
+      <h4>Sixty named fallacies, filed by the test they fail</h4>
+      <svg viewBox="0 0 520 536" role="img" aria-label="Sixty squares, one per named fallacy, grouped by the criterion they break. Structure: Begging the question 4, Inconsistency 2, Deductive inference 5; Relevance: Irrelevant premise 4, Irrelevant appeal 6; Acceptability: Linguistic confusion 7, Unwarranted assumption 9; Sufficiency: Missing evidence 7, Causal 7; Rebuttal: Counterevidence 2, Ad hominem 3, Diversion 4."><text x="0" y="26" font-size="14" style="fill:var(--struct);font-weight:500">Structure</text><text x="520" y="26" font-size="12" text-anchor="end" style="fill:var(--ink-3)">11</text><line x1="0" x2="520" y1="33" y2="33" stroke="var(--struct)" stroke-width="1.5"/><text x="14" y="58" font-size="12">Begging the question</text><rect x="196" y="44" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Arguing in a circle</title></rect><rect x="222" y="44" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Question-begging language</title></rect><rect x="248" y="44" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Complex question</title></rect><rect x="274" y="44" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Question-begging definition</title></rect><text x="14" y="84" font-size="12">Inconsistency</text><rect x="196" y="70" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Incompatible premises</title></rect><rect x="222" y="70" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Contradiction between premise and conclusion</title></rect><text x="14" y="110" font-size="12">Deductive inference</text><rect x="196" y="96" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Denying the antecedent</title></rect><rect x="222" y="96" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Affirming the consequent</title></rect><rect x="248" y="96" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>False conversion</title></rect><rect x="274" y="96" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Undistributed middle term</title></rect><rect x="300" y="96" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--struct) 72%, transparent)"><title>Illicit distribution of an end term</title></rect><text x="0" y="148" font-size="14" style="fill:var(--relev);font-weight:500">Relevance</text><text x="520" y="148" font-size="12" text-anchor="end" style="fill:var(--ink-3)">10</text><line x1="0" x2="520" y1="155" y2="155" stroke="var(--relev)" stroke-width="1.5"/><text x="14" y="180" font-size="12">Irrelevant premise</text><rect x="196" y="166" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Genetic fallacy</title></rect><rect x="222" y="166" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Rationalization</title></rect><rect x="248" y="166" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Drawing the wrong conclusion</title></rect><rect x="274" y="166" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Using the wrong reasons</title></rect><text x="14" y="206" font-size="12">Irrelevant appeal</text><rect x="196" y="192" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Appeal to irrelevant authority</title></rect><rect x="222" y="192" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Appeal to common opinion</title></rect><rect x="248" y="192" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Appeal to force or threat</title></rect><rect x="274" y="192" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Appeal to tradition</title></rect><rect x="300" y="192" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Appeal to self-interest</title></rect><rect x="326" y="192" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--relev) 72%, transparent)"><title>Manipulation of emotions</title></rect><text x="0" y="244" font-size="14" style="fill:var(--accept);font-weight:500">Acceptability</text><text x="520" y="244" font-size="12" text-anchor="end" style="fill:var(--ink-3)">16</text><line x1="0" x2="520" y1="251" y2="251" stroke="var(--accept)" stroke-width="1.5"/><text x="14" y="276" font-size="12">Linguistic confusion</text><rect x="196" y="262" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Equivocation</title></rect><rect x="222" y="262" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Ambiguity</title></rect><rect x="248" y="262" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Misleading accent</title></rect><rect x="274" y="262" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Illicit contrast</title></rect><rect x="300" y="262" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Argument by innuendo</title></rect><rect x="326" y="262" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Misuse of a vague expression</title></rect><rect x="352" y="262" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Distinction without a difference</title></rect><text x="14" y="302" font-size="12">Unwarranted assumption</text><rect x="196" y="288" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Fallacy of the continuum</title></rect><rect x="222" y="288" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Fallacy of composition</title></rect><rect x="248" y="288" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Fallacy of division</title></rect><rect x="274" y="288" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>False alternatives</title></rect><rect x="300" y="288" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Is-ought fallacy</title></rect><rect x="326" y="288" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Wishful thinking</title></rect><rect x="352" y="288" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Misuse of a principle</title></rect><rect x="378" y="288" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Fallacy of the mean</title></rect><rect x="404" y="288" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--accept) 72%, transparent)"><title>Faulty analogy</title></rect><text x="0" y="340" font-size="14" style="fill:var(--suffic);font-weight:500">Sufficiency</text><text x="520" y="340" font-size="12" text-anchor="end" style="fill:var(--ink-3)">14</text><line x1="0" x2="520" y1="347" y2="347" stroke="var(--suffic)" stroke-width="1.5"/><text x="14" y="372" font-size="12">Missing evidence</text><rect x="196" y="358" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Insufficient sample</title></rect><rect x="222" y="358" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Unrepresentative data</title></rect><rect x="248" y="358" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Arguing from ignorance</title></rect><rect x="274" y="358" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Contrary-to-fact hypothesis</title></rect><rect x="300" y="358" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Fallacy of popular wisdom</title></rect><rect x="326" y="358" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Special pleading</title></rect><rect x="352" y="358" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Omission of key evidence</title></rect><text x="14" y="398" font-size="12">Causal</text><rect x="196" y="384" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Confusing a necessary with a sufficient condition</title></rect><rect x="222" y="384" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Causal oversimplification</title></rect><rect x="248" y="384" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Post hoc fallacy</title></rect><rect x="274" y="384" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Confusion of cause and effect</title></rect><rect x="300" y="384" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Neglect of a common cause</title></rect><rect x="326" y="384" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Domino fallacy</title></rect><rect x="352" y="384" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--suffic) 72%, transparent)"><title>Gambler&#x27;s fallacy</title></rect><text x="0" y="436" font-size="14" style="fill:var(--rebut);font-weight:500">Rebuttal</text><text x="520" y="436" font-size="12" text-anchor="end" style="fill:var(--ink-3)">9</text><line x1="0" x2="520" y1="443" y2="443" stroke="var(--rebut)" stroke-width="1.5"/><text x="14" y="468" font-size="12">Counterevidence</text><rect x="196" y="454" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--rebut) 72%, transparent)"><title>Denying the counterevidence</title></rect><rect x="222" y="454" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--rebut) 72%, transparent)"><title>Ignoring the counterevidence</title></rect><text x="14" y="494" font-size="12">Ad hominem</text><rect x="196" y="480" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--rebut) 72%, transparent)"><title>Abusive ad hominem</title></rect><rect x="222" y="480" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--rebut) 72%, transparent)"><title>Poisoning the well</title></rect><rect x="248" y="480" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--rebut) 72%, transparent)"><title>Two-wrongs fallacy</title></rect><text x="14" y="520" font-size="12">Diversion</text><rect x="196" y="506" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--rebut) 72%, transparent)"><title>Attacking a straw man</title></rect><rect x="222" y="506" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--rebut) 72%, transparent)"><title>Trivial objections</title></rect><rect x="248" y="506" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--rebut) 72%, transparent)"><title>Red herring</title></rect><rect x="274" y="506" width="22" height="22" rx="3" fill="color-mix(in srgb, var(--rebut) 72%, transparent)"><title>Resort to humor or ridicule</title></rect></svg>
+      <p class="cap">Each square is one named fallacy. Hover over a square to see its name. When a fallacy breaks more than one test, Damer files it under the most serious breach. Ad hominem attacks have irrelevant premises, for example, but their real damage is that they dodge the rebuttal.</p>
+    </div>
+  </div>
+
+  <div class="tablecard" style="margin-top:24px">
+    <div class="scroll-x">
+      <table class="cr">
+        <thead>
+          <tr>
+            <th scope="col"><span class="label">Compare</span></th>
+            <th scope="col" class="cr-h c-s"><span class="nm">Structure</span><span class="tag">does it work as an argument?</span></th>
+            <th scope="col" class="cr-h c-r"><span class="nm">Relevance</span><span class="tag">does each reason bear on it?</span></th>
+            <th scope="col" class="cr-h c-a"><span class="nm">Acceptability</span><span class="tag">would a rational person accept it?</span></th>
+            <th scope="col" class="cr-h c-u"><span class="nm">Sufficiency</span><span class="tag">is it enough?</span></th>
+            <th scope="col" class="cr-h c-b"><span class="nm">Rebuttal</span><span class="tag">does it answer the other side?</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">The test</th><td class="hl">Premises don't contradict each other or the conclusion, don't assume it, and don't make an invalid deduction</td><td class="hl">If a premise were true, it would give some reason to believe the conclusion</td><td class="hl">A mature, rational person would accept the premises, judged by standards of evidence</td><td class="hl">Enough reasons, of the right kind and weight, to justify the conclusion</td><td class="hl">It takes on the most serious objections and blunts them</td></tr>
+          <tr><th scope="row">Ask yourself</th><td class="q">Is any premise just the conclusion in other words?</td><td class="q">Should this even count when deciding?</td><td class="q">Is it clear? Is there a shaky unstated assumption?</td><td class="q">Is key evidence missing? Is the causal story too thin?</td><td class="q">What would the best critic say, and is it answered?</td></tr>
+          <tr><th scope="row">Fallacy families</th><td>Begging the question · inconsistency · deductive inference</td><td>Irrelevant premise · irrelevant appeal</td><td>Linguistic confusion · unwarranted assumption</td><td>Missing evidence · causal fallacies</td><td>Counterevidence · ad hominem · diversion</td></tr>
+          <tr><th scope="row">Named fallacies</th><td class="num">11</td><td class="num">10</td><td class="num">16</td><td class="num">14</td><td class="num">9</td></tr>
+          <tr><th scope="row">Classic example</th><td>"The Bible is God's word because the Bible says so."</td><td>"The film broke box office records, so it must be good."</td><td>"Dan must sing well. He's in a very good choir."</td><td>"After he married, he started smoking pot. His wife must have got him into it."</td><td>"Why listen to a priest about marriage? He's never been married."</td></tr>
+          <tr><th scope="row">To strengthen</th><td>Make implicit premises explicit; turn an inductive case into a deductive one where you can</td><td>Cut anything that doesn't support the conclusion, even if it sounds good</td><td>Swap controversial premises for safer ones; soften "all" to "most"; clear up vague words</td><td>Add premises, and back up the shaky ones with subpremises</td><td>Address as many objections as the audience needs; admit your weakest point yourself</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Examples adapted from the book</span></div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="foundations">
+  <span class="label partno">Part 1 · Chapters 1–4</span>
+  <h2>How arguments work</h2>
+  <p class="lede">Before naming a single fallacy, Damer sets out the ground rules for discussion, what counts as an argument, what makes one good, and a theory that ties every fallacy back to those standards.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">A Code of Intellectual Conduct</span></div>
+  <div class="body">
+    <div>
+      <h3>Twelve rules for arguing fairly</h3>
+      <p class="idea">The code is both a method and an ethic. Discussions that follow rules like these settle issues more often, and arguing fairly is something we owe each other.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Procedural:</strong> research in speech communication finds that discussions with ground rules like these resolve more disputes than those without. Damer's classroom results agree.</li>
+      <li><strong>Ethical:</strong> we get indignant when an opponent won't play by the rules. That reaction is moral, so we should hold ourselves to the same standard.</li>
+      <li><strong>Fallibility comes first.</strong> If you won't admit your view might be wrong, you are saying no argument could change your mind, so there's no point talking. With hundreds of conflicting religious positions, the odds that any one person's is the true one are low. Most past knowledge claims in science later turned out flawed or false.</li>
+      <li>Try it in a heated discussion: be the first to admit you might be wrong. Others will usually follow. If they won't, at least you know further talk is futile.</li>
+      <li>One definition of a critical thinker that Damer likes: someone who has changed their mind about something important at least once in the past year, by force of argument.</li>
+      <li><strong>Clarity</strong> means confusing language is where the discussion should <em>start</em> working, not where it stops. "It's just semantics" ends too many debates that matter.</li>
+    </ul>
+    <div class="fig">
+      <h4>The code at a glance</h4>
+      <div class="code">
+        <div class="pr"><i>1</i><b>Fallibility</b><span>Accept that your starting view may not be the most defensible one.</span></div>
+        <div class="pr"><i>2</i><b>Truth-seeking</b><span>Look hard for the best position. Take alternatives seriously and let others object.</span></div>
+        <div class="pr"><i>3</i><b>Clarity</b><span>No linguistic confusion. Keep the issue apart from other issues.</span></div>
+        <div class="pr"><i>4</i><b>Burden of proof</b><span>Whoever puts forward a position defends it when asked.</span></div>
+        <div class="pr"><i>5</i><b>Charity</b><span>Restate an opponent's argument in its strongest form, and give them the benefit of the doubt.</span></div>
+        <div class="pr crit c-s"><i>6</i><b>Structural</b><span>No circular reasoning, no contradictions, no invalid deductions.</span></div>
+        <div class="pr crit c-r"><i>7</i><b>Relevance</b><span>Give only reasons whose truth counts toward the conclusion.</span></div>
+        <div class="pr crit c-a"><i>8</i><b>Acceptability</b><span>Use reasons a mature, rational person would accept.</span></div>
+        <div class="pr crit c-u"><i>9</i><b>Sufficiency</b><span>Give enough reasons, of the right kind and weight.</span></div>
+        <div class="pr crit c-b"><i>10</i><b>Rebuttal</b><span>Answer every serious anticipated criticism effectively.</span></div>
+        <div class="pr"><i>11</i><b>Suspension of judgment</b><span>If no side has a good argument, or sides are tied, hold off, unless you have to act.</span></div>
+        <div class="pr"><i>12</i><b>Resolution</b><span>If an argument passes all five tests better than the rivals, accept it. Reopen the issue if a flaw turns up later.</span></div>
+      </div>
+      <p class="cap">Principles 1 to 3 are the standard rules of any serious inquiry. Principles 4 and 5 are about how to present and reconstruct a case. Principles 6 to 10 are the five criteria. Principles 11 and 12 tell you when a discussion is over.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">What Is an Argument?</span></div>
+  <div class="body">
+    <div>
+      <h3>A claim supported by other claims</h3>
+      <p class="idea">An argument isn't a quarrel. It's a conclusion backed by at least one premise. Without the backing, it's just an opinion.</p>
+    </div>
+    <ul class="points">
+      <li>Premises can be facts, observations, expert testimony, common knowledge, definitions or principles, or the conclusions of earlier arguments. Signal words like "therefore" and "because" help, but real arguments rarely use them neatly.</li>
+      <li>A letter or an editorial can have a point without being an argument. If nothing supports the claim, there's nothing to evaluate.</li>
+      <li>"That's just your opinion" misses the target when the opinion is the conclusion of an argument. Criticize the argument instead.</li>
+      <li><strong>Burden of proof</strong> sits with whoever makes the claim, like a drug maker before regulators or a prosecutor in court. "Proof" here means a preponderance of evidence, not certainty. You can avoid the burden honestly with the agnostic option: "I have no reason to believe X" commits you to much less than "X is false".</li>
+      <li><strong>Deductive vs. inductive.</strong> In a valid deductive argument, true premises guarantee the conclusion. An inductive argument only makes the conclusion probable, however many premises pile up. Recasting an inductive case around a general principle can give it deductive force.</li>
+      <li><strong>Value arguments</strong> (moral, legal and aesthetic) need a value premise: a moral principle, a governing law, or an aesthetic standard. You can't get from "is" to "ought" without one. "Beauty is in the eye of the beholder" is usually what people say when they don't know how to make the aesthetic case.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Standard form: lay out the parts before you judge</h4>
+        <svg viewBox="0 0 520 300" role="img" aria-label="Diagram of an argument in standard form. A subpremise supports premise one. Premise two and an implicit premise in square brackets sit beside it. A rebuttal premise deflects an incoming objection. Arrows from every premise lead down to the conclusion.">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker>
+            <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--rebut)"/></marker>
+          </defs>
+          <rect x="10" y="8" width="160" height="36" rx="4" fill="var(--paper-2)" stroke="var(--rule)"/>
+          <text x="90" y="31" text-anchor="middle" font-size="12">subpremise</text>
+          <line x1="90" y1="44" x2="90" y2="76" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#ah)"/>
+          <rect x="10" y="80" width="160" height="40" rx="4" fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"/>
+          <text x="90" y="105" text-anchor="middle" font-size="12" style="fill:var(--ink)">premise</text>
+          <rect x="185" y="80" width="150" height="40" rx="4" fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"/>
+          <text x="260" y="105" text-anchor="middle" font-size="12" style="fill:var(--ink)">premise</text>
+          <rect x="350" y="80" width="160" height="40" rx="4" fill="none" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text x="430" y="105" text-anchor="middle" font-size="12">[implicit premise]</text>
+          <rect x="150" y="150" width="220" height="40" rx="4" fill="color-mix(in srgb, var(--rebut) 12%, var(--card))" stroke="var(--rebut)" stroke-width="1.5"/>
+          <text x="260" y="175" text-anchor="middle" font-size="12" style="fill:var(--ink)">rebuttal premise</text>
+          <path d="M500 140 L380 166" fill="none" stroke="var(--rebut)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <path d="M380 172 L470 206" fill="none" stroke="var(--rebut)" stroke-width="1.5" marker-end="url(#ahr)"/>
+          <text x="505" y="134" text-anchor="end" font-size="11" style="fill:var(--rebut)">objection</text>
+          <text x="476" y="222" text-anchor="end" font-size="11" style="fill:var(--rebut)">deflected</text>
+          <line x1="90" y1="120" x2="200" y2="236" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#ah)"/>
+          <line x1="225" y1="120" x2="225" y2="148" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <line x1="430" y1="120" x2="320" y2="236" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#ah)"/>
+          <line x1="260" y1="190" x2="260" y2="236" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#ah)"/>
+          <rect x="140" y="240" width="240" height="44" rx="4" fill="var(--ink)"/>
+          <text x="260" y="267" text-anchor="middle" font-size="13" style="fill:var(--paper)">therefore, conclusion</text>
+        </svg>
+        <p class="cap">Strip out the clutter, state any unstated parts in [brackets], keep subpremises under the premise they support, and put the conclusion last. If you need more than four or five premises, you've probably missed the core. Few real arguments include a rebuttal premise, but a good argument needs one.</p>
+      </div>
+      <div class="fig">
+        <h4>The principle of charity in practice</h4>
+<pre class="argform"><span class="c">// Kate: "Lisa's Brahms was terrible.</span>
+<span class="c">//        She didn't play it the way he intended."</span>
+
+<span class="k">Since</span> [a performance is only good if it
+       follows the composer's intention],
+                         <span class="c">(implicit premise)</span>
+<span class="k">and</span>   Lisa's didn't follow Brahms's intention,
+                         <span class="c">(premise)</span>
+<span class="k">Therefore</span>, Lisa's performance wasn't good.
+                         <span class="c">(conclusion)</span></pre>
+        <p class="cap">Rebuild the argument the arguer meant to make, in its strongest version, and let them correct your reconstruction. Here, simply saying the hidden premise out loud is enough. Few people believe performers mustn't interpret, and we rarely know what a composer intended anyway.</p>
+      </div>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“An opinion is an unsupported claim; an argument is a supported claim.”</blockquote>
+      <span class="label">Damer, ch. 2</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">What Is a Good Argument?</span></div>
+  <div class="body">
+    <div>
+      <h3>Five criteria, applied with judgment</h3>
+      <p class="idea">Any claim with one supporting claim is an argument. A good argument passes all five tests, and then you're obliged to accept its conclusion.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Acceptability, not truth.</strong> Damer swaps "true" for "acceptable". Absolute truth is rarely provable, a true premise does nothing if the audience can't check it, and what we usually mean by "true" is "accepted as true". But acceptable doesn't mean whatever people happen to believe. It means what a mature, rational person <em>should</em> accept.</li>
+      <li>Common knowledge isn't a head count. Most Americans believe God exists, but competent scholars dispute it, so it can be the conclusion of an argument but not an uncontested premise.</li>
+      <li><strong>Sufficiency</strong> is the hardest test to apply. It depends on context: choosing a candidate needs different grounds from deciding whether to lease a car. Most disagreements come down to how much <em>weight</em> each piece of evidence deserves. Experience helps.</li>
+      <li><strong>Rebuttal</strong> separates good arguments from merely clever ones. A jury that heard only the prosecutor would nearly always convict. Two opposing arguments can both look fine on the first four tests, but they can't both be right. The tie is usually broken by which one answers the other side better.</li>
+      <li>A serious objection is one a reasonable person would think needs an answer. Answering it in advance disarms the critic, because their big guns are spiked before they fire.</li>
+    </ul>
+    <div class="fig">
+      <h4>Which premises should you accept?</h4>
+      <div class="predict">
+        <div>
+          <span class="label">Accept a premise if it is</span>
+          <ul class="yes" style="margin-top:10px"><li>Undisputed common knowledge</li><li>Confirmed by your own experience or observation</li><li>Defended in the argument, or easily backed by an accessible source</li><li>Uncontested eyewitness testimony</li><li>An uncontested claim by a relevant authority</li><li>The conclusion of another good argument</li><li>A minor, reasonable assumption in context</li></ul>
+        </div>
+        <div>
+          <span class="label">Reject a premise if it</span>
+          <ul class="no" style="margin-top:10px"><li>Contradicts credible evidence, an established claim or a legitimate authority</li><li>Clashes with your own experience</li><li>Is questionable and undefended, or can't be defended</li><li>Is self-contradictory or confusingly worded</li><li>Rests on an unstated, highly questionable assumption</li></ul>
+        </div>
+      </div>
+      <p class="cap">A claim like "30% of divorces are caused by marrying too young" fails because no source could measure a cause that precisely. "Dan sings well because he's in a good choir" rests on a hidden assumption: what is true of the whole is true of each part.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>When is a discussion over?</h4>
+        <svg viewBox="0 0 520 270" role="img" aria-label="Decision flow. Top: does one position's argument meet all five criteria better than its rivals? Yes leads to resolved, accept its conclusion, with a dashed note to reopen if a new flaw is found. No leads to suspend judgment, and then, if you must act now, weigh the consequences of each choice.">
+          <defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker></defs>
+          <rect x="120" y="6" width="280" height="54" rx="6" fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"/>
+          <text x="260" y="29" text-anchor="middle" font-size="12" style="fill:var(--ink)">Does one argument meet all</text>
+          <text x="260" y="47" text-anchor="middle" font-size="12" style="fill:var(--ink)">five criteria better than rivals?</text>
+          <path d="M180 60 L120 104" fill="none" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#ah2)"/>
+          <path d="M340 60 L400 104" fill="none" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#ah2)"/>
+          <text x="134" y="80" font-size="11" text-anchor="end">yes</text>
+          <text x="386" y="80" font-size="11">no</text>
+          <rect x="10" y="108" width="230" height="54" rx="6" fill="color-mix(in srgb, var(--relev) 14%, var(--card))" stroke="var(--relev)" stroke-width="1.5"/>
+          <text x="125" y="131" text-anchor="middle" font-size="12" style="fill:var(--ink)">Resolved</text>
+          <text x="125" y="149" text-anchor="middle" font-size="11">accept its conclusion</text>
+          <rect x="280" y="108" width="230" height="54" rx="6" fill="color-mix(in srgb, var(--accept) 14%, var(--card))" stroke="var(--accept)" stroke-width="1.5"/>
+          <text x="395" y="131" text-anchor="middle" font-size="12" style="fill:var(--ink)">Suspend judgment</text>
+          <text x="395" y="149" text-anchor="middle" font-size="11">none good, or a tie</text>
+          <line x1="125" y1="162" x2="125" y2="198" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ah2)"/>
+          <line x1="395" y1="162" x2="395" y2="198" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#ah2)"/>
+          <rect x="10" y="202" width="230" height="54" rx="6" fill="none" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text x="125" y="225" text-anchor="middle" font-size="12">New flaw found?</text>
+          <text x="125" y="243" text-anchor="middle" font-size="11">reopen the issue</text>
+          <rect x="280" y="202" width="230" height="54" rx="6" fill="var(--card)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <text x="395" y="225" text-anchor="middle" font-size="12">Must act now?</text>
+          <text x="395" y="243" text-anchor="middle" font-size="11">weigh costs of each choice</text>
+        </svg>
+        <p class="cap">Principles 11 and 12 turn the five criteria into a stopping rule. Unless you can show the winning argument fails the tests, you're obliged to accept its conclusion. That's the uncomfortable part.</p>
+      </div>
+      <div class="fig">
+        <h4>Making a weak argument stronger</h4>
+        <div class="compare">
+          <div><h5 style="color:var(--struct)">Structure</h5><ul><li>Spell out implicit premises</li><li>Introduce a general claim so the conclusion follows by necessity</li><li>Restate it in the fewest words</li></ul></div>
+          <div><h5 style="color:var(--relev)">Relevance</h5><ul><li>Cut anything that doesn't support the conclusion</li><li>Cut irrelevant premises even if your audience likes them. Someone will expose them.</li></ul></div>
+          <div><h5 style="color:var(--accept)">Acceptability</h5><ul><li>Replace controversial premises with safer ones that still do the job</li><li>Change "all politicians" to "most"</li><li>Fix vague language</li></ul></div>
+          <div><h5 style="color:var(--suffic)">Sufficiency</h5><ul><li>Add evidence of the right kind and weight</li><li>Support a shaky premise with subpremises</li></ul></div>
+          <div style="grid-column:1/-1"><h5 style="color:var(--rebut)">Rebuttal</h5><ul><li>Answer as many objections as your audience needs</li><li>Name your weakest point yourself. It shows good faith and takes the edge off the counterattack.</li></ul></div>
+        </div>
+        <p class="cap">Some arguments can't be saved. If good arguments for a view aren't out there, the honest move is to drop the view, unless you're a defence lawyer.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">What Is a Fallacy?</span></div>
+  <div class="body">
+    <div>
+      <h3>A violation of a criterion, and two ways to attack it</h3>
+      <p class="idea">The word comes from the Latin for "deceive". A fallacy looks like good reasoning, which is why it works on us.</p>
+    </div>
+    <ul class="points">
+      <li>Damer's theory ties every fallacy, named or unnamed, to a broken criterion. That makes the subject positive (it shows what good looks like) and connected, rather than a loose list.</li>
+      <li>Names are like medical diagnoses. Telling a patient "you're sick" doesn't help. Knowing the pattern makes you more confident about the flaw and better at treating it. But you can judge any argument with the five criteria alone, even if you forget every name.</li>
+      <li>Intent doesn't matter: a mistake is a mistake. And accepting a bad argument makes it your bad argument too, just as accepting a good one makes you a good thinker.</li>
+      <li>Damer mostly drops the Latin. Only <em>post hoc</em> and <em>ad hominem</em> survive, because people already know them. The other names are chosen to describe the error.</li>
+      <li><strong>Method 1: let it self-destruct.</strong> Put the argument in standard form and say the hidden premise out loud. "What comes before an event causes it" or "whatever is now the practice should stay the practice" often collapses as soon as it's said.</li>
+      <li><strong>Method 2: the absurd counterexample.</strong> Build an argument with the same form whose conclusion is plainly false. If the copy is flawed, so is the original. It needs no jargon, so it works on people who don't care what logicians call things.</li>
+    </ul>
+    <div class="fig">
+      <h4>The absurd counterexample method</h4>
+      <svg viewBox="0 0 520 260" role="img" aria-label="Two arguments side by side. Left, the original: all Marxists are atheists, Dan is an atheist, so Dan is a Marxist. Right, the counterexample: all library books are paper, Dan's kite is paper, so Dan's kite is a library book, marked with a red cross as absurd. Below, both share the pattern: all A are B, x is B, so x is A.">
+        <defs><marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker></defs>
+        <rect x="4" y="4" width="248" height="140" rx="6" fill="var(--card)" stroke="var(--rule)" stroke-width="1.5"/>
+        <text x="18" y="28" font-size="11" style="fill:var(--ink-3)">THEIR ARGUMENT</text>
+        <text x="18" y="56" font-size="12.5" style="fill:var(--ink)">All Marxists are atheists.</text>
+        <text x="18" y="80" font-size="12.5" style="fill:var(--ink)">Dan is an atheist.</text>
+        <line x1="18" y1="94" x2="236" y2="94" stroke="var(--rule)"/>
+        <text x="18" y="118" font-size="12.5" style="fill:var(--ink)">So Dan is a Marxist.</text>
+        <text x="18" y="136" font-size="11">plausible-sounding</text>
+        <rect x="268" y="4" width="248" height="140" rx="6" fill="color-mix(in srgb, var(--rebut) 7%, var(--card))" stroke="var(--rebut)" stroke-width="1.5"/>
+        <text x="282" y="28" font-size="11" style="fill:var(--rebut)">SAME FORM, ABSURD RESULT</text>
+        <text x="282" y="56" font-size="12.5" style="fill:var(--ink)">All library books are paper.</text>
+        <text x="282" y="80" font-size="12.5" style="fill:var(--ink)">Dan's kite is paper.</text>
+        <line x1="282" y1="94" x2="500" y2="94" stroke="var(--rule)"/>
+        <text x="282" y="118" font-size="12.5" style="fill:var(--ink)">So the kite is a library book.</text>
+        <text x="282" y="136" font-size="11" style="fill:var(--rebut)">✕ obviously false</text>
+        <line x1="128" y1="146" x2="214" y2="196" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#ah3)"/>
+        <line x1="392" y1="146" x2="306" y2="196" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#ah3)"/>
+        <rect x="110" y="200" width="300" height="50" rx="6" fill="var(--ink)"/>
+        <text x="260" y="222" text-anchor="middle" font-size="12.5" style="fill:var(--paper)">All A are B · x is B · so x is A</text>
+        <text x="260" y="240" text-anchor="middle" font-size="11" style="fill:var(--paper);opacity:.75">a pattern that can't be trusted</text>
+      </svg>
+      <p class="cap">Both premises in the original are true, so the problem must be the form. The kite version keeps the form, also has true premises, and reaches a ridiculous conclusion. If true premises can lead to a false conclusion through this pattern, the pattern is invalid, and "Dan is a Marxist" doesn't follow either.</p>
+    </div>
+    <div class="story">
+      <span class="label">Rules of the fallacy game</span>
+      <p>Don't be a fallacy monger. Students who learned the names started pouncing on friends and parents, and their relationships suffered. Only raise a flaw that actually undermines the conclusion. When you're caught in a fallacy yourself, admit it and adjust; don't be a sore loser. If you can, avoid the word "fallacy" altogether. Point at the reasoning, not the label.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="fallacies">
+  <span class="label partno">Part 2 · Chapters 5–9</span>
+  <h2>Sixty ways to go wrong</h2>
+  <p class="lede">One chapter per criterion. Each fallacy gets a one-sentence definition, realistic examples and advice for responding. Throughout, a fictional father emails his son Jim at college, using each of the 60 fallacies exactly once.</p>
+</div>
+
+<article class="chapter c-s" id="ch5">
+  <div class="gutter"><span class="chno tinted">05</span><span class="label">Structure</span></div>
+  <div class="body">
+    <div>
+      <h3>Arguments that don't work as arguments</h3>
+      <p class="idea">If a premise just repeats the conclusion, two claims contradict each other, or a deduction breaks a rule of logic, nothing follows, however good the content looks.</p>
+    </div>
+    <div class="fams">
+      <div class="fam c-s"><h4>Begging the question</h4><p>The conclusion is assumed somewhere in the premises, so no independent reason is offered. Look out for loaded language ("tacky", "murder") and loaded questions ("Have you stopped cheating on your taxes?").</p><ul><li>Arguing in a circle</li><li>Question-begging language</li><li>Complex question</li><li>Question-begging definition</li></ul></div>
+      <div class="fam c-s"><h4>Inconsistency</h4><p>Premises that contradict each other, or a conclusion that contradicts a premise. From A and not-A, you could "prove" anything at all, so the argument proves nothing.</p><ul><li>Incompatible premises</li><li>Premise–conclusion contradiction</li></ul></div>
+      <div class="fam c-s"><h4>Deductive inference</h4><p>Breaking a rule of conditional or syllogistic logic. These are the only fallacies that are about form alone.</p><ul><li>Denying the antecedent</li><li>Affirming the consequent</li><li>False conversion</li><li>Undistributed middle</li><li>Illicit end term</li></ul></div>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Why the undistributed middle fails</h4>
+        <svg viewBox="0 0 520 230" role="img" aria-label="Two Venn diagrams. Left, valid: the Marxists circle sits inside the atheists circle, and a dot for Dan inside Marxists is necessarily inside atheists. Right, invalid: the same circles, but Dan's dot is inside atheists and outside Marxists, showing that being an atheist does not make Dan a Marxist.">
+          <circle cx="130" cy="104" r="92" fill="color-mix(in srgb, var(--struct) 10%, transparent)" stroke="var(--struct)" stroke-width="1.5"/>
+          <circle cx="112" cy="116" r="46" fill="color-mix(in srgb, var(--struct) 28%, transparent)" stroke="var(--struct)" stroke-width="2"/>
+          <text x="130" y="36" text-anchor="middle" font-size="11">atheists</text>
+          <text x="112" y="100" text-anchor="middle" font-size="11" style="fill:var(--ink)">Marxists</text>
+          <circle cx="112" cy="128" r="6" fill="var(--ink)"/>
+          <text x="112" y="150" text-anchor="middle" font-size="11" style="fill:var(--ink)">Dan</text>
+          <text x="130" y="218" text-anchor="middle" font-size="12" style="fill:var(--relev)">✓ valid: Dan is a Marxist → atheist</text>
+          <circle cx="390" cy="104" r="92" fill="color-mix(in srgb, var(--struct) 10%, transparent)" stroke="var(--struct)" stroke-width="1.5"/>
+          <circle cx="372" cy="116" r="46" fill="color-mix(in srgb, var(--struct) 28%, transparent)" stroke="var(--struct)" stroke-width="2"/>
+          <text x="390" y="36" text-anchor="middle" font-size="11">atheists</text>
+          <text x="372" y="120" text-anchor="middle" font-size="11" style="fill:var(--ink)">Marxists</text>
+          <circle cx="446" cy="132" r="6" fill="var(--rebut)"/>
+          <text x="446" y="154" text-anchor="middle" font-size="11" style="fill:var(--rebut)">Dan?</text>
+          <text x="390" y="218" text-anchor="middle" font-size="12" style="fill:var(--rebut)">✕ invalid: atheist ↛ Marxist</text>
+        </svg>
+        <p class="cap">"All Marxists are atheists" only describes the Marxists. It says nothing about every atheist. Since the middle term (atheists) is never covered in full, Dan can sit in the atheist circle without being a Marxist.</p>
+      </div>
+      <div class="fig">
+        <h4>Conditionals: two moves that work, two that don't</h4>
+<pre class="argform"><span class="c">// If it rains, the street is wet.</span>
+It's raining.      <span class="k">→</span> The street is wet.   <span class="c">valid</span>
+Street isn't wet.  <span class="k">→</span> It isn't raining.    <span class="c">valid</span>
+
+Street is wet.     <span class="k">→</span> It's raining.        <span class="x">✕ affirming the consequent</span>
+It isn't raining.  <span class="k">→</span> Street isn't wet.    <span class="x">✕ denying the antecedent</span></pre>
+        <p class="cap">A street-cleaning truck makes both bad moves obvious. Damer's own counterexample for the second: if Newt is a dog, Newt is an animal. Newt isn't a dog, so Newt isn't an animal? Newt is a cat. Flipping the conditional ("if wet, then rain") is false conversion.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">How to respond</span>
+      <p>For circles, put premise and conclusion next to each other. For loaded questions, refuse a yes-or-no answer and name the assumption. For a question-begging definition, ask what evidence could ever count against the claim. If nothing could, it's a definition dressed up as a fact. For contradictions, write them as A and not-A. For invalid deductions, the absurd counterexample works better than reciting rules.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-r" id="ch6">
+  <div class="gutter"><span class="chno tinted">06</span><span class="label">Relevance</span></div>
+  <div class="body">
+    <div>
+      <h3>Reasons that don't bear on the point</h3>
+      <p class="idea">A premise can be true and still useless, because its truth gives no reason to believe the conclusion.</p>
+    </div>
+    <ul class="points">
+      <li>Two quick tests: would this premise being true make the conclusion more likely? And even if true, <em>should</em> it count? A film's box office record doesn't tell you whether it's good.</li>
+      <li><strong>Irrelevant premises</strong> point at the wrong thing: where an idea came from (genetic fallacy), a respectable cover story (rationalization), a conclusion the evidence doesn't support, or reasons unrelated to a possibly good conclusion.</li>
+      <li><strong>Irrelevant appeals</strong> use some outside pressure in place of evidence: the wrong authority, the crowd, a threat, tradition, self-interest or emotion.</li>
+      <li>Not every appeal to authority is bad. An authority counts when they are named, expert in this field, not biased, and their field generally agrees. A family friend testifying for the accused fails the last of these.</li>
+      <li>Tradition is fine when nothing else is at stake. It only becomes a fallacy when it overrides a more important principle, as when "we've always voted Democrat" decides a vote despite the evidence.</li>
+    </ul>
+    <div class="fams">
+      <div class="fam c-r"><h4>Irrelevant premise</h4><p>The reasons given aren't the ones that matter. With rationalization, they aren't even the real reasons.</p><ul><li>Genetic fallacy</li><li>Rationalization</li><li>Wrong conclusion</li><li>Wrong reasons</li></ul></div>
+      <div class="fam c-r"><h4>Irrelevant appeal</h4><p>Pressure in place of evidence. All six can be very persuasive, which is exactly the danger.</p><ul><li>Irrelevant authority</li><li>Common opinion</li><li>Force or threat</li><li>Tradition</li><li>Self-interest</li><li>Manipulation of emotions</li></ul></div>
+    </div>
+    <div class="story">
+      <span class="label">How to respond</span>
+      <p>With the wrong reasons, agree where you can: "It may be a good idea, just not for those reasons." Then offer better ones. With a rationalizer, they're protecting their face, so say you suspect you haven't heard the real argument yet, and don't expect a confession. With emotional manipulation, the fallacy is partly yours if you let the feeling decide. Notice it, then ask for the evidence.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-a" id="ch7">
+  <div class="gutter"><span class="chno tinted">07</span><span class="label">Acceptability</span></div>
+  <div class="body">
+    <div>
+      <h3>Confusing words and hidden assumptions</h3>
+      <p class="idea">You can't accept a premise you can't understand, or one that only works if you swallow an unstated assumption no rational person would accept.</p>
+    </div>
+    <div class="fams">
+      <div class="fam c-a"><h4>Linguistic confusion</h4><p>Meaning slips: a word changes sense partway through, a phrase can be read two ways, a stress or a hint does the arguing. "I didn't lie, I just stretched the truth" is a distinction without a difference.</p><ul><li>Equivocation</li><li>Ambiguity</li><li>Misleading accent</li><li>Illicit contrast</li><li>Innuendo</li><li>Vague expression</li><li>Distinction without a difference</li></ul></div>
+      <div class="fam c-a"><h4>Unwarranted assumption</h4><p>The premise only works with a hidden, questionable rule behind it: parts equal the whole, the middle is right, what is ought to be, wanting makes it so, only two options exist, or rules have no exceptions.</p><ul><li>Continuum</li><li>Composition</li><li>Division</li><li>False alternatives</li><li>Is-ought</li><li>Wishful thinking</li><li>Misuse of a principle</li><li>Fallacy of the mean</li><li>Faulty analogy</li></ul></div>
+    </div>
+    <div class="fig">
+      <h4>The fallacy of the continuum: small steps still add up</h4>
+      <svg viewBox="0 0 520 190" role="img" aria-label="A temperature bar from 0 degrees Fahrenheit to 100 degrees, shading from cool grey to red. Small arcs between ticks are each labelled one degree, no difference. A dashed line near 80 degrees marks that a line can be drawn somewhere. The caption underneath says 0 and 100 are still not the same.">
+        <defs>
+          <linearGradient id="heat" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" style="stop-color:var(--struct)"/>
+            <stop offset=".5" style="stop-color:var(--accept)"/>
+            <stop offset="1" style="stop-color:var(--rebut)"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="var(--ink-3)" stroke-width="1.2">
+          <path d="M20 58 Q44 34 68 58"/><path d="M68 58 Q92 34 116 58"/><path d="M116 58 Q140 34 164 58"/>
+          <path d="M356 58 Q380 34 404 58"/><path d="M404 58 Q428 34 452 58"/><path d="M452 58 Q476 34 500 58"/>
+        </g>
+        <text x="92" y="28" text-anchor="middle" font-size="11">"one degree makes no difference…"</text>
+        <text x="428" y="28" text-anchor="middle" font-size="11">"…nor does this one"</text>
+        <text x="260" y="50" text-anchor="middle" font-size="14" style="fill:var(--ink-3)">· · ·</text>
+        <rect x="20" y="64" width="480" height="26" rx="4" fill="url(#heat)"/>
+        <g font-size="11" text-anchor="middle">
+          <text x="20" y="108">0°F</text><text x="116" y="108">20</text><text x="212" y="108">40</text><text x="308" y="108">60</text><text x="404" y="108">80</text><text x="500" y="108">100°F</text>
+        </g>
+        <line x1="392" y1="56" x2="392" y2="98" stroke="var(--ink)" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="392" y="132" text-anchor="middle" font-size="11" style="fill:var(--ink)">a line can be drawn somewhere</text>
+        <text x="260" y="170" text-anchor="middle" font-size="12.5" style="fill:var(--ink)">So is 0°F as hot as 100°F? Obviously not.</text>
+      </svg>
+      <p class="cap">Damer uses this exact counterexample against an argument that, since no single moment of pregnancy marks a sudden change, a fetus at conception is the same as at birth. Whatever you think of the conclusion, that premise doesn't hold: short and tall, an A and an F, are different even though small steps connect them. To expose it, ask for a cut-off ("how much money makes someone rich?"), take a little off, and keep going.</p>
+    </div>
+    <div class="story">
+      <span class="label">How to respond</span>
+      <p>With linguistic confusion, ask what the word means here, and don't be put off by "you're being picky". You can't judge a claim you don't understand. With innuendo, say the hinted claim out loud and ask them to defend it. With unwarranted assumptions, state the hidden rule and test it: a counter-analogy against a faulty analogy, a third option against false alternatives, and for the middle position, ask that it stand on its own merits.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-u" id="ch8">
+  <div class="gutter"><span class="chno tinted">08</span><span class="label">Sufficiency</span></div>
+  <div class="body">
+    <div>
+      <h3>Too little evidence, or the wrong causal story</h3>
+      <p class="idea">The reasons may be relevant and acceptable, and still not be enough to carry the conclusion.</p>
+    </div>
+    <div class="fams">
+      <div class="fam c-u"><h4>Missing evidence</h4><p>Too few cases, a skewed sample, no evidence at all, a "what if" treated as fact, a proverb in place of data, a double standard, or the decisive fact left out.</p><ul><li>Insufficient sample</li><li>Unrepresentative data</li><li>Arguing from ignorance</li><li>Contrary-to-fact</li><li>Popular wisdom</li><li>Special pleading</li><li>Omitted key evidence</li></ul></div>
+      <div class="fam c-u"><h4>Causal fallacies</h4><p>Claiming a cause without enough evidence: confusing what's necessary with what's enough, timing with causation, effect with cause, or missing the factor behind both.</p><ul><li>Necessary vs. sufficient</li><li>Oversimplification</li><li>Post hoc</li><li>Cause–effect confusion</li><li>Common cause</li><li>Domino</li><li>Gambler's fallacy</li></ul></div>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Four ways to misread a correlation</h4>
+        <div class="compare">
+          <div><h5>Post hoc</h5><ul><li>A, then B, so A caused B</li><li><em>Three months after the wedding he started smoking pot, so his wife started him on it.</em></li></ul></div>
+          <div><h5>Reversed</h5><ul><li>B actually causes A</li><li><em>Waiters who get fewer tips are irritable. More likely, irritable waiters get fewer tips.</em></li></ul></div>
+          <div><h5>Common cause</h5><ul><li>C causes both A and B</li><li><em>A big vocabulary and business success may both come from something else, like education.</em></li></ul></div>
+          <div><h5>Oversimplified</h5><ul><li>A is one factor among many</li><li><em>Going out without a hat doesn't give you a cold unless the virus is already there.</em></li></ul></div>
+        </div>
+      </div>
+      <div class="fig">
+        <h4>Absence of evidence isn't evidence</h4>
+        <p class="cap" style="font-size:16px;color:var(--ink)">"It's true unless you can prove otherwise" turns the burden of proof upside down. By that logic, your great-grandfather died of something exotic unless someone can show he didn't. Claims too odd to bother refuting would win by default.</p>
+        <p class="cap">Damer's advice is to play the same game. Make an equally unsupported claim and ask them to disprove it. For proverbs, reply with an opposite one, such as "look before you leap" versus "he who hesitates is lost". Now both sides need evidence.</p>
+        <p class="cap">For special pleading, name the double standard. Everyone outside a logic class knows that's unfair.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">How to respond</span>
+      <p>Single-case generalizations usually come from a vivid personal experience, so respect the experience and point out that it isn't yet an argument. For domino arguments, ask for evidence for each link, or answer with your own absurd chain (credit card → debt → repossession → ruin). For the gambler's fallacy, remember that a run of bad seasons tells you nothing about the next one.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-b" id="ch9">
+  <div class="gutter"><span class="chno tinted">09</span><span class="label">Rebuttal</span></div>
+  <div class="body">
+    <div>
+      <h3>Ducking the other side</h3>
+      <p class="idea">The most neglected criterion. These fallacies avoid, deny, divert from or discredit criticism instead of answering it.</p>
+    </div>
+    <div class="fams">
+      <div class="fam c-b"><h4>Counterevidence</h4><p>Pretending inconvenient evidence isn't there, or waving it away without engaging.</p><ul><li>Denying it</li><li>Ignoring it</li></ul></div>
+      <div class="fam c-b"><h4>Ad hominem</h4><p>Going after the critic instead of the criticism: insults, suspect motives, or "you do it too".</p><ul><li>Abusive ad hominem</li><li>Poisoning the well</li><li>Two wrongs</li></ul></div>
+      <div class="fam c-b"><h4>Diversion</h4><p>Moving the fight somewhere easier: a distorted version, a minor point, a side issue, a laugh.</p><ul><li>Straw man</li><li>Trivial objections</li><li>Red herring</li><li>Humor or ridicule</li></ul></div>
+    </div>
+    <div class="fig">
+      <h4>Answering a criticism vs. dodging it</h4>
+      <div class="compare">
+        <div>
+          <h5 style="color:var(--relev)">A real rebuttal</h5>
+          <ul>
+            <li>Restates the objection fairly, ideally in its strongest form</li>
+            <li>Shows why it doesn't damage the argument, or concedes and adjusts</li>
+            <li>Says what evidence would change your mind</li>
+            <li>Keeps attention on the main issue</li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="color:var(--rebut)">A dodge</h5>
+          <ul>
+            <li>"That study's nonsense" (denying the counterevidence)</li>
+            <li>"Look who's talking" (two wrongs)</li>
+            <li>"So you want no rules at all?" (straw man)</li>
+            <li>"But what about the faculty?" (red herring)</li>
+          </ul>
+        </div>
+      </div>
+      <p class="cap">Ask someone denying counterevidence what evidence would weaken their claim. If they can't name anything, stop arguing that point. You won't get anywhere.</p>
+    </div>
+    <div class="story">
+      <span class="label">How to respond</span>
+      <p>When attacked personally, don't hit back. Point out the abuse and ask, "But what do you think of my argument?" If the well has been poisoned against you, say so plainly, then invite them to judge the argument anyway. If the "you do it too" charge is true, admit it, then insist that your inconsistency doesn't make the criticism wrong. With a straw man, summarize your own argument again or ask them to. Enjoy a genuinely funny joke, then put the point back on the table.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ FIELD GUIDE ============ -->
+<section id="guide">
+  <div class="sec-head">
+    <span class="label">Reference</span>
+    <h2>Field guide to all 60</h2>
+    <p class="lede">Each fallacy in one line, filed by the criterion it breaks, with a way to respond that keeps the conversation going. Search by name or by what's happening.</p>
+  </div>
+  <div class="tablecard">
+    <div class="guide-tools">
+      <div class="search">
+        <input id="q" type="search" placeholder="Search, e.g. cause, authority, question…" aria-label="Search fallacies" autocomplete="off">
+        <span class="label" id="count" aria-live="polite">60 of 60</span>
+      </div>
+      <div class="chips" role="group" aria-label="Filter by criterion">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">All</button>
+        <button class="chip c-s" type="button" data-f="s" aria-pressed="false">Structure</button>
+        <button class="chip c-r" type="button" data-f="r" aria-pressed="false">Relevance</button>
+        <button class="chip c-a" type="button" data-f="a" aria-pressed="false">Acceptability</button>
+        <button class="chip c-u" type="button" data-f="u" aria-pressed="false">Sufficiency</button>
+        <button class="chip c-b" type="button" data-f="b" aria-pressed="false">Rebuttal</button>
+      </div>
+    </div>
+    <div class="scroll-x">
+      <table class="fg">
+        <thead><tr><th scope="col">Fallacy</th><th scope="col">Breaks</th><th scope="col">What goes wrong</th><th scope="col">How to answer it</th></tr></thead>
+        <tbody id="fg">
+<tr data-c="s" class="c-s"><th scope="row">Arguing in a circle</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Begging the question</span></td><td>A premise says, openly or in disguise, exactly what the conclusion says.</td><td class="how">Put the premise and the conclusion side by side and ask for a reason that doesn't already assume the point.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">Question-begging language</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Begging the question</span></td><td>Loaded words assume the answer to the very question being discussed.</td><td class="how">Point out that the label settles the issue in advance. Ask to talk in neutral terms.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">Complex question</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Begging the question</span></td><td>A question smuggles in the answer to an earlier, unasked question, or bundles several questions as if one answer fits all.</td><td class="how">Don't answer yes or no. Name the hidden assumption and split the question.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">Question-begging definition</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Begging the question</span></td><td>A disputed factual claim is made true by definition, so no evidence could ever count against it.</td><td class="how">Ask whether the claim is a definition or a statement of fact, and what evidence would prove it wrong.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">Incompatible premises</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Inconsistency</span></td><td>The premises contradict each other, so nothing can be concluded from them.</td><td class="how">Rewrite the two premises as A and not-A. Then no conclusion can follow.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">Contradiction between premise and conclusion</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Inconsistency</span></td><td>The conclusion contradicts one of the premises it claims to follow from.</td><td class="how">Show the premise and the conclusion as A and not-A.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">Denying the antecedent</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Deductive inference</span></td><td>If A then B. Not A. So not B.</td><td class="how">Same form, absurd result: if Newt is a dog, Newt is an animal. Newt isn't a dog. So Newt isn't an animal? Newt is a cat.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">Affirming the consequent</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Deductive inference</span></td><td>If A then B. B is true. So A must be true.</td><td class="how">Point out that B can happen for other reasons, and give a parallel case with an obviously false conclusion.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">False conversion</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Deductive inference</span></td><td>Flipping "all X are Y" into "all Y are X", or "if A then B" into "if B then A", and assuming it's still true.</td><td class="how">All apples are fruit. That doesn't make all fruit apples.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">Undistributed middle term</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Deductive inference</span></td><td>The term that links the two premises never covers its whole class, so the link doesn't hold.</td><td class="how">Use the same form with paper: all library books are paper, my kite is paper, so my kite is a library book.</td></tr>
+<tr data-c="s" class="c-s"><th scope="row">Illicit distribution of an end term</th><td><span class="crit"><span class="dot"></span>Structure</span><span class="sub">Deductive inference</span></td><td>The conclusion is about all of a class when the premises only covered some of it.</td><td class="how">Point to the jump from "some" to "all".</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Genetic fallacy</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant premise</span></td><td>Judging something by where it came from or what it used to mean, and ignoring how it has changed.</td><td class="how">Separate the origin from the thing as it is today. Judge it now.</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Rationalization</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant premise</span></td><td>Plausible but fake reasons stand in for the real, less flattering ones.</td><td class="how">Say gently that you don't think you've heard the real reasons yet. Leave them room to save face.</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Drawing the wrong conclusion</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant premise</span></td><td>The evidence supports a different conclusion from the one drawn.</td><td class="how">Show which conclusion the evidence really supports, and be patient.</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Using the wrong reasons</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant premise</span></td><td>The conclusion may be right, but the reasons given don't bear on it.</td><td class="how">"It may be a good idea, just not for those reasons." Then offer better ones.</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Appeal to irrelevant authority</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant appeal</span></td><td>Citing someone who isn't an expert in the field, isn't named, or is likely to be biased.</td><td class="how">Ask who exactly, whether this is their field, and whether they're impartial.</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Appeal to common opinion</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant appeal</span></td><td>It must be true or right because many people believe it, or wrong because few do.</td><td class="how">Public opinion shifts. Ask for evidence that doesn't depend on a head count.</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Appeal to force or threat</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant appeal</span></td><td>Persuading by threatening unpleasant consequences instead of giving evidence.</td><td class="how">Name the threat for what it is, even if you can't afford to resist it.</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Appeal to tradition</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant appeal</span></td><td>"We've always done it this way" when a more important principle is at stake.</td><td class="how">Respect the tradition, then ask whether something weightier now conflicts with it.</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Appeal to self-interest</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant appeal</span></td><td>Urging a view because it benefits the listener, when a bigger issue is at stake.</td><td class="how">Ask for an argument that doesn't mention what's in it for you.</td></tr>
+<tr data-c="r" class="c-r"><th scope="row">Manipulation of emotions</th><td><span class="crit"><span class="dot"></span>Relevance</span><span class="sub">Irrelevant appeal</span></td><td>Playing on pity, fear, guilt or pride instead of presenting evidence.</td><td class="how">Notice the feeling, put it aside, and ask what the evidence is.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Equivocation</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Linguistic confusion</span></td><td>A key word shifts meaning partway through the argument but is treated as if it means the same thing.</td><td class="how">Name the word and spell out its two meanings.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Ambiguity</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Linguistic confusion</span></td><td>A word, phrase or sentence can be read two ways, and the arguer doesn't say which.</td><td class="how">Ask which meaning is intended before you judge the claim. That isn't being picky.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Misleading accent</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Linguistic confusion</span></td><td>Stressing a word, or quoting out of context, to suggest something that wasn't meant.</td><td class="how">Ask for the full context of the quote.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Illicit contrast</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Linguistic confusion</span></td><td>A listener reads in an unstated opposite claim by stressing one word ("she feels good <em>today</em>").</td><td class="how">The burden is on whoever drew the contrast. You never said it.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Argument by innuendo</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Linguistic confusion</span></td><td>Hinting at a usually damaging conclusion without actually stating it.</td><td class="how">Spell out the hinted claim and ask them to defend it or withdraw it.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Misuse of a vague expression</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Linguistic confusion</span></td><td>Building a case on a vague term, or reading a precise meaning into someone else's vague word.</td><td class="how">Ask for a more precise meaning and check that it fits the context.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Distinction without a difference</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Linguistic confusion</span></td><td>Insisting two things differ because the words differ, when the substance is the same.</td><td class="how">Ask exactly how the two differ in practice. "Stretching the truth" is lying.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Fallacy of the continuum</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Unwarranted assumption</span></td><td>Treating small steps between two extremes as if they make no difference, so no line can ever be drawn.</td><td class="how">Ask for their cut-off, take a little off, and repeat until the result is absurd.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Fallacy of composition</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Unwarranted assumption</span></td><td>Assuming that what's true of each part is true of the whole.</td><td class="how">A team of stars can still play badly together.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Fallacy of division</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Unwarranted assumption</span></td><td>Assuming that what's true of the whole is true of each part.</td><td class="how">A fine choir doesn't prove that every member can sing.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">False alternatives</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Unwarranted assumption</span></td><td>Offering too few options and assuming one of them must be right.</td><td class="how">Ask whether the options really cover every possibility, and name a third.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Is-ought fallacy</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Unwarranted assumption</span></td><td>Because something is the practice, it ought to be. Or because it isn't the practice, it shouldn't be.</td><td class="how">Point out that the status quo isn't evidence. Ask for real reasons.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Wishful thinking</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Unwarranted assumption</span></td><td>Assuming something is true because you want it to be, or false because you don't.</td><td class="how">Lay out the counterevidence and ask them to weigh it.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Misuse of a principle</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Unwarranted assumption</span></td><td>Applying a rule as if it had no exceptions, or throwing out a rule because of one unusual case.</td><td class="how">Look at what the rule is for. Exceptions may serve that purpose.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Fallacy of the mean</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Unwarranted assumption</span></td><td>Assuming the middle position must be right because it is in the middle.</td><td class="how">Make the compromise stand on its own merits.</td></tr>
+<tr data-c="a" class="c-a"><th scope="row">Faulty analogy</th><td><span class="crit"><span class="dot"></span>Acceptability</span><span class="sub">Unwarranted assumption</span></td><td>Assuming two things alike in some ways must be alike in another important way, ignoring the differences.</td><td class="how">Offer a counter-analogy that points the other way.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Insufficient sample</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Missing evidence</span></td><td>Generalizing from too few cases.</td><td class="how">A personal experience is a start, not a proof.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Unrepresentative data</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Missing evidence</span></td><td>Generalizing from a biased sample.</td><td class="how">Make a parallel: most people at a dog show own dogs, so most people own dogs?</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Arguing from ignorance</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Missing evidence</span></td><td>It's true because nobody has proved it false, or false because nobody has proved it true.</td><td class="how">Play the same game with an absurd claim. No evidence proves nothing.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Contrary-to-fact hypothesis</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Missing evidence</span></td><td>Treating a guess about what would have happened, or what will happen, as if it were fact.</td><td class="how">Get them to admit that the claim is speculation.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Fallacy of popular wisdom</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Missing evidence</span></td><td>Quoting a proverb or "common sense" in place of evidence.</td><td class="how">Answer with a proverb that says the opposite. Now both need evidence.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Special pleading</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Missing evidence</span></td><td>Applying a standard to others while exempting yourself, without good reason.</td><td class="how">Name the double standard and ask what makes this case different.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Omission of key evidence</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Missing evidence</span></td><td>Leaving out the evidence that matters most for the conclusion.</td><td class="how">Say exactly what evidence you would need to see.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Confusing a necessary with a sufficient condition</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Causal</span></td><td>Treating something an outcome needs as if it guarantees the outcome.</td><td class="how">Practising two hours a day may be necessary to become a concert pianist. It isn't enough.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Causal oversimplification</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Causal</span></td><td>Naming too few causes, or giving one cause too much weight.</td><td class="how">Most events have many causes. Ask what else contributed.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Post hoc fallacy</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Causal</span></td><td>B came after A, so A must have caused B.</td><td class="how">Ask what links them apart from timing.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Confusion of cause and effect</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Causal</span></td><td>Getting the direction of cause and effect backwards.</td><td class="how">Check whether the supposed effect could be the cause.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Neglect of a common cause</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Causal</span></td><td>Two linked events are both effects of a third factor that has been missed.</td><td class="how">Look for something behind both.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Domino fallacy</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Causal</span></td><td>Claiming that one step will lead to disaster through a chain of events, without evidence for each link.</td><td class="how">Ask for a separate causal explanation of every link.</td></tr>
+<tr data-c="u" class="c-u"><th scope="row">Gambler&#x27;s fallacy</th><td><span class="crit"><span class="dot"></span>Sufficiency</span><span class="sub">Causal</span></td><td>Assuming a run of chance outcomes changes the odds of the next one.</td><td class="how">Coins and dice have no memory.</td></tr>
+<tr data-c="b" class="c-b"><th scope="row">Denying the counterevidence</th><td><span class="crit"><span class="dot"></span>Rebuttal</span><span class="sub">Counterevidence</span></td><td>Refusing to take evidence against your view seriously, or unfairly playing it down.</td><td class="how">Ask what evidence would change their mind. If nothing would, move on.</td></tr>
+<tr data-c="b" class="c-b"><th scope="row">Ignoring the counterevidence</th><td><span class="crit"><span class="dot"></span>Rebuttal</span><span class="sub">Counterevidence</span></td><td>Leaving out important unfavourable evidence so it looks as if there isn't any.</td><td class="how">Bring it up and ask how they would answer it.</td></tr>
+<tr data-c="b" class="c-b"><th scope="row">Abusive ad hominem</th><td><span class="crit"><span class="dot"></span>Rebuttal</span><span class="sub">Ad hominem</span></td><td>Attacking the person instead of answering their argument.</td><td class="how">Don't hit back. "But what do you think of my argument?"</td></tr>
+<tr data-c="b" class="c-b"><th scope="row">Poisoning the well</th><td><span class="crit"><span class="dot"></span>Rebuttal</span><span class="sub">Ad hominem</span></td><td>Writing off someone's view in advance because of their circumstances or supposed motives.</td><td class="how">Name what's happening, then ask them to judge the argument anyway.</td></tr>
+<tr data-c="b" class="c-b"><th scope="row">Two-wrongs fallacy</th><td><span class="crit"><span class="dot"></span>Rebuttal</span><span class="sub">Ad hominem</span></td><td>"You do it too" as a way of brushing off a criticism.</td><td class="how">Admit it if it's true, then ask them to deal with the criticism itself.</td></tr>
+<tr data-c="b" class="c-b"><th scope="row">Attacking a straw man</th><td><span class="crit"><span class="dot"></span>Rebuttal</span><span class="sub">Diversion</span></td><td>Misrepresenting an argument to make it easier to knock down.</td><td class="how">Summarize your argument again, or ask them to summarize it.</td></tr>
+<tr data-c="b" class="c-b"><th scope="row">Trivial objections</th><td><span class="crit"><span class="dot"></span>Rebuttal</span><span class="sub">Diversion</span></td><td>Going after minor points while the main support is left untouched.</td><td class="how">Concede the small point and show that the main supports still stand.</td></tr>
+<tr data-c="b" class="c-b"><th scope="row">Red herring</th><td><span class="crit"><span class="dot"></span>Rebuttal</span><span class="sub">Diversion</span></td><td>Pulling attention away from the real issue to a side issue.</td><td class="how">Show exactly where the topic shifted, then bring it back.</td></tr>
+<tr data-c="b" class="c-b"><th scope="row">Resort to humor or ridicule</th><td><span class="crit"><span class="dot"></span>Rebuttal</span><span class="sub">Diversion</span></td><td>Using a joke or mockery to avoid answering the point.</td><td class="how">Enjoy the joke, then restate the point and ask for a serious answer.</td></tr>
+        </tbody>
+      </table>
+      <p class="empty" id="empty" hidden>No fallacy matches. Try a broader word.</p>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Definitions paraphrased from the book's glossary</span></div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 10 ============ -->
+<section id="essay">
+  <article class="chapter" id="ch10" style="padding-top:0">
+    <div class="gutter"><span class="chno">10</span><span class="label">Writing the Argumentative Essay</span></div>
+    <div class="body">
+      <div>
+        <h3>Five steps from research to resolution</h3>
+        <p class="idea">The essay is the five criteria put to work: one section for the case, and a whole section for the other side.</p>
+      </div>
+      <div class="epilogue">
+        <div class="fig">
+          <span class="label">The outline</span>
+          <ol class="steps">
+            <li><div><b>Research the issue</b><span>Look at every side. The goal is to find the most defensible position, not to defend the one you started with. You may end up dropping it. Keep an "idea file" organized by the five parts below.</span></div></li>
+            <li><div><b>State your position</b><span>Say why the issue matters, then state your position early, like a prosecutor's opening. Be precise, define key terms, qualify it with the exceptions you accept, and don't promise more than it can deliver.</span></div></li>
+            <li><div><b>Argue for it</b><span>One paragraph per premise, the strongest evidence first, no colourful extras. Go deductive if you can. For a moral or aesthetic judgment, include the value premise.</span></div></li>
+            <li><div><b>Rebut the objections</b><span>The most neglected part of any argument. If you can't answer the serious criticisms, you probably shouldn't hold the position. Also show where rival positions fall short.</span></div></li>
+            <li><div><b>Resolve the issue</b><span>Show how your position settles the question or solves the problem, and how it meets all five criteria better than the alternatives.</span></div></li>
+          </ol>
+        </div>
+        <div class="prose">
+          <p>Write for an intelligent reader who isn't in your field, like a fellow student rather than the professor. Explain any term a high-school graduate wouldn't know.</p>
+          <p>The book ends with a short sample essay on whether a married woman should keep her own name. It's a deliberately everyday issue, and it's built with exactly this structure.</p>
+          <div class="fig" style="background:transparent;border-style:dashed">
+            <blockquote class="pull">Almost anyone can find premises for a view. A good argument also has to answer the people who doubt it.</blockquote>
+            <span class="label">The book's thesis on rebuttal, paraphrased</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">What to keep</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Damer's goal is less about winning arguments than about a world where good reasoning is normal. These are the habits that get you there.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Before you argue</h3>
+      <div class="tk"><b>Admit you might be wrong, first</b><span>It's the best way to start a discussion. Others tend to follow, and if they won't, you know the talk is futile.</span></div>
+      <div class="tk"><b>Separate the issue</b><span>Deal with one question at a time. Treat "it's just semantics" as a reason to clarify, not to stop.</span></div>
+      <div class="tk"><b>Take the burden</b><span>If you make the claim, be ready to support it. If you can't, use the agnostic option: "I have no reason to believe it."</span></div>
+      <div class="tk"><b>Ask for an argument, not an opinion</b><span>"Why do you think so?" turns a stated view into something you can evaluate together.</span></div>
+    </div>
+    <div class="col">
+      <h3>Testing an argument</h3>
+      <div class="tk"><b>Put it in standard form</b><span>Premises, subpremises, [hidden premises], rebuttal, conclusion. Four or five premises is usually the core.</span></div>
+      <div class="tk"><b>Be charitable</b><span>Rebuild the strongest version the arguer meant, and let them correct it before you criticize.</span></div>
+      <div class="tk"><b>Run the five tests in order</b><span>Structure, relevance, acceptability, sufficiency, rebuttal. No need to check acceptability if the premise is irrelevant.</span></div>
+      <div class="tk"><b>Find the hidden premise</b><span>Most fallacies live in an unstated assumption. Say it out loud.</span></div>
+    </div>
+    <div class="col">
+      <h3>Answering a bad one</h3>
+      <div class="tk"><b>Let it self-destruct</b><span>Just reconstruct it plainly. Often the arguer withdraws the premise on their own.</span></div>
+      <div class="tk"><b>Use an absurd counterexample</b><span>Same form, ridiculous conclusion. No jargon needed.</span></div>
+      <div class="tk"><b>Skip the word "fallacy"</b><span>Point at the pattern, not the label. Only raise flaws that affect the conclusion.</span></div>
+      <div class="tk"><b>Concede when caught</b><span>Admit your own fallacies and adjust. Being a gracious loser keeps the search for truth going.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of T. Edward Damer, <em>Attacking Faulty Reasoning: A Practical Guide to Fallacy-Free Arguments</em>, 6th ed. (Wadsworth Cengage Learning, 2009). Examples are adapted from the book. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Field guide: search + criterion filter --- */
+  var body = document.getElementById("fg");
+  if (body) {
+    var rows = Array.prototype.slice.call(body.querySelectorAll("tr"));
+    var q = document.getElementById("q"), count = document.getElementById("count"), empty = document.getElementById("empty");
+    var chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-f]"));
+    var filter = "all";
+    rows.forEach(function (r) { r._t = r.textContent.toLowerCase(); });
+    function apply() {
+      var term = (q.value || "").trim().toLowerCase(), n = 0;
+      rows.forEach(function (r) {
+        var ok = (filter === "all" || r.getAttribute("data-c") === filter) && (!term || r._t.indexOf(term) !== -1);
+        r.hidden = !ok; if (ok) n++;
+      });
+      count.textContent = n + " of " + rows.length;
+      empty.hidden = n !== 0;
+    }
+    q.addEventListener("input", apply);
+    chips.forEach(function (c) {
+      c.addEventListener("click", function () {
+        filter = c.getAttribute("data-f");
+        chips.forEach(function (o) { o.setAttribute("aria-pressed", o === c ? "true" : "false"); });
+        apply();
+      });
+    });
+  }
+
+  /* --- Hero: rain over a crowd of umbrellas; the red one keeps its patch dry --- */
+  var canvas = document.getElementById("rain");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, domes = [], drops = [];
+  var seed = 11;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  function layout() {
+    seed = 11; domes = [];
+    var r = Math.max(22, Math.min(34, w / 26));
+    var rows = [hgt - 6, hgt - 26];
+    rows.forEach(function (y, ri) {
+      for (var x = (ri ? r : 0); x < w + r; x += r * 2.05) {
+        domes.push({ x: x + (rnd() - .5) * 6, y: y, r: r * (0.92 + rnd() * 0.12), red: false, row: ri });
+      }
+    });
+    // the red umbrella stands taller, right of centre
+    domes.push({ x: w * 0.74, y: hgt - 44, r: r * 1.25, red: true, row: 2 });
+    drops = [];
+    var n = Math.round(w / 9);
+    for (var i = 0; i < n; i++) drops.push({ x: rnd() * (w + 40), y: rnd() * hgt, v: 2.2 + rnd() * 1.6 });
+  }
+  function size() {
+    var b = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = b.width; hgt = b.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    layout();
+  }
+  function surface(x) {
+    // highest canopy point under x (smallest y), or ground
+    var top = hgt;
+    domes.forEach(function (d) {
+      var dx = x - d.x;
+      if (Math.abs(dx) < d.r) { var y = d.y - Math.sqrt(d.r * d.r - dx * dx) * 0.62; if (y < top) top = y; }
+    });
+    return top;
+  }
+  function dome(d, fill) {
+    ctx.beginPath();
+    ctx.ellipse(d.x, d.y, d.r, d.r * 0.62, 0, Math.PI, 0);
+    // scalloped rim
+    var seg = 4, sw = (d.r * 2) / seg;
+    for (var i = seg; i > 0; i--) {
+      var x1 = d.x - d.r + sw * i, x0 = x1 - sw;
+      ctx.quadraticCurveTo((x0 + x1) / 2, d.y - d.r * 0.12, x0, d.y);
+    }
+    ctx.closePath();
+    ctx.fillStyle = fill; ctx.fill();
+  }
+  function draw() {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var ink = css("--ink"), ink3 = css("--ink-3"), red = css("--red");
+    // rain
+    ctx.strokeStyle = ink3; ctx.lineWidth = 1; ctx.globalAlpha = .55; ctx.lineCap = "round";
+    ctx.beginPath();
+    drops.forEach(function (p) {
+      var stop = surface(p.x);
+      if (p.y < stop) { ctx.moveTo(p.x, p.y); ctx.lineTo(p.x - 2, Math.min(p.y + 9, stop)); }
+    });
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+    // umbrellas: back row lighter, front row ink, red one on top
+    domes.filter(function (d) { return d.row === 1; }).forEach(function (d) { dome(d, ink3); });
+    domes.filter(function (d) { return d.row === 0; }).forEach(function (d) { dome(d, ink); });
+    domes.filter(function (d) { return d.red; }).forEach(function (d) {
+      ctx.strokeStyle = ink; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(d.x, d.y); ctx.lineTo(d.x, hgt); ctx.stroke();
+      dome(d, red);
+    });
+  }
+  function step() {
+    drops.forEach(function (p) {
+      p.y += p.v * 2.4; p.x -= p.v * 0.5;
+      if (p.y > surface(p.x) || p.x < -10) { p.y = -10 - rnd() * 30; p.x = rnd() * (w + 40); }
+    });
+  }
+  var running = false, visible = true, raf = 0;
+  function loop() { step(); draw(); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw();
+  window.addEventListener("resize", function () { size(); draw(); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

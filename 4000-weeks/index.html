@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Four Thousand Weeks by Oliver Burkeman – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. The accents follow the cover's four bananas, from fresh to overripe:
+   time passing, which is the whole subject of the book. */
+:root {
+  --paper: #f6f5f0;
+  --paper-2: #ecebe3;
+  --card: #ffffff;
+  --ink: #18160f;
+  --ink-2: #4c4a40;
+  --ink-3: #7b7869;
+  --rule: #dad8cc;
+
+  /* four stages of ripeness */
+  --fresh: #6d8a10;
+  --ripe: #c18900;
+  --spot: #b4601a;
+  --brown: #6e4322;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #12110d;
+    --paper-2: #1b1a15;
+    --card: #201f19;
+    --ink: #f0eee4;
+    --ink-2: #b9b6a6;
+    --ink-3: #8a8777;
+    --rule: #313027;
+    --fresh: #bfd45a;
+    --ripe: #f2c537;
+    --spot: #f0994f;
+    --brown: #d0a07a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #12110d;
+  --paper-2: #1b1a15;
+  --card: #201f19;
+  --ink: #f0eee4;
+  --ink-2: #b9b6a6;
+  --ink-3: #8a8777;
+  --rule: #313027;
+  --fresh: #bfd45a;
+  --ripe: #f2c537;
+  --spot: #f0994f;
+  --brown: #d0a07a;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ripe); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Ripeness colour helpers */
+.c-fresh { --c: var(--fresh); }
+.c-ripe  { --c: var(--ripe); }
+.c-spot  { --c: var(--spot); }
+.c-brown { --c: var(--brown); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(72px, 13.5vw, 172px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .82;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.hero .readnote { margin-top: 14px; font-size: 15px; color: var(--ink-3); max-width: 52ch; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 956;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 30, 10, .35), 0 8px 18px -10px rgba(40, 30, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.weekband { position: relative; margin-top: 28px; }
+.weekband canvas { display: block; width: 100%; height: 120px; }
+.weekband .ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 6px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .hd { border-top: 4px solid var(--c); }
+
+/* Buffett list */
+.buffett { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.buffett span {
+  font-family: var(--mono); font-size: 12px; border-radius: 4px; padding: 7px 0; text-align: center;
+  background: var(--paper-2); color: var(--ink-3);
+  text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--spot) 70%, transparent);
+}
+.buffett span.top { background: var(--ripe); color: #1b1505; font-weight: 500; text-decoration: none; }
+.buffett-key { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+.buffett-key div { display: grid; gap: 4px; }
+.buffett-key b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16px; }
+.buffett-key span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* Soviet week */
+.week5 { display: grid; grid-template-columns: 74px repeat(10, minmax(0, 1fr)); gap: 4px; align-items: center; }
+.week5 .g { font-family: var(--mono); font-size: 11.5px; color: var(--ink-2); }
+.week5 .d { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); text-align: center; }
+.week5 i { display: block; height: 22px; border-radius: 3px; background: var(--paper-2); }
+.week5 i.off { background: var(--c); }
+
+/* questions */
+.qs { display: grid; gap: 0; counter-reset: q; }
+.q { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 6px 20px; padding: 22px 0; border-top: 1px solid var(--rule); }
+.q:last-child { border-bottom: 1px solid var(--rule); }
+.q .n { font-family: var(--display); font-weight: 900; font-stretch: 62%; font-size: 56px; line-height: .85; color: var(--c); }
+.q h3 { font-size: clamp(21px, 2.4vw, 27px); font-weight: 780; font-stretch: 104%; line-height: 1.2; letter-spacing: -.01em; }
+.q p { font-size: 17px; color: var(--ink-2); max-width: var(--measure); margin-top: 8px; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk b em { font-style: normal; font-family: var(--mono); font-weight: 500; font-size: 13px; color: var(--ink-3); margin-right: 6px; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .two, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare, .buffett-key { grid-template-columns: 1fr; }
+  .week5 { grid-template-columns: 54px repeat(10, minmax(0, 1fr)); gap: 3px; }
+  .q { grid-template-columns: 44px minmax(0, 1fr); gap: 4px 12px; }
+  .q .n { font-size: 44px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Oliver Burkeman · 2021</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#trap">The trap</a>
+    <a href="#choosing">Part I</a>
+    <a href="#control">Part II</a>
+    <a href="#questions">Five questions</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span>4000</span><span>Weeks</span></h1>
+    <p class="sub">Time management for mortals</p>
+    <p class="dek">If you live to 80, you get about four thousand weeks. Burkeman argues that you'll never get on top of everything, and that admitting this is where a good life starts.</p>
+    <div class="byline label">
+      <span>14 chapters</span><span>2 parts</span><span>5 questions</span><span>10 tools</span>
+    </div>
+    <p class="readnote">Read in the German edition, <em>4000 Wochen: Das Leben ist zu kurz für Zeitmanagement</em> (Piper). Notes in English.</p>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of 4000 Wochen by Oliver Burkeman: four bananas stacked down a cream page, from fresh yellow-green at the top to spotted brown at the bottom">
+</div>
+
+<div class="weekband" aria-hidden="true">
+  <canvas id="weeks"></canvas>
+  <div class="ends label"><span>Week 1</span><span>Each cell is one week</span><span>Week 4,000</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>You will never get everything done, and that's good news</h2>
+  </div>
+  <div class="two">
+    <div class="prose">
+      <p>Human life is absurdly short. Modern humans have been around for at least 200,000 years, and life on Earth may last another 1.5 billion. If you reach 80, you'll have lived about <strong>4,000 weeks</strong>. Burkeman's point is that time management, in the widest sense, is what life consists of. Yet the industry that goes by that name is about clearing inboxes and perfecting morning routines.</p>
+      <p>Productivity tricks do work, which is the problem. Get faster and the conveyor belt speeds up. Answer email efficiently and you get more email. In 1930 Keynes predicted a 15-hour working week by now. Instead people found new needs, new neighbours to keep up with, and made busyness a status symbol.</p>
+      <p>The book's claim is that the day when you finally have it all under control will never come. Burkeman's answer is <em>"Good."</em> Once you stop chasing total control you can make real choices about the few things you'll actually do.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The arithmetic</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat"><span class="big num">~4,000</span><p>weeks in an 80-year life. Reach 90 and it's about 4,700.</p></div>
+        <div class="stat"><span class="big num">6,400</span><p>weeks lived by Jeanne Calment, at 122 the oldest known person.</p></div>
+        <div class="stat"><span class="big num">310,000</span><p>weeks since the Sumerians: all of recorded civilisation.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--ripe)">
+        <span class="label">Where it started</span>
+        <p>Burkeman spent years as a self-confessed "productivity geek": Inbox Zero, Pomodoro timers, 15-minute blocks, A-B-C priority lists, a weekly newspaper column on productivity. On a park bench in Brooklyn one winter morning in 2014, more anxious than ever, he realised none of it would ever work. Accepting that brought him more calm than any system had.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:28px">
+    <h4>A whole life on one page</h4>
+    <svg id="lifegrid" viewBox="0 0 640 430" role="img" aria-label="A grid of about 4,000 small squares: 80 columns, one per year of life, each with 52 squares for the weeks. The first 40 columns are filled to show a 40-year-old has already used about half. Markers note school, work and retirement."></svg>
+    <div class="legend">
+      <span class="c-ripe"><i></i>Weeks already lived, at age 40</span>
+      <span style="--c:var(--paper-2);"><i style="box-shadow:inset 0 0 0 1px var(--rule)"></i>Weeks still to come</span>
+    </div>
+    <p class="cap">Eighty columns, one per year, each holding 52 weeks. At 40 you've used half. When Burkeman asked friends to guess how many weeks a person lives, one guessed a six-figure number. The real total fits on one page.</p>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I · Choosing to choose</span>
+      <h3>Face the limits</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>The Limit-Embracing Life</b>How time became a resource</a></li>
+        <li><span>02</span><a href="#ch2"><b>The Efficiency Trap</b>Speed brings more work</a></li>
+        <li><span>03</span><a href="#ch3"><b>Facing Finitude</b>Choosing makes life matter</a></li>
+        <li><span>04</span><a href="#ch4"><b>Becoming a Better Procrastinator</b>Neglect the right things</a></li>
+        <li><span>05</span><a href="#ch5"><b>The Watermelon Problem</b>Attention is your life</a></li>
+        <li><span>06</span><a href="#ch6"><b>The Intimate Interrupter</b>Why distraction tempts us</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II · Beyond control</span>
+      <h3>Let go</h3>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>We Never Really Have Time</b>Worry and plans</a></li>
+        <li><span>08</span><a href="#ch8"><b>You Are Here</b>Life isn't a means to an end</a></li>
+        <li><span>09</span><a href="#ch9"><b>Rediscovering Rest</b>Leisure that's useless</a></li>
+        <li><span>10</span><a href="#ch10"><b>The Impatience Spiral</b>The more you rush, the worse it gets</a></li>
+        <li><span>11</span><a href="#ch11"><b>Staying on the Bus</b>Patience as a skill</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II, continued</span>
+      <h3>Live it</h3>
+      <ol>
+        <li><span>12</span><a href="#ch12"><b>The Loneliness of the Digital Nomad</b>Time is better shared</a></li>
+        <li><span>13</span><a href="#ch13"><b>Cosmic Insignificance Therapy</b>A modest, meaningful life</a></li>
+        <li><span>14</span><a href="#ch14"><b>The Human Disease</b>We are time</a></li>
+        <li><span>→</span><a href="#afterword"><b>Afterword: Beyond Hope</b>Do the next necessary thing</a></li>
+        <li><span>+</span><a href="#toolkit"><b>Ten tools for embracing finitude</b>The practical appendix</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE TRAP ============ -->
+<section id="trap">
+  <div class="sec-head">
+    <span class="label">The core argument</span>
+    <h2>The paradox of limitation</h2>
+    <p class="lede">The harder you try to master your time, the more stressful and empty life gets. The more you accept the limits and work with them, the more productive, meaningful and joyful it becomes.</p>
+  </div>
+
+  <div class="compare">
+    <div class="hd c-spot">
+      <h5>Fighting finitude</h5>
+      <ul>
+        <li>Believes everything can fit if you're efficient enough</li>
+        <li>Says yes to everything and never asks if it's worth the time</li>
+        <li>Keeps options open and commits to nothing</li>
+        <li>Treats each moment as a step towards a calmer future</li>
+        <li>Wants total, private control over its own schedule</li>
+        <li>Ends up busier, more anxious and lonelier</li>
+      </ul>
+    </div>
+    <div class="hd c-fresh">
+      <h5>Embracing finitude</h5>
+      <ul>
+        <li>Assumes there will never be time for everything</li>
+        <li>Makes hard choices on purpose and drops the rest</li>
+        <li>Commits, and lets the choice give life its meaning</li>
+        <li>Finds value in the present, not only where it leads</li>
+        <li>Shares time with others, even at a cost to control</li>
+        <li>Ends up calmer, and gets more of what matters done</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="figrow" style="margin-top:24px">
+    <div class="fig">
+      <h4>The efficiency trap</h4>
+      <svg viewBox="0 0 420 330" role="img" aria-label="A loop of four steps. Too much to do leads to: get faster and more efficient. That leads to: you become known as someone who gets things done, so more arrives. That leads to: even more to do, which leads back to the start.">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker>
+        </defs>
+        <circle cx="210" cy="165" r="112" fill="none" stroke="var(--rule)" stroke-width="2" stroke-dasharray="4 6"/>
+        <g fill="none" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#arr)">
+          <path d="M260 66 A112 112 0 0 1 312 118"/>
+          <path d="M318 212 A112 112 0 0 1 262 264"/>
+          <path d="M160 266 A112 112 0 0 1 104 212"/>
+          <path d="M100 118 A112 112 0 0 1 156 64"/>
+        </g>
+        <g font-size="11">
+          <rect x="140" y="30" width="140" height="44" rx="6" fill="var(--card)" stroke="var(--spot)" stroke-width="2"/>
+          <text x="210" y="49" text-anchor="middle" style="fill:var(--spot)">STEP 1</text>
+          <text x="210" y="65" text-anchor="middle" style="fill:var(--ink);font-family:var(--body);font-size:14px">Too much to do</text>
+
+          <rect x="280" y="143" width="134" height="44" rx="6" fill="var(--card)" stroke="var(--ripe)" stroke-width="2"/>
+          <text x="347" y="162" text-anchor="middle" style="fill:var(--ripe)">STEP 2</text>
+          <text x="347" y="178" text-anchor="middle" style="fill:var(--ink);font-family:var(--body);font-size:14px">Get more efficient</text>
+
+          <rect x="128" y="256" width="164" height="44" rx="6" fill="var(--card)" stroke="var(--fresh)" stroke-width="2"/>
+          <text x="210" y="275" text-anchor="middle" style="fill:var(--fresh)">STEP 3</text>
+          <text x="210" y="291" text-anchor="middle" style="fill:var(--ink);font-family:var(--body);font-size:14px">More gets sent your way</text>
+
+          <rect x="6" y="143" width="134" height="44" rx="6" fill="var(--card)" stroke="var(--brown)" stroke-width="2"/>
+          <text x="73" y="162" text-anchor="middle" style="fill:var(--brown)">STEP 4</text>
+          <text x="73" y="178" text-anchor="middle" style="fill:var(--ink);font-family:var(--body);font-size:14px">Even more to do</text>
+        </g>
+        <text x="210" y="160" text-anchor="middle" font-size="11">the belt</text>
+        <text x="210" y="176" text-anchor="middle" font-size="11">speeds up</text>
+      </svg>
+      <p class="cap">It's a trap of quality too. If you believe you can fit everything in, you stop asking whether each task deserves a slice of your life, so your days fill with things you don't care much about.</p>
+    </div>
+
+    <div class="fig">
+      <h4>The jar has too many big rocks</h4>
+      <svg viewBox="0 0 420 300" role="img" aria-label="Two jars. Left, the classic parable: three big rocks go in first, and pebbles and sand fill the gaps, so everything fits. Right, real life: far more big rocks than the jar can hold, spilling over the rim and onto the floor.">
+        <g stroke="var(--ink)" stroke-width="2.5" fill="none" stroke-linecap="round">
+          <path d="M40 60 V250 Q40 268 58 268 H162 Q180 268 180 250 V60"/>
+          <path d="M240 90 V250 Q240 268 258 268 H362 Q380 268 380 250 V90"/>
+        </g>
+        <!-- left: fits -->
+        <g fill="var(--ripe)">
+          <circle cx="78" cy="232" r="30"/><circle cx="140" cy="230" r="32"/><circle cx="108" cy="176" r="28"/>
+        </g>
+        <g fill="var(--ink-3)">
+          <circle cx="62" cy="190" r="6"/><circle cx="152" cy="186" r="7"/><circle cx="74" cy="160" r="5"/><circle cx="142" cy="158" r="6"/><circle cx="110" cy="136" r="6"/><circle cx="84" cy="128" r="4"/><circle cx="136" cy="128" r="5"/>
+        </g>
+        <rect x="44" y="108" width="132" height="10" fill="var(--rule)"/>
+        <!-- right: overflow -->
+        <g fill="var(--spot)">
+          <circle cx="276" cy="236" r="28"/><circle cx="340" cy="236" r="28"/><circle cx="306" cy="184" r="28"/><circle cx="262" cy="146" r="24"/><circle cx="350" cy="150" r="26"/>
+          <circle cx="304" cy="100" r="26"/><circle cx="270" cy="62" r="22"/><circle cx="338" cy="58" r="24"/><circle cx="306" cy="24" r="20"/>
+          <circle cx="404" cy="258" r="14"/><circle cx="218" cy="262" r="12"/>
+        </g>
+        <text x="110" y="292" text-anchor="middle" font-size="11">THE PARABLE</text>
+        <text x="310" y="292" text-anchor="middle" font-size="11">REAL LIFE</text>
+      </svg>
+      <p class="cap">The self-help parable says: put the big rocks in first and the small stuff fits around them. Burkeman's reply is that modern life offers far more worthwhile rocks than any jar holds. He calls this <strong>existential overwhelm</strong>. Some big rocks have to stay out, and choosing which is the real work.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="choosing">
+  <span class="label partno">Part I · Chapters 1–6</span>
+  <h2>Choosing to choose</h2>
+  <p class="lede">How we came to see time as a resource, why speed makes things worse, and what changes when you treat each choice as a trade-off against everything else you won't do.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">The Limit-Embracing Life</span></div>
+  <div class="body">
+    <div>
+      <h3>Time wasn't always a thing you use</h3>
+      <p class="idea">Once "time" was split off from "life", it became a resource to spend well, and a source of guilt when we don't.</p>
+    </div>
+    <ul class="points">
+      <li>A medieval peasant had a hard life but no time problems. Work followed the tasks: you milked the cows when they needed milking. Historians call this <strong>task orientation</strong>. Durations were measured by activities, such as a "Miserere while", the time it took to recite a psalm.</li>
+      <li>Mechanical clocks, probably first built by monks who needed to wake for night prayers, made time visible and abstract. Factories then made it saleable. One 18th-century ironmaster, Ambrose Crowley, docked wages for time spent smoking, singing, reading the news or quarrelling, and called idle workers thieves.</li>
+      <li>Once time is a resource, you feel pressure to use it well and blame yourself for wasting it. You answer every overload by working harder, rather than asking whether the demands are reasonable.</li>
+      <li>Much of our productivity effort is really <strong>avoidance</strong>: of hard choices, of uncertainty, of the fact that this limited life is the only one we get. Overwork, procrastination, compulsive planning and busyness all keep the feeling of limitless control alive.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“The problem with trying to master your time is that time ends up mastering you.”</blockquote>
+      <span class="label">Burkeman, chapter 1 (translated back from the German edition)</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">The Efficiency Trap</span></div>
+  <div class="body">
+    <div>
+      <h3>Getting faster only brings more</h3>
+      <p class="idea">Busyness isn't solved by efficiency. Efficiency feeds it.</p>
+    </div>
+    <ul class="points">
+      <li>The characters in Richard Scarry's <em>Busytown</em> are busy but never overwhelmed, because their tasks fit their hours. We live with the constant sense that ours won't.</li>
+      <li>As early as 1908, Arnold Bennett wrote <em>How to Live on 24 Hours a Day</em> for commuters who felt their days were too small for everything they were meant to hold.</li>
+      <li><strong>Stop clearing the decks.</strong> Doing the easy items first, to make room for the important ones later, means you never get to the important ones. The decks refill.</li>
+      <li><strong>Beware convenience.</strong> Apps that remove "friction" also remove experiences we didn't know we valued: the chat with a shopkeeper, the effort that made something mean something.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Facing Finitude</span></div>
+  <div class="body">
+    <div>
+      <h3>Everything is borrowed time</h3>
+      <p class="idea">Finitude isn't a flaw in life. It's what makes your choices mean anything.</p>
+    </div>
+    <ul class="points">
+      <li>Heidegger's hard-to-read point: we don't <em>have</em> time, we <em>are</em> time. Being human means being "thrown" into a limited stretch of it.</li>
+      <li>The philosopher Martin Hägglund notes that if life were eternal, nothing would matter, because every choice could be made tomorrow. His family's summers on the Baltic coast are precious because there won't be infinitely many.</li>
+      <li>We treat 4,000 weeks as a scandalously small number compared with infinity. Compared with never having existed at all, it's a gift. Each week was never owed to you.</li>
+      <li>Every choice rules out countless other ways to spend the same hours, and that's exactly what makes it a choice. This is the <strong>joy of missing out</strong>, as opposed to the fear of it.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">A Better Procrastinator</span></div>
+  <div class="body">
+    <div>
+      <h3>The goal is to neglect the right things</h3>
+      <p class="idea">You're always procrastinating on almost everything. Time management is choosing what to put off, and staying calm about it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Pay yourself first.</strong> Borrowed from personal finance via the cartoonist Jessica Abel: if something matters, do some of it today, before everything else, however little. There will never be a moment when everything is done and time is free.</li>
+      <li><strong>Limit work in progress.</strong> Pick no more than three projects at once. A new one waits until a slot frees up, by finishing a project or dropping it.</li>
+      <li><strong>Resist middling priorities.</strong> The real danger isn't the obvious time-wasters. It's the moderately appealing job, the fairly pleasant friendship, that eats the time meant for what you care about most.</li>
+      <li>Bad procrastination comes from perfectionism. Starting means facing the limits of your talent and finding out the work won't match the fantasy. Better to accept being a finite, imperfect human and begin anyway.</li>
+      <li><strong>Settle.</strong> Following Robert Goodin's <em>On Settling</em>: any commitment, whether to a partner, a job or a place, means giving up the others. Choosing is the only way to have anything at all.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Three slots, no more</h4>
+        <svg viewBox="0 0 440 250" role="img" aria-label="Left: a long open list of tasks, fading off the bottom. An arrow points right to three boxes labelled in progress. Only one of the three is empty, marked free a slot by finishing or dropping. Everything else on the long list waits.">
+          <text x="20" y="18" font-size="11">OPEN LIST · ENDLESS</text>
+          <g fill="var(--paper-2)">
+            <rect x="20" y="30" width="150" height="14" rx="3"/><rect x="20" y="50" width="130" height="14" rx="3"/><rect x="20" y="70" width="160" height="14" rx="3"/>
+            <rect x="20" y="90" width="120" height="14" rx="3"/><rect x="20" y="110" width="145" height="14" rx="3"/><rect x="20" y="130" width="155" height="14" rx="3"/>
+            <rect x="20" y="150" width="110" height="14" rx="3"/><rect x="20" y="170" width="140" height="14" rx="3" opacity=".7"/><rect x="20" y="190" width="125" height="14" rx="3" opacity=".45"/>
+            <rect x="20" y="210" width="150" height="14" rx="3" opacity=".25"/><rect x="20" y="230" width="135" height="14" rx="3" opacity=".12"/>
+          </g>
+          <path d="M196 120 H246" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#arr)"/>
+          <text x="262" y="18" font-size="11">IN PROGRESS · MAX 3</text>
+          <rect x="262" y="34" width="160" height="50" rx="6" style="fill:color-mix(in srgb, var(--ripe) 22%, var(--card))" stroke="var(--ripe)" stroke-width="2"/>
+          <rect x="262" y="96" width="160" height="50" rx="6" style="fill:color-mix(in srgb, var(--ripe) 22%, var(--card))" stroke="var(--ripe)" stroke-width="2"/>
+          <rect x="262" y="158" width="160" height="50" rx="6" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="5 5"/>
+          <text x="342" y="64" text-anchor="middle" style="fill:var(--ink);font-family:var(--body);font-size:14px">Project A</text>
+          <text x="342" y="126" text-anchor="middle" style="fill:var(--ink);font-family:var(--body);font-size:14px">Project B</text>
+          <text x="342" y="180" text-anchor="middle" font-size="10.5">free a slot only by</text>
+          <text x="342" y="195" text-anchor="middle" font-size="10.5">finishing or dropping</text>
+        </svg>
+        <p class="cap">From <em>Personal Kanban</em>. With a hard cap you can no longer pretend you'll do everything, and Burkeman found the cap made him calmer and more productive.</p>
+      </div>
+      <div class="fig">
+        <h4>The 25-goal list (attributed to Warren Buffett)</h4>
+        <div class="buffett" role="img" aria-label="Twenty-five numbered goals. The first five are highlighted as the ones to focus on. Goals six to twenty-five are crossed out as the ones to avoid at all costs.">
+          <span class="top">1</span><span class="top">2</span><span class="top">3</span><span class="top">4</span><span class="top">5</span>
+          <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+          <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+          <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+          <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+        </div>
+        <div class="buffett-key">
+          <div><b style="color:var(--ripe)">Top 5</b><span>Organise your time around these.</span></div>
+          <div><b style="color:var(--spot)">The other 20</b><span>Not your back-up list. Avoid them at all costs: they matter just enough to distract you from the five.</span></div>
+        </div>
+        <p class="cap">The story is probably apocryphal, and Burkeman doesn't keep such a list himself. The point stands: middling priorities do the most damage.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">The Watermelon Problem</span></div>
+  <div class="body">
+    <div>
+      <h3>Your attention is your life</h3>
+      <p class="idea">What you pay attention to is, in the end, what your life consisted of. The attention economy is a machine for misusing it.</p>
+    </div>
+    <ul class="points">
+      <li>In April 2016, while elections and wars raged, a huge online audience spent 44 minutes watching two BuzzFeed reporters put rubber bands round a watermelon until, at band 686, it burst.</li>
+      <li>"Free" platforms sell your attention to advertisers. They track every swipe and serve whatever keeps you hooked, usually what enrages or frightens you.</li>
+      <li>The deeper harm isn't wasted minutes. Distraction changes what you care about and who you become, and you have less control over your attention than you'd like to think.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">The Intimate Interrupter</span></div>
+  <div class="body">
+    <div>
+      <h3>Distraction is a flight from finitude</h3>
+      <p class="idea">The urge to check your phone comes from inside. Important work forces you to face your limits, and distraction offers an escape.</p>
+    </div>
+    <ul class="points">
+      <li>In 1969 the American Steve Young, training as a Shingon monk in Japan, had to pour icy water over himself three times a day. He found the pain eased when he stopped resisting the sensation and paid close attention to it. He later taught meditation as Shinzen Young.</li>
+      <li>Meaningful work is uncomfortable because you can't control how it turns out, or whether you're good enough. Boredom is often that discomfort in disguise.</li>
+      <li>The fix isn't more willpower. It's accepting the discomfort of engaging with limited, uncertain reality. Then the pull of the escape weakens.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="control">
+  <span class="label partno">Part II · Chapters 7–14</span>
+  <h2>Beyond control</h2>
+  <p class="lede">The other half of finitude: we don't just have little time, we have little control over it. Worry, rushing, hoarding time for ourselves and endless self-improvement are all attempts to escape that.</p>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">We Never Really Have Time</span></div>
+  <div class="body">
+    <div>
+      <h3>A plan is a present-moment thought</h3>
+      <p class="idea">We talk as if we "have" time, like money in a wallet. We only ever expect it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Hofstadter's law:</strong> everything takes longer than you expect, even when you allow for Hofstadter's law. Padding the estimate doesn't help.</li>
+      <li>The writer David Cain points out that "having three hours" is really an expectation. The boss can call, the train can fail, you can die.</li>
+      <li>Worry is the attempt to feel certain about a future you can't control. A plan is useful as a statement of intent in the present, not as a promise the future has to keep.</li>
+      <li>Many traditions say the same: tend to the part of time that's actually yours, which is now. "Do not worry about tomorrow."</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">You Are Here</span></div>
+  <div class="body">
+    <div>
+      <h3>Life isn't a run-up to later</h3>
+      <p class="idea">When every moment is only a means to a future end, you never arrive.</p>
+    </div>
+    <ul class="points">
+      <li>Using time well means treating it instrumentally, as a tool for something else. That's fine for boiling a kettle. It's a disaster when it takes over your whole life.</li>
+      <li>As a new father, Burkeman read baby books from rival camps and noticed that every one of them was about the child's future, not the baby in front of him. Adam Gopnik calls this the <strong>causal catastrophe</strong>: judging a way of raising children only by the adults it produces. Burkeman realised he was using his son to soothe his own anxieties about the future.</li>
+      <li>Sam Harris notes that everything you do, you'll one day do for the last time. There will be a last time you pick up your child. You rarely know it's the last time while it's happening.</li>
+      <li>Forcing yourself to be present doesn't work either. Robert Pirsig arrived at Crater Lake determined to savour it, and felt nothing. Trying hard to be present becomes one more project.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Rediscovering Rest</span></div>
+  <div class="body">
+    <div>
+      <h3>Leisure doesn't need a purpose</h3>
+      <p class="idea">If you rest in order to work better, you haven't really rested.</p>
+    </div>
+    <ul class="points">
+      <li>Even the campaign group Take Back Your Time usually justifies shorter hours by saying rested workers are more productive. That turns leisure into one more investment.</li>
+      <li>Some of us no longer want to rest. Danielle Steel reported working 20-hour days to write 179 books by 72.</li>
+      <li>Rest needs rules. A Lower East Side "Sabbath elevator" that stops at every floor shows how religious communities knew rest won't happen by default.</li>
+      <li>The philosopher Kieran Setiya calls pursuits like walking <strong>atelic</strong>: they have no end point and are done for their own sake. Hobbies are quietly subversive. Rod Stewart spent some 20 years building a model city railway, painting the grime on himself.</li>
+      <li>Be willing to be mediocre. A hobby you're bad at protects it from becoming another performance.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">The Impatience Spiral</span></div>
+  <div class="body">
+    <div>
+      <h3>Speed feeds impatience</h3>
+      <p class="idea">Every technology that speeds things up makes us less tolerant of the delays that remain.</p>
+    </div>
+    <ul class="points">
+      <li>Brooklyn rush-hour honking mostly means "hurry up!" to drivers stuck in the same jam. It helps nobody.</li>
+      <li>Amazon reportedly worked out that a one-second slower homepage would cost it $1.6 billion a year in sales. A two-minute microwave now feels longer than a two-hour oven once did.</li>
+      <li>Therapist Stephanie Brown saw Silicon Valley clients who couldn't sit through a 50-minute session. Their rushing was self-medication: slowing down let in anxiety they were trying not to feel.</li>
+      <li>The way out is to accept that you can't make reality go faster. Some things take the time they take.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Staying on the Bus</span></div>
+  <div class="body">
+    <div>
+      <h3>Patience is an active skill</h3>
+      <p class="idea">Patience isn't passive waiting. It means letting things take the time they need, and that's often what gets them done.</p>
+    </div>
+    <ul class="points">
+      <li>M. Scott Peck thought of himself as a mechanical idiot until a neighbour told him he just never took the time. Later, faced with a jammed handbrake, he slowed down, looked and freed it.</li>
+      <li><strong>Develop a taste for problems.</strong> A life without problems would have nothing worth doing. Life is dealing with one problem after another.</li>
+      <li><strong>Embrace radical incrementalism.</strong> Robert Boice found the most productive academic writers worked in short daily sessions, sometimes just ten minutes, and stopped on time, even when they had energy left.</li>
+      <li><strong>Originality lies on the other side of imitation.</strong> See the bus station below.</li>
+    </ul>
+    <div class="fig">
+      <h4>The Helsinki bus station theory</h4>
+      <svg viewBox="0 0 600 240" role="img" aria-label="Five bus routes leave a station on the left and run together along the same street for the first three stops, drawn as one thick bundle. After the third stop they fan out in five different directions to five distinct destinations. Someone who gets off early and switches buses keeps riding the shared stretch again.">
+        <rect x="10" y="96" width="56" height="48" rx="6" fill="var(--ink)"/>
+        <text x="38" y="166" text-anchor="middle" font-size="11">STATION</text>
+        <g fill="none" stroke-width="3" stroke-linecap="round">
+          <path d="M66 112 H300 C360 112 380 40 470 26 L590 18" stroke="var(--fresh)"/>
+          <path d="M66 116 H300 C370 116 400 74 590 70" stroke="var(--ripe)"/>
+          <path d="M66 120 H300 C380 120 420 120 590 120" stroke="var(--spot)"/>
+          <path d="M66 124 H300 C370 124 400 168 590 172" stroke="var(--brown)"/>
+          <path d="M66 128 H300 C360 128 380 200 470 214 L590 222" stroke="var(--ink-3)"/>
+        </g>
+        <g fill="var(--card)" stroke="var(--ink)" stroke-width="2">
+          <circle cx="130" cy="120" r="9"/><circle cx="200" cy="120" r="9"/><circle cx="270" cy="120" r="9"/>
+        </g>
+        <text x="200" y="92" text-anchor="middle" font-size="11">SAME STOPS FOR EVERY BUS</text>
+        <text x="200" y="152" text-anchor="middle" font-size="11">your work looks like everyone else's</text>
+        <text x="500" y="104" text-anchor="middle" font-size="11">routes split</text>
+        <text x="500" y="146" text-anchor="middle" font-size="11">your own work</text>
+      </svg>
+      <p class="cap">Photographer Arno Minkkinen's parable: every line out of Helsinki's central station shares the same first stretch. Three stops in, a gallery tells you your work looks like someone else's. The impatient response is to rush back and pick a new bus, and ride the same shared stretch again. The patient response is to stay on, because the routes only diverge later.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">The Digital Nomad</span></div>
+  <div class="body">
+    <div>
+      <h3>Time is worth more when it's shared</h3>
+      <p class="idea">Total control over your schedule is a lonely kind of freedom. What makes time valuable is being able to spend it with other people.</p>
+    </div>
+    <ul class="points">
+      <li>Mario Salcedo has lived for some 20 years on Royal Caribbean cruise ships, free of chores and fully sovereign over his days. Burkeman finds it a vivid picture of total control, and of how isolating it is.</li>
+      <li>Flexitime and remote work are sold as pure freedom, but they make it harder to coordinate with others. Hoarding time is as much a mistake as wasting it.</li>
+      <li>William McNeill, drilling pointlessly as a recruit in 1941, felt a strange swell of togetherness from marching in step. Shared rhythm, like singing or dancing together, binds people.</li>
+    </ul>
+    <div class="fig">
+      <h4>The Soviet continuous week, from 1929</h4>
+      <div class="week5" role="img" aria-label="A grid of five worker groups across ten days. Each group, colour-coded yellow, green, orange, purple and red, has its rest day on a different day, so no two groups are ever off at the same time.">
+        <span></span><span class="d">1</span><span class="d">2</span><span class="d">3</span><span class="d">4</span><span class="d">5</span><span class="d">6</span><span class="d">7</span><span class="d">8</span><span class="d">9</span><span class="d">10</span>
+        <span class="g">Yellow</span><i class="off" style="--c:#d9b300"></i><i></i><i></i><i></i><i></i><i class="off" style="--c:#d9b300"></i><i></i><i></i><i></i><i></i>
+        <span class="g">Green</span><i></i><i class="off" style="--c:#4f9a3a"></i><i></i><i></i><i></i><i></i><i class="off" style="--c:#4f9a3a"></i><i></i><i></i><i></i>
+        <span class="g">Orange</span><i></i><i></i><i class="off" style="--c:#e07a1f"></i><i></i><i></i><i></i><i></i><i class="off" style="--c:#e07a1f"></i><i></i><i></i>
+        <span class="g">Purple</span><i></i><i></i><i></i><i class="off" style="--c:#8a55c4"></i><i></i><i></i><i></i><i></i><i class="off" style="--c:#8a55c4"></i><i></i>
+        <span class="g">Red</span><i></i><i></i><i></i><i></i><i class="off" style="--c:#d23b3b"></i><i></i><i></i><i></i><i></i><i class="off" style="--c:#d23b3b"></i>
+      </div>
+      <p class="cap">Stalin's economist Yuri Larin wanted factories running every day. Workers got a five-day week (four on, one off) in five colour-coded groups with staggered rest days. Friends in different colours could never meet, and families were pulled apart. More rest days did nothing to replace rest that people shared.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Cosmic Insignificance Therapy</span></div>
+  <div class="body">
+    <div>
+      <h3>The universe doesn't care, and that's a relief</h3>
+      <p class="idea">You don't have to make a dent in the universe. A modestly meaningful life is enough.</p>
+    </div>
+    <ul class="points">
+      <li>A patient of the Jungian therapist James Hollis, a successful executive, was struck on a flight by a single thought: <em>"I hate my life."</em> The life she'd built no longer meant anything to her.</li>
+      <li>The pandemic lockdowns worked like a collective version of that jolt. Many people realised how much of their routine they didn't miss.</li>
+      <li>We judge our lives against impossible standards: you must do something remarkable, or it was wasted. Seen against cosmic time, nothing anyone does is that significant, so you're free of the demand.</li>
+      <li>Then ordinary things count again: looking after a relative, making music, being a pastry chef. They're meaningful because they're what a real person did with their actual weeks.</li>
+    </ul>
+    <div class="fig">
+      <h4>Civilisation is only about 60 long lives</h4>
+      <svg id="magee" viewBox="0 0 640 150" role="img" aria-label="A row of 60 dots, one per 100-year lifetime, running from the start of civilisation on the left to today on the right. Markers count back from today: 5 lifetimes to Henry the Eighth, 7 to the Renaissance, 20 to Jesus, 35 to the golden age of the pharaohs, 60 to the beginnings of civilisation."></svg>
+      <p class="cap">Bryan Magee's thought experiment: in every generation someone lived to 100, so you can link 100-year lives end to end back through history. Henry VIII was on the throne just five such lifetimes ago. All of civilisation fits into about 60. Human history is shorter than it feels, and so is any single life within it.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">The Human Disease</span></div>
+  <div class="body">
+    <div>
+      <h3>We can't master time, because we are time</h3>
+      <p class="idea">To master the moments of your life you'd have to stand outside them. There's no outside.</p>
+    </div>
+    <ul class="points">
+      <li>The fantasy behind most time problems is summed up in a title Burkeman mentions in chapter 1: <em>Master Your Time, Master Your Life</em>. Some chase it through relentless efficiency, others by avoiding big commitments altogether.</li>
+      <li>Borges: "Time is a river which sweeps me along, but I am the river." You can't climb onto the bank when you are the river. Insecurity is the normal state, and the "provisional life", always waiting for real life to start, is a way of denying that.</li>
+      <li>The chapter ends with five questions to live with. They're set out in full below.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ FIVE QUESTIONS ============ -->
+<section id="questions">
+  <div class="sec-head">
+    <span class="label">From chapter 14</span>
+    <h2>Five questions to ask your life</h2>
+    <p class="lede">You don't have to answer them straight away. Burkeman borrows Rilke's advice to "live the questions". Asking them seriously is already a way of facing your finite time.</p>
+  </div>
+  <div class="qs">
+    <div class="q c-fresh"><span class="n">1</span><div><h3>Where are you choosing comfort over the discomfort of growth?</h3><p>The things that matter most mean risking failure, embarrassment and loss, so we drift towards avoidance. The therapist James Hollis suggests asking of any big decision: <em>does this make me larger or smaller?</em> Usually you already know.</p></div></div>
+    <div class="q c-ripe"><span class="n">2</span><div><h3>Are you holding yourself to a standard of productivity that's impossible?</h3><p>If the standard can't be met, it can't be met, even when the stakes are high. Drop it, pick a few meaningful tasks out of the wreckage, and start today.</p></div></div>
+    <div class="q c-spot"><span class="n">3</span><div><h3>Where have you still not accepted that you are who you are?</h3><p>Many people spend adult life trying to earn their right to exist in the eyes of parents, society or a cause. As therapist Stephen Cope puts it, at some point you realise nobody much cares what you do with your life. That's unsettling, and also freeing.</p></div></div>
+    <div class="q c-brown"><span class="n">4</span><div><h3>Where are you holding back until you feel you know what you're doing?</h3><p>It's easy to treat years of life as a dress rehearsal. As a teenager Burkeman assumed newspapers were made by people who knew exactly what they were doing, until he worked at one. Everyone is improvising, in every institution and every marriage. If the feeling of knowing what you're doing never comes, you might as well start now.</p></div></div>
+    <div class="q" style="--c:var(--ink)"><span class="n">5</span><div><h3>How would you spend your days if it didn't matter whether you saw your efforts bear fruit?</h3><p>The causal catastrophe again: judging every action only by its results, so you only choose things whose results you'll live to see. Yet parenting, building a community and most worthwhile work can't be finished in one lifetime. David Licata's film <em>A Life's Work</em> follows people on projects they know they won't complete, like cataloguing every tree in the world's old-growth forests. We're all medieval stonemasons adding a few stones to a cathedral we won't see finished.</p></div></div>
+  </div>
+</section>
+
+<!-- ============ AFTERWORD ============ -->
+<section id="afterword">
+  <div class="sec-head">
+    <span class="label">Afterword</span>
+    <h2>Beyond hope</h2>
+  </div>
+  <div class="two">
+    <div class="prose">
+      <p>Burkeman admits the obvious: things look bad. The pandemic, wildfires, record Arctic heat, refugees in dinghies. Time management can seem a trivial subject. But how we meet these crises comes down to how we use the hours we have each day. Ordinary life, right now, is all we've got to work with.</p>
+      <p>The environmental activist Derrick Jensen says he has given up hope, and thinks that's right. Hope means pinning your faith on something outside yourself and outside the present moment, as if someone else will sort it out. Losing that kind of hope isn't despair. It frees you to act on what's in front of you.</p>
+      <p>In 1933 Carl Jung answered a woman who asked him how to live. Her question had no answer, he wrote. There's no prescribed path, only one that appears as you walk it. His only advice was to quietly <em>do the next and most necessary thing</em>.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Do the next and most necessary thing.”</blockquote>
+      <span class="label">Carl Jung, letter of 15 December 1933, quoted at the end of the book</span>
+      <p class="cap">That's all a finite person can ever do, and Burkeman argues it's enough.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the appendix</span>
+    <h2>Ten tools for embracing finitude</h2>
+    <p class="lede">The book ends with ten practical techniques. Each one turns an argument from the chapters into a habit.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Cap the work</h3>
+      <div class="tk"><b><em>01</em>Adopt a fixed volume approach</b><span>Keep an open list of everything and a closed list of at most ten. Nothing joins the closed list until something leaves it. Set firm start and stop times for the working day too.</span></div>
+      <div class="tk"><b><em>02</em>Serialise, serialise, serialise</b><span>One big project at a time (at most one work, one personal), finished before the next. Put off everything else you can.</span></div>
+      <div class="tk"><b><em>03</em>Decide in advance what to fail at</b><span>Name the areas where you'll underachieve: the lawn, the tidy kitchen. Rotate the neglect: two months of just enough at work while you focus on family, then switch.</span></div>
+      <div class="tk"><b><em>04</em>Keep a "done" list</b><span>Start the day at zero, not in productivity debt. Write down what you complete. Small wins motivate more wins.</span></div>
+    </div>
+    <div class="col">
+      <h3>Guard attention</h3>
+      <div class="tk"><b><em>05</em>Consolidate your caring</b><span>You can't respond to every crisis in the feed. Pick a cause or two, such as prison reform or a local food bank, and commit to them for the next few years.</span></div>
+      <div class="tk"><b><em>06</em>Embrace boring, single-purpose technology</b><span>Delete social apps (even email, if you dare), switch your phone to greyscale, read on an e-reader that can't do anything else.</span></div>
+      <div class="tk"><b><em>07</em>Seek novelty in the mundane</b><span>Time feels faster as life gets routine. Rather than chasing exotic trips, pay closer attention: take a new route to work, take photos, keep a journal, play I Spy with a child.</span></div>
+    </div>
+    <div class="col">
+      <h3>Loosen control</h3>
+      <div class="tk"><b><em>08</em>Be a researcher in relationships</b><span>In tense or boring moments with others, swap the goal of a particular outcome for curiosity about who this person really is. Curiosity is satisfied by whatever happens.</span></div>
+      <div class="tk"><b><em>09</em>Cultivate instantaneous generosity</b><span>Act on the generous impulse when you feel it: donate, send the praise, call the friend. The perfect version later usually never happens.</span></div>
+      <div class="tk"><b><em>10</em>Practise doing nothing</b><span>Set a timer for five or ten minutes, sit down and stop trying to do anything, including thinking about breathing. "Nothing is harder to do than nothing."</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Oliver Burkeman, <em>Four Thousand Weeks: Time Management for Mortals</em> (2021), read in the German translation <em>4000 Wochen: Das Leben ist zu kurz für Zeitmanagement</em> (Piper). English chapter titles follow the original edition. Figures are as reported in the book. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function txt(parent, x, y, s, attrs) {
+    var a = { x: x, y: y, "font-size": 10.5 };
+    for (var k in attrs || {}) a[k] = attrs[k];
+    el("text", a, parent).textContent = s;
+  }
+
+  /* --- Life in weeks: 80 columns (years) x 52 rows (weeks) --- */
+  var grid = document.getElementById("lifegrid");
+  if (grid) {
+    var x0 = 30, y0 = 34, cw = 7.3, ch = 6.9, s = 5.4;
+    for (var yr = 0; yr < 80; yr++) {
+      for (var wk = 0; wk < 52; wk++) {
+        el("rect", {
+          x: (x0 + yr * cw).toFixed(1), y: (y0 + wk * ch).toFixed(1), width: s, height: s - .6, rx: .8,
+          fill: yr < 40 ? "var(--ripe)" : "var(--paper-2)",
+          stroke: yr < 40 ? "none" : "var(--rule)", "stroke-width": .5
+        }, grid);
+      }
+    }
+    var gy = y0 + 52 * ch + 16;
+    [0, 10, 20, 30, 40, 50, 60, 70, 80].forEach(function (a) {
+      txt(grid, x0 + a * cw - (a === 80 ? 2 : 0), gy, String(a), { "text-anchor": a === 0 ? "start" : "middle" });
+    });
+    txt(grid, x0 + 40 * cw, gy + 16, "AGE IN YEARS", { "text-anchor": "middle" });
+    txt(grid, 22, y0 + 5, "wk 1", { "text-anchor": "end", "font-size": 9 });
+    txt(grid, 22, y0 + 51 * ch + 5, "wk 52", { "text-anchor": "end", "font-size": 9 });
+    // milestones across the top
+    var marks = [[6, "school"], [22, "work"], [40, "you are here"], [67, "retirement"]];
+    marks.forEach(function (m) {
+      var mx = x0 + m[0] * cw + s / 2;
+      el("line", { x1: mx, y1: 14, x2: mx, y2: y0 - 3, stroke: m[0] === 40 ? "var(--ink)" : "var(--ink-3)", "stroke-width": m[0] === 40 ? 1.6 : 1 }, grid);
+      txt(grid, mx, 10, m[1], { "text-anchor": "middle", style: m[0] === 40 ? "fill:var(--ink)" : "" });
+    });
+  }
+
+  /* --- Magee's chain of 100-year lifetimes --- */
+  var mg = document.getElementById("magee");
+  if (mg) {
+    var left = 22, right = 618, n = 60, step = (right - left) / (n - 1);
+    // index from today: dot i (0 = oldest) is (n - i) lifetimes ago
+    var flags = { 5: "Henry VIII", 7: "Renaissance", 20: "Jesus", 35: "Pharaohs", 60: "Civilisation begins" };
+    for (var i = 0; i < n; i++) {
+      var ago = n - i, cx = left + i * step;
+      var flagged = flags[ago];
+      el("circle", { cx: cx.toFixed(1), cy: 62, r: flagged ? 5.5 : 3.6, fill: flagged ? "var(--spot)" : "var(--ripe)" }, mg);
+      if (flagged) {
+        var up = ago === 20 || ago === 5;
+        el("line", { x1: cx, y1: up ? 54 : 70, x2: cx, y2: up ? 30 : 94, stroke: "var(--ink-3)", "stroke-width": 1 }, mg);
+        txt(mg, cx, up ? 24 : 108, flagged, { "text-anchor": ago === 60 ? "start" : (ago === 5 ? "end" : "middle"), style: "fill:var(--ink)" });
+        txt(mg, cx, up ? 12 : 121, ago + " lifetimes ago", { "text-anchor": ago === 60 ? "start" : (ago === 5 ? "end" : "middle"), "font-size": 9.5 });
+      }
+    }
+    el("circle", { cx: right + 14, cy: 62, r: 6, fill: "var(--ink)" }, mg);
+    txt(mg, right + 14, 144, "today", { "text-anchor": "middle" });
+    el("line", { x1: right + 14, y1: 70, x2: right + 14, y2: 134, stroke: "var(--ink-3)", "stroke-width": 1, "stroke-dasharray": "2 3" }, mg);
+  }
+
+  /* --- Hero band: 4,000-odd weeks fill up and ripen --- */
+  var canvas = document.getElementById("weeks");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var COLS = 160, ROWS = 26, TOTAL = COLS * ROWS; // 4,160 = 80 years
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function hex(c) {
+    c = c.replace("#", "");
+    if (c.length === 3) c = c.split("").map(function (x) { return x + x; }).join("");
+    return [parseInt(c.slice(0, 2), 16), parseInt(c.slice(2, 4), 16), parseInt(c.slice(4, 6), 16)];
+  }
+  function mix(a, b, t) { return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t]; }
+  function ripeness(u, stops) {
+    // u: 0 → 1 across a life; blend fresh → ripe → spot → brown
+    var seg = Math.min(2.999, u * 3), k = Math.floor(seg);
+    var c = mix(stops[k], stops[k + 1], seg - k);
+    return "rgb(" + c.map(Math.round).join(",") + ")";
+  }
+  var CYCLE = 22000, HOLD = 4000;
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var stops = [hex(css("--fresh")), hex(css("--ripe")), hex(css("--spot")), hex(css("--brown"))];
+    var empty = css("--rule");
+    var t = reduce ? 0.5 : Math.min(1, (time % (CYCLE + HOLD)) / CYCLE);
+    var lived = Math.floor(t * TOTAL);
+    var cw = w / COLS, chh = hgt / ROWS;
+    var gap = Math.max(0.6, Math.min(1.4, cw * 0.18));
+    for (var i = 0; i < TOTAL; i++) {
+      var col = Math.floor(i / ROWS), row = i % ROWS;
+      ctx.fillStyle = i < lived ? ripeness(i / TOTAL, stops) : empty;
+      ctx.globalAlpha = i < lived ? 1 : 0.55;
+      ctx.fillRect(col * cw, row * chh, cw - gap, chh - gap);
+    }
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

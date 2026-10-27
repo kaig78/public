@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Gifts of Imperfection by Brené Brown – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from the cover: warm mustard paper, a coral sun
+   and plum lettering. Coral = courage, plum = compassion, gold = connection. */
+:root {
+  --paper: #fbf6ec;
+  --paper-2: #f2e9d6;
+  --card: #ffffff;
+  --ink: #1f1712;
+  --ink-2: #574a40;
+  --ink-3: #85776b;
+  --rule: #e3d8c4;
+
+  /* the three gifts */
+  --sun: #d4542c;
+  --plum: #8e1f55;
+  --gold: #b07a0c;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #15110e;
+    --paper-2: #1f1915;
+    --card: #251e19;
+    --ink: #f3ebe1;
+    --ink-2: #c4b6a7;
+    --ink-3: #8f8174;
+    --rule: #3a2f27;
+    --sun: #ff8a62;
+    --plum: #e57aab;
+    --gold: #f0bd4f;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #15110e;
+  --paper-2: #1f1915;
+  --card: #251e19;
+  --ink: #f3ebe1;
+  --ink-2: #c4b6a7;
+  --ink-3: #8f8174;
+  --rule: #3a2f27;
+  --sun: #ff8a62;
+  --plum: #e57aab;
+  --gold: #f0bd4f;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--sun); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Gift colour helpers */
+.c-sun  { --c: var(--sun); }
+.c-plum { --c: var(--plum); }
+.c-gold { --c: var(--gold); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(40px, 8.2vw, 104px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.03em;
+}
+.hero h1 .pre {
+  display: block;
+  font-size: .42em;
+  font-weight: 750;
+  font-stretch: 100%;
+  letter-spacing: -.01em;
+  margin-bottom: .18em;
+  color: var(--plum);
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 772;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(60, 30, 10, .35), 0 8px 18px -10px rgba(60, 30, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.lightband { position: relative; margin-top: 28px; }
+.lightband canvas { display: block; width: 100%; height: 110px; }
+.lightband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.letgo {
+  display: inline-flex; gap: 8px; align-items: baseline; flex-wrap: wrap;
+  margin-top: 14px; font-family: var(--mono); font-size: 13px; color: var(--ink-2);
+}
+.letgo s { color: var(--ink-3); text-decoration-color: color-mix(in srgb, var(--sun) 70%, transparent); text-decoration-thickness: 1.5px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; fill: var(--ink); }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* do / don't lists */
+.predict { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.predict ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.predict li { display: flex; gap: 10px; align-items: baseline; font-size: 16px; }
+.predict li::before { font-family: var(--mono); font-size: 13px; width: 16px; flex: none; }
+.predict .no li { color: var(--ink-3); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--sun) 70%, transparent); }
+.predict .no li::before { content: "✕"; color: var(--sun); text-decoration: none; }
+.predict .yes li::before { content: "✓"; color: var(--plum); }
+
+/* three gifts definitions */
+.gifts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.gifts div { border-radius: 6px; padding: 14px; border: 1px solid color-mix(in srgb, var(--c) 35%, var(--rule)); display: grid; gap: 4px; align-content: start; }
+.gifts b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; color: var(--c); }
+.gifts span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+.gifts em { font-family: var(--mono); font-style: normal; font-size: 12px; color: var(--ink-3); }
+
+/* friends to avoid */
+.avoid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 8px; }
+.avoid li { border-radius: 6px; padding: 12px 14px; background: var(--paper-2); display: grid; gap: 2px; }
+.avoid b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 15.5px; }
+.avoid span { font-size: 14px; color: var(--ink-2); line-height: 1.4; font-style: italic; }
+.avoid li.good { background: color-mix(in srgb, var(--plum) 12%, var(--card)); box-shadow: inset 0 0 0 1.5px var(--plum); }
+.avoid li.good b { color: var(--plum); }
+
+/* worthy-when list */
+.when { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.when li { font-family: var(--mono); font-size: 13.5px; color: var(--ink-3); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--sun) 70%, transparent); }
+.when li.now { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 22px; color: var(--sun); text-decoration: none; margin-top: 8px; }
+
+/* guidepost board */
+.board { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+.board li { border-bottom: 1px solid var(--rule); }
+.board a { display: grid; grid-template-columns: 52px minmax(0, 1fr) 28px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 14px 4px; text-decoration: none; }
+.board a:hover { background: color-mix(in srgb, var(--sun) 6%, transparent); }
+.board .n { font-family: var(--display); font-weight: 900; font-stretch: 62%; font-size: 34px; line-height: .9; }
+.board .cult { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 20px; line-height: 1.2; color: var(--sun); }
+.board .arrow { font-family: var(--mono); color: var(--ink-3); text-align: center; }
+.board .go { font-size: 16.5px; line-height: 1.35; color: var(--ink-3); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--ink-3) 60%, transparent); }
+.board-head { display: grid; grid-template-columns: 52px minmax(0, 1fr) 28px minmax(0, 1fr); gap: 12px; padding: 0 4px 8px; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15.5px; padding: 7px 14px; border-radius: 999px; border: 1.5px solid var(--ink); }
+.chip.soft { border-color: var(--rule); color: var(--ink-2); font-weight: 600; }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .q { font-style: italic; font-size: 15.5px; color: var(--ink-2); }
+
+/* Neff trio */
+.trio { display: grid; gap: 10px; }
+.trio .row { display: grid; grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr); gap: 10px; align-items: center; }
+.trio .yes { border-radius: 6px; padding: 10px 12px; background: color-mix(in srgb, var(--plum) 11%, var(--card)); border: 1px solid color-mix(in srgb, var(--plum) 35%, var(--rule)); }
+.trio .yes b { font-family: var(--display); font-weight: 800; font-stretch: 104%; color: var(--plum); display: block; font-size: 16px; }
+.trio .yes span, .trio .no span { font-size: 13.5px; color: var(--ink-2); line-height: 1.35; display: block; }
+.trio .no { border-radius: 6px; padding: 10px 12px; border: 1px dashed var(--rule); }
+.trio .no b { font-family: var(--display); font-weight: 700; font-stretch: 100%; color: var(--ink-3); display: block; font-size: 16px; }
+.trio .vs { font-family: var(--mono); font-size: 12px; color: var(--ink-3); text-align: center; }
+
+/* if-then style mantra block */
+.mantra {
+  font-family: var(--mono); font-size: 14px; line-height: 1.8;
+  background: var(--paper-2); border-radius: 6px; padding: 18px 20px; margin: 0;
+  white-space: pre-wrap; color: var(--ink);
+}
+.mantra .k { color: var(--plum); }
+.mantra .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.toolkit .col > p { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.tk i { font-family: var(--mono); font-style: normal; font-size: 11.5px; color: var(--ink-3); letter-spacing: .05em; text-transform: uppercase; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro2, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .predict, .compare, .gifts { grid-template-columns: 1fr; }
+  .board a { grid-template-columns: 40px minmax(0, 1fr); gap: 2px 10px; }
+  .board .arrow { display: none; }
+  .board .go { grid-column: 2; font-size: 15px; }
+  .board-head { display: none; }
+  .trio .row { grid-template-columns: 1fr; gap: 4px; }
+  .trio .vs { text-align: left; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Brené Brown · Hazelden, 2010 · read in German</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#foundations">Foundations</a>
+    <a href="#shame">Shame</a>
+    <a href="#guideposts">Ten guideposts</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span class="pre">The Gifts of</span>Imperfection</h1>
+    <p class="sub">Let go of who you think you're supposed to be and embrace who you are</p>
+    <p class="dek">Brené Brown spent years studying shame. Then she looked at the people who lived without it running their lives, and found she was doing almost everything the opposite way.</p>
+    <div class="byline label">
+      <span>3 gifts</span><span>10 guideposts</span><span>~10,000 stories</span><span>German edition, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of the German edition, Die Gaben der Unvollkommenheit by Brené Brown: plum lettering on a large coral sun against a mustard-yellow background">
+</div>
+
+<div class="lightband" aria-hidden="true">
+  <canvas id="lights"></canvas>
+  <div class="ends label"><span>Joy comes in moments</span><span>strung together by gratitude, trust and faith</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Worthiness comes first, not last</h2>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p>Brown calls it <strong>wholehearted living</strong>: engaging with life from a place of worthiness. You wake up thinking that however much gets done today and however much doesn't, you are enough. You go to bed thinking that you're imperfect, vulnerable and sometimes afraid, and that this doesn't change the fact that you're also brave and worthy of love and belonging.</p>
+      <p>In November 2006 she sorted her interview data on people who lived this way into two columns: what they did, and what they didn't. She expected to find people like her, who worked hard, followed the rules and kept trying until they got it right. Instead she drew a line under the second column and wrote <em>me</em>.</p>
+      <p>The finding that floored her: knowing and understanding yourself matters, but loving yourself matters more. And parents can't give children what they don't have themselves. What followed was a year of therapy she calls her breakdown, and her therapist called a spiritual awakening. Brown thinks they were both right.</p>
+      <p>The book has a short foundation (the <a href="#gifts">three gifts</a>, <a href="#love">love and belonging</a>, and <a href="#shame">what gets in the way</a>) followed by <a href="#guideposts">ten guideposts</a>. Each one pairs something to cultivate with something to let go of.</p>
+    </div>
+    <div class="fig">
+      <h4>The two lists on her kitchen table</h4>
+      <div class="predict">
+        <div>
+          <span class="label">What wholehearted people do</span>
+          <ul class="yes" style="margin-top:10px"><li>Worthiness</li><li>Rest and play</li><li>Trust, faith, intuition</li><li>Hope</li><li>Authenticity</li><li>Love and belonging</li><li>Joy and gratitude</li><li>Creativity</li></ul>
+        </div>
+        <div>
+          <span class="label">What they let go of</span>
+          <ul class="no" style="margin-top:10px"><li>Perfection</li><li>Numbing</li><li>Certainty</li><li>Exhaustion</li><li>Self-sufficiency</li><li>Being cool</li><li>Fitting in</li><li>Judgment and scarcity</li></ul>
+        </div>
+      </div>
+      <p class="cap">Under the second list she wrote "me". The ten guideposts are built from these two columns.</p>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat"><span class="big num">10k+</span><p>Stories collected over ten years</p></div>
+        <div class="stat"><span class="big num">~1,000</span><p>Formal interviews, alone and in focus groups</p></div>
+        <div class="stat"><span class="big num">8 yrs</span><p>Spent on what was meant to be a quick detour into shame</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part 1</span>
+      <h3>Foundations</h3>
+      <ol>
+        <li><span>A</span><a href="#gifts"><b>Courage, Compassion, Connection</b>The gifts of imperfection</a></li>
+        <li><span>B</span><a href="#love"><b>The Power of Love and Belonging</b>Fitting in is not belonging</a></li>
+        <li><span>C</span><a href="#shame"><b>The Things That Get in the Way</b>Shame, and how to be resilient to it</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Guideposts 1–5</span>
+      <h3>Owning your story</h3>
+      <ol>
+        <li><span>01</span><a href="#gp1"><b>Authenticity</b>Let go of what people think</a></li>
+        <li><span>02</span><a href="#gp2"><b>Self-compassion</b>Let go of perfectionism</a></li>
+        <li><span>03</span><a href="#gp3"><b>A resilient spirit</b>Let go of numbing and powerlessness</a></li>
+        <li><span>04</span><a href="#gp4"><b>Gratitude and joy</b>Let go of scarcity and fear of the dark</a></li>
+        <li><span>05</span><a href="#gp5"><b>Intuition and trusting faith</b>Let go of the need for certainty</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Guideposts 6–10</span>
+      <h3>Making room to live</h3>
+      <ol>
+        <li><span>06</span><a href="#gp6"><b>Creativity</b>Let go of comparison</a></li>
+        <li><span>07</span><a href="#gp7"><b>Play and rest</b>Let go of exhaustion as a status symbol</a></li>
+        <li><span>08</span><a href="#gp8"><b>Calm and stillness</b>Let go of anxiety as a lifestyle</a></li>
+        <li><span>09</span><a href="#gp9"><b>Meaningful work</b>Let go of self-doubt and "supposed to"</a></li>
+        <li><span>10</span><a href="#gp10"><b>Laughter, song and dance</b>Let go of being cool and always in control</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="foundations">
+  <span class="label partno">Part 1 · Foundations</span>
+  <h2>Before the guideposts</h2>
+  <p class="lede">Three tools, two needs and one obstacle. Courage, compassion and connection are how we get to worthiness. Love and belonging are what we need. Shame is what stands in the way.</p>
+</div>
+
+<article class="chapter" id="gifts">
+  <div class="gutter"><span class="chno">A</span><span class="label">Courage, Compassion, Connection</span></div>
+  <div class="body">
+    <div>
+      <h3>The gifts you only get by practising</h3>
+      <p class="idea">You learn courage by being brave, the way you learn to swim by swimming. Compassion and connection work the same way.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Three tools, one centre</h4>
+        <svg viewBox="0 0 460 380" role="img" aria-label="Three overlapping circles labelled courage, compassion and connection. Where all three overlap, the word worthiness.">
+          <circle cx="170" cy="150" r="112" fill="color-mix(in srgb, var(--sun) 16%, transparent)" stroke="var(--sun)" stroke-width="2"/>
+          <circle cx="290" cy="150" r="112" fill="color-mix(in srgb, var(--plum) 14%, transparent)" stroke="var(--plum)" stroke-width="2"/>
+          <circle cx="230" cy="250" r="112" fill="color-mix(in srgb, var(--gold) 16%, transparent)" stroke="var(--gold)" stroke-width="2"/>
+          <text x="118" y="112" text-anchor="middle" font-size="17" class="hd" style="fill:var(--sun)">Courage</text>
+          <text x="118" y="132" text-anchor="middle" font-size="11">tell your whole heart</text>
+          <text x="344" y="112" text-anchor="middle" font-size="17" class="hd" style="fill:var(--plum)">Compassion</text>
+          <text x="344" y="132" text-anchor="middle" font-size="11">suffer with, as equals</text>
+          <text x="230" y="318" text-anchor="middle" font-size="17" class="hd" style="fill:var(--gold)">Connection</text>
+          <text x="230" y="338" text-anchor="middle" font-size="11">seen, heard, valued</text>
+          <circle cx="230" cy="186" r="34" fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"/>
+          <text x="230" y="183" text-anchor="middle" font-size="10.5" style="fill:var(--ink)">worthi-</text>
+          <text x="230" y="197" text-anchor="middle" font-size="10.5" style="fill:var(--ink)">ness</text>
+        </svg>
+        <p class="cap">Our imperfections are what force us to practise all three, which is why Brown calls them gifts.</p>
+      </div>
+      <div class="fig">
+        <h4>What each word really means</h4>
+        <div class="gifts">
+          <div class="c-sun"><b>Courage</b><em>from Latin cor, heart</em><span>Originally: speak your mind by telling all your heart. Ordinary courage puts your vulnerability on the line, not your life.</span></div>
+          <div class="c-plum"><b>Compassion</b><em>pati + cum, suffer with</em><span>Not healer and wounded but a relationship between equals. Its heart is acceptance.</span></div>
+          <div class="c-gold"><b>Connection</b><em>Brown's definition</em><span>The energy between people when they feel seen, heard and valued, and can give and receive without judgment.</span></div>
+        </div>
+        <p class="cap">Ordinary courage looks like a student saying "I'm lost", or a child calling home from a sleepover at 10:30 at night to ask to be picked up.</p>
+      </div>
+    </div>
+    <ul class="points">
+      <li><strong>Compassionate people are boundaried people.</strong> This surprised her most. Before her breakdown Brown was nicer on the outside and full of judgment and resentment inside. Now she is kinder and much firmer about limits. You can't practise compassion from a place of resentment.</li>
+      <li>We live in a blaming culture that shouts a lot and holds people accountable rarely. Shaming someone without a consequence is easier than setting a boundary, and it's poison for couples, families and teams. Separate people from their behaviour: address what they do, not who they are.</li>
+      <li>A manager who humiliated two staff in team meetings had never told them what would happen if they ignored the project protocol. Involving HR felt like too much hassle. Shaming felt easier.</li>
+      <li>Technology lets us confuse communication with connection. And the myth of self-sufficiency splits the world into those who help and those who need help. We're both.</li>
+      <li><strong>Until we can receive with an open heart, we're never really giving with an open heart.</strong> If we attach judgment to needing help, we attach it, knowingly or not, to giving help too.</li>
+    </ul>
+    <div class="fig">
+      <h4>Who to call in a shame storm</h4>
+      <ul class="avoid">
+        <li><b>The one who's ashamed for you</b><span>Gasps, confirms how horrified you should be, then you have to comfort her.</span></li>
+        <li><b>The sympathiser</b><span>"Oh, you poor thing." Sympathy, not empathy.</span></li>
+        <li><b>The one who needs you perfect</b><span>Too disappointed in your imperfection to help.</span></li>
+        <li><b>The scolder</b><span>"How did you let that happen?" Or she looks for someone to blame.</span></li>
+        <li><b>The fixer</b><span>"You're exaggerating, everyone loves you." Won't admit you can make bad choices.</span></li>
+        <li><b>The one-upper</b><span>"That's nothing, listen to what happened to me."</span></li>
+        <li class="good"><b>The one to call</b><span>Firmly rooted, flexible, has earned the right to hear the story, and can say "me too".</span></li>
+      </ul>
+      <p class="cap">We need the right person, at the right time, about the right issue. Most of us have only a handful of people like that, and that's fine.</p>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>A school principal introduced Brown to 250 parents as the expert who would "set them straight". One father groaned through the whole talk. Brown tried to win him over with scarier and scarier statistics, lost the room, and drove off in a full shame storm. She called her sister Ashley, who didn't fix, scold or pity her. Ashley just said she'd done things like that too. Only later did Brown learn the school had been using her talk to tell parents to stop hanging around classrooms.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="love">
+  <div class="gutter"><span class="chno">B</span><span class="label">The Power of Love and Belonging</span></div>
+  <div class="body">
+    <div>
+      <h3>Fitting in is the opposite of belonging</h3>
+      <p class="idea">One thing separated people who felt loved and belonging from those who struggled for it: they believed they were worthy of it.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Fitting in vs. belonging</h4>
+        <svg viewBox="0 0 520 250" role="img" aria-label="Left, fitting in: a group of identical circles; a star-shaped newcomer is squeezed into a circle, its real shape shown as a faint dashed outline. Right, belonging: a group made of different shapes, circle, square, triangle and star, each keeping its own form.">
+          <rect x="6" y="6" width="236" height="178" rx="10" fill="none" stroke="var(--rule)" stroke-width="1.5"/>
+          <circle cx="64" cy="62" r="20" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <circle cx="124" cy="52" r="20" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <circle cx="184" cy="62" r="20" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <circle cx="64" cy="128" r="20" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <circle cx="184" cy="128" r="20" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <path d="M124 92 L133 113 L156 115 L139 130 L144 152 L124 140 L104 152 L109 130 L92 115 L115 113 Z" fill="none" stroke="var(--sun)" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <circle cx="124" cy="124" r="20" fill="color-mix(in srgb, var(--sun) 20%, var(--card))" stroke="var(--sun)" stroke-width="2"/>
+          <text x="124" y="212" text-anchor="middle" font-size="14" class="hd">Fitting in</text>
+          <text x="124" y="232" text-anchor="middle" font-size="11">become who you need to be</text>
+          <rect x="278" y="6" width="236" height="178" rx="10" fill="none" stroke="var(--rule)" stroke-width="1.5"/>
+          <circle cx="336" cy="62" r="20" fill="color-mix(in srgb, var(--gold) 20%, var(--card))" stroke="var(--gold)" stroke-width="2"/>
+          <rect x="376" y="32" width="40" height="40" rx="3" fill="color-mix(in srgb, var(--plum) 18%, var(--card))" stroke="var(--plum)" stroke-width="2"/>
+          <path d="M456 42 L478 82 L434 82 Z" fill="color-mix(in srgb, var(--gold) 20%, var(--card))" stroke="var(--gold)" stroke-width="2"/>
+          <rect x="318" y="110" width="44" height="34" rx="17" fill="color-mix(in srgb, var(--plum) 18%, var(--card))" stroke="var(--plum)" stroke-width="2"/>
+          <path d="M396 92 L405 113 L428 115 L411 130 L416 152 L396 140 L376 152 L381 130 L364 115 L387 113 Z" fill="color-mix(in srgb, var(--sun) 20%, var(--card))" stroke="var(--sun)" stroke-width="2"/>
+          <path d="M456 106 L476 126 L456 146 L436 126 Z" fill="color-mix(in srgb, var(--sun) 20%, var(--card))" stroke="var(--sun)" stroke-width="2"/>
+          <text x="396" y="212" text-anchor="middle" font-size="14" class="hd">Belonging</text>
+          <text x="396" y="232" text-anchor="middle" font-size="11">be who you are</text>
+        </svg>
+        <p class="cap">Fitting in means sizing up a situation and becoming who you need to be to be accepted. Belonging doesn't ask you to change. It asks you to show up as yourself. So our sense of belonging can never be greater than our self-acceptance.</p>
+      </div>
+      <div class="fig">
+        <h4>Worthiness has no prerequisites</h4>
+        <ul class="when">
+          <li>I'll be worthy when I lose twenty pounds.</li>
+          <li>…when I get pregnant.</li>
+          <li>…when I stop drinking.</li>
+          <li>…when everyone thinks I'm a good parent.</li>
+          <li>…when I can make a living selling my art.</li>
+          <li>…when my parents finally approve.</li>
+          <li>…when he calls back and asks me out.</li>
+          <li>…when I can do it all and look like I'm not even trying.</li>
+          <li class="now">Worthy now. Not if. Not when.</li>
+        </ul>
+        <p class="cap">Most of us carry a long list of conditions we picked up somewhere. Brown's point is that none of them apply.</p>
+      </div>
+    </div>
+    <ul class="points">
+      <li><strong>Love</strong> is something we cultivate when we let our most vulnerable and most powerful selves be deeply seen and known, and honour that bond with trust, respect, kindness and affection. It isn't something we give or get. We can only love others as much as we love ourselves.</li>
+      <li>Shame, blame, disrespect, betrayal and withholding affection damage the roots love grows from. Love survives them only if they're rare and are acknowledged and healed.</li>
+      <li><strong>Belonging</strong> is the innate desire to be part of something larger. Because it's so primal, we often try to get it by fitting in and seeking approval. That's a hollow substitute and often gets in the way of the real thing.</li>
+      <li>Love and belonging always come up together in the interviews, just as joy and gratitude do. A deep sense of both is an irreducible need. Without it, Brown writes, we break, go numb, ache and hurt others.</li>
+      <li>Asked on the radio whether you can love someone and cheat on them, she said she didn't know, but she knew you're not <em>practising</em> love when you do. Love is something you do, not something you declare.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="shame">
+  <div class="gutter"><span class="chno">C</span><span class="label">The Things That Get in the Way</span></div>
+  <div class="body">
+    <div>
+      <h3>Shame dies when it's shared</h3>
+      <p class="idea">"How-to" lists don't work if you skip the things in the way. Brown's ten years of data are mostly about those things: shame, fear and vulnerability.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Shame</strong> is the intensely painful feeling or experience of believing we are flawed and therefore unworthy of love and belonging. Everyone has it. The only people without it lack the capacity for empathy and connection.</li>
+      <li>We're afraid to talk about it, and the less we talk about it, the more control it has. Shame needs three things to grow out of control: <strong>secrecy, silence and judgment</strong>.</li>
+      <li><strong>Guilt</strong> says "I did something bad". <strong>Shame</strong> says "I am bad". Guilt is uncomfortable but useful: it drives apologies and change. Shame corrodes the part of us that believes we can do better. It's linked to violence, aggression, depression, addiction, eating disorders and bullying.</li>
+      <li>Perfectionists are easy targets. We've worked so hard to make everything look right that telling the truth feels like too much to risk.</li>
+      <li>Shame is a full-contact emotion. Know your physical signs. For Brown it's a dry mouth, a racing heart, a hot face and time slowing down. She needs 10 to 15 minutes, a cry and a prayer before she's safe to write any email.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The three shame shields</h4>
+        <svg viewBox="0 0 480 270" role="img" aria-label="A dark circle labelled shame in the centre. One arrow goes right toward a group of people, labelled moving toward: appease and please. One arrow goes left, dashed and fading, labelled moving away: withdraw, hide, go silent. One arrow goes up to a jagged mark, labelled moving against: gain power, be aggressive, shame back. Below: all three move us away from our story.">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="var(--ink-2)"/></marker>
+          </defs>
+          <line x1="268" y1="160" x2="372" y2="160" stroke="var(--ink-2)" stroke-width="2" marker-end="url(#ah)"/>
+          <circle cx="398" cy="148" r="8" fill="var(--gold)"/><circle cx="420" cy="162" r="8" fill="var(--gold)"/><circle cx="400" cy="174" r="8" fill="var(--gold)"/>
+          <text x="410" y="204" text-anchor="middle" font-size="13" class="hd">Toward</text>
+          <text x="410" y="222" text-anchor="middle" font-size="11">appease, please</text>
+          <line x1="212" y1="160" x2="104" y2="160" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ah)"/>
+          <circle cx="70" cy="160" r="12" fill="none" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <text x="70" y="204" text-anchor="middle" font-size="13" class="hd">Away</text>
+          <text x="70" y="222" text-anchor="middle" font-size="11">hide, go silent</text>
+          <line x1="240" y1="132" x2="240" y2="58" stroke="var(--ink-2)" stroke-width="2" marker-end="url(#ah)"/>
+          <path d="M218 40 L228 22 L236 38 L246 18 L254 38 L264 24" fill="none" stroke="var(--sun)" stroke-width="2.5" stroke-linejoin="round"/>
+          <text x="300" y="44" font-size="13" class="hd">Against</text>
+          <text x="300" y="62" font-size="11">power, aggression,</text>
+          <text x="300" y="76" font-size="11">shaming back</text>
+          <circle cx="240" cy="160" r="28" fill="var(--ink)"/>
+          <text x="240" y="164" text-anchor="middle" font-size="11" style="fill:var(--paper)">shame</text>
+          <text x="240" y="258" text-anchor="middle" font-size="11.5" style="fill:var(--ink-3)">all three move us away from our story</text>
+        </svg>
+        <p class="cap">Linda Hartling, building on Karen Horney, describes three ways we disconnect when shame hits. Most of us use all three, depending on the situation.</p>
+      </div>
+      <div class="fig">
+        <h4>Four habits of shame-resilient people</h4>
+        <svg viewBox="0 0 420 320" role="img" aria-label="A cycle of four steps connected by arrows. One: recognise shame and your triggers. Two: practise critical awareness and reality-check the messages. Three: reach out and share your story. Four: speak shame, say how you feel and ask for what you need. In the centre: shame loses power when spoken.">
+          <defs>
+            <marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="var(--plum)"/></marker>
+          </defs>
+          <circle cx="210" cy="160" r="104" fill="none" stroke="color-mix(in srgb, var(--plum) 35%, var(--rule))" stroke-width="1.5" stroke-dasharray="2 5"/>
+          <path d="M268 74 A104 104 0 0 1 296 104" fill="none" stroke="var(--plum)" stroke-width="2" marker-end="url(#ah2)"/>
+          <path d="M296 216 A104 104 0 0 1 268 246" fill="none" stroke="var(--plum)" stroke-width="2" marker-end="url(#ah2)"/>
+          <path d="M152 246 A104 104 0 0 1 124 216" fill="none" stroke="var(--plum)" stroke-width="2" marker-end="url(#ah2)"/>
+          <path d="M124 104 A104 104 0 0 1 152 74" fill="none" stroke="var(--plum)" stroke-width="2" marker-end="url(#ah2)"/>
+          <circle cx="210" cy="56" r="17" fill="var(--plum)"/><text x="210" y="61" text-anchor="middle" font-size="13" style="fill:var(--card)">1</text>
+          <text x="210" y="14" text-anchor="middle" font-size="12.5" class="hd">Recognise it</text>
+          <text x="210" y="30" text-anchor="middle" font-size="10.5" style="fill:var(--ink-3)">know your triggers</text>
+          <circle cx="314" cy="160" r="17" fill="var(--plum)"/><text x="314" y="165" text-anchor="middle" font-size="13" style="fill:var(--card)">2</text>
+          <text x="340" y="156" font-size="12.5" class="hd">Reality-</text>
+          <text x="340" y="172" font-size="12.5" class="hd">check</text>
+          <circle cx="210" cy="264" r="17" fill="var(--plum)"/><text x="210" y="269" text-anchor="middle" font-size="13" style="fill:var(--card)">3</text>
+          <text x="210" y="300" text-anchor="middle" font-size="12.5" class="hd">Reach out</text>
+          <text x="210" y="315" text-anchor="middle" font-size="10.5" style="fill:var(--ink-3)">share your story</text>
+          <circle cx="106" cy="160" r="17" fill="var(--plum)"/><text x="106" y="165" text-anchor="middle" font-size="13" style="fill:var(--card)">4</text>
+          <text x="80" y="156" text-anchor="end" font-size="12.5" class="hd">Speak</text>
+          <text x="80" y="172" text-anchor="end" font-size="12.5" class="hd">shame</text>
+          <text x="210" y="154" text-anchor="middle" font-size="11.5" style="fill:var(--ink)">shame loses power</text>
+          <text x="210" y="172" text-anchor="middle" font-size="11.5" style="fill:var(--ink)">when it's spoken</text>
+        </svg>
+        <p class="cap">Resilience is the ability to recognise shame, move through it without giving up your worth or authenticity, and come out with more courage, compassion and connection.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>A blog reader praised Brown's site but called a cinema snapshot of her and her friend Laura terrible. Brown drafted three vicious replies, then went for a run and called Laura, who said she would just have been hurt and cried. Brown realised Laura's default was her courage: being mean is easy, being hurt is brave. A week later a student asked her the real question. Was the shame about the photo, or about letting herself be silly and connected in public and getting slapped for it? It was the second.</p>
+    </div>
+    <div class="story" style="border-color:var(--sun)">
+      <span class="label">Also in this chapter</span>
+      <p>Brown once gave a lunch talk to a women's business network after the organiser told her not to mention shame or "the things that get in the way". Keep it light and breezy. She stood there for forty minutes repeating that joy is good, and it flopped. Five years later she told the story at a stage full of famous speakers. Her talk was rated one of the day's top two.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ GUIDEPOSTS OVERVIEW ============ -->
+<section id="guideposts">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Ten guideposts</h2>
+    <p class="lede">Each guidepost names something to cultivate and something to let go of. They aren't goals you tick off. Brown compares them to walking toward a star: you never arrive, but you know you're heading the right way.</p>
+  </div>
+  <div class="fig">
+    <div class="board-head label"><span>No.</span><span>Cultivate</span><span></span><span>Let go of</span></div>
+    <ol class="board">
+      <li><a href="#gp1"><span class="n">01</span><span class="cult">Authenticity</span><span class="arrow">←</span><span class="go">What people think</span></a></li>
+      <li><a href="#gp2"><span class="n">02</span><span class="cult">Self-compassion</span><span class="arrow">←</span><span class="go">Perfectionism</span></a></li>
+      <li><a href="#gp3"><span class="n">03</span><span class="cult">A resilient spirit</span><span class="arrow">←</span><span class="go">Numbing and powerlessness</span></a></li>
+      <li><a href="#gp4"><span class="n">04</span><span class="cult">Gratitude and joy</span><span class="arrow">←</span><span class="go">Scarcity and fear of the dark</span></a></li>
+      <li><a href="#gp5"><span class="n">05</span><span class="cult">Intuition and trusting faith</span><span class="arrow">←</span><span class="go">The need for certainty</span></a></li>
+      <li><a href="#gp6"><span class="n">06</span><span class="cult">Creativity</span><span class="arrow">←</span><span class="go">Comparison</span></a></li>
+      <li><a href="#gp7"><span class="n">07</span><span class="cult">Play and rest</span><span class="arrow">←</span><span class="go">Exhaustion as a status symbol, productivity as self-worth</span></a></li>
+      <li><a href="#gp8"><span class="n">08</span><span class="cult">Calm and stillness</span><span class="arrow">←</span><span class="go">Anxiety as a lifestyle</span></a></li>
+      <li><a href="#gp9"><span class="n">09</span><span class="cult">Meaningful work</span><span class="arrow">←</span><span class="go">Self-doubt and "supposed to"</span></a></li>
+      <li><a href="#gp10"><span class="n">10</span><span class="cult">Laughter, song and dance</span><span class="arrow">←</span><span class="go">Being cool and always in control</span></a></li>
+    </ol>
+    <p class="cap">Every guidepost ends with a "Dig Deep" section in three steps: get deliberate, get inspired, get going. Brown's point is that wholehearted people dig deep too when they're exhausted. They just use better tools than gritting their teeth. Those steps make up the <a href="#toolkit">toolkit</a> at the end of this page.</p>
+  </div>
+</section>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="owning">
+  <span class="label partno">Guideposts 1–5</span>
+  <h2>Owning your story</h2>
+  <p class="lede">The first five let go of the armour: other people's opinions, perfectionism, numbing, scarcity and certainty. Each one is a way of trying not to feel vulnerable.</p>
+</div>
+
+<article class="chapter" id="gp1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Cultivate authenticity</span></div>
+  <div class="body">
+    <div>
+      <h3>Authenticity is a daily choice, not a trait</h3>
+      <p class="idea">The daily practice of letting go of who we think we're supposed to be and embracing who we are.</p>
+      <p class="letgo">Let go of <s>what people think</s></p>
+    </div>
+    <ul class="points">
+      <li>Brown used to think people either were or weren't authentic. The data says it's a set of choices we make every day: to show up, to be honest, to let ourselves be seen. She's authentic on some days and not on others.</li>
+      <li>Choosing it means cultivating the courage to be imperfect, set boundaries and be vulnerable. It means practising compassion because everyone has strengths and struggles, and believing you're enough.</li>
+      <li>When you start, people around you can get anxious. Your partner or friends may fear you're leaving them or holding up a mirror. The system pushes back, from eye-rolling to cruelty. Cruelty is cheap, easy and rampant, especially when it's anonymous.</li>
+      <li>Gender rules make it harder. Studies found women are expected to be thin, nice and modest. Men are expected to show emotional control, put work first, control women and pursue status.</li>
+      <li>The answer isn't to stop caring what anyone thinks. That shuts down connection. Courage means telling your story, not growing armour.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The double binds women described</h4>
+        <div class="compare">
+          <div><h5>Do this…</h5><ul><li>Be honest</li><li>Say what's on your mind</li><li>Sound informed and educated</li><li>Have the courage to disagree</li></ul></div>
+          <div><h5>…but never this</h5><ul><li>Make anyone uncomfortable</li><li>Upset or hurt anyone</li><li>Sound like a know-it-all</li><li>Say anything unpopular</li></ul></div>
+        </div>
+        <p class="cap">Speaking up was one of the biggest shame triggers for women in her research. There's no safe way through these rules, so authenticity sometimes means not playing it safe.</p>
+      </div>
+      <div class="fig">
+        <h4>A warning label we should be born with</h4>
+        <pre class="mantra"><span class="c">// Caution: trading in authenticity for safety</span>
+<span class="c">// may cause the following:</span>
+anxiety · depression · eating disorders
+addiction · rage · blame · resentment
+inexplicable grief</pre>
+        <p class="cap">Hidden ideas, opinions and gifts don't go away. They fester and eat at our sense of worth.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">Brown's mantra</span>
+      <p>Before walking into a situation where she feels vulnerable she repeats: <em>Don't shrink. Don't puff up. Stand on your sacred ground.</em> If her goal is authenticity and people don't like her, she's fine. If her goal is acceptance and people don't like her, she's in trouble.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="gp2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Cultivate self-compassion</span></div>
+  <div class="body">
+    <div>
+      <h3>Perfectionism is a twenty-ton shield</h3>
+      <p class="idea">We carry it believing it will protect us. Really it's what keeps us from being seen, and from taking flight.</p>
+      <p class="letgo">Let go of <s>perfectionism</s></p>
+    </div>
+    <ul class="points">
+      <li>Where perfectionism exists, shame is always lurking. Shame is its birthplace. A reader once wrote that she struggled with perfectionism but didn't "do shame". Shame does you, Brown answered.</li>
+      <li>Perfectionism isn't striving to be your best or healthy self-improvement. At its core it's about trying to earn approval. Many perfectionists were praised for achievement: grades, manners, rule-following, looks, sport.</li>
+      <li>It's <strong>self-destructive</strong> because perfection doesn't exist, and what we really want is to be <em>perceived</em> as perfect, which we can't control. It's <strong>addictive</strong> because when we still feel shame we decide we weren't perfect enough, and try harder.</li>
+      <li>It's a spectrum, not a type. Everyone has perfectionist tendencies. For some they show up only when they're vulnerable; for others they're as compulsive as an addiction. Perfectionism also leads to "life-paralysis": all the things we never try because they might be imperfect.</li>
+      <li>Fake it till you make it helps. When friends turned up unannounced at her messy house, she chose to say "What a nice surprise, who cares about the house?" and then kept her calm with the serenity prayer.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Two ways to want the same thing</h4>
+        <div class="compare">
+          <div><h5 style="color:var(--ink-3)">Perfectionism</h5><p class="q">"Disgusting. Nothing fits. I'm fat and ugly. I have to be different from who I am now to be worthy of love."</p><ul><li>Focused on others</li><li>Asks: what will they think?</li></ul></div>
+          <div><h5 style="color:var(--plum)">Healthy striving</h5><p class="q">"I want this for me. I want to feel better and be healthier. The scale has nothing to do with whether I'm loved."</p><ul><li>Focused on yourself</li><li>Asks: how can I improve?</li></ul></div>
+        </div>
+        <p class="cap">Brown's verdict on her own diets: perfectionism never got results. It got peanut butter.</p>
+      </div>
+      <div class="fig">
+        <h4>Self-compassion, after Kristin Neff</h4>
+        <div class="trio">
+          <div class="row"><div class="yes"><b>Self-kindness</b><span>Be warm and understanding with yourself when you suffer or fail.</span></div><span class="vs">not</span><div class="no"><b>Self-judgment</b><span>Ignoring the pain or beating yourself up.</span></div></div>
+          <div class="row"><div class="yes"><b>Common humanity</b><span>Suffering is part of the shared human experience.</span></div><span class="vs">not</span><div class="no"><b>Isolation</b><span>"This only happens to me."</span></div></div>
+          <div class="row"><div class="yes"><b>Mindfulness</b><span>Hold feelings in balance, neither suppressed nor exaggerated.</span></div><span class="vs">not</span><div class="no"><b>Over-identification</b><span>Getting swept away by the negativity.</span></div></div>
+        </div>
+        <p class="cap">On Neff's scale Brown did well on common humanity and mindfulness. Self-kindness needs constant work.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Brown emailed an author for permission to quote her and misspelled the author's name. She spiralled ("she must think I'm careless") until she noticed the draft of this very chapter on her desk and smiled. The real test is what she says when her daughter makes the same mistake: "That's unacceptable" or "That happened to me too." Compassion, like perfectionism, spreads to the people around us.</p>
+    </div>
+    <p class="pull">There is a crack in everything. That's how the light gets in.</p>
+    <span class="label">Leonard Cohen, "Anthem", Brown's reminder when she tries to control everything</span>
+  </div>
+</article>
+
+<article class="chapter" id="gp3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Cultivate a resilient spirit</span></div>
+  <div class="body">
+    <div>
+      <h3>You can't numb the dark without numbing the light</h3>
+      <p class="idea">Resilient people share the usual protective factors. Underneath all of them Brown kept finding the same foundation: spirituality.</p>
+      <p class="letgo">Let go of <s>numbing</s> <s>powerlessness</s></p>
+    </div>
+    <ul class="points">
+      <li>Research lists five protective factors: being resourceful at solving problems, being more likely to ask for help, believing you can do something to cope, having social support, and being connected to others.</li>
+      <li>By <strong>spirituality</strong> Brown doesn't mean religion. She means recognising that we're all connected by a power greater than ourselves, and that this connection is grounded in love and compassion. Some people prayed in church, some by a fishing spot. All of them drew perspective, meaning and purpose from it.</li>
+      <li>On that foundation, three practices: <strong>cultivating hope</strong>, <strong>practising critical awareness</strong>, and <strong>letting go of numbing</strong>.</li>
+      <li><strong>Power</strong> isn't a dirty word. Martin Luther King Jr. called it the ability to effect change. Feeling powerless is what's dangerous: it leads to despair.</li>
+      <li><strong>Critical awareness</strong> means reality-checking the messages behind our "never good enough" voices. We see thousands of ads a day. Ask: is this real? Does it show a wholehearted life or turn me into a product? Who profits when I feel bad about myself? The answer is always money or control.</li>
+      <li>Shame works like a zoom lens. Close up, all we see is our flawed self alone. Zoom out and you see lots of people with the same struggle, and "only me" turns into "me too".</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Hope is a way of thinking, not a feeling</h4>
+        <svg viewBox="0 0 460 210" role="img" aria-label="Three arrows converge from the left into a box labelled hope. Top arrow: goals, I know where I want to go. Middle arrow: pathways, I can find a way and try again. Bottom arrow: agency, I can do this.">
+          <defs>
+            <marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="var(--sun)"/></marker>
+          </defs>
+          <text x="8" y="34" font-size="13.5" class="hd">Goals</text>
+          <text x="8" y="52" font-size="11">I know where I want to go</text>
+          <text x="8" y="100" font-size="13.5" class="hd">Pathways</text>
+          <text x="8" y="118" font-size="11">I can find a way, and try again</text>
+          <text x="8" y="166" font-size="13.5" class="hd">Agency</text>
+          <text x="8" y="184" font-size="11">I can do this</text>
+          <path d="M218 44 C 270 44, 280 96, 322 100" fill="none" stroke="var(--sun)" stroke-width="2" marker-end="url(#ah3)"/>
+          <path d="M240 110 L322 110" fill="none" stroke="var(--sun)" stroke-width="2" marker-end="url(#ah3)"/>
+          <path d="M150 176 C 270 176, 280 124, 322 120" fill="none" stroke="var(--sun)" stroke-width="2" marker-end="url(#ah3)"/>
+          <rect x="330" y="78" width="122" height="64" rx="6" fill="color-mix(in srgb, var(--sun) 16%, var(--card))" stroke="var(--sun)" stroke-width="2"/>
+          <text x="391" y="114" text-anchor="middle" font-size="20" class="hd" style="fill:var(--sun)">Hope</text>
+        </svg>
+        <p class="cap">After psychologist C. R. Snyder. Hope is learned, from relationships with boundaries, consistency and support. Two beliefs undermine it: that everything should be fun, fast and easy, and that anything worthwhile has to hurt.</p>
+      </div>
+      <div class="fig">
+        <h4>Numbing flattens both ends</h4>
+        <svg viewBox="0 0 520 240" role="img" aria-label="Two lines across a spectrum from dark feelings on the left (grief, fear, shame) to light feelings on the right (joy, love, belonging). The top line swings fully between both ends. The bottom line, labelled numbed, stays flat inside a shaded band: dulling the painful end also dulls the joyful end.">
+          <text x="8" y="16" font-size="11" style="fill:var(--ink-3)">grief · fear · shame</text>
+          <text x="512" y="16" text-anchor="end" font-size="11" style="fill:var(--ink-3)">joy · love · belonging</text>
+          <line x1="8" y1="70" x2="512" y2="70" stroke="var(--rule)" stroke-width="1"/>
+          <path d="M8 70 C 40 20, 70 20, 100 70 S 160 120, 190 70 S 250 20, 280 70 S 340 120, 370 70 S 430 20, 460 70 S 500 110, 512 90" fill="none" stroke="var(--plum)" stroke-width="2.5"/>
+          <text x="8" y="132" font-size="11.5" class="hd">Feeling it all</text>
+          <rect x="8" y="160" width="504" height="36" rx="4" fill="color-mix(in srgb, var(--ink-3) 14%, transparent)"/>
+          <path d="M8 178 C 40 172, 70 172, 100 178 S 160 184, 190 178 S 250 172, 280 178 S 340 184, 370 178 S 430 172, 460 178 S 500 182, 512 180" fill="none" stroke="var(--ink-3)" stroke-width="2.5"/>
+          <text x="8" y="222" font-size="11.5" class="hd" style="fill:var(--ink-3)">Numbed</text>
+          <text x="512" y="222" text-anchor="end" font-size="11">less pain, and less joy</text>
+        </svg>
+        <p class="cap">Without joy there's no reserve for hard times, so hard times hurt more, so we numb more. Addiction research shows a very positive experience can trigger a relapse as easily as a painful one.</p>
+      </div>
+    </div>
+    <ul class="points">
+      <li>Most of us numb in some way: alcohol, food, work, shopping, caretaking, planning, perfectionism, busyness, the internet. Addiction is doing it chronically and compulsively. The question is whether your version gets in the way of being authentic, setting boundaries and feeling enough.</li>
+      <li>Brown, sober for about fifteen years, never felt at home saying "I'm an alcoholic" at meetings. What fit was being a "take-the-edge-off-aholic": beer and cigarettes once, then banana bread, chips, email, work, worry and planning. She was running from vulnerability.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="gp4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Cultivate gratitude and joy</span></div>
+  <div class="body">
+    <div>
+      <h3>Joy is twinkle lights, not a bonfire</h3>
+      <p class="idea">Every person she interviewed who described their life as joyful also actively practised gratitude, and gave that practice the credit.</p>
+      <p class="letgo">Let go of <s>scarcity</s> <s>fear of the dark</s></p>
+    </div>
+    <ul class="points">
+      <li>The key word is <em>practice</em>. Brown had an "attitude of gratitude" the way she has a yogic outlook and yoga clothes. Put her on a mat and you'd see she's never actually done the poses. Gratitude without practice is like faith without works.</li>
+      <li>Practices she heard: gratitude journals, daily gratitude meditations or prayers, art, and stopping in the middle of a busy day to say out loud "I'm grateful for…".</li>
+      <li>Happiness depends on circumstances. Joy is tied to spirit and gratitude. The Greek <em>makarios</em> meant the fortunate, free of ordinary worries. <em>Chairo</em> meant the soul's joy, and its opposite wasn't sadness but fear.</li>
+      <li><strong>Foreboding joy</strong>: watching her daughter sleep, Brown would be flooded with gratitude and then with images of something terrible happening. When she admitted it to 500 parents, the room broke open. They all did it. Darkness doesn't destroy the light. It defines it. Fear of the dark is what casts a shadow over joy.</li>
+      <li><strong>Scarcity</strong> is the "never enough" we wake up with: not enough sleep, time, money, thinness, success. Lynne Twist's answer isn't abundance but <em>enough</em>, which isn't an amount but a way of seeing.</li>
+      <li>People who had survived terrible losses held ordinary moments most sacred. They hoped the rest of us would stop long enough to be grateful for them.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Happiness vs. joy</h4>
+        <div class="compare">
+          <div><h5>Happiness</h5><ul><li>Tied to circumstances</li><li>Comes and goes with events</li><li>Greek <em>makarios</em>: being fortunate</li></ul></div>
+          <div><h5 style="color:var(--sun)">Joy</h5><ul><li>Tied to spirit and gratitude</li><li>Comes in moments, often ordinary ones</li><li>Greek <em>chairo</em>: its opposite is fear</li></ul></div>
+        </div>
+        <p class="cap">Neither is constant. A joyful life isn't a constant bonfire, which would become unbearable. It's joyful moments strung together by trust, gratitude, inspiration and faith.</p>
+      </div>
+      <div class="fig">
+        <h4>Turn the fear into gratitude</h4>
+        <pre class="mantra"><span class="c">// when foreboding joy hits, say out loud:</span>
+<span class="k">"I'm feeling vulnerable.</span>
+<span class="k"> That's okay.</span>
+<span class="k"> I'm so grateful for ______."</span></pre>
+        <p class="cap">Her family takes turns saying what they're grateful for at grace, and keeps notes in a gratitude jar they made together.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="gp5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Cultivate intuition and trusting faith</span></div>
+  <div class="body">
+    <div>
+      <h3>Sometimes the gut says: find out more</h3>
+      <p class="idea">Intuition isn't one way of knowing. It's the ability to hold space for uncertainty and trust all the ways we know things: instinct, experience, faith and reason.</p>
+      <p class="letgo">Let go of <s>the need for certainty</s></p>
+    </div>
+    <ul class="points">
+      <li>Psychologists describe intuition as rapid, unconscious association: the brain matches what it sees against memories and experience and returns a gut feeling. Sometimes the feeling says "trust your instincts". Sometimes it shouts "check this, we don't have enough information".</li>
+      <li>What silences it is our need for certainty. One sign is polling everyone you know: "What do you think? Would you do it?" The real answer is often that you and your gut haven't spoken in years.</li>
+      <li>The other sign is rushing: "I can't stand not knowing." Leaping into a decision can be a way of not hearing what a careful look would tell you. Brown's rule: if I'm scared to run the numbers or write it down, I shouldn't do it.</li>
+      <li><strong>Faith</strong>, in her definition, is a place of mystery where we find the courage to believe in what we can't see and the strength to let go of our fear of uncertainty.</li>
+      <li>Faith and reason aren't natural enemies. Our need for certainty and for being right sets them against each other. In many forms of fundamentalism and extremism, certainty takes the place of faith.</li>
+    </ul>
+    <div class="fig">
+      <h4>Two ways the need for certainty overrides the gut</h4>
+      <div class="compare">
+        <div><h5>Asking everyone</h5><p class="q">"What do you think I should do?" "Would you do it?"</p><ul><li>We want reassurance</li><li>…and someone to share the blame</li></ul></div>
+        <div><h5>Leaping too fast</h5><p class="q">"I'm sick of thinking about it." "I'd rather just do it than wait."</p><ul><li>We can't tolerate not knowing</li><li>…and we may not want the answer</li></ul></div>
+      </div>
+      <p class="cap">Anne Lamott, quoted by Brown: the opposite of faith isn't doubt, it's certainty. When she needs it fast, Brown uses the serenity prayer. Otherwise she hides in the garage or drives round the block until she's quiet enough to hear herself.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="living">
+  <span class="label partno">Guideposts 6–10</span>
+  <h2>Making room to live</h2>
+  <p class="lede">The second five are about everything a busy, comparing, productive life squeezes out: making things, play, rest, quiet, meaningful work, and being silly in front of other people.</p>
+</div>
+
+<article class="chapter" id="gp6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Cultivate creativity</span></div>
+  <div class="body">
+    <div>
+      <h3>There's no such thing as non-creative people</h3>
+      <p class="idea">There are only people who use their creativity and people who don't. Unused creativity doesn't disappear. It lives in us until it's expressed, neglected to death or suffocated by resentment and fear.</p>
+      <p class="letgo">Let go of <s>comparison</s></p>
+    </div>
+    <ul class="points">
+      <li>Brown's creative memories all come from New Orleans: painting wooden key chains with her mother, matching home-sewn dresses, homemade art on every wall. They stop at about age nine, when the family moved to a Houston suburb where every living room looked like a hotel lobby and cute clothes had to come from the mall.</li>
+      <li>Comparison is about <strong>conformity and competition</strong> at the same time. We don't compare ourselves with mansions across town, we compare our yard with the yards on our block. The result is a crushing paradox: fit in and stand out. Be like everyone else, but better.</li>
+      <li>By forty she was openly dismissive of creativity for its own sake. The data changed her mind. The only unique contribution we'll ever make will come from creativity, and if we want meaning we need to make things: cook, write, draw, scrapbook, rebuild an engine, dance.</li>
+      <li>A month after coding the data she signed up for a gourd-painting class with her mother and daughter. It was one of the best days of her life. She now takes photographs, makes films with her husband and does art projects with the kids every week.</li>
+      <li>When we stop comparing, "ahead" and "behind", "best" and "worst" stop meaning anything. What you bring is original.</li>
+    </ul>
+    <div class="fig">
+      <h4>Comparison, taken apart</h4>
+      <div class="compare">
+        <div><h5>Fit in</h5><ul><li>Conformity</li><li>Same house, same clothes, same lobby-style living room</li><li>Being accepted</li></ul></div>
+        <div><h5>Stand out</h5><ul><li>Competition</li><li>The best yard on the block, the best kid on the team</li><li>Being better than</li></ul></div>
+      </div>
+      <p class="cap">Her friend Laura Williams says comparison is the thief of happiness. It also eats the energy creativity, gratitude, joy and authenticity need.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="gp7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Cultivate play and rest</span></div>
+  <div class="body">
+    <div>
+      <h3>The opposite of play isn't work. It's depression.</h3>
+      <p class="idea">Play and rest are as vital to our health as food and exercise, and wholehearted people make time for both.</p>
+      <p class="letgo">Let go of <s>exhaustion as a status symbol</s> <s>productivity as self-worth</s></p>
+    </div>
+    <ul class="points">
+      <li>"These people fool around a lot," Brown told a colleague. It took her a while to see they were <em>playing</em>. Psychiatrist Stuart Brown (no relation) defines play first of all as purposeless: we do it because it's fun and we want to.</li>
+      <li>That's exactly why it's hard. When self-worth is tied to net worth and productivity, time spent on something with no purpose feels like waste. Some of us even see sleep that way.</li>
+      <li>Play shapes the brain, builds empathy, helps us navigate complex groups, and sits at the core of creativity and innovation. Without it, work doesn't work in the long run.</li>
+      <li>Lack of sleep is linked to diabetes, heart disease, obesity and depression, and drowsy driving can be as dangerous as drunk driving. Yet we wear exhaustion as a badge of honour. The voices say: one more hour, you can catch up at the weekend, naps are for slackers.</li>
+    </ul>
+    <div class="fig">
+      <h4>The two family lists</h4>
+      <div class="predict">
+        <div>
+          <span class="label">When things are going well, we have…</span>
+          <ul class="yes" style="margin-top:10px"><li>Enough sleep</li><li>Exercise, healthy food, cooking</li><li>Time off, weekends away</li><li>Church</li><li>Being present with the kids</li><li>A sense of control over money</li><li>Meaningful work that doesn't swallow us</li><li>Time to piddle and to hang out</li><li>Time with family and close friends</li></ul>
+        </div>
+        <div>
+          <span class="label">Our list of dreams</span>
+          <ul class="no" style="margin-top:10px"><li>A house with more bedrooms</li><li>Bigger trips</li><li>Salary goals</li><li>Career milestones</li></ul>
+        </div>
+      </div>
+      <p class="cap">In 2008 Brown and her husband Steve wrote both lists. Everything on the dream list meant earning and spending more. Everything that made them happy was available now. Steve went to four days a week and their daughter cut back her activities to make room for doing nothing much.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="gp8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Cultivate calm and stillness</span></div>
+  <div class="body">
+    <div>
+      <h3>Anxiety is contagious. So is calm.</h3>
+      <p class="idea">Wholehearted people aren't free of anxiety. They've just decided it's a reality of life, not a way of life.</p>
+      <p class="letgo">Let go of <s>anxiety as a lifestyle</s></p>
+    </div>
+    <ul class="points">
+      <li>Brown started getting dizzy, sometimes falling over, whenever anxiety peaked. In her therapist's office she realised she didn't need a way to keep functioning on that much anxiety. She needed to reduce it.</li>
+      <li><strong>Calm</strong>, in her definition, means creating perspective and mindfulness while managing emotional reactivity. Think fast, respond slowly. Count to ten, or say "I'm not sure, I need to think about it." Before freaking out, ask: do I have enough information to freak out? Will it help? The answer is always no.</li>
+      <li>Panic breeds panic. Harriet Lerner: anxiety is extremely contagious, but so is calm. Which one do we want to spread?</li>
+      <li><strong>Stillness</strong> isn't focusing on nothingness, which is what scared Brown off meditation. It's creating a clearing: an emotionally uncluttered space where we can feel, think, dream and question. For her that's walking alone outside.</li>
+      <li>Stillness is scary because if we stop long enough, the truth of our lives catches up with us. So we stay busy, and the effort of avoiding exhaustion is what exhausts us. Anxiety feeds itself.</li>
+    </ul>
+    <div class="fig">
+      <h4>Two patterned responses to anxiety (Harriet Lerner)</h4>
+      <div class="compare">
+        <div><h5>Overfunctioners</h5><ul><li>Advise, rescue, take over, micromanage</li><li>Get into other people's business instead of looking inward</li><li>Growth edge: owning their vulnerability</li></ul></div>
+        <div><h5>Underfunctioners</h5><ul><li>Become less competent under stress</li><li>Invite others to take over</li><li>Growth edge: owning their strengths and competence</li></ul></div>
+      </div>
+      <p class="cap">Brown is an overfunctioner. Both are learned patterns, not the truth about who we are, so both can change. Her own anxiety detox: more calm and stillness, more walking and swimming, less caffeine.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="gp9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Cultivate meaningful work</span></div>
+  <div class="body">
+    <div>
+      <h3>Squandering your gifts has a cost</h3>
+      <p class="idea">We're all born with gifts and talents. Sharing them gives our lives meaning. Leaving them unused shows up as emptiness, resentment, shame and even grief.</p>
+      <p class="letgo">Let go of <s>self-doubt</s> <s>"supposed to"</s></p>
+    </div>
+    <ul class="points">
+      <li>Meaningful work kept showing up with a list of words that wouldn't go away: gifts and talents, spirituality, making a living, commitment, self-definition, "supposed to", self-doubt. She tried to treat them like spare IKEA screws and couldn't.</li>
+      <li>For Brown, sharing our gifts is the most powerful way to connect with God. Many of us spend our time looking up at the sky and wondering where God is, when God lives within us.</li>
+      <li>Meaningful work often doesn't pay the bills, so it takes commitment. A few people combine everything; most piece it together. Nobody else gets to define what's meaningful for you.</li>
+      <li>The gremlins mock your gifts ("that's not a real talent") and pile on the shoulds: you should care about money, not meaning; you should hate your job, that's what work is; you should quit and follow your dream. Write their messages down. It gives <em>you</em> the power, not them.</li>
+    </ul>
+    <div class="fig">
+      <h4>The slash effect</h4>
+      <div class="chips">
+        <span class="chip">Researcher / storyteller</span>
+        <span class="chip">Accountant / jeweller</span>
+        <span class="chip soft">Dockworker / filmmaker</span>
+        <span class="chip soft">Lawyer / chef</span>
+        <span class="chip soft">Rabbi / stand-up comic</span>
+        <span class="chip soft">Surgeon / playwright</span>
+        <span class="chip soft">Therapist / violin maker</span>
+      </div>
+      <p class="cap">From Marci Alboher's book on slash careers. Brown met an accountant/jeweller who blushed and said she wasn't a real jeweller. Brown was wearing her earrings at the time, not her calculator.</p>
+    </div>
+    <ul class="points">
+      <li>Asked "what do you do?", Brown now answers "how much time have you got?" She's a mother, partner, researcher, writer, storyteller, sister, friend, daughter and teacher, and is tired of picking one to make it easier for other people.</li>
+      <li>Her own filter for saying yes: is it inspiring, contemplative and creative? Malcolm Gladwell's criteria for meaningful work are complexity, autonomy and a clear relationship between effort and reward.</li>
+      <li>Howard Thurman, her favourite line for students: don't ask what the world needs. Ask what makes you come alive, and go do that. The world needs people who have come alive.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="gp10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Cultivate laughter, song and dance</span></div>
+  <div class="body">
+    <div>
+      <h3>Dancing is full-body vulnerability</h3>
+      <p class="idea">Laughter, song and dance create emotional and spiritual connection. They remind us of the one thing that matters when we're looking for comfort, celebration or healing: we're not alone.</p>
+      <p class="letgo">Let go of <s>being cool</s> <s>always being in control</s></p>
+    </div>
+    <ul class="points">
+      <li>There's a song, a dance and a reason to laugh for every emotion. Shame resilience needs humour too. Brown calls the healing kind <strong>knowing laughter</strong>: laughing with each other, not at each other, when we realise we share the same story.</li>
+      <li>She watched a dramatic film scene with and without its score. Without the music it fell flat. Music moves us even when we don't notice it.</li>
+      <li>She measures her family's emotional health by how often they dance in the kitchen. Dancing makes people more vulnerable than any other self-expression. Children do it until we teach them to care how they look.</li>
+      <li>Women told her they risk being labelled too loud or too wild. Men told her they risk looking out of control in front of other men. Two demands always work: be cool, and stay in control. Both are about managing what other people think of us.</li>
+      <li>When we don't give ourselves permission to be free, we rarely tolerate freedom in others. We put it down, make fun of it, shame it. The message is always the same: get it together.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Brown was in a shoe department in her baggiest sweater when her eight-year-old daughter Ellen started doing a robot dance to the pop song playing. Three glamorous mothers and their daughters stared. Ellen froze and looked at her mother. Brown's default would have been the eye-roll that saves yourself by betraying your kid. This time she smiled, said "you forgot this move", and joined in until the song ended. She didn't look to see how the other mothers reacted. She kept her eyes on Ellen.</p>
+    </div>
+    <p class="pull">The only true currency in this bankrupt world is what you share with someone else when you're uncool.</p>
+    <span class="label">Almost Famous, quoted at the start of the chapter</span>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Final thoughts</span>
+    <h2>Brave, afraid and very alive</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>Brown is suspicious of self-help that promises easy change. Meaningful change is a process. It's uncomfortable and often risky, especially when it means embracing imperfection and telling the world you're enough.</p>
+      <p>She frames the whole book as one question. Which is the bigger risk: letting go of what people think, or letting go of what you feel, what you believe and who you are?</p>
+      <p>She doesn't see the book as self-help so much as an invitation to a quiet, grassroots movement. It starts with each of us saying: <em>My story matters because I matter.</em> In a world that says fit in, choosing authenticity and worthiness is an act of resistance. It will confuse, annoy and frighten people, including you.</p>
+      <p>Six years after the kitchen table, she called them the best years of her life, and said she wouldn't change a thing.</p>
+    </div>
+    <div class="fig">
+      <h4>The wholehearted mantra</h4>
+      <pre class="mantra"><span class="c">// morning</span>
+<span class="k">No matter what gets done</span>
+<span class="k">and how much is left undone,</span>
+<span class="k">I am enough.</span>
+
+<span class="c">// night</span>
+Yes, I am imperfect and vulnerable
+and sometimes afraid,
+but that doesn't change the truth
+that I am also brave and worthy
+of love and belonging.</pre>
+      <p class="pull" style="font-size:clamp(22px,2.4vw,28px)">Owning our story and loving ourselves through that process is the bravest thing we'll ever do.</p>
+      <span class="label">The line the book opens with</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the "Dig Deep" sections</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Each guidepost closes with three moves Brown uses herself: get deliberate, get inspired, get going. These are the ones most worth stealing.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Get deliberate</h3>
+      <p>Set your intention before you're in it.</p>
+      <div class="tk"><i>Authenticity</i><b>Stand on your sacred ground</b><span>Before a vulnerable moment: "Don't shrink. Don't puff up." Make authenticity, not approval, the goal.</span></div>
+      <div class="tk"><i>Resilience</i><b>Ask six evening questions</b><span>Did I practise today? What went well? Did I stay abstinent, however I define it? Was I open to others? Did I stand up for myself? Am I holding on to unexpressed feelings?</span></div>
+      <div class="tk"><i>Play and rest</i><b>Write your joy-and-meaning list</b><span>List what's there when life feels good. Compare it with your to-do list and your goals. The gap may surprise you.</span></div>
+      <div class="tk"><i>Meaningful work</i><b>Name your criteria for meaningful</b><span>Brown's are inspiring, contemplative and creative. Use yours as a filter for what you say yes to.</span></div>
+    </div>
+    <div class="col">
+      <h3>Get inspired</h3>
+      <p>Keep company with people and ideas that pull you forward.</p>
+      <div class="tk"><i>Self-compassion</i><b>Remember the crack</b><span>"There is a crack in everything. That's how the light gets in." Imperfections aren't inadequacies. They show we're all in this together.</span></div>
+      <div class="tk"><i>Gratitude and joy</i><b>Notice the ordinary</b><span>The walk home from school, a meal together, jumping on the trampoline. That's where most of the joy is.</span></div>
+      <div class="tk"><i>Creativity</i><b>Find your creative tribe</b><span>Brown's group of artists, writers and photographers meets one long weekend a year. Courage is contagious.</span></div>
+      <div class="tk"><i>Laughter, song, dance</i><b>Make a "this is me" playlist</b><span>Songs for particular moods, and one list of the songs that make you feel most like yourself.</span></div>
+    </div>
+    <div class="col">
+      <h3>Get going</h3>
+      <p>Take one small, concrete action.</p>
+      <div class="tk"><i>Self-compassion</i><b>Showing up is enough</b><span>Some mornings, tell yourself: "Today, I'll believe that showing up is enough."</span></div>
+      <div class="tk"><i>Gratitude and joy</i><b>Name the fear, then the thanks</b><span>"I'm feeling vulnerable. That's okay. I'm so grateful for…" Say it out loud.</span></div>
+      <div class="tk"><i>Play and rest</i><b>Say no today</b><span>Cross something off your list and write "take a nap" in its place.</span></div>
+      <div class="tk"><i>Creativity, dance</i><b>Dare to be silly</b><span>Take a class you might be bad at. Dance for five minutes a day. Put music on while you clean up after dinner.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Brené Brown, <em>The Gifts of Imperfection</em> (Hazelden, 2010), read in the German edition <em>Die Gaben der Unvollkommenheit</em> (Arkana, 2025). Quotations are my translations back into English and may differ from the original wording. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  function rgba(hex, a) {
+    var h = hex.replace("#", "");
+    if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+    var n = parseInt(h, 16);
+    return "rgba(" + ((n >> 16) & 255) + "," + ((n >> 8) & 255) + "," + (n & 255) + "," + a + ")";
+  }
+  function hash(i) { var x = Math.sin(i * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); }
+
+  /* --- Hero: a string of twinkle lights. Joy is moments, not a constant bonfire --- */
+  var canvas = document.getElementById("lights");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function wireY(x, swag, top, sag) {
+    var u = (x % swag) / swag;
+    return top + sag * 4 * u * (1 - u);
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var swags = w < 560 ? 2 : 3;
+    var swag = w / swags, top = 10, sag = hgt * 0.46;
+    var cols = [css("--sun"), css("--gold"), css("--plum")];
+    var wire = css("--ink-3");
+
+    ctx.lineWidth = 1.25;
+    ctx.strokeStyle = wire;
+    ctx.globalAlpha = 0.7;
+    ctx.beginPath();
+    for (var x = 0; x <= w; x += 2) {
+      var y = wireY(Math.min(x, w - 0.01), swag, top, sag);
+      if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+
+    var n = Math.max(12, Math.round(w / 36));
+    for (var i = 0; i < n; i++) {
+      var bx = (i + 0.5) * w / n;
+      var by = wireY(bx, swag, top, sag) + 8;
+      var col = cols[i % 3];
+      var b;
+      if (reduce) {
+        b = hash(i) > 0.45 ? 1 : 0.15;
+      } else {
+        var speed = 0.0009 + hash(i + 11) * 0.0016;
+        b = 0.5 + 0.5 * Math.sin(time * speed + hash(i) * 6.283);
+        b = Math.pow(b, 2.4);
+      }
+      var g = ctx.createRadialGradient(bx, by, 0, bx, by, 18);
+      g.addColorStop(0, rgba(col, 0.55 * b));
+      g.addColorStop(1, rgba(col, 0));
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(bx, by, 18, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = wire;
+      ctx.fillRect(bx - 2, by - 9, 4, 4);
+      ctx.fillStyle = rgba(col, 0.3 + 0.7 * b);
+      ctx.beginPath(); ctx.ellipse(bx, by, 3.6, 5, 0, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
