@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Chaos Machine by Max Fisher – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from the cover's reaction emoji erupting out of a
+   phone on charcoal: heart red, flame orange, emoji yellow, thumbs-up blue. */
+:root {
+  --paper: #f6f5f2;
+  --paper-2: #ecebe6;
+  --card: #ffffff;
+  --ink: #161616;
+  --ink-2: #4a4946;
+  --ink-3: #7a7873;
+  --rule: #dad8d1;
+
+  /* the four reactions */
+  --heart: #d8283a;
+  --fire: #d85a0c;
+  --spark: #b98400;
+  --like: #2a63cf;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #141414;
+    --paper-2: #1d1d1d;
+    --card: #232323;
+    --ink: #f1f0ec;
+    --ink-2: #b9b7b0;
+    --ink-3: #8a8882;
+    --rule: #333230;
+    --heart: #ff5a68;
+    --fire: #ff8a3d;
+    --spark: #f5c84a;
+    --like: #6c9dff;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #141414;
+  --paper-2: #1d1d1d;
+  --card: #232323;
+  --ink: #f1f0ec;
+  --ink-2: #b9b7b0;
+  --ink-3: #8a8882;
+  --rule: #333230;
+  --heart: #ff5a68;
+  --fire: #ff8a3d;
+  --spark: #f5c84a;
+  --like: #6c9dff;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--like); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Reaction colour helpers */
+.c-heart { --c: var(--heart); }
+.c-fire  { --c: var(--fire); }
+.c-spark { --c: var(--spark); }
+.c-like  { --c: var(--like); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 125%; font-size: clamp(22px, 3vw, 34px); letter-spacing: .02em; line-height: 1; }
+.hero h1 {
+  font-size: clamp(64px, 12.5vw, 168px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .84;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+  margin-top: 8px;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 897;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(20, 16, 10, .4), 0 8px 18px -10px rgba(20, 16, 10, .3);
+  transform: rotate(1.6deg);
+  background: #2a2a2a;
+  object-fit: cover;
+}
+.burst { position: relative; margin-top: 28px; }
+.burst canvas { display: block; width: 100%; height: 140px; }
+.burst .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg text.ink { fill: var(--ink); }
+.fig svg text.dim { fill: var(--ink-3); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip: fixed column counts so an odd last cell can take the full row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--c, var(--ink)); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* case-study cards */
+.cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px; }
+.case { background: var(--card); border: 1px solid var(--rule); border-top: 4px solid var(--c, var(--ink)); border-radius: 6px; padding: 16px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.case b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 18px; line-height: 1.2; }
+.case .when { font-family: var(--mono); font-size: 12px; color: var(--ink-3); letter-spacing: .05em; }
+.case span:last-child { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+/* timeline table */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tl { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 15.5px; line-height: 1.42; }
+table.tl th, table.tl td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--rule); }
+table.tl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tl tbody th { font-family: var(--mono); font-weight: 500; white-space: nowrap; color: var(--c, var(--ink)); width: 90px; }
+table.tl td.where { font-family: var(--display); font-weight: 700; font-stretch: 100%; width: 180px; }
+.tablenote { padding: 14px 16px; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 7px 13px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--c, var(--ink)); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .epilogue, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats { grid-template-columns: minmax(0, 1fr); }
+  .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Max Fisher · Little, Brown, 2022</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The argument</a>
+    <a href="#hook">The hook</a>
+    <a href="#machine">The machine</a>
+    <a href="#reckoning">The reckoning</a>
+    <a href="#epilogue">Epilogue</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">The</p>
+    <h1><span>Chaos</span><span>Machine</span></h1>
+    <p class="sub">The inside story of how social media rewired our minds and our world</p>
+    <p class="dek">New York Times reporter Max Fisher argues that the platforms' harms aren't mainly about bad actors misusing a neutral tool. The systems built to maximise engagement change how people think, behave and relate to each other.</p>
+    <div class="byline label">
+      <span>12 chapters</span><span>prologue + epilogue</span><span>5 continents of case studies</span><span>~100,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Chaos Machine by Max Fisher: on a black background, a smartphone erupts with a fountain of reaction icons, red hearts, orange flames, yellow emoji faces and blue thumbs-up">
+</div>
+
+<div class="burst" aria-hidden="true">
+  <canvas id="burst"></canvas>
+  <div class="ends label"><span>One post</span><span>Amplified by the feed</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>The problem isn't only who uses the platforms. It's what the platforms are built to do.</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Fisher, an international reporter, says he started out thinking social media's dangers came mostly from bad actors: propagandists, foreign agents, fake-news sellers. But wherever he reported, sudden riots, new extremist groups and odd conspiracy theories kept leading back to the same place.</p>
+      <p>His argument is that the harm is built into the business. The big platforms earn money from attention, so their systems are tuned to whatever keeps people engaged longest. What works best turns out to be the oldest triggers in human psychology: the need for social approval, group identity and, above all, <strong>moral outrage</strong>. Multiplied across billions of users, he writes, this changes how people think and behave, and eventually changes societies.</p>
+      <p>The book follows that pattern from its <a href="#hook">psychological roots</a> through the years when <a href="#machine">algorithms took over</a> and spread chaos from Myanmar to Brazil, to the <a href="#reckoning">reckoning</a> of the pandemic, the 2020 election and 6 January. Most chapters are built around people who saw the problem early and tried to warn the companies.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Numbers the book leans on</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-like"><span class="big num">40 &gt; 38</span><p>In 2014, Americans with Facebook accounts spent more minutes a day on it (40) than socialising in person (38).</p></div>
+        <div class="stat c-fire"><span class="big num">+20%</span><p>How much farther a tweet travelled for each moral-emotional word it contained, in William Brady's study.</p></div>
+        <div class="stat c-heart"><span class="big num">0.5→40%</span><p>Internet use in Myanmar between 2012 and 2015, mostly through phones with Facebook preloaded.</p></div>
+        <div class="stat c-spark"><span class="big num">70%</span><p>Share of time on YouTube that came from its recommendation system, by the company's own estimate.</p></div>
+      </div>
+      <div class="story c-heart" style="--c:var(--heart)">
+        <span class="label">The insider</span>
+        <p>A content moderator Fisher calls Jacob watched posts grow more hateful in 2017 and 2018 and saw that the more incendiary the post, the further it seemed to spread. When his warnings went nowhere, he leaked 1,400 pages of Facebook's internal rulebooks to Fisher, which became a 2018 New York Times investigation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col c-spark">
+      <span class="label">Chapters 1–4</span>
+      <h3>The hook</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Trapped in the Casino</b>Likes, slot machines and identity</a></li>
+        <li><span>02</span><a href="#ch2"><b>Everything Is Gamergate</b>The first social-media culture war</a></li>
+        <li><span>03</span><a href="#ch3"><b>Opening the Portal</b>Reddit's revolt and the alt right</a></li>
+        <li><span>04</span><a href="#ch4"><b>Tyranny of Cousins</b>Moral outrage and shaming mobs</a></li>
+      </ol>
+    </div>
+    <div class="col c-fire">
+      <span class="label">Chapters 5–8</span>
+      <h3>The machine</h3>
+      <ol>
+        <li><span>05</span><a href="#ch5"><b>Awakening the Machine</b>Algorithms take over the feed</a></li>
+        <li><span>06</span><a href="#ch6"><b>The Fun House Mirror</b>2016 and the distorted electorate</a></li>
+        <li><span>07</span><a href="#ch7"><b>The Germs and the Wind</b>Sri Lanka and Myanmar</a></li>
+        <li><span>08</span><a href="#ch8"><b>Church Bells</b>Status threat and superposters in Germany</a></li>
+      </ol>
+    </div>
+    <div class="col c-heart">
+      <span class="label">Chapters 9–12</span>
+      <h3>The reckoning</h3>
+      <ol>
+        <li><span>09</span><a href="#ch9"><b>The Rabbit Hole</b>YouTube, Charlottesville, Christchurch</a></li>
+        <li><span>10</span><a href="#ch10"><b>The New Overlords</b>Moderation and political power</a></li>
+        <li><span>11</span><a href="#ch11"><b>Dictatorship of the Like</b>YouTube remakes Brazil</a></li>
+        <li><span>12</span><a href="#ch12"><b>Infodemic</b>Covid, 2020 and 6 January</a></li>
+      </ol>
+    </div>
+  </div>
+  <p class="label" style="margin-top:14px">The book has no formal parts. The three groups here are this summary's.</p>
+</section>
+
+<!-- ============ PROLOGUE ============ -->
+<section id="prologue">
+  <div class="sec-head">
+    <span class="label">Prologue · Consequences</span>
+    <h2>A cigarette factory that doesn't see the smoke</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Fisher visits Facebook's headquarters in late 2018 carrying the leaked rulebooks. The policy staff he meets are capable and candid about terrorism, hacking and hate-speech rules. But when he asks about harm that comes from the platform's own design, rather than from people misusing it, the answers go vague. Executives describe social media as a faster, lower-friction version of ordinary communication.</p>
+      <p>He compares it to touring a cigarette factory where the managers can't understand why people complain about the health effects of the little boxes they sell. He also warns them about a rumour spreading across countries on Facebook and WhatsApp: that outsiders were kidnapping children to harvest their organs. In Indonesia it had led mobs in nine villages to attack strangers. An American version, QAnon, was being recommended to users as if it were just another group.</p>
+    </div>
+    <div class="fig">
+      <h4>What the company was told, and when</h4>
+      <div class="compare">
+        <div class="c-like"><h5>In public, 2018</h5><ul><li>Abuse online is old; only the amplification is new</li><li>More engagement exposes people to new ideas</li><li>Risks can be engineered out</li></ul></div>
+        <div class="c-heart"><h5>Internal research, 2018</h5><ul><li>A presentation (later leaked to the Wall Street Journal) said its algorithms "exploit the human brain's attraction to divisiveness"</li><li>Left alone, the systems would serve "more and more divisive content"</li></ul></div>
+      </div>
+      <p class="cap">In 2020 a civil-rights audit commissioned by Facebook concluded that its systems were pushing people toward echo chambers of extremism and that the company did not understand its own products' effects.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="hook">
+  <span class="label partno">Chapters 1–4</span>
+  <h2>The hook</h2>
+  <p class="lede">How a handful of design choices, made mostly to grow a business, plugged into the deepest parts of human social psychology, and what happened when the internet's early subcultures met them first.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Trapped in the Casino</span></div>
+  <div class="body">
+    <div>
+      <h3>Built to be compulsive</h3>
+      <p class="idea">The platforms didn't set out to make people angrier. They set out to hold attention, and stumbled onto psychological levers they didn't fully understand.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The anti-vaccine signal.</strong> In 2014 Renée DiResta, a tech investor and former intelligence analyst, found that some California preschools had vaccination rates as low as 30%. Polls showed 85% support for tighter school mandates, yet lawmakers feared a loud online movement. On Facebook, searches and ad tools for "vaccine" surfaced anti-vaccine content first, and joining one such group triggered recommendations for more, then for chemtrails and flat-earth groups. The reason, she concluded, was engagement: worried parents post constantly, satisfied ones don't.</li>
+      <li><strong>An "American Galápagos".</strong> Fisher traces Silicon Valley's culture to Cold War defence money, Stanford's blending of research and profit, and venture capital. Successful engineers funded people who looked and thought like them, so each generation's blind spots were passed on and intensified.</li>
+      <li><strong>The news feed's accidental lesson (2006).</strong> Users protested the new feed in groups like "Students Against Facebook News Feed". Only a minority joined, but the feed broadcast every join, so the anger looked universal. Engagement soared. The distortion was kept, and Facebook opened to everyone.</li>
+      <li><strong>The casino effect.</strong> Sean Parker, Facebook's first president, later described the goal as consuming "as much of your time and conscious attention as possible" through a "social-validation feedback loop". Notifications work like slot-machine lights, and unpredictable rewards (intermittent variable reinforcement) make the habit hardest to break.</li>
+      <li><strong>The sociometer.</strong> Psychologist Mark Leary's theory is that self-esteem is a gauge of how much the group values us. The Like button, launched in 2009, and public counts under every post wire that gauge to a scoreboard. Leah Pearlman, who helped launch it, later found herself buying ads to win back the likes an algorithm change had taken away.</li>
+      <li><strong>Identity as the slingshot.</strong> Henri Tajfel's research showed that people will form an us-versus-them divide even from a coin toss. Upworthy, BuzzFeed and, Fisher admits, his own Vox learned that identity-affirming and identity-conflict headlines spread best.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The engagement loop</h4>
+        <svg viewBox="0 0 460 330" role="img" aria-label="A circular loop of four stages with arrows. You post. The platform decides who sees it. A variable reward arrives: likes, replies or silence. The sociometer reads it as your social standing, which drives you to post again, adjusted toward what got rewarded. In the centre: the platform earns from the time spent.">
+          <defs><marker id="ah1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--ink-3)"/></marker></defs>
+          <circle cx="230" cy="165" r="104" fill="none" stroke="var(--rule)" stroke-width="2"/>
+          <path d="M268,68 A104,104 0 0 1 326,126" fill="none" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#ah1)"/>
+          <path d="M326,204 A104,104 0 0 1 268,262" fill="none" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#ah1)"/>
+          <path d="M192,262 A104,104 0 0 1 134,204" fill="none" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#ah1)"/>
+          <path d="M134,126 A104,104 0 0 1 192,68" fill="none" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#ah1)"/>
+          <rect x="148" y="40" width="164" height="44" rx="6" fill="color-mix(in srgb, var(--like) 14%, var(--card))" stroke="var(--like)" stroke-width="1.5"/>
+          <text x="230" y="60" text-anchor="middle" font-size="13" class="ink">You post</text>
+          <text x="230" y="76" text-anchor="middle" font-size="10" class="dim">a photo, a take, a jab</text>
+          <rect x="318" y="143" width="140" height="44" rx="6" fill="color-mix(in srgb, var(--fire) 14%, var(--card))" stroke="var(--fire)" stroke-width="1.5"/>
+          <text x="386" y="163" text-anchor="middle" font-size="13" class="ink">Feed decides</text>
+          <text x="386" y="179" text-anchor="middle" font-size="10" class="dim">who sees it</text>
+          <rect x="140" y="246" width="180" height="44" rx="6" fill="color-mix(in srgb, var(--spark) 16%, var(--card))" stroke="var(--spark)" stroke-width="1.5"/>
+          <text x="230" y="266" text-anchor="middle" font-size="13" class="ink">Variable reward</text>
+          <text x="230" y="282" text-anchor="middle" font-size="10" class="dim">cheers, boos or crickets</text>
+          <rect x="4" y="143" width="140" height="44" rx="6" fill="color-mix(in srgb, var(--heart) 14%, var(--card))" stroke="var(--heart)" stroke-width="1.5"/>
+          <text x="74" y="163" text-anchor="middle" font-size="13" class="ink">Sociometer</text>
+          <text x="74" y="179" text-anchor="middle" font-size="10" class="dim">"how valued am I?"</text>
+          <text x="230" y="160" text-anchor="middle" font-size="12" class="ink">time on site</text>
+          <text x="230" y="177" text-anchor="middle" font-size="10" class="dim">= ad revenue</text>
+          <text x="230" y="318" text-anchor="middle" font-size="10.5" class="dim">each lap nudges the next post toward what got rewarded</text>
+        </svg>
+        <p class="cap">Sean Parker's "social-validation feedback loop", as Fisher describes it. Because the platform invisibly chooses the audience, you never know whether the next post will be applauded, attacked or ignored, which is exactly what keeps people pulling the lever.</p>
+      </div>
+      <div class="fig">
+        <h4>The sociometer, wired to a counter</h4>
+        <svg viewBox="0 0 460 296" role="img" aria-label="A semicircular gauge labelled sociometer, running from rejected on the left to valued on the right, with a needle. Below it, two rows compare offline and online. Offline: approval is rare, mostly private, from a group of about 150. Online: approval is constant, public, counted, from a potentially unlimited audience.">
+          <path d="M80,170 A150,150 0 0 1 380,170" fill="none" stroke="var(--paper-2)" stroke-width="26"/>
+          <path d="M80,170 A150,150 0 0 1 155,40" fill="none" stroke="color-mix(in srgb, var(--like) 55%, var(--paper-2))" stroke-width="26"/>
+          <path d="M155,40 A150,150 0 0 1 305,40" fill="none" stroke="color-mix(in srgb, var(--spark) 60%, var(--paper-2))" stroke-width="26"/>
+          <path d="M305,40 A150,150 0 0 1 380,170" fill="none" stroke="color-mix(in srgb, var(--heart) 60%, var(--paper-2))" stroke-width="26"/>
+          <line x1="230" y1="170" x2="330" y2="74" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="230" cy="170" r="8" fill="var(--ink)"/>
+          <text x="80" y="196" text-anchor="middle" font-size="11" class="dim">rejected</text>
+          <text x="380" y="196" text-anchor="middle" font-size="11" class="dim">valued</text>
+          <text x="230" y="197" text-anchor="middle" font-size="13" class="ink">sociometer</text>
+          <text x="230" y="212" text-anchor="middle" font-size="10" class="dim">self-esteem as a gauge</text>
+          <line x1="20" y1="228" x2="440" y2="228" stroke="var(--rule)"/>
+          <text x="20" y="252" font-size="11" class="dim">OFFLINE</text>
+          <text x="110" y="252" font-size="12">rare · mostly private · ~150 people</text>
+          <text x="20" y="280" font-size="11" class="dim">ONLINE</text>
+          <text x="110" y="280" font-size="12" class="ink">constant · public · counted · unlimited</text>
+        </svg>
+        <p class="cap">Fisher likens the Like button to a car battery hooked up to the sociometer. Brain scans cited in the book show Likes activating the nucleus accumbens, a reward region, more strongly in heavy users.</p>
+      </div>
+    </div>
+
+    <div class="fig">
+      <h4>What a month off Facebook did</h4>
+      <div class="stats">
+        <div class="stat c-spark"><span class="big num">$180</span><p>The amount economists had to offer before at least half of users would deactivate for four weeks (2018).</p></div>
+        <div class="stat c-like"><span class="big num">↑ ↓</span><p>Those who quit reported more happiness, less anxiety and greater life satisfaction, and used the app less afterwards.</p></div>
+      </div>
+      <p class="cap">The researchers described the behaviour as consistent with habit formation, a clinical way of saying users had been trained to act against their own interests. The average American, the book notes, checks their phone about 150 times a day.</p>
+    </div>
+
+    <div class="story c-heart" style="--c:var(--heart)">
+      <span class="label">The warning nobody heeded: Myanmar</span>
+      <p>Myanmar went from 0.5% to 40% internet use in three years, largely on cheap phones with Facebook preloaded and data waived ("zero-rating"). A state newspaper said a person without Facebook was like a person without an address. In 2013 and 2014 a Stanford researcher warned Facebook that hate speech was overrunning the platform, which then had a single Burmese-speaking moderator. In 2014 the extremist monk Wirathu shared a false claim that two Muslim tea-shop owners in Mandalay had raped a Buddhist woman. Riots followed, killing two people. Officials couldn't reach anyone at Facebook and blocked it locally; the riots cooled.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Everything Is Gamergate</span></div>
+  <div class="body">
+    <div>
+      <h3>The first culture war born on the platforms</h3>
+      <p class="idea">A harassment campaign against a game developer previewed the politics of the next decade: identity under threat, conspiracy as self-defence, and platforms that rewarded both.</p>
+    </div>
+    <ul class="points">
+      <li><strong>August 2014.</strong> An ex-boyfriend's post falsely suggested developer Zoë Quinn had traded sex for a good review. It spread from 4chan to Reddit to YouTube. Within hours she faced threats, doxxing of relatives and doctored images. Developer Brianna Wu and critic Anita Sarkeesian were targeted next; women in games journalism lost jobs. Campaigns pushed advertisers like Intel to pull out.</li>
+      <li><strong>The revolutionaries.</strong> Fisher traces the Valley's ideals to the 1970s counterculture: Stewart Brand's WELL, the first social network that mattered, and the 1996 "Declaration of the Independence of Cyberspace". Free speech as near-absolute value and suspicion of all authority became founding doctrine. A tiny network of investors (from Shockley's hires to Kleiner Perkins, PayPal and Peter Thiel) shaped who got funded: young, male, socially indifferent founders.</li>
+      <li><strong>Trolling.</strong> On 4chan, prank culture became sport. Transgressing taboos signalled you were in on the joke, and "lulz" justified cruelty, including against an 11-year-old girl who, it later emerged, had been a victim of abuse. A young user Fisher calls Adam describes finding belonging there, and then being pulled toward ever darker material.</li>
+      <li><strong>Gamers as a test audience.</strong> Since the 1980s, games had been marketed to boys. Early social platforms drew the same users and catered to them. When games began to broaden, some felt their identity was under attack, and framing it as a corruption conspiracy turned anxiety into a battle of us versus them.</li>
+      <li><strong>The Dunbar curse.</strong> Humans can track about 150 relationships. From 2008, Facebook and Twitter pushed users beyond that, into feeds of half-strangers and then into large groups. Studies of monkeys forced into larger groups found them more aggressive and distrustful. DiResta found the group recommendations linking conspiracies: interest in one predicted the platform offering the next.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"I could not have foreseen that all of our politics were going to become Gamergate."</blockquote>
+      <span class="label">Brianna Wu, speaking to Fisher</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Opening the Portal</span></div>
+  <div class="body">
+    <div>
+      <h3>The first attempt at reform, and the backlash</h3>
+      <p class="idea">When one platform tried to curb its worst communities, its users revolted. The far right noticed how much energy the web had stored up.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Reddit's "wake up call".</strong> Reddit defended near-total free speech, including openly racist subreddits. It only acted on stolen celebrity nude photos in 2014 after weeks of pressure and the discovery that some showed minors. CEO Yishan Wong resigned soon after.</li>
+      <li><strong>Ellen Pao's eight months.</strong> As interim CEO in 2015, Pao banned non-consensual nude images, then a few harassment communities such as "FatPeopleHate". Her theory: a small number of hateful users, amplified by the platform, set the tone for all. Users revolted with racist and violent abuse. After an unrelated firing set off a moderator strike, she left, writing that "the trolls are winning".</li>
+      <li><strong>Meme magic.</strong> Breitbart's Milo Yiannopoulos rode Gamergate to a large new audience. Steve Bannon later said of such young men: "You can activate that army." Terms and mascots like "cuckservative" and Pepe the Frog moved from fringe boards into mainstream campaigns.</li>
+      <li><strong>Facebook as the real engine.</strong> A Harvard study found Breitbart became the centre of a right-wing media network on Facebook between 2015 and 2016. Fisher says it did little more than post its stories; the platform's systems promoted hyperpartisan outlets that played on group threat. The same study found the pattern on Twitter too.</li>
+    </ul>
+    <div class="compare">
+      <div class="c-like"><h5>Pao's bet</h5><ul><li>The loudest few poison the whole platform</li><li>Remove the worst communities and keep them out</li><li>Rules that protect the many from the loudest</li></ul></div>
+      <div class="c-heart"><h5>What followed</h5><ul><li>Mass revolt framed as a free-speech war</li><li>Daily Stormer and others recruited from Reddit and 4chan</li><li>Platforms kept drifting toward "4chan turbocharged by algorithms"</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Tyranny of Cousins</span></div>
+  <div class="body">
+    <div>
+      <h3>Moral outrage at scale</h3>
+      <p class="idea">Outrage evolved to keep small groups in line. The platforms gave it an audience of millions and rewarded it every time.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Cecil the lion (2015).</strong> A Reddit post about a lion killed in Zimbabwe escalated with each retelling: sad, then infuriating, then a call to punish. On Twitter, 672,000 tweets in a day; about 50,000 named the dentist who shot it and were seen 222 million times. His practice closed under threats.</li>
+      <li><strong>Why outrage feels good.</strong> Psychologist William Brady, once an angry Facebook vegan activist himself, studies outrage as a social signal: it advertises your values and rallies the group to punish a wrongdoer. Even infants take treats from a puppet that refused to share.</li>
+      <li><strong>Shaming mobs.</strong> Legal scholar Kate Klonick notes that shaming used to be local and proportionate. Online, a rude remark can bring global abuse for weeks. Fisher lists cases including Justine Sacco's tweet, a Wisconsin class photo misread as Nazi salutes, and the Smith College "eating while Black" post, later found to be largely a misunderstanding. The workers involved were never cleared. Truth matters little. What spreads is what provokes.</li>
+      <li><strong>Lyudmila's foxes.</strong> Soviet geneticist Lyudmila Trut bred foxes for friendliness and got domesticated animals within generations. Anthropologist Richard Wrangham argues that humans domesticated themselves the same way: language let the weaker band together to kill bullies. That left a "tyranny of cousins" (Ernest Gellner's phrase), consensus enforced by collective outrage. Social networks reawaken it.</li>
+      <li><strong>Grandstanding.</strong> Philosophers Justin Tosi and Brandon Warmke warn that public moral talk rewards a "moral arms race". In experiments, people punish more harshly when they think they are watched, and harsher still by a larger audience.</li>
+      <li><strong>The Ramble (2020).</strong> Amy Cooper's false 911 call about birdwatcher Christian Cooper drew justified outrage. But she was also pressured to give up her dog and then got it back once tempers cooled. Weeks later, a man's viral video accusing a woman of racism turned out to fit a pattern of staged confrontations. The machine doesn't distinguish.</li>
+    </ul>
+    <div class="fig">
+      <h4>One lion, one day on Twitter</h4>
+      <div class="stats">
+        <div class="stat c-fire"><span class="big num">672,000</span><p>tweets about the incident in a single day</p></div>
+        <div class="stat c-heart"><span class="big num">50,000</span><p>of them named the dentist directly</p></div>
+        <div class="stat c-like"><span class="big num">222 million</span><p>views of the tweets naming him, infamy on a scale once reserved for national figures</p></div>
+      </div>
+      <p class="src">Figures as reported in The Chaos Machine, ch. 4</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="machine">
+  <span class="label partno">Chapters 5–8</span>
+  <h2>The machine</h2>
+  <p class="lede">From 2012, self-learning algorithms took over what people saw. Optimised for watch time and engagement, they found outrage, conspiracy and group threat on their own, and carried them into elections and into countries the companies barely knew.</p>
+</div>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Awakening the Machine</span></div>
+  <div class="body">
+    <div>
+      <h3>Handing the feed to the algorithm</h3>
+      <p class="idea">Nobody fully knows how these systems decide. They were told to maximise engagement, and they learned what maximises it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Algorithmification.</strong> Guillaume Chaslot, a French AI engineer, joined YouTube in 2010. Its new machine-learning system (2012) picked videos by what kept people watching. Chaslot noticed it pushing videos angry at women, including at critic Anita Sarkeesian. That autumn YouTube set itself a goal: <strong>a billion hours of watch time a day</strong> by the end of 2016, ten times the level at the time. Engineer Cristos Goodrow pledged to resign if he missed it.</li>
+      <li><strong>Filter bubbles.</strong> Eli Pariser coined the term in 2011 after his conservative friends vanished from his feed. Chaslot built an alternative recommender that would show users more variety. His bosses shelved it, he says, and he was let go in 2013. YouTube says it was for performance.</li>
+      <li><strong>Ten X.</strong> Intel's Andy Grove preached 10x growth. Cloud computing then made startups cheap, and venture capital began funding many at once, wanting rapid growth over profit. To justify inflated valuations, companies had to keep growing users and time on site faster than ad prices fell. Fisher argues this pushed them to hand the job to machines.</li>
+      <li><strong>Dark patterns.</strong> Under CEO Susan Wojcicki, YouTube moved to deep learning that largely ran itself. The company estimated that 70% of time on the site came from its recommendations. Facebook's 2014 change favoured "emotionally engaging" interactions; engineers were paged if likes or shares dipped.</li>
+      <li><strong>Warnings.</strong> On a Paris bus in 2015, Chaslot met a man convinced by YouTube videos of a plot to kill billions. He built AlgoTransparency to track recommendations. Inside Google, designer Tristan Harris circulated a 2013 memo about attention-grabbing design. DiResta told a Google audience in 2016 that the algorithms were rewarding conspiracy. In 2016 Twitter also switched from a chronological feed to an engagement-ranked one. Microsoft's chatbot Tay, trained on tweets, turned racist in under a day.</li>
+    </ul>
+    <div class="fig">
+      <h4>Search results vs. what YouTube recommended next</h4>
+      <div class="bars">
+        <div class="bar c-like"><div class="row"><span>"Pope Francis": search results that were conspiracies</span><b>10%</b></div><div class="track"><div class="fill" style="width:10%"></div></div></div>
+        <div class="bar c-heart"><div class="row"><span>"Pope Francis": recommended videos that were conspiracies</span><b>85%</b></div><div class="track"><div class="fill" style="width:85%"></div></div></div>
+        <div class="bar c-like"><div class="row"><span>Global warming: search results calling it a hoax or conspiracy</span><b>15%</b></div><div class="track"><div class="fill" style="width:15%"></div></div></div>
+        <div class="bar c-heart"><div class="row"><span>Global warming: recommended videos doing so</span><b>70%</b></div><div class="track"><div class="fill" style="width:70%"></div></div></div>
+      </div>
+      <p class="cap">Chaslot's own tracking, as reported in the book. Searching shows what exists; recommendations show what the system chooses to push. When he raised it privately, the response he describes was: if people click on it, who are we to judge?</p>
+      <p class="src">Source: AlgoTransparency results cited in ch. 5</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">The Fun House Mirror</span></div>
+  <div class="body">
+    <div>
+      <h3>How the platforms distort what we think others think</h3>
+      <p class="idea">Social media doesn't just show you outrage. It rewards you for producing it, until you feel it more.</p>
+    </div>
+    <ul class="points">
+      <li><strong>2016.</strong> Days before the election Facebook recommended Pizzagate groups to DiResta. Google searches surfaced YouTube videos backing the theory. Within a month, 14% of Trump supporters in one poll believed Clinton was linked to a child-sex ring at a Washington pizzeria. In December a man who had binged Pizzagate videos fired a rifle inside the restaurant. Zuckerberg called the idea that fake news swayed the vote "pretty crazy". Chaslot's tracking found that more than 80% of recommended election videos favoured Trump, whichever candidate was searched.</li>
+      <li><strong>Moral-emotional words.</strong> Brady's team analysed half a million tweets on climate, guns and same-sex marriage. Each moral-emotional word raised a tweet's reach by about 20%, but mostly within the sender's own side. Outrage paid in attention at the cost of widening the divide.</li>
+      <li><strong>Contact backfires online.</strong> After 2016 the platforms talked of "bringing people together". But when Twitter users followed a bot retweeting the other side, both Democrats and Republicans became more partisan. Online, the other side is mostly encountered at its worst.</li>
+      <li><strong>Looking for Russians.</strong> DiResta led a Senate-commissioned analysis of the companies' data. Russia's operation included at least 1,000 YouTube videos, 131,000 tweets and Facebook posts that reached 126 million users. Its formula was to appeal to identity, say it was under attack, and stir outrage. She coined the word "ampliganda" for propaganda powered by ordinary users spreading it. In one experiment, only 16% of Republicans rated a false migrant headline accurate, yet 51% said they would share it.</li>
+      <li><strong>A world going mad.</strong> Chaslot found the same tilt toward the extremes in France's 2017 election. Brady and neuroscientist Molly Crockett set out their MAD model (motivation, attention, design): outrage captures attention, platform rewards teach users to express it, and they come to feel it more. Other researchers found that moralised articles drew more comments calling for violence.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Moral-outrage amplification, step by step</h4>
+      <svg viewBox="0 0 720 280" role="img" aria-label="Four stages left to right connected by arrows. One: attention, moral-emotional words grab the eye even when the content is dull. Two: amplification, the feed ranks those posts higher, about 20 percent more reach per word. Three: reward, likes and shares arrive, mostly from your own side. Four: internalisation, users rewarded for outrage post more of it and feel more of it. A curved arrow returns from stage four to stage one, labelled more outrage in the pool.">
+        <defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--ink-3)"/></marker></defs>
+        <g>
+          <rect x="6" y="40" width="156" height="128" rx="8" fill="color-mix(in srgb, var(--spark) 14%, var(--card))" stroke="var(--spark)" stroke-width="1.5"/>
+          <text x="84" y="66" text-anchor="middle" font-size="11" class="dim">1 · ATTENTION</text>
+          <text x="84" y="94" text-anchor="middle" font-size="12.5" class="ink">moral-emotional</text>
+          <text x="84" y="112" text-anchor="middle" font-size="12.5" class="ink">words grab the eye</text>
+          <text x="84" y="140" text-anchor="middle" font-size="10.5">even in dull posts</text>
+        </g>
+        <g>
+          <rect x="192" y="40" width="156" height="128" rx="8" fill="color-mix(in srgb, var(--fire) 14%, var(--card))" stroke="var(--fire)" stroke-width="1.5"/>
+          <text x="270" y="66" text-anchor="middle" font-size="11" class="dim">2 · AMPLIFICATION</text>
+          <text x="270" y="94" text-anchor="middle" font-size="12.5" class="ink">the feed ranks</text>
+          <text x="270" y="112" text-anchor="middle" font-size="12.5" class="ink">them higher</text>
+          <text x="270" y="140" text-anchor="middle" font-size="10.5">~+20% reach per word</text>
+        </g>
+        <g>
+          <rect x="378" y="40" width="156" height="128" rx="8" fill="color-mix(in srgb, var(--like) 14%, var(--card))" stroke="var(--like)" stroke-width="1.5"/>
+          <text x="456" y="66" text-anchor="middle" font-size="11" class="dim">3 · REWARD</text>
+          <text x="456" y="94" text-anchor="middle" font-size="12.5" class="ink">likes and shares</text>
+          <text x="456" y="112" text-anchor="middle" font-size="12.5" class="ink">pour in</text>
+          <text x="456" y="140" text-anchor="middle" font-size="10.5">mostly from your side</text>
+        </g>
+        <g>
+          <rect x="564" y="40" width="150" height="128" rx="8" fill="color-mix(in srgb, var(--heart) 14%, var(--card))" stroke="var(--heart)" stroke-width="1.5"/>
+          <text x="639" y="66" text-anchor="middle" font-size="11" class="dim">4 · INTERNALISE</text>
+          <text x="639" y="94" text-anchor="middle" font-size="12.5" class="ink">post more outrage,</text>
+          <text x="639" y="112" text-anchor="middle" font-size="12.5" class="ink">feel more outrage</text>
+          <text x="639" y="140" text-anchor="middle" font-size="10.5">norms shift</text>
+        </g>
+        <line x1="164" y1="104" x2="188" y2="104" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#ah2)"/>
+        <line x1="350" y1="104" x2="374" y2="104" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#ah2)"/>
+        <line x1="536" y1="104" x2="560" y2="104" stroke="var(--ink-3)" stroke-width="2" marker-end="url(#ah2)"/>
+        <path d="M639,172 C639,250 84,250 84,174" fill="none" stroke="var(--heart)" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ah2)"/>
+        <text x="360" y="266" text-anchor="middle" font-size="11.5" style="fill:var(--heart)">more outrage in everyone's feed</text>
+        <text x="360" y="22" text-anchor="middle" font-size="11" class="dim">Brady and Crockett's MAD model, simplified</text>
+      </svg>
+      <p class="cap">In Brady and Crockett's experiments, users rewarded with likes for outraged posts became more likely to post, and to feel, outrage later, including people who hadn't been especially outraged before.</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The shrinking window</h4>
+        <svg viewBox="0 0 420 250" role="img" aria-label="Three years shown as stacked bars. Year one: 200 posts, you read 100, the most moral-emotional half. Year two: 400 posts, you still read 100, the most moral-emotional quarter. Year three: 800 posts, you read 100, the most moral-emotional eighth.">
+          <text x="0" y="26" font-size="11" class="dim">YEAR 1 · 200 posts</text>
+          <rect x="0" y="34" width="105" height="30" fill="var(--paper-2)" stroke="var(--rule)"/>
+          <rect x="0" y="34" width="52.5" height="30" fill="var(--fire)"/>
+          <text x="116" y="54" font-size="11.5" class="ink">you see the top 1/2</text>
+          <text x="0" y="98" font-size="11" class="dim">YEAR 2 · 400 posts</text>
+          <rect x="0" y="106" width="210" height="30" fill="var(--paper-2)" stroke="var(--rule)"/>
+          <rect x="0" y="106" width="52.5" height="30" fill="var(--fire)"/>
+          <text x="220" y="126" font-size="11.5" class="ink">top 1/4</text>
+          <text x="0" y="170" font-size="11" class="dim">YEAR 3 · 800 posts</text>
+          <rect x="0" y="178" width="400" height="30" fill="var(--paper-2)" stroke="var(--rule)"/>
+          <rect x="0" y="178" width="52.5" height="30" fill="var(--heart)"/>
+          <text x="62" y="198" font-size="11.5" class="ink">top 1/8, the most moralising</text>
+          <text x="0" y="238" font-size="10.5" class="dim">orange/red = the 100 posts you have time to read</text>
+        </svg>
+        <p class="cap">Fisher's illustration: your reading time stays fixed while the content competing for it roughly doubles each year. Because the feed favours moral-emotional posts, what you see grows steadily more extreme, and so does your sense of what your community believes.</p>
+      </div>
+      <div class="fig">
+        <h4>Judging a headline vs. sharing it</h4>
+        <div class="bars">
+          <div class="bar c-like"><div class="row"><span>Asked "is it accurate?": rated a false headline true</span><b>16%</b></div><div class="track"><div class="fill" style="width:16%"></div></div></div>
+          <div class="bar c-heart"><div class="row"><span>Asked only "would you share it?": said yes</span><b>51%</b></div><div class="track"><div class="fill" style="width:51%"></div></div></div>
+        </div>
+        <p class="cap">Republicans shown a false headline about a migrant caravan. When the question was framed around Facebook, the social part of the brain took over from the judging part. Fisher's point is that sharing misinformation is often ordinary social instinct rather than dishonesty or stupidity.</p>
+        <p class="src">Source: study cited in ch. 6</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">The Germs and the Wind</span></div>
+  <div class="body">
+    <div>
+      <h3>When a whole country gets its news from Facebook</h3>
+      <p class="idea">In countries where the platform was the internet, its distortions became the national reality, with lethal results.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Myanmar, 2017.</strong> Fisher arrives during the army's campaign against the Rohingya Muslim minority. In Yangon, lawmakers, journalists and monks repeat conspiracies they trace to Facebook. A think-tank sample of 32,000 Burmese accounts found them full of hate speech. A village leader who had banned Muslims thanked Facebook for giving him "true information". Asked why Facebook didn't switch off in Myanmar, news-feed chief Adam Mosseri said the platform did "a good deal of good" and turning it off would lose all that.</li>
+      <li><strong>An older warning.</strong> The Arab Spring had been hailed as a Facebook revolution. Wael Ghonim, who helped spark Egypt's uprising, later concluded the same tools that brought people together also tore the movement apart. Chamath Palihapitiya, Facebook's former growth chief, said in 2017 that he felt "tremendous guilt".</li>
+      <li><strong>Sri Lanka, 2018.</strong> In Ampara, a customer found a lump of flour in his curry. Facebook rumours had claimed Muslims were putting sterilisation pills in food. Farsith Atham-Lebbe, a Tamil-speaking Muslim cook, misunderstood the question and said "Yes, we put." A phone video of the moment spread across Facebook. Days later, mobs organised on Facebook and WhatsApp burned Muslim homes, shops and mosques in Digana and elsewhere. Abdul Basith died trapped in his burning home.</li>
+      <li><strong>Doing the company's work.</strong> Sri Lankan researchers had flagged hate posts to Facebook for years. Government officials who reported posts were told to use the standard form. Only after the government blocked social media did a Facebook policy director fly in and acknowledge failures.</li>
+      <li><strong>Zero to one.</strong> Fisher links the rush into poor countries to growth targets and Peter Thiel's monopoly creed. Zero-rated apps arrived in dozens of countries where the companies had no staff and no local-language moderators.</li>
+    </ul>
+    <div class="cases">
+      <div class="case c-heart"><span class="when">Myanmar · 2014, 2017</span><b>From Mandalay riots to genocide</b><span>Warnings from 2013 on. The UN's 2018 report called Facebook's role "significant"; the company still declined to share data with investigators.</span></div>
+      <div class="case c-fire"><span class="when">Sri Lanka · March 2018</span><b>"Yes, we put"</b><span>A misunderstood answer, filmed and posted, became proof of a non-existent plot. Three days of mob violence followed until the government cut access.</span></div>
+      <div class="case c-spark"><span class="when">Indonesia · late 2010s</span><b>The kidnapping rumour</b><span>A recurring claim that outsiders steal children for organs led mobs in nine villages to attack strangers.</span></div>
+      <div class="case c-like"><span class="when">Egypt · 2011</span><b>A revolution that fell apart</b><span>The same platform that organised Tahrir Square later amplified polarisation that helped split the movement.</span></div>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"The germs are ours, but Facebook is the wind."</blockquote>
+      <span class="label">Harindra Dissanayake, Sri Lankan presidential adviser</span>
+    </div>
+    <div class="story c-fire" style="--c:var(--fire)">
+      <span class="label">Afterwards</span>
+      <p>Fisher finds Farsith in hiding, beard shaved so fewer people recognise him. His family is sliding into poverty. Asked about Facebook, he says he uses it more than ever: newspapers cost money, his phone is free, and "whether it's wrong or right" it's where the news is.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Church Bells</span></div>
+  <div class="body">
+    <div>
+      <h3>Status threat, superposters and the German test</h3>
+      <p class="idea">Social media works like the church bells that once summoned a lynch mob. It also lets the loudest few set what everyone thinks is normal.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Status threat.</strong> Scholar Gema Santamaría compares the platforms to the church bells that summoned lynch mobs in Mexico. Across countries, viral rumours played on a dominant group's fear of losing its place: Buddhists in Myanmar, Sinhalese in Sri Lanka, Hindus in India, white Americans. Group-charged posting also encourages <em>deindividuation</em>, people giving up their own judgement to the group's.</li>
+      <li><strong>Irony poisoning.</strong> In Altena, a declining German town, firefighter Dirk Denkhaus tried to burn down a house sheltering refugees. Prosecutors found that he and a friend had moved from ironic Nazi jokes online to sincere hatred. "There's a very small distance between joke and real," the prosecutor said.</li>
+      <li><strong>The Warwick study.</strong> Economists Karsten Müller and Carlo Schwarz studied over 3,000 anti-refugee attacks. Towns with higher Facebook use had more attacks, whatever their size, wealth or politics. When local internet outages hit high-Facebook areas, attacks dropped by roughly the same amount. Outages in areas with ordinary Facebook use showed no such drop.</li>
+      <li><strong>Superposters.</strong> In Traunstein, a liberal tourist town, Fisher meets a prolific Facebook poster who says Facebook is "more honest" than newspapers. Research finds hyperactive users tend to be more dogmatic and more extreme. Online, they become the "social referents" people use to judge what their group believes.</li>
+      <li><strong>Going dark.</strong> In a Berlin suburb that lost the internet for days or weeks, some residents were cut off, others found it relaxing. That year the UN called Facebook's role in Myanmar "significant". Several executives in charge during the Myanmar and Sri Lanka violence were promoted.</li>
+    </ul>
+    <div class="fig">
+      <h4>Small groups, large effects</h4>
+      <div class="stats">
+        <div class="stat c-heart"><span class="big num">+35%</span><p>more attacks on refugees where per-person Facebook use was one standard deviation above Germany's average, possibly about 10% of all such violence nationally (Müller and Schwarz).</p></div>
+        <div class="stat c-like"><span class="big num">−80%</span><p>drop in hate speech on Reddit after Ellen Pao's team banned about 15,000 hyperactive users out of tens of millions.</p></div>
+        <div class="stat c-spark"><span class="big num">−30%</span><p>fewer bullying reports when Betsy Levy Paluck asked a few influential pro-bullying students per school to speak against it. Norms follow the visible few, the mechanism superposters exploit.</p></div>
+      </div>
+      <p class="src">Figures as reported in The Chaos Machine, ch. 8</p>
+    </div>
+    <div class="story c-like" style="--c:var(--like)">
+      <span class="label">The rumour that police had to dismantle</span>
+      <p>Near Traunstein, Facebook spread a false claim that refugees had raped an 11-year-old girl in an underpass. Police published a reconstruction of how the rumour spread to debunk it. A young local woman Fisher interviews says she's never argued about refugees online because "everyone feels this way". Her feed had become her reality.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="reckoning">
+  <span class="label partno">Chapters 9–12</span>
+  <h2>The reckoning</h2>
+  <p class="lede">Researchers map how YouTube's recommendations link the mainstream to the extreme. The companies become reluctant governments. Then Brazil elects a YouTube star, and in the United States a pandemic, a summer of unrest and a stolen-election myth end at the Capitol.</p>
+</div>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">The Rabbit Hole</span></div>
+  <div class="body">
+    <div>
+      <h3>A recommendation system that builds movements</h3>
+      <p class="idea">YouTube didn't only host extremists. Its recommendations connected their audiences to each other and to the mainstream.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Chemnitz, 2018.</strong> After a stabbing in the German town, false claims spread and neo-Nazis held the streets for two days. Researcher Ray Serrato found that YouTube recommended viewers from any Chemnitz clip, even a news report, toward a few far-right channels, and rarely back to mainstream news. Google search also surfaced the videos.</li>
+      <li><strong>Mapping the network.</strong> Researchers Jonas Kaiser and Adrian Rauchfleisch traced recommendations in Germany, then the US. Instead of a loose cloud, they found tight clusters. Mainstream right-wing channels were grouped with extremists, and Alex Jones sat near the centre. Over time, commenters moved from milder channels across the whole cluster. A later study by Manoel Horta Ribeiro of 72 million comments found users "consistently migrate from milder to more extreme content".</li>
+      <li><strong>Charlottesville, 2017.</strong> Scholar Megan Squire found that Facebook linked previously separate groups (neo-Nazis, militias, Confederate revivalists, alt-right meme pages) into one network before the Unite the Right rally, where a counter-protester was killed.</li>
+      <li><strong>Crisis and solution.</strong> On a neo-Nazi forum, members described joining in small steps, usually via YouTube. What pulled them in was rarely hate, more often loneliness and lack of purpose. J. M. Berger calls the recruiting pattern the "crisis-solution construct": there's a crisis, the out-group is to blame, your group is the answer. Incel communities followed the same path; by 2021 about fifty killings had been claimed by self-described incels.</li>
+      <li><strong>The Alex Jones problem.</strong> Jones's Sandy Hook lies drove harassment of grieving parents for years. The platforms resisted removing him until Apple dropped his podcasts in August 2018, and Facebook and YouTube followed within hours.</li>
+      <li><strong>QAnon.</strong> The "Q" posts began on 4chan in October 2017. In a 2019 internal test, Facebook created "Carol Smith", a conservative mother; within two days the platform recommended QAnon groups to her. Another internal report found half of Facebook's at least 2.2 million QAnon members had joined via "gateway groups".</li>
+      <li><strong>Digital nihilism.</strong> The Christchurch killer streamed his 2019 attack on Facebook and saturated it with 8chan in-jokes. New Zealand's inquiry found YouTube was "a far more significant source of information and inspiration" for him than any other platform.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>One path down the rabbit hole</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 760 330" style="min-width:620px" role="img" aria-label="A staircase descending left to right in five steps, each a recommendation. Step one: video-game clips. Step two: anti-feminist and so-called anti-SJW rants. Step three: self-help for lost young men, framed as a crisis. Step four: commentators who blame an out-group, framed as a solution. Step five: openly white-nationalist channels. Labels above: each step is only slightly more extreme than the last. Labels below: what keeps it going is watch time.">
+          <defs><marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--ink-3)"/></marker></defs>
+          <text x="380" y="20" text-anchor="middle" font-size="11.5" class="dim">each "up next" is only a little more extreme than the last</text>
+          <g>
+            <rect x="10" y="40" width="132" height="58" rx="6" fill="color-mix(in srgb, var(--like) 14%, var(--card))" stroke="var(--like)" stroke-width="1.5"/>
+            <text x="76" y="64" text-anchor="middle" font-size="12.5" class="ink">video-game</text>
+            <text x="76" y="82" text-anchor="middle" font-size="12.5" class="ink">clips</text>
+          </g>
+          <g>
+            <rect x="160" y="88" width="132" height="58" rx="6" fill="color-mix(in srgb, var(--spark) 16%, var(--card))" stroke="var(--spark)" stroke-width="1.5"/>
+            <text x="226" y="112" text-anchor="middle" font-size="12.5" class="ink">"anti-SJW"</text>
+            <text x="226" y="130" text-anchor="middle" font-size="12.5" class="ink">rants</text>
+          </g>
+          <g>
+            <rect x="310" y="136" width="132" height="58" rx="6" fill="color-mix(in srgb, var(--fire) 12%, var(--card))" stroke="var(--fire)" stroke-width="1.5"/>
+            <text x="376" y="160" text-anchor="middle" font-size="12.5" class="ink">self-help for</text>
+            <text x="376" y="178" text-anchor="middle" font-size="12.5" class="ink">lost young men</text>
+          </g>
+          <g>
+            <rect x="460" y="184" width="132" height="58" rx="6" fill="color-mix(in srgb, var(--fire) 24%, var(--card))" stroke="var(--fire)" stroke-width="1.5"/>
+            <text x="526" y="208" text-anchor="middle" font-size="12.5" class="ink">"they" are</text>
+            <text x="526" y="226" text-anchor="middle" font-size="12.5" class="ink">to blame</text>
+          </g>
+          <g>
+            <rect x="610" y="232" width="140" height="58" rx="6" fill="color-mix(in srgb, var(--heart) 20%, var(--card))" stroke="var(--heart)" stroke-width="1.5"/>
+            <text x="680" y="256" text-anchor="middle" font-size="12.5" class="ink">white-nationalist</text>
+            <text x="680" y="274" text-anchor="middle" font-size="12.5" class="ink">channels</text>
+          </g>
+          <path d="M142,69 C152,69 152,117 158,117" fill="none" stroke="var(--ink-3)" stroke-width="1.6" marker-end="url(#ah3)"/>
+          <path d="M292,117 C302,117 302,165 308,165" fill="none" stroke="var(--ink-3)" stroke-width="1.6" marker-end="url(#ah3)"/>
+          <path d="M442,165 C452,165 452,213 458,213" fill="none" stroke="var(--ink-3)" stroke-width="1.6" marker-end="url(#ah3)"/>
+          <path d="M592,213 C602,213 602,261 608,261" fill="none" stroke="var(--ink-3)" stroke-width="1.6" marker-end="url(#ah3)"/>
+          <text x="376" y="214" text-anchor="middle" font-size="10.5" class="dim">CRISIS</text>
+          <text x="526" y="262" text-anchor="middle" font-size="10.5" class="dim">SOLUTION</text>
+          <line x1="10" y1="312" x2="750" y2="312" stroke="var(--rule)"/>
+          <text x="10" y="306" font-size="10.5" class="dim">mainstream</text>
+          <text x="750" y="306" text-anchor="end" font-size="10.5" class="dim">extreme</text>
+          <text x="380" y="328" text-anchor="middle" font-size="11" style="fill:var(--heart)">the engine underneath: more watch time at every step</text>
+        </svg>
+      </div>
+      <p class="cap">A composite of paths described in the book, including former extremist David Sherratt's descent from game clips at fifteen. YouTube's 2016–17 "Reinforce" upgrade nudged users into unfamiliar subgenres, which could pull viewers into such gateways even if they never searched for them. Kaiser's maps showed the system generally moving users toward the extreme end of whatever cluster they were in.</p>
+    </div>
+
+    <div class="story c-like" style="--c:var(--like)">
+      <span class="label">Adam's way out</span>
+      <p>Adam, the long-time 4chan and 8chan user, watched the Christchurch video and was horrified. Around then he met a young woman through a Facebook meme group and began to pull back. He messaged Brianna Wu, once a Gamergate target, to say he was sorry. Wu told Fisher she now gets many such messages from former Gamergaters.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">The New Overlords</span></div>
+  <div class="body">
+    <div>
+      <h3>Accidental governments</h3>
+      <p class="idea">The platforms ended up setting the limits of political speech for billions, through rulebooks, outsourced moderators and a leadership culture built to resist outside pressure.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A hidden government.</strong> Jacob's leaked rulebooks were a jumble of PowerPoints and spreadsheets from different departments. The hate-speech guide ran to 200 pages; moderators had about 8–10 seconds per post. Fisher found errors: rules that wrongly restricted speech about Kashmir in India, outdated and mistaken guidance on Balkan war criminals. At Jacob's firm, posts in languages nobody could read were approved by default.</li>
+      <li><strong>Masters of the universe.</strong> Cheap cloud computing flipped power from investors to founders. Young founder-CEOs with controlling shares faced no "adult supervision". PayPal alumni such as Peter Thiel, who wrote that he no longer believed freedom and democracy were compatible, shaped a generation of startups.</li>
+      <li><strong>Convergence.</strong> In late 2018 Zuckerberg wrote that people engage disproportionately with sensational content, "even when they tell us afterwards they don't like" it. His company's 2018 ranking overhaul scored emotional reactions and long discussions far above simple likes. An internal report warned that misinformation, toxicity and violence were "inordinately prevalent among reshares".</li>
+      <li><strong>Cyberdemocracy.</strong> France's Yellow Vests organised on Facebook at huge scale but achieved little. Researcher Erica Chenoweth found mass protest movements had grown more frequent but less successful since the 2000s. Drawing on Zeynep Tufekci, she suggests social media lets movements skip the slow organising that gives them staying power.</li>
+      <li><strong>Wartime CEOs.</strong> After 2016 claims of anti-conservative bias, Facebook fired its human trending-news editors; a fake story topped the list within days. Under policy chief Joel Kaplan, it shelved changes that would have hit hyperpartisan sources hardest. In 2018 Zuckerberg told executives he was now a "wartime CEO". In 2019 Facebook said it wouldn't fact-check political ads.</li>
+      <li><strong>Repairing a plane in flight.</strong> Fisher sits in on Facebook's policy meetings and finds them thoughtful. But everyone he speaks to is certain the product itself isn't harmful, even though an internal report had found "compelling evidence" that core features like virality and recommendations helped hate and misinformation thrive.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>What a post earned in Facebook's 2018 ranking</h4>
+        <div class="bars">
+          <div class="bar c-like"><div class="row"><span>Like</span><b>1 pt</b></div><div class="track"><div class="fill" style="width:3.33%"></div></div></div>
+          <div class="bar c-spark"><div class="row"><span>Reaction emoji (love, sad, angry…)</span><b>5 pts</b></div><div class="track"><div class="fill" style="width:16.67%"></div></div></div>
+          <div class="bar c-fire"><div class="row"><span>Short comment</span><b>15 pts</b></div><div class="track"><div class="fill" style="width:50%"></div></div></div>
+          <div class="bar c-heart"><div class="row"><span>Reshare or long comment</span><b>30 pts</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">Engagement recovered after the change; users reported being less happy with the experience. A post that set off a long, emotional argument outranked one people merely liked.</p>
+        <p class="src">Source: internal scoring as reported in ch. 10</p>
+      </div>
+      <div class="fig">
+        <h4>Four weeks without Facebook</h4>
+        <div class="stats">
+          <div class="stat c-like"><span class="big num">~1,700</span><p>users in a Stanford and NYU experiment, half paid to deactivate</p></div>
+          <div class="stat c-spark"><span class="big num">25–40%</span><p>of the wellbeing gain from therapy, the size of the mood boost the quitters reported</p></div>
+          <div class="stat c-fire"><span class="big num">4 in 5</span><p>said afterwards that quitting had been good for them; their views on policy grew less polarised</p></div>
+        </div>
+        <p class="cap">The one downside: quitters followed the news less and knew slightly less about current events, though much of what they missed was polarising content.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Dictatorship of the Like</span></div>
+  <div class="body">
+    <div>
+      <h3>Brazil: when social media takes office</h3>
+      <p class="idea">Trump had been helped by the platforms. In Brazil, Fisher argues, a creation of the platforms won the presidency.</p>
+    </div>
+    <ul class="points">
+      <li><strong>President YouTube.</strong> In 2012 a fringe congressman edited a video of psychologist Tatiana Lionço to make it seem she promoted sex between children. It went viral and upended her life. That congressman, Jair Bolsonaro, was elected president in 2018. YouTube is Brazil's second-largest market.</li>
+      <li><strong>Democracy by algorithm.</strong> Teenager Matheus Dominguez went from guitar tutorials to far-right YouTubers to Bolsonaro. At a rally a party official said most members "came from YouTube". Computer scientist Virgilio Almeida's team found far-right channels' views spiked first, then comments shifted rightward, suggesting the platform was changing politics, not only reflecting them. Kaiser's mapping found a large far-right cluster at the centre of Brazilian YouTube.</li>
+      <li><strong>Filming teachers.</strong> Councillor Carlos Jordy posted edited classroom clips to "expose" leftist teachers. History teacher Valeria Borges was flooded with threats. Jordy won a federal seat and told Fisher: "I wanted her to feel fear." Activists at the Free Brazil Movement (MBL) coined the phrase the book's chapter is named after: the <em>dictatorship of the like</em>, the pressure to keep going further.</li>
+      <li><strong>Dr. YouTube.</strong> In Maceió, mothers of babies with Zika-related microcephaly had been shown videos blaming vaccines. Doctors said patients increasingly cited YouTube against them. Kaiser's team found the health-conspiracy channels sat in the same recommendation network as the far right.</li>
+      <li><strong>The pipeline.</strong> Clips jumped from YouTube into WhatsApp groups. Anthropologist Debora Diniz, falsely accused by a YouTuber of plotting forced abortions, fled the country after death threats. "We have a militia that is moved by algorithms," she told Fisher.</li>
+      <li><strong>Training grounds.</strong> Kaiser's team found YouTube recommending a stream of innocent home videos of partly clothed young children to viewers of sexual content. After Fisher and Amanda Taub reported it in 2019, YouTube changed some recommendations but declined to turn them off for videos of children.</li>
+    </ul>
+    <div class="cases">
+      <div class="case c-heart"><span class="when">Brasília · 2012</span><b>Tatiana Lionço</b><span>A doctored clip turned a talk on homophobia in schools into a national smear. Friends stopped speaking to her.</span></div>
+      <div class="case c-fire"><span class="when">Niterói · 2017</span><b>Valeria Borges</b><span>An edited classroom video and a YouTuber's commentary made a history teacher the target of graphic threats.</span></div>
+      <div class="case c-spark"><span class="when">Maceió · 2019</span><b>The Zika mothers</b><span>Searches and recommendations led mothers to videos blaming vaccines for their children's condition.</span></div>
+      <div class="case c-like"><span class="when">Brasília · 2018</span><b>Debora Diniz</b><span>A YouTuber's campaign brought death threats against her and her students. She went into exile.</span></div>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Once you open that door there's no going back, because you always have to go further."</blockquote>
+      <span class="label">Pedro D'Eyrot, Free Brazil Movement</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Infodemic</span></div>
+  <div class="body">
+    <div>
+      <h3>2020: pandemic, unrest and the big lie</h3>
+      <p class="idea">Every dynamic in the book converged in a single year, and ended with a crowd livestreaming its way into the Capitol.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Don't hug the vaccinated.</strong> WHO official Andy Pattison had set up a team for social-media misinformation before Covid. In February 2020 the platforms pledged to act, but lockdowns pushed usage up sharply and conspiracies flourished. Facebook researchers found "manufactured virality" pages drove 64% of misinformation; Zuckerberg deprioritised the work. The <em>Plandemic</em> video spread in a week from anti-vaccine and QAnon groups to wellness, yoga and anti-lockdown pages.</li>
+      <li><strong>Looting and shooting.</strong> Air Force sergeant Steven Carrillo found the "Boogaloo" movement in Facebook groups that the algorithm promoted. In May 2020 he killed a federal security officer in Oakland, hoping to start a wider conflict, and a week later killed a police officer who came to arrest him. When Trump posted "when the looting starts, the shooting starts", Twitter limited the post; Facebook left it up.</li>
+      <li><strong>Friction.</strong> Facebook staff walked out, advertisers boycotted, and a 2020 civil-rights audit faulted the company. Before the election Twitter added prompts before retweets and temporarily switched off its algorithm that pushed viral tweets to non-followers. Fisher says it was the first time a major platform voluntarily shut down its own algorithm. Facebook and YouTube banned QAnon in October. Two QAnon-sympathetic candidates won House seats.</li>
+      <li><strong>The big lie.</strong> By mid-November, posts claiming the election was stolen made up 10% of US views of political content on Facebook, by its own researchers' count. Newsmax's YouTube views jumped from 3 million in October to 133 million in November. Arkansas Facebook user Richard Barnett, radicalised in the feed, was photographed with his feet on Nancy Pelosi's desk on 6 January. Five people died during the attack.</li>
+    </ul>
+    <div class="fig">
+      <h4>Election lies on the platforms, November 2020</h4>
+      <div class="stats">
+        <div class="stat c-heart"><span class="big num">10%</span><p>of US views of political content on Facebook were posts claiming the election was stolen (2% of all views)</p></div>
+        <div class="stat c-fire"><span class="big num">3M → 133M</span><p>monthly views for Newsmax TV on YouTube, from October to November</p></div>
+        <div class="stat c-like"><span class="big num">60,000+</span><p>Facebook posts invoking political violence identified by researchers in the weeks before the vote</p></div>
+        <div class="stat c-spark"><span class="big num">97 → 27</span><p>professed QAnon believers who ran in 2020 congressional primaries, and the number who won</p></div>
+      </div>
+      <p class="src">Figures as reported in The Chaos Machine, ch. 12</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline">
+  <div class="sec-head">
+    <span class="label">The book's arc at a glance</span>
+    <h2>Fifteen years of warnings</h2>
+    <p class="lede">Design changes above the line, consequences below. The pattern Fisher traces is that each warning arrived well before the company acted, if it acted at all.</p>
+  </div>
+  <div class="fig">
+    <div class="scroll-x">
+      <svg viewBox="0 0 1100 360" style="min-width:880px" role="img" aria-label="Timeline from 2006 to 2021. Above the line, platform changes: 2006 Facebook news feed; 2009 Like button; 2012 YouTube machine-learning recommendations and watch-time goal; 2014 Facebook favours emotionally engaging interactions; 2016 Twitter algorithmic feed; 2018 Facebook ranking scores reactions and reshares highly; 2020 Twitter adds friction and briefly turns off viral recommendations. Below the line, consequences: 2014 Mandalay riots and Gamergate; 2015 Cecil the lion and Reddit revolt against Ellen Pao; 2016 Pizzagate and the US election; 2017 Rohingya genocide in Myanmar and Charlottesville; 2018 Sri Lanka riots, Chemnitz, Brazil elects Bolsonaro; 2019 Christchurch; 2020 Covid misinformation and Boogaloo killings; 2021 the January 6 Capitol attack and Frances Haugen's leak.">
+        <line x1="40" y1="180" x2="1070" y2="180" stroke="var(--ink)" stroke-width="2"/>
+        <g font-size="12" class="ink" text-anchor="middle">
+          <text x="60" y="200" class="ink">2006</text>
+          <text x="186" y="200" class="ink">2009</text>
+          <text x="312" y="200" class="ink">2012</text>
+          <text x="396" y="200" class="ink">2014</text>
+          <text x="480" y="200" class="ink">2015</text>
+          <text x="564" y="200" class="ink">2016</text>
+          <text x="648" y="200" class="ink">2017</text>
+          <text x="732" y="200" class="ink">2018</text>
+          <text x="816" y="200" class="ink">2019</text>
+          <text x="900" y="200" class="ink">2020</text>
+          <text x="1010" y="200" class="ink">2021</text>
+        </g>
+        <!-- above: design -->
+        <g font-size="11">
+          <circle cx="60" cy="180" r="5" fill="var(--like)"/><line x1="60" y1="175" x2="60" y2="130" stroke="var(--like)"/>
+          <text x="60" y="122" text-anchor="middle">News feed</text>
+          <circle cx="186" cy="180" r="5" fill="var(--like)"/><line x1="186" y1="175" x2="186" y2="100" stroke="var(--like)"/>
+          <text x="186" y="92" text-anchor="middle">Like button</text>
+          <circle cx="312" cy="180" r="5" fill="var(--like)"/><line x1="312" y1="175" x2="312" y2="70" stroke="var(--like)"/>
+          <text x="312" y="48" text-anchor="middle">YouTube ML picks;</text>
+          <text x="312" y="62" text-anchor="middle">watch-time goal</text>
+          <circle cx="396" cy="180" r="5" fill="var(--like)"/><line x1="396" y1="175" x2="396" y2="130" stroke="var(--like)"/>
+          <text x="396" y="108" text-anchor="middle">FB favours</text>
+          <text x="396" y="122" text-anchor="middle">emotion</text>
+          <circle cx="564" cy="180" r="5" fill="var(--like)"/><line x1="564" y1="175" x2="564" y2="100" stroke="var(--like)"/>
+          <text x="564" y="78" text-anchor="middle">Twitter goes</text>
+          <text x="564" y="92" text-anchor="middle">algorithmic</text>
+          <circle cx="732" cy="180" r="5" fill="var(--like)"/><line x1="732" y1="175" x2="732" y2="130" stroke="var(--like)"/>
+          <text x="732" y="108" text-anchor="middle">FB scores</text>
+          <text x="732" y="122" text-anchor="middle">reshares ×30</text>
+          <circle cx="900" cy="180" r="5" fill="var(--like)"/><line x1="900" y1="175" x2="900" y2="100" stroke="var(--like)"/>
+          <text x="900" y="78" text-anchor="middle">Twitter adds</text>
+          <text x="900" y="92" text-anchor="middle">friction</text>
+        </g>
+        <!-- below: consequences -->
+        <g font-size="11">
+          <circle cx="396" cy="214" r="3.5" fill="var(--heart)"/><line x1="396" y1="217" x2="396" y2="232" stroke="var(--heart)"/>
+          <text x="396" y="248" text-anchor="middle">Mandalay riots;</text>
+          <text x="396" y="262" text-anchor="middle">Gamergate</text>
+          <circle cx="480" cy="214" r="3.5" fill="var(--heart)"/><line x1="480" y1="217" x2="480" y2="282" stroke="var(--heart)"/>
+          <text x="480" y="298" text-anchor="middle">Cecil; Reddit</text>
+          <text x="480" y="312" text-anchor="middle">revolt vs. Pao</text>
+          <circle cx="564" cy="214" r="3.5" fill="var(--heart)"/><line x1="564" y1="217" x2="564" y2="232" stroke="var(--heart)"/>
+          <text x="564" y="248" text-anchor="middle">Pizzagate;</text>
+          <text x="564" y="262" text-anchor="middle">US election</text>
+          <circle cx="648" cy="214" r="3.5" fill="var(--heart)"/><line x1="648" y1="217" x2="648" y2="282" stroke="var(--heart)"/>
+          <text x="648" y="298" text-anchor="middle">Rohingya genocide;</text>
+          <text x="648" y="312" text-anchor="middle">Charlottesville</text>
+          <circle cx="732" cy="214" r="3.5" fill="var(--heart)"/><line x1="732" y1="217" x2="732" y2="232" stroke="var(--heart)"/>
+          <text x="732" y="248" text-anchor="middle">Sri Lanka; Chemnitz;</text>
+          <text x="732" y="262" text-anchor="middle">Bolsonaro elected</text>
+          <circle cx="816" cy="214" r="3.5" fill="var(--heart)"/><line x1="816" y1="217" x2="816" y2="282" stroke="var(--heart)"/>
+          <text x="816" y="298" text-anchor="middle">Christchurch</text>
+          <circle cx="900" cy="214" r="3.5" fill="var(--heart)"/><line x1="900" y1="217" x2="900" y2="232" stroke="var(--heart)"/>
+          <text x="900" y="248" text-anchor="middle">Covid lies;</text>
+          <text x="900" y="262" text-anchor="middle">Boogaloo killings</text>
+          <circle cx="1010" cy="214" r="3.5" fill="var(--heart)"/><line x1="1010" y1="217" x2="1010" y2="282" stroke="var(--heart)"/>
+          <text x="1010" y="298" text-anchor="middle">6 January;</text>
+          <text x="1010" y="312" text-anchor="middle">Haugen files</text>
+        </g>
+        <text x="40" y="22" font-size="11" class="dim">PLATFORM DESIGN</text>
+        <text x="40" y="348" font-size="11" class="dim">WHAT FOLLOWED</text>
+      </svg>
+    </div>
+    <p class="cap">Spacing is approximate, not to scale. Dates follow the book's chapters.</p>
+  </div>
+</section>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue · Whistleblowing</span>
+    <h2>Turn it off</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>After 6 January there was a brief window for deep change. Fisher says it closed quickly. Facebook stopped recommending political groups but rolled back other fixes. Executives argued the riot had mostly been organised elsewhere. Enforcement against election lies fell during 2021, and the US surgeon general warned that platforms had let misinformation "poison our information environment".</p>
+      <p>In Australia, when regulators tried to make platforms pay for news, Facebook blocked all news for the whole country, along with health and emergency pages during the pandemic, until it got a better deal.</p>
+      <p>Then Frances Haugen, a Facebook product manager, copied thousands of internal documents, gave them to the Wall Street Journal and regulators, and testified to the Senate in 2021. The files showed a company that often knew its harms in detail. She kept pointing to poorer countries: Myanmar and Ethiopia, she said, were "only the opening chapters".</p>
+      <p>Her main fix was simple: switch off engagement-based ranking. Fisher notes that the longer researchers study the platforms, the more of them reach the same answer. He ends with HAL 9000 from <em>2001: A Space Odyssey</em>. The lesson of that story wasn't to tweak HAL. It was to switch HAL off.</p>
+    </div>
+    <div class="fig">
+      <h4>Where reform pressure comes from, as the book sees it</h4>
+      <div class="compare">
+        <div class="c-like"><h5>Has some leverage</h5><ul><li>Employees: in March 2021, 40% of big-tech workers said giants like Google or Facebook should be broken up</li><li>Whistleblowers and leaked research</li><li>Regulators and antitrust suits in the US and Europe</li><li>Independent researchers mapping the systems from outside</li></ul></div>
+        <div class="c-heart"><h5>Has proved weak</h5><ul><li>Voluntary self-regulation</li><li>Small governments like Sri Lanka or Australia</li><li>Content moderation at scale through contractors</li><li>"Time well spent" features layered over the same engine</li></ul></div>
+      </div>
+      <p class="cap">Fisher notes there are dissenting researchers who think social media's effects are overstated. But he says almost no one he spoke to wanted to abolish social media. What they wanted was to remove the engagement-maximising machinery.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Drawn from the book's research</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Fisher wrote an investigation, not a self-help book, and his main remedy is structural. Still, the studies he cites suggest practical habits. These are this summary's takeaways, not a list from the book.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col c-spark">
+      <h3>Your own feed</h3>
+      <div class="tk"><b>Notice the slot machine</b><span>Unpredictable rewards are what make checking compulsive. Turning off badges and notifications removes the cue.</span></div>
+      <div class="tk"><b>Try a month off</b><span>In the deactivation studies, quitters were happier and less polarised, and kept using it less afterwards.</span></div>
+      <div class="tk"><b>Prefer what you chose</b><span>Search and subscriptions show what exists. "Up next" and suggested groups show what keeps you watching.</span></div>
+      <div class="tk"><b>Watch the drift</b><span>If recommendations keep getting angrier or more conspiratorial, that's the system, not a sign the world is.</span></div>
+    </div>
+    <div class="col c-fire">
+      <h3>Before you share</h3>
+      <div class="tk"><b>Ask "is it accurate?" first</b><span>People who judged a headline's accuracy rejected it; people asked only whether they'd share it often didn't.</span></div>
+      <div class="tk"><b>Distrust your own outrage</b><span>Moral-emotional posts travel furthest and are rewarded most. Feeling it strongly isn't evidence.</span></div>
+      <div class="tk"><b>Be wary of the pile-on</b><span>Shaming mobs often hit the wrong person or punish far beyond the offence, as the Smith College and Cecil cases show.</span></div>
+      <div class="tk"><b>Remember the superposters</b><span>The loudest few aren't the majority. Your feed is not a poll of what your community thinks.</span></div>
+    </div>
+    <div class="col c-heart">
+      <h3>What the experts would change</h3>
+      <div class="tk"><b>Turn off engagement ranking</b><span>Haugen's and many researchers' main fix: chronological or user-chosen feeds.</span></div>
+      <div class="tk"><b>Add friction</b><span>Prompts before resharing and slower virality, as Twitter tried before the 2020 election.</span></div>
+      <div class="tk"><b>No recommendations on kids' videos</b><span>Kaiser's simple fix, which YouTube declined to adopt in full.</span></div>
+      <div class="tk"><b>Open the data</b><span>Outside researchers, UN investigators and governments kept being refused access to what the companies knew.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Max Fisher, <em>The Chaos Machine: The Inside Story of How Social Media Rewired Our Minds and Our World</em> (Little, Brown, 2022). Claims, figures and quotes are as reported in the book; the companies dispute many of its findings. Diagrams were drawn for this page and charts are drawn to the book's numbers. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  /* --- Hero: reactions erupt from a phone and fan out --- */
+  var canvas = document.getElementById("burst");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var css = function (n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, h = 0, dpr = 1, cols = [], parts = [];
+  function readCols() { cols = [css("--heart"), css("--fire"), css("--spark"), css("--like")]; }
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; h = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  var seed = 11;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  function spawn(t0, prefill) {
+    var phoneW = Math.min(w * 0.28, 260);
+    var life = 3200 + rnd() * 4200;
+    return {
+      x: w * 0.12 + (rnd() - 0.5) * phoneW * 0.9,
+      reach: 0.25 + Math.pow(rnd(), 0.7) * 0.85,   /* how far right it travels, as a share of the band */
+      lift: 0.35 + rnd() * 0.65,                   /* how high it rises */
+      wob: rnd() * Math.PI * 2,
+      k: Math.floor(rnd() * 4), s: 4 + rnd() * 5,
+      born: prefill ? t0 - rnd() * life : t0, life: life
+    };
+  }
+  function shape(p, x, y, a) {
+    ctx.globalAlpha = a;
+    ctx.fillStyle = cols[p.k];
+    var s = p.s;
+    ctx.beginPath();
+    if (p.k === 0) { /* heart */
+      ctx.moveTo(x, y + s * .9);
+      ctx.bezierCurveTo(x - s * 1.4, y - s * .1, x - s * .6, y - s * 1.2, x, y - s * .35);
+      ctx.bezierCurveTo(x + s * .6, y - s * 1.2, x + s * 1.4, y - s * .1, x, y + s * .9);
+    } else if (p.k === 1) { /* flame */
+      ctx.moveTo(x, y - s * 1.3);
+      ctx.quadraticCurveTo(x + s * 1.1, y, x, y + s * .8);
+      ctx.quadraticCurveTo(x - s * 1.1, y, x, y - s * 1.3);
+    } else if (p.k === 2) { /* face */
+      ctx.arc(x, y, s * .85, 0, Math.PI * 2);
+    } else { /* like badge */
+      var r = s * .3, q = s * .8;
+      ctx.moveTo(x - q + r, y - q); ctx.lineTo(x + q - r, y - q); ctx.quadraticCurveTo(x + q, y - q, x + q, y - q + r);
+      ctx.lineTo(x + q, y + q - r); ctx.quadraticCurveTo(x + q, y + q, x + q - r, y + q);
+      ctx.lineTo(x - q + r, y + q); ctx.quadraticCurveTo(x - q, y + q, x - q, y + q - r);
+      ctx.lineTo(x - q, y - q + r); ctx.quadraticCurveTo(x - q, y - q, x - q + r, y - q);
+    }
+    ctx.fill();
+  }
+  function draw(t) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, h);
+    /* phone edge */
+    var phoneW = Math.min(w * 0.28, 260), px = w * 0.12;
+    ctx.globalAlpha = 1;
+    ctx.strokeStyle = css("--ink-3"); ctx.lineWidth = 2; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(Math.max(4, px - phoneW / 2), h - 8); ctx.lineTo(px + phoneW / 2, h - 8); ctx.stroke();
+    while (parts.length < Math.min(240, Math.round(w / 4))) parts.push(spawn(t, true));
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i], age = t - p.born;
+      if (age < 0) age = 0;
+      if (age > p.life) { parts[i] = p = spawn(t, false); age = 0; }
+      var u = age / p.life;
+      /* fan out from the phone: up quickly, then drift right across the band */
+      var x = p.x + Math.pow(u, 0.75) * p.reach * (w - p.x - 10);
+      var y = (h - 14) - (h - 26) * p.lift * Math.sqrt(u) + Math.sin(age / 500 + p.wob) * 3;
+      var a = Math.min(1, u * 8) * (1 - u * u);
+      shape(p, x, y, Math.max(0, a) * 0.92);
+    }
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  readCols(); size(); draw(performance.now());
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  if (mq.addEventListener) mq.addEventListener("change", function () { readCols(); draw(performance.now()); });
+  new MutationObserver(function () { readCols(); draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
