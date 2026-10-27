@@ -1,0 +1,1290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Start With Yourself by Emma Grede – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: beige linen, black serif ink, white emboss.
+   The four parts of the book each get an earthy accent that sits on the linen. */
+:root {
+  --paper: #f6f1e7;
+  --paper-2: #ece3d1;
+  --card: #fffdf8;
+  --ink: #1b1814;
+  --ink-2: #4f483e;
+  --ink-3: #807666;
+  --rule: #ddd2bd;
+  --linen: #d8c6a0;
+
+  /* the four parts */
+  --vis: #8f6a26;
+  --emo: #ad4b30;
+  --old: #55673d;
+  --act: #33566f;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #15130f;
+    --paper-2: #1f1c16;
+    --card: #24201a;
+    --ink: #f1ebdf;
+    --ink-2: #c4baa7;
+    --ink-3: #928874;
+    --rule: #3a342a;
+    --linen: #5c5040;
+    --vis: #dcb064;
+    --emo: #ee8d6f;
+    --old: #a9bd8a;
+    --act: #8fb6d4;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #15130f;
+  --paper-2: #1f1c16;
+  --card: #24201a;
+  --ink: #f1ebdf;
+  --ink-2: #c4baa7;
+  --ink-3: #928874;
+  --rule: #3a342a;
+  --linen: #5c5040;
+  --vis: #dcb064;
+  --emo: #ee8d6f;
+  --old: #a9bd8a;
+  --act: #8fb6d4;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--act); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Part colour helpers */
+.c-vis { --c: var(--vis); }
+.c-emo { --c: var(--emo); }
+.c-old { --c: var(--old); }
+.c-act { --c: var(--act); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-family: var(--body);
+  font-size: clamp(58px, 10.4vw, 138px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.025em;
+  margin-left: -.03em;
+}
+.hero h1 em { font-style: italic; font-weight: 400; color: var(--vis); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 888;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 28, 10, .38), 0 8px 18px -10px rgba(40, 28, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.ripple { position: relative; margin-top: 28px; }
+.ripple canvas { display: block; width: 100%; height: 120px; }
+.ripple .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--c, var(--ink));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part h2 span { color: var(--c); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+.part blockquote { margin: 0; grid-column: 1 / -1; font-style: italic; color: var(--ink-2); font-size: 18px; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--c, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--c, var(--ink));
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* Old thought → new thought cards */
+.flips { display: grid; gap: 12px; max-width: 860px; }
+.flip { display: grid; grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr); gap: 0; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--card); }
+.flip > div { padding: 14px 16px; display: grid; gap: 4px; align-content: start; }
+.flip .old { color: var(--ink-3); }
+.flip .old p { text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--emo) 55%, transparent); text-decoration-thickness: 1px; font-size: 15.5px; line-height: 1.4; }
+.flip .new { background: color-mix(in srgb, var(--c, var(--old)) 9%, var(--card)); }
+.flip .new p { font-size: 15.5px; line-height: 1.4; color: var(--ink); }
+.flip .arrow { display: flex; align-items: center; justify-content: center; background: var(--paper-2); color: var(--c, var(--old)); font-family: var(--mono); font-size: 18px; padding: 0; }
+.flip .label { font-size: 10.5px; }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.stats.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 900px) { .stats.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .stats.four { grid-template-columns: minmax(0, 1fr); } }
+.stats.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.stats.two .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--c, var(--ink)); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Old-thought table */
+table.ot { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 720px; font-size: 15px; line-height: 1.42; }
+table.ot th, table.ot td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--rule); }
+table.ot thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.ot tbody th { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 14.5px; width: 150px; color: var(--c); }
+table.ot td.o { color: var(--ink-3); }
+table.ot td.n { color: var(--ink); }
+table.ot tr.grp td, table.ot tr.grp th { border-top: 2px solid var(--c); }
+table.ot tbody tr:hover td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* emotion signal grid */
+.signals { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.signals div { border-radius: 6px; padding: 14px; border: 1px solid color-mix(in srgb, var(--emo) 30%, var(--rule)); background: color-mix(in srgb, var(--emo) 7%, var(--card)); display: grid; gap: 6px; align-content: start; }
+.signals b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; color: var(--emo); }
+.signals span { font-size: 14px; line-height: 1.38; color: var(--ink-2); }
+.signals i { font-family: var(--mono); font-style: normal; font-size: 11.5px; color: var(--ink); line-height: 1.35; }
+
+/* checklists */
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.checks li { display: flex; gap: 10px; align-items: baseline; font-size: 16px; line-height: 1.45; }
+.checks li::before { content: "✓"; font-family: var(--mono); font-size: 13px; color: var(--c, var(--old)); flex: none; width: 14px; }
+.qs { margin: 0; padding-left: 22px; display: grid; gap: 8px; font-size: 16px; line-height: 1.45; }
+.qs li::marker { font-family: var(--mono); font-size: 13px; color: var(--c, var(--ink-3)); }
+
+/* time-left dots */
+.summers { display: flex; flex-wrap: wrap; gap: 6px; }
+.summers i { width: 22px; height: 22px; border-radius: 50%; background: var(--c); display: block; }
+.summers i.gone { background: transparent; box-shadow: inset 0 0 0 1.5px var(--rule); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* script swap */
+.swap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.swap > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.swap h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.swap p { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.swap .say { font-family: var(--mono); font-size: 14px; color: var(--ink); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; min-width: 0; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--c, var(--ink)); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 6px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span, .tk li { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.tk ol, .tk ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+
+/* rules list */
+.rules { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; counter-reset: r; }
+.rules li { background: var(--card); padding: 14px 16px 14px 52px; position: relative; font-size: 15.5px; line-height: 1.42; counter-increment: r; }
+.rules li::before { content: counter(r, decimal-leading-zero); position: absolute; left: 16px; top: 15px; font-family: var(--mono); font-size: 12.5px; color: var(--act); }
+.rules li:last-child:nth-child(odd) { grid-column: 1 / -1; font-family: var(--display); font-weight: 750; font-stretch: 100%; background: color-mix(in srgb, var(--act) 10%, var(--card)); }
+
+.principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.principles div { border-top: 3px solid var(--act); background: var(--card); border-radius: 0 0 6px 6px; padding: 16px; display: grid; gap: 6px; align-content: start; }
+.principles b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 21px; }
+.principles span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.principles .n { font-family: var(--mono); font-size: 12px; color: var(--act); }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .signals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .signals div:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .two-col, .epilogue, .part { grid-template-columns: minmax(0, 1fr); }
+  .toolkit, .principles { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .map, .rules, .swap { grid-template-columns: minmax(0, 1fr); }
+  .rules li:last-child:nth-child(odd) { grid-column: auto; }
+  .stats.two { grid-template-columns: minmax(0, 1fr); }
+  .stats.two .stat:last-child:nth-child(odd) { grid-column: auto; }
+  .flip { grid-template-columns: minmax(0, 1fr); }
+  .flip .arrow { padding: 2px 0; }
+  .flip .arrow span { display: inline-block; transform: rotate(90deg); }
+}
+@media (max-width: 420px) {
+  .signals { grid-template-columns: minmax(0, 1fr); }
+  .signals div:last-child { grid-column: auto; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Emma Grede · Avid Reader Press, 2026</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#old-thoughts">Old thoughts</a>
+    <a href="#vision">Vision</a>
+    <a href="#emotions">Emotions</a>
+    <a href="#rethink">Rethink</a>
+    <a href="#action">Action</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1>Start With <em>Yourself</em></h1>
+    <p class="sub">A new vision for work &amp; life</p>
+    <p class="dek">The co-founder of Good American and SKIMS argues there is no playbook for women in business, only a mindset: see where you're going, steady your emotions, and throw out the old thoughts that keep you small.</p>
+    <div class="byline label">
+      <span>4 parts</span><span>5 emotions</span><span>32 old thoughts</span><span>~100,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Start With Yourself by Emma Grede: beige linen cloth with the title in black serif type and the subtitle embossed in white">
+</div>
+
+<div class="ripple" aria-hidden="true">
+  <canvas id="ripple"></canvas>
+  <div class="ends label"><span>You</span><span>Everything else</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>There's no playbook, only a way of thinking</h2>
+  </div>
+  <div class="two-col">
+    <div class="prose">
+      <p>Emma Grede grew up in Plaistow, East London, in a family where several relatives and friends went to prison. She was raising her three younger sisters at ten, was asked to leave school (she learned decades later that she is dyslexic) and dropped out of the London College of Fashion after one term because she couldn't afford it. By forty she was on Forbes's list of America's richest self-made women, as co-founder of Good American and SKIMS and a regular on <em>Shark Tank</em>.</p>
+      <p>People ask her how. Her answer is that success isn't a list of prescribed moves. It comes from <strong>the thinking that decides which moves you make</strong>. The book is her "operating system", picked up on the streets of East London: your word is king, say what you mean, do what you say.</p>
+      <p>Grede won't pretend the world is fair to women, mothers, people of colour or poor people. She has been all of those. But waiting for fairness isn't a strategy: <em>"None of us have time to wait for equity; we have to make it."</em> The route she offers has four steps, and each one starts with the reader rather than with the world.</p>
+    </div>
+    <div class="fig">
+      <h4>The book's four-part loop</h4>
+      <svg viewBox="0 0 460 330" role="img" aria-label="A loop of four stages drawn as circles connected by arrows in a clockwise cycle. One, Vision: decide where you're going. Two, Managing emotions: clear the emotional decks. Three, Old thoughts: replace limiting beliefs. Four, Action: act, learn, and feed back into vision. In the centre: start with yourself.">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker>
+        </defs>
+        <path d="M 186 62 Q 230 40 274 62" fill="none" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#arr)"/>
+        <path d="M 372 120 Q 396 165 372 210" fill="none" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#arr)"/>
+        <path d="M 274 268 Q 230 290 186 268" fill="none" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#arr)"/>
+        <path d="M 88 210 Q 64 165 88 120" fill="none" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#arr)"/>
+        <circle cx="120" cy="80" r="62" fill="color-mix(in srgb, var(--vis) 14%, var(--card))" stroke="var(--vis)" stroke-width="2"/>
+        <text x="120" y="74" text-anchor="middle" font-size="12.5" style="fill:var(--vis);font-weight:500">1 · Vision</text>
+        <text x="120" y="93" text-anchor="middle" font-size="10.5">where you're going</text>
+        <circle cx="340" cy="80" r="62" fill="color-mix(in srgb, var(--emo) 14%, var(--card))" stroke="var(--emo)" stroke-width="2"/>
+        <text x="340" y="74" text-anchor="middle" font-size="12.5" style="fill:var(--emo);font-weight:500">2 · Emotions</text>
+        <text x="340" y="93" text-anchor="middle" font-size="10.5">clear the decks</text>
+        <circle cx="340" cy="250" r="62" fill="color-mix(in srgb, var(--old) 14%, var(--card))" stroke="var(--old)" stroke-width="2"/>
+        <text x="340" y="244" text-anchor="middle" font-size="12.5" style="fill:var(--old);font-weight:500">3 · Old thoughts</text>
+        <text x="340" y="263" text-anchor="middle" font-size="10.5">swap the stories</text>
+        <circle cx="120" cy="250" r="62" fill="color-mix(in srgb, var(--act) 14%, var(--card))" stroke="var(--act)" stroke-width="2"/>
+        <text x="120" y="244" text-anchor="middle" font-size="12.5" style="fill:var(--act);font-weight:500">4 · Action!</text>
+        <text x="120" y="263" text-anchor="middle" font-size="10.5">act, learn, repeat</text>
+        <circle cx="230" cy="165" r="34" fill="var(--ink)"/>
+        <text x="230" y="161" text-anchor="middle" font-size="10.5" style="fill:var(--paper)">start with</text>
+        <text x="230" y="175" text-anchor="middle" font-size="10.5" style="fill:var(--paper)">yourself</text>
+      </svg>
+      <p class="cap">Grede spells out the order in the final part: once you understand how you feel about the world and have cleared out limiting stories, you are best placed to act, and acting sends you back to refine the vision.</p>
+    </div>
+  </div>
+
+  <div class="stats four" style="margin-top:28px">
+    <div class="stat"><span class="big num">$1M</span><p>Good American's sales on launch day in 2016. It was out of stock within two hours.</p></div>
+    <div class="stat"><span class="big num">00–24</span><p>The launch size range. Nine SKUs: three fits in three washes, every one in every size.</p></div>
+    <div class="stat"><span class="big num">⅓·⅓·⅓</span><p>Her "Rule of Thirds": if you're chasing something hard, expect to be happy a third of the time.</p></div>
+    <div class="stat"><span class="big num">3</span><p>East London rules for action: show up, tell the truth, stay in motion.</p></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col c-vis">
+      <span class="label">Part 1</span>
+      <h3>Vision</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Vision</b>Draw the future, then plan backward</a></li>
+      </ol>
+    </div>
+    <div class="col c-emo">
+      <span class="label">Part 2</span>
+      <h3>Managing Emotions</h3>
+      <ol>
+        <li><span>02</span><a href="#ch2"><b>Anger</b>Put an adult in the driver's seat</a></li>
+        <li><span>03</span><a href="#ch3"><b>Fear</b>A signal to move toward</a></li>
+        <li><span>04</span><a href="#ch4"><b>Guilt</b>Whose expectations is it?</a></li>
+        <li><span>05</span><a href="#ch5"><b>Sadness</b>The Rule of Thirds</a></li>
+        <li><span>06</span><a href="#ch6"><b>Joy</b>Clear the barriers to it</a></li>
+      </ol>
+    </div>
+    <div class="col c-old">
+      <span class="label">Part 3</span>
+      <h3>Old Thoughts</h3>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>Trade-Offs</b>Both/and, with a plan</a></li>
+        <li><span>08</span><a href="#ch8"><b>Money</b>Face it, talk about it, ask</a></li>
+        <li><span>09</span><a href="#ch9"><b>Career</b>Nobody knows what they're doing</a></li>
+        <li><span>10</span><a href="#ch10"><b>Family</b>Look after yourself first</a></li>
+        <li><span>11</span><a href="#ch11"><b>Building a Brand &amp; Business</b>Product, price, relevancy</a></li>
+        <li><span>12</span><a href="#ch12"><b>Leadership</b>Enterprise mentality</a></li>
+      </ol>
+    </div>
+    <div class="col c-act">
+      <span class="label">Part 4</span>
+      <h3>Action!</h3>
+      <ol>
+        <li><span>13</span><a href="#ch13"><b>Action!</b>Show up, tell the truth, keep moving</a></li>
+        <li><span>—</span><a href="#epilogue"><b>Her rules for success</b>And what comes next</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OLD THOUGHTS ============ -->
+<section id="old-thoughts">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Old thought, new thought</h2>
+    <p class="lede">The heart of the book is a list of beliefs women absorb about money, work, family and leadership. Grede names each one as an "Old Thought", tells the story of how she outgrew it, and offers a "New Thought" in its place. Here are all 32.</p>
+  </div>
+
+  <div class="tablecard">
+    <div class="scroll-x">
+      <table class="ot">
+        <thead>
+          <tr><th scope="col">Chapter</th><th scope="col">Old thought</th><th scope="col">New thought</th></tr>
+        </thead>
+        <tbody class="c-old">
+          <tr class="grp"><th scope="row" rowspan="3">Trade-offs</th><td class="o">It's either career or family.</td><td class="n">It's both/and, as long as you see the trade-offs coming and plan for them.</td></tr>
+          <tr><td class="o">There's a right decision, and you'll know right away.</td><td class="n">Make the decision, then make it right. Treat everything as iteration.</td></tr>
+          <tr><td class="o">Perfection is the goal.</td><td class="n">Perfection is futile and boring. The process is the interesting part.</td></tr>
+          <tr class="grp"><th scope="row" rowspan="3">Money</th><td class="o">Nice girls don't talk, or even think, about money.</td><td class="n">Think about money constantly. Exposure takes the fear out of it.</td></tr>
+          <tr><td class="o">Scarcity is real: if you get more, someone gets less.</td><td class="n">Money isn't relational. Advocate for yourself first, then help others.</td></tr>
+          <tr><td class="o">Be satisfied with what you have. Wanting more is greedy.</td><td class="n">Think about yourself first. Everyone else is busy thinking about themselves.</td></tr>
+          <tr class="grp"><th scope="row" rowspan="5">Career</th><td class="o">You don't know enough and aren't qualified.</td><td class="n">Nobody knows what they're doing. Your job is to figure it out, day by day.</td></tr>
+          <tr><td class="o">If it doesn't come naturally, it isn't for you.</td><td class="n">You bring a particular genius to your work. Your job is to find it.</td></tr>
+          <tr><td class="o">Part of your job is keeping others comfortable.</td><td class="n">At work your needs come first. If you never hear "no", you aren't pushing.</td></tr>
+          <tr><td class="o">Strive for work-life balance.</td><td class="n">Aim for alignment with your ambition. Distance from the room slows you down.</td></tr>
+          <tr><td class="o">You're owed mentorship and opportunity.</td><td class="n">You create your career, and it's your responsibility.</td></tr>
+          <tr class="grp"><th scope="row" rowspan="3">Family</th><td class="o">You must protect your kids from the world.</td><td class="n">Provide the nutrients. What they grow is theirs.</td></tr>
+          <tr><td class="o">Don't work with your partner.</td><td class="n">Your partner is the most important work relationship you have.</td></tr>
+          <tr><td class="o">Get your career sorted before kids.</td><td class="n">There's no right time. Manage both now.</td></tr>
+          <tr class="grp"><th scope="row" rowspan="11">Brand &amp; business</th><td class="o">You need to raise a lot of money to start.</td><td class="n">Sweat equity is enough. Raise only what proves the concept.</td></tr>
+          <tr><td class="o">It will always get bigger and better.</td><td class="n">Extend the relevancy curve by transitioning on the way up.</td></tr>
+          <tr><td class="o">You get one big thing, if you're lucky.</td><td class="n">Life has many chapters and many fresh starts.</td></tr>
+          <tr><td class="o">Passion is the key ingredient.</td><td class="n">Add endurance, work, focus and a willingness to listen.</td></tr>
+          <tr><td class="o">Failure means stop.</td><td class="n">If you aren't failing, you haven't found the edge.</td></tr>
+          <tr><td class="o">Negative feedback is negative.</td><td class="n">Seek the opinions you're scared of. Others see your blind spots.</td></tr>
+          <tr><td class="o">Make a good brand, market it, done.</td><td class="n">Obsess over product and price. Marketing comes last.</td></tr>
+          <tr><td class="o">If it isn't hard, it isn't real.</td><td class="n">Business is hard enough. Find shortcuts, keep it simple, protect your heroes.</td></tr>
+          <tr><td class="o">Ignore the competition.</td><td class="n">Study competitors obsessively. They show you how to be different.</td></tr>
+          <tr><td class="o">You need the right people and the right parties.</td><td class="n">Networking isn't social. Find people who move the business, from where you are.</td></tr>
+          <tr><td class="o">Being transactional is gross.</td><td class="n">Business is transactional. No friendship required.</td></tr>
+          <tr class="grp"><th scope="row" rowspan="7">Leadership</th><td class="o">A leader must know how to do it all.</td><td class="n">Know your limits, then hire people better than you.</td></tr>
+          <tr><td class="o">Grab every opportunity.</td><td class="n">Narrow to a few shared goals, or you won't scale.</td></tr>
+          <tr><td class="o">Good leaders are liked by everyone.</td><td class="n">Don't optimise for popularity. Serve the business: the enterprise mentality.</td></tr>
+          <tr><td class="o">Colleagues are family.</td><td class="n">Care deeply, don't tolerate poor performance, and let people leave well.</td></tr>
+          <tr><td class="o">Everyone is watching you.</td><td class="n">You aren't the centre of anyone else's universe. Get to work.</td></tr>
+          <tr><td class="o">Doing good and doing business must be bundled.</td><td class="n">Build a business that solves problems. That is the social good.</td></tr>
+          <tr><td class="o">Too much success makes people want to destroy you.</td><td class="n">Some will. Push through anyway. That's how the culture changes.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Wording condensed from the book's chapter summaries</span></div>
+  </div>
+
+  <div class="figrow" style="margin-top:24px">
+    <div class="fig">
+      <h4>Proud, not grateful</h4>
+      <p class="cap" style="font-size:16px;color:var(--ink)">A TV anchor asked Grede whether she wasn't grateful for everything she'd done. She said no: she was proud. She has a gratitude practice, but she points to the psychologists' definition, which requires recognising an <em>external</em> source for a good outcome.</p>
+      <p class="cap">Her complaint is with the passive voice women use about their own work ("this job was given to me", "this business took off because someone posted it"). Crediting outside forces disowns your agency. The same goes for "empowering women", a phrase that suggests someone else holds the power to hand over.</p>
+    </div>
+    <div class="fig">
+      <h4>Why the words matter</h4>
+      <p class="cap" style="font-size:16px;color:var(--ink)">Thoughts drive actions, and actions build reality. Grede isn't claiming anyone controls the world, since life is unpredictable and that's part of its meaning. Her claim is narrower: you control how you think about what happens, and that decides what you do next.</p>
+      <p class="cap">That's why she goes after beliefs instead of tactics. Women have charted plenty of paths, she says, but few that lead to the top of the mountain and are worth handing to daughters and friends.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part c-vis" id="vision">
+  <span class="label partno">Part 1 · Chapter 1</span>
+  <h2><span>Vision</span></h2>
+  <p class="lede">You can't become what you can't see. Grede's first move is to picture the life she wants in detail, write it down and then work back to today.</p>
+  <blockquote>"You can't be what you can't see." — Marian Wright Edelman, the part's epigraph</blockquote>
+</div>
+
+<article class="chapter c-vis" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Vision</span></div>
+  <div class="body">
+    <div>
+      <h3>See it, write it, work backward</h3>
+      <p class="idea">A vision is a future that pulls you forward. It should be bigger than your fears and detailed enough to steer by.</p>
+    </div>
+    <ul class="points">
+      <li>As a nine-year-old she drew the same scene hundreds of times: a beautifully decorated Christmas tree by a big window, next to a handsome console. Twenty years later, holding her first baby in the first house she bought with her husband Jens, she realised the room matched the drawings detail for detail.</li>
+      <li>East London gave her the operating manual: respect, directness, your word is king, do what you say. It also showed her what she didn't want, like the women around her who tied themselves to men who blew it.</li>
+      <li>Hustle came early. She started a paper round at twelve and kept it until fifteen, with shop, deli and firework jobs on the side. She noticed the early-rising "grafters" and wanted their kind of life, not the night crowd's.</li>
+      <li>Unable to keep up at fashion college, she wrote about a hundred letters to designers, showrooms and PR agencies, then rang doorbells when they didn't reply. Unpaid placements taught her what she <em>didn't</em> want to do, which she calls the most useful thing to learn early.</li>
+      <li>Six years at a toxic fashion-show production company showed her a gap: designers with big visions and no budgets. Getting Toshiba to send a wall of TVs for a young designer's show was the start of her career in brand partnerships.</li>
+      <li>She writes a plan for each decade (thirty, forty, now fifty) as a vision statement about how she wants to spend her time and how it should feel, tied to concrete money goals. In her twenties: not a "salary girl" forever, fly at the front of the plane, a cleaner every two weeks.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>How a decade plan becomes this week's to-do list</h4>
+      <svg viewBox="0 0 560 250" role="img" aria-label="A staircase descending from left to right. Top step: the decade vision, for example Emma at 40, written as how you want to spend time and feel. Next steps down: yearly goals, monthly chunks, weekly actions, and today. An arrow labelled work backward runs down the stairs. A loop arrow labelled every Sunday: closer or off track? returns from today to the vision.">
+        <defs>
+          <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--vis)"/></marker>
+        </defs>
+        <rect x="10" y="30" width="150" height="42" rx="5" fill="var(--vis)"/>
+        <text x="85" y="49" text-anchor="middle" font-size="12.5" style="fill:var(--paper);font-weight:500">Decade vision</text>
+        <text x="85" y="64" text-anchor="middle" font-size="10" style="fill:var(--paper)">"Emma @ 40"</text>
+        <rect x="120" y="82" width="130" height="36" rx="5" fill="color-mix(in srgb, var(--vis) 60%, var(--card))"/>
+        <text x="185" y="104" text-anchor="middle" font-size="12">Yearly goals</text>
+        <rect x="210" y="128" width="120" height="34" rx="5" fill="color-mix(in srgb, var(--vis) 38%, var(--card))"/>
+        <text x="270" y="149" text-anchor="middle" font-size="12">Monthly chunks</text>
+        <rect x="290" y="172" width="120" height="32" rx="5" fill="color-mix(in srgb, var(--vis) 22%, var(--card))"/>
+        <text x="350" y="192" text-anchor="middle" font-size="12">Weekly actions</text>
+        <rect x="370" y="212" width="100" height="30" rx="5" fill="var(--card)" stroke="var(--vis)" stroke-width="1.5"/>
+        <text x="420" y="231" text-anchor="middle" font-size="12">Today</text>
+        <path d="M 40 84 L 40 232 L 356 232" fill="none" stroke="var(--ink-3)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arr)"/>
+        <text x="54" y="160" font-size="10.5" style="fill:var(--ink-3)">work</text>
+        <text x="54" y="174" font-size="10.5" style="fill:var(--ink-3)">backward</text>
+        <path d="M 478 226 C 545 200, 560 40, 168 40" fill="none" stroke="var(--vis)" stroke-width="1.6" marker-end="url(#arr2)"/>
+        <text x="520" y="22" text-anchor="end" font-size="10.5" style="fill:var(--vis)">every Sunday: closer, or off track?</text>
+      </svg>
+      <p class="cap">Her current list lives on a sticky note on her phone. She checks it each Sunday. Once written, the vision is broken into yearly, monthly and weekly pieces. The plans focus less on events and more on how she wants life to feel.</p>
+    </div>
+
+    <div class="story">
+      <span class="label">The yearly process</span>
+      <p>At the end of each year Grede answers five questions in writing: why she missed the goals she missed (asking "why?" again and again, and blaming nothing external), three things she wishes she'd done more of, what she's avoiding or scared of, how she'll learn and grow next year (one recent year: the Hoffman Process, Transcendental Meditation and learning to swim at forty-two), and up to three new habits and three boundaries. The full list is in the <a href="#toolkit">toolkit</a>.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part c-emo" id="emotions">
+  <span class="label partno">Part 2 · Chapters 2–6</span>
+  <h2><span>Managing</span> emotions</h2>
+  <p class="lede">Feelings are information, not instructions. Before tackling beliefs, Grede wants the "emotional decks" cleared, so that anger or fear isn't making the decisions.</p>
+  <blockquote>"…a human being can alter his life by altering his attitudes." — William James, the part's epigraph (she adds: "Or her…!")</blockquote>
+</div>
+
+<div class="fig" style="margin-top:32px">
+  <h4>Five emotions, read as signals</h4>
+  <div class="signals">
+    <div><b>Anger</b><span>Shows what matters to you.</span><i>→ calm down first, then say it directly</i></div>
+    <div><b>Fear</b><span>Something important is on the other side.</span><i>→ walk through the doorway, fast</i></div>
+    <div><b>Guilt</b><span>A check when you're out of integrity.</span><i>→ make sure it's yours, not others' expectations</i></div>
+    <div><b>Sadness</b><span>Shows what's unfinished.</span><i>→ expect it; journal, rest, lean on old friends</i></div>
+    <div><b>Joy</b><span>Can't be managed or made on demand.</span><i>→ clear the barriers that block it</i></div>
+  </div>
+  <p class="cap">Grede doesn't suppress feelings. Her body punishes her when she ignores them, and agreeing to things you don't want to do is "a type of betrayal". What she does is rightsize them, including the enthusiastic ones, before they steer a decision.</p>
+</div>
+
+<article class="chapter c-emo" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Anger</span></div>
+  <div class="body">
+    <div>
+      <h3>Put an adult in the driver's seat</h3>
+      <p class="idea">The goal isn't to stop feeling anger. It's to get much better at expressing it.</p>
+    </div>
+    <ul class="points">
+      <li>Anger had become her default emotion. A community programme, found after a teenage boyfriend told her she needed help, taught her the plain power of closing her eyes and breathing until she was back in her body.</li>
+      <li>She spent her teens, twenties and thirties angry at her mum, until she saw that her mother couldn't give what she didn't have. Staying angry wouldn't have produced a different childhood.</li>
+      <li>She keeps fierce boundaries and says plainly when she's unhappy. Bottled anger festers or leaks out as passive aggression. When the power runs in her favour, she cools down before speaking. She never punches down.</li>
+      <li>She dropped the blame culture she grew up in. Oprah's message that you can't change the world, only your relationship to it, made her the "creator" of her experience rather than its victim. No score-settling, no life lived as a giant "f— you".</li>
+      <li>Her honest gap: forgiveness. She tends to cut people out and move on, and admits she isn't there yet.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Stuck behind a woman fumbling with her card at a Tube turnstile, Grede screamed at her to move. The woman said she was deaf. Grede shouted back "are you blind, too?" and pushed past. Sitting on the train with her head in her hands, she knew that if she didn't deal with her anger, it would deal with her.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-emo" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Fear</span></div>
+  <div class="body">
+    <div>
+      <h3>Fear is a doorway, not a wall</h3>
+      <p class="idea">"If I'm not a little scared, then I know I'm not pushing enough."</p>
+    </div>
+    <ul class="points">
+      <li>Her hypervigilance is real and learned. On an Obama Foundation trip to South Africa she spotted both security cars tailing her vehicle, including the one she wasn't supposed to know about.</li>
+      <li>Growing up near real danger recalibrated business risk for her: a product bet or a first-time founder won't kill her, even if it feels that way. She is scared all the time and treats it as a sign that something big is in front of her.</li>
+      <li>She borrows Fritz Perls's line that "fear is excitement without the breath", and the idea of <strong>challenge stress</strong>: rising to meet what's in front of you instead of feeling the world is happening to you.</li>
+      <li>Women often act as if they're always under threat. When her executive team called senior leaders in one by one, the women in the room predicted the women would assume they were being fired. Both of them asked.</li>
+      <li>Move through it quickly. Stalling and overthinking cost a lot. "Perfection is not the goal, forward motion is." It can help to picture fear as a doorway you have to walk through.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-emo" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Guilt</span></div>
+  <div class="body">
+    <div>
+      <h3>Don't parent from guilt</h3>
+      <p class="idea">Guilt is useful when it flags a real breach of your values. It's useless when it only measures other people's expectations.</p>
+    </div>
+    <ul class="points">
+      <li>As the eldest of four, Grede packed lunches, ironed uniforms and did the school runs while her mum worked long bank hours. She learned early that you can never do enough to feel you've done a good job, which she sees as the same trap as modern "mum guilt".</li>
+      <li>Humans evolved with <strong>alloparenting</strong>, children raised communally across generations (anthropologist Sarah Blaffer Hrdy). Today that means chosen family, pooled resources and paid help where possible, not a lone mother doing it all.</li>
+      <li>With four kids at three schools, a good week includes a couple of drop-offs. She leaves herself in the calculation, decides honestly, then owns the choice without hedging.</li>
+      <li>Michelle Obama's advice on her podcast: if you're driving your career, "don't parent from guilt". Kids are watching how you live. Grede explains her choices to her eldest daughter, who knows her mum loves her work.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-emo" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Sadness</span></div>
+  <div class="body">
+    <div>
+      <h3>The Rule of Thirds</h3>
+      <p class="idea">If you're chasing something hard, expect to be happy about a third of the time. That's the deal, not a sign of failure.</p>
+    </div>
+    <ul class="points">
+      <li>She has always been something of a loner and often lonely. Small talk leaves her feeling worse, and her closest friends are five women in London who knew her long before anyone knew her name.</li>
+      <li>Depression runs in her family, so she treats sadness as a warning light. When she tried to power through hard days in her early career, a migraine put her in bed.</li>
+      <li>Every big move (to Essex for a better school, giving up weed and its friends, leaving her first job, leaving London) meant leaving people behind. She quotes Tupac: still wanting to see you eat, "just not at my table". Those losses still need grieving.</li>
+      <li>Her tools: a journal she rarely rereads ("a container for my feelings"), twenty minutes of Transcendental Meditation most mornings, phone-free evenings with her kids, and dropping everything for the people she loves.</li>
+      <li>She speaks about her own sadness publicly because social media shows a highlight reel. Sadness, welcomed instead of resisted, works like a mirror that shows what's unfinished.</li>
+    </ul>
+    <div class="fig">
+      <h4>The Rule of Thirds as a barometer</h4>
+      <svg viewBox="0 0 520 230" role="img" aria-label="A ring divided into three equal segments labelled good, all right, and a little rough. To the right, three gauges: if almost all good, you're probably not pushing hard enough; if about a third each, you're on track; if mostly rough, check in and slow down.">
+        <g transform="translate(115 115)">
+          <path d="M 0 -90 A 90 90 0 0 1 77.94 45 L 46.77 27 A 54 54 0 0 0 0 -54 Z" fill="var(--vis)"/>
+          <path d="M 77.94 45 A 90 90 0 0 1 -77.94 45 L -46.77 27 A 54 54 0 0 0 46.77 27 Z" fill="color-mix(in srgb, var(--ink-3) 45%, var(--card))"/>
+          <path d="M -77.94 45 A 90 90 0 0 1 0 -90 L 0 -54 A 54 54 0 0 0 -46.77 27 Z" fill="var(--emo)"/>
+          <text x="58" y="-46" text-anchor="middle" font-size="11" style="fill:var(--paper)">good</text>
+          <text x="0" y="80" text-anchor="middle" font-size="11" style="fill:var(--ink)">all right</text>
+          <text x="-60" y="-40" text-anchor="middle" font-size="11" style="fill:var(--paper)">rough</text>
+          <text x="0" y="4" text-anchor="middle" font-size="12" style="fill:var(--ink)">⅓ · ⅓ · ⅓</text>
+        </g>
+        <g font-size="11.5">
+          <rect x="260" y="28" width="12" height="12" rx="2" fill="var(--vis)"/><rect x="274" y="28" width="12" height="12" rx="2" fill="var(--vis)"/><rect x="288" y="28" width="12" height="12" rx="2" fill="var(--vis)"/>
+          <text x="312" y="38">all good → not pushing</text>
+          <text x="312" y="54" style="fill:var(--ink-3)" font-size="10.5">hard enough</text>
+          <rect x="260" y="98" width="12" height="12" rx="2" fill="var(--vis)"/><rect x="274" y="98" width="12" height="12" rx="2" fill="color-mix(in srgb, var(--ink-3) 45%, var(--card))"/><rect x="288" y="98" width="12" height="12" rx="2" fill="var(--emo)"/>
+          <text x="312" y="108">a third each → on track</text>
+          <rect x="260" y="168" width="12" height="12" rx="2" fill="var(--emo)"/><rect x="274" y="168" width="12" height="12" rx="2" fill="var(--emo)"/><rect x="288" y="168" width="12" height="12" rx="2" fill="var(--emo)"/>
+          <text x="312" y="178">mostly rough → rest,</text>
+          <text x="312" y="194" style="fill:var(--ink-3)" font-size="10.5">write it down, get support</text>
+        </g>
+      </svg>
+      <p class="cap">Expecting to feel great every day as the best wife, mother and boss sets you up to fail. Grede uses the thirds as a check: if things feel too good for too long, she's probably not pushing forward enough.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-emo" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Joy</span></div>
+  <div class="body">
+    <div>
+      <h3>Your happiness is on you</h3>
+      <p class="idea">Joy comes unbidden and leaves just as fast. What you can do is clear away the things that block it.</p>
+    </div>
+    <ul class="points">
+      <li>At the Hoffman Process she refused to join a silly group dance. The facilitator told her that with four kids she might need to learn how to play. It stung: she doesn't remember ever playing as a child, having always preferred to sit with the adults.</li>
+      <li>Joy is a better target than "happiness", which as a permanent state is out of reach and makes you feel you're failing when life doesn't look like Instagram.</li>
+      <li>Money solves money problems, and she wants women to earn far more of it. But having lived at every point on the wealth spectrum, she says it doesn't make everything okay.</li>
+      <li>She has a low bar for "pretty good". Her holding company is called E13, the postcode she grew up in. Looking at it on Google Earth with her business managers, one said the cars didn't even have wheels.</li>
+      <li>She doesn't expect her husband, her kids or the world to make her happy. Choosing how to respond to what you feel may be the most important choice you make each day.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part c-old" id="rethink">
+  <span class="label partno">Part 3 · Chapters 7–12</span>
+  <h2>Old <span>thoughts</span></h2>
+  <p class="lede">The longest part of the book. Six areas of life, 32 inherited beliefs, each taken apart with a story from Grede's career and replaced with a new one.</p>
+  <blockquote>"Maybe it's about un-becoming everything that isn't really you…" — Paulo Coelho, the part's epigraph</blockquote>
+</div>
+
+<article class="chapter c-old" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Trade-Offs</span></div>
+  <div class="body">
+    <div>
+      <h3>You can't have it all at once</h3>
+      <p class="idea">"Having it all" is a con. Success comes from seeing the unavoidable choices coming and accepting them without beating yourself up.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Either/or → both/and, with trade-offs planned in advance.</strong> Grede doesn't read school emails, which go in the same pile as retail newsletters, and so missed the twins' birthday crowns. Can you have kids and a career? Yes, if you refuse the cultural demand to be perfect at both at once.</li>
+      <li>Her husband is Swedish and she never assumed she'd be the better parent, so he didn't either. That frees her from defaulting to "lead parent". She leaves her own "masculine energy" (directing people all day) at the door when she gets home.</li>
+      <li>Each year she writes a blueprint answering seven questions (what a great year looks like, what she will and won't sacrifice, what matters to her kids) and works backward to today. The bullet points sit on her phone's home screen.</li>
+      <li>She worries about young women choosing a "soft life" over career. Her advice to the ambitious: commit fully for at least ten years. At her agency she woke at night to answer LA lawyers on clients' contracts. Friends who worked hard in their twenties are, visibly, the ones who are now doing well.</li>
+      <li><strong>The right decision → make it, then make it right.</strong> Phil Stutz says his best clients aren't the ones who make the best decisions but the ones who make the most. She decides about people by gut feel, in the room with them, and about opportunities by checking them against her written goals.</li>
+      <li><strong>Perfection → process.</strong> Her mother, nicknamed "Bleach", had the girls lint-rolling the carpet while the family was falling apart behind the scenes. Perfection is a front. The most useful question after a stumble is <em>What is this here to teach me?</em></li>
+      <li>On looks: women are judged both ways, and a man once called her "a beautiful rottweiler". Research suggests complimenting women's bodies increases self-consciousness, so she tries to stop talking about bodies altogether.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-old" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Money</span></div>
+  <div class="body">
+    <div>
+      <h3>Money is a neutral tool. Talk about it.</h3>
+      <p class="idea">"Money can solve all your money problems." Avoiding it doesn't make you more spiritual. It makes you underpaid.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Nice girls don't talk money → think about it all the time.</strong> She struggles to get successful women guests on her podcast to talk openly about money, while men discuss deals over lunch. On one panel she was the only woman who had made hundreds of millions herself. Afterwards, a celebrated CEO admitted she'd never shared her pay and was probably the lowest-paid CEO in her industry.</li>
+      <li>Her mother budgeted every penny at the kitchen table. Grede gives her kids allowance in physical cash and knows what every component of a pair of jeans costs.</li>
+      <li><strong>Scarcity → advocate for yourself first.</strong> At the production company the bosses rationed praise and set juniors against each other. She proposed to her rival that they simply take turns. Each year, male leaders hand out their raise budgets without comment, while female leaders come back upset on their teams' behalf.</li>
+      <li>Her own money story is "what goes boom can go bust", which is why she always takes cash off the table. On survivor's guilt, Michelle Obama's point: you can't rescue others until you're secure yourself.</li>
+      <li><strong>Be satisfied with what you have → think of yourself first.</strong> Jens told her to stop having an "employee mentality" with her own board. She walked in and stated her compensation package. Nobody blinked.</li>
+      <li>She negotiated brilliantly for clients but not for herself. When her bosses laughed at her request to double her £26,000 salary, she left and built ITB Worldwide inside Jens and Erik Torstensson's Saturday Group.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Her three negotiation rules</h4>
+        <ol class="qs c-old">
+          <li><strong>Assume you're underpaid.</strong> You almost certainly are, so start there and ask for more.</li>
+          <li><strong>Don't over-explain.</strong> State the ask and leave room for silence. Don't rush to justify.</li>
+          <li><strong>Never take the first offer.</strong> And don't let the other side think a quick yes means they overpaid.</li>
+        </ol>
+        <p class="cap">Every time HR asks her to approve a salary above the band, it's for a man who negotiated his way up to her. The blockers for women are low self-worth and fear of making the other person uncomfortable. Mellody Hobson's warning: the fatal mistake is overstating your value. Negotiate from abundance. By the time you're negotiating, both sides want a deal.</p>
+      </div>
+      <div class="fig">
+        <h4>Her money checklist</h4>
+        <ul class="checks c-old">
+          <li>Talk openly about money with friends and colleagues.</li>
+          <li>Learn mortgages, savings, retirement accounts and investments.</li>
+          <li>Always look at comps for your role.</li>
+          <li>Share the details you'd usually keep to yourself.</li>
+          <li>Introduce people to the accountants, bankers and lawyers who helped you.</li>
+          <li>Never let anyone make money decisions for you without your understanding and consent.</li>
+          <li>Never work for free without saying so.</li>
+          <li>Make financial plans.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-old" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Career</span></div>
+  <div class="body">
+    <div>
+      <h3>Nobody knows what they're doing</h3>
+      <p class="idea">You don't need permission or a pedigree. Put your hand up, figure it out, and take responsibility for your own path.</p>
+    </div>
+    <ul class="points">
+      <li><strong>You're not qualified → figure it out daily.</strong> Launch day at Good American: $1 million in sales, sold out in two hours, no fabric, no factory space, twelve weeks with no stock. At 10 a.m. an investor said she'd underestimated the opportunity. At 11 a.m. another called her an idiot. She personally contacted every disappointed customer, refused Net-a-Porter when it wanted only sizes 2–10, and learned the business by phoning everyone in LA's denim world.</li>
+      <li><strong>Not naturally good → find your particular genius.</strong> Dyslexia, diagnosed as an adult, turned out to be a superpower: she cuts problems down to their essentials. Internships gave her "signs" of what she was good at. Working beside Eton and Harrow graduates cured her of the idea that she wasn't smart.</li>
+      <li><strong>Keep everyone comfortable → your needs come first at work.</strong> Swap "I can't" for "I won't" or "I don't want to". Practise no's on friends first. Sunita Sah calls the fear of implying a negative opinion <em>insinuation anxiety</em>. Grede always asks for time to review things on her own clock.</li>
+      <li><strong>Work-life balance → alignment with your ambition.</strong> Her line on <em>The Diary of a CEO</em>, that balance is "your problem", went viral. She worries remote work quietly holds back women who want to lead, because they aren't in the room.</li>
+      <li><strong>You're owed mentors → you create your career.</strong> She had no mentors. Oprah on TV and books did the job. Her three most important words were "I'll do that": packing boxes, steaming samples, showing clients the sights. Be excellent where you are before asking for the next role.</li>
+    </ul>
+    <div class="swap">
+      <div>
+        <span class="label">The old script</span>
+        <h5>"I can't…"</h5>
+        <p class="say">"I can't make Friday, I've got…"</p>
+        <p>Invites negotiation. The other person suggests moving your schedule, bending a boundary or stretching your values.</p>
+      </div>
+      <div>
+        <span class="label">Grede's script</span>
+        <h5>"I won't…"</h5>
+        <p class="say">"I won't be coming." / "I'm saying no to everything right now. Ask me again in the new year."</p>
+        <p>Final and clear. She says people offer "zero retort". If you're not hearing no, you aren't pushing for what you want.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-old" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Family</span></div>
+  <div class="body">
+    <div>
+      <h3>Look after yourself first</h3>
+      <p class="idea">The most important thing Grede does each day is look after herself, emotionally and mentally. Everyone at home benefits from it.</p>
+    </div>
+    <ul class="points">
+      <li>Women burn out because they leave themselves out of the equation. Self-care here doesn't mean spa days. She starts each morning talking to herself in the mirror about what she wants and what she likes about herself. That is her gratitude practice.</li>
+      <li><strong>Protect your kids from the world → provide the nutrients, let them grow.</strong> After months of pushing piano lessons, Jens told her to take them herself, and she stopped being ambitious <em>for</em> her children. Her aim: happy, kind, curious kids who can solve their own problems. She calls herself "a max three-hour mum" on weekends.</li>
+      <li>Kurt Gray's "concept creep" explains the sense that kids face more threats than they do. Jung's warning: children carry the burden of their parents' unlived lives.</li>
+      <li><strong>Don't work with your partner → your partner is your most important work relationship.</strong> She and Jens have been business partners for eighteen years, through Good American and SKIMS (first announced as "Kimono", a misstep they apologised for and fixed). "Let Emma be Emma," he tells the team. Even if you don't share an office, choose a partner who backs you and treat the marriage with the same effort as work.</li>
+      <li><strong>Career first, then kids → there's no right time.</strong> She calls egg freezing a "bullshit corporate benefit" because it sells false certainty. She went through rounds of IVF and three miscarriages before having her younger children with a surrogate, and urges women who want to lead to come back to the office after having a baby.</li>
+    </ul>
+    <div class="fig c-vis">
+      <h4>Counting the summers left</h4>
+      <div class="summers" role="img" aria-label="Eighteen circles for eighteen summers of childhood at home. Twelve are outlined as already gone, six are filled as remaining.">
+        <i class="gone"></i><i class="gone"></i><i class="gone"></i><i class="gone"></i><i class="gone"></i><i class="gone"></i><i class="gone"></i><i class="gone"></i><i class="gone"></i><i class="gone"></i><i class="gone"></i><i class="gone"></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <p class="cap">Jesse Itzler's reframe: if your parents are seventy and you see them once a year, you don't have ten years left, you have ten visits. Similarly, a parent of a twelve-year-old has already used about two-thirds of the summers at home. Grede counts the Christmases and spring breaks left under one roof, and treats them like a limited-edition drop: rare, so they feel like an event.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-old" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Building a Brand &amp; Business</span></div>
+  <div class="body">
+    <div>
+      <h3>Product and price first. Marketing last.</h3>
+      <p class="idea">"Take a simple idea and take it seriously." The longest chapter has eleven old thoughts, and most of them are about what founders get romantic about.</p>
+    </div>
+    <ul class="points">
+      <li><strong>You need lots of money → sweat equity, then only proof-of-concept cash.</strong> Investors aren't your friends, and founders often bring their dating patterns into choosing them. Off Season, Kristin Juszczyk's game-day apparel line, began with five NFL teams instead of every licence available. Grede now prefers businesses she can fund herself and run with five people.</li>
+      <li><strong>Always bigger and better → extend the relevancy curve.</strong> House-hunting in LA, Jens showed her a home whose owner, a business titan, turned down $2.1 billion a month before going bankrupt. Grede always takes cash off the table and watches for the plateau.</li>
+      <li><strong>One big thing → many chapters.</strong> After selling ITB Worldwide she wasn't kept on, and it hurt badly. Now she starts each new venture with a blank page of questions (in the toolkit). Not everything has to be huge: a friend's crochet-necklace business employing four or five women is a success.</li>
+      <li><strong>Passion → endurance, focus and listening.</strong> The <em>Shark Tank</em> twins behind CAKES body put $10,000 of savings into washable silicone nipple covers. They grew it to about $150 million with roughly ten people. They didn't need her $300,000, but they wanted the mentorship.</li>
+      <li><strong>Failure means stop → failure marks the edge.</strong> ITB's 2013 LA office failed within nine months: she believed her own hype, under-invested in staff and misread a city where yes doesn't always mean yes. Phil Stutz calls setbacks a "pruning" that releases new growth.</li>
+      <li><strong>Negative feedback is bad → go looking for it.</strong> A customer told her plus-size women wear through denim where their thighs rub. Good American reinforced the inner thigh and built a chafing test.</li>
+      <li><strong>Good brand + marketing → obsess over product and price.</strong> Many founders stall at about $500,000 in revenue. London Fashion Week darlings got <em>Vogue</em> covers but rarely made more than £2 million. Marketing is "the cherry on the icing". Bake the cake first.</li>
+      <li><strong>No shortcuts → find every shortcut.</strong> She brought in Michael Rubin's Fanatics to power Off Season. Focus on one hero retailer before expanding, and protect your hero products.</li>
+      <li><strong>Ignore the competition → study it obsessively.</strong> She sees it as a red flag when founders can't describe their competitive landscape. The differences between jeans are small, so they matter hugely.</li>
+      <li><strong>Right parties → useful people.</strong> Her "A Seat at the Table" dinners exist because she was never invited anywhere. Networking is about building a network, from wherever you are.</li>
+      <li><strong>Transactional is gross → business is transactional.</strong> A young founder asked for big introductions with nothing on offer. Grede routinely gives away a couple of percentage points to make a favour worth someone's while.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The relevancy curve, and transitioning on the way up</h4>
+      <svg viewBox="0 0 560 260" role="img" aria-label="A chart with time on the horizontal axis and relevance on the vertical. A grey curve rises quickly during a four-year halo, peaks, then falls, labelled one-hit brand. A coloured line stays higher because new curves are started before each peak: shapewear, then clothing, then collaborations. A marker shows transition on the way up, before the peak. The principles stay the same while the products change.">
+        <line x1="40" y1="220" x2="540" y2="220" stroke="var(--rule)" stroke-width="1.5"/>
+        <line x1="40" y1="20" x2="40" y2="220" stroke="var(--rule)" stroke-width="1.5"/>
+        <text x="540" y="240" text-anchor="end" font-size="11">time →</text>
+        <text x="30" y="24" text-anchor="end" font-size="11" transform="rotate(-90 30 24)">relevance →</text>
+        <rect x="52" y="24" width="150" height="196" fill="color-mix(in srgb, var(--vis) 8%, transparent)"/>
+        <text x="127" y="40" text-anchor="middle" font-size="10.5" style="fill:var(--vis)">the "four-year halo"</text>
+        <path d="M 52 210 C 110 205, 150 70, 200 66 C 260 62, 300 170, 380 205 C 420 214, 470 216, 530 217" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="392" y="196" font-size="10.5" style="fill:var(--ink-3)">one-hit brand fades</text>
+        <path d="M 52 210 C 110 205, 140 100, 170 90" fill="none" stroke="var(--old)" stroke-width="3"/>
+        <path d="M 170 90 C 210 78, 240 64, 300 58" fill="none" stroke="var(--old)" stroke-width="3"/>
+        <path d="M 300 58 C 360 52, 420 48, 530 46" fill="none" stroke="var(--old)" stroke-width="3"/>
+        <circle cx="170" cy="90" r="5" fill="var(--old)"/>
+        <circle cx="300" cy="58" r="5" fill="var(--old)"/>
+        <text x="96" y="140" font-size="10.5" style="fill:var(--old)">shapewear</text>
+        <text x="200" y="98" font-size="10.5" style="fill:var(--old)">clothing</text>
+        <text x="330" y="74" font-size="10.5" style="fill:var(--old)">collaborations</text>
+        <text x="176" y="118" font-size="10" style="fill:var(--ink)">↑ transition on the way up,</text>
+        <text x="188" y="132" font-size="10" style="fill:var(--ink)">before the peak</text>
+        <text x="530" y="34" text-anchor="end" font-size="10.5" style="fill:var(--ink)">same principles, new products</text>
+      </svg>
+      <p class="cap">Every brand gets a moment, peaks and fades. Very few, like Nike, Coca-Cola and Apple, stay relevant for decades. To extend the curve, everything can change except the principles. SKIMS launched as underwear and shapewear and later sold a ski puffer with The North Face, but it's still "a solutions-based clothing business". The phrase "transition on the way up" is borrowed from LVMH's Bernard Arnault: start the next curve while the current one is still rising.</p>
+      <p class="src">Illustrative shape, not data. Examples from ch. 5 of Part Three</p>
+    </div>
+
+    <div class="fig">
+      <h4>Zones of Genius, for people and for products</h4>
+      <svg viewBox="0 0 560 250" role="img" aria-label="Left: four stacked bars for the zones of a person, from bottom to top: incompetence, hand it off; competence, outsource; excellence, the trap where most people stay; genius, where you should focus. Right: a bar showing about 90 percent of revenue coming from about 10 percent of products, the hero products.">
+        <g font-size="11">
+          <rect x="20" y="186" width="230" height="38" rx="4" fill="color-mix(in srgb, var(--ink-3) 18%, var(--card))"/>
+          <text x="32" y="203">Incompetence</text><text x="32" y="217" font-size="9.5" style="fill:var(--ink-3)">e.g. financial models → hand it off</text>
+          <rect x="20" y="142" width="230" height="38" rx="4" fill="color-mix(in srgb, var(--ink-3) 30%, var(--card))"/>
+          <text x="32" y="159">Competence</text><text x="32" y="173" font-size="9.5" style="fill:var(--ink-3)">fine at it → outsource</text>
+          <rect x="20" y="98" width="230" height="38" rx="4" fill="color-mix(in srgb, var(--old) 30%, var(--card))"/>
+          <text x="32" y="115">Excellence</text><text x="32" y="129" font-size="9.5" style="fill:var(--ink-2)">good, effortful: the trap</text>
+          <rect x="20" y="40" width="230" height="52" rx="4" fill="var(--old)"/>
+          <text x="32" y="62" style="fill:var(--paper);font-weight:500" font-size="13">Genius</text><text x="32" y="80" font-size="9.5" style="fill:var(--paper)">natural, often taken for granted → focus here</text>
+          <text x="20" y="26" font-size="10.5" style="fill:var(--ink-3)">A PERSON</text>
+        </g>
+        <g font-size="11">
+          <text x="300" y="26" font-size="10.5" style="fill:var(--ink-3)">A BUSINESS</text>
+          <text x="300" y="62">Share of products (SKUs)</text>
+          <rect x="300" y="70" width="240" height="26" rx="3" fill="color-mix(in srgb, var(--ink-3) 22%, var(--card))"/>
+          <rect x="300" y="70" width="24" height="26" rx="3" fill="var(--old)"/>
+          <text x="330" y="88" font-size="10">10% heroes</text>
+          <text x="300" y="132">Share of revenue</text>
+          <rect x="300" y="140" width="240" height="26" rx="3" fill="color-mix(in srgb, var(--ink-3) 22%, var(--card))"/>
+          <rect x="300" y="140" width="216" height="26" rx="3" fill="var(--old)"/>
+          <text x="310" y="158" font-size="10" style="fill:var(--paper)">~90% from the heroes</text>
+          <text x="300" y="196" font-size="10" style="fill:var(--ink-3)">the bakery's one muffin, Apple's iPhone</text>
+          <text x="300" y="212" font-size="10" style="fill:var(--ink-3)">→ branch out, but never neglect them</text>
+        </g>
+      </svg>
+      <p class="cap">Grede uses Gay and Katie Hendricks's four zones. Most people stay in the Zone of Excellence because the effort feels virtuous, though it isn't the best use of their gifts. She extends the idea to companies: in most healthy businesses, roughly 90% of sales come from 10% of SKUs. A cookie founder who wanted to open an "experiential space" before nailing her core product was leaving her zone of genius.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-old" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Leadership</span></div>
+  <div class="body">
+    <div>
+      <h3>Drop the employee mentality</h3>
+      <p class="idea">When it's your turn to lead, stop looking for a boss. You hold the vision, and the job is to serve the business, not to be liked.</p>
+    </div>
+    <ul class="points">
+      <li>In her twenties, Grede fell apart before every ITB board meeting. Jens diagnosed it: "You have an employee mentality." She was treating the board as six bosses when they were looking to her to lead. Having a boss is a relief because there's someone to blame. Leading means giving that up.</li>
+      <li>From Jim Collins's <em>Good to Great</em> she takes the Level 5 mix of <strong>personal humility and professional ambition</strong>. If something goes wrong, fix it rather than blaming yourself. If it goes right, don't assume it was all you.</li>
+      <li><strong>Know it all → leverage.</strong> Early on she got lost in an investment-review spreadsheet and micromanaged everyone, which was impostor syndrome in disguise. Her breakthroughs: admitting she didn't know everything, then admitting it to others. Creative founders don't have to take the CEO title. She asks herself every time whether she's the best person to run a venture.</li>
+      <li><strong>Every opportunity → a few shared goals.</strong> Choose three priorities and make every team show how its work ladders up to them. New hires see the business with fresh eyes for a few months, so ask them what they notice.</li>
+      <li><strong>Be liked → enterprise mentality.</strong> You can't be a people-pleaser and a good leader. Separate what's good for the business from what's good for individuals. Asked about fear of being "cancelled" by ex-employees, her answer was: don't do anything to be cancelled for.</li>
+      <li><strong>Colleagues are family → care deeply, don't tolerate poor performance.</strong> She hires slowly, fires quickly, hires for values and attitude over experience, and lets people leave with dignity. She has seen female managers take a departure personally.</li>
+      <li><strong>Everyone is watching → nobody is thinking about you much.</strong> Mellody Hobson turned standing out into an asset: "that Mellody with two Ls".</li>
+      <li><strong>DEI is charity → DEI is business.</strong> Size inclusivity was Good American's mission <em>and</em> its business case. Nordstrom went on to tell other brands to extend their size ranges. Giving back from revenue is for already-profitable companies. Consumers rarely "shop their values" on commodity products.</li>
+      <li><strong>Success makes you a target → push through anyway.</strong> When Siete Foods sold to PepsiCo for $1.2 billion, the founders were called sellouts. Florynce Kennedy's term for this is "horizontal hostility". Watch how you police other women.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Three priorities, everything laddering up</h4>
+      <svg viewBox="0 0 560 270" role="img" aria-label="A diagram with the company vision at the top. Below it three priority boxes. Below those, five team boxes: product, marketing, operations, finance, people. Each team has an arrow up to one of the three priorities. A sixth box at the side, an exciting new opportunity, has a dashed arrow with a question: does this align with one of our three? If not, no.">
+        <defs>
+          <marker id="arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--old)"/></marker>
+        </defs>
+        <rect x="150" y="12" width="260" height="40" rx="5" fill="var(--ink)"/>
+        <text x="280" y="37" text-anchor="middle" font-size="13" style="fill:var(--paper)">Vision, held by the leader</text>
+        <g font-size="12">
+          <rect x="60" y="92" width="130" height="36" rx="5" fill="var(--old)"/><text x="125" y="115" text-anchor="middle" style="fill:var(--paper)">Priority 1</text>
+          <rect x="215" y="92" width="130" height="36" rx="5" fill="var(--old)"/><text x="280" y="115" text-anchor="middle" style="fill:var(--paper)">Priority 2</text>
+          <rect x="370" y="92" width="130" height="36" rx="5" fill="var(--old)"/><text x="435" y="115" text-anchor="middle" style="fill:var(--paper)">Priority 3</text>
+        </g>
+        <line x1="125" y1="92" x2="200" y2="54" stroke="var(--ink-3)" stroke-width="1.2"/>
+        <line x1="280" y1="92" x2="280" y2="54" stroke="var(--ink-3)" stroke-width="1.2"/>
+        <line x1="435" y1="92" x2="360" y2="54" stroke="var(--ink-3)" stroke-width="1.2"/>
+        <g font-size="11">
+          <rect x="20" y="190" width="88" height="32" rx="4" fill="var(--card)" stroke="var(--rule)"/><text x="64" y="210" text-anchor="middle">Product</text>
+          <rect x="118" y="190" width="88" height="32" rx="4" fill="var(--card)" stroke="var(--rule)"/><text x="162" y="210" text-anchor="middle">Marketing</text>
+          <rect x="216" y="190" width="88" height="32" rx="4" fill="var(--card)" stroke="var(--rule)"/><text x="260" y="210" text-anchor="middle">Operations</text>
+          <rect x="314" y="190" width="88" height="32" rx="4" fill="var(--card)" stroke="var(--rule)"/><text x="358" y="210" text-anchor="middle">Finance</text>
+          <rect x="412" y="190" width="88" height="32" rx="4" fill="var(--card)" stroke="var(--rule)"/><text x="456" y="210" text-anchor="middle">People</text>
+        </g>
+        <g stroke="var(--old)" stroke-width="1.5" fill="none" marker-end="url(#arr3)">
+          <line x1="64" y1="190" x2="110" y2="132"/>
+          <line x1="162" y1="190" x2="140" y2="132"/>
+          <line x1="260" y1="190" x2="275" y2="132"/>
+          <line x1="358" y1="190" x2="420" y2="132"/>
+          <line x1="456" y1="190" x2="300" y2="132"/>
+        </g>
+        <rect x="430" y="236" width="122" height="28" rx="4" fill="none" stroke="var(--emo)" stroke-dasharray="4 3"/>
+        <text x="491" y="254" text-anchor="middle" font-size="10.5" style="fill:var(--emo)">shiny new idea</text>
+        <text x="20" y="256" font-size="10.5" style="fill:var(--ink-2)">The filter: "Does this align with one of our three priorities?" If not → no.</text>
+      </svg>
+      <p class="cap">Grede stresses this more than anything else in the chapter: if you get company-wide cohesion and alignment right, nothing else matters. Saying no matters as much as saying yes, and sometimes you have to ignore something that's on fire. Her own place in the loop is pulling everything into a coherent identity tied to how the customer feels, then handing it to a team that's better than her at the execution.</p>
+    </div>
+
+    <div class="fig">
+      <h4>Her leadership philosophy in seven lines</h4>
+      <ul class="checks c-old">
+        <li>Paint the vision, keep reinforcing it, and explain how the company will get there.</li>
+        <li>Personal humility, professional ambition. Put long-term success ahead of ego.</li>
+        <li>Build a culture of truth and honest feedback.</li>
+        <li>Know what you don't know and surround yourself with people who do.</li>
+        <li>Hire disciplined, self-motivated people, then let them shine.</li>
+        <li>Make the tough calls, including letting go of people who drag the business down.</li>
+        <li>Be the same person every day, so everyone can predict what you'll do and say.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 4 ============ -->
+<div class="part c-act" id="action">
+  <span class="label partno">Part 4 · Chapter 13</span>
+  <h2><span>Action!</span></h2>
+  <p class="lede">Vision, steady emotions and new thoughts all exist to support one thing: taking the right action, quickly and often.</p>
+  <blockquote>"Risk is a requirement. Playing it safe is the real danger." — the part's epigraph</blockquote>
+</div>
+
+<article class="chapter c-act" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Action!</span></div>
+  <div class="body">
+    <div>
+      <h3>Show up, tell the truth, stay in motion</h3>
+      <p class="idea">Her businesses are not her identity. "You are failing in business if you are not constantly training your team to replace you."</p>
+    </div>
+    <ul class="points">
+      <li>When Good American launched, some of the ITB board felt cheated, even though she'd delivered about a hundred times their investment in her (she started on a £45,000 salary plus equity). After the sale, the buyers didn't keep her on. Jens called it the best thing that ever happened to her. It didn't feel like it then.</li>
+      <li>She names her own <strong>founder's syndrome</strong>, where a founder keeps outsized control after the company is established, and learned to be less attached to her businesses.</li>
+      <li>"Emma, you do so much," people say. She says she doesn't. She makes decisions quickly, and they're often right because she's had a lot of practice and pays close attention.</li>
+      <li>She won't hide the help she has: two nannies at all times, a trainer who comes to the house, no cooking, cleaning or gardening. Pretending otherwise keeps alive the myth that women should do it all gracefully, in full glam.</li>
+    </ul>
+    <div class="principles">
+      <div><span class="n">01</span><b>Do what you say you'll do. Show up.</b><span>Decide what you're going to do with a clear heart and mind.</span></div>
+      <div><span class="n">02</span><b>Your word is king.</b><span>Always tell the truth. It doesn't have to be the "brutal truth". The truth is enough.</span></div>
+      <div><span class="n">03</span><b>Stay in motion.</b><span>Keep learning so you stay in contact with the world.</span></div>
+    </div>
+    <p class="muted" style="font-size:16px;max-width:var(--measure)">These are the East London rules she grew up with. Anyone from her old neighbourhood would recognise them, and they run through every chapter of the book.</p>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue</span>
+    <h2>Her basic rules for success</h2>
+    <p class="lede">The book ends with Grede's own recap of what worked. It doubles as a summary of the whole argument.</p>
+  </div>
+  <div class="epilogue">
+    <ol class="rules">
+      <li>Stopped blaming her circumstances and took complete responsibility for herself.</li>
+      <li>Worked very hard in her twenties, a defining decade.</li>
+      <li>Planned her future in detail (how, when, where, what), focused mostly on how it should feel.</li>
+      <li>Found a really supportive partner.</li>
+      <li>Established her career before having babies.</li>
+      <li>Made selfish professional decisions and left when the time was right. Be most loyal to yourself.</li>
+      <li>Used every job, position and contact to get to the next thing.</li>
+      <li>Moved far away from people who didn't serve her.</li>
+      <li>Learned to call BS, including on herself.</li>
+      <li>Failed up, taking jobs bigger than her experience.</li>
+      <li>Got up after every failure and learned each time.</li>
+      <li>Used crisis and suffering as a chance to change.</li>
+      <li>Put causes like women's rights and economic justice at the centre of her businesses, not in the marketing.</li>
+      <li>Refused to be afraid of anyone.</li>
+      <li>And to this day, she always starts with herself.</li>
+    </ol>
+    <div class="prose">
+      <p><strong>What comes next.</strong> Having spent her career making things as big as possible, Grede says she's done building new brands for now. She wants something small that can still reach millions, a project five people can run from one room, and a bit more space: maybe even a coffee after school drop-off, which she says has happened once.</p>
+      <p>She is also candid that the rules are partly hindsight. One of them, setting up a career before having children, sits uneasily next to her Family chapter, which says there is no right time. Read together, the point is the same: decide deliberately and own the trade-off.</p>
+      <p>Finally, she insists nothing of value is built alone. Other people teach you what you don't know, cover your weaknesses, give you leverage on your time and show you honestly how you come across. Starting with yourself means taking responsibility. It doesn't mean doing everything yourself.</p>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">"We cannot wait for the world to meet our preferences in order to take action."</blockquote>
+        <span class="label">Introduction</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">The book's exercises and prompts</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Grede says this is a book about mindset, not a playbook, but it contains several written exercises she uses herself. Her one instruction for all of them: write it down.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col c-vis">
+      <h3>See it</h3>
+      <div class="tk"><b>The yearly process</b>
+        <ol>
+          <li>Looking at the goals you missed this year, what were the main reasons? Keep asking why, and don't blame outside factors.</li>
+          <li>What three things do you wish you'd done more of last year?</li>
+          <li>What are you avoiding, and what are you scared of doing? What would you do if you didn't care what anyone said?</li>
+          <li>How will you learn and grow in the coming year?</li>
+          <li>Which habits do you want to build, and which boundaries should you set? No more than three of each.</li>
+        </ol>
+      </div>
+      <div class="tk"><b>The decade plan</b><span>Write a vision statement for the next milestone birthday: how you'll spend your time, how it should feel, and concrete money goals. Keep it on your phone, check it every Sunday, and break it into yearly, monthly and weekly steps.</span></div>
+      <div class="tk"><b>The annual trade-off blueprint</b>
+        <ul>
+          <li>What would a great year look like?</li>
+          <li>What am I willing to sacrifice? What am I not?</li>
+          <li>What progress do I want to make, and where?</li>
+          <li>What gives?</li>
+          <li>How do I want to look back on this year in twelve months?</li>
+          <li>What is important to my kids?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col c-emo">
+      <h3>Steady it</h3>
+      <div class="tk"><b>Breathe before you speak</b><span>When anger floods in, close your eyes and breathe until you're back in your body. Then be direct. Never punch down.</span></div>
+      <div class="tk"><b>Walk through the doorway</b><span>Treat a twinge of fear as a pointer toward something important. Move through it fast. Forward motion beats perfection.</span></div>
+      <div class="tk"><b>Audit your guilt</b><span>Before giving guilt any attention, check whether it reflects your own values or someone else's expectations.</span></div>
+      <div class="tk"><b>Check the thirds</b><span>About a third good, a third all right, a third rough is normal when you're stretching. If it's all good, push harder. If it's all rough, journal, rest and call your old friends.</span></div>
+      <div class="tk"><b>Morning mirror talk</b><span>Before the day starts, tell yourself what you want, what you like about yourself, and what you've already achieved. A journal or the drive to work will do if the mirror feels corny.</span></div>
+      <div class="tk"><b>Count what's left</b><span>Turn open-ended time into a number: visits with ageing parents, summers with kids at home. Then plan for them.</span></div>
+    </div>
+    <div class="col c-old">
+      <h3>Rethink &amp; act</h3>
+      <div class="tk"><b>Name the old thought</b><span>When you feel stuck, write the belief down as an Old Thought and draft the New Thought you'd rather act on. Use the <a href="#old-thoughts">table above</a> as a starting list.</span></div>
+      <div class="tk"><b>Negotiate in three moves</b><span>Assume you're underpaid. Ask, then stop talking. Never take the first offer. Look at comps first, and if none exist, assume you're worth more until your belief catches up.</span></div>
+      <div class="tk"><b>Swap "can't" for "won't"</b><span>"I won't." "I don't want to." "I'm saying no to everything right now, ask me again in the new year." Practise on friends before trying it with someone powerful.</span></div>
+      <div class="tk"><b>The blank page after every chapter</b>
+        <ul>
+          <li>What was wrong with the last company?</li>
+          <li>What are you optimising for?</li>
+          <li>What lessons carry forward? What will you never do again?</li>
+          <li>What was magical? What did you nail? Where did you fail?</li>
+          <li>What's the ultimate ambition, and what does success look like?</li>
+          <li>When is enough enough?</li>
+        </ul>
+      </div>
+      <div class="tk"><b>Know your zones</b><span>Do you really know what you don't know? What are you good at but don't enjoy? What are you bad at? Which skills are missing from your team? Hire for those.</span></div>
+      <div class="tk"><b>The three-priority filter</b><span>Before chasing any new opportunity, ask whether it serves one of your three priorities. If not, the answer is no.</span></div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <p>A summary in my own words of Emma Grede, <em>Start With Yourself: A New Vision for Work &amp; Life</em> (Avid Reader Press, 2026). Figures and quotes are as given in the book. Diagrams were drawn for this page to illustrate the book's ideas. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero: ripples spreading from one point across linen --- */
+  var canvas = document.getElementById("ripple");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    /* linen weave */
+    ctx.strokeStyle = css("--linen");
+    ctx.lineWidth = 1;
+    ctx.globalAlpha = 0.35;
+    ctx.beginPath();
+    for (var y = 4; y < hgt; y += 6) { ctx.moveTo(0, y + 0.5); ctx.lineTo(w, y + 0.5); }
+    ctx.stroke();
+    ctx.globalAlpha = 0.15;
+    ctx.beginPath();
+    for (var x = 3; x < w; x += 6) { ctx.moveTo(x + 0.5, 0); ctx.lineTo(x + 0.5, hgt); }
+    ctx.stroke();
+    /* ripples from "you" */
+    var cx = 14, cy = hgt / 2;
+    var cols = [css("--vis"), css("--emo"), css("--old"), css("--act")];
+    var gap = 70, maxR = w + 40;
+    var t = reduce ? 0 : (time * 0.028) % gap;
+    for (var i = 0, r = t + 18; r < maxR; r += gap, i++) {
+      var fade = 1 - r / maxR;
+      ctx.globalAlpha = Math.max(0, 0.9 * fade + 0.08);
+      ctx.strokeStyle = cols[i % 4];
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, -Math.PI / 2, Math.PI / 2);
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = css("--ink");
+    ctx.beginPath(); ctx.arc(cx, cy, 7, 0, Math.PI * 2); ctx.fill();
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
