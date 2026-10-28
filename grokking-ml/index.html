@@ -1,0 +1,1375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Grokking Machine Learning by Luis Serrano – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: black ink on white paper with a red accent.
+   In the diagrams, red = the positive class (happy, spam, sick), blue = the negative class. */
+:root {
+  --paper: #f6f4f0;
+  --paper-2: #ebe8e2;
+  --card: #ffffff;
+  --ink: #141414;
+  --ink-2: #4a4846;
+  --ink-3: #78756f;
+  --rule: #dcd8d1;
+
+  --red: #c8202b;
+  --blue: #2a5aa8;
+  --gold: #a86b12;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #121212;
+    --paper-2: #1c1b1a;
+    --card: #1f1e1c;
+    --ink: #f0eeea;
+    --ink-2: #b9b5ae;
+    --ink-3: #8a867f;
+    --rule: #33312e;
+    --red: #ff5c61;
+    --blue: #7aa7ff;
+    --gold: #e6ad4a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #121212;
+  --paper-2: #1c1b1a;
+  --card: #1f1e1c;
+  --ink: #f0eeea;
+  --ink-2: #b9b5ae;
+  --ink-3: #8a867f;
+  --rule: #33312e;
+  --red: #ff5c61;
+  --blue: #7aa7ff;
+  --gold: #e6ad4a;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+code, .mono { font-family: var(--mono); font-size: .86em; }
+
+.c-red  { --c: var(--red); }
+.c-blue { --c: var(--blue); }
+.c-gold { --c: var(--gold); }
+.c-ink  { --c: var(--ink); }
+.tint { background: color-mix(in srgb, var(--c) 10%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, .6fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(50px, 9.6vw, 132px);
+  font-weight: 900;
+  font-stretch: 118%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.03em;
+}
+.hero h1 span { display: block; }
+.hero h1 .red { color: var(--red); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 24px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 600 / 752;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(20, 16, 16, .35), 0 8px 18px -10px rgba(20, 16, 16, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.splitband { position: relative; margin-top: 28px; }
+.splitband canvas { display: block; width: 100%; height: 140px; }
+.splitband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(40px, 6vw, 76px);
+  font-weight: 900;
+  font-stretch: 122%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; min-width: 0; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--red);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg.narrow { max-width: 520px; margin-inline: auto; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-red { fill: var(--red); }
+.fig svg .t-blue { fill: var(--blue); }
+.fig svg .t-gold { fill: var(--gold); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 12px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink-3)); border-radius: 2px; }
+.track + .track { margin-top: 3px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats.s3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stats.s2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.stats.s4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat .big.red { color: var(--red); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+/* two-up layout */
+.duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three kinds of learning */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.kind { border-radius: 6px; padding: 16px; display: grid; gap: 6px; align-content: start; border: 1px solid color-mix(in srgb, var(--c) 35%, var(--rule)); }
+.kind b { font-family: var(--display); font-weight: 800; font-stretch: 108%; font-size: 19px; color: var(--c); }
+.kind span { font-size: 14.5px; line-height: 1.4; color: var(--ink-2); }
+.kind .mono { font-size: 12px; color: var(--ink); }
+
+/* confusion matrix */
+.cm { display: grid; grid-template-columns: 92px repeat(2, minmax(0, 1fr)); gap: 6px; }
+.cm .ax { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; }
+.cm .ax.top { justify-content: center; text-align: center; }
+.cm .ax.side { justify-content: flex-end; text-align: right; padding-right: 6px; }
+.cm .cell { border-radius: 6px; padding: 14px; display: grid; gap: 2px; align-content: start; min-height: 96px; background: var(--paper-2); }
+.cm .cell b { font-family: var(--display); font-weight: 850; font-size: 32px; line-height: 1; font-variant-numeric: tabular-nums; }
+.cm .cell span { font-size: 13.5px; color: var(--ink-2); line-height: 1.35; }
+.cm .cell.ok { background: color-mix(in srgb, var(--blue) 12%, var(--card)); }
+.cm .cell.bad { background: color-mix(in srgb, var(--red) 13%, var(--card)); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--red) 55%, transparent); }
+.cm .cell.bad b { color: var(--red); }
+
+/* metric definitions */
+.defs { display: grid; gap: 0; }
+.defs div { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 14px; padding: 10px 0; border-top: 1px solid var(--rule); }
+.defs div:first-child { border-top: 0; }
+.defs b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16px; }
+.defs span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 7px 13px; border-radius: 999px; border: 1.5px solid var(--ink); }
+
+/* model table */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.mt { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 880px; font-size: 15px; line-height: 1.42; }
+table.mt th, table.mt td { text-align: left; vertical-align: top; padding: 13px 16px; border-bottom: 1px solid var(--rule); }
+table.mt thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.mt tbody th { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16px; width: 170px; }
+table.mt tbody th small { display: block; font-family: var(--mono); font-weight: 400; font-size: 11.5px; color: var(--ink-3); margin-top: 2px; }
+table.mt tbody td { color: var(--ink-2); }
+table.mt tbody tr:last-child th, table.mt tbody tr:last-child td { border-bottom: 0; }
+table.mt tbody tr:hover td, table.mt tbody tr:hover th { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* recipe (the three moves) */
+.recipe { display: grid; gap: 10px; }
+.move { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; padding: 12px 0; border-top: 1px solid var(--rule); }
+.move:first-child { border-top: 0; }
+.move i { font-style: normal; font-family: var(--display); font-weight: 900; font-stretch: 62%; font-size: 40px; line-height: .9; color: var(--red); }
+.move b { font-family: var(--display); font-weight: 750; font-stretch: 100%; display: block; font-size: 17px; }
+.move span { font-size: 15px; color: var(--ink-2); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.check { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.check li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; font-size: 15.5px; line-height: 1.45; }
+.check li::before { content: ""; width: 14px; height: 14px; margin-top: 4px; border: 1.5px solid var(--ink); border-radius: 3px; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 220px; order: -1; transform: rotate(-1.2deg); }
+  .duo, .epilogue, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+  .stats.s4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .hero h1 { font-stretch: 105%; }
+  .kinds, .compare, .stats.s3, .stats.s2 { grid-template-columns: minmax(0, 1fr); }
+  .cm { grid-template-columns: 26px repeat(2, minmax(0, 1fr)); }
+  .cm .ax.side { writing-mode: vertical-rl; transform: rotate(180deg); justify-content: center; padding: 0; }
+  .cm .cell { padding: 10px; min-height: 84px; }
+  .cm .cell b { font-size: 26px; }
+  .defs div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Luis G. Serrano · Manning, 2021</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#foundations">Foundations</a>
+    <a href="#classifiers">Classifiers</a>
+    <a href="#power">More power</a>
+    <a href="#closing">The pattern</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span class="red">Grokking</span><span>Machine</span><span>Learning</span></h1>
+    <p class="sub">Common sense, except done by a computer</p>
+    <p class="dek">Luis Serrano teaches the core models of machine learning with pictures, small stories and arithmetic, not walls of formulas. Under the math there is a melody, and it's simpler than it looks.</p>
+    <div class="byline label">
+      <span>13 chapters</span><span>3 appendices</span><span>~12 models</span><span>~150,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Grokking Machine Learning by Luis G. Serrano: a black-and-white ink drawing of rabbit-like students seated in rows, one in a suit standing at the back, under the word grokking in red and a black title bar">
+</div>
+
+<div class="splitband" aria-hidden="true">
+  <canvas id="split"></canvas>
+  <div class="ends label"><span>A random line</span><span>Nudged, point by point, until it splits them</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Every model is a rule you could have guessed yourself</h2>
+  </div>
+  <div class="duo">
+    <div class="prose">
+      <p>Serrano's claim is that machine learning isn't hard. You need some arithmetic, a visual imagination and curiosity. Most books show either a sea of formulas or a sea of code. He compares that to studying music only as scores and scales. There's a melody underneath, and the book tries to let you hear it.</p>
+      <p>Humans decide in two ways: by reasoning, or by drawing on experience. Machine learning is the second way, done by a computer. The computer's experience is <strong>data</strong>. Artificial intelligence is any task where a computer makes decisions. Machine learning is the part where it decides from data. Deep learning is the part of that which uses neural networks. In his transport analogy, AI is vehicles, ML is cars and deep learning is Ferraris.</p>
+      <p>Every model in the book is built the same way. You start with a simple guess, measure how wrong it is with an <strong>error function</strong>, and nudge it a little to make it less wrong. Then you repeat. Lines that move toward points, trees that ask one more question, networks that adjust their weights: all of them follow this loop.</p>
+    </div>
+    <div class="fig">
+      <span class="label">How people (and machines) decide from experience</span>
+      <div class="stats s3" style="border:0;border-radius:0">
+        <div class="stat"><span class="big red">1</span><p><strong>Remember.</strong> Look at past situations that were similar. For the computer, that's the dataset.</p></div>
+        <div class="stat"><span class="big red">2</span><p><strong>Formulate.</strong> Build a general rule (a <em>model</em>) that fits those situations.</p></div>
+        <div class="stat"><span class="big red">3</span><p><strong>Predict.</strong> Use the rule on something new.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--red)">
+        <span class="label">The running example: Bob's emails</span>
+        <p>Six of Bob's last ten emails were spam, so model 1 says that a new email is 60% likely to be spam. Then you notice weekday emails are work and weekend ones are chain letters, so model 2 says weekend means spam. That rule makes you miss his weekend birthday invitation. Model 3 uses size instead: anything 10 KB or larger is spam. Combine features with weights ("day number plus size, 12 or more is spam") and you've built a classifier by hand. The computer simply tries many more rules, much faster.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part 1 · Chapters 1–4</span>
+      <h3>Foundations</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>What is machine learning?</b>Common sense, done by a computer</a></li>
+        <li><span>02</span><a href="#ch2"><b>Types of machine learning</b>Labels, no labels, rewards</a></li>
+        <li><span>03</span><a href="#ch3"><b>Linear regression</b>Draw a line close to the points</a></li>
+        <li><span>04</span><a href="#ch4"><b>Under- and overfitting</b>Testing, validation, regularisation</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 2 · Chapters 5–8</span>
+      <h3>Classifiers</h3>
+      <ol>
+        <li><span>05</span><a href="#ch5"><b>The perceptron</b>A line that splits points</a></li>
+        <li><span>06</span><a href="#ch6"><b>Logistic classifiers</b>From yes/no to probabilities</a></li>
+        <li><span>07</span><a href="#ch7"><b>Measuring classifiers</b>Accuracy and its friends</a></li>
+        <li><span>08</span><a href="#ch8"><b>Naive Bayes</b>Probability, used to the full</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 3 · Chapters 9–13</span>
+      <h3>More power</h3>
+      <ol>
+        <li><span>09</span><a href="#ch9"><b>Decision trees</b>Split data by asking questions</a></li>
+        <li><span>10</span><a href="#ch10"><b>Neural networks</b>Perceptrons stacked in layers</a></li>
+        <li><span>11</span><a href="#ch11"><b>SVMs and kernels</b>Boundaries with style</a></li>
+        <li><span>12</span><a href="#ch12"><b>Ensemble learning</b>Many weak models, one strong one</a></li>
+        <li><span>13</span><a href="#ch13"><b>Putting it into practice</b>Titanic, from raw data to the best model</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="foundations">
+  <span class="label partno">Part 1 · Chapters 1–4</span>
+  <h2>Foundations</h2>
+  <p class="lede">What learning from data means, which kinds of problems exist, the first real algorithm (a line fitted to points), and the trap every model can fall into: memorising instead of learning.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">What is ML?</span></div>
+  <div class="body">
+    <div>
+      <h3>Common sense, except done by a computer</h3>
+      <p class="idea">You don't need heavy math or code. You need to spot patterns, then let a computer test far more rules than you could.</p>
+    </div>
+    <ul class="points">
+      <li>A program is a list of instructions a person writes. Some tasks, like recognising an apple in a photo, are too hard to spell out. People learn "apple" by seeing many apples and hearing the word. Machine learning does the same thing: show many labelled examples until the pattern clicks.</li>
+      <li>A <strong>model</strong> is the rule used to make predictions. An <strong>algorithm</strong> is the procedure that builds the model. The two are easy to mix up, but the book keeps them apart.</li>
+      <li>A <strong>feature</strong> is any property of the data the model can use, such as day of the week, size or the count of a word. Picking and combining features is half the job.</li>
+      <li>The best rule isn't the one that fits the old data best. It's the one that <em>generalises</em> best to new data. This idea comes back in every chapter.</li>
+      <li>Formulas get the same treatment. Whenever Serrano sees a sum sign or a conditional probability, he pictures a small concrete example first, and he teaches it that way.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Types of ML</span></div>
+  <div class="body">
+    <div>
+      <h3>Labels, no labels, or rewards</h3>
+      <p class="idea">Whether your data comes with the answer attached decides which family of methods you use.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Labelled data</strong> has a column you want to predict, like the price or "spam or not". <strong>Unlabelled data</strong> has only features.</li>
+      <li>Supervised learning splits again. <strong>Regression</strong> predicts a number (house prices, stock prices, minutes watched). <strong>Classification</strong> predicts a category (spam/ham, dog/cat, sick/healthy).</li>
+      <li>Unsupervised learning simplifies data without losing much information. <strong>Clustering</strong> groups similar rows, for example in market segmentation. <strong>Dimensionality reduction</strong> merges related features, such as collapsing size, rooms and bathrooms into one "size" feature. Matrix factorisation shrinks rows and columns at once. Generative models make new data that looks like the training data.</li>
+      <li>Reinforcement learning has no dataset. An agent moves through an environment and collects rewards and penalties. In the book's grid world, a robot learns to reach the treasure, avoid the dragon and go around the mountain.</li>
+      <li>The rest of the book covers supervised learning only, because it's the natural place to start and the most widely used.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three families of machine learning</h4>
+      <div class="kinds">
+        <div class="kind tint c-red"><b>Supervised</b><span>Learn from examples with the answer attached, then predict the answer for new rows.</span><span class="mono">regression · classification</span></div>
+        <div class="kind tint c-blue"><b>Unsupervised</b><span>No answers. Find structure, such as groups or fewer and simpler features.</span><span class="mono">clustering · dimensionality reduction · generation</span></div>
+        <div class="kind tint c-gold"><b>Reinforcement</b><span>No data, only an environment. Act, collect rewards, and learn which moves pay off.</span><span class="mono">games · robots · self-driving</span></div>
+      </div>
+      <p class="cap">Unsupervised methods are often a first step before supervised learning, for example to clean up or compress the features.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Linear regression</span></div>
+  <div class="body">
+    <div>
+      <h3>Draw a line as close to the points as you can</h3>
+      <p class="idea">Think of a road through a town where everyone wants to live near the road. Start anywhere, then nudge the road toward one house at a time.</p>
+    </div>
+    <ul class="points">
+      <li>Houses with 1, 2, 3, 5, 6 and 7 rooms cost $150, $200, $250, $350, $400 and $450. You'd guess $300 for the four-room house without thinking, and in doing so you just did linear regression: price = 100 + 50 × rooms. The 50 is the <strong>weight</strong> of the feature (price per room) and the 100 is the <strong>bias</strong> (base price). On a plot these are the slope and the y-intercept.</li>
+      <li>With more features nothing new happens: each feature gets its own weight, and you add them up plus the bias. With two features the line becomes a plane, and with more it becomes a hyperplane.</li>
+      <li>To fit the line, start with random weights, pick a random point and move the line slightly toward it. The <strong>square trick</strong> handles every case at once. Add η × (price − prediction) to the bias and η × rooms × (price − prediction) to the slope. The small number η is the <strong>learning rate</strong>. Each pass over the data is an <strong>epoch</strong>. With η = 0.01 and 10,000 epochs, the line is already good after about 50.</li>
+      <li>To measure a line, use an error function: the <strong>absolute error</strong> (sum of the vertical distances) or the <strong>square error</strong> (sum of their squares). In practice people use the means (MAE, MSE) or RMSE, which is back in the label's units.</li>
+      <li>Gradient descent is how you lower any error. You're on top of "Mount Errorest" in thick fog, so you take the step that goes down the most, then repeat. The square trick is gradient descent on the square error.</li>
+      <li>For curved data, use <strong>polynomial regression</strong>. Add columns for x², x³ and so on, then run the same linear algorithm. The degree is a <strong>hyperparameter</strong>, a setting you choose before training. Weights and biases are <strong>parameters</strong>, which the model learns.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The fit and its error</h4>
+        <svg viewBox="0 0 400 260" role="img" aria-label="Scatter plot of six houses, number of rooms against price. The line price equals 100 plus 50 times rooms passes close to all of them. Short vertical segments from each point to the line show the error. A hollow marker on the line at four rooms shows the prediction of 300 dollars.">
+          <line x1="50" y1="220" x2="384" y2="220" stroke="var(--ink-3)" stroke-width="1"/>
+          <line x1="50" y1="220" x2="50" y2="16" stroke="var(--ink-3)" stroke-width="1"/>
+          <g stroke="var(--rule)" stroke-width="1">
+            <line x1="50" y1="140" x2="384" y2="140"/><line x1="50" y1="60" x2="384" y2="60"/>
+          </g>
+          <text x="44" y="224" text-anchor="end" font-size="11">0</text>
+          <text x="44" y="144" text-anchor="end" font-size="11">200</text>
+          <text x="44" y="64" text-anchor="end" font-size="11">400</text>
+          <g font-size="11" text-anchor="middle">
+            <text x="91" y="236">1</text><text x="133" y="236">2</text><text x="174" y="236">3</text><text x="215" y="236">4</text><text x="256" y="236">5</text><text x="298" y="236">6</text><text x="339" y="236">7</text>
+          </g>
+          <text x="217" y="254" text-anchor="middle" font-size="11">rooms</text>
+          <text x="56" y="14" font-size="11">price ($)</text>
+          <line x1="50" y1="160" x2="380" y2="22" stroke="var(--ink)" stroke-width="2.2"/>
+          <g stroke="var(--red)" stroke-width="2">
+            <line x1="91" y1="158" x2="91" y2="143"/>
+            <line x1="133" y1="141" x2="133" y2="125"/>
+            <line x1="174" y1="122" x2="174" y2="108"/>
+            <line x1="256" y1="78" x2="256" y2="74"/>
+            <line x1="298" y1="57" x2="298" y2="56"/>
+            <line x1="339" y1="41" x2="339" y2="39"/>
+          </g>
+          <g fill="var(--blue)">
+            <circle cx="91" cy="158" r="5"/><circle cx="133" cy="141" r="5"/><circle cx="174" cy="122" r="5"/>
+            <circle cx="256" cy="78" r="5"/><circle cx="298" cy="57" r="5"/><circle cx="339" cy="41" r="5"/>
+          </g>
+          <circle cx="215" cy="100" r="6" fill="var(--card)" stroke="var(--red)" stroke-width="2.2"/>
+          <line x1="215" y1="108" x2="215" y2="220" stroke="var(--red)" stroke-width="1" stroke-dasharray="3 3"/>
+          <text x="205" y="84" font-size="11" text-anchor="end" class="t-red">4 rooms → $300</text>
+          <text x="290" y="160" font-size="11" class="t-ink">y = 100 + 50x</text>
+          <text x="290" y="175" font-size="10.5">bias 100,</text><text x="290" y="189" font-size="10.5">weight 50</text>
+        </svg>
+        <p class="cap">The red segments are the errors. The absolute error adds up their lengths and the square error adds up their squares. Training moves the line to make that total small.</p>
+      </div>
+      <div class="fig">
+        <h4>One step of the square trick</h4>
+        <svg viewBox="0 0 340 260" role="img" aria-label="A dashed line sits below a red point. After one step of the square trick the solid line has shifted up and tilted toward the point. The step size is the learning rate times the gap between the true price and the predicted price.">
+          <line x1="30" y1="220" x2="326" y2="220" stroke="var(--ink-3)" stroke-width="1"/>
+          <line x1="30" y1="220" x2="30" y2="20" stroke="var(--ink-3)" stroke-width="1"/>
+          <line x1="30" y1="190" x2="320" y2="122" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="6 5"/>
+          <line x1="30" y1="182" x2="320" y2="92" stroke="var(--ink)" stroke-width="2.4"/>
+          <circle cx="250" cy="62" r="6" fill="var(--red)"/>
+          <line x1="250" y1="69" x2="250" y2="135" stroke="var(--red)" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <path d="M262 133 L262 118" stroke="var(--ink)" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink)"/></marker></defs>
+          <text x="232" y="50" font-size="11" class="t-red">house: real price</text>
+          <text x="242" y="104" font-size="10.5" text-anchor="end">gap = price − prediction</text>
+          <text x="40" y="208" font-size="10.5">before</text>
+          <text x="40" y="164" font-size="10.5" class="t-ink">after</text>
+          <text x="30" y="246" font-size="10.5">bias  += η × gap</text>
+          <text x="186" y="246" font-size="10.5">slope += η × rooms × gap</text>
+        </svg>
+        <p class="cap">A point above the line raises the line, and a point below lowers it. Points far to the right tilt it more, because their gap is multiplied by the number of rooms. The learning rate η keeps every step small.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The real-world run</span>
+      <p>On 6,207 houses from Hyderabad, India, with 39 features each, Turi Create trains a linear regression model in one line of code. The RMSE is around 3,000,000 rupees. That sounds large, but much of it comes from outliers. A model that uses only floor area gives a single line whose slope is the price per unit of area.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Under- &amp; overfitting</span></div>
+  <div class="body">
+    <div>
+      <h3>Don't bring a fly swatter to Godzilla, or a bazooka to a fly</h3>
+      <p class="idea">Simple models underfit and complex models overfit. Data the model hasn't seen tells you which one you have.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Underfitting</strong> is like not studying enough for an exam. <strong>Overfitting</strong> is like memorising the textbook word for word and then failing the questions that are phrased differently.</li>
+      <li>On data shaped like a downward parabola, a line (degree 1) underfits, a parabola (degree 2) fits well, and a degree-10 polynomial passes through every point with wild swings. That last one has zero training error, so the training error alone would pick the wrong model.</li>
+      <li>Keep a <strong>testing set</strong> aside. High training and high testing error means underfitting. Low training but high testing error means overfitting. Low on both means a good model.</li>
+      <li>The golden rule: <em>"Thou shalt never use your testing data for training."</em> Choosing the degree by looking at test error already breaks it. The fix is a third <strong>validation set</strong> for decisions, with the test set used once at the very end. Common splits are 60/20/20 or 80/10/10.</li>
+      <li><strong>Regularisation</strong> fights overfitting without trying many models. It adds a complexity penalty to the error. The <strong>L1 norm</strong> (sum of absolute weights) gives lasso regression and pushes many weights to exactly zero, which suits data with many features. The <strong>L2 norm</strong> (sum of squares) gives ridge regression and makes all weights small without zeroing them. The parameter λ sets how much complexity counts.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Three models on the same data, and the graph that picks between them</h4>
+      <svg class="narrow" viewBox="0 0 420 128" role="img" aria-label="Three small panels with the same ten points shaped like an upside-down U. Left: a flat line misses the shape (underfitting). Middle: a parabola follows it (good fit). Right: a wiggly degree-10 curve passes through every point but swings wildly between them (overfitting).">
+          <g transform="translate(4,6)">
+            <rect x="0" y="0" width="128" height="92" rx="4" fill="var(--paper-2)"/>
+            <line x1="4" y1="43" x2="124" y2="41" stroke="var(--ink)" stroke-width="2"/>
+            <g fill="var(--blue)"><circle cx="8" cy="61" r="3.2"/><circle cx="20" cy="51" r="3.2"/><circle cx="31" cy="39" r="3.2"/><circle cx="42" cy="35" r="3.2"/><circle cx="54" cy="32" r="3.2"/><circle cx="66" cy="25" r="3.2"/><circle cx="77" cy="28" r="3.2"/><circle cx="88" cy="44" r="3.2"/><circle cx="100" cy="47" r="3.2"/><circle cx="112" cy="60" r="3.2"/></g>
+            <text x="64" y="110" text-anchor="middle" font-size="11">degree 1</text>
+            <text x="64" y="122" text-anchor="middle" font-size="10.5" class="t-red">underfits</text>
+          </g>
+          <g transform="translate(146,6)">
+            <rect x="0" y="0" width="128" height="92" rx="4" fill="var(--paper-2)"/>
+            <path d="M2.0,72.1 C3.3,70.3 7.3,64.6 10.0,61.2 C12.7,57.9 15.3,54.8 18.0,52.0 C20.7,49.2 23.3,46.7 26.0,44.5 C28.7,42.2 31.3,40.2 34.0,38.5 C36.7,36.7 39.3,35.2 42.0,34.0 C44.7,32.8 47.3,31.9 50.0,31.2 C52.7,30.6 55.3,30.2 58.0,30.1 C60.7,29.9 63.3,30.0 66.0,30.4 C68.7,30.9 71.3,31.5 74.0,32.5 C76.7,33.4 79.3,34.6 82.0,36.0 C84.7,37.5 87.3,39.2 90.0,41.2 C92.7,43.2 95.3,45.5 98.0,48.0 C100.7,50.6 103.3,53.4 106.0,56.5 C108.7,59.5 112.7,64.8 114.0,66.5" fill="none" stroke="var(--ink)" stroke-width="2"/>
+            <g fill="var(--blue)"><circle cx="8" cy="61" r="3.2"/><circle cx="20" cy="51" r="3.2"/><circle cx="31" cy="39" r="3.2"/><circle cx="42" cy="35" r="3.2"/><circle cx="54" cy="32" r="3.2"/><circle cx="66" cy="25" r="3.2"/><circle cx="77" cy="28" r="3.2"/><circle cx="88" cy="44" r="3.2"/><circle cx="100" cy="47" r="3.2"/><circle cx="112" cy="60" r="3.2"/></g>
+            <text x="64" y="110" text-anchor="middle" font-size="11">degree 2</text>
+            <text x="64" y="122" text-anchor="middle" font-size="10.5" class="t-ink">just right</text>
+          </g>
+          <g transform="translate(288,6)">
+            <rect x="0" y="0" width="128" height="92" rx="4" fill="var(--paper-2)"/>
+            <path d="M8.0,60.7 C9.0,62.2 11.8,71.4 13.8,69.8 C15.7,68.2 17.6,57.5 19.5,51.0 C21.4,44.6 23.3,33.0 25.2,31.0 C27.2,29.0 29.1,35.6 31.0,39.0 C32.9,42.3 34.8,51.7 36.8,51.0 C38.7,50.4 40.6,40.3 42.5,35.1 C44.4,29.8 46.3,20.0 48.2,19.5 C50.2,19.0 52.1,28.1 54.0,32.0 C55.9,35.8 57.8,43.7 59.8,42.6 C61.7,41.4 63.6,30.2 65.5,25.2 C67.4,20.1 69.3,12.0 71.2,12.5 C73.2,12.9 75.1,21.5 77.0,27.8 C78.9,34.0 80.8,47.2 82.8,50.0 C84.7,52.7 86.6,47.3 88.5,44.2 C90.4,41.1 92.3,31.2 94.2,31.7 C96.2,32.1 98.1,41.1 100.0,47.1 C101.9,53.1 103.8,65.4 105.8,67.5 C107.7,69.7 110.5,61.2 111.5,60.0" fill="none" stroke="var(--ink)" stroke-width="2"/>
+            <g fill="var(--blue)"><circle cx="8" cy="61" r="3.2"/><circle cx="20" cy="51" r="3.2"/><circle cx="31" cy="39" r="3.2"/><circle cx="42" cy="35" r="3.2"/><circle cx="54" cy="32" r="3.2"/><circle cx="66" cy="25" r="3.2"/><circle cx="77" cy="28" r="3.2"/><circle cx="88" cy="44" r="3.2"/><circle cx="100" cy="47" r="3.2"/><circle cx="112" cy="60" r="3.2"/></g>
+            <text x="64" y="110" text-anchor="middle" font-size="11">degree 10</text>
+            <text x="64" y="122" text-anchor="middle" font-size="10.5" class="t-red">overfits</text>
+          </g>
+      </svg>
+      <svg class="narrow" viewBox="0 0 420 270" role="img" aria-label="Model complexity graph. Horizontal axis: polynomial degree from 0 to 10. The training error falls steadily as the degree grows. The validation error falls until degree 4, then rises again. The left region is labelled underfitting, the right region overfitting, and degree 4 is marked as the best model.">
+        <rect x="50" y="20" width="96" height="200" fill="color-mix(in srgb, var(--blue) 7%, transparent)"/>
+        <rect x="210" y="20" width="160" height="200" fill="color-mix(in srgb, var(--red) 7%, transparent)"/>
+        <line x1="50" y1="220" x2="374" y2="220" stroke="var(--ink-3)"/>
+        <line x1="50" y1="220" x2="50" y2="18" stroke="var(--ink-3)"/>
+        <g font-size="11" text-anchor="middle">
+          <text x="50" y="236">0</text><text x="114" y="236">2</text><text x="178" y="236">4</text><text x="242" y="236">6</text><text x="306" y="236">8</text><text x="370" y="236">10</text>
+        </g>
+        <text x="210" y="256" text-anchor="middle" font-size="11">model complexity (polynomial degree)</text>
+        <text x="44" y="24" text-anchor="end" font-size="11">error</text>
+        <text x="98" y="36" text-anchor="middle" font-size="11" class="t-blue">underfitting</text>
+        <text x="290" y="36" text-anchor="middle" font-size="11" class="t-red">overfitting</text>
+        <polyline fill="none" stroke="var(--ink-3)" stroke-width="2.2" stroke-dasharray="5 4" points="50,40 82,80 114,120 146,150 178,168 210,180 242,190 274,198 306,204 338,210 370,214"/>
+        <polyline fill="none" stroke="var(--red)" stroke-width="2.6" points="50,30 82,68 114,108 146,136 178,152 210,148 242,134 274,116 306,94 338,70 370,44"/>
+        <g fill="var(--ink-3)"><circle cx="50" cy="40" r="3"/><circle cx="82" cy="80" r="3"/><circle cx="114" cy="120" r="3"/><circle cx="146" cy="150" r="3"/><circle cx="178" cy="168" r="3"/><circle cx="210" cy="180" r="3"/><circle cx="242" cy="190" r="3"/><circle cx="274" cy="198" r="3"/><circle cx="306" cy="204" r="3"/><circle cx="338" cy="210" r="3"/><circle cx="370" cy="214" r="3"/></g>
+        <g fill="var(--red)"><circle cx="50" cy="30" r="3.4"/><circle cx="82" cy="68" r="3.4"/><circle cx="114" cy="108" r="3.4"/><circle cx="146" cy="136" r="3.4"/><circle cx="210" cy="148" r="3.4"/><circle cx="242" cy="134" r="3.4"/><circle cx="274" cy="116" r="3.4"/><circle cx="306" cy="94" r="3.4"/><circle cx="338" cy="70" r="3.4"/><circle cx="370" cy="44" r="3.4"/></g>
+        <circle cx="178" cy="152" r="6.5" fill="var(--card)" stroke="var(--red)" stroke-width="2.6"/>
+        <line x1="178" y1="160" x2="178" y2="220" stroke="var(--ink)" stroke-dasharray="3 3"/>
+        <text x="178" y="72" text-anchor="middle" font-size="11" class="t-ink">best: degree 4</text>
+        <line x1="178" y1="78" x2="178" y2="142" stroke="var(--ink)" stroke-width="1"/>
+        <text x="300" y="160" text-anchor="end" font-size="11" class="t-red">validation error</text>
+        <text x="58" y="206" font-size="11">training error</text>
+      </svg>
+      <p class="cap">Training error always falls as the model gets more complex. Validation error falls, bottoms out and rises again. Pick the bottom, or a slightly simpler model whose error is nearly as low. The book's example lands on degree 4. The curves here are illustrative.</p>
+    </div>
+
+    <div class="fig">
+      <h4>The roofer analogy for regularisation</h4>
+      <div class="stats s3" style="border:0;border-radius:0">
+        <div class="stat"><span class="label">Roofer 1 · bandage</span><span class="big num">1,001</span><p>Leaks 1,000 mL, costs $1. Cheap but useless: <strong>underfits</strong>.</p></div>
+        <div class="stat"><span class="label">Roofer 2 · shingles</span><span class="big num red">101</span><p>Leaks 1 mL, costs $100. The <strong>best total</strong>.</p></div>
+        <div class="stat"><span class="label">Roofer 3 · titanium</span><span class="big num">100,000</span><p>Leaks nothing, costs $100,000: <strong>overfits</strong>.</p></div>
+      </div>
+      <p class="cap">Judged by leaks alone, roofer 3 wins. Add leaks (the error) to price (the complexity) and roofer 2 wins. Regularised error works the same way: error + λ × complexity.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="classifiers">
+  <span class="label partno">Part 2 · Chapters 5–8</span>
+  <h2>Classifiers</h2>
+  <p class="lede">The answer is now a category, not a number. A line splits the points, a sigmoid turns the split into probabilities, a confusion matrix shows which mistakes the model makes, and Bayes' theorem gives a model built from counting.</p>
+</div>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">The perceptron</span></div>
+  <div class="body">
+    <div>
+      <h3>Use a line to split the points</h3>
+      <p class="idea">Give every word a happiness score, add them up, and say "happy" if the total is at least zero.</p>
+    </div>
+    <ul class="points">
+      <li>On an alien planet, the language has two words, <em>aack</em> and <em>beep</em>. Happy aliens say <em>aack</em> more often and sad ones say <em>beep</em> more often. The first classifier gives aack a score of +1 and beep a score of −1, then checks the sign of the total. On a plot with aack counts across and beep counts up, that rule is the line aack = beep.</li>
+      <li>A <strong>perceptron</strong> is a weight per feature plus a bias. It computes a <strong>score</strong> and passes it through the <strong>step function</strong>, which outputs 1 if the score is zero or more and 0 otherwise. In two dimensions the boundary is a line, and in more dimensions it is a hyperplane.</li>
+      <li>The bias is the alien's mood when it says nothing. A friend who stays completely silent is probably upset, so the empty sentence gets a negative bias. Long reviews tend to be angry ones, so they lean negative too.</li>
+      <li>Counting mistakes is a poor error function, because it's flat and gradient descent can't move on a flat surface. The <strong>perceptron error</strong> is zero for points classified correctly and |score| for misclassified ones, so a point far on the wrong side costs more.</li>
+      <li>The <strong>perceptron trick</strong> mirrors the square trick. Pick a random point. If it's on the correct side, leave the line alone. If not, add η × (label − prediction) × feature to each weight, and the same without the feature to the bias. The line moves toward the point. Repeat for many epochs.</li>
+      <li>It works for spam filters, recommendations ("will this user watch this?"), medical yes/no questions and simple images such as MNIST digits. It doesn't work for anything that can't be split by a straight line.</li>
+    </ul>
+    <div class="fig">
+      <h4>One step of the perceptron trick</h4>
+      <svg class="narrow" viewBox="0 0 360 284" role="img" aria-label="Plot with appearances of aack on the horizontal axis and beep on the vertical axis. Blue sad points sit top left, red happy points bottom right. A dashed starting line leaves one red happy point on the sad side. After one step, the solid line has moved up toward that point, so all points are on their correct side.">
+        <rect x="40" y="18" width="300" height="222" fill="var(--paper-2)" opacity=".45"/>
+        <line x1="40" y1="240" x2="344" y2="240" stroke="var(--ink-3)"/>
+        <line x1="40" y1="240" x2="40" y2="14" stroke="var(--ink-3)"/>
+        <g font-size="11" text-anchor="middle"><text x="40" y="255">0</text><text x="100" y="255">1</text><text x="160" y="255">2</text><text x="220" y="255">3</text><text x="280" y="255">4</text></g>
+        <g font-size="11" text-anchor="end"><text x="34" y="194">1</text><text x="34" y="144">2</text><text x="34" y="94">3</text><text x="34" y="44">4</text></g>
+        <text x="190" y="276" text-anchor="middle" font-size="11">appearances of “aack”</text>
+        <text x="46" y="12" font-size="11">“beep”</text>
+        <line x1="40" y1="230" x2="340" y2="117.5" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="6 5"/>
+        <line x1="40" y1="210" x2="340" y2="22.5" stroke="var(--ink)" stroke-width="2.6"/>
+        <g fill="var(--blue)"><circle cx="70" cy="140" r="6"/><circle cx="100" cy="90" r="6"/><circle cx="130" cy="65" r="6"/><circle cx="70" cy="80" r="6"/><circle cx="136" cy="130" r="6"/></g>
+        <g fill="var(--red)"><circle cx="160" cy="215" r="6"/><circle cx="220" cy="190" r="6"/><circle cx="280" cy="165" r="6"/><circle cx="280" cy="215" r="6"/></g>
+        <circle cx="244" cy="120" r="9.5" fill="none" stroke="var(--red)" stroke-width="1.6" stroke-dasharray="3 2"/>
+        <circle cx="244" cy="120" r="6" fill="var(--red)"/>
+        <text x="257" y="97" font-size="10.5" class="t-red">wrong side:</text>
+        <text x="257" y="109" font-size="10.5" class="t-red">pull line over</text>
+        <text x="60" y="36" font-size="11" class="t-blue">sad zone</text>
+        <text x="326" y="232" font-size="11" text-anchor="end" class="t-red">happy zone</text>
+        <text x="300" y="154" font-size="10.5" text-anchor="middle">before</text>
+        <text x="298" y="40" font-size="10.5" text-anchor="end" class="t-ink">after</text>
+      </svg>
+      <p class="cap">The dashed line puts a happy point in the sad zone. The trick shifts and rotates the line a small step toward that point until it lands on the right side. Points that are already correct don't move the line at all.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Logistic classifiers</span></div>
+  <div class="body">
+    <div>
+      <h3>From a hard yes/no to a probability</h3>
+      <p class="idea">Swap the step function for a sigmoid and the perceptron stops saying "100% happy" and starts saying "73% happy".</p>
+    </div>
+    <ul class="points">
+      <li>A <strong>logistic classifier</strong> (a continuous perceptron) computes the same score, then squashes it with the <strong>sigmoid</strong> into a number between 0 and 1. A score of 0 gives 0.5, large positive scores approach 1 and large negative ones approach 0. Points far from the line get confident predictions, and points near it get uncertain ones.</li>
+      <li>The error is the <strong>log loss</strong>. For each point, take the probability the model gave to the correct label and compute −ln of it. Confident correct answers cost almost nothing, and confident wrong ones cost a lot. Multiplying probabilities would give tiny numbers. Logarithms turn the product into a sum. The log loss is closely related to cross-entropy.</li>
+      <li>The <strong>logistic trick</strong> improves on the perceptron trick. Every point moves the line: misclassified points pull it closer, and correctly classified ones push it a little further away. Updates are η × (label − prediction) × feature, the same shape as before.</li>
+      <li>On IMDB movie reviews, Turi Create learns a weight per word. <em>Wonderful</em> gets a positive weight, <em>horrible</em> a negative one, and <em>the</em> close to zero. The bias comes out positive, so an empty review reads as positive. Unhappy viewers tend to write more.</li>
+      <li>For more than two classes, train one classifier per class (dog, cat, bird) and combine their scores with the <strong>softmax</strong> function, which turns them into probabilities that add up to 1.</li>
+    </ul>
+    <div class="fig">
+      <h4>Step versus sigmoid</h4>
+      <svg class="narrow" viewBox="0 0 360 228" role="img" aria-label="Graph of prediction against score from minus 6 to 6. The step function, dashed, jumps from 0 to 1 at score 0. The sigmoid, a red S-shaped curve, rises smoothly from near 0 to near 1, passing 0.5 at score 0 and about 0.73 at score 1.">
+        <line x1="30" y1="190" x2="334" y2="190" stroke="var(--ink-3)"/>
+        <line x1="180" y1="196" x2="180" y2="22" stroke="var(--ink-3)"/>
+        <line x1="30" y1="30" x2="334" y2="30" stroke="var(--rule)"/>
+        <line x1="30" y1="110" x2="334" y2="110" stroke="var(--rule)" stroke-dasharray="2 3"/>
+        <g font-size="11" text-anchor="middle"><text x="30" y="206">−6</text><text x="105" y="206">−3</text><text x="180" y="206">0</text><text x="255" y="206">3</text><text x="330" y="206">6</text></g>
+        <text x="176" y="34" font-size="11" text-anchor="end">1</text>
+        <text x="176" y="114" font-size="11" text-anchor="end">0.5</text>
+        <text x="176" y="186" font-size="11" text-anchor="end">0</text>
+        <text x="330" y="222" text-anchor="end" font-size="11">score = weights · features + bias</text>
+        <path d="M30,190 L180,190 L180,30 L330,30" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="6 4"/>
+        <path d="M30.0,189.6 L36.2,189.5 L42.5,189.3 L48.8,189.2 L55.0,188.9 L61.2,188.6 L67.5,188.2 L73.8,187.7 L80.0,187.1 L86.2,186.3 L92.5,185.3 L98.8,184.0 L105.0,182.4 L111.2,180.4 L117.5,177.9 L123.8,174.7 L130.0,170.9 L136.2,166.3 L142.5,160.8 L148.8,154.4 L155.0,147.0 L161.2,138.7 L167.5,129.6 L173.8,119.9 L180.0,110.0 L186.2,100.1 L192.5,90.4 L198.8,81.3 L205.0,73.0 L211.2,65.6 L217.5,59.2 L223.8,53.7 L230.0,49.1 L236.2,45.3 L242.5,42.1 L248.8,39.6 L255.0,37.6 L261.2,36.0 L267.5,34.7 L273.8,33.7 L280.0,32.9 L286.2,32.3 L292.5,31.8 L298.8,31.4 L305.0,31.1 L311.2,30.8 L317.5,30.7 L323.8,30.5 L330.0,30.4" fill="none" stroke="var(--red)" stroke-width="2.8"/>
+        <circle cx="205" cy="73" r="4.5" fill="var(--red)"/>
+        <text x="213" y="80" font-size="11" class="t-red">score 1 → 0.73</text>
+        <text x="330" y="140" font-size="11" text-anchor="end">step: 0 or 1</text>
+        <text x="330" y="156" font-size="11" text-anchor="end" class="t-red">sigmoid: any</text><text x="330" y="170" font-size="11" text-anchor="end" class="t-red">value in between</text>
+      </svg>
+      <p class="cap">The sigmoid is smooth, so gradient descent can follow its slope. The step function is flat almost everywhere, which gives the algorithm nothing to follow. Its output can also be read as a probability.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Measuring classifiers</span></div>
+  <div class="body">
+    <div>
+      <h3>Accuracy and its friends</h3>
+      <p class="idea">A model that tells everyone "you're healthy" can be 99% accurate and still useless. You have to ask which mistakes it makes.</p>
+    </div>
+    <ul class="points">
+      <li>In a dataset of 1,000 patients, 10 are sick. A model that says "healthy" for everyone is right 990 times. That's 99% accuracy, and every sick patient is sent home.</li>
+      <li>There are two kinds of error. A <strong>false positive</strong> is a healthy patient flagged as sick, or a real email sent to spam. A <strong>false negative</strong> is a sick patient sent home, or spam that lands in the inbox. Which one is worse depends on the problem. For medical diagnosis it's the false negative. For a spam filter that deletes mail automatically it's the false positive.</li>
+      <li><strong>Recall</strong> asks how many of the real positives you found, which matters for disease. <strong>Precision</strong> asks how many of your positive calls were right, which matters for spam. The <strong>F1-score</strong> is their harmonic mean and stays close to the smaller of the two. <strong>F<sub>β</sub></strong> leans toward recall when β is above 1 and toward precision when it's below 1.</li>
+      <li>Doctors use <strong>sensitivity</strong> (the same as recall) and <strong>specificity</strong> (the share of real negatives correctly cleared). Raising the threshold of a probabilistic model trades sensitivity for specificity.</li>
+      <li>The <strong>ROC curve</strong> plots sensitivity against 1 − specificity for every threshold. The <strong>area under it (AUC)</strong> scores the model as a whole: 1 is perfect, 0.5 is a coin flip. You then pick the threshold whose trade-off fits the problem.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Confusion matrix: coronavirus model 2</h4>
+        <div class="cm" role="img" aria-label="Two by two confusion matrix for 1,000 patients. Rows are the true label, columns the prediction. Sick predicted sick: 8 true positives. Sick predicted healthy: 2 false negatives. Healthy predicted sick: 48 false positives. Healthy predicted healthy: 942 true negatives.">
+          <span></span>
+          <span class="ax top">Predicted sick</span>
+          <span class="ax top">Predicted healthy</span>
+          <span class="ax side">Really sick</span>
+          <div class="cell ok"><b>8</b><span>true positives</span></div>
+          <div class="cell bad"><b>2</b><span>false negatives: sent home sick</span></div>
+          <span class="ax side">Really healthy</span>
+          <div class="cell bad"><b>48</b><span>false positives: extra tests</span></div>
+          <div class="cell ok"><b>942</b><span>true negatives</span></div>
+        </div>
+        <div class="defs">
+          <div><b>Accuracy</b><span>(8 + 942) / 1,000 = <strong>95%</strong>, lower than the useless model's 99%</span></div>
+          <div><b>Recall</b><span>8 / 10 sick found = <strong>80%</strong> (the useless model: 0%)</span></div>
+          <div><b>Precision</b><span>8 / 56 flagged really sick ≈ <strong>14%</strong></span></div>
+        </div>
+        <p class="cap">For a disease, model 2 is far better despite lower accuracy. It finds most of the sick patients, and its false alarms only cost extra tests.</p>
+      </div>
+      <div class="fig">
+        <h4>The ROC curve</h4>
+        <svg viewBox="0 0 300 300" role="img" aria-label="ROC curve. Horizontal axis: false positive rate, 1 minus specificity, from 0 to 1. Vertical axis: sensitivity, the true positive rate, from 0 to 1. A red curve bows toward the top-left corner and the area under it is shaded. A dashed diagonal shows a random model with AUC 0.5. One point on the curve marks a chosen threshold.">
+          <rect x="50" y="20" width="230" height="230" fill="none" stroke="var(--ink-3)"/>
+          <path d="M50,250 C58,140 110,48 280,20 L280,250 Z" fill="color-mix(in srgb, var(--red) 12%, transparent)"/>
+          <line x1="50" y1="250" x2="280" y2="20" stroke="var(--ink-3)" stroke-width="1.6" stroke-dasharray="5 4"/>
+          <path d="M50,250 C58,140 110,48 280,20" fill="none" stroke="var(--red)" stroke-width="2.8"/>
+          <circle cx="85.5" cy="129.6" r="5.5" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/>
+          <text x="96" y="148" font-size="11" class="t-ink">a threshold you pick</text>
+          <text x="194" y="190" font-size="11" text-anchor="middle">AUC ≈ 0.9</text>
+          <text x="222" y="150" font-size="10.5" text-anchor="middle" transform="rotate(-45 222 150)">random: 0.5</text>
+          <g font-size="11"><text x="50" y="266" text-anchor="middle">0</text><text x="280" y="266" text-anchor="middle">1</text><text x="44" y="254" text-anchor="end">0</text><text x="44" y="24" text-anchor="end">1</text></g>
+          <text x="165" y="286" text-anchor="middle" font-size="11">1 − specificity</text>
+          <text x="22" y="135" text-anchor="middle" font-size="11" transform="rotate(-90 22 135)">sensitivity</text>
+        </svg>
+        <p class="cap">Each threshold gives one point. Moving it changes which mistakes the model makes. A curve that bows toward the top-left corner belongs to a better model. The shape here is illustrative.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Naive Bayes</span></div>
+  <div class="body">
+    <div>
+      <h3>Using probability to its maximum</h3>
+      <p class="idea">Start with a rough guess (the prior), let evidence sharpen it (the posterior), and treat each piece of evidence as if it were independent.</p>
+    </div>
+    <ul class="points">
+      <li>Your friend tests positive for a rare disease. The test is right 99% of the time. The chance he's actually sick is under 1%, because the disease affects only 1 in 10,000 people. False alarms from the healthy majority far outnumber the true cases.</li>
+      <li>That's <strong>Bayes' theorem</strong>. The <strong>prior</strong> is what you know before the evidence (1 in 10,000). The <strong>event</strong> is the positive test. The <strong>posterior</strong> is the updated probability (about 0.98%).</li>
+      <li>Spam works the same way. If 20 of 100 emails are spam, the prior is 20%. Among the emails containing <em>lottery</em>, 15 are spam and 5 are ham, so the posterior for those emails is 75%.</li>
+      <li>With many words, the joint counts run out quickly, since few emails contain both <em>lottery</em> and <em>sale</em>. Naive Bayes assumes the words are independent given the class and multiplies their probabilities. That assumption is wrong in reality but works surprisingly well, which is where the "naive" comes from.</li>
+      <li>Coded from scratch on a real email dataset, the model is just a dictionary of how often each word appears in spam and in ham. <em>Lottery</em> shows up in 9 spam emails and 1 ham email. <em>Sale</em> is close to neutral, with 39 spam and 42 ham. Counts start at 1, so no word ever gets a probability of exactly zero.</li>
+    </ul>
+    <div class="fig">
+      <h4>Why a 99%-accurate test is usually wrong about a rare disease</h4>
+      <div class="stats s4" style="border:0;border-radius:0">
+        <div class="stat"><span class="label">Population</span><span class="big num">1,000,000</span><p>One person in 10,000 is sick: 100 sick, 999,900 healthy.</p></div>
+        <div class="stat"><span class="label">Sick, test positive</span><span class="big num">99</span><p>99% of the 100 sick are caught.</p></div>
+        <div class="stat"><span class="label">Healthy, test positive</span><span class="big num red">9,999</span><p>1% of the 999,900 healthy are wrongly flagged.</p></div>
+        <div class="stat"><span class="label">Positive and sick</span><span class="big num red">0.98%</span><p>99 out of 10,098 positives. The prior 0.01% rises, but stays small.</p></div>
+      </div>
+      <p class="cap">Prior × evidence → posterior. Naive Bayes does this for every word in an email and multiplies the results together.</p>
+      <p class="src">Numbers: worked example in ch. 8</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="power">
+  <span class="label partno">Part 3 · Chapters 9–13</span>
+  <h2>More power</h2>
+  <p class="lede">For data that a single straight line can't split: ask a series of questions, stack perceptrons into layers, lift the data into more dimensions, or let many weak models vote. Then a full project on real, messy data.</p>
+</div>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Decision trees</span></div>
+  <div class="body">
+    <div>
+      <h3>Split the data by asking questions</h3>
+      <p class="idea">Choose the question that best separates the labels, then ask the next question inside each branch. That's the whole algorithm.</p>
+    </div>
+    <ul class="points">
+      <li>An app store has six users and three apps: <em>Atom Count</em>, <em>Beehive Finder</em> and <em>Check Mate Mate</em>. Splitting by platform gets 4 of 6 right. Splitting by age (under 20 or not) gets 5 of 6 right, because every teenager downloaded Atom Count. So age goes at the root. Inside the adult branch, platform then separates the other two apps.</li>
+      <li>"Best question" can be measured three ways. <strong>Accuracy</strong> is the simplest. <strong>Gini impurity</strong> is the chance that two random picks from a set have different labels: 0 for a pure set, approaching 1 for a very mixed one. <strong>Entropy</strong> is 0 for a pure set and 1 for a 50/50 split. The drop in entropy after a split is the <strong>information gain</strong>.</li>
+      <li>Numeric features become yes/no questions through thresholds ("age ≥ 20?"). Try every cut between neighbouring values and keep the best. Categorical features with several values get one-hot style questions.</li>
+      <li>Stop when a node is pure, when the depth limit is reached or when a node is too small. Without limits, a tree will memorise the data. Depth and minimum samples per leaf are the hyperparameters that prevent overfitting.</li>
+      <li>Geometrically, each question is a vertical or horizontal cut, so a tree divides the plane into rectangles. A <strong>regression tree</strong> uses mean squared error to choose splits and predicts the average in each leaf, which draws a staircase of flat steps.</li>
+      <li>In the student-admissions example with Scikit-Learn, an unrestricted tree scores 100% on the training set. That isn't a success, it's a sign of massive overfitting. Setting <code>max_depth</code> and <code>min_samples_leaf</code> produces a smaller tree with a calmer boundary.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The app-recommendation tree</h4>
+        <svg viewBox="0 0 420 236" role="img" aria-label="Decision tree. Root question: is the user under 20? Yes leads to the leaf Atom Count. No leads to a second question: does the user have an iPhone? Yes leads to Check Mate Mate, no leads to Beehive Finder.">
+          <g stroke="var(--ink-3)" stroke-width="1.6" fill="none">
+            <path d="M180 44 L100 96"/><path d="M240 44 L310 96"/>
+            <path d="M285 128 L236 182"/><path d="M335 128 L362 182"/>
+          </g>
+          <rect x="120" y="10" width="180" height="34" rx="8" fill="var(--card)" stroke="var(--ink)" stroke-width="1.6"/>
+          <text x="210" y="31" text-anchor="middle" font-size="11.5" class="t-ink">Is the user under 20?</text>
+          <text x="128" y="66" font-size="11" text-anchor="end" class="t-red">yes</text>
+          <text x="292" y="70" font-size="11">no</text>
+          <ellipse cx="95" cy="114" rx="70" ry="19" fill="color-mix(in srgb, var(--red) 14%, var(--card))" stroke="var(--red)" stroke-width="1.6"/>
+          <text x="95" y="118" text-anchor="middle" font-size="11.5" class="t-ink">Atom Count</text>
+          <text x="95" y="148" text-anchor="middle" font-size="10.5">3 of 3 teens</text>
+          <rect x="240" y="96" width="150" height="32" rx="8" fill="var(--card)" stroke="var(--ink)" stroke-width="1.6"/>
+          <text x="315" y="116" text-anchor="middle" font-size="11.5" class="t-ink">Uses an iPhone?</text>
+          <text x="248" y="158" font-size="11" text-anchor="end" class="t-red">yes</text>
+          <text x="362" y="158" font-size="11">no</text>
+          <ellipse cx="226" cy="200" rx="66" ry="19" fill="color-mix(in srgb, var(--blue) 14%, var(--card))" stroke="var(--blue)" stroke-width="1.6"/>
+          <text x="226" y="204" text-anchor="middle" font-size="11.5" class="t-ink">Check Mate Mate</text>
+          <ellipse cx="358" cy="200" rx="58" ry="19" fill="color-mix(in srgb, var(--gold) 16%, var(--card))" stroke="var(--gold)" stroke-width="1.6"/>
+          <text x="358" y="204" text-anchor="middle" font-size="11.5" class="t-ink">Beehive Finder</text>
+        </svg>
+        <p class="cap">Age first, because it separates better (5 of 6 against 4 of 6). Then platform within the adults. Boxes are questions and ovals are decisions.</p>
+      </div>
+      <div class="fig">
+        <h4>What a tree's boundary looks like</h4>
+        <svg viewBox="0 0 300 250" role="img" aria-label="A plane with two features divided into four rectangles by a vertical cut at x0 equals 5, a horizontal cut at x1 equals 8 on the left side and a horizontal cut at x1 equals 2.5 on the right side. Red triangles and blue squares each sit in their own shaded rectangles.">
+          <rect x="40" y="60" width="120" height="160" fill="color-mix(in srgb, var(--red) 11%, transparent)"/>
+          <rect x="40" y="20" width="120" height="40" fill="color-mix(in srgb, var(--blue) 11%, transparent)"/>
+          <rect x="160" y="20" width="120" height="150" fill="color-mix(in srgb, var(--blue) 11%, transparent)"/>
+          <rect x="160" y="170" width="120" height="50" fill="color-mix(in srgb, var(--red) 11%, transparent)"/>
+          <rect x="40" y="20" width="240" height="200" fill="none" stroke="var(--ink-3)"/>
+          <line x1="160" y1="20" x2="160" y2="220" stroke="var(--ink)" stroke-width="2.4"/>
+          <line x1="40" y1="60" x2="160" y2="60" stroke="var(--ink)" stroke-width="2.4"/>
+          <line x1="160" y1="170" x2="280" y2="170" stroke="var(--ink)" stroke-width="2.4"/>
+          <g fill="var(--red)">
+            <path d="M70 110 l7 12 h-14 z"/><path d="M100 150 l7 12 h-14 z"/><path d="M130 90 l7 12 h-14 z"/><path d="M80 190 l7 12 h-14 z"/><path d="M120 180 l7 12 h-14 z"/>
+            <path d="M200 185 l7 12 h-14 z"/><path d="M250 192 l7 12 h-14 z"/>
+          </g>
+          <g fill="var(--blue)">
+            <rect x="70" y="32" width="11" height="11"/><rect x="118" y="36" width="11" height="11"/>
+            <rect x="190" y="50" width="11" height="11"/><rect x="236" y="80" width="11" height="11"/><rect x="204" y="120" width="11" height="11"/><rect x="254" y="136" width="11" height="11"/><rect x="186" y="96" width="11" height="11"/>
+          </g>
+          <text x="160" y="238" text-anchor="middle" font-size="11">x₀ = 5</text>
+          <text x="34" y="64" text-anchor="end" font-size="11">8</text>
+          <text x="286" y="174" font-size="11">2.5</text>
+          <text x="160" y="12" text-anchor="middle" font-size="10.5">cut 1, then one cut on each side</text>
+        </svg>
+        <p class="cap">Every question is a cut parallel to an axis. More depth means more rectangles, and with enough depth there's one rectangle per point.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Neural networks</span></div>
+  <div class="body">
+    <div>
+      <h3>Perceptrons, stacked in layers</h3>
+      <p class="idea">If one line can't split the data, use two lines and a third perceptron that combines them.</p>
+    </div>
+    <ul class="points">
+      <li>On a new planet, happy aliens sit in a region that no single line can isolate. Two lines can do it. Serrano reads them as <strong>career happiness</strong> and <strong>family happiness</strong>: an alien is happy only when both are satisfied. That AND is itself a perceptron, whose inputs are the outputs of the first two.</li>
+      <li>This is a neural network. It has an <strong>input layer</strong> (the features), one or more <strong>hidden layers</strong> (simple classifiers) and an <strong>output layer</strong>. Each node computes weights × inputs + bias and applies an <strong>activation function</strong>. Without that non-linearity, the stack would collapse back into a single line.</li>
+      <li>Training is gradient descent on the log loss again. <strong>Backpropagation</strong> computes how much each weight contributed to the error, working backwards from the output. One way to picture it: classifiers that help get a bit more say, and those that hurt get a bit less.</li>
+      <li>There are some pitfalls. The sigmoid is flat at both ends, so many stacked layers produce <strong>vanishing gradients</strong>. <strong>ReLU</strong> (zero for negative inputs, the identity otherwise) mostly fixes that, and tanh helps a little. Networks overfit easily, which L1/L2 regularisation and <strong>dropout</strong> counter. Dropout switches off random neurons each epoch, like training your weaker arm by tying the strong one behind your back.</li>
+      <li>In Keras, a circular dataset of 110 points is classified with two hidden layers of 128 and 64 ReLU nodes and a softmax output. On MNIST, a network reaches about 94% test accuracy. One miss is a sloppy 3 that looks like an 8.</li>
+      <li>Other architectures handle other data: <strong>convolutional</strong> networks for images, <strong>recurrent</strong> networks for sequences such as text, and <strong>GANs</strong> for generating realistic new data.</li>
+    </ul>
+    <div class="fig">
+      <h4>The alien-happiness network</h4>
+      <svg class="narrow" viewBox="0 0 440 262" role="img" aria-label="Neural network diagram. Input layer on the left: count of aack, count of beep, and a bias node of 1. Each input connects to two hidden nodes, career happiness and family happiness, each applying an activation function. Both hidden nodes, plus a bias, feed the output node, happiness, which acts like an AND.">
+        <text x="56" y="16" text-anchor="middle" font-size="11" class="t-ink">input layer</text>
+        <text x="224" y="16" text-anchor="middle" font-size="11" class="t-ink">hidden layer</text>
+        <text x="384" y="16" text-anchor="middle" font-size="11" class="t-ink">output</text>
+        <g stroke="var(--ink-3)" stroke-width="1.5">
+          <line x1="80" y1="62" x2="196" y2="88"/><line x1="80" y1="62" x2="196" y2="172"/>
+          <line x1="80" y1="132" x2="196" y2="92"/><line x1="80" y1="132" x2="196" y2="168"/>
+          <line x1="80" y1="202" x2="196" y2="96"/><line x1="80" y1="202" x2="196" y2="176"/>
+          <line x1="252" y1="90" x2="356" y2="126"/><line x1="252" y1="170" x2="356" y2="134"/>
+          <line x1="234" y1="234" x2="358" y2="140"/>
+        </g>
+        <g fill="var(--card)" stroke="var(--ink)" stroke-width="1.6">
+          <circle cx="56" cy="62" r="24"/><circle cx="56" cy="132" r="24"/>
+        </g>
+        <circle cx="56" cy="202" r="18" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.4"/>
+        <circle cx="222" cy="234" r="13" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.4"/>
+        <g fill="color-mix(in srgb, var(--blue) 14%, var(--card))" stroke="var(--blue)" stroke-width="1.8">
+          <circle cx="224" cy="90" r="28"/><circle cx="224" cy="170" r="28"/>
+        </g>
+        <circle cx="384" cy="130" r="30" fill="color-mix(in srgb, var(--red) 15%, var(--card))" stroke="var(--red)" stroke-width="2"/>
+        <text x="56" y="66" text-anchor="middle" font-size="11" class="t-ink">aack</text>
+        <text x="56" y="136" text-anchor="middle" font-size="11" class="t-ink">beep</text>
+        <text x="56" y="206" text-anchor="middle" font-size="11">1</text>
+        <text x="56" y="236" text-anchor="middle" font-size="10">bias</text>
+        <text x="222" y="238" text-anchor="middle" font-size="10">1</text>
+        <text x="224" y="94" text-anchor="middle" font-size="10.5" class="t-ink">career</text>
+        <text x="224" y="174" text-anchor="middle" font-size="10.5" class="t-ink">family</text>
+        <text x="384" y="128" text-anchor="middle" font-size="10.5" class="t-ink">happy?</text>
+        <text x="384" y="142" text-anchor="middle" font-size="9.5" class="t-red">AND</text>
+        <text x="300" y="68" text-anchor="middle" font-size="10">weights</text>
+        <text x="130" y="236" text-anchor="middle" font-size="10">σ or step after</text>
+        <text x="130" y="249" text-anchor="middle" font-size="10">each sum</text>
+      </svg>
+      <p class="cap">Each blue node is a perceptron that draws one line. The red node fires only when both of them say yes, so the network's boundary is two lines meeting at a corner. Add more nodes and layers and the boundary can take almost any shape.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">SVMs &amp; kernels</span></div>
+  <div class="body">
+    <div>
+      <h3>Find boundaries with style</h3>
+      <p class="idea">Of all the lines that split the data, choose the one with the most room on each side. If none splits it, add dimensions until one does.</p>
+    </div>
+    <ul class="points">
+      <li>Many lines can classify a dataset perfectly. The best one is the line that stays far from every point, because a small wiggle won't make it misclassify anything. A <strong>support vector machine</strong> draws two parallel lines and pushes them as far apart as it can while still classifying correctly. The final boundary is the line midway between them.</li>
+      <li>Its error function has two parts. The <strong>classification error</strong> is the perceptron error of each of the two lines. The <strong>distance error</strong> is large when the lines are close (it's the L2 regularisation term from chapter 4 again). Lines 0.4 apart score an error of 25. Lines 0.04 apart score 2,500.</li>
+      <li>The <strong>C parameter</strong> sets the balance. A large C cares mostly about classifying every point, while a small C prefers a wide margin and tolerates a few mistakes.</li>
+      <li>The <strong>kernel method</strong> handles data that no line can split by adding clever columns. For points inside versus outside a circle, add x₁² + x₂², which lifts every point onto a bowl. A flat plane then separates them, and that plane looks like a circle from above. For XOR-like data, the product x₁x₂ does the job. That's the <strong>polynomial kernel</strong>.</li>
+      <li>The <strong>RBF kernel</strong> places a mountain on every point of one class and a valley on every point of the other, then cuts the landscape at a fixed height. The parameter <strong>gamma</strong> sets the width of each bump. A small gamma gives smooth, wide boundaries, and a large gamma gives tight islands that overfit.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The widest street</h4>
+        <svg viewBox="0 0 320 262" role="img" aria-label="Two classes of points separated by a solid central line with two dashed parallel lines on either side. The nearest blue point touches the upper dashed line and the nearest red point touches the lower one. A double arrow between the dashed lines is labelled margin.">
+          <defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink)"/></marker></defs>
+          <path d="M16.9,212.3 L286.9,12.3 L20,12.3 Z" fill="color-mix(in srgb, var(--blue) 8%, transparent)"/>
+          <path d="M43.1,247.7 L313.1,47.7 L313.1,247.7 Z" fill="color-mix(in srgb, var(--red) 8%, transparent)"/>
+          <line x1="16.9" y1="212.3" x2="286.9" y2="12.3" stroke="var(--ink-3)" stroke-width="1.8" stroke-dasharray="6 5"/>
+          <line x1="43.1" y1="247.7" x2="313.1" y2="47.7" stroke="var(--ink-3)" stroke-width="1.8" stroke-dasharray="6 5"/>
+          <line x1="30" y1="230" x2="300" y2="30" stroke="var(--ink)" stroke-width="2.6"/>
+          <line x1="221" y1="64" x2="244" y2="96" stroke="var(--ink)" stroke-width="1.4" marker-start="url(#ah2)" marker-end="url(#ah2)"/>
+          <text x="246" y="110" font-size="11" class="t-ink">margin</text>
+          <g fill="var(--blue)"><circle cx="125" cy="132" r="6"/><circle cx="70" cy="120" r="6"/><circle cx="120" cy="70" r="6"/><circle cx="60" cy="60" r="6"/><circle cx="170" cy="50" r="6"/><circle cx="58" cy="150" r="6"/></g>
+          <g fill="var(--red)"><circle cx="205" cy="128" r="6"/><circle cx="250" cy="170" r="6"/><circle cx="200" cy="200" r="6"/><circle cx="280" cy="120" r="6"/><circle cx="150" cy="226" r="6"/><circle cx="270" cy="220" r="6"/></g>
+          <circle cx="125" cy="132" r="10" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+          <circle cx="205" cy="128" r="10" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+          <text x="22" y="254" font-size="10.5">circled: the points that pin the street</text>
+        </svg>
+        <p class="cap">Only the closest points (the support vectors) decide where the street goes. A large C narrows it to avoid any mistake, and a small C widens it.</p>
+      </div>
+      <div class="fig">
+        <h4>The kernel trick, in one dimension</h4>
+        <svg viewBox="0 0 360 250" role="img" aria-label="Bottom: points on a number line, blue ones in the middle and red ones at both ends, so no single cut separates them. Top: each point is lifted to the height of x squared, landing on a parabola. Now the blue points sit low and the red points sit high, and a horizontal line separates them.">
+          <path d="M36,55.4 Q180,344.6 324,55.4" fill="none" stroke="var(--ink-3)" stroke-width="1.6"/>
+          <line x1="20" y1="200" x2="340" y2="200" stroke="var(--ink-3)"/>
+          <line x1="20" y1="165" x2="340" y2="165" stroke="var(--ink)" stroke-width="2.4"/>
+          <g stroke="var(--rule)" stroke-dasharray="2 3">
+            <line x1="67.5" y1="200" x2="67.5" y2="112.5"/><line x1="90" y1="200" x2="90" y2="144"/><line x1="270" y1="200" x2="270" y2="144"/><line x1="297" y1="200" x2="297" y2="105.4"/>
+            <line x1="157.5" y1="200" x2="157.5" y2="196.5"/><line x1="207" y1="200" x2="207" y2="194.9"/>
+          </g>
+          <g opacity=".35">
+            <circle cx="67.5" cy="200" r="5" fill="var(--red)"/><circle cx="90" cy="200" r="5" fill="var(--red)"/><circle cx="270" cy="200" r="5" fill="var(--red)"/><circle cx="297" cy="200" r="5" fill="var(--red)"/>
+            <circle cx="157.5" cy="200" r="5" fill="var(--blue)"/><circle cx="180" cy="200" r="5" fill="var(--blue)"/><circle cx="207" cy="200" r="5" fill="var(--blue)"/>
+          </g>
+          <g fill="var(--red)"><circle cx="67.5" cy="112.5" r="6"/><circle cx="90" cy="144" r="6"/><circle cx="270" cy="144" r="6"/><circle cx="297" cy="105.4" r="6"/></g>
+          <g fill="var(--blue)"><circle cx="157.5" cy="196.5" r="6"/><circle cx="180" cy="200" r="6"/><circle cx="207" cy="194.9" r="6"/></g>
+          <text x="180" y="222" text-anchor="middle" font-size="11">original feature x: no single cut works</text>
+          <text x="180" y="240" text-anchor="middle" font-size="11">add the column x², and a flat line does</text>
+          <text x="24" y="180" font-size="11" class="t-ink">new boundary</text>
+          <text x="180" y="40" text-anchor="middle" font-size="11">height = x²</text>
+        </svg>
+        <p class="cap">That's the whole idea of a kernel: add a feature that lifts the data into a space where a straight boundary works. Projected back down, that boundary is a curve.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Ensemble learning</span></div>
+  <div class="body">
+    <div>
+      <h3>With a little help from our friends</h3>
+      <p class="idea">Many weak learners, each a little better than chance, can be combined into one strong learner that overfits less than any single big model.</p>
+    </div>
+    <ul class="points">
+      <li>You have a 100-question true/false exam and five friends to help. Technique 1: each friend answers a random set of questions and you take the majority answer. Technique 2: the first friend answers only what they're surest of, the next friend takes the rest, and so on. The first technique is <strong>bagging</strong>. The second is <strong>boosting</strong>.</li>
+      <li><strong>Random forests</strong> (bagging) train small decision trees on random samples of rows drawn with replacement, then let them vote. A single deep tree on the spam data overfits with jagged boxes. A forest of depth-1 trees gives a smoother boundary and treats a couple of odd points as outliers.</li>
+      <li><strong>AdaBoost</strong> gives every point a weight of 1 and fits a stump. It then enlarges the misclassified points so that, in total, they balance the correct ones, and fits the next stump on the reweighted data. Each learner's vote is weighted by the <strong>log-odds</strong> of its accuracy, ln(accuracy / (1 − accuracy)). A learner at 50% gets zero say, and one that's reliably wrong gets a negative vote.</li>
+      <li><strong>Gradient boosting</strong> starts by predicting the average, then fits each new tree to the <strong>residuals</strong>, the part the earlier trees still got wrong. A learning rate shrinks each tree's contribution, so the model approaches the answer in small steps.</li>
+      <li><strong>XGBoost</strong> builds the residual trees with a <strong>similarity score</strong> (the square of the sum of residuals divided by their count, with λ added to the denominator for regularisation). It splits where the gain in similarity is largest and prunes splits whose gain is below a threshold. Variants of it win most data competitions. A blend of many learners also won the $1 million Netflix Prize.</li>
+    </ul>
+    <div class="fig">
+      <h4>Bagging versus boosting</h4>
+      <svg class="narrow" viewBox="0 0 460 268" role="img" aria-label="Left, bagging: the dataset is sampled into three random subsets, a tree is trained on each in parallel, and they combine through a majority vote. Right, boosting: tree 1 is trained, its mistakes are enlarged, tree 2 is trained on the reweighted data, its mistakes are enlarged again, tree 3 follows, and all three combine through a weighted vote.">
+        <defs><marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker></defs>
+        <text x="110" y="16" text-anchor="middle" font-size="12" class="t-ink">Bagging · in parallel</text>
+        <rect x="45" y="28" width="130" height="30" rx="6" fill="var(--paper-2)" stroke="var(--ink-3)"/>
+        <text x="110" y="47" text-anchor="middle" font-size="11" class="t-ink">all the data</text>
+        <g stroke="var(--ink-3)" stroke-width="1.4" marker-end="url(#ah3)">
+          <line x1="80" y1="58" x2="40" y2="92"/><line x1="110" y1="58" x2="110" y2="92"/><line x1="140" y1="58" x2="180" y2="92"/>
+          <line x1="40" y1="150" x2="88" y2="194"/><line x1="110" y1="150" x2="110" y2="194"/><line x1="180" y1="150" x2="132" y2="194"/>
+        </g>
+        <g fill="var(--card)" stroke="var(--blue)" stroke-width="1.6">
+          <rect x="12" y="96" width="56" height="52" rx="6"/><rect x="82" y="96" width="56" height="52" rx="6"/><rect x="152" y="96" width="56" height="52" rx="6"/>
+        </g>
+        <g font-size="10.5" text-anchor="middle" class="t-ink"><text x="40" y="116">tree 1</text><text x="110" y="116">tree 2</text><text x="180" y="116">tree 3</text></g>
+        <g font-size="9.5" text-anchor="middle"><text x="40" y="136">random</text><text x="110" y="136">random</text><text x="180" y="136">random</text></g>
+        <rect x="45" y="198" width="130" height="30" rx="6" fill="color-mix(in srgb, var(--blue) 14%, var(--card))" stroke="var(--blue)" stroke-width="1.6"/>
+        <text x="110" y="217" text-anchor="middle" font-size="11" class="t-ink">majority vote</text>
+        <text x="110" y="252" text-anchor="middle" font-size="10.5">e.g. random forest</text>
+
+        <line x1="230" y1="10" x2="230" y2="256" stroke="var(--rule)"/>
+
+        <text x="345" y="16" text-anchor="middle" font-size="12" class="t-ink">Boosting · in sequence</text>
+        <g fill="var(--card)" stroke="var(--red)" stroke-width="1.6">
+          <rect x="250" y="28" width="66" height="34" rx="6"/><rect x="250" y="96" width="66" height="34" rx="6"/><rect x="250" y="164" width="66" height="34" rx="6"/>
+        </g>
+        <g font-size="10.5" text-anchor="middle" class="t-ink"><text x="283" y="49">tree 1</text><text x="283" y="117">tree 2</text><text x="283" y="185">tree 3</text></g>
+        <g stroke="var(--ink-3)" stroke-width="1.4" marker-end="url(#ah3)">
+          <line x1="283" y1="62" x2="283" y2="94"/><line x1="283" y1="130" x2="283" y2="162"/>
+          <line x1="400" y1="45" x2="400" y2="200"/>
+        </g>
+        <text x="292" y="76" font-size="10" class="t-red">enlarge</text><text x="292" y="88" font-size="10" class="t-red">its mistakes</text>
+        <text x="292" y="144" font-size="10" class="t-red">enlarge</text><text x="292" y="156" font-size="10" class="t-red">its mistakes</text>
+        <g stroke="var(--ink-3)" stroke-width="1.4"><line x1="316" y1="45" x2="400" y2="45"/><line x1="316" y1="113" x2="400" y2="113"/><line x1="316" y1="181" x2="400" y2="181"/></g>
+        <text x="408" y="117" font-size="10">votes</text>
+        <rect x="340" y="204" width="110" height="30" rx="6" fill="color-mix(in srgb, var(--red) 14%, var(--card))" stroke="var(--red)" stroke-width="1.6"/>
+        <text x="395" y="223" text-anchor="middle" font-size="11" class="t-ink">weighted vote</text>
+        <text x="345" y="252" text-anchor="middle" font-size="10.5">AdaBoost · gradient boosting · XGBoost</text>
+      </svg>
+      <p class="cap">Bagging trains independent learners on random samples and averages away their noise. Boosting trains each learner to fix what the previous ones got wrong, and better learners get bigger votes.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">In practice</span></div>
+  <div class="body">
+    <div>
+      <h3>From messy data to the best model</h3>
+      <p class="idea">Most of the real work happens before training: cleaning, encoding and choosing features. Then you compare models fairly and tune the winner.</p>
+    </div>
+    <ul class="points">
+      <li>The dataset is the Titanic's 891 passengers with 12 columns, labelled survived or not. Serrano notes that a 1912 dataset carries the social biases of its time.</li>
+      <li><strong>Missing values.</strong> Cabin is missing 687 of 891 values, so drop the column. Age is missing 177, so fill those with the median. Embarked is missing only 2, so put those in their own class, U for "unknown".</li>
+      <li><strong>Feature engineering.</strong> Models only read numbers. <strong>One-hot encode</strong> categories (sex, port) instead of numbering them, which would invent an order. Passenger class gets one-hot encoded too, because second class had the lowest survival rate, so the classes don't line up in order. <strong>Bin</strong> ages into buckets. Drop features that are useless or redundant, such as name, ticket and ID.</li>
+      <li>Split 60/20/20 into training, validation and test sets. Train seven models with default settings and compare them on the validation set by accuracy and F1.</li>
+      <li><strong>Grid search</strong> tries every combination of hyperparameters (the SVM's C and gamma, five values each, means 25 models) and keeps the best on validation. It lifts the SVM from 0.68 to about 0.73 accuracy. <strong>K-fold cross-validation</strong> rotates which slice of the data is used for validation, so all of it gets used for both training and checking.</li>
+    </ul>
+    <div class="fig">
+      <h4>Seven models on the Titanic validation set</h4>
+      <div class="legend"><span><i class="dot c-ink" style="--c:var(--ink-3)"></i>accuracy</span><span><i class="dot c-red"></i>F1-score</span></div>
+      <div class="bars">
+        <div class="bar"><div class="row"><span>Gradient boosting</span><b>0.81 · 0.74</b></div><div class="track"><div class="fill" style="width:81%;--c:var(--ink-3)"></div></div><div class="track"><div class="fill" style="width:74%;--c:var(--red)"></div></div></div>
+        <div class="bar"><div class="row"><span>Random forest</span><b>0.79 · 0.68</b></div><div class="track"><div class="fill" style="width:78.75%;--c:var(--ink-3)"></div></div><div class="track"><div class="fill" style="width:68%;--c:var(--red)"></div></div></div>
+        <div class="bar"><div class="row"><span>Decision tree</span><b>0.78 · 0.71</b></div><div class="track"><div class="fill" style="width:78%;--c:var(--ink-3)"></div></div><div class="track"><div class="fill" style="width:71%;--c:var(--red)"></div></div></div>
+        <div class="bar"><div class="row"><span>Logistic regression</span><b>0.77 · 0.69</b></div><div class="track"><div class="fill" style="width:77%;--c:var(--ink-3)"></div></div><div class="track"><div class="fill" style="width:69%;--c:var(--red)"></div></div></div>
+        <div class="bar"><div class="row"><span>AdaBoost</span><b>0.76 · 0.69</b></div><div class="track"><div class="fill" style="width:76%;--c:var(--ink-3)"></div></div><div class="track"><div class="fill" style="width:69%;--c:var(--red)"></div></div></div>
+        <div class="bar"><div class="row"><span>Naive Bayes</span><b>0.72 · 0.63</b></div><div class="track"><div class="fill" style="width:72%;--c:var(--ink-3)"></div></div><div class="track"><div class="fill" style="width:63%;--c:var(--red)"></div></div></div>
+        <div class="bar"><div class="row"><span>SVM (untuned)</span><b>0.68 · 0.42</b></div><div class="track"><div class="fill" style="width:68%;--c:var(--ink-3)"></div></div><div class="track"><div class="fill" style="width:42%;--c:var(--red)"></div></div></div>
+      </div>
+      <p class="cap">Gradient-boosted trees win on both metrics. On the untouched test set they score 0.83 accuracy and 0.80 F1. The untuned SVM finishes last, and grid search only partly rescues it. F1 separates the models more than accuracy does. Bars run from 0 to 1.</p>
+      <p class="src">Source: model scores reported in ch. 13 (one random split)</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ CLOSING ============ -->
+<section id="closing">
+  <div class="sec-head">
+    <span class="label">The pattern under every chapter</span>
+    <h2>The melody behind the math</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>Look back over the book and one tune keeps repeating. A model is a way of scoring an example. An error function says how wrong the scores are. Training is a long series of small steps that lower the error: gradient descent, or a trick that amounts to it.</p>
+      <p>Linear regression moves a line toward a house. The perceptron pulls a line over a misclassified alien. Logistic regression also pushes correct points a little further away. A network sends blame backwards through its layers. A boosted tree fits whatever error is left. The pictures change but the procedure stays the same.</p>
+      <p>The second tune is about humility. A model that fits its training data perfectly has proven nothing. Validation data, the model complexity graph and regularisation all exist because the real goal is to do well on data the model hasn't seen yet.</p>
+      <p class="pull" style="margin-top:12px">“Machine learning is common sense, except done by a computer.”</p>
+      <span class="label">Luis Serrano, ch. 1</span>
+    </div>
+    <div class="fig">
+      <h4>Three moves, every model</h4>
+      <div class="recipe">
+        <div class="move"><i>1</i><div><b>Score</b><span>Weights × features + bias. A sigmoid or softmax turns the score into a probability. A tree asks questions instead, and a network chains many scores together.</span></div></div>
+        <div class="move"><i>2</i><div><b>Measure the error</b><span>Absolute or square error for numbers. Perceptron error or log loss for classes. Gini or entropy for tree splits. SVMs add a distance term. Regularisation adds λ × complexity.</span></div></div>
+        <div class="move"><i>3</i><div><b>Take a small step downhill</b><span>Learning rate × gap × feature, repeated over many epochs. Walk down Mount Errorest one foggy step at a time and stop when validation error starts to rise.</span></div></div>
+      </div>
+      <div class="chips">
+        <span class="chip">square trick</span><span class="chip">perceptron trick</span><span class="chip">logistic trick</span><span class="chip">backprop</span><span class="chip">boosting on residuals</span>
+      </div>
+      <p class="cap">Each chip is the same third move, applied to a different model.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">A practical toolkit drawn from the book</span>
+    <h2>Which model when, and how to check it</h2>
+    <p class="lede">The book doesn't end with a decision chart. This one is pieced together from what each chapter says the model is good and bad at, plus the evaluation habits it drills into you.</p>
+  </div>
+
+  <div class="tablecard">
+    <div class="scroll-x">
+      <table class="mt">
+        <thead>
+          <tr><th scope="col">Model</th><th scope="col">Reach for it when</th><th scope="col">Watch out for</th><th scope="col">Key knobs</th><th scope="col">Book example</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Linear regression<small>ch. 3</small></th><td>You predict a number and the relationship looks roughly straight. You want readable weights.</td><td>Curved data underfits, and outliers inflate RMSE.</td><td>Learning rate, epochs, L1/L2 penalty</td><td>House prices, Hyderabad</td></tr>
+          <tr><th scope="row">Polynomial regression<small>ch. 3–4</small></th><td>The numeric target curves.</td><td>High degrees overfit wildly.</td><td>Degree (choose it with the complexity graph), λ</td><td>Parabola-shaped data</td></tr>
+          <tr><th scope="row">Perceptron<small>ch. 5</small></th><td>You need a fast yes/no and a line separates the classes.</td><td>Gives no confidence. Fails on non-linear data such as XOR.</td><td>Learning rate, epochs</td><td>Alien sentiment</td></tr>
+          <tr><th scope="row">Logistic regression<small>ch. 6</small></th><td>A strong first classifier that gives probabilities. Softmax extends it to many classes.</td><td>Still a straight boundary.</td><td>Learning rate, regularisation, decision threshold</td><td>IMDB reviews</td></tr>
+          <tr><th scope="row">Naive Bayes<small>ch. 8</small></th><td>Text or count features, especially with lots of words and little data. It's very fast.</td><td>Assumes features are independent. Its probabilities can be overconfident.</td><td>Smoothing (counts start at 1)</td><td>Spam filter</td></tr>
+          <tr><th scope="row">Decision tree<small>ch. 9</small></th><td>Mixed feature types, you need to explain the decision, the data is non-linear.</td><td>Memorises data if left unrestricted.</td><td>Max depth, min samples per leaf, Gini or entropy</td><td>App recommendations, admissions</td></tr>
+          <tr><th scope="row">Neural network<small>ch. 10</small></th><td>Images, text, sound and other complex patterns, when you have lots of data.</td><td>Overfitting, vanishing gradients, hard to interpret, heavy compute.</td><td>Layers and nodes, activation (ReLU), dropout, learning rate</td><td>Alien happiness, MNIST</td></tr>
+          <tr><th scope="row">SVM + kernel<small>ch. 11</small></th><td>Medium-sized data where a clean margin or curved boundary helps.</td><td>Sensitive to C and gamma, and to feature scaling. Weak with defaults, as on the Titanic.</td><td>C, kernel (polynomial, RBF), gamma</td><td>Circle and XOR datasets</td></tr>
+          <tr><th scope="row">Random forest<small>ch. 12</small></th><td>A robust default for tabular data that's hard to overfit.</td><td>Less interpretable than one tree.</td><td>Number of trees, depth</td><td>Spam boxes</td></tr>
+          <tr><th scope="row">Gradient boosting / XGBoost<small>ch. 12–13</small></th><td>You want the best score on tabular data. It's the usual competition winner.</td><td>Can overfit with too many deep trees. Needs tuning.</td><td>Trees, depth, learning rate, λ, pruning threshold</td><td>Titanic winner (0.83 / 0.80 on test)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Compiled from the chapters, not a table in the book</span></div>
+  </div>
+
+  <div class="toolkit" style="margin-top:28px">
+    <div class="col">
+      <h3>Before training</h3>
+      <ul class="check">
+        <li><span>Plot the data first. The plot often shows which model family fits.</span></li>
+        <li><span>Decide whether this is regression or classification, and which error is worse: a false positive or a false negative.</span></li>
+        <li><span>Drop columns that are mostly empty. Fill the rest with the median or an "unknown" class.</span></li>
+        <li><span>One-hot encode categories, bin awkward numbers, and remove useless features.</span></li>
+        <li><span>Split into training, validation and test sets (60/20/20 or 80/10/10) and lock the test set away.</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>While training</h3>
+      <ul class="check">
+        <li><span>Start with a simple baseline, such as logistic regression or a shallow tree.</span></li>
+        <li><span>Choose hyperparameters on the validation set only, never the test set.</span></li>
+        <li><span>Draw the model complexity graph. When the validation error turns upward, stop.</span></li>
+        <li><span>Prefer regularisation (L1, L2, dropout, depth limits) to bigger models.</span></li>
+        <li><span>Use grid search for the knobs and k-fold cross-validation when data is scarce.</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Judging a model</h3>
+      <ul class="check">
+        <li><span>Don't trust accuracy on imbalanced data. Check what an "always the majority class" model would score.</span></li>
+        <li><span>Read the confusion matrix and see where the mistakes land.</span></li>
+        <li><span>Use recall when misses are costly (disease) and precision when false alarms are costly (spam).</span></li>
+        <li><span>Report F1, or F<sub>β</sub> when one side matters more.</span></li>
+        <li><span>Use the ROC curve and AUC to compare models, then pick the threshold the problem needs.</span></li>
+        <li><span>Touch the test set once. If the model fails there, start over.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Luis G. Serrano, <em>Grokking Machine Learning</em> (Manning, 2021). Numbers and worked examples are as given in the book. All diagrams were redrawn for this page and simplified, so they show the ideas rather than the book's exact figures. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero band: a perceptron line that learns to split two classes --- */
+  var canvas = document.getElementById("split");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+
+  // fixed pseudo-random points in unit space; class depends on a hidden true line
+  var seed = 11;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  var pts = [];
+  for (var i = 0; i < 90; i++) {
+    var x = rnd(), y = rnd();
+    var s = (y - 0.5) - 0.9 * (x - 0.5);   // true boundary: y = 0.5 + 0.9 (x - 0.5)
+    if (Math.abs(s) < 0.06) continue;
+    pts.push([x, y, s > 0 ? 1 : 0]);
+  }
+  // line in unit space: a*x + b*y + c = 0 ; start bad, end at the true boundary
+  var start = { a: 1, b: 0.35, c: -0.42 };
+  var end = { a: -0.9, b: 1, c: -0.05 };
+  function lerp(p, q, t) { return p + (q - p) * t; }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t); }
+
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var cycle = 9000;
+    var t = reduce ? 1 : ease(((time % cycle) / cycle) * 1.6 - 0.15);
+    var L = { a: lerp(start.a, end.a, t), b: lerp(start.b, end.b, t), c: lerp(start.c, end.c, t) };
+    var red = css("--red"), blue = css("--blue"), ink = css("--ink"), ink3 = css("--ink-3");
+    var pad = 8;
+    function X(u) { return pad + u * (w - 2 * pad); }
+    function Y(v) { return hgt - pad - v * (hgt - 2 * pad); }
+    // points
+    pts.forEach(function (p) {
+      var score = L.a * p[0] + L.b * p[1] + L.c;
+      var pred = score >= 0 ? 1 : 0;
+      var wrong = pred !== p[2];
+      ctx.beginPath();
+      ctx.arc(X(p[0]), Y(p[1]), 4.2, 0, Math.PI * 2);
+      ctx.fillStyle = p[2] ? red : blue;
+      ctx.globalAlpha = wrong ? 0.35 : 0.9;
+      ctx.fill();
+      if (wrong) { ctx.globalAlpha = 0.9; ctx.lineWidth = 1.4; ctx.strokeStyle = p[2] ? red : blue; ctx.stroke(); }
+    });
+    ctx.globalAlpha = 1;
+    // line: solve for y at x=0 and x=1 (unit space), handle steep lines
+    var x0 = 0, x1 = 1, y0, y1;
+    if (Math.abs(L.b) > 0.05) {
+      y0 = -(L.a * x0 + L.c) / L.b; y1 = -(L.a * x1 + L.c) / L.b;
+    } else {
+      y0 = 0; y1 = 1; x0 = x1 = -L.c / L.a;
+    }
+    ctx.beginPath();
+    ctx.moveTo(X(x0), Y(y0)); ctx.lineTo(X(x1), Y(y1));
+    ctx.lineWidth = 2.5; ctx.strokeStyle = ink; ctx.stroke();
+    ctx.lineWidth = 1; ctx.strokeStyle = ink3;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(reduce ? 0 : 0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
