@@ -1,0 +1,1209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Ahead of All Parting by Barry Michels – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500..800&family=Caveat:wght@500&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief, same frame as the other pages. Palette from the cover:
+   cream paper, deep navy title type, cobalt contour lines, graphite pencil script.
+   Cobalt = Life Force / opening, graphite = Part X / closing down. */
+:root {
+  --paper: #f5f2ea;
+  --paper-2: #ebe6d9;
+  --card: #fffdf7;
+  --ink: #10213f;
+  --ink-2: #454f5f;
+  --ink-3: #74787e;
+  --rule: #ddd6c6;
+
+  --blue: #2457b0;
+  --blue-2: #6f97d8;
+  --gr: #6a665f;
+
+  --display: "Cinzel", "Trajan Pro", Georgia, serif;
+  --head: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --script: "Caveat", "Segoe Print", cursive;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0c1321;
+    --paper-2: #141d2f;
+    --card: #17223a;
+    --ink: #eef1f6;
+    --ink-2: #b3bccb;
+    --ink-3: #8a94a5;
+    --rule: #27334b;
+    --blue: #7ea8f0;
+    --blue-2: #4d7ed2;
+    --gr: #aaa59c;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0c1321;
+  --paper-2: #141d2f;
+  --card: #17223a;
+  --ink: #eef1f6;
+  --ink-2: #b3bccb;
+  --ink-3: #8a94a5;
+  --rule: #27334b;
+  --blue: #7ea8f0;
+  --blue-2: #4d7ed2;
+  --gr: #aaa59c;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  overflow-x: hidden;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--head); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-blue { --c: var(--blue); }
+.c-gr { --c: var(--gr); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 700; font-size: clamp(24px, 3.2vw, 38px); letter-spacing: .06em; line-height: 1; color: var(--ink); }
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(48px, 9.4vw, 118px);
+  font-weight: 800;
+  line-height: .92;
+  letter-spacing: .01em;
+  color: var(--ink);
+  margin: 12px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--script);
+  font-weight: 500;
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.1;
+  color: var(--gr);
+  margin-top: 20px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 42ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1087;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 25, 60, .35), 0 8px 18px -10px rgba(10, 25, 60, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 140px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 650;
+  line-height: 1.02;
+  letter-spacing: -.015em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 56ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--blue);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-family: var(--display);
+  font-size: clamp(40px, 6.4vw, 84px);
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: .01em;
+  color: var(--blue);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 84px;
+  line-height: .8;
+  color: var(--blue);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.chapter .gutter .label { margin-top: 14px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: -.012em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+  color: var(--ink-2);
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--blue);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--gr);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 21px; font-weight: 650; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 540px; }
+.fig .scroll-x svg.wide { min-width: 760px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-bl { fill: var(--blue); }
+.fig svg text.t-gr { fill: var(--gr); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--head); font-weight: 650; font-size: 16px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 700; font-size: 24px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-bl { stroke: var(--blue); fill: none; }
+.s-bl2 { stroke: var(--blue-2); fill: none; }
+.s-gr { stroke: var(--gr); fill: none; }
+.f-bl { fill: var(--blue); }
+.f-bl2 { fill: var(--blue-2); }
+.f-gr { fill: var(--gr); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-blt { fill: color-mix(in srgb, var(--blue) 14%, var(--card)); }
+.f-grt { fill: color-mix(in srgb, var(--gr) 16%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 700; font-size: 38px; line-height: 1; font-variant-numeric: lining-nums tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--blue); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-family: var(--display); font-size: 24px; font-weight: 700; letter-spacing: .02em; color: var(--blue); line-height: 1.05; }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.map li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px; font-size: 15.5px; line-height: 1.35; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--blue); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.map li b { font-weight: 650; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three-step cards */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-weight: 650; font-size: 18px; line-height: 1.25; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--blue); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--head); font-size: 19px; font-weight: 650; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--blue); }
+.compare .bad h5 { color: var(--gr); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--head);
+  font-weight: 600;
+  font-style: italic;
+  font-size: clamp(26px, 3.2vw, 36px);
+  line-height: 1.18;
+  letter-spacing: -.01em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-family: var(--display); font-size: 24px; font-weight: 700; color: var(--blue); border-top: 2px solid var(--blue); padding-top: 12px; letter-spacing: .02em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-weight: 650; font-size: 17px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 64px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map, .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 30px; }
+  .hero h1 { font-size: clamp(40px, 12.5vw, 60px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Barry Michels · Spiegel &amp; Grau, 2026</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#before">Before</a>
+    <a href="#descent">Descent</a>
+    <a href="#roots">Roots</a>
+    <a href="#outward">Outward</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">Ahead of</p>
+    <h1><span>All</span><span>Parting</span></h1>
+    <p class="sub">On Learning to Live with an Open Heart</p>
+    <p class="dek">A psychotherapist who spent decades teaching people to turn pain into fuel is told he has Lewy body dementia, the disease that killed his father. This memoir is what he did with the time.</p>
+    <div class="byline label">
+      <span>23 chapters</span><span>Memoir, Tools &amp; poems</span><span>~55,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Ahead of All Parting by Barry Michels: on cream paper, the title in deep navy serif capitals above a handwritten pencil subtitle, and a block of cobalt-blue contour lines that rise and fold like a wave or a fingerprint">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="waves"></canvas>
+  <div class="ends label"><span>Holding on</span><span>Letting go</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">What the book is</span>
+    <h2>A diagnosis that opened a closed man</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Barry Michels co-wrote <em>The Tools</em> and <em>Coming Alive</em> with his mentor, the psychiatrist Phil Stutz. Their method is practical: short, repeatable exercises that turn fear, pain and self-doubt into energy for action. Its villain is <strong>Part X</strong>, the inner saboteur that wants to "x you out". Its source of strength is the <strong>Life Force</strong>, the creative current that people have to choose to use.</p>
+      <p>In 2023, at sixty-nine, Michels was diagnosed with Lewy body dementia. He had watched it erase his father and expected five to seven years. About two years later a second diagnosis, Alzheimer's, was added. The book is part memoir, part field report on using his own Tools against a disease that cannot be beaten.</p>
+      <p>What he finds surprises him. A lifelong depressive raised by militant atheists, who hid his feelings from almost everyone, starts telling everyone the truth, writing poetry in the middle of the night, and feeling, without irony, that God is reaching for him. He takes his title from a Rilke sonnet about letting go before you are forced to.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The arc in numbers</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-gr"><span class="big num">5–7 yrs</span><p>The life expectancy Michels was given for Lewy body dementia. He was 69.</p></div>
+        <div class="stat c-blue"><span class="big num">0</span><p>Patients who left after he told them, even when his insurer made each one sign a waiver.</p></div>
+        <div class="stat"><span class="big num">41 hrs</span><p>How long his father went without speaking to him when, at ten, he bet that one word within 24 hours would prove love.</p></div>
+        <div class="stat c-blue"><span class="big num">20</span><p>Poems he read to ten people in a rental living room after the 2025 fires drove the family from home.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">The title</span>
+        <p>Rilke's sonnet asks the reader to be ahead of all parting. Michels reads it as practice: meet each small loss consciously now, so that the last one is not your first lesson in letting go.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:32px">
+    <h4>A life in the book's dates</h4>
+    <div class="scroll-x">
+      <svg class="wide" viewBox="0 0 900 250" role="img" aria-label="Timeline from 1963 to 2025. Above the line, wounds and losses: 1963 he tells a friend's mother there is no God; 1965 Watts riots near his father's factory; 1968 assassinations and upheaval; 1997 his father is diagnosed with Lewy body dementia; March 2020 lockdown at his mother-in-law's; 2023 his own diagnosis; January 2025 fires. Below the line, openings: 1975 Harvard graduation; leaving law for therapy and meeting Phil Stutz; 2011 begins work with Drew Barrymore; 2017 Coming Alive; May 2020 first online Shadow workshop; 2024 Drew's show and first poetry reading; 2025 readings for 10 and about 40 people.">
+        <g id="tl"></g>
+      </svg>
+    </div>
+    <div class="legend"><span><i style="--c:var(--gr)"></i>losses and closings</span><span><i style="--c:var(--blue)"></i>openings</span></div>
+    <p class="cap">Only dates the book states are placed. The move from law to therapy and the synagogue morning are left undated because the book gives no year.</p>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Ch. 1–4</span>
+      <h3>Before</h3>
+      <p class="q">Signs ignored, a marriage freezing</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Tremors</b>A teacher who can't take his own advice</a></li>
+        <li><span>02</span><a href="#ch2"><b>Lockdown</b>Three people, one small flat</a></li>
+        <li><span>03</span><a href="#ch3"><b>The Shadow</b>An angry fourteen-year-old</a></li>
+        <li><span>04</span><a href="#ch4"><b>The Genius of Part X</b>Avoidance as a gas leak</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Ch. 5–10</span>
+      <h3>Descent</h3>
+      <p class="q">The diagnosis, and what rose out of it</p>
+      <ol>
+        <li><span>05</span><a href="#ch5"><b>Lost</b>Hawaii, a GPS, a verdict</a></li>
+        <li><span>06</span><a href="#ch6"><b>Searching for Meaning</b>Journal, rage, beauty</a></li>
+        <li><span>07</span><a href="#ch7"><b>Death Dance with the Divine</b>A midnight poem</a></li>
+        <li><span>08</span><a href="#ch8"><b>Prayer</b>The secret prayers of an atheist's son</a></li>
+        <li><span>09</span><a href="#ch9"><b>For My Father</b>A night at the helm</a></li>
+        <li><span>10</span><a href="#ch10"><b>Beauty, Pain, and Creation</b>"Your thing is higher"</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Ch. 11–15</span>
+      <h3>Roots</h3>
+      <p class="q">Why the walls went up, and what lifts them</p>
+      <ol>
+        <li><span>11</span><a href="#ch11"><b>The Incident</b>A mother who crossed every line</a></li>
+        <li><span>12</span><a href="#ch12"><b>Higher Forces</b>From law firm to therapy</a></li>
+        <li><span>13</span><a href="#ch13"><b>Rilke</b>Practising the small deaths</a></li>
+        <li><span>14</span><a href="#ch14"><b>Outflow</b>Give, and find you have more</a></li>
+        <li><span>15</span><a href="#ch15"><b>Communion</b>What judgments are for</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Ch. 16–23</span>
+      <h3>Outward</h3>
+      <p class="q">Living it in front of others</p>
+      <ol>
+        <li><span>16</span><a href="#ch16"><b>Walking the Path</b>A second diagnosis</a></li>
+        <li><span>17</span><a href="#ch17"><b>Drew</b>A patient who reached back</a></li>
+        <li><span>18</span><a href="#ch18"><b>Rudolf Steiner</b>A God who evolves</a></li>
+        <li><span>19</span><a href="#ch19"><b>Fatherhood</b>Truth with his children</a></li>
+        <li><span>20</span><a href="#ch20"><b>Fire</b>Evacuation, and a reading</a></li>
+        <li><span>21</span><a href="#ch21"><b>Two Sermons</b>Advice for rabbis</a></li>
+        <li><span>22</span><a href="#ch22"><b>Four Poems</b>Tired, exiled, still singing</a></li>
+        <li><span>23</span><a href="#ch23"><b>To You, My Reader</b>Testimony, not doctrine</a></li>
+      </ol>
+    </div>
+  </div>
+  <p class="label" style="margin-top:16px">The book has no parts. The four groupings are mine, for navigation.</p>
+</section>
+
+<!-- ============ I · BEFORE ============ -->
+<div class="part" id="before">
+  <span class="label partno">I · Chapters 1–4</span>
+  <h2>Before</h2>
+  <p class="lede">In 2019 Michels is at the top of his field and quietly losing a fight with his own darkness. A tremor appears. The pandemic traps him, his wife and her mother together, and he retreats into work.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Tremors</span></div>
+  <div class="body">
+    <div>
+      <h3>The expert who froze on stage</h3>
+      <p class="idea">The Tools worked for thousands of other people, but they never quieted the voice telling Michels he was a fraud.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Costa Rica, 2019.</strong> At an Omega Institute retreat his right hand shakes before a workshop. He blames nerves: he has always dreaded speaking without a script. Once he starts working with a volunteer, the fear goes.</li>
+      <li><strong>Cosmic Rage, demonstrated.</strong> A man named Norman is obsessed with a brother-in-law who undermines him in the family laundromat business. Michels has him picture a dark force around the man and rage at the <em>force</em>, not the person. Norman ends up calm.</li>
+      <li><strong>How he got here.</strong> A lawyer turned therapist, he met Stutz when Stutz bluntly stopped his domineering mother mid-flow at a family session.</li>
+      <li><strong>Defy, don't silence.</strong> A screenwriter paralysed by perfectionism was told to write the worst sentence he could. Bad sentences led to good ones, and the finished script won an Academy Award.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Part X's moves, and the Tool for each</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 372" role="img" aria-label="Diagram pairing six tactics of Part X with the Tool the book uses against each. Fixating on someone who wronged you, answered by Cosmic Rage. Avoiding what scares you, answered by Reversal of Desire. Resentment and self-loathing loops, answered by Active Love. Complaint, answered by Grateful Flow. Believing there is endless time, answered by Jeopardy. Hoarding your energy, answered by Outflow.">
+          <text x="20" y="22" class="hd">Part X says…</text>
+          <text x="340" y="22" class="hd">The Tool answers</text>
+          <g id="px"></g>
+          <text x="20" y="362" class="t-3" style="font-size:11px">Each Tool is a short exercise, repeated whenever Part X shows up.</text>
+        </svg>
+      </div>
+      <p class="cap">The Tools don't aim to get rid of Part X. In the book it is always there, and each use of a Tool wins back a little access to the Life Force.</p>
+      <p class="src">Drawn from chs. 1, 4, 6, 14 and 17</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Lockdown</span></div>
+  <div class="body">
+    <div>
+      <h3>A velvet cage, then a real one</h3>
+      <p class="idea">He resisted a home renovation because he wanted insulation, not peace. Then the pandemic closed the door behind him.</p>
+    </div>
+    <ul class="points">
+      <li><strong>March 13, 2020.</strong> He and Judy, also a psychologist, move into her mother Joan's apartment for what is supposed to be a three-month renovation. Six days later California orders everyone to stay home, and work on the house stalls.</li>
+      <li><strong>Close quarters.</strong> They see patients on Zoom from a bedroom and a den and have to time bathroom visits so no patient hears a flush. Joan is 86 and at high risk, so every walk becomes a negotiation.</li>
+      <li><strong>An old darkness returns.</strong> Michels has had depressive episodes since adolescence. His paternal grandfather died by suicide, and his mother often threatened it. Now he fixates on the apartment's unscreened twelfth-floor windows. His handwriting turns into a scrawl.</li>
+      <li><strong>Shadow workshops.</strong> Hearing from isolated patients and strangers, he starts online workshops on Jung's Shadow, the parts of ourselves we disown. The first, in May 2020, has a few dozen people; a month later, nearly 150.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">The Shadow</span></div>
+  <div class="body">
+    <div>
+      <h3>The boy who told him off</h3>
+      <p class="idea">The Shadow isn't a concept. It's an exiled part of you that is still waiting, often angrily, for you to come back.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A daily visit.</strong> In a bleak stretch in his mid-forties, Michels began picturing himself at fourteen and asking the boy what he needed. Eventually the boy swore at him and accused him of coming only to ease his own misery. Michels admitted it, and the dialogue opened.</li>
+      <li><strong>1968.</strong> The boy took him back to that year: the Tet Offensive on the nightly news, the killings of Martin Luther King Jr. and Robert Kennedy, and police beating demonstrators in Chicago.</li>
+      <li><strong>The Light.</strong> The Shadow's account was that before all that, a child's world was lit by something ancient and warm, and the boy let it go out. Michels accepts the verdict: there were reasons, but no excuses.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">The Genius of Part X</span></div>
+  <div class="body">
+    <div>
+      <h3>Avoidance dressed up as important work</h3>
+      <p class="idea">Part X didn't make him lazy. It made him busy, superior and unreachable.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Back home, further apart.</strong> They return to the renovated house in July 2020. He hides in his studio over the garage, sees 40 to 50 patients a week, and cries to post-punk hardcore. Part X tells him Judy's worry is poison.</li>
+      <li><strong>Reversal of Desire, misfired.</strong> The Tool means moving toward what you fear. He pictures Judy, says "bring it on", then storms downstairs and tells her he is miserable and feels trapped by her.</li>
+      <li><strong>She names it.</strong> Judy brings up the shaking hand, the cramps, the memory lapses and the outbursts. He deflects with a trip to Hawaii.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ II · DESCENT ============ -->
+<div class="part" id="descent">
+  <span class="label partno">II · Chapters 5–10</span>
+  <h2>Descent</h2>
+  <p class="lede">A trip goes wrong, tests confirm the worst, and Michels is surprised by what follows: a flood of calls, beauty, prayer and poetry, with his father's death in the background.</p>
+</div>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Lost</span></div>
+  <div class="body">
+    <div>
+      <h3>The man who never got lost, lost</h3>
+      <p class="idea">The diagnosis felt like a guillotine, so he did the least characteristic thing possible and told everyone.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Hawaii, 2023.</strong> On the Kona coast he feels sealed in a bubble, can't find his hotel room, and even the ocean, his lifelong refuge, feels muted. Returning the rental car, his GPS takes him to a strip mall and he panics.</li>
+      <li><strong>The tests.</strong> Judy makes the call he can't. The tests include a skin biopsy that checks the nerves for an abnormal protein, phosphorylated alpha-synuclein. A doctor who keeps her eyes on her screen gives the result: Lewy body dementia.</li>
+      <li><strong>Be real with us.</strong> He tries to soften the news for his children. His son Jesse tells him they need honesty, not reassurance.</li>
+      <li><strong>Phil's orders.</strong> Stutz, who had lived with Parkinson's for nearly two decades, tells him to treat this as karma and study his own psyche, write every night, exercise, and stop pretending that coping alone is noble.</li>
+      <li><strong>The calls.</strong> That night he works through his contacts, starting with his college friend Steve Motenko. He feels energised, not drained, and decides to live this in the open.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>What Lewy body dementia takes, as Michels watched it in his father</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 236" role="img" aria-label="A sequence of four stages as the book describes the disease in his father: first psychiatric signs such as mood swings and depression, then memory, then language, then even the meaning of gestures. Running along the whole course: hallucinations, sleep disturbance, anxiety and violent mood swings. Below, the life expectancy he was given: five to seven years.">
+          <g id="lbd"></g>
+        </svg>
+      </div>
+      <p class="cap">The order follows Michels's description of his father's decline, not a clinical staging. He adds that LBD can hit memory, perception and impulse control at once (ch. 12). The later Alzheimer's diagnosis added a slow fog on top of what he calls the Lewy "storm" (ch. 16).</p>
+      <p class="src">Chs. 5, 12, 16</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Searching for Meaning</span></div>
+  <div class="body">
+    <div>
+      <h3>A journal that reports back</h3>
+      <p class="idea">He decided the suffering had a direction, and that ending his life would abandon the process that was shaping him.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Patients stay.</strong> He tells every patient. The malpractice insurer requires waivers, and not one patient refuses to sign.</li>
+      <li><strong>Rage, then record.</strong> When despair hits, he uses Cosmic Rage to push it back and clear what Stutz calls the "I Am" space, where you are free to be yourself. Then he writes the win down, because otherwise Part X erases the memory of it.</li>
+      <li><strong>Beauty adds up.</strong> Twice-daily walks on the hillside stairs train his attention: a puddle, frogs, lichen. He recalls Viktor Frankl in the camps, sustained by a light in a distant farmhouse. Max Richter's <em>Three Worlds</em> lets him grieve.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Death Dance with the Divine</span></div>
+  <div class="body">
+    <div>
+      <h3>Orpheus, read differently</h3>
+      <p class="idea">Within a week of the diagnosis, the man of boundaries wrote about dancing with God.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The myth.</strong> Orpheus looks back and loses Eurydice. Most readers see a failure of faith. Michels also sees a love so strong he would rather have stayed in the underworld. For him Eurydice stands for the creative muse he now has to find quickly.</li>
+      <li><strong>The prose poem.</strong> Writing at night to the Richter piece, he describes an image that came to him unbidden: a single dance by candlelight, given to God with nothing held back. Its message is that God cares less about <em>what</em> you do than about how fully you do it.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Prayer</span></div>
+  <div class="body">
+    <div>
+      <h3>The sleepover debate</h3>
+      <p class="idea">At nine he won an argument against God for his parents, and afterwards started praying in secret.</p>
+    </div>
+    <ul class="points">
+      <li><strong>1963.</strong> At a friend's house he refuses to say the Lord's Prayer and lectures the boy's mother that life has no purpose. His atheist parents are thrilled. He feels like a hypocrite and senses God asking why he drove one of his flock away.</li>
+      <li><strong>Underground prayer.</strong> He kneels again, watching the door, asking only to be seen and not abandoned. His mother would have treated it as betrayal.</li>
+      <li><strong>The mother he feared.</strong> Brilliant and volatile, she punished him by withdrawing for days. He became the clairvoyant good boy who sensed her needs before she spoke them.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">For My Father</span></div>
+  <div class="body">
+    <div>
+      <h3>Taking the helm</h3>
+      <p class="idea">His silent father spoke through sailing, and the same disease Michels now has finally let him speak in words.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A wound passed down.</strong> When his father was seventeen, his own father warned he would kill himself, then did it a week later. His son found him. The Jewish community refused a Jewish burial and shunned the family. He moved his mother and sister to Los Angeles and became a staunch atheist.</li>
+            <li><strong>Catalina.</strong> At thirteen his father handed him the wheel of their forty-foot sloop at night and went below to sleep for four hours. Under a full moon, Barry felt he had received a kind of bar mitzvah.</li>
+      <li><strong>The confession.</strong> His father was diagnosed with Lewy body dementia in 1997. Watching Barry with five-year-old Jesse, the disinhibited father said he had loved his son so much it frightened him, because he feared leaving him as his own father had. He said he was grateful for the disease.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Beauty, Pain, and Creation</span></div>
+  <div class="body">
+    <div>
+      <h3>Insight by day, demons by night</h3>
+      <p class="idea">The same disease that wrecked his moods seemed to thin the veil, in sessions and on the page.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Words through him.</strong> In sessions, precise intuitions arrive, such as a prompt to ask a client about her son, and they work. Nights bring exhaustion, 3 a.m. waking and violent mood swings.</li>
+      <li><strong>Poems to the Shadow.</strong> He realises his catastrophic projections are terrifying his Shadow. One poem resolves not to fix the Shadow's pain but to sit beside it so it isn't felt alone.</li>
+      <li><strong>Phil's verdict.</strong> After months he shows Stutz the poems. Stutz says this work is on a higher plane than anything they have done, that no one is better than him, and that he should treat even the depression as positive, demand more of himself.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"We're not looking for this to feel good, we're looking for meaning."</blockquote>
+      <span class="label">Phil Stutz to Michels, on the poems</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ III · ROOTS ============ -->
+<div class="part" id="roots">
+  <span class="label partno">III · Chapters 11–15</span>
+  <h2>Roots</h2>
+  <p class="lede">The book turns to the event that sealed his atheism, the career that nearly buried him, and the practices that, years later, helped him open again.</p>
+</div>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">The Incident</span></div>
+  <div class="body">
+    <div>
+      <h3>The night the walls went up</h3>
+      <p class="idea">One act of abuse at fifteen convinced him that no one, God included, was on his side. Imagination, shared with a friend, kept a door open.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Worlds with Steve.</strong> From seventh grade he and Steve Kivelson invented Middle-earth characters and later spy and post-nuclear stories, staying in role for days. They kept it up into their thirties.</li>
+      <li><strong>A mother without boundaries.</strong> She confided her sexual frustrations to her adolescent son at night and demanded displays of affection.</li>
+      <li><strong>The incident.</strong> When he was about fifteen she came to his room and staged a "role-play" in which she tried to seduce him so he could practise refusing. He dissociated and felt marked for life. Afterwards he stopped praying, decided God was untrustworthy, and shut his heart.</li>
+      <li><strong>Poems later.</strong> LBD brought poems for both: one sees his mother alone at the piano at midnight, too damaged to help; one thanks Steve for being a soul brother in those games.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Higher Forces</span></div>
+  <div class="body">
+    <div>
+      <h3>When the guardrails broke upward</h3>
+      <p class="idea">Dementia can release reckless impulses. In Michels, so far, what came loose was the urge to love and to say so.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Losses.</strong> Tremors, cramps, poor balance, forgotten conversations, and a phone screen he can no longer work. He can't drive, which in Los Angeles means giving up independence.</li>
+      <li><strong>The curated self.</strong> Shame about his family made him secretive. He brushed off a kind teacher who asked if he was all right, kept girlfriends at a distance, and let only Steve Motenko, his partner in a college doo-wop group, see his depression.</li>
+      <li><strong>Escaping the law.</strong> After graduating in 1975 and interning for Congressman Les Aspin, he drifted into Berkeley Law and a corporate firm. His top achievement was merging three pickle companies, for which he was given a jar of pickles. One morning, seeing his reflection among the grey suits outside, he felt a new force push him upstairs to quit.</li>
+      <li><strong>Phil's frame.</strong> After a lonely spell in Tunisia he trained at USC. Stutz offered homework, forward motion, and Higher Forces you experience rather than believe in.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Rilke</span></div>
+  <div class="body">
+    <div>
+      <h3>God doesn't care about my mind</h3>
+      <p class="idea">When his memory failed, Michels concluded that what was being asked of him was not intellect but an open heart.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A forgotten fall.</strong> Judy asks why the manuscript leaves out her knee giving way in Hawaii. He can't remember it. Then he loses his notes and collapses.</li>
+      <li><strong>Rilke's life.</strong> Born in Prague in 1875, once Rodin's secretary, he died of leukaemia at 51, refusing pain relief because he held suffering sacred.</li>
+      <li><strong>The poems he leans on.</strong> One Rilke poem imagines losing sight, hearing, limbs and even the heart, and still reaching for the beloved with whatever is left. Michels feels he is living that poem.</li>
+      <li><strong>Ahead of parting.</strong> The book's title comes from Rilke's sonnet. Michels reads it this way: death runs through life, every lost expectation is a small death for the ego, and practising those consciously prepares you for the last one.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">Outflow</span></div>
+  <div class="body">
+    <div>
+      <h3>The sun in the chest</h3>
+      <p class="idea">The Tool he uses most: give without holding back, because the energy comes through you, not from you.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The exercise.</strong> Picture a brilliant sun in your chest and send its light outward in widening circles: to people you love, to people you barely know, then to everyone and everything, including people you despise.</li>
+      <li><strong>The driveway test.</strong> Years ago, drained after work, he did it in the parked car, then walked in and played with his children as if rested.</li>
+      <li><strong>Off script.</strong> For decades he read workshops word for word. LBD made long reading hard, and a voice said that if he was dying he wanted to speak freely. Prepared with Outflow, he improvised, and people said he seemed deeper.</li>
+      <li><strong>New friends, old secrets.</strong> In 2024 he met Jordan Roberts, an Oscar-winning screenwriter moving into coaching. At 71 Michels spent an hour and a half with him in a batting cage. At Omega in Rhinebeck he told the story of the incident in public for the first time, and a woman thanked him for making it possible for her to speak about incest in her own family.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Outflow: where the energy goes, and where it comes from</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 330" role="img" aria-label="Left: a sun at the centre of three concentric rings: people you love, people you know casually, and everyone and everything, liked or despised. An arrow from above enters the sun labelled 'through you, not from you'. Right, illustrative: physical stamina falls as you spend it, while Outflow, as the book claims, rises the more you give.">
+          <g id="of"></g>
+        </svg>
+      </div>
+      <p class="cap">The rings follow the order of the exercise in the book. The two small curves are illustrative, not data. They show Michels's claim that Outflow draws on a spiritual source that grows with giving, unlike physical stamina.</p>
+      <p class="src">Ch. 14; restated in ch. 23</p>
+    </div>
+
+    <div class="fig">
+      <h4>His morning prayer, as five working rules</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 214" role="img" aria-label="A five-step staircase. Step one: keep moving, one foot after the other. Two: don't look too far ahead, where Part X waits with worst cases. Three: look for God in tiny steps. Four: every step links to every other. Five: the self exists only while you keep moving.">
+          <g id="steps"></g>
+        </svg>
+      </div>
+      <p class="cap">Paraphrased from the five-line prayer he says came to him and now says every morning. His gloss on the last line is the most radical: the self is spirit rather than a fixed object, so you only know it while you move forward.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Communion</span></div>
+  <div class="body">
+    <div>
+      <h3>Watch what your judgments do, not what they say</h3>
+      <p class="idea">About twenty years before the illness, a sulky morning at synagogue gave him a glimpse of what participating could feel like.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The reluctant husband.</strong> Judy grew up observant; her father was an ordained rabbi. Michels kept her kosher kitchen perfectly but felt nothing.</li>
+      <li><strong>A Saturday service.</strong> After a fight in the car he sat with his prayer book shut, mocking jewellery, clothes and an old man's off-key singing, and cursing God for his grandfather and his mother. An inner voice asked what his judgments were doing to him.</li>
+      <li><strong>Participate.</strong> He opened the book and sang, and every time he wanted to withdraw he told himself to participate. He wept. The opening didn't last; the lesson did.</li>
+    </ul>
+
+    <div class="compare">
+      <div class="bad"><h5>A judgment's content</h5><ul><li>"Too much jewellery." "Terrible voice." "Hypocrites."</li><li>Feels important and often seems correct</li><li>Keeps attention on other people</li></ul></div>
+      <div class="good"><h5>A judgment's function</h5><ul><li>Separates you from the community</li><li>Separates you from God, since what you indict is part of creation</li><li>Gives you an excuse not to take part in something that might expand you</li></ul></div>
+    </div>
+
+    <div class="kinds">
+      <div><span class="label">Exposure · 1</span><b>Name the possession</b><span>When your partner is taken over by Part X, tell yourself it's a destructive part of them, not the whole person.</span></div>
+      <div><span class="label">Exposure · 2</span><b>Drop responsibility</b><span>Remind yourself you didn't cause it and can't fix it.</span></div>
+      <div><span class="label">Exposure · 3</span><b>Drop expectations</b><span>Expect no empathy, validation or truth while it lasts. Then their Part X can't set off yours.</span></div>
+    </div>
+    <p class="cap muted" style="font-size:15px;max-width:72ch">Exposure is Stutz's Tool for marriages. Michels says his Part X (a craving for freedom) and Judy's (self-doubt that seeks reassurance) lock together.</p>
+  </div>
+</article>
+
+<!-- ============ IV · OUTWARD ============ -->
+<div class="part" id="outward">
+  <span class="label partno">IV · Chapters 16–23</span>
+  <h2>Outward</h2>
+  <p class="lede">The illness worsens and Los Angeles burns, but he says yes to television, readings, his children's hard questions and two rabbis. The book ends by speaking straight to the reader.</p>
+</div>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Walking the Path</span></div>
+  <div class="body">
+    <div>
+      <h3>Overheard: "He also has Alzheimer's"</h3>
+      <p class="idea">Transformation is not a switch. It's showing up, day after day, for work that is often boring.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The phone left on.</strong> About two years in, waiting for Judy at a hospital, he hears her tell a nurse he has Alzheimer's too. His doctor had advised keeping it from him during a depression. He makes them promise never to withhold again.</li>
+      <li><strong>Raised stakes.</strong> Oddly, the news ends his depressive spiral. He insists that his capacity for love won't go anywhere until God says otherwise.</li>
+      <li><strong>Do the work.</strong> A patient with back pain wonders whether God is pushing him to lose forty pounds and asks why he can't feel God's presence yet. Michels tells him, bluntly, to stop asking for rewards. AA's "one day at a time" is his model.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">Drew</span></div>
+  <div class="body">
+    <div>
+      <h3>When the patient steadies the therapist</h3>
+      <p class="idea">The roles of helper and helped turned out to be thinner than he thought.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Public by her choice.</strong> He writes about Drew Barrymore only because she has spoken publicly about their work. They began in 2011. After her 2016 divorce she was drinking again, and he ended therapy until she got sober. She thanked him, got sober, and came back two years later.</li>
+      <li><strong>Vulnerability on air.</strong> After interviewing Jennifer Garner, Barrymore told her audience she had been spiralling in comparison. Michels calls this Shadow work in its purest form.</li>
+      <li><strong>Early 2024.</strong> A few months after his diagnosis she invited him onto her show. He worked with a volunteer, spoke openly about LBD, and she told him he had saved her life.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">Rudolf Steiner</span></div>
+  <div class="body">
+    <div>
+      <h3>A God you grow toward</h3>
+      <p class="idea">Steiner gave a dogma-allergic man a God who is alive, evolving, and changed by human growth.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Steiner's God.</strong> Human consciousness is a small whirlpool in a divine ocean, and each shapes the other. Steiner read the Exodus and God's "I am" as the moment humans learned to meet the divine freely and as separate selves.</li>
+      <li><strong>Why "he".</strong> Asked by Judy, Michels says that near death God feels like Father Time, the one who sets the limits.</li>
+      <li><strong>The blank.</strong> Some days there is "no one home". His answer is to reach up with the heart, not the mind.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch19">
+  <div class="gutter"><span class="chno">19</span><span class="label">Fatherhood</span></div>
+  <div class="body">
+    <div>
+      <h3>Saying the true thing to your children</h3>
+      <p class="idea">He had feared that openness would drive his children away, as his mother's had driven him. They wanted more of it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Two children, two misses.</strong> Hana, oppositional and very funny, went from stand-up comedy to life coaching and joined the Tools community. Jesse, like him, needed limits his permissive father found hard to set.</li>
+      <li><strong>An old poem.</strong> He finds a raw piece he wrote years ago about a night of rage at twelve-year-old Hana, and about his mother's poison coming out of him. He reads it to her by phone.</li>
+      <li><strong>What she says.</strong> Hana describes growing up with two therapist parents, feeling like the family's "odd one", and quietly acting as peacekeeper. She isn't blaming them. He couldn't have said this to his own parents.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch20">
+  <div class="gutter"><span class="chno">20</span><span class="label">Fire</span></div>
+  <div class="body">
+    <div>
+      <h3>Readings, interrupted by a firestorm</h3>
+      <p class="idea">Disruption is cruel to a failing brain. Poetry still found him a place to stand.</p>
+    </div>
+    <ul class="points">
+      <li><strong>First reading.</strong> In December 2024 Jordan Roberts got him onto a bill of six poets at the Ruskin Group Theatre. He read four poems and warned the audience he might cry.</li>
+      <li><strong>January 2025.</strong> Days before that reading, Jesse bangs on the door: they are under evacuation orders, with flames on the ridge. Their house survives, smoke-damaged. In a rental he puts an electric kettle on the stove.</li>
+      <li><strong>Small rooms.</strong> In March, ten people gathered in a rental living room and he read twenty poems. A month later about forty came to the Miles Playhouse, including his doctor. Hana asked why it had taken him so long. He answered that it took the diagnosis, and apologised that it had.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch21">
+  <div class="gutter"><span class="chno">21</span><span class="label">Two Sermons</span></div>
+  <div class="body">
+    <div>
+      <h3>Advice for an anxious congregation</h3>
+      <p class="idea">The man who hated services ended up shaping two High Holiday sermons.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Procrastination as denial of death.</strong> Rabbi Naomi Levy built her Yom Kippur sermon around an idea he gave her years earlier: we put things off because we act as if time won't run out.</li>
+      <li><strong>Letter to Ed.</strong> Rabbi Ed Feinstein asks what to tell a community anxious about the state of the world. Michels's reply: facing evil is an honour, complaining about evil does its work for it, and he himself, losing his mind and crying every day, is still giving everything he has.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch22">
+  <div class="gutter"><span class="chno">22</span><span class="label">Four Poems</span></div>
+  <div class="body">
+    <div>
+      <h3>Tears as daily weather</h3>
+      <p class="idea">A man who barely cried as an adult now cries every day, and these four poems come from that.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Can I Leave?</strong> On a walk, looking tenderly at the world, he feels it giving him permission to go. He loves it too much to want to, but his bones are tired.</li>
+      <li><strong>He Is in Exile.</strong> A boy lives in a world full of the sacred, loses it overnight, and spends the rest of his life missing it.</li>
+      <li><strong>Only Then Am I a Man.</strong> A chain of conditions, from silence to words that reach someone.</li>
+      <li><strong>Giving Birth to God.</strong> Part X will always knock happiness down, and you build it again knowing it will fall. Tears become seeds.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch23">
+  <div class="gutter"><span class="chno">23</span><span class="label">To You, My Reader</span></div>
+  <div class="body">
+    <div>
+      <h3>Love is something to allow</h3>
+      <p class="idea">He published while he still could, offering what he learned as testimony, not doctrine.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Surrender.</strong> The disease took his body, then his intellect, then his sense of self. He calls that surrender the start of redemption.</li>
+      <li><strong>Yearning is sacred.</strong> Approached intellectually, God was absent. Approached from the broken, unguarded part of him, God was immediately there. Admitting you're incomplete is the key to intimacy with God and with people.</li>
+      <li><strong>Trauma isn't destiny.</strong> As a therapist he rejects the idea that early wounds define us forever. They can heal, he argues, through contact with something larger than the wound. For him that is God's love.</li>
+      <li><strong>His closing counsel.</strong> Let go of needing to know. Don't be ashamed of longing. Give without keeping score. Dance and cry when the moment calls for it. Each surrender is a way in.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Surrender is the beginning of redemption."</blockquote>
+      <span class="label">Barry Michels, ch. 23</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Michels writes for readers who aren't dying too: you don't have to wait for death to start. These are the practices the book keeps coming back to.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Facing the dark</h3>
+      <div class="tk"><b>Rage at the force, not the person</b><span>Cosmic Rage: picture the hostility as an impersonal dark force and push it away with full force. Then write the victory down.</span></div>
+      <div class="tk"><b>Move toward what you avoid</b><span>Reversal of Desire: picture the dreaded thing, say "bring it on", and go through it. Avoidance spreads quietly, like gas from a leak.</span></div>
+      <div class="tk"><b>Turn toward your Shadow</b><span>Talk to the disowned part of you, for example yourself at fourteen, and expect it to be angry at first.</span></div>
+    </div>
+    <div class="col">
+      <h3>Opening the heart</h3>
+      <div class="tk"><b>Run Outflow before you walk in</b><span>Picture a sun in your chest, send its light out in widening circles, then enter the room. "Outflow is not depletion; it's replenishment."</span></div>
+      <div class="tk"><b>Ask what your judgments do</b><span>Ignore what they say. If they keep you apart, put them down and take part.</span></div>
+      <div class="tk"><b>Use Exposure in conflict</b><span>Name your partner's Part X, accept you can't fix it, and stop expecting anything from it while it lasts.</span></div>
+      <div class="tk"><b>Tell the true thing</b><span>Start small, choose people who aren't volatile, and let them help you. Coping alone isn't noble.</span></div>
+    </div>
+    <div class="col">
+      <h3>Living with an ending</h3>
+      <div class="tk"><b>Practise small partings</b><span>Treat each lost expectation as a rehearsal for letting go, as Rilke's sonnet suggests.</span></div>
+      <div class="tk"><b>Write every night</b><span>Look for meaning in frightening events before fear tells the story for you.</span></div>
+      <div class="tk"><b>Let beauty build up</b><span>Walk daily and notice small things. Let sad music help you grieve.</span></div>
+      <div class="tk"><b>Take the next step only</b><span>Don't look too far ahead. Sense of self, Michels argues, comes from the will to keep moving.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Barry Michels, <em>Ahead of All Parting: On Learning to Live with an Open Heart</em> (Spiegel &amp; Grau, 2026). Figures are as reported in the book. Poems by the author and by Rilke are described, not reproduced. The timeline and Outflow diagrams were drawn for this page; the two small Outflow curves are illustrative only. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function tx(parent, x, y, s, cls, extra) {
+    var a = { x: x, y: y };
+    if (cls) a["class"] = cls;
+    for (var k in extra || {}) a[k] = extra[k];
+    var t = el("text", a, parent); t.textContent = s; return t;
+  }
+
+  /* --- Timeline 1963–2025: 1960–2010 compressed, 2010–2026 stretched --- */
+  var tl = document.getElementById("tl");
+  if (tl) {
+    var x0 = 40, xb = 420, x1 = 870, y = 128;
+    var X = function (yr) { return yr <= 2010 ? x0 + (yr - 1960) / 50 * (xb - x0) : xb + 12 + (yr - 2010) / 16 * (x1 - xb - 12); };
+    el("line", { x1: x0, y1: y, x2: xb, y2: y, "class": "s-2", "stroke-width": 1.5 }, tl);
+    el("line", { x1: xb + 12, y1: y, x2: x1, y2: y, "class": "s-2", "stroke-width": 1.5 }, tl);
+    el("path", { d: "M" + (xb - 3) + " " + (y + 7) + " l6 -14 M" + (xb + 9) + " " + (y + 7) + " l6 -14", "class": "s-3" }, tl);
+    [1960, 1970, 1980, 1990, 2000, 2010, 2015, 2020, 2025].forEach(function (d) {
+      var xx = d === 2010 ? xb : X(d);
+      el("line", { x1: xx, y1: y - 4, x2: xx, y2: y + 4, "class": "s-3" }, tl);
+      tx(tl, xx, y + 18, String(d), "t-3", { "text-anchor": "middle", style: "font-size:11px" });
+    });
+    /* [year, label, row y, anchor] — rows ordered so no leader line crosses a label */
+    var up = [
+      [1963, "1963 · \"there is no God\"", 30, "start"],
+      [1965.6, "1965 · Watts riots", 52, "start"],
+      [1968.3, "1968 · the Light goes out", 74, "start"],
+      [1997, "1997 · father's LBD", 52, "start"],
+      [2020.2, "2020 · lockdown", 74, "end"],
+      [2023.5, "2023 · his LBD", 52, "end"],
+      [2025.05, "2025 · fires", 30, "end"]
+    ];
+    var down = [
+      [1975, "1975 · Harvard", 168, "start"],
+      [2011, "2011 · Drew", 168, "end"],
+      [2017, "2017 · Coming Alive", 190, "end"],
+      [2020.4, "May 2020 · workshops", 212, "end"],
+      [2024.6, "2024–25 · TV, readings", 234, "end"]
+    ];
+    function mark(list, above) {
+      list.forEach(function (m) {
+        var x = X(m[0]), ty = m[2];
+        el("line", { x1: x, y1: y, x2: x, y2: above ? ty + 6 : ty - 14, "class": above ? "s-gr" : "s-bl", "stroke-width": 1 }, tl);
+        el("circle", { cx: x, cy: y, r: 4.5, "class": above ? "f-gr" : "f-bl" }, tl);
+        tx(tl, m[3] === "end" ? x + 4 : x - 4, ty, m[1], above ? "t-gr" : "t-bl", { "text-anchor": m[3], style: "font-size:12px" });
+      });
+    }
+    mark(up, true); mark(down, false);
+  }
+
+  /* --- Part X vs Tools --- */
+  var px = document.getElementById("px");
+  if (px) {
+    var rows = [
+      ["Obsess over who wronged you", "Cosmic Rage", "rage at the force, not the person"],
+      ["Avoid what scares you", "Reversal of Desire", "move toward the pain: \"bring it on\""],
+      ["Loop in resentment, self-loathing", "Active Love", "generate love when least available"],
+      ["Complain", "Grateful Flow", "restore perspective"],
+      ["There's all the time in the world", "Jeopardy", "every moment counts"],
+      ["Save yourself, hold back", "Outflow", "give, and find you have more"]
+    ];
+    rows.forEach(function (r, i) {
+      var yy = 40 + i * 52;
+      el("rect", { x: 20, y: yy, width: 270, height: 40, rx: 20, "class": "f-grt s-gr", "stroke-width": 1 }, px);
+      tx(px, 38, yy + 25, r[0], "t-ink", { style: "font-size:12.5px" });
+      el("path", { d: "M296 " + (yy + 20) + " H330", "class": "s-bl", "stroke-width": 1.6 }, px);
+      el("path", { d: "M324 " + (yy + 14) + " L331 " + (yy + 20) + " L324 " + (yy + 26), "class": "s-bl", "stroke-width": 1.6 }, px);
+      el("rect", { x: 338, y: yy, width: 252, height: 40, rx: 6, "class": "f-blt s-bl", "stroke-width": 1 }, px);
+      tx(px, 350, yy + 17, r[1], "hd", { style: "font-size:14.5px" });
+      tx(px, 350, yy + 33, r[2], "t-3", { style: "font-size:11px" });
+    });
+  }
+
+  /* --- LBD progression --- */
+  var lbd = document.getElementById("lbd");
+  if (lbd) {
+    var st = [["Mood", "swings, depression"], ["Memory", "falters"], ["Language", "words disappear"], ["Gesture", "even meaning goes"]];
+    tx(lbd, 20, 22, "In the order Michels describes", "hd");
+    st.forEach(function (s, i) {
+      var x = 20 + i * 142, op = 1 - i * 0.15;
+      el("path", { d: "M" + x + " 40 h124 l14 26 l-14 26 h-124 l14 -26 z", "class": "f-bl", opacity: op.toFixed(2) }, lbd);
+      tx(lbd, x + 26, 62, s[0], null, { style: "font-family:var(--head);font-weight:650;font-size:16px;fill:var(--card)" });
+      tx(lbd, x + 14, 114, s[1], "t-ink", { style: "font-size:12px" });
+    });
+    el("rect", { x: 20, y: 134, width: 560, height: 22, rx: 3, "class": "f-grt" }, lbd);
+    tx(lbd, 30, 150, "throughout: hallucinations · sleep disturbance · anxiety · violent mood swings", "t-gr", { style: "font-size:11.5px" });
+    el("line", { x1: 20, y1: 192, x2: 580, y2: 192, "class": "s-2", "stroke-width": 1.2 }, lbd);
+    el("path", { d: "M572 186 L580 192 L572 198", "class": "s-2", "stroke-width": 1.2 }, lbd);
+    tx(lbd, 20, 214, "diagnosis", "t-3", { style: "font-size:11px" });
+    tx(lbd, 580, 214, "life expectancy he was given: 5–7 years", "t-ink", { "text-anchor": "end", style: "font-size:12px" });
+  }
+
+  /* --- Outflow rings --- */
+  var of = document.getElementById("of");
+  if (of) {
+    var cx = 170, cy = 164;
+    [[144, 0], [108, 1], [72, 2]].forEach(function (r) {
+      el("circle", { cx: cx, cy: cy, r: r[0], "class": "s-bl2", "stroke-width": 1.2, "stroke-dasharray": r[1] === 0 ? "4 5" : "none", style: "fill:color-mix(in srgb, var(--blue) " + (5 + r[1] * 5) + "%, transparent)" }, of);
+    });
+    for (var a = 0; a < 16; a++) {
+      var ang = a / 16 * Math.PI * 2, rr1 = 26, rr2 = a % 2 ? 36 : 42;
+      el("line", { x1: cx + Math.cos(ang) * rr1, y1: cy + Math.sin(ang) * rr1, x2: cx + Math.cos(ang) * rr2, y2: cy + Math.sin(ang) * rr2, "class": "s-bl", "stroke-width": 2, "stroke-linecap": "round" }, of);
+    }
+    el("circle", { cx: cx, cy: cy, r: 21, "class": "f-bl" }, of);
+    tx(of, cx, cy + 4, "sun", null, { "text-anchor": "middle", style: "font-size:11px;fill:var(--card)" });
+    tx(of, cx, cy + 61, "1 · loved ones", "t-ink", { "text-anchor": "middle", style: "font-size:10.5px" });
+    tx(of, cx, cy + 95, "2 · people you barely know", "t-ink", { "text-anchor": "middle", style: "font-size:10.5px" });
+    tx(of, cx, cy - 126, "3 · everyone &", "t-ink", { "text-anchor": "middle", style: "font-size:10.5px" });
+    tx(of, cx, cy - 114, "everything", "t-ink", { "text-anchor": "middle", style: "font-size:10.5px" });
+    tx(of, cx, cy + 128, "liked or despised", "t-3", { "text-anchor": "middle", style: "font-size:10px" });
+    el("path", { d: "M" + (cx + 150) + " 14 Q " + (cx + 40) + " 20 " + (cx + 14) + " " + (cy - 22), "class": "s-gr", "stroke-width": 1.4, "stroke-dasharray": "3 4" }, of);
+    el("path", { d: "M" + (cx + 7) + " " + (cy - 31) + " l6 10 l7 -9", "class": "s-gr", "stroke-width": 1.4 }, of);
+    tx(of, cx + 156, 18, "source: through you,", "t-gr", { style: "font-size:11px" });
+    tx(of, cx + 156, 32, "not from you", "t-gr", { style: "font-size:11px" });
+
+    /* two mini curves, illustrative */
+    function mini(ox, oy, title, up, cls) {
+      tx(of, ox, oy, title, "hd", { style: "font-size:14px" });
+      el("line", { x1: ox, y1: oy + 70, x2: ox + 200, y2: oy + 70, "class": "s-3" }, of);
+      el("line", { x1: ox, y1: oy + 12, x2: ox, y2: oy + 70, "class": "s-3" }, of);
+      var d = "";
+      for (var i = 0; i <= 20; i++) {
+        var u = i / 20, v = up ? 0.15 + 0.8 * (1 - Math.exp(-2.4 * u)) : 0.92 - 0.8 * u * u;
+        d += (i ? " L" : "M") + (ox + u * 196).toFixed(1) + " " + (oy + 68 - v * 54).toFixed(1);
+      }
+      el("path", { d: d, "class": cls, "stroke-width": 2.4 }, of);
+      tx(of, ox + 200, oy + 86, "giving →", "t-3", { "text-anchor": "end", style: "font-size:10.5px" });
+    }
+    mini(372, 92, "Physical stamina", false, "s-gr");
+    mini(372, 206, "Outflow, as claimed", true, "s-bl");
+    tx(of, 372, 316, "illustrative shapes, not data", "t-3", { style: "font-size:10.5px" });
+  }
+
+  /* --- Morning prayer steps --- */
+  var sg = document.getElementById("steps");
+  if (sg) {
+    var lab = [["Keep moving", "step after step"], ["Look near", "not far ahead"], ["Small steps", "God in tiny ones"], ["Linked", "each joins all"], ["Will to move", "the self lives here"]];
+    var yb = 204;
+    lab.forEach(function (l, i) {
+      var w = 112, h = 24 + i * 28, x = 20 + i * w;
+      el("rect", { x: x, y: yb - h, width: w - 4, height: h, rx: 3, "class": i === 4 ? "f-bl" : "f-blt", stroke: "var(--blue)", "stroke-width": 1 }, sg);
+    });
+    lab.forEach(function (l, i) {
+      var w = 112, h = 24 + i * 28, x = 20 + i * w;
+      tx(sg, x + 2, yb - h - 24, (i + 1) + " · " + l[0], i === 4 ? "t-bl" : "t-ink", { style: "font-size:12px;font-weight:500" });
+      tx(sg, x + 2, yb - h - 9, l[1], "t-3", { style: "font-size:10px" });
+    });
+  }
+
+  /* --- Hero band: cover-like contour lines folding into a wave, settling toward the right --- */
+  var canvas = document.getElementById("waves");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, N = 22;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var t = reduce ? 0 : time * 0.00025;
+    var blue = css("--blue"), blue2 = css("--blue-2");
+    ctx.lineCap = "round";
+    for (var k = 0; k < N; k++) {
+      var base = 8 + k * (hgt - 16) / (N - 1);
+      ctx.beginPath();
+      for (var x = 0; x <= w; x += 3) {
+        var u = x / w;
+        var calm = Math.max(0, Math.min(1, (u - 0.45) / 0.5));
+        calm = calm * calm * (3 - 2 * calm);
+        var bump = Math.exp(-Math.pow((u - 0.24 - 0.04 * Math.sin(t)) / 0.12, 2)) * (1 - k / N) * hgt * 0.34;
+        var dip = Math.exp(-Math.pow((u - 0.42) / 0.08, 2)) * hgt * 0.12;
+        var swirl = Math.sin(u * 9 + k * 0.45 + t * 2) * hgt * 0.035 * (1 - calm);
+        var yy = base - bump + dip * (k / N) + swirl;
+        yy = Math.max(2, Math.min(hgt - 2, yy));
+        if (x === 0) ctx.moveTo(x, yy); else ctx.lineTo(x, yy);
+      }
+      ctx.strokeStyle = k % 5 === 2 ? blue2 : blue;
+      ctx.globalAlpha = 0.75;
+      ctx.lineWidth = 1.3;
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
