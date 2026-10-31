@@ -1,0 +1,1272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>New Cold Wars by David E. Sanger – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: a deep flag red ground, white condensed
+   capitals, signal-yellow subtitles and grey author type. Red = pressure and escalation,
+   yellow = the Western response, grey = the bystanders and the neutral record. */
+:root {
+  --paper: #f7f3ee;
+  --paper-2: #ece6de;
+  --card: #fffdf9;
+  --ink: #1b1515;
+  --ink-2: #4c4545;
+  --ink-3: #7a7373;
+  --rule: #ddd4ca;
+
+  --red: #a3100c;
+  --red-2: #c9271f;
+  --gold: #d9b600;
+  --gold-ink: #7a6200;
+  --steel: #8b8d90;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #150d0c;
+    --paper-2: #211615;
+    --card: #241918;
+    --ink: #f3ecea;
+    --ink-2: #c3b8b5;
+    --ink-3: #958a87;
+    --rule: #3a2c2a;
+    --red: #ff5b4e;
+    --red-2: #ff8278;
+    --gold: #f0d43a;
+    --gold-ink: #f0d43a;
+    --steel: #a7aaad;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #150d0c;
+  --paper-2: #211615;
+  --card: #241918;
+  --ink: #f3ecea;
+  --ink-2: #c3b8b5;
+  --ink-3: #958a87;
+  --rule: #3a2c2a;
+  --red: #ff5b4e;
+  --red-2: #ff8278;
+  --gold: #f0d43a;
+  --gold-ink: #f0d43a;
+  --steel: #a7aaad;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-red { --c: var(--red); }
+.c-gold { --c: var(--gold); }
+.c-steel { --c: var(--steel); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: clamp(18px, 2.4vw, 28px); letter-spacing: .08em; line-height: 1.1; text-transform: uppercase; color: var(--gold-ink); }
+.hero h1 {
+  font-size: clamp(56px, 12vw, 150px);
+  font-weight: 900;
+  font-stretch: 72%;
+  line-height: .86;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 10px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 42ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1094;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(60, 10, 10, .4), 0 8px 18px -10px rgba(60, 10, 10, .3);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--red);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.4vw, 104px);
+  font-weight: 900;
+  font-stretch: 72%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .01em;
+  color: var(--red);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--gold-ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--red);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--gold);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 540px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-red { fill: var(--red); }
+.fig svg text.t-gold { fill: var(--gold-ink); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.sm { font-size: 11px; }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-red { stroke: var(--red); fill: none; }
+.s-gold { stroke: var(--gold); fill: none; }
+.s-steel { stroke: var(--steel); fill: none; }
+.f-red { fill: var(--red); }
+.f-gold { fill: var(--gold); }
+.f-steel { fill: var(--steel); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-redt { fill: color-mix(in srgb, var(--red) 13%, var(--card)); }
+.f-goldt { fill: color-mix(in srgb, var(--gold) 22%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat.c-gold .big { color: var(--gold-ink); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--red); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 72%; text-transform: uppercase; letter-spacing: .02em; color: var(--red); line-height: 1; }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.map li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px; font-size: 15px; line-height: 1.35; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--gold-ink); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 15.5px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three-way strip */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--red); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul, .compare ol { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--gold-ink); }
+.compare .bad h5 { color: var(--red); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 150px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 850; font-stretch: 72%; text-transform: uppercase; color: var(--red); border-top: 2px solid var(--red); padding-top: 12px; letter-spacing: .02em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map, .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+  .chapter .idea { font-size: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · David E. Sanger · Crown, 2024</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#one-world">One world</a>
+    <a href="#history">History</a>
+    <a href="#wars">Wars</a>
+    <a href="#control">Control</a>
+    <a href="#epilogue">Epilogue</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">China's rise, Russia's invasion</p>
+    <h1><span>New Cold</span><span>Wars</span></h1>
+    <p class="sub">and America's struggle to defend the West</p>
+    <p class="dek">The New York Times' White House and national security correspondent reconstructs how five presidents misread Moscow and Beijing, and how the United States ended up in two superpower rivalries at once.</p>
+    <div class="byline label">
+      <span>20 chapters</span><span>4 parts</span><span>with Mary K. Brooks</span><span>~160,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of New Cold Wars by David E. Sanger: on a deep red background with a faint globe grid, the title is set in huge white capitals, the subtitle in yellow capitals, and the author's name in grey">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="globe"></canvas>
+  <div class="ends label"><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--red);margin-right:6px"></i>Kyiv</span><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--gold);margin-right:6px"></i>Taipei</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Prologue &amp; introduction</span>
+    <h2>Part 1914, part 1941, part 2022</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>In the third week of October 2021, a stack of intelligence reached the White House that one official called the "mother lode": intercepts, cyber penetrations and human sources showing that Putin planned to take all of Ukraine. Biden sent CIA director Bill Burns to warn him. Putin, isolated in Sochi, took the call and changed nothing.</p>
+      <p>Hours before the tanks moved, it was Microsoft that spotted Russian wiper malware in Ukrainian ministries and warned the White House. Then almost nothing went to plan. Kyiv held, and within a year the war mixed trenches, nuclear threats and AI-guided drones.</p>
+      <p>Sanger argues that for three decades after the Berlin Wall, Washington assumed trade, the internet and self-interest would pull Russia and China into a Western-designed order. Five presidents made that bet, each with less conviction. It failed, and America now faces two rivalries at once, more tangled than the old Cold War.</p>
+    </div>
+    <div class="fig">
+      <span class="label">What the warnings looked like</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-red"><span class="big num">60%</span><p>Share of Russia's land-based fighting forces estimated to be on Ukraine's borders before the invasion.</p></div>
+        <div class="stat c-gold"><span class="big num">150</span><p>Ukrainian systems across ten organizations hit by wiper malware on February 23, 2022, in Microsoft's first count.</p></div>
+        <div class="stat"><span class="big num">6,000</span><p>Nuclear weapons held by Russia, the half-forgotten "superpower emeritus" of early 2021.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">The new front line</span>
+        <p>Biden's cyber adviser Anne Neuberger told Sanger the old assumption had flipped: technology companies now often see more than governments, and can defend a country's networks from afar.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="kinds" style="margin-top:32px">
+    <div><span class="label">Not like 1947</span><b>Deep interdependence</b><span>America never needed Soviet phones or medical supplies. It needs China's.</span></div>
+    <div><span class="label">Not like 1962</span><b>Three nuclear powers</b><span>Two-player deterrence had a grim logic. With China building toward parity, nobody knows the rules.</span></div>
+    <div><span class="label">Not like 1989</span><b>No collapse in sight</b><span>The first Cold War ended when one side imploded. Sanger sees no sign that China, or even Russia, will.</span></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I</span>
+      <h3>Dreaming of one world</h3>
+      <p class="q">How the post–Cold War bets were placed</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Floating past the Hermitage</b>Courting Putin</a></li>
+        <li><span>02</span><a href="#ch2"><b>The lost decades</b>Engaging China</a></li>
+        <li><span>03</span><a href="#ch3"><b>Putin's seven-year itch</b>Crimea and Nord Stream 2</a></li>
+        <li><span>04</span><a href="#ch4"><b>America First</b>Trump's half-strategy</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II</span>
+      <h3>The arc of history</h3>
+      <p class="q">Biden's first year, and the warnings</p>
+      <ol>
+        <li><span>05</span><a href="#ch5"><b>Inheriting the wreckage</b>SolarWinds and January 6</a></li>
+        <li><span>06</span><a href="#ch6"><b>The end of the fever dream</b>Engagement is buried</a></li>
+        <li><span>07</span><a href="#ch7"><b>A dangerous dance</b>Ransomware and Geneva</a></li>
+        <li><span>08</span><a href="#ch8"><b>The meltdown</b>Kabul</a></li>
+        <li><span>09</span><a href="#ch9"><b>A "Sputnik" moment</b>Hypersonics and silos</a></li>
+        <li><span>10</span><a href="#ch10"><b>Blowing smoke</b>Publishing the war plan</a></li>
+        <li><span>11</span><a href="#ch11"><b>Without limits?</b>Xi and Putin</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part III</span>
+      <h3>Wars, hot and cold</h3>
+      <p class="q">Ukraine, Taiwan and the bomb</p>
+      <ol>
+        <li><span>12</span><a href="#ch12"><b>Short invasion, long war</b>Why Kyiv held</a></li>
+        <li><span>13</span><a href="#ch13"><b>Boiling the frog</b>Arming Ukraine slowly</a></li>
+        <li><span>14</span><a href="#ch14"><b>Crossing the line</b>Pelosi in Taipei</a></li>
+        <li><span>15</span><a href="#ch15"><b>The nuclear paradox</b>Fall 2022</a></li>
+        <li><span>16</span><a href="#ch16"><b>A high fence for a small yard</b>The chip war</a></li>
+        <li><span>17</span><a href="#ch17"><b>"Don't make us choose"</b>The middle powers</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part IV</span>
+      <h3>Fighting for control</h3>
+      <p class="q">Stalemate and spiral</p>
+      <ol>
+        <li><span>18</span><a href="#ch18"><b>Searching for endgames</b>Year two in Europe</a></li>
+        <li><span>19</span><a href="#ch19"><b>The digital war</b>Data, drones and limits</a></li>
+        <li><span>20</span><a href="#ch20"><b>The downward spiral</b>2023</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="one-world">
+  <span class="label partno">Part I · Chapters 1–4</span>
+  <h2>Dreaming of one world</h2>
+  <p class="lede">Every president from Clinton to Trump believed he could bend Moscow and Beijing westward. Sanger traces the evidence each explained away.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Russia</span></div>
+  <div class="body">
+    <div>
+      <h3>The romance on the Neva</h3>
+      <p class="idea">Washington spent the 2000s waiting for Putin to join the West. He spent them collecting grievances.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A staged friendship.</strong> In May 2002 Bush and Putin cruised past the Hermitage, served by Putin's caterer, Yevgeny Prigozhin. Officials talked of Russia joining the WTO, then perhaps the EU, maybe NATO.</li>
+      <li><strong>The grievances piled up.</strong> NATO admitted Poland, Hungary and the Czech Republic in March 1999, then bombed Serbia two weeks later without UN approval. Iraq and the "color revolutions" followed, which Putin read as CIA rehearsals for toppling him.</li>
+      <li><strong>He said it out loud.</strong> At Munich in 2007 Putin accused America of using force without limits. In 2008 NATO vaguely promised Georgia and Ukraine eventual membership with no path to it, the worst of both options in Sanger's view. Russia invaded Georgia that August and paid almost no price.</li>
+      <li><strong>Reset and rupture.</strong> Obama's "reset" produced New START, capping each side at 1,550 deployed warheads. US intelligence later traced Putin's hatred of Hillary Clinton, and the 2016 hacking, to her criticism of Russia's 2011 election.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Russia was never ours to lose."</blockquote>
+      <span class="label">Bill Burns, March 2019, on the "who lost Russia" debate</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">China</span></div>
+  <div class="body">
+    <div>
+      <h3>The engagement bet</h3>
+      <p class="idea">Trade, the theory went, would make China richer, freer and less dangerous. It made China richer.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The deal.</strong> Reformer Zhu Rongji toured US cities in 1999 lobbying American CEOs, and the WTO agreement closed that November. China's income per head nearly tripled by 2007 and tripled again by 2017.</li>
+      <li><strong>What was explained away.</strong> Systematic theft, from F-35 plans to a jet engine. Around 2010–12 China rolled up about two dozen CIA sources. In 2015 its spy ministry was found to have taken clearance files on 22 million Americans. Xi promised not to militarise new islands in the South China Sea, then built hangars on them.</li>
+      <li><strong>Made in China 2025.</strong> The 2015 plan targeted 70% self-sufficiency in key technologies, backed by a $250 billion fund. Obama's officials grasped the threat to chipmakers with months left, and the White House even barred the phrase "great power competition".</li>
+      <li><strong>Three explanations.</strong> A master plan all along (Rush Doshi), the collision any rising power brings (Graham Allison's Thucydides Trap), or Xi personally. Avril Haines suggests it was unknowable until Xi acted.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Crimea</span></div>
+  <div class="body">
+    <div>
+      <h3>Putin's seven-year itch</h3>
+      <p class="idea">Each land grab cost Putin so little that the next one looked affordable.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Outbid.</strong> In 2013 Yanukovich asked Europe for $160 billion and was offered under $1 billion with anticorruption strings. Russia paid $15 billion. Protests followed, Yanukovich fled, and troops without insignia took Crimea.</li>
+      <li><strong>Tepid responses.</strong> Obama refused Javelins, believing Russia would always care more about Ukraine. Two Minsk ceasefires collapsed as the Donbas war killed about 14,000 people over eight years.</li>
+      <li><strong>The reward.</strong> In 2015 Western firms agreed with Gazprom on Nord Stream 2, a $10-billion-plus pipeline under the Baltic. Russia already supplied over half of Germany's gas imports, and Ukraine stood to lose up to $3 billion a year in transit fees. Sanger reads Putin's lesson as: invade, wait a year, and business returns.</li>
+      <li><strong>A caution.</strong> H. R. McMaster warns against "strategic narcissism", assuming American choices decide everything. Earlier Javelins might not have stopped 2022.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Grab, low price, repeat</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 262" role="img" aria-label="Timeline from 1998 to 2023 showing four Russian moves about seven to eight years apart: Chechnya 1999 to 2000, Georgia 2008, Crimea 2014 and all of Ukraine 2022. Beneath each, the Western response: little cost, almost none, modest sanctions followed by Nord Stream 2, and finally a coordinated sanctions package and arms.">
+          <path d="M30 110 H580" class="s-3" stroke-width="1.5"/>
+          <g class="t-3 sm">
+            <text x="30" y="132" text-anchor="middle" class="t-3 sm">1998</text>
+            <text x="140" y="132" text-anchor="middle" class="t-3 sm">2003</text>
+            <text x="250" y="132" text-anchor="middle" class="t-3 sm">2008</text>
+            <text x="360" y="132" text-anchor="middle" class="t-3 sm">2013</text>
+            <text x="470" y="132" text-anchor="middle" class="t-3 sm">2018</text>
+            <text x="580" y="132" text-anchor="middle" class="t-3 sm">2023</text>
+          </g>
+          <path d="M30 106 V114 M140 106 V114 M250 106 V114 M360 106 V114 M470 106 V114 M580 106 V114" class="s-3"/>
+          <!-- events: x = 30 + (year-1998)*22 -->
+          <circle cx="74" cy="110" r="9" class="f-red"/>
+          <circle cx="265" cy="110" r="10" class="f-red"/>
+          <circle cx="386" cy="110" r="12" class="f-red"/>
+          <circle cx="558" cy="110" r="16" class="f-red"/>
+          <text x="74" y="30" text-anchor="middle" class="hd">Chechnya</text>
+          <text x="74" y="48" text-anchor="middle" class="t-3 sm">1999–2000</text>
+          <text x="265" y="30" text-anchor="middle" class="hd">Georgia</text>
+          <text x="265" y="48" text-anchor="middle" class="t-3 sm">2008</text>
+          <text x="386" y="30" text-anchor="middle" class="hd">Crimea</text>
+          <text x="386" y="48" text-anchor="middle" class="t-3 sm">2014</text>
+          <text x="558" y="30" text-anchor="end" class="hd">All of Ukraine</text>
+          <text x="558" y="48" text-anchor="end" class="t-3 sm">2022</text>
+          <path d="M84 92 Q170 72 255 92" class="s-steel" stroke-dasharray="3 3"/>
+          <path d="M275 92 Q326 76 376 92" class="s-steel" stroke-dasharray="3 3"/>
+          <path d="M398 92 Q470 72 542 92" class="s-steel" stroke-dasharray="3 3"/>
+          <text x="170" y="74" text-anchor="middle" class="t-3 sm">~8 yrs</text>
+          <text x="326" y="74" text-anchor="middle" class="t-3 sm">~6 yrs</text>
+          <text x="470" y="74" text-anchor="middle" class="t-3 sm">8 yrs</text>
+          <text x="20" y="168" class="t-3 sm">WESTERN COST TO MOSCOW</text>
+          <rect x="230" y="180" width="70" height="8" rx="2" class="f-goldt"/>
+          <rect x="230" y="180" width="6" height="8" rx="1" class="f-gold"/>
+          <text x="230" y="206" class="sm">almost none;</text>
+          <text x="230" y="222" class="sm">oil buying rose</text>
+          <rect x="346" y="180" width="90" height="8" rx="2" class="f-goldt"/>
+          <rect x="346" y="180" width="22" height="8" rx="1" class="f-gold"/>
+          <text x="346" y="206" class="sm">modest sanctions,</text>
+          <text x="346" y="222" class="sm">G8 exit, then</text>
+          <text x="346" y="238" class="sm">Nord Stream 2</text>
+          <rect x="470" y="180" width="110" height="8" rx="2" class="f-goldt"/>
+          <rect x="470" y="180" width="110" height="8" rx="1" class="f-gold"/>
+          <text x="580" y="206" text-anchor="end" class="sm">sanctions, arms,</text>
+          <text x="580" y="222" text-anchor="end" class="sm">pipeline halted</text>
+          <text x="20" y="206" class="sm">the West courted</text>
+          <text x="20" y="222" class="sm">Putin anyway</text>
+        </svg>
+      </div>
+      <p class="cap">A senior British official described the pattern to Sanger: every seven or eight years Putin moves on another piece of the old empire. The yellow bars rank the West's response by severity and are illustrative, not measured.</p>
+      <p class="src">Events and responses as described in chs. 1 and 3</p>
+    </div>
+
+    <div class="fig">
+      <h4>After Georgia, the West bought more Russian oil</h4>
+      <div class="bars">
+        <div class="bar c-steel"><div class="row"><span>US imports of Russian oil, 2008</span><b>170M bbl</b></div><div class="track"><div class="fill" style="width:76.2%"></div></div></div>
+        <div class="bar c-steel"><div class="row"><span>2009</span><b>205M bbl</b></div><div class="track"><div class="fill" style="width:91.9%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>2010</span><b>223M bbl</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+      </div>
+      <p class="src">Source: US Energy Department figures cited in ch. 1</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Trump</span></div>
+  <div class="body">
+    <div>
+      <h3>A strategy the president ignored</h3>
+      <p class="idea">Trump's aides wrote down the new era of great-power rivalry. Trump himself mostly wanted a trade deal.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The 2017 strategy.</strong> H. R. McMaster's national security strategy declared that complacency had let rivals advance. Trump launched it while praising partnership with Russia and China.</li>
+      <li><strong>Trade as the whole relationship.</strong> Trump judged China by the goods deficit. The Phase One deal's promised $200 billion in extra purchases apparently never happened, and he offered to drop charges against a Huawei executive for a bigger deal.</li>
+      <li><strong>The Rosetta Stone.</strong> A secret 2013 Xi speech, published in 2019, foresaw a long struggle socialism would win. Matt Pottinger read it as a plan to displace America. Keith Krach's team won TSMC's $12 billion Arizona commitment and tightened rules on Huawei, groundwork Biden reused.</li>
+      <li><strong>Ukraine as leverage.</strong> Trump's July 2019 call tying aid to investigations of Biden led to impeachment. Putin's takeaway, Sanger says, was that Americans didn't care about Ukraine.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="history">
+  <span class="label partno">Part II · Chapters 5–11</span>
+  <h2>The arc of history</h2>
+  <p class="lede">Biden promised competence and repaired alliances. His first year brought a Russian hack, ransomware, Kabul, a Chinese weapons surprise and the realisation that Putin meant to invade.</p>
+</div>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Transition</span></div>
+  <div class="body">
+    <div>
+      <h3>A hack, a riot and no handover</h3>
+      <p class="idea">Putin and Xi did not wait for the new president to settle in, and the old one did not help him.</p>
+    </div>
+    <ul class="points">
+      <li><strong>SolarWinds.</strong> In November 2020 FireEye noticed an impostor had registered a second phone to an employee's account and stolen its hacking tools. Kevin Mandia traced the break-in to SolarWinds network software. Russia's SVR had slipped malicious code into updates of a product used by some 18,000 customers, including federal agencies. Trump suggested it might be China.</li>
+      <li><strong>January 6 as propaganda.</strong> Russia broadcast the Capitol riot abroad; China showed it mainly at home, as proof that democracy breeds chaos.</li>
+      <li><strong>No handover.</strong> Trump's team blocked transition briefings. Biden's inaugural speech never mentioned China or Russia.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">China policy</span></div>
+  <div class="body">
+    <div>
+      <h3>The fever dream ends</h3>
+      <p class="idea">The president who had championed engagement with China for decades signed up to replace it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Anchorage, March 2021.</strong> On camera, China's top diplomat Yang Jiechi lectured Blinken and Sullivan about American democracy.</li>
+      <li><strong>The manifesto.</strong> Sullivan and Kurt Campbell had written in 2019 that engagement wrongly assumed it could change China; the aim was coexistence on favourable terms. Transition briefings shocked Biden, and Burns created a China Mission Center, the CIA's only single-country one.</li>
+      <li><strong>The squeeze.</strong> Ambassador Qin Gang's reply: if America wanted a cold war, China would not be the loser.</li>
+    </ul>
+    <div class="compare">
+      <div class="bad"><h5>Campbell's five schools on China</h5><ol><li>Engagement (Kissinger, Scowcroft, Biden for most of his career)</li><li>Allies first (Campbell)</li><li>China as the enemy, war likely</li><li>One issue at a time</li><li>Global problems first: climate, pandemics</li></ol></div>
+      <div class="good"><h5>Biden's three-part squeeze</h5><ul><li>Rebuild alliances: listening tour, Quad, AUKUS</li><li>Invest at home: chips, minerals, "derisking"</li><li>Export controls on the technologies that feed China's military</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Russia</span></div>
+  <div class="body">
+    <div>
+      <h3>Ransomware first, Ukraine second</h3>
+      <p class="idea">Biden's only meeting with Putin before the war was about hackers. Nobody in his team imagined a full invasion yet.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Colonial Pipeline.</strong> In May 2021 the Russian-based gang DarkSide locked Colonial's business systems. The company shut all 5,500 miles of a pipeline carrying 45% of the East Coast's fuel and paid $4.4 million. Biden held Moscow responsible for crimes from its soil.</li>
+      <li><strong>A first buildup.</strong> By April 2021 about 100,000 Russian troops sat near Ukraine. Biden's sanctions were deliberately "proportionate". Sanger argues the "stable and predictable" ties Biden offered were what Putin, whose leverage is unpredictability, wanted to avoid.</li>
+      <li><strong>Geneva, June 2021.</strong> Biden handed Putin a list of 16 critical-infrastructure sectors that were off-limits. After a follow-up call in July, the REvil gang went dark. Haines admits the worst case they imagined was an incursion into eastern Ukraine.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Afghanistan</span></div>
+  <div class="body">
+    <div>
+      <h3>The meltdown in Kabul</h3>
+      <p class="idea">Leaving was defensible, Sanger argues. The way the US left told rivals it had little stomach for long fights.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The inheritance.</strong> Trump's February 2020 Doha deal promised US withdrawal by May 2021 and excluded the Afghan government. Biden overruled his generals and set September 11. Of an Afghan army of 300,000 on paper, only about 22,000 commandos were effective.</li>
+      <li><strong>Collapse.</strong> US forces left Bagram overnight on July 2, abandoning 3.5 million items. Ghani promised to stay and fight on August 14 and fled the next day.</li>
+      <li><strong>The cost.</strong> A bomber at Abbey Gate killed 13 American troops and more than 150 civilians. A later drone strike killed an aid worker and seven children. Chris Donahue was the last soldier out, on August 30.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Weapons</span></div>
+  <div class="body">
+    <div>
+      <h3>A "Sputnik" moment</h3>
+      <p class="idea">China jumped ahead in a technology the US invented and then neglected, and began building toward nuclear parity.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The missile that went backwards.</strong> On July 27, 2021, a Chinese rocket flew west over the United States and released a hypersonic glide vehicle that the Pentagon lost track of. General Hyten counted "hundreds" of Chinese hypersonic tests from 2016 to 2021 against nine American ones.</li>
+      <li><strong>AUKUS.</strong> Australia dropped a $60 billion French submarine deal for US and British nuclear propulsion. Pivoting to Asia, Richard Fontaine notes, means doing less elsewhere.</li>
+      <li><strong>Silos.</strong> About 230 silos appeared near Yumen and Hami. Mao's few-hundred-warhead "minimum deterrent" was over.</li>
+    </ul>
+    <div class="fig">
+      <h4>From minimum deterrent to near-parity</h4>
+      <div class="bars">
+        <div class="bar c-steel"><div class="row"><span>Mao-era doctrine: "a few hundred" warheads</span><b>few hundred</b></div><div class="track"><div class="fill" style="width:15%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Deployed by fall 2023 (Pentagon)</span><b>500</b></div><div class="track"><div class="fill" style="width:33.3%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Pentagon projection for 2030</span><b>1,000</b></div><div class="track"><div class="fill" style="width:66.7%;opacity:.7"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Projection for 2035, roughly US and Russian deployed levels</span><b>1,500</b></div><div class="track"><div class="fill" style="width:100%;opacity:.5"></div></div></div>
+      </div>
+      <p class="cap">The first bar's length is illustrative; the book says only "a few hundred". The rest are Pentagon figures (chs. 9, 20). With three nuclear powers, Sanger notes, two-player deterrence logic no longer holds.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Intelligence</span></div>
+  <div class="body">
+    <div>
+      <h3>Publishing the enemy's plan</h3>
+      <p class="idea">When Putin couldn't be talked out of the war, Washington tried to take away its surprise.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The signals.</strong> Putin's July 2021 essay of nearly 7,000 words cast Ukrainians and Russians as one people. By late October the mother lode described 100 to 150 battalions, a puppet government and a 100,000-strong occupation force.</li>
+      <li><strong>Nobody believed it.</strong> Apart from the British, allies thought Putin was bluffing, and some recalled Iraq in 2003.</li>
+      <li><strong>Authorised leaks.</strong> Sullivan pictured Washington frozen before a slow steamroller. In December the Washington Post showed a 175,000-troop buildup, and false-flag plots were exposed before they ran. Germany blocked Nord Stream 2 two days before the invasion.</li>
+    </ul>
+    <div class="fig">
+      <h4>How a secret became a headline</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 300" role="img" aria-label="Flow diagram. Intercepts, satellite images and human sources feed the National Security Council, which drafts a script of what to release. The Office of the Director of National Intelligence checks it with the agencies, stripping sources and downgrading the classification. The sanitised version is shared with allies, Ukraine and even China, then leaked to reporters, who verify it against commercial satellite imagery. The three goals: deny Russia a pretext, deny it surprise, and buy time to unite allies. The catch: exposing a plot can cancel it, making the warning look wrong.">
+          <text x="10" y="18" class="t-3 sm">RAW</text>
+          <rect x="10" y="28" width="118" height="26" rx="4" class="f-redt"/><text x="69" y="45" text-anchor="middle" class="sm t-ink">intercepts</text>
+          <rect x="10" y="60" width="118" height="26" rx="4" class="f-redt"/><text x="69" y="77" text-anchor="middle" class="sm t-ink">satellites</text>
+          <rect x="10" y="92" width="118" height="26" rx="4" class="f-redt"/><text x="69" y="109" text-anchor="middle" class="sm t-ink">human sources</text>
+          <path d="M130 73 H150" class="s-2" stroke-width="1.5"/><path d="M145 68 L151 73 L145 78" class="s-2" stroke-width="1.5"/>
+          <rect x="154" y="34" width="132" height="78" rx="6" class="f-card s-ink"/>
+          <text x="220" y="56" text-anchor="middle" class="hd">NSC</text>
+          <text x="220" y="76" text-anchor="middle" class="sm">drafts a script</text>
+          <text x="220" y="92" text-anchor="middle" class="sm">of what to say</text>
+          <path d="M288 73 H306" class="s-2" stroke-width="1.5"/><path d="M301 68 L307 73 L301 78" class="s-2" stroke-width="1.5"/>
+          <rect x="310" y="34" width="132" height="78" rx="6" class="f-card s-ink"/>
+          <text x="376" y="56" text-anchor="middle" class="hd">ODNI</text>
+          <text x="376" y="76" text-anchor="middle" class="sm">checks agencies,</text>
+          <text x="376" y="92" text-anchor="middle" class="sm">strips sources</text>
+          <path d="M444 73 H462" class="s-2" stroke-width="1.5"/><path d="M457 68 L463 73 L457 78" class="s-2" stroke-width="1.5"/>
+          <rect x="466" y="34" width="124" height="78" rx="6" class="f-goldt s-gold"/>
+          <text x="528" y="56" text-anchor="middle" class="hd">Release</text>
+          <text x="528" y="76" text-anchor="middle" class="sm">allies, Kyiv,</text>
+          <text x="528" y="92" text-anchor="middle" class="sm">even Beijing</text>
+          <path d="M528 114 V138" class="s-2" stroke-width="1.5"/><path d="M523 133 L528 139 L533 133" class="s-2" stroke-width="1.5"/>
+          <rect x="398" y="142" width="192" height="44" rx="6" class="f-card s-3"/>
+          <text x="494" y="160" text-anchor="middle" class="sm t-ink">press verifies with</text>
+          <text x="494" y="176" text-anchor="middle" class="sm t-ink">commercial satellite photos</text>
+          <path d="M398 164 H382" class="s-2" stroke-width="1.5"/><path d="M387 159 L381 164 L387 169" class="s-2" stroke-width="1.5"/>
+          <text x="10" y="160" class="t-3 sm">WHAT SULLIVAN WANTED</text>
+          <rect x="10" y="170" width="114" height="34" rx="17" class="f-gold"/><text x="67" y="192" text-anchor="middle" class="sm" style="fill:#1b1515">no pretext</text>
+          <rect x="132" y="170" width="114" height="34" rx="17" class="f-gold"/><text x="189" y="192" text-anchor="middle" class="sm" style="fill:#1b1515">no surprise</text>
+          <rect x="254" y="170" width="120" height="34" rx="17" class="f-gold"/><text x="314" y="192" text-anchor="middle" class="sm" style="fill:#1b1515">allies aligned</text>
+          <path d="M10 232 H590" class="s-rule"/>
+          <text x="10" y="256" class="t-red">The catch</text>
+          <text x="10" y="276" class="sm">Name a staged-atrocity plot and Moscow cancels it, so the warning looks wrong.</text>
+          <text x="10" y="292" class="sm">Stay silent and the fake video goes round the world first.</text>
+        </svg>
+      </div>
+      <p class="cap">Agencies built to hoard secrets were ordered to publish some. Sullivan likened the dilemma to Heisenberg's uncertainty principle: describing the plan changes it.</p>
+      <p class="src">Process as described in ch. 10</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Axis</span></div>
+  <div class="body">
+    <div>
+      <h3>A partnership "without limits"?</h3>
+      <p class="idea">The old Cold War's nightmare, Moscow and Beijing together, returned with the roles reversed.</p>
+    </div>
+    <ul class="points">
+      <li><strong>February 4, 2022.</strong> Xi and Putin issued a 5,000-word statement declaring a friendship with no limits. US intelligence concluded Putin described only a quick, limited operation, and Xi asked him to wait out the Olympics.</li>
+      <li><strong>A long, uneasy history.</strong> Mao and Khrushchev despised each other, and by 1969 their armies were firing across the Ussuri River, which opened the door to Nixon. After Senator Biden's 1979 visit, China even hosted US posts listening to Soviet nuclear tests.</li>
+      <li><strong>Intelligence gaps.</strong> Chinese officials dismissed the US briefings and passed them to Moscow. Burns predicted Russia would chafe as the junior partner.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="wars">
+  <span class="label partno">Part III · Chapters 12–17</span>
+  <h2>Wars, hot and cold</h2>
+  <p class="lede">Ukraine survived. Then came harder questions: how much to give, how fast, how near to nuclear risk, and how to fight a chip war with China at the same time.</p>
+</div>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Invasion</span></div>
+  <div class="body">
+    <div>
+      <h3>Why Kyiv didn't fall</h3>
+      <p class="idea">Russia planned an occupation rather than a war, and nobody's war games anticipated how much America would help.</p>
+    </div>
+    <ul class="points">
+      <li><strong>On paper.</strong> Ukraine spent just over a tenth of Russia's defence budget, with a fifth of its troops. Washington expected Kyiv to fall within days.</li>
+      <li><strong>In practice.</strong> Warned by Burns, Ukrainians downed wave after wave of helicopters at Hostomel airport. The 40-mile convoy stalled, conscripts phoning home were located, and Russia failed at the "combined arms" warfare it had rehearsed. Donahue said any war college would have failed the plan.</li>
+      <li><strong>The cyber war that wasn't.</strong> About four dozen US "hunt forward" operators had spent two months hardening Ukrainian networks. Russia's best strike wiped Viasat satellite modems an hour before the invasion; two days later Elon Musk switched on Starlink.</li>
+      <li><strong>Zelensky's moment.</strong> He refused to leave Kyiv, and also imposed martial law and consolidated control of the media.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Escalation</span></div>
+  <div class="body">
+    <div>
+      <h3>Boiling the frog</h3>
+      <p class="idea">Turn up the heat on Putin so gradually that he never decides to jump at NATO.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Two goals in tension.</strong> Help Ukraine win, but avoid war with Russia. Aid in 2021 was under $1 billion; by mid-May 2022 it was nearly $4 billion.</li>
+      <li><strong>The line.</strong> Lawyers held that sharing intelligence was legal as long as Ukrainians made the final decision to fire. Biden was furious when the press linked US data to the sinking of the <em>Moskva</em>.</li>
+      <li><strong>The pattern.</strong> Each big request ran the same course: no, then "studying", then yes with limits. Zelensky's representatives argued Washington could save time by starting with yes.</li>
+    </ul>
+    <div class="fig">
+      <h4>The temperature rises, one step at a time</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 270" role="img" aria-label="Staircase chart from February 2022 to October 2023. Each step is a weapon that Washington first refused: Javelins and Stingers in February 2022, HIMARS rockets with a range of about 50 miles in May 2022, 31 Abrams tanks unlocking German Leopards in January 2023, ATACMS with a range of about 190 miles approved in late summer 2023 and first used in October 2023. A refused no-fly zone stays flat at the bottom right.">
+          <path d="M40 236 H585" class="s-3"/>
+          <path d="M40 236 V20" class="s-3"/>
+          <text x="12" y="30" class="t-3 sm" transform="rotate(-90 12 30)" text-anchor="end">heat on Moscow →</text>
+          <text x="40" y="256" class="t-3 sm">Feb 2022</text>
+          <text x="340" y="256" class="t-3 sm" text-anchor="middle">Jan 2023</text>
+          <text x="585" y="256" class="t-3 sm" text-anchor="end">Oct 2023</text>
+          <path d="M40 210 H122 V160 H340 V115 H530 V60 H585" class="s-red" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="40" cy="210" r="5" class="f-red"/>
+          <text x="48" y="200" class="sm t-ink">Javelins, Stingers</text>
+          <circle cx="122" cy="160" r="5" class="f-red"/>
+          <text x="130" y="150" class="sm t-ink">HIMARS, ~50 mi</text>
+          <text x="130" y="176" class="t-3 sm">promise: not into Russia</text>
+          <circle cx="340" cy="115" r="5" class="f-red"/>
+          <text x="348" y="105" class="sm t-ink">31 Abrams → Leopards</text>
+          <circle cx="530" cy="60" r="5" class="f-red"/>
+          <text x="522" y="40" class="sm t-ink" text-anchor="end">ATACMS, ~190 mi</text>
+          <text x="522" y="56" class="t-3 sm" text-anchor="end">refused in 2022</text>
+          <circle cx="575" cy="60" r="4" class="f-gold"/>
+          <text x="522" y="86" class="sm t-gold" text-anchor="end">Oct: 9 helicopters hit →</text>
+          <path d="M420 228 H585" class="s-steel" stroke-dasharray="4 4" stroke-width="2"/>
+          <text x="585" y="220" class="t-3 sm" text-anchor="end">no-fly zone: never</text>
+        </svg>
+      </div>
+      <div class="legend"><span><i style="--c:var(--red)"></i>refused first, then sent</span><span><i style="--c:var(--gold)"></i>first ATACMS strike</span><span><i class="sq" style="--c:var(--steel)"></i>hard no</span></div>
+      <p class="cap">Step heights are illustrative; dates, ranges and the Abrams count are from the book. Each yes came once a declared Russian red line proved softer than feared. Critics said Biden was always a step behind; aides said the battlefield changed what Ukraine needed.</p>
+      <p class="src">Chs. 13, 18 and 20</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">Taiwan</span></div>
+  <div class="body">
+    <div>
+      <h3>Pelosi lands, the status quo moves</h3>
+      <p class="idea">China used a congressional visit as cover to redraw the rules around Taiwan.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Ambiguity, wearing thin.</strong> Washington had long left its response to an attack on Taiwan deliberately unclear. Between August 2021 and September 2022 Biden said four times it would defend the island, finally with a flat "Yes" to sending troops.</li>
+      <li><strong>How Taiwan became indispensable.</strong> In 1976 RCA began teaching Taiwan to make semiconductors. In 1992 both sides agreed there was one China that each could define, which Su Chi called "creative ambiguity".</li>
+      <li><strong>August 2022.</strong> Pelosi landed on August 2. After she left, China fired eleven ballistic missiles around Taiwan, the first since 1996, five of them into Japan's economic zone. More than 50 warships and 200 aircraft drilled, and China stopped respecting the Strait's median line.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Nuclear</span></div>
+  <div class="body">
+    <div>
+      <h3>The nuclear paradox</h3>
+      <p class="idea">The better Ukraine did, the closer Putin came to reaching for a nuclear weapon.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The "Armageddon speech".</strong> At a fundraiser on October 6, 2022, Biden said nuclear use was a real threat for the first time since the Cuban Missile Crisis. Intercepts showed a senior Russian commander discussing the logistics of a battlefield strike.</li>
+      <li><strong>Hostage reactors.</strong> Russian troops occupied Zaporizhzhya, Europe's largest nuclear plant, source of about 20% of Ukraine's 2021 electricity. The IAEA's Rafael Grossi drove through artillery fire to reach it and left inspectors behind without asking permission.</li>
+      <li><strong>The trigger.</strong> Ukraine retook much of Kharkiv province in September and Kherson on November 11. Putin mobilised 300,000 men and said his nuclear threats were no bluff.</li>
+    </ul>
+    <div class="fig">
+      <h4>Success raises the stakes</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 260" role="img" aria-label="Chart. The horizontal axis is Ukrainian battlefield success, the vertical axis is the estimated chance that Putin uses a nuclear weapon. An illustrative curve rises slowly, then steeply. Points marked on it: before the war, under 1 percent; the opening threats, edged up; the fall 2022 counteroffensives, substantially higher; and a CIA scenario in which Russian lines collapse and Crimea is threatened, 50 percent or more.">
+          <path d="M50 220 H585" class="s-3"/>
+          <path d="M50 220 V18" class="s-3"/>
+          <text x="585" y="242" text-anchor="end" class="t-3 sm">Ukrainian battlefield success →</text>
+          <text x="16" y="220" class="t-3 sm" transform="rotate(-90 16 220)">chance of nuclear use →</text>
+          <path d="M50 216 C250 214 360 200 430 160 C490 125 540 70 575 30" class="s-red" stroke-width="2.6"/>
+          <path d="M50 120 H585" class="s-rule" stroke-dasharray="3 4"/>
+          <text x="58" y="114" class="t-3 sm">50%</text>
+          <circle cx="70" cy="216" r="5" class="f-steel"/>
+          <text x="78" y="206" class="sm t-ink">pre-war: under 1%</text>
+          <circle cx="240" cy="211" r="5" class="f-steel"/>
+          <text x="240" y="196" class="sm" text-anchor="middle">opening threats: "edged up"</text>
+          <circle cx="430" cy="160" r="5" class="f-red"/>
+          <text x="420" y="150" class="sm t-ink" text-anchor="end">Kharkiv, Kherson: "substantially higher"</text>
+          <circle cx="560" cy="48" r="6" class="f-red"/>
+          <text x="548" y="38" class="sm t-red" text-anchor="end">CIA: Crimea at risk → 50%+</text>
+        </svg>
+      </div>
+      <p class="cap">Milley's name for this was the nuclear paradox. The curve's shape is illustrative; the labelled estimates are what officials told Sanger, while stressing nobody can measure such odds precisely.</p>
+    </div>
+    <div class="compare">
+      <div class="good"><h5>The chorus of warnings, fall 2022</h5><ol><li>Sullivan calls Nikolai Patrushev</li><li>Austin calls Shoigu twice: if Russia uses a nuclear weapon, the US will destroy what remains of its forces in Ukraine</li><li>Burns meets the SVR chief Sergei Naryshkin in Ankara</li><li>Xi, standing with Olaf Scholz on November 4, says nuclear weapons must not be used</li></ol></div>
+      <div class="bad"><h5>What came back</h5><ul><li>Shoigu claimed Ukraine was preparing a "dirty bomb"</li><li>Naryshkin swore Putin had no intention to use nuclear weapons</li><li>On December 7 Putin said Russia had "not gone crazy"</li><li>Officials concluded the threat was paused, not over</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Chips</span></div>
+  <div class="body">
+    <div>
+      <h3>A high fence for a small yard</h3>
+      <p class="idea">America let chip manufacturing drift to one vulnerable island. Now it is trying to rebuild at home and lock China out of the most advanced tools.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The single point of failure.</strong> Morris Chang's foundry model turned TSMC into everyone's factory. By an often-cited estimate Taiwan makes nearly 90% of the most advanced chips, while the US share of world manufacturing fell from 37% in 1990 to about 12% in 2020.</li>
+      <li><strong>CHIPS.</strong> Intel stalled its Ohio groundbreaking to pressure Congress. Kathleen Hicks told senators 98% of the chips in Pentagon systems are finished in Asia, and the $52 billion act passed the Senate 64–33.</li>
+      <li><strong>The fence.</strong> Rules issued on October 7, 2022, cut China off from top AI chips and chipmaking equipment. Nvidia promptly designed chips just under the limits, and the Dutch quietly kept ASML's machines out of China. Even before the rules, SMIC had made a 7-nanometer chip, up from 40 nanometers in 2020.</li>
+    </ul>
+    <div class="fig">
+      <h4>Where the chokepoints are</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 250" role="img" aria-label="Supply chain diagram with four stages. Design, dominated by American firms such as Apple and Nvidia. Tools, where the Dutch firm ASML makes the only extreme ultraviolet lithography machines, at 150 million dollars each. Fabrication, where TSMC in Taiwan makes nearly 90 percent of the most advanced chips. Packaging and assembly, dominated by China. A dashed red fence encloses the top-end chips and the chipmaking tools, which the October 2022 rules bar from China.">
+          <rect x="6" y="40" width="300" height="138" rx="10" class="s-red" stroke-width="2" stroke-dasharray="7 5"/>
+          <text x="14" y="30" class="t-red sm">HIGH FENCE · Oct 7, 2022</text>
+          <rect x="18" y="58" width="132" height="104" rx="6" class="f-card s-ink"/>
+          <text x="84" y="82" text-anchor="middle" class="hd">Design</text>
+          <text x="84" y="104" text-anchor="middle" class="sm">US firms:</text>
+          <text x="84" y="120" text-anchor="middle" class="sm">Apple, Nvidia,</text>
+          <text x="84" y="136" text-anchor="middle" class="sm">Qualcomm</text>
+          <rect x="162" y="58" width="132" height="104" rx="6" class="f-card s-ink"/>
+          <text x="228" y="82" text-anchor="middle" class="hd">Tools</text>
+          <text x="228" y="104" text-anchor="middle" class="sm">ASML, Netherlands</text>
+          <text x="228" y="120" text-anchor="middle" class="sm">EUV: $150M each,</text>
+          <text x="228" y="136" text-anchor="middle" class="sm">3 planes to move</text>
+          <path d="M296 110 H318" class="s-2" stroke-width="1.5"/><path d="M313 105 L319 110 L313 115" class="s-2" stroke-width="1.5"/>
+          <rect x="322" y="58" width="132" height="104" rx="6" class="f-goldt s-gold" stroke-width="2"/>
+          <text x="388" y="82" text-anchor="middle" class="hd">Fabrication</text>
+          <text x="388" y="104" text-anchor="middle" class="sm">TSMC, Taiwan</text>
+          <text x="388" y="120" text-anchor="middle" class="sm">~90% of most</text>
+          <text x="388" y="136" text-anchor="middle" class="sm">advanced chips</text>
+          <path d="M456 110 H468" class="s-2" stroke-width="1.5"/><path d="M463 105 L469 110 L463 115" class="s-2" stroke-width="1.5"/>
+          <rect x="472" y="58" width="120" height="104" rx="6" class="f-redt s-red"/>
+          <text x="532" y="82" text-anchor="middle" class="hd">Packaging</text>
+          <text x="532" y="104" text-anchor="middle" class="sm">and assembly:</text>
+          <text x="532" y="120" text-anchor="middle" class="sm">mostly China</text>
+          <text x="532" y="136" text-anchor="middle" class="sm">(Foxconn)</text>
+          <text x="388" y="196" text-anchor="middle" class="t-gold sm">one island, ~100 miles</text>
+          <text x="388" y="212" text-anchor="middle" class="t-gold sm">off China's coast</text>
+          <text x="18" y="200" class="sm">China's estimated catch-up time</text>
+          <text x="18" y="216" class="sm">on top chips (US intel, 2021):</text>
+          <text x="18" y="240" class="big t-red">~10 yrs</text>
+        </svg>
+      </div>
+      <p class="cap">The book splits chipmaking into design (the West), manufacturing (TSMC) and packaging (China). Because chips are dual-use, Raimondo admits, fencing off military uses blocks some commercial ones too.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">Middle powers</span></div>
+  <div class="body">
+    <div>
+      <h3>"Don't make us choose"</h3>
+      <p class="idea">The contest is fought less over loyalty than over hundreds of small technical choices, and smaller countries want both suitors.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Jeddah.</strong> China buys 18% of Saudi oil and had become the kingdom's largest trading partner. The Saudi ambassador likened US and Chinese 5G to having both a Starbucks and a Coffee Bean.</li>
+      <li><strong>The Solomons.</strong> The US closed its embassy in the 1990s to save $387,000 a year. In 2019 the islands dropped Taiwan for about $730 million in Chinese aid, and in 2022 signed a security pact with Beijing.</li>
+      <li><strong>The balloon.</strong> After China abruptly ended zero-COVID, its economy slumped. Then a surveillance balloon drifted over Montana; US intelligence concluded Xi learned of its course late. At Munich, Wang Yi demanded an apology.</li>
+    </ul>
+    <div class="stats">
+      <div class="stat c-red"><span class="big num">$4.5B</span><p>Chinese investment in the Pacific in 2018, up from $900 million in 2013. No sitting US president had visited the region as of 2023.</p></div>
+      <div class="stat c-gold"><span class="big num">4×</span><p>Typical interest rates on Belt and Road loans compared with Western ones, repaid in about a third of the time.</p></div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART IV ============ -->
+<div class="part" id="control">
+  <span class="label partno">Part IV · Chapters 18–20</span>
+  <h2>Fighting for control</h2>
+  <p class="lede">By 2023 the war had settled into trenches, Europe was arguing about how it ends, and all three powers were struggling with problems at home.</p>
+</div>
+
+<article class="chapter" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">Year two</span></div>
+  <div class="body">
+    <div>
+      <h3>Searching for endgames</h3>
+      <p class="idea">Allies agreed Putin had to fail. They didn't agree what failure meant.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Tanks.</strong> Scholz wouldn't send Leopards until America sent Abrams; Biden's 31 unlocked them. At Grafenwoehr, 60–70% of Ukrainian recruits had never been near artillery.</li>
+      <li><strong>Three camps.</strong> The frontline states (Poland and the Baltics) wanted no Russian gain at all. France and Germany expected a settlement. Washington talked like the first camp and privately planned like the second. Milley doubted either side could win outright. Year one cost Russia about 200,000 casualties, including up to 60,000 dead.</li>
+      <li><strong>Symbols.</strong> Biden reached Kyiv by train in February 2023, having told Moscow in advance. Putin then suspended New START.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Putin did that."</blockquote>
+      <span class="label">Finnish president Sauli Niinistö, on why Finland joined NATO, adding 800 miles of border</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch19">
+  <div class="gutter"><span class="chno">19</span><span class="label">Technology</span></div>
+  <div class="body">
+    <div>
+      <h3>The digital war and its limits</h3>
+      <p class="idea">Ukraine became a laboratory for data and drones, but software can't clear seven lines of trenches.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The Pit.</strong> At a US base in Europe, a "single pane of glass" fused commercial satellite images, Telegram posts, soldiers' phone locations and classified intercepts. One official said the US handed Ukraine "a flashlight", not a target list.</li>
+      <li><strong>Maven.</strong> The Pentagon's AI program survived a 2018 Google staff revolt and grew, with Palantir's software, into a live battlefield picture. Starlink carried Ukraine's communications, though Musk refused coverage for a strike near Crimea.</li>
+      <li><strong>Cheap mass.</strong> A Kyiv factory turned out 20 kamikaze drones a day; a good pilot needed four to six per target. In 2023 the Pentagon launched Replicator for weapons that are "small, smart, cheap, and many".</li>
+    </ul>
+    <div class="fig">
+      <h4>The cost exchange</h4>
+      <div class="bars">
+        <div class="bar c-gold"><div class="row"><span>Ukrainian FPV kamikaze drone</span><b>$350</b></div><div class="track"><div class="fill" style="width:42.4%"></div></div></div>
+        <div class="bar c-gold"><div class="row"><span>Ukrainian tank-killing drone</span><b>~$5,000</b></div><div class="track"><div class="fill" style="width:61.7%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Iranian Shahed drone flown by Russia</span><b>$20,000</b></div><div class="track"><div class="fill" style="width:71.7%"></div></div></div>
+        <div class="bar c-steel"><div class="row"><span>Air-defence missile fired to stop it</span><b>~$1,000,000</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+      </div>
+      <p class="cap">Log scale: bar length tracks the number of digits. Russia used cheap drones to drain Ukraine's million-dollar missiles, and with Iranian help its drone output overtook Ukraine's.</p>
+      <p class="src">Figures from ch. 19</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch20">
+  <div class="gutter"><span class="chno">20</span><span class="label">2023</span></div>
+  <div class="body">
+    <div>
+      <h3>The downward spiral</h3>
+      <p class="idea">None of the three powers controlled as much as it believed, at home or abroad.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Russia.</strong> Prigozhin's June 2023 mutiny stopped 125 miles from Moscow; two months later his jet blew up. Ukraine's counteroffensive gained about as much land as it lost. General Zaluzhny admitted: "There will most likely be no deep and beautiful breakthrough." US intelligence put Russian casualties above 300,000, including 120,000 dead.</li>
+      <li><strong>Ukraine's bind.</strong> At Vilnius, NATO said only that Ukraine's future was in NATO. Haines said Putin believed time was on his side.</li>
+      <li><strong>China.</strong> Youth unemployment hit 21% before Beijing stopped publishing it, and senior officials vanished. Chinese code turned up in infrastructure near Guam. In November, Xi and Biden restored military hotlines and agreed to talks on fentanyl and AI.</li>
+      <li><strong>The Middle East returns.</strong> Days after Sullivan called the region the quietest in two decades, Hamas killed more than 1,200 people in Israel and seized about 240 hostages. Sanger is sharply critical that Biden set no conditions on American weapons as Gaza's death toll passed 20,000, by the Hamas-run health ministry's count.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue</span>
+    <h2>Conflicts nested inside each other</h2>
+    <p class="lede">Sanger expects this era to outlast the elderly leaders of all three powers. He warns against treating it as a replay of the twentieth century.</p>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>For roughly 6% of its defence budget, the US exposed the rot in Russia's military. But Putin learned to evade sanctions, and by late 2023 hinted at a ceasefire on current lines, keeping about a fifth of Ukraine. Sanger's model is Korea: an armistice, steady arms and eventual EU and NATO membership, at the price of rewarding aggression.</p>
+      <p>On China he credits Biden with a credible but poorly explained plan, and names three risks: abandoning the technology strategy, overreacting to every Chinese advance, and pushing Moscow and Beijing closer. Rather than match China warhead for warhead, he favours resilient satellites, cyber defence and AI.</p>
+      <p>America's advantages are allies and its pull on talent, while a "hedging middle" plays the powers off each other. The old Cold War's real achievement, Sanger concludes, was eight decades without direct great-power war, a streak that must not break.</p>
+    </div>
+    <div class="fig">
+      <h4>Three arms races, one chip</h4>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-red"><span class="big">Nuclear</span><p>Xi's personal project. China has more than doubled its arsenal to about 500 warheads and won't discuss limits until it reaches parity.</p></div>
+        <div class="stat c-gold"><span class="big">Space</span><p>Starlink's roughly 5,000 satellites rivalled costly military systems. China plans to blind US forces in a conflict.</p></div>
+        <div class="stat"><span class="big">AI</span><p>Most of the talent is in private companies. It will speed up everything from targeting to ransomware.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tablecard" style="margin-top:28px">
+    <div class="scroll-x">
+      <table class="tbl">
+        <thead><tr><th scope="col">Feature</th><th scope="col">Old Cold War</th><th scope="col">New cold wars</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Rivals</th><td>One superpower, with China a junior partner</td><td class="r">China and Russia, with Iran and North Korea arming Moscow: four antagonists, in Robert Gates's count.</td></tr>
+          <tr><th scope="row">Economics</th><td>Separate systems; America wanted little from Moscow beyond caviar and vodka</td><td class="r">In 2021 China was America's largest supplier of goods. Full decoupling is impossible.</td></tr>
+          <tr><th scope="row">Nuclear logic</th><td>Two-player deterrence, red lines learned through near-misses</td><td class="r">Three nuclear powers, threats against a non-nuclear state, and New START suspended</td></tr>
+          <tr><th scope="row">Front line</th><td>Governments and armies</td><td class="r">Microsoft, Google and SpaceX defend networks; one executive can veto a strike.</td></tr>
+          <tr><th scope="row">The middle</th><td>Non-Aligned Movement</td><td class="r">Saudi Arabia, India, the Solomons and others take what they can from both sides.</td></tr>
+          <tr><th scope="row">Ending</th><td>One side collapsed</td><td class="r">No collapse in sight; the rivalry must be managed indefinitely.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Drawn from the introduction, chs. 9 and 19, and the epilogue</span></div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book is reportage, not a manual, but its record of misjudgements suggests some habits.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Reading rivals</h3>
+      <div class="tk"><b>Believe stated intent</b><span>Putin at Munich in 2007 and Xi in 2013 said where they were going. Both were treated as rhetoric.</span></div>
+      <div class="tk"><b>Don't project your own logic</b><span>Europe assumed gas revenue would restrain Putin. Wounded pride and history mattered more.</span></div>
+      <div class="tk"><b>Watch logistics, not words</b><span>Blood supplies and a reserve occupation force revealed the invasion, not diplomatic denials.</span></div>
+      <div class="tk"><b>Mind the price of each move</b><span>Cheap land grabs invite the next one. Count what the last act of aggression cost.</span></div>
+    </div>
+    <div class="col">
+      <h3>Competing</h3>
+      <div class="tk"><b>Keep the yard small</b><span>Guard a few chokepoint technologies tightly; not every advance is a Sputnik moment.</span></div>
+      <div class="tk"><b>Fund it as security</b><span>Fabs cost about as much as carriers. Treat CHIPS as a down payment, not a one-time fix.</span></div>
+      <div class="tk"><b>Allies multiply power</b><span>China has partners of convenience. America's network is its edge, if it keeps showing up.</span></div>
+      <div class="tk"><b>Separate engagement from diplomacy</b><span>Talk to manage conflict, not because talking will change the other system.</span></div>
+    </div>
+    <div class="col">
+      <h3>Managing escalation</h3>
+      <div class="tk"><b>Publish to disarm</b><span>Releasing intelligence removes pretext and surprise, if you accept that plots get cancelled.</span></div>
+      <div class="tk"><b>Test red lines step by step</b><span>Turning up the heat gradually kept NATO out of the war, but each delay had a cost on the battlefield.</span></div>
+      <div class="tk"><b>Leave an exit</b><span>Never force a choice between humiliation and the bomb. Warn through many voices, including the adversary's friends.</span></div>
+      <div class="tk"><b>Match ends to means</b><span>Total victory with limited support "never ends well", as a retired general put it.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of David E. Sanger with Mary K. Brooks, <em>New Cold Wars: China's Rise, Russia's Invasion, and America's Struggle to Defend the West</em> (Crown, 2024). Figures are as reported in the book. The step heights in the escalation chart, the shape of the nuclear-risk curve, the severity bars in the seven-year-itch timeline and the "few hundred" warhead bar are illustrative. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero band: a slowly turning globe grid, after the cover's faint map lines.
+         Kyiv (red) and Taipei (yellow) pulse as they come round. --- */
+  var canvas = document.getElementById("globe");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  var D = Math.PI / 180, LAT0 = 25 * D;
+  var cities = [
+    { lon: 30.5, lat: 50.4, c: "--red" },
+    { lon: 121.5, lat: 25.0, c: "--gold" }
+  ];
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+  }
+  function proj(lon, lat, lon0, R, sx, cx, cy) {
+    var dl = (lon - lon0) * D, la = lat * D;
+    var cosc = Math.sin(LAT0) * Math.sin(la) + Math.cos(LAT0) * Math.cos(la) * Math.cos(dl);
+    var x = Math.cos(la) * Math.sin(dl);
+    var y = Math.cos(LAT0) * Math.sin(la) - Math.sin(LAT0) * Math.cos(la) * Math.cos(dl);
+    return { x: cx + x * R * sx, y: cy - y * R, vis: cosc > 0, depth: cosc };
+  }
+  function draw(time) {
+    if (!w) return;
+    var lon0 = reduce ? 76 : 76 + ((time || 0) * 0.004) % 360;
+    var cy = hgt * 0.62, R = (cy - 6) / 0.45, cx = w / 2, sx = (w * 0.5) / R;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, w, hgt);
+    var grid = css("--ink-3");
+    ctx.strokeStyle = grid; ctx.lineWidth = 1;
+    var lon, lat, p, started;
+    for (lon = -180; lon < 180; lon += 15) {
+      ctx.beginPath(); started = false;
+      for (lat = -60; lat <= 85; lat += 3) {
+        p = proj(lon, lat, lon0, R, sx, cx, cy);
+        if (!p.vis) { started = false; continue; }
+        if (!started) { ctx.moveTo(p.x, p.y); started = true; } else ctx.lineTo(p.x, p.y);
+      }
+      ctx.globalAlpha = 0.28; ctx.stroke();
+    }
+    for (lat = -30; lat <= 75; lat += 15) {
+      ctx.beginPath(); started = false;
+      for (lon = -180; lon <= 180; lon += 3) {
+        p = proj(lon, lat, lon0, R, sx, cx, cy);
+        if (!p.vis) { started = false; continue; }
+        if (!started) { ctx.moveTo(p.x, p.y); started = true; } else ctx.lineTo(p.x, p.y);
+      }
+      ctx.globalAlpha = lat === 0 ? 0.45 : 0.28; ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+    var pulse = reduce ? 0.5 : (Math.sin((time || 0) * 0.003) + 1) / 2;
+    cities.forEach(function (ci) {
+      var q = proj(ci.lon, ci.lat, lon0, R, sx, cx, cy);
+      if (!q.vis || q.y < 0 || q.y > hgt) return;
+      var col = css(ci.c), a = Math.min(1, q.depth * 2.2);
+      ctx.globalAlpha = a * (0.35 - pulse * 0.25);
+      ctx.fillStyle = col;
+      ctx.beginPath(); ctx.arc(q.x, q.y, 6 + pulse * 12, 0, Math.PI * 2); ctx.fill();
+      ctx.globalAlpha = a;
+      ctx.beginPath(); ctx.arc(q.x, q.y, 4.5, 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
