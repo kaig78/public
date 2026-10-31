@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Great Mental Models by Shane Parrish and Rhiannon Beaubien – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief, as on the other pages. Palette from the cover:
+   white stock, black grotesque type, one red italic monogram. The token names are shared
+   with the other pages; here --cyan is graphite (the plain reading), red the thing to notice. */
+:root {
+  --paper: #f4f3ef;
+  --paper-2: #e9e7e1;
+  --card: #ffffff;
+  --ink: #111214;
+  --ink-2: #45474b;
+  --ink-3: #6f7175;
+  --rule: #d9d7d0;
+
+  --cyan: #3d4852;
+  --cyan-2: #8b949c;
+  --red: #d3122f;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #131313;
+    --paper-2: #1f1e1e;
+    --card: #1b1b1b;
+    --ink: #f3f2ef;
+    --ink-2: #bdbcb8;
+    --ink-3: #8f8e8a;
+    --rule: #302f2e;
+    --cyan: #b6c0c9;
+    --cyan-2: #6f7a84;
+    --red: #ff5a6b;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #131313;
+  --paper-2: #1f1e1e;
+  --card: #1b1b1b;
+  --ink: #f3f2ef;
+  --ink-2: #bdbcb8;
+  --ink-3: #8f8e8a;
+  --rule: #302f2e;
+  --cyan: #b6c0c9;
+  --cyan-2: #6f7a84;
+  --red: #ff5a6b;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-cyan { --c: var(--cyan); }
+.c-red { --c: var(--red); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: clamp(22px, 3vw, 34px); letter-spacing: .08em; line-height: 1; text-transform: uppercase; color: var(--red); }
+.hero h1 {
+  font-size: clamp(54px, 11vw, 136px);
+  font-weight: 800;
+  font-stretch: 72%;
+  line-height: .86;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 10px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 872;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 30, 40, .35), 0 8px 18px -10px rgba(10, 30, 40, .25);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--red);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  font-stretch: 72%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .01em;
+  color: var(--red);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--cyan);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--red);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-cy { fill: var(--cyan); }
+.fig svg text.t-red { fill: var(--red); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-cy { stroke: var(--cyan); fill: none; }
+.s-cy2 { stroke: var(--cyan-2); fill: none; }
+.s-red { stroke: var(--red); fill: none; }
+.f-cy { fill: var(--cyan); }
+.f-cy2 { fill: var(--cyan-2); }
+.f-red { fill: var(--red); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-cyt { fill: color-mix(in srgb, var(--cyan) 14%, var(--card)); }
+.f-redt { fill: color-mix(in srgb, var(--red) 14%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--red); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; letter-spacing: .02em; color: var(--red); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--cyan); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three kinds of learning */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--cyan); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--cyan); }
+.compare .bad h5 { color: var(--red); }
+
+/* equation strip */
+.eq { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: var(--paper-2); border-radius: 6px; padding: 14px 18px; margin: 0; white-space: pre-wrap; color: var(--ink); }
+.eq .k { color: var(--cyan); }
+.eq .r { color: var(--red); }
+.eq .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 150px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; color: var(--red); border-top: 2px solid var(--red); padding-top: 12px; letter-spacing: .02em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1;  }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(0deg); } to { transform: rotate(0deg); } }
+}
+
+/* The cover is quiet: regular-weight grotesque in mixed case, red only as an italic accent */
+.hero .kicker { font-family: var(--body); font-style: italic; font-weight: 500; text-transform: none; letter-spacing: 0; font-size: clamp(26px, 3.4vw, 40px); }
+.hero h1 { font-size: clamp(44px, 8.4vw, 104px); font-weight: 400; font-stretch: 100%; line-height: 1.02; letter-spacing: -.025em; text-transform: none; color: var(--ink); margin-left: 0; }
+.hero .sub { font-weight: 400; }
+.band canvas { height: 150px; }
+.sec-head h2 { font-weight: 500; }
+.part h2 { font-size: clamp(44px, 7vw, 92px); font-weight: 400; font-stretch: 100%; text-transform: none; letter-spacing: -.025em; line-height: 1; color: var(--ink); }
+.chapter .chno { font-family: var(--body); font-style: italic; font-weight: 400; font-stretch: 100%; color: var(--red); }
+.chapter h3 { font-weight: 600; }
+.map h3, .toolkit h3 { font-size: 24px; font-weight: 500; font-stretch: 100%; text-transform: none; letter-spacing: -.01em; color: var(--ink); }
+.map li span:first-child { color: var(--red); }
+.points li::before { background: var(--red); }
+.story { border-left-color: var(--ink); }
+.kinds .label { color: var(--red); }
+.fig svg text.t-cy { fill: var(--cyan); }
+.pull { font-weight: 500; }
+.cover { height: auto; }
+
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Shane Parrish &amp; Rhiannon Beaubien · Latticework, 2019</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#footing">Footing</a>
+    <a href="#foresight">Foresight</a>
+    <a href="#filters">Filters</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">Volume 1</p>
+    <h1><span>The Great</span><span>Mental Models</span></h1>
+    <p class="sub">General thinking concepts</p>
+    <p class="dek">Nine borrowed ways of looking at a problem, and three supporting ideas, collected so you can walk around a situation instead of staring at it from one side.</p>
+    <div class="byline label">
+      <span>9 models</span><span>3 supporting ideas</span><span>First of 5 planned books</span><span>~40,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Great Mental Models Volume 1: a plain white cover with the title in black sans-serif type at the top left, a small red italic fs monogram at the top right, and General Thinking Concepts running vertically down the right edge">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="lattice"></canvas>
+  <div class="ends label"><span>One lens</span><span>A latticework</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Preface &amp; introduction</span>
+    <h2>Whoever has the fewest blind spots wins</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Shane Parrish started an intelligence-agency job two weeks before September 11, 2001, and was soon promoted into decisions nobody had taught him to make. An MBA didn't help. A passing mention of Charlie Munger in class did. Munger reasons with a "latticework" of chunks of knowledge borrowed from many fields, and Parrish spent the next years collecting them. His website fs.blog came out of that, and this book came from his children asking whether a mental models book existed. It didn't. He says none of the ideas are his own.</p>
+      <p>A <strong>mental model</strong> is a simplified picture of how something works. Everyone runs on them, mostly unaware. You don't need the physics of gravity to know a dropped pen will fall, or that leaning on a flimsy guard rail is a bad plan. Models decide which facts seem relevant, so bad ones are costly. The authors' example is bloodletting, practised for over 2,000 years while it weakened sick patients.</p>
+      <p>Two things go wrong: the model is false, or it's true and used where it doesn't belong. Specialists fall into the second trap. An engineer sees systems, a psychologist sees incentives, a business person sees opportunity cost, and each misses what the others see. Parrish's picture is the blind men with the elephant. Each hand is right about one part and wrong about the animal.</p>
+      <p>Knowing isn't enough, either. If you know you interrupt people and still do it, others just conclude that you don't care. The book asks you to test ideas against the world, the way Antaeus had to keep touching the ground to stay strong. Heracles beat the giant by lifting him off it.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The scale of the project</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-red"><span class="big num">80–90</span><p>Models that Munger says carry about 90 percent of the load of being worldly-wise.</p></div>
+        <div class="stat"><span class="big num">13.7bn</span><p>Years of inorganic systems: Peter Kaufman's first and largest "bucket" of evidence, math and physics.</p></div>
+        <div class="stat"><span class="big num">3.5bn</span><p>Years of biology on Earth, the second bucket.</p></div>
+        <div class="stat"><span class="big num">20,000</span><p>Years of human behaviour, the third. Kaufman's point is that big, old samples make for reliable models.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">400 horsepower, 50 delivered</span>
+        <p>That's the book's image for a good brain relying on a few models. Variety, more than extra depth, is what gets the rest of the power to the wheels.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="kinds" style="margin-top:32px">
+    <div><span class="label">Flaw 1</span><b>Perspective</b><span>A system is hard to see from inside. Think of the young fish in David Foster Wallace's story who has never heard of water.</span></div>
+    <div><span class="label">Flaw 2</span><b>Ego</b><span>We avoid criticism by not showing our ideas, then defend them when they do get criticised. Ego also gets businesses started, so the aim is to know when it helps.</span></div>
+    <div><span class="label">Flaw 3</span><b>Distance</b><span>A hot stove teaches at once. Decisions carried out by others, levels below you, let you keep believing you were right.</span></div>
+  </div>
+
+  <div class="fig" style="margin-top:32px">
+    <h4>Galileo's ship: why you can't see the system you're in</h4>
+    <div class="scroll-x">
+      <svg viewBox="0 0 600 214" role="img" aria-label="Two views of a ball dropped inside a ship moving at constant speed. Below decks the scientist sees it fall straight down. A fish outside with x-ray vision sees it travel east by about 20 feet as it falls, because the ship is moving.">
+        <text x="20" y="20" class="hd">Below decks</text>
+        <text x="320" y="20" class="hd">The fish outside</text>
+        <rect x="20" y="36" width="250" height="130" rx="6" class="f-paper2"/>
+        <circle cx="145" cy="58" r="8" class="f-red"/>
+        <path d="M145 70 V152" class="s-red" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <path d="M139 146 L145 154 L151 146" class="s-red" stroke-width="1.5"/>
+        <path d="M20 166 H270" class="s-ink" stroke-width="2"/>
+        <rect x="320" y="74" width="150" height="92" rx="6" class="f-none s-3" stroke-dasharray="3 4"/>
+        <rect x="430" y="74" width="150" height="92" rx="6" class="f-cyt s-cy" stroke-width="1.2"/>
+        <circle cx="395" cy="58" r="8" class="f-3"/>
+        <path d="M395 66 C402 110 455 138 505 154" class="s-red" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <circle cx="505" cy="154" r="8" class="f-red"/>
+        <path d="M320 166 H580" class="s-ink" stroke-width="2"/>
+        <path d="M395 184 H505" class="s-2" stroke-width="1.2"/><path d="M499 179 L506 184 L499 189" class="s-2" stroke-width="1.2"/>
+        <text x="450" y="204" text-anchor="middle">about 20 feet east</text>
+        <text x="145" y="190" text-anchor="middle">straight down</text>
+      </svg>
+    </div>
+    <p class="cap">Both observers are right about what they see, and the fish has more to tell. The book uses the analogy to argue for seeking outside vantage points before trusting your own view.</p>
+    <p class="src">Galileo's analogy, as told in the introduction. Drawing not to scale.</p>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Footing</span>
+      <h3>What do I really know?</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>The Map Is Not the Territory</b>Models leave things out</a></li>
+        <li><span>02</span><a href="#ch2"><b>Circle of Competence</b>Know where your knowledge stops</a></li>
+        <li><span>A</span><a href="#sa"><b>Falsifiability</b>Could this be shown wrong?</a></li>
+        <li><span>03</span><a href="#ch3"><b>First Principles Thinking</b>Separate facts from assumptions</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Foresight</span>
+      <h3>What could happen?</h3>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>Thought Experiment</b>Run it in your head first</a></li>
+        <li><span>B</span><a href="#sb"><b>Necessity and Sufficiency</b>Needed isn't the same as enough</a></li>
+        <li><span>05</span><a href="#ch5"><b>Second-Order Thinking</b>The effects of the effects</a></li>
+        <li><span>06</span><a href="#ch6"><b>Probabilistic Thinking</b>Roughly, what are the odds?</a></li>
+        <li><span>C</span><a href="#sc"><b>Causation vs. Correlation</b>Moving together proves little</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Filters</span>
+      <h3>What can I throw out?</h3>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>Inversion</b>Start from the far end</a></li>
+        <li><span>08</span><a href="#ch8"><b>Occam's Razor</b>Fewer moving parts</a></li>
+        <li><span>09</span><a href="#ch9"><b>Hanlon's Razor</b>Mistake before malice</a></li>
+      </ol>
+    </div>
+  </div>
+  <p class="cap muted" style="margin-top:20px;font-size:15px">The book runs straight through the nine models in this order, with the supporting ideas between chapters. The three groupings are mine.</p>
+</section>
+
+<!-- ============ FOOTING ============ -->
+<div class="part" id="footing">
+  <span class="label partno">Models 1–3 · Supporting idea A</span>
+  <h2>Footing</h2>
+  <p class="lede">Before picking a tool, work out what kind of knowledge you're holding: a simplified map, real expertise, a testable claim, or an inherited assumption.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Map &amp; territory</span></div>
+  <div class="body">
+    <div>
+      <h3>Every useful map leaves things out</h3>
+      <p class="idea">A map helps because it's a reduction. The danger begins when you forget that and steer by the map alone.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Reduction is the point.</strong> Alfred Korzybski made the phrase famous in a 1931 paper given in New Orleans. Financial statements, parenting manuals and performance reviews are all maps. A perfect one would be useless, as Lewis Carroll joked in <em>Sylvie and Bruno</em> with a map at one mile to the mile.</li>
+      <li><strong>Made for a purpose.</strong> The London Underground map serves passengers. Train drivers ignore it, and it won't get you out of Covent Garden station.</li>
+      <li><strong>Mark the edges.</strong> Einstein's 1905 Special Relativity replaced Newton's picture, yet Newton's still predicts motion reliably within limits. Physicists know where each map works and go carefully past that point. Most of us never draw that line for our own models.</li>
+      <li><strong>Maps age.</strong> Frederick Taylor's scientific management worked in factories. It faded as the economy moved on, rivals copied it, workers saw through it, and people turned out to want more than money.</li>
+      <li><strong>Guidebooks, not laws.</strong> Garrett Hardin's Tragedy of the Commons says a herder keeps nearly all the gain from one more animal but bears only a fraction of the overgrazing, so everyone overgrazes. Elinor Ostrom worried the model was too general and ignored how real people solved the problem. She valued such models for the thinking they start.</li>
+    </ul>
+    <div class="kinds">
+      <div><span class="label">Check 1</span><b>Reality updates the map</b><span>Karimeh Abbud photographed Palestine's middle class as she saw them, a different record from the one European photographers left. Territories change, and explorers' feedback keeps maps honest.</span></div>
+      <div><span class="label">Check 2</span><b>Ask who drew it</b><span>The authors cite historians who read the modern borders of Syria, Jordan and Iraq as a record of British and French interests after World War I, more than of local life.</span></div>
+      <div><span class="label">Check 3</span><b>Maps change territories</b><span>Jane Jacobs described planners who reshaped cities to fit their models without studying how cities work, often with bad results.</span></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Circle of competence</span></div>
+  <div class="body">
+    <div>
+      <h3>Inside the circle, you know what you don't know</h3>
+      <p class="idea">The size of your expertise matters less than knowing exactly where it stops.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Lifer and Stranger.</strong> A man who has spent his whole life in a small town knows who owes whom and who helped in the flood. A visitor meets the mayor and the bartender and thinks he's got the place figured out. That false confidence leads him to take bigger risks than he realises.</li>
+      <li><strong>Everest.</strong> About 200 bodies remain on the mountain, each belonging to someone who expected to get down. Climbers have relied on Sherpas since the first recorded attempts in 1922, and Sherpas account for a quarter of ascents since the first. Tenzing Norgay joined a 1935 attempt and reached the top in 1953, after 20 years of work in the region.</li>
+      <li><strong>You can't build one fast.</strong> The book's minimum is a few years and a few failures. Learning from other people's mistakes is cheaper than making them all yourself. Keep a precise record, because we tend to rate ourselves too highly.</li>
+      <li><strong>Outside eyes.</strong> Atul Gawande, a top US surgeon, hired a coach despite being embarrassed about it. He learned what he couldn't see and what nobody else would tell him.</li>
+      <li><strong>Check the adviser's incentives.</strong> Your mechanic has seen under the hood and you haven't, and he gains if you spend more. So hold off on big repairs and read up a little first. It isn't cynical to ask what someone stands to gain.</li>
+      <li><strong>Two good examples.</strong> Elizabeth I took the throne of a broke, divided country, admitted what she didn't know, and built a small council where people could debate. Rose Blumkin spoke little English and barely read, yet built Nebraska Furniture Mart. Buffett says she'd buy 5,000 end tables on the spot and wouldn't touch General Motors at 50 cents a share.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three habits keep a circle alive. Three moves get you through the world outside it.</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 306" role="img" aria-label="A circle labelled Lifer who knows what is unknown. Three arrows point into it: curiosity, monitoring and feedback. Three arrows lead out to moves for operating outside it: learn the basics, ask a Lifer, and use general models. Beyond the circle the Stranger does not know what he does not know.">
+          <circle cx="300" cy="140" r="104" class="f-redt s-red" stroke-width="1.5"/>
+          <text x="300" y="134" text-anchor="middle" class="hd">The Lifer</text>
+          <text x="300" y="154" text-anchor="middle" style="font-size:11px">knows what's unknown</text>
+          <text x="10" y="24" class="hd" style="font-size:13px">Build &amp; maintain</text>
+          <text x="440" y="24" class="hd" style="font-size:13px">Operate outside</text>
+          <g id="circ"></g>
+          <text x="300" y="282" text-anchor="middle" class="t-3" style="font-size:12px">The Stranger, out here, doesn't know</text>
+          <text x="300" y="298" text-anchor="middle" class="t-3" style="font-size:12px">what he doesn't know</text>
+        </svg>
+      </div>
+      <p class="cap">Competence has to be kept up, because the world moves on. Outside the circle, the authors warn, basics are easy to pick up and tend to give unearned confidence. Ask detailed questions, and test how far your expert's own circle reaches.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="sa">
+  <div class="gutter"><span class="chno">A</span><span class="label">Supporting idea · Falsifiability</span></div>
+  <div class="body">
+    <div>
+      <h3>A theory has to risk being wrong</h3>
+      <p class="idea">If nothing could count against a claim, you can't really say it's been supported either.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Popper's test.</strong> Karl Popper asked what would show a theory to be false. His example was Freud's psychoanalysis, which he didn't call false. He said it made no specific predictions, so nobody could tell.</li>
+      <li><strong>Laws of history.</strong> Popper attacked the belief that history follows fixed laws. A claimed "Law of Increasing Technological Complexity" can't be tested. The trends are real but depend on conditions, and conditions change.</li>
+      <li><strong>Russell's chicken.</strong> Fed every morning of its life, it concludes that feeding is a law of nature, right up to the day its head comes off. Likewise the worst event on record was once worse than anything before it, so the authors suggest preparing for what physics allows, not just what has happened.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">First principles</span></div>
+  <div class="body">
+    <div>
+      <h3>Separate what's true from what's merely agreed</h3>
+      <p class="idea">Strip a problem down to what can't be reduced further in this context, then rebuild without the inherited assumptions.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Relative, not absolute.</strong> The goal isn't eternal truth. For someone improving a fridge, thermodynamics is the floor, while a physicist may dig below it. The book's blunt line is that anything other than a law of nature is a shared belief, including money and borders.</li>
+      <li><strong>Socratic questioning.</strong> Pin down what you think and where it came from. Challenge it, look for evidence, try other viewpoints, ask what follows if you're wrong, then question the original question.</li>
+      <li><strong>Five Whys.</strong> Children do this naturally. Keep asking why until you hit a statement that could be tested, or a dead end like "it just is". Both methods feel slow, and after a couple of rounds you'll often find you can't answer.</li>
+      <li><strong>The sterile stomach.</strong> Doctors assumed acid kept bacteria out, so nobody looked for them in ulcer patients. Pathologist Robin Warren saw bacteria anyway, and gave gastroenterologist Barry Marshall a list of 20 patients. They shared a Nobel in 2005. <em>H. pylori</em> had appeared in the medical literature as early as 1875, and many doctors still resisted the finding for decades.</li>
+      <li><strong>Method versus principle.</strong> When research suggested straight cattle chutes can work as well as Temple Grandin's curved ones, she agreed. The curve was only a tactic. Her principle was reducing animals' stress, which affects their weight, immune systems and conception rates.</li>
+      <li><strong>What is meat?</strong> Asked from the 1970s on, the answer was taste, texture, smell and cooking, none of which requires an animal. The Maillard reaction explains much of the flavour. The book counts around 30 labs working on grown meat.</li>
+    </ul>
+    <div class="fig">
+      <h4>Where a chain of whys can end</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 232" role="img" aria-label="Three linked steps from the ulcer story: nobody looks for bacteria in ulcer patients; why, because bacteria can't grow in stomach acid; why, it's just the way it is. Below, a fork: a chain ending in a falsifiable fact has reached a first principle; one ending in because I said so has reached an assumption. Warren's samples showed the sterile stomach was an assumption.">
+          <g id="whys"></g>
+          <path d="M504 98 V124 H150 V138" class="s-3" stroke-width="1.2"/>
+          <path d="M504 124 H450 V138" class="s-3" stroke-width="1.2"/>
+          <rect x="10" y="140" width="280" height="62" rx="6" class="f-cyt s-cy" stroke-width="1.2"/>
+          <text x="24" y="164" class="hd" style="font-size:14px">Ends in a testable fact</text>
+          <text x="24" y="186">a first principle: build here</text>
+          <rect x="310" y="140" width="280" height="62" rx="6" class="f-redt s-red" stroke-width="1.2"/>
+          <text x="324" y="164" class="hd" style="font-size:14px">Ends in "because I said so"</text>
+          <text x="324" y="186">an assumption: keep digging</text>
+          <text x="10" y="224" class="t-3" style="font-size:11px">The sterile stomach looked like the first kind. It was the second.</text>
+        </svg>
+      </div>
+      <p class="cap">My own layout of the ulcer story as a chain of whys. The book tells the story in prose and gives the two endings as the test.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ FORESIGHT ============ -->
+<div class="part" id="foresight">
+  <span class="label partno">Models 4–6 · Supporting ideas B, C</span>
+  <h2>Foresight</h2>
+  <p class="lede">You can't try most decisions twice. These tools run them in your head, trace what follows, and put rough odds on the result.</p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Thought experiment</span></div>
+  <div class="body">
+    <div>
+      <h3>Run the experiment you can't run</h3>
+      <p class="idea">Imagining with discipline lets you change one variable as often as you like, at no cost.</p>
+    </div>
+    <ul class="points">
+      <li><strong>LeBron against Woody Allen.</strong> You'd bet everything on James. Against Kevin Durant you wouldn't. You worked out both without a ball, and the difference in your confidence is the useful part.</li>
+      <li><strong>It needs rigour.</strong> The steps mirror the scientific method: question, research, hypothesis, test, analyse, compare and adjust. Otherwise it's only daydreaming.</li>
+      <li><strong>Impossible physics.</strong> In a closed elevator, could you tell gravity from being pulled upward through space? Einstein concluded you couldn't, and that led toward general relativity. "If money were no object" works the same way on a smaller scale, by removing a variable to show what you value.</li>
+      <li><strong>Ethics without casualties.</strong> Philippa Foot's trolley problem, developed by Judith Jarvis Thomson, tests moral intuitions no one could test for real. Thomson's doctor, who might kill one patient to save five, shows that the "one for many" answer doesn't always hold.</li>
+      <li><strong>Rerunning history, carefully.</strong> History is chaotic, so "what if" answers mislead easily. What happened is one deal of the cards. Imagine Princip with stomach cramps on June 28, 1914. The Archduke's car had already survived a grenade that day, and other plotters existed. The more routes to war you can picture without the shot, the weaker its claim as the critical cause.</li>
+      <li><strong>Veil of ignorance.</strong> John Rawls asks you to design a society without knowing who you'd be in it. The same test works for a company's parental-leave policy.</li>
+    </ul>
+    <div class="fig">
+      <h4>Same trade, different worlds: buying $100,000 of stock with half borrowed</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 282" role="img" aria-label="Line chart of your equity against change in share price. You put in 50,000 dollars and borrow 50,000. If the stock doubles your equity is 150,000 dollars. If it falls 50 percent your equity is zero and the margin loan is called, so a later recovery no longer helps you.">
+          <path d="M70 230 H570" class="s-2" stroke-width="1.2"/>
+          <path d="M70 40 V230" class="s-rule"/>
+          <path d="M320 40 V230" class="s-rule" stroke-dasharray="3 4"/>
+          <path d="M95 230 H195" class="s-red" stroke-width="3"/>
+          <path d="M195 230 L570 40" class="s-cy" stroke-width="2.5"/>
+          <circle cx="195" cy="230" r="6" class="f-red"/>
+          <circle cx="320" cy="166.7" r="6" class="f-ink"/>
+          <circle cx="570" cy="40" r="6" class="f-cy"/>
+          <text x="560" y="28" text-anchor="end" class="t-cy">Stock doubles: $150,000</text>
+          <text x="330" y="186">You start with $50,000</text>
+          <text x="80" y="212" class="t-red">Down 50%: loan called</text>
+          <text x="62" y="234" text-anchor="end">$0</text>
+          <text x="62" y="46" text-anchor="end">$150k</text>
+          <text x="95" y="252" text-anchor="middle">−90%</text><text x="195" y="252" text-anchor="middle">−50%</text><text x="320" y="252" text-anchor="middle">flat</text><text x="570" y="252" text-anchor="end">+100%</text>
+          <text x="320" y="274" text-anchor="middle" class="t-3" style="font-size:11px">change in share price</text>
+        </svg>
+      </div>
+      <p class="cap">The book's Google example. You tripled your money, so you feel like a genius, but the winning path was one of many. Nearly all stocks have halved at some point, and the whole New York exchange fell 90% from 1929 to 1932. A thought experiment tells you if the good result was skill or luck, and that the win doesn't settle whether the bet was smart.</p>
+      <p class="src">Numbers from the sidebar "Reduce the Role of Chance". Line is my arithmetic: value of holding minus $50,000 owed.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="sb">
+  <div class="gutter"><span class="chno">B</span><span class="label">Supporting idea · Necessity &amp; sufficiency</span></div>
+  <div class="body">
+    <div>
+      <h3>Needed isn't the same as enough</h3>
+      <p class="idea">The gap between what you must have and what actually gets you there is often luck.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Writer and Rowling.</strong> Writing well is necessary for both a published author and J.K. Rowling, and it's not enough for the second. The same holds for capital, hard work and intelligence on the way to the Fortune 500.</li>
+      <li><strong>Why it matters.</strong> Without the plan and supplies, you certainly lose a battle. With them, you may lose anyway. Stories of success tend to blur that gap, which is partly why there's no recipe.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Second-order thinking</span></div>
+  <div class="body">
+    <div>
+      <h3>Then ask what happens next</h3>
+      <p class="idea">Anyone can see the first consequence, so thinking about it gives you no edge. The second one is where the surprises are.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The web.</strong> Dense connections let actions ripple far. Buffett's parade: when a few people stand on tiptoe, everyone must, nobody sees better, and they're all more uncomfortable.</li>
+      <li><strong>It isn't prediction.</strong> You can only reason from what you know, but that's no excuse. The authors argue that anyone with basic biology could have foreseen antibiotic resistance: bacteria live short lives, so pressure speeds their evolution.</li>
+      <li><strong>Short pain, long gain.</strong> In 48 BC Cleopatra, 21, ousted from the palace, sided with Caesar. It enraged her brother and her people, started a civil war, and left her under siege for months. She then ruled for years. The book is careful here: we can only infer her reasoning.</li>
+      <li><strong>Better arguments.</strong> Mary Wollstonecraft argued for women's education by spelling out what society would gain, including better wives and mothers. Showing the good second-order effects made her case stronger.</li>
+      <li><strong>Know when to stop.</strong> This isn't a licence for slippery-slope paralysis. A beer might lead to alcoholism, but mostly doesn't. Consider the most likely effects, not all possible ones.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three decisions, read left to right</h4>
+      <div class="scroll-x">
+        <svg id="d-order" viewBox="0 0 600 280" role="img" aria-label="Three chains. A bounty on dead cobras brings in dead snakes, then locals breed cobras, leaving a worse snake problem. Antibiotics in feed give more weight per pound of food, then surviving bacteria are resistant, then drug-resistant bacteria are in the food chain. More tire traction means shorter stopping, then the engine works harder with worse mileage, then more carbon dioxide and rubber particles."></svg>
+      </div>
+      <p class="cap">The first column looks sensible and the second confirms it. Failure shows up further along, where nobody was looking.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"You can never merely do one thing."</blockquote>
+      <span class="label">Garrett Hardin, his First Law of Ecology, 1963</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Probabilistic thinking</span></div>
+  <div class="body">
+    <div>
+      <h3>Think in rough odds, and doubt your odds</h3>
+      <p class="idea">Our instincts evolved for survival, not for markets and offices. We need to add a deliberate layer of probability on top.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Bayes: start from what you know.</strong> Thomas Bayes's essay reached the Royal Society through his friend Richard Price in 1763, two years after his death. The core habit is to read any news against your prior information. Priors are themselves only estimates, so strong new evidence should shift them.</li>
+      <li><strong>Conditions matter.</strong> If I've chosen vanilla three times, is it my favourite, or was the chocolate gone by my turn? Check what preceded an event before projecting it forward.</li>
+      <li><strong>Fat tails.</strong> Height has limits. You'll never meet a man ten times the average size, but you can meet someone 10,000 times wealthier. The book's example: if stairs killed 1,000 people last year and terrorism 500, the authors argue the comparison misleads, because they see terror risk as behaving more like wealth.</li>
+      <li><strong>Off by orders of magnitude.</strong> Nassim Taleb argues that small errors in measuring extreme risks aren't small. Something rated once in 1,000 years might be possible in any given year.</li>
+      <li><strong>Prepare, don't predict.</strong> Taleb's antifragile things gain from disorder. Two ways there: seek bets with upside and little cost, like going to a party full of people you'd like to meet, and fail properly, meaning no risk that can finish you, and the resilience to learn and go again.</li>
+      <li><strong>Errors lean one way.</strong> Investors pitch 20% to 40% a year, while US stocks have long returned no more than 7% to 8% before fees. You rarely arrive 20% early, but often arrive 20% late.</li>
+      <li><strong>Vera Atkins.</strong> As second in command of the SOE's French section she weighed recruits (Who spoke French? Who was too tied to family?) and judged grainy, stale reports. Of 400 agents she sent, 100 were captured and killed. A wireless operator could expect six weeks. Good estimates improve your chances and promise nothing.</li>
+      <li><strong>Insurers</strong> live on this. They will cover almost anything, a model's legs included. The trick isn't knowing what will happen, it's naming the right price.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>A doubling that barely matters, and a climb that does</h4>
+        <div class="bars">
+          <div class="bar c-cyan"><div class="row"><span>Stabbing risk, last year</span><b>0.01%</b></div><div class="track"><div class="fill" style="width:.4%;min-width:2px"></div></div></div>
+          <div class="bar c-cyan"><div class="row"><span>Stabbing risk, "doubled"</span><b>0.02%</b></div><div class="track"><div class="fill" style="width:.5%;min-width:3px"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>US diabetes diagnoses, 1958</span><b>0.93%</b></div><div class="track"><div class="fill" style="width:12.6%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>US diabetes diagnoses, 2015</span><b>7.4%</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">The priors decide the reaction. The stabbing figures are the book's hypothetical. The diabetes climb is real and steady, so the authors treat it as a worrying trend.</p>
+      </div>
+      <div class="fig">
+        <h4>Bell curve and fat tail look alike until the ends</h4>
+        <svg id="d-tails" viewBox="0 0 420 250" role="img" aria-label="Two curves with similar centres. The bell curve drops to nothing at the extremes. The fat-tailed curve stays above zero far from the centre, with the tails shaded."></svg>
+        <div class="legend"><span><i style="--c:var(--cyan)"></i>bell curve</span><span><i style="--c:var(--red)"></i>fat tail</span></div>
+        <p class="cap">Illustrative shapes, not data. In fat-tailed domains, the authors advise you to skip listing every scenario and position yourself to survive whatever arrives.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="sc">
+  <div class="gutter"><span class="chno">C</span><span class="label">Supporting idea · Causation vs. correlation</span></div>
+  <div class="body">
+    <div>
+      <h3>Moving together proves very little</h3>
+      <p class="idea">We see two things happen together, assume one drove the other, and act on it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Direction can flip.</strong> A study may link heavy-drinking parents with children's poor grades. The drinking might hurt the kids, or struggling kids might push parents to drink. Inverting the claim helps sort this out.</li>
+      <li><strong>Regression to the mean.</strong> Where correlation is imperfect, extremes soften by themselves. Daniel Kahneman's made-up headline says an energy drink helps depressed children. They would improve somewhat anyway, as would children who hugged cats.</li>
+      <li><strong>Use a control group.</strong> Compare the treated group with one expected to improve by regression alone. With individuals or teams there's often no such group, and the effect can be close to impossible to separate out.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three strengths of correlation</h4>
+      <div class="scroll-x">
+        <svg id="d-scatter" viewBox="0 0 600 196" role="img" aria-label="Three scatter plots. Bottled water against suicide rate shows no pattern, near 0. Height against weight shows a loose upward cloud, between 0 and 1. Celsius against Fahrenheit is a perfect straight line, exactly 1."></svg>
+      </div>
+      <p class="cap">Dots are illustrative. The pairings and the coefficients they stand for are the book's. A coefficient runs from −1 to 1 and reflects how many factors two measures share.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ FILTERS ============ -->
+<div class="part" id="filters">
+  <span class="label partno">Models 7–9</span>
+  <h2>Filters</h2>
+  <p class="lede">These three remove things: obstacles you hadn't listed, explanations with too many parts, and villains who were never there.</p>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Inversion</span></div>
+  <div class="body">
+    <div>
+      <h3>Start from the far end</h3>
+      <p class="idea">Flip the problem. Assume the result and ask what else must be true, or work out what you want to avoid and see what's left.</p>
+    </div>
+    <ul class="points">
+      <li><strong>"Invert, always invert."</strong> That was the 19th-century mathematician Carl Jacobi's advice. The book also credits Hippasus, 2,300 years ago, with getting past a dead end on the square root of 2 by asking what it couldn't be, which led to the first irrational number.</li>
+      <li><strong>What else would have to be true?</strong> In the 1920s Edward Bernays was hired to sell Lucky Strikes to women. He asked what the world would look like if women smoked everywhere, then built it: an anti-sweets campaign, cigarettes on dessert menus, cigarette compartments in kitchen cabinets, and a 1929 Easter parade of women smoking as a statement of freedom. The authors admire the method and note that his legacy is partly unethical.</li>
+      <li><strong>Holmes.</strong> In "A Scandal in Bohemia" he doesn't search for the photograph. If Irene Adler treasures it, she'd grab it in a fire. So Watson fakes a fire and she shows him where it is.</li>
+      <li><strong>Avoid being poor.</strong> Instead of beating the market, John Bogle asked how investors could lose less to fees and bad manager picks. That gave us index funds. In your own finances, cut the behaviours sure to erode wealth, like spending more than you earn.</li>
+      <li><strong>Prevention.</strong> Marie Van Brittan Brown, a nurse in Queens who worked irregular hours, felt unsafe at home alone. She worked out that what she lacked was a view of the door, and in 1966 she and her husband filed the first closed-circuit monitoring patent. The authors admit we can't know her exact reasoning.</li>
+    </ul>
+    <div class="fig">
+      <h4>Kurt Lewin's force field: most plans list only one side</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 262" role="img" aria-label="Force field diagram. A vertical line marks where things stand. Three arrows from the left push toward the objective: training, messaging and marketing, labelled forces for change. Three arrows from the right push back, labelled forces against. Most of us stop after listing the left side. The inversion is to list and remove the right side too.">
+          <text x="20" y="22" class="hd">Step 3: forces for change</text>
+          <text x="580" y="22" text-anchor="end" class="hd">Step 4: forces against</text>
+          <path d="M300 34 V206" class="s-ink" stroke-width="2"/>
+          <text x="300" y="22" text-anchor="middle" style="font-size:11px">where things stand</text>
+          <g id="forces"></g>
+          <text x="150" y="226" text-anchor="middle" class="t-cy">add or strengthen</text>
+          <text x="450" y="226" text-anchor="middle" class="t-red">reduce or remove</text>
+          <text x="300" y="252" text-anchor="middle" class="t-3" style="font-size:11px">Most of us stop on the left. The inversion is turning to the right side.</text>
+        </svg>
+      </div>
+      <p class="cap">Lewin's 1930s method: name the problem and objective, list the forces either way, then plan against both. Ask what would make things worse, and stop doing that. Arrow lengths are arbitrary.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Nightingale: find out what's killing them</h4>
+        <div class="bars">
+          <div class="bar c-red"><div class="row"><span>British Army deaths, first Crimean winter, 1854–55</span><b>23%</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+          <div class="bar c-cyan"><div class="row"><span>The next winter</span><b>2.5%</b></div><div class="track"><div class="fill" style="width:10.9%"></div></div></div>
+        </div>
+        <p class="cap">Florence Nightingale's statistics pointed to poor sanitation as the main killer, and her polar-area chart made that plain. She then pushed for statistics as a way to prevent deaths. In 1858 she became the first woman elected to the Royal Statistical Society.</p>
+      </div>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">"Avoiding stupidity is easier than seeking brilliance."</blockquote>
+        <span class="label">Parrish &amp; Beaubien, on inversion</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Occam's razor</span></div>
+  <div class="body">
+    <div>
+      <h3>Fewer moving parts, fewer ways to be wrong</h3>
+      <p class="idea">If two explanations fit equally well, bet on the simpler one. It's a tendency, not a law.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Everyday use.</strong> Your husband is late, your toe hurts. Worst cases are possible, but work and tight shoes are far likelier. Medical students are taught to think of horses before zebras: flu is much more common than Ebola, and a false Ebola call is costly.</li>
+      <li><strong>Hume on miracles.</strong> David Hume advised default doubt. It's simpler to suppose the witness was mistaken, or that nature has a working we don't yet grasp. Carl Sagan took this up in demanding extraordinary proof for extraordinary claims.</li>
+      <li><strong>Dark matter.</strong> In the mid-1970s Vera Rubin saw Andromeda's outer edge moving as fast as its centre. Fritz Zwicky's unseen mass from 1933 was the simplest fit, though the book notes that nobody has yet found it. Rubin herself came to suspect that a change to our understanding of gravity might be the answer, a far bigger claim needing far stronger proof.</li>
+      <li><strong>Simple fixes.</strong> Chlorine, bromide and sunlight make a carcinogen, so Los Angeles had to shade the ten-acre Ivanhoe Reservoir. Ideas ran to a giant tarp or dome. A biologist suggested airport "bird balls" at $0.40 each, and three million went into LA's reservoirs. In 1989, when tigers killed about 60 villagers in the Ganges delta, a student noted that they attack when unseen, and face masks worn on the back of the head followed. No mask-wearer was attacked for three years.</li>
+      <li><strong>Gerstner's refusal.</strong> Taking over a struggling IBM in the early 1990s, Louis Gerstner told pundits that a vision was the last thing it needed. Serving customers and running the profitable businesses brought it back.</li>
+      <li><strong>The limit.</strong> Some things aren't simple. Ponzi schemes have no neat explanation, and powered flight needed lift, drag, airflow and combustion all at once. You can simplify only as far as the explanation stays accurate.</li>
+    </ul>
+    <div class="fig">
+      <h4>The book's arithmetic: each extra assumption is another chance to fail</h4>
+      <div class="scroll-x">
+        <svg id="d-occam" viewBox="0 0 600 256" role="img" aria-label="Rising curve of the chance an explanation is wrong as the number of required variables grows, when each is 99 percent likely to be right. Three variables give 3 percent, thirty give 26 percent."></svg>
+      </div>
+      <p class="cap">Assume each variable has a 99% chance of being right, and all must hold. Three variables give about a 3% chance of error, thirty about 26%, roughly nine times as likely.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Hanlon's razor</span></div>
+  <div class="body">
+    <div>
+      <h3>Don't assume malice when a mistake explains it</h3>
+      <p class="idea">The likeliest explanation is the one with the least intent in it. Assuming enemies narrows your options.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Road rage.</strong> Deliberately cutting you off would take noticing you, judging your speed and timing it just short of a crash. Far likelier, the driver didn't see you.</li>
+      <li><strong>The fall of an ally.</strong> In 408 AD Emperor Honorius read his loyal general Stilicho's handling of Alaric as a grab for the throne, and had him arrested and, likely, executed. Alaric sacked Rome two years later. Some historians, the authors say, see this as a key step in the Western Empire's collapse.</li>
+      <li><strong>The man who didn't fire.</strong> On October 27, 1962, American destroyers dropped blank depth charges to force Soviet subs up. They had told Moscow, but the message never reached the crews. On B-59 the captain wanted to launch a nuclear torpedo. That needed all three senior officers, and Vasili Arkhipov refused and insisted on surfacing. The record stayed secret for 40 years.</li>
+      <li><strong>Assuming malice is self-centred.</strong> It puts you at the middle of everyone else's world. Robert Heinlein gave this a name in a 1941 story: the "devil" theory. Defensive mode also shrinks your view to the threat, and you stop seeing opportunities.</li>
+      <li><strong>Don't overthink it.</strong> The razor doesn't say malice never exists. It says low-effort causes such as ignorance and laziness are more common. Hence the book's closing thought: fewer true villains than you'd suppose.</li>
+    </ul>
+    <div class="fig">
+      <h4>The Linda problem and what it has to do with blame</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 232" role="img" aria-label="Two pairs of nested shapes. Left: feminist bank tellers sit inside all bank tellers. Right: someone did it on purpose sits inside something went wrong. The inner set can never be more likely than the outer one.">
+          <ellipse cx="150" cy="104" rx="130" ry="84" class="f-cyt s-cy" stroke-width="1.5"/>
+          <text x="150" y="50" text-anchor="middle" class="hd">Bank tellers</text>
+          <ellipse cx="150" cy="122" rx="74" ry="44" class="f-redt s-red" stroke-width="1.5"/>
+          <text x="150" y="118" text-anchor="middle" class="t-ink" style="font-size:12px">bank teller</text>
+          <text x="150" y="136" text-anchor="middle" class="t-ink" style="font-size:12px">+ feminist</text>
+          <ellipse cx="450" cy="104" rx="130" ry="84" class="f-cyt s-cy" stroke-width="1.5"/>
+          <text x="450" y="50" text-anchor="middle" class="hd" style="font-size:13px">Something went wrong</text>
+          <ellipse cx="450" cy="122" rx="74" ry="44" class="f-redt s-red" stroke-width="1.5"/>
+          <text x="450" y="118" text-anchor="middle" class="t-ink" style="font-size:12px">went wrong</text>
+          <text x="450" y="136" text-anchor="middle" class="t-ink" style="font-size:12px">+ on purpose</text>
+          <text x="300" y="218" text-anchor="middle">The inner set can't be likelier than the outer one.</text>
+        </svg>
+      </div>
+      <p class="cap">In Kahneman and Tversky's 1982 test, a vivid description led most people to rate "bank teller and feminist" above "bank teller". That's the fallacy of conjunction, and the authors say blame works alike: a vivid bad outcome tempts us to add intent, an extra condition. Set sizes are not to scale.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>Twelve questions for your next decision</h2>
+    <p class="lede">The book says models work when used, badly at first. Pick one per decision, write down what happened, and reflect on why it did or didn't help.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Footing</h3>
+      <div class="tk"><b>Map</b><span>What does this model leave out, who made it, and when?</span></div>
+      <div class="tk"><b>Circle</b><span>Am I the Lifer or the Stranger here? If Stranger, who is the Lifer, and what do they gain?</span></div>
+      <div class="tk"><b>Falsifiability</b><span>What observation would prove this wrong?</span></div>
+      <div class="tk"><b>First principles</b><span>Which parts are facts, and which are "it just is"? Is this a principle or a tactic?</span></div>
+    </div>
+    <div class="col">
+      <h3>Foresight</h3>
+      <div class="tk"><b>Thought experiment</b><span>Rerun this 100,000 times. How often do I go broke?</span></div>
+      <div class="tk"><b>Necessity</b><span>Have I got everything required, or just the entry ticket?</span></div>
+      <div class="tk"><b>Second order</b><span>And then what? Who responds, and how?</span></div>
+      <div class="tk"><b>Probability</b><span>What's the base rate? Is this domain height or wealth? Can any one outcome take me out of the game?</span></div>
+      <div class="tk"><b>Causation</b><span>Would this have happened anyway? What's the control group?</span></div>
+    </div>
+    <div class="col">
+      <h3>Filters</h3>
+      <div class="tk"><b>Inversion</b><span>What would guarantee failure, and am I doing any of it? What's holding this in place?</span></div>
+      <div class="tk"><b>Occam</b><span>Which explanation needs the fewest things to be true, and is it still accurate?</span></div>
+      <div class="tk"><b>Hanlon</b><span>Could ignorance, haste or bad incentives explain this? What can I do if so?</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Shane Parrish and Rhiannon Beaubien, <em>The Great Mental Models, Volume 1: General Thinking Concepts</em> (Latticework Publishing, 2019). Figures are as reported in the book. Diagrams were drawn for this page, and the tail curves, scatter dots and force-field arrows are illustrative. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function txt(parent, x, y, s, cls, style, anchor) {
+    var a = { x: x, y: y };
+    if (cls) a["class"] = cls;
+    if (style) a.style = style;
+    if (anchor) a["text-anchor"] = anchor;
+    var t = el("text", a, parent); t.textContent = s; return t;
+  }
+  function arrow(g, x1, y1, x2, y2, cls, w) {
+    el("line", { x1: x1, y1: y1, x2: x2, y2: y2, "class": cls, "stroke-width": w || 1.5 }, g);
+    var a = Math.atan2(y2 - y1, x2 - x1), s = 7;
+    el("path", { d: "M" + (x2 - s * Math.cos(a - .5)) + " " + (y2 - s * Math.sin(a - .5)) + " L" + x2 + " " + y2 + " L" + (x2 - s * Math.cos(a + .5)) + " " + (y2 - s * Math.sin(a + .5)), "class": cls, "stroke-width": w || 1.5 }, g);
+  }
+
+  /* --- Ch2: circle of competence --- */
+  var c = document.getElementById("circ");
+  if (c) {
+    [["Curiosity", "learn from others too", 62, 212, 90], ["Monitoring", "keep an honest record", 132, 196, 140], ["Feedback", "ask people you trust", 202, 212, 190]].forEach(function (r) {
+      txt(c, 10, r[2] - 12, r[0], "t-ink", "font-size:13px");
+      txt(c, 10, r[2] + 4, r[1], "t-3", "font-size:11px");
+      arrow(c, 160, r[2] - 6, r[3], r[4], "s-cy");
+    });
+    [["Learn the basics", "and stay a Stranger", 62, 388, 90], ["Ask a Lifer", "bring good questions", 132, 404, 140], ["Use general models", "as a rough guide", 202, 388, 190]].forEach(function (r) {
+      txt(c, 440, r[2] - 12, r[0], "t-ink", "font-size:13px");
+      txt(c, 440, r[2] + 4, r[1], "t-3", "font-size:11px");
+      arrow(c, r[3], r[4], 432, r[2] - 6, "s-red");
+    });
+  }
+
+  /* --- Ch3: chain of whys --- */
+  var w = document.getElementById("whys");
+  if (w) {
+    [["Nobody looks for", "bacteria in ulcers", 10, ""], ["Why? Bacteria can't", "grow in stomach acid", 214, ""], ["Why? It's just", "the way it is", 418, ""]].forEach(function (b, i) {
+      el("rect", { x: b[2], y: 28, width: 172, height: 70, rx: 6, "class": "f-paper2" }, w);
+      txt(w, b[2] + 12, 58, b[0], "t-ink", "font-size:12.5px");
+      txt(w, b[2] + 12, 76, b[1], "t-ink", "font-size:12.5px");
+      if (i < 2) arrow(w, b[2] + 176, 63, b[2] + 200, 63, "s-2");
+    });
+    txt(w, 10, 16, "The ulcer story", "hd", "font-size:13px");
+  }
+
+  /* --- Ch5: chains of consequences --- */
+  var o = document.getElementById("d-order");
+  if (o) {
+    var xs = [6, 156, 306, 456], bw = 134, heads = ["Action", "First order", "Second order", "And then?"];
+    heads.forEach(function (h, i) { txt(o, xs[i], 16, h, i > 1 ? "t-red" : "t-3", "font-size:12px"); });
+    [
+      [["Bounty on", "dead cobras"], ["Dead snakes", "handed in"], ["Locals breed", "cobras to cash in"], ["Snake problem", "worse than before"]],
+      [["Antibiotics in", "livestock feed"], ["More weight per", "pound of food"], ["Surviving bacteria", "are resistant"], ["Resistant bacteria", "in the food chain"]],
+      [["More traction", "on tires"], ["Less sliding,", "faster stops"], ["Engine strains,", "worse mileage"], ["More CO₂, more", "rubber on the road"]]
+    ].forEach(function (row, r) {
+      var y = 28 + r * 84;
+      row.forEach(function (lines, i) {
+        el("rect", { x: xs[i], y: y, width: bw, height: 72, rx: 6, "class": i > 1 ? "f-redt s-red" : (i ? "f-cyt s-cy" : "f-paper2"), "stroke-width": 1 }, o);
+        lines.forEach(function (s, l) { txt(o, xs[i] + 8, y + 32 + l * 18, s, "t-ink", "font-size:11px"); });
+        if (i < 3) arrow(o, xs[i] + bw + 1, y + 36, xs[i + 1] - 1, y + 36, "s-2", 1.2);
+      });
+    });
+  }
+
+  /* --- Ch6: bell versus fat tail (illustrative) --- */
+  var t = document.getElementById("d-tails");
+  if (t) {
+    var x0 = 16, x1 = 404, base = 206, H = 460;
+    var X = function (u) { return x0 + (u + 6) / 12 * (x1 - x0); };
+    var bell = function (u) { return Math.exp(-u * u / 2) / Math.sqrt(2 * Math.PI); };
+    var fat = function (u) { return 1 / (Math.PI * (1 + u * u)); };
+    var path = function (f, a, b) { var d = "", first = true; for (var u = a; u <= b + 1e-9; u += .05) { d += (first ? "M" : " L") + X(u).toFixed(1) + " " + (base - H * f(u)).toFixed(1); first = false; } return d; };
+    [[-6, -3], [3, 6]].forEach(function (s) {
+      el("path", { d: path(fat, s[0], s[1]) + " L" + X(s[1]) + " " + base + " L" + X(s[0]) + " " + base + " Z", "class": "f-redt" }, t);
+    });
+    el("line", { x1: x0, y1: base, x2: x1, y2: base, "class": "s-2", "stroke-width": 1.2 }, t);
+    el("path", { d: path(bell, -6, 6), "class": "s-cy", "stroke-width": 2.5 }, t);
+    el("path", { d: path(fat, -6, 6), "class": "s-red", "stroke-width": 2.5 }, t);
+    txt(t, X(4.5), 150, "no real cap", "t-red", "font-size:13px", "middle");
+    arrow(t, X(4.5), 158, X(4.5), base - 16, "s-red", 1.2);
+    txt(t, 210, 232, "extremes are where they differ", "t-3", "font-size:12px", "middle");
+  }
+
+  /* --- Supporting idea C: scatter plots (illustrative dots) --- */
+  var sc = document.getElementById("d-scatter");
+  if (sc) {
+    var seed = 7, rnd = function () { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
+    var gauss = function () { return (rnd() + rnd() + rnd() + rnd() - 2) * 1.73; };
+    [["Bottled water, suicides", "near 0", 0, 10], ["Height, weight", "between 0 and 1", .72, 210], ["°C, °F", "exactly 1", 1, 410]].forEach(function (p, i) {
+      var left = p[3], top = 44, sz = 124, wd = 180;
+      txt(sc, left, 16, p[0], "t-ink", "font-size:12px");
+      txt(sc, left, 34, p[1], i === 2 ? "t-red" : "t-3", "font-size:11px");
+      el("path", { d: "M" + left + " " + top + " V" + (top + sz) + " H" + (left + wd), "class": "s-3", "stroke-width": 1 }, sc);
+      for (var k = 0; k < 42; k++) {
+        var a = gauss(), b = p[2] * a + Math.sqrt(1 - p[2] * p[2]) * gauss();
+        if (i === 2) { a = -2.2 + 4.4 * k / 41; b = a; }
+        var px = left + wd / 2 + a * 36, py = top + sz / 2 - b * 24;
+        px = Math.max(left + 5, Math.min(left + wd - 4, px)); py = Math.max(top + 4, Math.min(top + sz - 5, py));
+        el("circle", { cx: px.toFixed(1), cy: py.toFixed(1), r: 3, "class": i === 2 ? "f-red" : "f-cy", opacity: .8 }, sc);
+      }
+    });
+  }
+
+  /* --- Ch7: force field --- */
+  var f = document.getElementById("forces");
+  if (f) {
+    [["training", 62, 40], ["messaging", 116, 76], ["marketing", 170, 28]].forEach(function (r) {
+      txt(f, r[2], r[1] - 8, r[0], "t-cy", "font-size:12px");
+      arrow(f, r[2], r[1], 292, r[1], "s-cy", 3);
+    });
+    [["?", 62, 520], ["?", 116, 470], ["?", 170, 556]].forEach(function (r) {
+      txt(f, r[2], r[1] - 8, "obstacle " + r[0], "t-red", "font-size:12px", "end");
+      arrow(f, r[2], r[1], 308, r[1], "s-red", 3);
+    });
+  }
+
+  /* --- Ch8: Occam arithmetic, 1 - 0.99^n --- */
+  var oc = document.getElementById("d-occam");
+  if (oc) {
+    var X2 = function (n) { return 60 + n / 30 * 500; }, Y2 = function (p) { return 210 - p / 30 * 180; };
+    var err = function (n) { return (1 - Math.pow(.99, n)) * 100; };
+    [0, 10, 20, 30].forEach(function (p) {
+      el("line", { x1: 60, y1: Y2(p), x2: 560, y2: Y2(p), "class": "s-rule" }, oc);
+      txt(oc, 52, Y2(p) + 4, p + "%", "", "", "end");
+    });
+    var d = ""; for (var n = 0; n <= 30; n++) d += (n ? " L" : "M") + X2(n).toFixed(1) + " " + Y2(err(n)).toFixed(1);
+    el("path", { d: d, "class": "s-cy", "stroke-width": 2.5 }, oc);
+    el("circle", { cx: X2(3), cy: Y2(err(3)), r: 6, "class": "f-cy" }, oc);
+    el("circle", { cx: X2(30), cy: Y2(err(30)), r: 6, "class": "f-red" }, oc);
+    txt(oc, X2(3) + 16, Y2(err(3)) + 2, "3 variables: 3%", "t-cy");
+    txt(oc, X2(30) - 12, Y2(err(30)) - 12, "30 variables: 26%", "t-red", "", "end");
+    [0, 10, 20, 30].forEach(function (k) { txt(oc, X2(k), 230, String(k), "", "", "middle"); });
+    txt(oc, 310, 250, "variables that must all hold", "t-3", "font-size:11px", "middle");
+  }
+
+  /* --- Hero band: a lone point grows into a connected lattice --- */
+  var canvas = document.getElementById("lattice");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var cw = 0, ch = 0, nodes = [], links = [];
+  var s2 = 23, r2 = function () { s2 = (s2 * 9301 + 49297) % 233280; return s2 / 233280; };
+  var raw = [];
+  for (var i = 0; i < 90; i++) raw.push({ u: Math.pow(r2(), .55), v: .06 + r2() * .88, p: r2() * 6.28 });
+  function size() {
+    var r = canvas.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cw = r.width; ch = r.height;
+    canvas.width = Math.round(cw * dpr); canvas.height = Math.round(ch * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    nodes = raw.map(function (q) { return { x: 6 + q.u * (cw - 12), y: q.v * ch, p: q.p }; });
+    links = [];
+    var R = Math.max(70, cw * .085);
+    for (var a = 0; a < nodes.length; a++) for (var b = a + 1; b < nodes.length; b++) {
+      var dx = nodes[a].x - nodes[b].x, dy = nodes[a].y - nodes[b].y;
+      if (dx * dx + dy * dy < R * R) links.push([a, b]);
+    }
+  }
+  function draw(time) {
+    if (!cw) return;
+    ctx.clearRect(0, 0, cw, ch);
+    var pulse = reduce ? .72 : ((time * .00006) % 1.2) - .1, red = css("--red"), line = css("--cyan-2");
+    var heat = function (n) { return Math.max(0, 1 - Math.abs(n.x / cw - pulse) * 9); };
+    links.forEach(function (l) {
+      var A = nodes[l[0]], B = nodes[l[1]], h = Math.min(heat(A), heat(B));
+      ctx.strokeStyle = h > .15 ? red : line;
+      ctx.globalAlpha = h > .15 ? .4 + h * .5 : .4;
+      ctx.lineWidth = h > .15 ? 1.4 : 1;
+      ctx.beginPath(); ctx.moveTo(A.x, A.y); ctx.lineTo(B.x, B.y); ctx.stroke();
+    });
+    nodes.forEach(function (n) {
+      var h = heat(n);
+      ctx.globalAlpha = 1; ctx.fillStyle = h > .15 ? red : line;
+      ctx.beginPath(); ctx.arc(n.x, n.y, 2.4 + h * 1.6, 0, 6.29); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(9000);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
