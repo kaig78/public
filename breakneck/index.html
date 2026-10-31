@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Breakneck by Dan Wang – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: hazy mauve-grey Chongqing sky, yellow
+   subtitle type, moss-green hillside, the blue coat of the woman looking up at the towers.
+   Yellow (--red token, kept for class reuse) = the engineering state / China;
+   blue = the lawyerly society / the United States; green (--cyan token) = what gets built
+   and kept; rose = the human cost. */
+:root {
+  --paper: #f1edec;
+  --paper-2: #e5dfde;
+  --card: #fbf9f8;
+  --ink: #1e1c20;
+  --ink-2: #4d484e;
+  --ink-3: #79737a;
+  --rule: #d9d1d0;
+
+  --cyan: #46692a;      /* moss green */
+  --cyan-2: #6f9447;
+  --red: #8c6a00;       /* cover yellow, darkened for text on paper */
+  --yl: #e0b90c;        /* cover yellow for fills */
+  --blue: #2e5c9c;      /* the coat */
+  --rose: #a6334f;      /* the red skirt: human cost */
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #141215;
+    --paper-2: #1d1a1e;
+    --card: #221f24;
+    --ink: #efebed;
+    --ink-2: #b9b2b8;
+    --ink-3: #8d868c;
+    --rule: #332e34;
+    --cyan: #a2c774;
+    --cyan-2: #86ad57;
+    --red: #f1d238;
+    --yl: #e8c51c;
+    --blue: #8db2ea;
+    --rose: #f08ba3;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #141215;
+  --paper-2: #1d1a1e;
+  --card: #221f24;
+  --ink: #efebed;
+  --ink-2: #b9b2b8;
+  --ink-3: #8d868c;
+  --rule: #332e34;
+  --cyan: #a2c774;
+  --cyan-2: #86ad57;
+  --red: #f1d238;
+  --yl: #e8c51c;
+  --blue: #8db2ea;
+  --rose: #f08ba3;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-cyan { --c: var(--cyan); }
+.c-red { --c: var(--red); }
+.c-yl { --c: var(--yl); }
+.c-blue { --c: var(--blue); }
+.c-rose { --c: var(--rose); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: clamp(18px, 2.2vw, 26px); letter-spacing: .08em; line-height: 1; text-transform: uppercase; color: var(--blue); }
+.hero h1 {
+  font-size: clamp(56px, 12vw, 150px);
+  font-weight: 800;
+  font-stretch: 68%;
+  line-height: .86;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 10px 0 0 -.03em;
+}
+.hero .sub {
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.15;
+  margin-top: 18px;
+  color: var(--red);
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 42ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1092;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 30, 40, .35), 0 8px 18px -10px rgba(40, 30, 40, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--yl);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  font-stretch: 68%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .02em;
+  color: var(--ink);
+}
+.part h2 em { font-style: normal; color: var(--red); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--cyan);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--rose);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-cy { fill: var(--cyan); }
+.fig svg text.t-red { fill: var(--red); }
+.fig svg text.t-bl { fill: var(--blue); }
+.fig svg text.t-rose { fill: var(--rose); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-cy { stroke: var(--cyan); fill: none; }
+.s-yl { stroke: var(--yl); fill: none; }
+.s-bl { stroke: var(--blue); fill: none; }
+.s-rose { stroke: var(--rose); fill: none; }
+.f-cy { fill: var(--cyan); }
+.f-cy2 { fill: var(--cyan-2); }
+.f-yl { fill: var(--yl); }
+.f-bl { fill: var(--blue); }
+.f-rose { fill: var(--rose); }
+.f-ink { fill: var(--ink); }
+.f-2 { fill: var(--ink-2); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-cyt { fill: color-mix(in srgb, var(--cyan) 14%, var(--card)); }
+.f-ylt { fill: color-mix(in srgb, var(--yl) 22%, var(--card)); }
+.f-blt { fill: color-mix(in srgb, var(--blue) 14%, var(--card)); }
+.f-roset { fill: color-mix(in srgb, var(--rose) 14%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; min-width: 2px; }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--yl); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; letter-spacing: .02em; color: var(--ink); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--cyan); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three-up cards */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--cyan); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--red); }
+.compare .bad h5 { color: var(--blue); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl thead th.cn { color: var(--red); }
+table.tbl thead th.us { color: var(--blue); }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 170px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; color: var(--ink); border-top: 2px solid var(--yl); padding-top: 12px; letter-spacing: .02em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Dan Wang · W. W. Norton, 2025</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#build">Build</a>
+    <a href="#control">Control</a>
+    <a href="#reckoning">Reckoning</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">Engineers vs. lawyers</p>
+    <h1>Breakneck</h1>
+    <p class="sub">China's quest to engineer the future</p>
+    <p class="dek">Dan Wang spent six years in China watching a state that builds anything and controls everyone. He holds it up as a mirror to an America that has forgotten how to build.</p>
+    <div class="byline label">
+      <span>7 chapters</span><span>6 years in Hong Kong, Beijing &amp; Shanghai</span><span>~75,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Breakneck by Dan Wang: in a pale grey haze, a woman in a blue coat stands on an overgrown riverbank looking up at skyscrapers under construction, ringed by cranes. The subtitle is set in yellow and the title in tall white capitals">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="skyline"></canvas>
+  <div class="ends label"><span>A society that blocks</span><span>A state that builds</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Introduction &amp; the big idea</span>
+    <h2>One country builds, the other blocks</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Wang is a Canadian who left Yunnan with his parents at seven and returned as technology analyst for the research firm Gavekal Dragonomics, living in Hong Kong, Beijing and Shanghai from 2017 to 2023. His starting point is that Americans and Chinese are more alike than either admits: materialist, pragmatic, in love with grand projects, and sure their country should throw its weight around.</p>
+      <p>Labels like capitalist and socialist no longer explain either country, he argues. He proposes a new pair. China is an <strong>engineering state</strong>: run by people trained as engineers who reach for concrete, steel and quotas to solve any problem, physical or social. The United States is a <strong>lawyerly society</strong>: run largely by people trained in law, very good at procedure and at stopping things, good and bad.</p>
+      <p>Neither label is a compliment. The engineering state gave Chinese citizens subways, bridges and a manufacturing base, and also the one-child policy and zero-Covid. The lawyerly society protects individuals, but it mostly serves the well-off and has lost the ability to deliver housing, transit and factories. Each, Wang argues, has something the other badly needs.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Who runs the country</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-red"><span class="big num">9 of 9</span><p>Members of the Politburo standing committee in 2002 who had trained as engineers. Xi Jinping studied chemical engineering.</p></div>
+        <div class="stat c-blue"><span class="big num">5 of 10</span><p>Recent US presidents who went to law school. Only Hoover and Carter worked as engineers.</p></div>
+        <div class="stat c-blue"><span class="big num">400</span><p>Lawyers per 100,000 Americans, about three times the European average.</p></div>
+        <div class="stat c-red"><span class="big num">13.5%</span><p>Share of GDP China put into infrastructure in 2016. The US has averaged closer to 3%.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">The worst year to be born</span>
+        <p>Wang's thought experiment: a girl born in 1949 lives through famine, a shut university system, the one-child policy and, at seventy, Covid lockdowns. A boy born ten years later gets into a reopened university, rides the export boom and gets a city flat almost free. In the engineering state, your birth decade can decide everything.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="kinds" style="margin-top:32px">
+    <div><span class="label">Engine 1</span><b>Construction</b><span>Public works are the answer to almost every problem, including a slowing economy. Production is good and consumption is suspect.</span></div>
+    <div><span class="label">Engine 2</span><b>Capitalism</b><span>Fierce private competition, local subsidies and a vast workforce. This is what makes the Chinese model last longer than the Soviet one did.</span></div>
+    <div><span class="label">Engine 3</span><b>Control</b><span>People are treated as aggregates to steer, from hukou registration to birth quotas to health codes. Wang calls the leaders social engineers.</span></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Chapters 1–3</span>
+      <h3>Build</h3>
+      <p class="q">What the engineering state gets right</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Engineers vs. Lawyers</b>The core framework</a></li>
+        <li><span>02</span><a href="#ch2"><b>Building Big</b>Bridges, debt and vanity projects</a></li>
+        <li><span>03</span><a href="#ch3"><b>Tech Power</b>Process knowledge and Shenzhen</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 4–5</span>
+      <h3>Control</h3>
+      <p class="q">When people are treated like a system</p>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>One Child</b>A missile scientist plans births</a></li>
+        <li><span>05</span><a href="#ch5"><b>Zero-Covid</b>Three years chasing one number</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 6–7</span>
+      <h3>Reckoning</h3>
+      <p class="q">Who is better placed for the future</p>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Fortress China</b>People leave, factories stay</a></li>
+        <li><span>07</span><a href="#ch7"><b>Learning to Love Engineers</b>What America should take back</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUILD ============ -->
+<div class="part" id="build">
+  <span class="label partno">Chapters 1–3 · grouped here for reading; the book runs as seven chapters</span>
+  <h2>Build</h2>
+  <p class="lede">The first three chapters set up the framework and show its strongest side: infrastructure even in poor provinces, and a manufacturing workforce that keeps getting more capable.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Engineers vs. Lawyers</span></div>
+  <div class="body">
+    <div>
+      <h3>Two governing classes, two failure modes</h3>
+      <p class="idea">Engineers can't stop building and lawyers can't stop objecting. Each habit solved an old problem and created a new one.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Engineers in charge.</strong> Deng Xiaoping promoted engineers to clean up after Mao. For his third term from 2022, Xi filled the Politburo with executives from the aerospace and weapons industries. Since 1980 China has built a highway network twice the length of America's and almost as much wind and solar capacity as the rest of the world combined.</li>
+      <li><strong>A right-wing state in red.</strong> Wang argues that the Communist Party only looks leftist. It taxes lightly, offers a thin safety net, restricts migration and enforces traditional gender roles.</li>
+      <li><strong>How America changed.</strong> The US was once an engineering state too, from canals to Eisenhower's interstates. After the pollution, urban highways and segregation of the 1960s, elite law students turned to suing the government, and the right attacked government from the other side. That fixed real problems. Wang argues it has since become a cause of new ones.</li>
+      <li><strong>Two pathologies.</strong> Process takes the place of outcomes: agencies study every option so no lawsuit can stop them, and then little gets built. And the system favours the rich, who can afford the lawyers to block a project or protect their wealth.</li>
+      <li><strong>The engineers' blind spot.</strong> They see people as aggregates, as if society were a set of pipes and valves. Few voices take part in decisions, so policy can switch direction overnight and pull the whole population into a crisis.</li>
+      <li><strong>Why it matters now.</strong> The US has more allies, a younger population and better software. China can build, and a war would need drones and munitions in huge numbers. Wang thinks both countries are wearing down their own ability to govern.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Same year, same distance, different outcomes</h4>
+      <div class="legend"><span><i class="sq" style="--c:var(--yl)"></i>China: construction</span><span><i class="sq" style="--c:var(--cyan)"></i>in service</span><span><i class="sq" style="--c:var(--blue)"></i>California: approval to today</span></div>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 236" role="img" aria-label="Timeline from 2008 to 2033. Beijing to Shanghai high-speed rail: construction began in 2008, the line opened in 2011 at a cost of 36 billion dollars and carried 1.35 billion trips in its first decade. California's San Francisco to Los Angeles line: approved by voters in 2008, by 2025 only a short Central Valley stretch exists, the latest cost estimate is 128 billion dollars and the first segment is expected to open between 2030 and 2033.">
+          <g id="tl-axis"></g>
+          <text x="60" y="24" class="hd">Beijing–Shanghai · ~800 miles</text>
+          <rect x="60" y="36" width="60" height="22" rx="3" class="f-yl"/>
+          <rect x="120" y="36" width="280" height="22" rx="3" class="f-cy" opacity=".85"/>
+          <text x="128" y="51" style="fill:var(--card);font-size:12px">open 2011 · 1.35 bn trips, 1st decade</text>
+          <text x="410" y="52" class="t-red">$36 bn</text>
+          <text x="60" y="104" class="hd">San Francisco–Los Angeles · ~800 miles</text>
+          <rect x="60" y="116" width="340" height="22" rx="3" class="f-blt s-bl" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="68" y="131" class="t-bl" style="font-size:12px">approved 2008 · one Central Valley stretch</text>
+          <rect x="500" y="116" width="60" height="22" rx="3" class="f-none s-bl" stroke-width="1.5"/>
+          <text x="530" y="152" text-anchor="middle" class="t-bl" style="font-size:11px">first segment?</text>
+          <text x="410" y="132" class="t-bl">$128 bn</text>
+          <path d="M400 30 V176" class="s-ink" stroke-dasharray="3 3"/>
+          <text x="400" y="190" text-anchor="middle" class="t-ink" style="font-size:11px">2025</text>
+          <text x="20" y="226" class="t-3" style="font-size:11px">California's opening-date range (2030–33) is as long as China's whole build.</text>
+        </svg>
+      </div>
+      <p class="cap">China started its line in the same year California voters approved theirs. Wang points to detours added to win local politicians' votes and to an authority that reports jobs created rather than track laid.</p>
+      <p class="src">Figures from ch. 1; years and costs as reported in the book</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Building Big</span></div>
+  <div class="body">
+    <div>
+      <h3>Bridges to nowhere that become somewhere</h3>
+      <p class="idea">China's version of socialism doesn't redistribute much money. It builds public works instead, and the debts and waste are part of the deal.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Cycling Guizhou.</strong> In 2021 Wang and two friends rode about 400 miles through Guizhou, China's fourth-poorest province, to Chongqing. Income there is about $8,000 a head, similar to Botswana, yet it has 45 of the world's 100 highest bridges, eleven airports and around 1,000 miles of high-speed track. Locals were proudest of the bridges.</li>
+      <li><strong>The scale of it.</strong> China built an interstate's worth of expressways in 18 years and a second one in nine. Cars went from half a million in 1990 to 435 million in 2024. Its high-speed network is longer than the rest of the world's combined and makes about two billion trips a year. Its urban population has grown by about 16 million a year since 1978.</li>
+      <li><strong>Cheaper, not just faster.</strong> Standard designs and good project management bring high-speed rail in at about $33 million a mile, against $192 million in California. A 2019 World Bank study found the network economically viable. China has 31 nuclear reactors under construction to America's one.</li>
+      <li><strong>A stingy welfare state.</strong> Social spending is about 10% of GDP, half the US level. Nearly three-quarters of people pay no income tax, and only about a tenth of the unemployed qualify for benefits. In 2021 Xi warned that welfare could make people lazy.</li>
+      <li><strong>The bill.</strong> Five of Guizhou's airports get fewer than a dozen flights a week. Tianjin built a hollow "Manhattan" in Binhai, then admitted overstated growth and cut its GDP by nearly 20%. China can make about 60 million cars a year in a world market of about 90 million. Building has also meant pollution, forced resettlement and badly built schools that collapsed in the 2008 Sichuan earthquake.</li>
+      <li><strong>The US mirror.</strong> Cape Wind off Massachusetts was abandoned after sixteen years of lawsuits by wealthy residents. In 2023 the US added 6 gigawatts of wind and China added 76. Wang's conclusion is that China should build less and better, and America should build more.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The local official's building loop</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 322" role="img" aria-label="A loop diagram. An official is posted to a city for a few years, is graded on growth and stability, has no property tax so sells land and borrows from local banks, builds big visible projects fast, and is promoted before the bill arrives. The successor starts the same game. A dashed arrow from the building step leads to the centre: debt surfaces later, followed by discipline inspectors.">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="f-2"/></marker>
+            <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="f-rose"/></marker>
+          </defs>
+          <g id="loop"></g>
+          <path d="M375 38 L468 84" class="s-2" stroke-width="1.5" marker-end="url(#ah)"/>
+          <path d="M500 136 V184" class="s-2" stroke-width="1.5" marker-end="url(#ah)"/>
+          <path d="M470 236 L377 262" class="s-2" stroke-width="1.5" marker-end="url(#ah)"/>
+          <path d="M225 262 L132 236" class="s-2" stroke-width="1.5" marker-end="url(#ah)"/>
+          <path d="M100 184 V136" class="s-2" stroke-width="1.5" marker-end="url(#ah)"/>
+          <path d="M132 84 L223 40" class="s-2" stroke-width="1.5" marker-end="url(#ah)"/>
+          <path d="M300 252 V196" class="s-rose" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ahr)"/>
+        </svg>
+      </div>
+      <p class="cap">Officials are selected, not elected, and get moved around. Without a property tax, local governments rely on land sales and borrowing. Projects that look good in a growth record get approved, and the cost arrives after the official has moved on. Wang's case study is Li Zaiyong in Liupanshui: a ski resort with little snow, imitation European squares now grazed by goats, and about $21 billion of new debt. He was later sentenced to death with a two-year reprieve.</p>
+      <p class="src">Mechanism as described in ch. 2</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>US offshore wind, 2024</h4>
+        <div class="bars">
+          <div class="bar c-cyan"><div class="row"><span>Operating</span><b>42 MW</b></div><div class="track"><div class="fill" style="width:.2%"></div></div></div>
+          <div class="bar c-yl"><div class="row"><span>Under construction</span><b>932 MW</b></div><div class="track"><div class="fill" style="width:4.4%"></div></div></div>
+          <div class="bar c-blue"><div class="row"><span>Waiting in permitting review</span><b>20,978 MW</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">Most of the queue is waiting for environmental analyses. Wang argues that decarbonising will take building at a scale only China is currently managing.</p>
+      </div>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">"It was the nation's money, not mine."</blockquote>
+        <span class="label">Li Zaiyong, former Liupanshui party secretary, in a televised confession</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Tech Power</span></div>
+  <div class="body">
+    <div>
+      <h3>Technology lives in people, not blueprints</h3>
+      <p class="idea">China's tech strength comes from factory floors where millions of workers keep learning by doing, not mainly from planning or theft.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Shenzhen.</strong> It grew from 300,000 people in 1980 to 18 million in 2020. Toys and clothing gave way to electronics, and then to the iPhone. At peak season Foxconn's Shenzhen campus holds about 300,000 workers. Apple's planners once estimated it would take nine months to hire some 9,000 industrial engineers in the US. In China it took two weeks.</li>
+      <li><strong>A city that works as a supply chain.</strong> Nearly any part can be found within a short drive. When a new design needs an odd screw, someone knows a supplier. Companies like DJI and BYD grew out of cheap smartphone components and a workforce that already knew how to assemble them.</li>
+      <li><strong>Three kinds of technology.</strong> There are tools, written instructions, and <em>process knowledge</em>: the skill that comes only from practice. The US lost the recipe for a nuclear-weapons material called Fogbank because the people who knew it had retired, and spent $69 million working it out again.</li>
+      <li><strong>What offshoring cost.</strong> Each closed US factory takes its know-how with it. Wang links the decline of Boeing and Intel to this erosion, and contrasts the Chinese approach: let Tesla fully own its Shanghai plant in 2018 so local carmakers had to raise their game. BYD lost sales at first and later became the world's largest EV maker.</li>
+      <li><strong>Completionism.</strong> Xi doesn't want any industry to leave China, low-end ones included. Manufacturing is 28% of GDP and the five-year plan wants it to stay there. Wang also describes the online "Industrial Party", nationalist writers who believe technology decides which nation wins, and who have made Liu Cixin's <em>Three-Body</em> trilogy their favourite text.</li>
+      <li><strong>Export controls backfired.</strong> Wang argues that US sanctions made American suppliers look unreliable, which pushed Chinese firms toward domestic vendors they had previously ignored.</li>
+    </ul>
+
+    <div class="kinds">
+      <div><span class="label">1 · Tools</span><b>The kitchen</b><span>Machines and equipment. They can be bought.</span></div>
+      <div><span class="label">2 · Instructions</span><b>The recipe</b><span>Blueprints and patents. They can be copied, but rarely carry enough on their own.</span></div>
+      <div><span class="label">3 · Process knowledge</span><b>The cook</b><span>Skill in people's heads and in the ties between workers. It is lost when a factory closes.</span></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>US manufacturing jobs</h4>
+        <svg viewBox="0 0 320 200" role="img" aria-label="Line chart of US manufacturing employment: 19 million in 1980, 17 million in 2000, 11 million in 2010, and around 13 million in 2025. China has more than 100 million manufacturing workers.">
+          <path d="M40 170 H310" class="s-rule"/>
+          <path d="M40 30 H310" class="s-rule" stroke-dasharray="2 4"/>
+          <text x="36" y="34" text-anchor="end" class="t-3" style="font-size:10px">20m</text>
+          <text x="36" y="174" text-anchor="end" class="t-3" style="font-size:10px">0</text>
+          <polyline points="40,37 160,51 220,93 310,79" class="s-bl" stroke-width="2.5"/>
+          <circle cx="40" cy="37" r="4" class="f-bl"/><circle cx="160" cy="51" r="4" class="f-bl"/><circle cx="220" cy="93" r="4" class="f-bl"/><circle cx="310" cy="79" r="4" class="f-bl"/>
+          <text x="46" y="28" class="t-ink" style="font-size:12px">19m</text>
+          <text x="160" y="42" text-anchor="middle" class="t-ink" style="font-size:12px">17m</text>
+          <text x="220" y="112" text-anchor="middle" class="t-ink" style="font-size:12px">11m</text>
+          <text x="306" y="70" text-anchor="end" class="t-ink" style="font-size:12px">~13m</text>
+          <text x="40" y="188" class="t-3" style="font-size:11px">1980</text>
+          <text x="160" y="188" text-anchor="middle" class="t-3" style="font-size:11px">2000</text>
+          <text x="220" y="188" text-anchor="middle" class="t-3" style="font-size:11px">2010</text>
+          <text x="310" y="188" text-anchor="end" class="t-3" style="font-size:11px">2025</text>
+        </svg>
+        <p class="cap">China employs more than 100 million people in manufacturing, about eight times the US. In 2023, 156 of Apple's top 200 suppliers had sites in China.</p>
+      </div>
+      <div class="fig">
+        <h4>China's share of an iPhone's value</h4>
+        <div class="bars">
+          <div class="bar c-yl"><div class="row"><span>2007: mostly assembly labour</span><b>~4%</b></div><div class="track"><div class="fill" style="width:16%"></div></div></div>
+          <div class="bar c-yl"><div class="row"><span>2017, iPhone X: batteries, charging, acoustics</span><b>~25%</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">Chinese firms moved from assembling the phone to making its parts. Wang reads this as process knowledge accumulating.</p>
+        <blockquote class="pull" style="font-size:clamp(20px,2.3vw,26px)">"Eternity should not inhabit the building."</blockquote>
+        <span class="label">Simon Leys, quoted by Wang, on skills that outlast structures</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ CONTROL ============ -->
+<div class="part" id="control">
+  <span class="label partno">Chapters 4–5</span>
+  <h2>Control</h2>
+  <p class="lede">The same habits, applied to people. Each policy had a number in its name, was pursued like a military campaign, and caused great harm before it was dropped.</p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">One Child</span></div>
+  <div class="body">
+    <div>
+      <h3>A missile scientist plans the population</h3>
+      <p class="idea">The one-child policy came from engineering logic applied to families. It projected a straight line, set a target and enforced it at any cost.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Mao versus the planners.</strong> Mao believed a big population meant power. After his death, leaders were shocked by an estimate of nearly one billion people at the end of 1978, and feared it would swamp Deng's modernisation plans.</li>
+      <li><strong>Song Jian's model.</strong> A missile-guidance scientist who had studied cybernetics in Moscow, Song heard warnings of ecological collapse at a 1978 conference in Helsinki. His team projected that at 3.0 children per woman China would reach 3 billion by 2050 and over 4 billion by 2080, and that the "optimal" population was 700 million at most. His printed, computer-drawn graphs beat rivals working with abacuses. China adopted the policy in 1980.</li>
+      <li><strong>Enforcement as a campaign.</strong> General Qian Xinzhong ran it with "shock brigades". In 1983 the state sterilised 16 million women and carried out 14 million abortions. Officials were rewarded or punished on their quotas, and late-term abortions were common. In 1991 one Shandong county ordered no births at all for a hundred days.</li>
+      <li><strong>The toll.</strong> Over 35 years there were 321 million abortions and 108 million women and 26 million men sterilised. The birth sex ratio reached 120 boys to 100 girls in 1999, and demographers estimate about 40 million "missing" women. More than 150,000 children, almost all girls, were adopted abroad.</li>
+      <li><strong>Probably unnecessary.</strong> Fertility had already fallen from about 6.0 in 1970 to 2.7 by 1980, under milder policies. Demographers credit economic growth, urbanisation and education for the rest, as in Japan, South Korea and Taiwan.</li>
+      <li><strong>Now the reverse.</strong> Births fell from 15 million in 2019 to 9 million in 2023, and fertility is about 1.0. Xi tells women to build families, and neighbourhood officials call to ask when they will have children. Wang doubts pressure will raise birth rates; pronatalist policies elsewhere have rarely worked for long.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Song's straight line and the actual path</h4>
+      <div class="legend"><span><i style="--c:var(--rose)"></i>Song's projection at 3.0 children</span><span><i style="--c:var(--cyan)"></i>actual, then projected</span><span><i class="sq" style="--c:color-mix(in srgb, var(--yl) 30%, var(--card))"></i>one-child era 1980–2015</span></div>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 262" role="img" aria-label="Chart of China's population from 1950 to 2100. Song Jian's projection rises in a straight line from about 1 billion in 1978 to 3 billion in 2050 and over 4 billion in 2080. The actual population went from about 600 million in 1953 to over 1 billion in 1982, rose about 40 percent after 1980, began to decline in 2022, and is projected to fall to 700 million by 2100, which matches Song's optimal population.">
+          <rect x="162" y="18" width="119" height="202" class="f-ylt"/>
+          <path d="M60 220 H575" class="s-2"/>
+          <g id="pop-grid"></g>
+          <path d="M60 189 H575" class="s-3" stroke-dasharray="2 4"/>
+          <text x="330" y="206" class="t-3" style="font-size:11px">Song's "optimal": ≤ 700 m</text>
+          <polyline points="155,176 400,88 502,44" class="s-rose" stroke-width="2.5" stroke-dasharray="7 4"/>
+          <circle cx="400" cy="88" r="4.5" class="f-rose"/><circle cx="502" cy="44" r="4.5" class="f-rose"/>
+          <text x="392" y="80" text-anchor="end" class="t-rose" style="font-size:12px">3 bn by 2050</text>
+          <text x="494" y="38" text-anchor="end" class="t-rose" style="font-size:12px">4 bn+ by 2080</text>
+          <polyline points="70,194 169,176 302,158" class="s-cy" stroke-width="2.5"/>
+          <path d="M302 158 C 380 160, 470 178, 570 189" class="s-cy" stroke-width="2.5" stroke-dasharray="4 4"/>
+          <circle cx="70" cy="194" r="4" class="f-cy"/><circle cx="169" cy="176" r="4" class="f-cy"/><circle cx="302" cy="158" r="4" class="f-cy"/><circle cx="570" cy="189" r="4.5" class="f-cy"/>
+          <text x="74" y="212" class="t-cy" style="font-size:11px">~600 m (1953)</text>
+          <text x="176" y="203" class="t-cy" style="font-size:11px">1 bn (1982)</text>
+          <text x="302" y="178" text-anchor="middle" class="t-cy" style="font-size:11px">~40% above 1980, then decline</text>
+          <text x="568" y="178" text-anchor="end" class="t-cy" style="font-size:11px">700 m (2100)</text>
+          <text x="221" y="34" text-anchor="middle" class="t-red" style="font-size:11px">one-child era</text>
+        </svg>
+      </div>
+      <p class="cap">Song's model assumed fertility would never change and resources were fixed. Wang notes it wasn't even good cybernetics, because it ignored feedback. China's population is now projected to halve to 700 million by 2100, which is exactly Song's "optimal" figure. The line between data points is schematic.</p>
+      <p class="src">Points from ch. 4; the peak is placed at the start of decline (announced 2023)</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Fertility was already falling</h4>
+        <div class="bars">
+          <div class="bar c-ink"><div class="row"><span>1970</span><b>~6.0</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+          <div class="bar c-yl"><div class="row"><span>1980, when the policy began</span><b>2.7</b></div><div class="track"><div class="fill" style="width:45%"></div></div></div>
+          <div class="bar c-rose"><div class="row"><span>Today, lifetime average</span><b>1.0</b></div><div class="track"><div class="fill" style="width:16.7%"></div></div></div>
+        </div>
+        <p class="cap">Children per woman. A stable population needs 2.1.</p>
+      </div>
+      <div class="fig">
+        <span class="label">Where it ended</span>
+        <div class="stats" style="border:0;border-radius:0">
+          <div class="stat c-rose"><span class="big num">321 m</span><p>Abortions over the policy's 35 years.</p></div>
+          <div class="stat c-rose"><span class="big num">40 m</span><p>Estimated "missing" women.</p></div>
+          <div class="stat c-blue"><span class="big num">181k → &lt;5k</span><p>Vasectomies, 2014 to 2019, as hospitals started turning men away.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Zero-Covid</span></div>
+  <div class="body">
+    <div>
+      <h3>Three years pursuing one number</h3>
+      <p class="idea">Zero-Covid showed what the engineering state does best and worst: it can mobilise a whole country, and it won't stop when the costs mount.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Act one: fury.</strong> Wuhan officials hid the outbreak to keep a political meeting on track. Doctor Li Wenliang was reprimanded for warning people, then died of the virus. Wang points out that this followed the same pattern as Henan's AIDS outbreak and SARS.</li>
+      <li><strong>Act two: pride.</strong> A hospital went up in eleven days, borders shut, and from spring 2020 life in China was mostly normal while other countries struggled. Health-code apps decided who could go where. State media presented this as proof of the system's superiority.</li>
+      <li><strong>Act three: Shanghai.</strong> Officials denied a lockdown was coming, then announced an eight-day "pause" in late March 2022. It lasted about eight weeks, until 1 June, for 25 million people. Food supply broke down, with trucking at 15% of normal. Neighbours organised group buying on WeChat. Infected people were taken to mass quarantine centres, and patients with other illnesses struggled to get care.</li>
+      <li><strong>Why few protested.</strong> People had been taught to fear the virus, controls were added gradually, and nobody expected eight weeks. Police relied on signed statements that hung over people, not open force. Wang spent months in Dali in Yunnan, where the state's reach is weak, and that is where the engineer/lawyer idea first came to him.</li>
+      <li><strong>The end.</strong> After an Urumqi fire in which ten people died, protests followed in November 2022, including the blank-paper protests. In early December the policy was dropped, with no extra vaccination push, few fever medicines and no warning to hospitals. Official deaths were about 125,000. Scholarly estimates of excess deaths approach two million.</li>
+      <li><strong>The lesson.</strong> The party "followed the science" here as it had with birth control. Wang argues that how to apply science is a political judgement, and that lawyers, economists and ethicists in the room give a society a better chance of making it well.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The three acts of zero-Covid</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 214" role="img" aria-label="Timeline from January 2020 to December 2022 divided into three acts: fury in early 2020 after the Wuhan cover-up and Li Wenliang's death in February; pride from spring 2020 to early 2022 while China contained the virus; and desperation from the Shanghai lockdown of late March to June 2022, through Xi's third term in October, the Urumqi fire and protests in November, to the end of zero-Covid in December 2022.">
+          <rect x="40" y="30" width="43" height="96" class="f-roset"/>
+          <rect x="83" y="30" width="305" height="96" class="f-ylt"/>
+          <rect x="388" y="30" width="170" height="96" class="f-roset"/>
+          <text x="46" y="48" class="hd" style="font-size:13px">Fury</text>
+          <text x="92" y="48" class="hd">Pride, then fatigue</text>
+          <text x="396" y="48" class="hd">Desperation</text>
+          <g id="covid-axis"></g>
+          <g id="covid-ev"></g>
+        </svg>
+      </div>
+      <div class="bars">
+        <div class="bar c-yl"><div class="row"><span>Shanghai lockdown as announced</span><b>8 days</b></div><div class="track"><div class="fill" style="width:14%"></div></div></div>
+        <div class="bar c-rose"><div class="row"><span>As it actually ran (late March to 1 June 2022)</span><b>~8 weeks</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+      </div>
+      <p class="cap">Event dates are placed by month. Because the goal was zero, every new case justified tighter controls and nothing could justify relaxing them. Nomura economists estimated that testing alone cost 1.8% of GDP in 2022.</p>
+      <p class="src">Sequence and figures from ch. 5</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ RECKONING ============ -->
+<div class="part" id="reckoning">
+  <span class="label partno">Chapters 6–7</span>
+  <h2>Reckoning</h2>
+  <p class="lede">Many talented people are leaving China while its factories keep getting stronger. Wang reconciles the two, then turns to what America should relearn.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Fortress China</span></div>
+  <div class="body">
+    <div>
+      <h3>The people leave, the factories stay</h3>
+      <p class="idea">The engineering state is driving out its creative and wealthy citizens while getting better and better at manufacturing. Both are true.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Rùn.</strong> Pandemic slang meaning "to flee". Wang meets young Chinese in Chiang Mai who hide from their parents that they are in Thailand. An emigration firm estimated nearly 14,000 millionaires left in 2023 and over 15,000 in 2024. US border arrests of Chinese nationals rose from 450 in 2021 to 38,000 in 2024.</li>
+      <li><strong>The unicorn hunter.</strong> From late 2020 regulators went after the tech sector: Ant Financial's listing was stopped, Didi was investigated, children's gaming was capped at three hours a week, and online tutoring firms were barred from making a profit. A trillion dollars of market value disappeared. In 2024 Xi asked why China was producing fewer and fewer unicorns.</li>
+      <li><strong>"Sixty percent correct."</strong> Wang's verdict on Xi: usually right about the problem, but the brute-force fix makes it worse. Big tech was too powerful, developers were too indebted and corruption was real. The results were frightened entrepreneurs, a property slump and a paralysed bureaucracy.</li>
+      <li><strong>What engineers can't do.</strong> They can't make culture the world wants. Comedy is censored, films are pulled, and the renminbi is only 3% of global payments because capital controls stay. The Belt and Road gave many developing countries useful infrastructure, but by 2023 its forum drew about three dozen leaders instead of 120.</li>
+      <li><strong>What they do well.</strong> Resilience. China stockpiles, grades officials on food self-sufficiency, and in 2023 added twenty times more coal capacity than the rest of the world, alongside its renewables. It will graduate more than twice as many STEM PhDs as the US in 2025. Wang expects something like a more successful East Germany: surveillance combined with strong science and industry.</li>
+      <li><strong>Hardware versus software.</strong> In 2022 China had nearly 1,800 ships under construction and the US had 5. Ukraine fired in two days as many shells as the US makes in a month. Wang warns that AI alone won't win a war fought with drones and munitions.</li>
+    </ul>
+
+    <div class="compare">
+      <div class="good"><h5>Right about the problem</h5><ul><li>Platforms were too powerful</li><li>Developers were too indebted</li><li>The bureaucracy was corrupt</li></ul></div>
+      <div class="bad" style="--blue:var(--rose)"><h5>Then the hammer</h5><ul><li>Founders scared off, venture capital collapsed</li><li>Defaults led to a property slump</li><li>Officials too afraid to act</li></ul></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Share of world industrial capacity, 2030 forecast</h4>
+        <div class="bars">
+          <div class="bar c-yl"><div class="row"><span>China</span><b>45%</b></div><div class="track"><div class="fill" style="width:45%"></div></div></div>
+          <div class="bar c-blue"><div class="row"><span>US, Europe, Japan, Korea, Taiwan and all other high-income states combined</span><b>38%</b></div><div class="track"><div class="fill" style="width:38%"></div></div></div>
+        </div>
+        <p class="cap">A 2024 UN Industrial Development Organization forecast. Wang argues that industrial capacity is increasingly also military capacity.</p>
+      </div>
+      <div class="fig" style="align-content:start">
+        <span class="label">Ships under construction, 2022</span>
+        <div class="stats" style="border:0;border-radius:0">
+          <div class="stat c-red"><span class="big num">~1,800</span><p>China</p></div>
+          <div class="stat c-blue"><span class="big num">5</span><p>United States</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Learning to Love Engineers</span></div>
+  <div class="body">
+    <div>
+      <h3>What America should take back</h3>
+      <p class="idea">The US doesn't need China's methods. It needs its own building tradition back, alongside the pluralism that made it worth emigrating to.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A family bet.</strong> Wang's grandparents were variously a soldier, a landlord's daughter, a Nationalist official's daughter and a fallen merchant heir, and all suffered under Mao. His parents, both born in 1959, left Kunming for Canada in 2000 and had years of poverty before settling near Philadelphia. His mother sometimes wishes they had stayed. His father says most of their classmates would trade places with them.</li>
+      <li><strong>Rehabilitating Robert Moses.</strong> Robert Caro's 1974 <em>The Power Broker</em> taught Americans to fear master builders. Wang visits Sunset Park, the Brooklyn neighbourhood Caro said Moses had gutted, and finds it thriving with immigrants and a busy Moses-built pool. Moses had serious flaws, Wang says, but New York still runs on what he built.</li>
+      <li><strong>A message for each side.</strong> The left should stop fighting the battles of the 1960s. The right should remember Admiral Rickover's nuclear navy, built inside government, and target procedure rather than civil servants.</li>
+      <li><strong>The costs of slowness.</strong> A kilometre of subway costs five times as much in New York as in Paris. $42 billion for rural broadband in 2021 had connected no homes four years later. $7.5 billion for EV chargers had produced seven stations after two years.</li>
+      <li><strong>Two tasks.</strong> Remember America's engineering heritage, and widen its elite so that engineers and economists sit alongside lawyers. Countries like Spain, Germany and Japan show a middle path between consultation and construction.</li>
+      <li><strong>Who wins?</strong> Wang thinks China won't outcompete the US: its leaders distrust their own people and drive out its most creative citizens. America still has to prove it can build again.</li>
+    </ul>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"'Developing' is a term to embrace with pride."</blockquote>
+      <span class="label">Dan Wang, closing line, on what America should call itself</span>
+    </div>
+  </div>
+</article>
+
+<div class="tablecard" style="margin-top:48px">
+  <div class="scroll-x">
+    <table class="tbl">
+      <thead><tr><th scope="col">Dimension</th><th scope="col" class="cn">Engineering state (China)</th><th scope="col" class="us">Lawyerly society (US)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Default reflex</th><td>Build, and keep building when the economy wobbles</td><td class="r">Review, consult and litigate until little gets built</td></tr>
+        <tr><th scope="row">Economic focus</th><td>Supply side: factories, credit for producers, high household saving</td><td class="r">Demand side: easy credit, stimulus cheques, rent support</td></tr>
+        <tr><th scope="row">How policy happens</th><td>Decided in secret, then imposed on everyone</td><td class="r">Fought over in Congress and courts, then implementation is forgotten</td></tr>
+        <tr><th scope="row">Who is protected</th><td>The state's plans, against everyone including the rich</td><td class="r">Whoever can pay for lawyers, usually the wealthy</td></tr>
+        <tr><th scope="row">Signature failures</th><td>One-child policy, zero-Covid, empty districts like Binhai</td><td class="r">California high-speed rail, Cape Wind, unaffordable housing</td></tr>
+        <tr><th scope="row">What it should borrow</th><td>Legal limits on the state and room for individuals</td><td class="r">Urgency and skill in building physical things</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Drawn together from the "inversions" Wang notes across the book</span></div>
+</div>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book is argument and reportage rather than a manual, but it offers ways of thinking that help in reading the news about either country.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Read the system</h3>
+      <div class="tk"><b>Ask who is in the room</b><span>Engineers, lawyers or economists? The training of the people at the top shapes what a government reaches for.</span></div>
+      <div class="tk"><b>Watch for a number in the name</b><span>One child, zero Covid. A single target makes enforcement easy and lets the costs pile up unseen.</span></div>
+      <div class="tk"><b>Trace the official's incentives</b><span>A short posting plus growth metrics plus land-sale financing means debt and vanity projects. Most local failures follow from that.</span></div>
+      <div class="tk"><b>Hold two truths at once</b><span>People are leaving and factories are rising. China is getting better and worse at the same time.</span></div>
+    </div>
+    <div class="col">
+      <h3>Build better</h3>
+      <div class="tk"><b>Count outcomes, not process</b><span>Measure track laid and homes finished, not studies, meetings or jobs announced.</span></div>
+      <div class="tk"><b>Keep the know-how</b><span>Technology is people practising. Closing a plant loses skills that a later subsidy can't easily buy back.</span></div>
+      <div class="tk"><b>Invent and then scale</b><span>A lab breakthrough that someone else manufactures is a lost industry. Solar cells were invented at Bell Labs and are now made in China.</span></div>
+      <div class="tk"><b>Notice who a veto serves</b><span>Lengthy review often protects those who can afford lawyers, not the people a project would help.</span></div>
+    </div>
+    <div class="col">
+      <h3>Keep the people</h3>
+      <div class="tk"><b>Science on tap, not on top</b><span>Song Jian's graphs looked rigorous. Policy needs lawyers, economists and ethicists to test what "following the science" means.</span></div>
+      <div class="tk"><b>Leave room for weapons of the weak</b><span>Foot-dragging, loopholes and arguing back are how ordinary people live with heavy-handed rules. Wang sees hope in that everyday resistance.</span></div>
+      <div class="tk"><b>Right diagnosis, wrong dose</b><span>Wang's verdict on Xi is a warning for any reformer: a sledgehammer can make a real problem worse.</span></div>
+      <div class="tk"><b>Call yourself developing</b><span>A country or a person that considers itself finished stops building.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Dan Wang, <em>Breakneck: China's Quest to Engineer the Future</em> (W. W. Norton, 2025). Figures are as reported in the book. The building-loop diagram is drawn from the book's description; the population chart joins the book's data points with a schematic line, and the Covid timeline places events by month. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent, text) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  /* --- Ch1: timeline axis, 2008-2034, x = 60 + (yr-2008)*20 --- */
+  var ta = document.getElementById("tl-axis");
+  if (ta) {
+    el("path", { d: "M60 170 H580", "class": "s-3" }, ta);
+    [2008, 2011, 2015, 2020, 2030, 2033].forEach(function (y) {
+      var x = 60 + (y - 2008) * 20;
+      el("path", { d: "M" + x + " 166 V174", "class": "s-3" }, ta);
+      el("text", { x: x, y: 190, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, ta, y);
+    });
+  }
+  /* --- Ch2: building loop boxes --- */
+  var lp = document.getElementById("loop");
+  if (lp) {
+    var boxes = [
+      { x: 225, y: 14, a: "Posted to a city", b: "for a few years" },
+      { x: 425, y: 86, a: "Graded on growth", b: "and stability" },
+      { x: 425, y: 186, a: "No property tax:", b: "sell land, borrow" },
+      { x: 225, y: 254, a: "Build big, build", b: "visible, fast", hot: true },
+      { x: 25, y: 186, a: "Promoted before", b: "the bill arrives" },
+      { x: 25, y: 86, a: "Successor starts", b: "the same game" }
+    ];
+    boxes.forEach(function (b) {
+      el("rect", { x: b.x, y: b.y, width: 150, height: 48, rx: 6, "class": b.hot ? "f-ylt s-yl" : "f-card s-3", "stroke-width": 1.5 }, lp);
+      el("text", { x: b.x + 75, y: b.y + 21, "text-anchor": "middle", "class": "t-ink", style: "font-size:12px" }, lp, b.a);
+      el("text", { x: b.x + 75, y: b.y + 37, "text-anchor": "middle", style: "font-size:12px" }, lp, b.b);
+    });
+    el("rect", { x: 205, y: 132, width: 190, height: 62, rx: 6, "class": "f-roset s-rose", "stroke-width": 1.5, "stroke-dasharray": "4 3" }, lp);
+    el("text", { x: 300, y: 157, "text-anchor": "middle", "class": "t-rose", style: "font-size:12px" }, lp, "Debt surfaces later:");
+    el("text", { x: 300, y: 175, "text-anchor": "middle", "class": "t-rose", style: "font-size:12px" }, lp, "inspectors, arrests");
+  }
+  /* --- Ch4: population grid, y = 220 - bn*44 --- */
+  var pg = document.getElementById("pop-grid");
+  if (pg) {
+    [1, 2, 3, 4].forEach(function (v) {
+      var y = 220 - v * 44;
+      el("path", { d: "M60 " + y + " H575", "class": "s-rule" }, pg);
+      el("text", { x: 54, y: y + 4, "text-anchor": "end", "class": "t-3", style: "font-size:11px" }, pg, v + " bn");
+    });
+    [1950, 1980, 2015, 2050, 2100].forEach(function (yr) {
+      var x = 60 + (yr - 1950) * 3.4;
+      el("text", { x: x, y: 238, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, pg, yr);
+    });
+  }
+  /* --- Ch5: covid timeline, month m from Jan 2020, x = 40 + m*14.4 --- */
+  var ca = document.getElementById("covid-axis");
+  if (ca) {
+    el("path", { d: "M40 126 H558", "class": "s-3" }, ca);
+    [["2020", 0], ["2021", 12], ["2022", 24], ["2023", 36]].forEach(function (t) {
+      var x = 40 + t[1] * 14.4;
+      el("path", { d: "M" + x + " 122 V130", "class": "s-3" }, ca);
+      el("text", { x: x, y: 144, "text-anchor": t[1] === 36 ? "end" : "middle", "class": "t-3", style: "font-size:11px" }, ca, t[0]);
+    });
+  }
+  var ce = document.getElementById("covid-ev");
+  if (ce) {
+    var ev = [
+      { m: 1.2, row: 0, t: "Li Wenliang dies", c: "t-rose", anchor: "start" },
+      { m: 23.5, row: 0, t: "Xi'an lockdown", c: "t-3", anchor: "end" },
+      { m: 26.9, row: 1, t: "Shanghai locks down", c: "t-rose", anchor: "start" },
+      { m: 33.7, row: 2, t: "Xi's 3rd term", c: "t-3", anchor: "end" },
+      { m: 34.8, row: 3, t: "Urumqi fire, protests", c: "t-rose", anchor: "end" },
+      { m: 35.3, row: 4, t: "Zero-Covid dropped", c: "t-ink", anchor: "end" }
+    ];
+    ev.forEach(function (e) {
+      var x = 40 + e.m * 14.4, ty = 160 + e.row * 0;
+      el("circle", { cx: x, cy: 126, r: 4, "class": e.c === "t-rose" ? "f-rose" : (e.c === "t-ink" ? "f-ink" : "f-3") }, ce);
+    });
+    /* labels laid out in rows above and below the axis to avoid collisions */
+    var lab = [
+      [1.2, 70, "Li Wenliang dies", "start", "t-rose"],
+      [23.5, 70, "Xi'an lockdown", "end", "t-3"],
+      [26.9, 70, "Shanghai locks down", "start", "t-rose"],
+      [29, 92, "reopens 1 June", "start", "t-3"],
+      [33.7, 166, "Xi's third term", "end", "t-3"],
+      [34.8, 186, "Urumqi fire, protests", "end", "t-rose"],
+      [35.3, 206, "Zero-Covid dropped", "end", "t-ink"]
+    ];
+    lab.forEach(function (l) {
+      var x = 40 + l[0] * 14.4;
+      var y1 = l[1] < 126 ? l[1] + 4 : 130, y2 = l[1] < 126 ? 122 : l[1] - 12;
+      el("path", { d: "M" + x + " " + y1 + " V" + y2, "class": "s-rule" }, ce);
+      el("text", { x: x + (l[3] === "start" ? 4 : -4), y: l[1], "text-anchor": l[3], "class": l[4], style: "font-size:11px" }, ce, l[2]);
+    });
+    el("rect", { x: 40 + 26.9 * 14.4, y: 120, width: (29 - 26.9) * 14.4, height: 12, rx: 2, "class": "f-rose", opacity: .8 }, ce);
+  }
+
+  /* --- Hero band: a hazy skyline; left towers stay stunted, right towers rise under cranes --- */
+  var canvas = document.getElementById("skyline");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, towers = [];
+  var seed = 7;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  for (var i = 0; i < 44; i++) towers.push({ u: (i + 0.15 + rnd() * 0.5) / 44, wd: 0.5 + rnd() * 0.7, h: 0.35 + rnd() * 0.6, ph: rnd() * 6.28, sp: 0.6 + rnd() * 0.8 });
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var t = reduce ? 0 : time * 0.00025;
+    var blue = css("--blue"), yl = css("--yl"), green = css("--cyan"), ink = css("--ink-3");
+    var base = hgt - 6, colW = w / 44;
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = green; ctx.globalAlpha = 0.5;
+    ctx.fillRect(0, base, w, 2);
+    towers.forEach(function (T) {
+      var x = T.u * w, s = T.u; /* 0 = left (blocked), 1 = right (building) */
+      var grow = s < 0.45 ? 0.18 + 0.05 * Math.sin(t * 0.3 + T.ph) : 0.25 + 0.75 * (0.5 + 0.5 * Math.sin(t * T.sp + T.ph));
+      var full = T.h * (0.35 + s * 0.65) * (hgt - 14);
+      var hh = Math.max(6, full * grow);
+      var tw = colW * T.wd;
+      ctx.globalAlpha = 0.25 + s * 0.55;
+      ctx.fillStyle = s < 0.45 ? blue : ink;
+      ctx.fillRect(x, base - hh, tw, hh);
+      if (s >= 0.45 && grow < 0.95) {
+        /* crane: mast + jib, tip in cover yellow */
+        ctx.globalAlpha = 0.85;
+        ctx.strokeStyle = yl; ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.moveTo(x + tw / 2, base - hh); ctx.lineTo(x + tw / 2, base - hh - 14);
+        ctx.moveTo(x + tw / 2 - 5, base - hh - 12); ctx.lineTo(x + tw / 2 + 16, base - hh - 12);
+        ctx.stroke();
+      }
+    });
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+</body>
+</html>
