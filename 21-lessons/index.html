@@ -1,0 +1,1214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>21 Lessons for the 21st Century by Yuval Noah Harari – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: cream paper, charcoal type, ochre author
+   name, red-orange title and the violet rim of the iris. Flame = danger, iris = what can
+   be observed, ochre = the human story. */
+:root {
+  --paper: #fdfbea;
+  --paper-2: #f3efd8;
+  --card: #fffef5;
+  --ink: #232226;
+  --ink-2: #504d50;
+  --ink-3: #7a7468;
+  --rule: #e0dbc0;
+
+  --flame: #cf3a20;
+  --ochre: #96601c;
+  --iris: #544e8c;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #131118;
+    --paper-2: #1c1a22;
+    --card: #1f1c25;
+    --ink: #f3efe0;
+    --ink-2: #bdb7ad;
+    --ink-3: #8f897f;
+    --rule: #322e38;
+    --flame: #ff7a5f;
+    --ochre: #dcae6a;
+    --iris: #aca6ea;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #131118;
+  --paper-2: #1c1a22;
+  --card: #1f1c25;
+  --ink: #f3efe0;
+  --ink-2: #bdb7ad;
+  --ink-3: #8f897f;
+  --rule: #322e38;
+  --flame: #ff7a5f;
+  --ochre: #dcae6a;
+  --iris: #aca6ea;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--flame); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+.c-flame { --c: var(--flame); }
+.c-ochre { --c: var(--ochre); }
+.c-iris  { --c: var(--iris); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 6px 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(84px, 11.4vw, 136px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero h1 span { display: block; }
+.hero h1 .n { color: var(--flame); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1087;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 30, 10, .35), 0 8px 18px -10px rgba(40, 30, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 120px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(40px, 7vw, 88px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .95;
+  letter-spacing: -.03em;
+  overflow-wrap: anywhere;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--flame);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ochre);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+  align-content: start;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; max-width: 620px; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 14px; }
+.fig svg text.sm { font-size: 12.5px; }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15.5px; fill: var(--ink); }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.t-fl { fill: var(--flame); }
+.fig svg text.t-oc { fill: var(--ochre); }
+.fig svg text.t-ir { fill: var(--iris); }
+.b-card { fill: var(--card); stroke: var(--rule); stroke-width: 1.5; }
+.b-fl { fill: color-mix(in srgb, var(--flame) 13%, var(--card)); stroke: var(--flame); stroke-width: 1.5; }
+.b-oc { fill: color-mix(in srgb, var(--ochre) 13%, var(--card)); stroke: var(--ochre); stroke-width: 1.5; }
+.b-ir { fill: color-mix(in srgb, var(--iris) 13%, var(--card)); stroke: var(--iris); stroke-width: 1.5; }
+.ln { fill: none; stroke: var(--ink-3); stroke-width: 1.5; }
+.ln-fl { fill: none; stroke: var(--flame); stroke-width: 1.8; }
+.ln-ir { fill: none; stroke: var(--iris); stroke-width: 1.8; }
+.f-ink3 { fill: var(--ink-3); }
+.f-fl { fill: var(--flame); }
+.f-oc { fill: var(--ochre); }
+.f-ir { fill: var(--iris); }
+
+/* Bars */
+.bars, .barwrap { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; overflow: hidden; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; min-width: 2px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 38px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* Book map */
+.map { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 20px; margin-top: 48px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 12px; align-content: start; }
+.map h3 { font-size: 21px; font-weight: 850; font-stretch: 112%; letter-spacing: -.01em; line-height: 1.1; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.map li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.35; }
+.map li a { text-decoration: none; font-family: var(--display); font-weight: 650; font-stretch: 100%; }
+.map li a:hover { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 2px; font-variant-numeric: tabular-nums; }
+
+/* Step chains */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 10px; }
+.step { border: 1px solid color-mix(in srgb, var(--c, var(--ink-3)) 45%, var(--rule)); background: color-mix(in srgb, var(--c, var(--ink-3)) 8%, var(--card)); border-radius: 6px; padding: 14px; display: grid; gap: 4px; align-content: start; }
+.step .label { color: var(--c, var(--ink-3)); }
+.step b { font-family: var(--display); font-weight: 800; font-stretch: 104%; font-size: 18px; line-height: 1.15; }
+.step span:last-child { font-size: 15px; color: var(--ink-2); line-height: 1.4; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 16px; padding: 7px 13px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); color: var(--c, var(--ink)); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* relevance rows */
+.rel { display: grid; gap: 0; }
+.rel > div { display: grid; grid-template-columns: minmax(0, 1fr) 118px; gap: 14px; padding: 12px 0; border-top: 1px solid var(--rule); align-items: center; }
+.rel > div:first-child { border-top: 0; }
+.rel b { font-family: var(--display); font-weight: 750; font-stretch: 100%; display: block; font-size: 16.5px; }
+.rel span { font-size: 15px; color: var(--ink-2); line-height: 1.4; }
+.rel em { font-family: var(--mono); font-style: normal; font-size: 12px; text-align: right; color: var(--c); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero h1 { font-size: clamp(56px, 16.5vw, 136px); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: 1fr; }
+  .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .part h2 { font-size: 9.2vw; }
+  .compare { grid-template-columns: 1fr; }
+  .rel > div { grid-template-columns: 1fr; gap: 4px; }
+  .rel em { text-align: left; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Yuval Noah Harari · Spiegel &amp; Grau, 2018</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#tech">Technology</a>
+    <a href="#politics">Politics</a>
+    <a href="#hope">Despair &amp; hope</a>
+    <a href="#truth">Truth</a>
+    <a href="#resilience">Resilience</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span class="n">21</span><span>Lessons</span></h1>
+    <p class="sub">for the 21st Century</p>
+    <p class="dek">After books on humanity's past and its far future, Yuval Noah Harari turns to the present: what is happening now, what deserves attention, and what to teach our children.</p>
+    <div class="byline label">
+      <span>21 chapters</span><span>5 parts</span><span>3 global threats</span><span>~100,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of 21 Lessons for the 21st Century by Yuval Noah Harari: a cream background with a single round human iris, orange at the centre and violet at the rim, between the author's name in ochre and the title in charcoal and red-orange">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="threads"></canvas>
+  <div class="ends label"><span>1938: three global stories</span><span>2018: none</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Introduction</span>
+    <h2>The old stories have collapsed, and engineers won't wait for new ones</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Harari's starting point is that humans think in stories, and that the big story of recent decades, the liberal one, is losing credibility at the worst possible moment. Information technology and biotechnology are about to give a few people the power to redesign bodies, minds and life itself.</p>
+      <p>The book is a set of lessons, many written in reply to questions from readers and journalists, and they don't end in simple answers. Harari deliberately stresses technology's dangers, because its makers already sing its praises.</p>
+      <p>He also explains why he criticises liberal democracy so much: he thinks it's the most successful and versatile political model yet, and that it can only be repaired if it can be examined. He knows autocrats may hijack such criticism, but he chose open discussion over self-censorship.</p>
+      <p>His reason for hurry is plain. Philosophers can argue about life's meaning indefinitely. Investors can't, and market forces will supply an answer if nobody else does.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The argument in five moves</span>
+      <div class="steps" style="grid-template-columns:1fr">
+        <div class="step c-flame"><span class="label">I · Technology</span><span>The merger of infotech and biotech threatens liberty and equality.</span></div>
+        <div class="step c-iris"><span class="label">II · Politics</span><span>The fix must be global, but nations and religions divide us.</span></div>
+        <div class="step c-ochre"><span class="label">III · Despair and hope</span><span>We can cope if we control our fears and stay humble.</span></div>
+        <div class="step c-flame"><span class="label">IV · Truth</span><span>The world is too complex for any individual to grasp, so we need to know our limits.</span></div>
+        <div class="step c-iris"><span class="label">V · Resilience</span><span>With no story left to lean on, learn to observe reality directly.</span></div>
+      </div>
+      <blockquote class="pull" style="font-size:clamp(22px,2.6vw,30px)">“In a world deluged by irrelevant information, clarity is power.”</blockquote>
+      <span class="label">Harari, opening line of the introduction</span>
+    </div>
+  </div>
+
+  <div class="map">
+    <div class="col">
+      <span class="label">Part I</span><h3>The Technological Challenge</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1">Disillusionment</a></li>
+        <li><span>02</span><a href="#ch2">Work</a></li>
+        <li><span>03</span><a href="#ch3">Liberty</a></li>
+        <li><span>04</span><a href="#ch4">Equality</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II</span><h3>The Political Challenge</h3>
+      <ol>
+        <li><span>05</span><a href="#ch5">Community</a></li>
+        <li><span>06</span><a href="#ch6">Civilization</a></li>
+        <li><span>07</span><a href="#ch7">Nationalism</a></li>
+        <li><span>08</span><a href="#ch8">Religion</a></li>
+        <li><span>09</span><a href="#ch9">Immigration</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part III</span><h3>Despair and Hope</h3>
+      <ol>
+        <li><span>10</span><a href="#ch10">Terrorism</a></li>
+        <li><span>11</span><a href="#ch11">War</a></li>
+        <li><span>12</span><a href="#ch12">Humility</a></li>
+        <li><span>13</span><a href="#ch13">God</a></li>
+        <li><span>14</span><a href="#ch14">Secularism</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part IV</span><h3>Truth</h3>
+      <ol>
+        <li><span>15</span><a href="#ch15">Ignorance</a></li>
+        <li><span>16</span><a href="#ch16">Justice</a></li>
+        <li><span>17</span><a href="#ch17">Post-Truth</a></li>
+        <li><span>18</span><a href="#ch18">Science Fiction</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part V</span><h3>Resilience</h3>
+      <ol>
+        <li><span>19</span><a href="#ch19">Education</a></li>
+        <li><span>20</span><a href="#ch20">Meaning</a></li>
+        <li><span>21</span><a href="#ch21">Meditation</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="tech">
+  <span class="label partno">Part I · Chapters 1–4</span>
+  <h2>The Technological Challenge</h2>
+  <p class="lede">People are losing faith in the liberal story just as two linked revolutions pose the hardest test our species has met.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Disillusionment</span></div>
+  <div class="body">
+    <div>
+      <h3>From three stories to none</h3>
+      <p class="idea">Liberalism has survived three crises by absorbing its rivals' best ideas. This time, Harari argues, it has no answer to the two biggest problems.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="big num">3</span><p>1938: fascism, communism, liberalism</p></div>
+      <div class="stat"><span class="big num">2</span><p>1968: communism, liberalism</p></div>
+      <div class="stat"><span class="big num">1</span><p>1998: liberalism alone</p></div>
+      <div class="stat c-flame"><span class="big num">0</span><p>2018: no story left standing</p></div>
+    </div>
+    <ul class="points">
+      <li>The liberal story says that more freedom in politics, markets and borders brings peace and prosperity. Harari dates the disillusionment to the 2008 financial crisis, reaching the Western core with Brexit and Trump in 2016.</li>
+      <li>Liberalism came through the Franz Ferdinand, Hitler and Che Guevara moments, learning from communism to value equality and welfare. What he calls the Trump moment is different: nihilistic, with no vision for humanity.</li>
+      <li>In his reading, neither Russia's oligarchic model nor global Islam offers an attractive alternative. The vacuum is filling with nostalgia for a local golden past.</li>
+      <li>Liberalism relied on a growing pie to settle conflicts. But growth causes the ecological crisis and depends on ever more disruptive technology.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Panic is a form of hubris.”</blockquote>
+      <span class="label">Harari: bewilderment is humbler, and so sees more clearly</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Work</span></div>
+  <div class="body">
+    <div>
+      <h3>The risk isn't exploitation but irrelevance</h3>
+      <p class="idea">Machines used to compete with our muscles. Now they compete with our cognition, and we know of no third field where humans keep a secure edge.</p>
+    </div>
+    <ul class="points">
+      <li>AI's rise depends on biology as well as computing. If intuition is pattern recognition, computers can learn to read people too. Hence drivers, bankers and lawyers are exposed.</li>
+      <li>AI also has two inhuman abilities, <strong>connectivity</strong> and <strong>updatability</strong>. Compare a network with a collection of individuals, not one robot with one worker.</li>
+      <li>The benefits could be huge. Harari says replacing human drivers could save a million of the roughly 1.25 million road deaths each year. His principle: protect humans, not jobs.</li>
+      <li>Care and creativity will resist longest, but no job is safe forever. Expect a cascade of disruptions, not one shock.</li>
+      <li>Universal basic income or services run into two puzzles. What is "universal", when the victims may be in Dhaka rather than Finland? And what is "basic"?</li>
+      <li>Harari's possible model for a post-work life is Israel, where about half of ultra-Orthodox men never work, and they report unusually high life satisfaction thanks to community and meaning.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Why retraining may stop working</h4>
+        <svg viewBox="0 0 440 236" role="img" aria-label="Three rows. In 1920 a farm worker moves to a tractor factory. In 1980 a factory worker moves to a supermarket. In 2050 a cashier cannot make the jump to cancer researcher or drone operator, because the skills gap is too wide.">
+          <text x="0" y="26" class="hd">1920</text>
+          <rect x="62" y="6" width="130" height="34" rx="5" class="b-card"/><text x="127" y="28" text-anchor="middle">Farm worker</text>
+          <path d="M196 23 H240 M233 17 L241 23 L233 29" class="ln"/>
+          <rect x="246" y="6" width="190" height="34" rx="5" class="b-card"/><text x="341" y="28" text-anchor="middle">Tractor factory</text>
+          <text x="0" y="96" class="hd">1980</text>
+          <rect x="62" y="76" width="130" height="34" rx="5" class="b-card"/><text x="127" y="98" text-anchor="middle">Factory hand</text>
+          <path d="M196 93 H240 M233 87 L241 93 L233 99" class="ln"/>
+          <rect x="246" y="76" width="190" height="34" rx="5" class="b-card"/><text x="341" y="98" text-anchor="middle">Supermarket cashier</text>
+          <text x="0" y="170" class="hd t-fl">2050</text>
+          <rect x="62" y="146" width="130" height="38" rx="5" class="b-fl"/><text x="127" y="170" text-anchor="middle">Cashier</text>
+          <path d="M196 165 H210 M228 165 H240" class="ln-fl" stroke-dasharray="4 4"/>
+          <text x="219" y="170" text-anchor="middle" class="hd t-fl">✕</text>
+          <rect x="246" y="146" width="190" height="38" rx="5" class="b-card"/><text x="341" y="170" text-anchor="middle" class="sm">Cancer researcher</text>
+          <text x="0" y="222" class="sm t-3">Old moves took limited retraining. New jobs demand expertise.</text>
+        </svg>
+        <p class="cap">The result could be high unemployment alongside a shortage of skilled labour: what Harari calls a <strong>useless class</strong>. The years are the book's examples.</p>
+      </div>
+      <div class="fig">
+        <h4>The canary: AlphaZero v. Stockfish 8</h4>
+        <div class="track" role="img" aria-label="Out of 100 games AlphaZero won 28, drew 72 and lost none"><div class="fill c-flame" style="width:28%"></div></div>
+        <div class="stats" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+          <div class="stat c-flame"><span class="big num">28</span><p>wins</p></div>
+          <div class="stat"><span class="big num">72</span><p>draws</p></div>
+          <div class="stat"><span class="big num">0</span><p>losses</p></div>
+        </div>
+        <p class="cap">In December 2017 AlphaZero beat the 2016 computer chess champion after teaching itself for four hours, with no human strategy. It checked about 80,000 positions a second against Stockfish's 70 million. Human-computer "centaur" teams once led chess. Harari expects what happened to them to spread.</p>
+      </div>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“It is much harder to struggle against irrelevance than against exploitation.”</blockquote>
+      <span class="label">Harari, ch. 1, on the populist revolts this fear may feed</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Liberty</span></div>
+  <div class="body">
+    <div>
+      <h3>When algorithms know you better than you do</h3>
+      <p class="idea">Liberalism rests authority on human feelings. Harari argues that once feelings can be hacked, democracy risks becoming an emotional puppet show.</p>
+    </div>
+    <ul class="points">
+      <li>He treats feelings as biochemical calculations. They were the best guide available only because no outsider could read them. Biometric sensors and Big Data could change that.</li>
+      <li>Algorithms needn't be perfect, just better on average than people, who often err in big decisions. Life as a drama of decision-making would then fade. Imagine Hamlet consulting an app.</li>
+      <li>Ethics becomes engineering. Humans under stress ignore their principles: most Princeton seminarians, hurrying in 1970 to speak on the Good Samaritan, passed a man in distress. A car will follow its code, so someone must write that code.</li>
+      <li>The danger of robots is that they obey. A robot army would have made Srebrenica worse, and a dictator's soldiers could never defect.</li>
+      <li>Democracies once out-processed dictatorships. AI may reverse this, because it improves with centralised data.</li>
+      <li>Harari warns of individual discrimination: refused by an algorithm that nobody can explain, with no group to protest alongside.</li>
+      <li>Intelligence isn't consciousness. A robot rebellion is unlikely soon. Bots that press our emotional buttons are the likelier threat, so invest a dollar in human consciousness for each one spent on AI.</li>
+    </ul>
+    <div class="fig">
+      <h4>How authority could drift to algorithms</h4>
+      <svg viewBox="0 0 440 252" role="img" aria-label="A loop of four steps. Algorithms get more data and give better advice. We defer to them more often. Our own ability to choose weakens, because it is used less. Our feelings become easier to manipulate and less reliable, which sends us back to the algorithms.">
+        <rect x="0" y="6" width="196" height="66" rx="6" class="b-ir"/>
+        <text x="98" y="33" text-anchor="middle" class="hd">Advice improves</text><text x="98" y="55" text-anchor="middle" class="sm">more biometric data</text>
+        <rect x="244" y="6" width="196" height="66" rx="6" class="b-card"/>
+        <text x="342" y="33" text-anchor="middle" class="hd">We defer</text><text x="342" y="55" text-anchor="middle" class="sm">Maps, then careers</text>
+        <rect x="244" y="150" width="196" height="66" rx="6" class="b-card"/>
+        <text x="342" y="177" text-anchor="middle" class="hd">Judgement weakens</text><text x="342" y="199" text-anchor="middle" class="sm">use it or lose it</text>
+        <rect x="0" y="150" width="196" height="66" rx="6" class="b-fl"/>
+        <text x="98" y="177" text-anchor="middle" class="hd">Feelings get hacked</text><text x="98" y="199" text-anchor="middle" class="sm">easier to manipulate</text>
+        <path d="M200 39 H238 M231 33 L239 39 L231 45" class="ln"/>
+        <path d="M342 76 V144 M336 137 L342 145 L348 137" class="ln"/>
+        <path d="M240 183 H202 M209 177 L201 183 L209 189" class="ln"/>
+        <path d="M98 146 V78 M92 85 L98 77 L104 85" class="ln-fl"/>
+        <text x="220" y="243" text-anchor="middle" class="sm t-3">Like a pilot with vertigo, we'd have to trust the instruments</text>
+      </svg>
+      <p class="cap">An illustration of Harari's mechanism, not data. In March 2012, he says, three tourists followed their GPS into the Pacific.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Equality</span></div>
+  <div class="body">
+    <div>
+      <h3>Who owns the data owns the future</h3>
+      <p class="idea">Industry made the masses valuable, which drove the twentieth century's move toward equality. AI and bioengineering could undo that logic.</p>
+    </div>
+    <ul class="points">
+      <li>Harari reports that half of all wealth belongs to the top 1 percent, and that the richest hundred people out-own the poorest four billion.</li>
+      <li>If life extension and upgrades are expensive, economic inequality could become biological: real differences in ability, which would be nearly impossible to close.</li>
+      <li>He describes data giants as attention merchants aiming higher: we are the product, and the data may be worth more than the advertising.</li>
+      <li>Nationalising data risks digital dictatorship, and private ownership is hard to define, since data can be copied endlessly. He calls this perhaps the key political question of the era.</li>
+    </ul>
+    <div class="fig">
+      <h4>Each age fights over its main asset</h4>
+      <div class="steps">
+        <div class="step c-ochre"><span class="label">Ancient</span><b>Land</b><span>Society splits into aristocrats and commoners.</span></div>
+        <div class="step c-iris"><span class="label">Modern</span><b>Machines</b><span>Society splits into capitalists and proletarians.</span></div>
+        <div class="step c-flame"><span class="label">21st century</span><b>Data</b><span>Humankind could split into different species.</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="politics">
+  <span class="label partno">Part II · Chapters 5–9</span>
+  <h2>The Political Challenge</h2>
+  <p class="lede">Any solution needs global cooperation. Harari tests each candidate in turn: online community, a clash of civilizations, the nation, religion, and Europe's experience of immigration.</p>
+</div>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Community</span></div>
+  <div class="body">
+    <div>
+      <h3>Humans have bodies</h3>
+      <p class="idea">Facebook's plan to rebuild community with AI is a noble test case, but online friends can't bring you soup.</p>
+    </div>
+    <ul class="points">
+      <li>In 2017 Mark Zuckerberg pledged to help a billion people join meaningful communities. Harari praises the ambition, while noting that the Cambridge Analytica scandal undercut it.</li>
+      <li>We can really know only about 150 people. Past a point, he argues, intimacy is zero-sum: online friends cost you time with neighbours.</li>
+      <li>The real test is whether a company would adopt a tool that lowers time spent online, and whether it would pay taxes for the roads and hospitals bodies need.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Civilization</span></div>
+  <div class="body">
+    <div>
+      <h3>There is just one civilization</h3>
+      <p class="idea">The "clash of civilizations" thesis relies on a false analogy with biology. Human groups change, and they merge.</p>
+    </div>
+    <ul class="points">
+      <li>Species have fixed identities. Germans ran through six very different systems in under a century. A civilization, in Harari's view, is whatever its members make of it.</li>
+      <li>Species never merge. Tribes do, and over ten thousand years they have fused into ever larger groups.</li>
+      <li>Traditions are less ancient than claimed. He notes that excavated synagogues from Talmudic times show no gender segregation and include images of women.</li>
+      <li>Identity comes more from shared conflicts than shared traits. A European of 1618 was defined by arguing over doctrine, and one of 2018 by arguing over immigration.</li>
+    </ul>
+    <div class="fig">
+      <h4>Where almost everyone agrees</h4>
+      <div class="steps">
+        <div class="step"><span class="label">Politics</span><b>About 200 states</b><span>Same protocols, from Rio's 11,000 athletes to near-identical anthems.</span></div>
+        <div class="step"><span class="label">Economics</span><b>One dollar</b><span>The Islamic State destroyed symbols but kept the banknotes.</span></div>
+        <div class="step"><span class="label">Medicine</span><b>Same hospitals</b><span>A thousand years ago treatment depended on where you lived.</span></div>
+        <div class="step"><span class="label">Physics</span><b>Same equations</b><span>Rivals worry about each other's bombs because they share the science.</span></div>
+      </div>
+      <p class="cap">Harari's thought experiment: try holding the Olympics in 1016. Today's contest between nations is itself a global consensus.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Nationalism</span></div>
+  <div class="body">
+    <div>
+      <h3>Global problems need global answers</h3>
+      <p class="idea">Nations were built because tribes couldn't tame the Nile. Harari argues that nations are now in the tribes' position.</p>
+    </div>
+    <ul class="points">
+      <li>Nationalism isn't natural. Loyalty to millions of strangers is recent and takes immense effort. He still credits mild patriotism as benevolent, and notes that failed states tend to lack it.</li>
+      <li>After 1945, nuclear fear pushed nations toward an internationalist order, and he rates the resulting decline of war as perhaps our era's top political and moral success.</li>
+      <li>Climate change is already under way, with tipping points ahead. No state is ecologically sovereign: Kiribati could cut emissions to zero and still drown.</li>
+      <li>Nations stand to gain or lose differently, so interests diverge. Russia might even benefit. Harari suggests that nationalist denial of climate change partly reflects the lack of any national answer.</li>
+      <li>Technology may help. The first lab-grown burger cost $330,000 in 2013, and four years of work cut that to $11.</li>
+      <li>Globalising politics needn't mean world government. He means that domestic politics should take global problems far more seriously.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three threats that feed each other</h4>
+      <svg viewBox="0 0 440 290" role="img" aria-label="A triangle of three threats. Ecological collapse pushes nations toward risky technological gambles. Technological disruption destabilises the nuclear balance. Nuclear and technological rivalry makes it hard to agree on climate. Rival nations sit in the middle.">
+        <rect x="140" y="4" width="160" height="42" rx="6" class="b-fl"/><text x="220" y="31" text-anchor="middle" class="hd">Nuclear war</text>
+        <rect x="0" y="222" width="160" height="42" rx="6" class="b-oc"/><text x="80" y="249" text-anchor="middle" class="hd">Ecological collapse</text>
+        <rect x="262" y="222" width="178" height="42" rx="6" class="b-ir"/><text x="351" y="249" text-anchor="middle" class="hd">Tech disruption</text>
+        <path d="M166 243 H254 M247 237 L255 243 L247 249" class="ln"/>
+        <text x="210" y="282" text-anchor="middle" class="sm">crisis invites risky gambles</text>
+        <path d="M340 216 L270 52 M271 62 L269 51 L279 57" class="ln"/>
+        <text x="434" y="128" text-anchor="end" class="sm">new arms upset</text><text x="434" y="146" text-anchor="end" class="sm">the balance</text>
+        <path d="M172 52 L92 216 M92 206 L91 217 L101 211" class="ln"/>
+        <text x="4" y="128" class="sm">arms races block</text><text x="4" y="146" class="sm">climate deals</text>
+        <text x="220" y="146" text-anchor="middle" class="hd t-3">Rival</text><text x="220" y="165" text-anchor="middle" class="hd t-3">nations</text>
+      </svg>
+      <p class="cap">We have a global ecology, economy and science, Harari writes, but only national politics. Failure on one front alone could be catastrophic.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Religion</span></div>
+  <div class="body">
+    <div>
+      <h3>God now serves the nation</h3>
+      <p class="idea">Harari finds traditional religions largely irrelevant to technical and policy problems. Where they do matter, on identity, he sees them as more problem than remedy.</p>
+    </div>
+    <div class="fig">
+      <h4>Three kinds of problem</h4>
+      <div class="rel">
+        <div class="c-iris"><p><b>Technical</b><span>How should farmers cope with drought? Priests' true skill was explaining why the rain dance failed. Scientists admit failure and try again.</span></p><em>Largely irrelevant</em></div>
+        <div class="c-iris"><p><b>Policy</b><span>How do we prevent warming? Leaders find answers in economists, then justify them from scripture. He sees no "Muslim economics".</span></p><em>Largely irrelevant</em></div>
+        <div class="c-flame"><p><b>Identity</b><span>Whose problems should I care about? Rituals draw the line between "us" and "them".</span></p><em>Highly relevant</em></div>
+      </div>
+    </div>
+    <ul class="points">
+      <li>Mass cooperation needs mass identities, and those rest on shared fictions. So religions don't bring rain, but they do help decide whom to cure and whom to bomb.</li>
+      <li>Harari's model case is Japan, which modernised fast while inventing an official state Shinto. He wryly calls kamikaze pilots the first precision-guided missiles.</li>
+      <li>He sees the pattern elsewhere, most extremely in North Korea's Juche.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Immigration</span></div>
+  <div class="body">
+    <div>
+      <h3>Some cultures might be better than others</h3>
+      <p class="idea">Harari treats the European debate as a deal with three terms, so that people can at least see what they disagree about.</p>
+    </div>
+    <div class="fig">
+      <h4>The immigration deal and its four debates</h4>
+      <svg viewBox="0 0 440 262" role="img" aria-label="Three terms in sequence. Term 1: the host lets immigrants in; debate 1 asks whether this is a duty or a favour. Term 2: immigrants embrace core norms; debate 2 asks how far assimilation must go. Term 3: over time they become full members; debate 3 asks how long that takes. Debate 4, drawn under all three, asks whether each side is keeping the deal.">
+        <rect x="0" y="4" width="136" height="74" rx="6" class="b-oc"/><text x="68" y="28" text-anchor="middle" class="hd">Term 1</text><text x="68" y="48" text-anchor="middle" class="sm">Host lets</text><text x="68" y="65" text-anchor="middle" class="sm">immigrants in</text>
+        <rect x="152" y="4" width="136" height="74" rx="6" class="b-oc"/><text x="220" y="28" text-anchor="middle" class="hd">Term 2</text><text x="220" y="48" text-anchor="middle" class="sm">Immigrants take</text><text x="220" y="65" text-anchor="middle" class="sm">on core norms</text>
+        <rect x="304" y="4" width="136" height="74" rx="6" class="b-oc"/><text x="372" y="28" text-anchor="middle" class="hd">Term 3</text><text x="372" y="48" text-anchor="middle" class="sm">In time, they</text><text x="372" y="65" text-anchor="middle" class="sm">become "us"</text>
+        <path d="M68 82 V108 M220 82 V108 M372 82 V108" class="ln"/>
+        <rect x="0" y="110" width="136" height="74" rx="6" class="b-card"/><text x="68" y="134" text-anchor="middle" class="hd">Debate 1</text><text x="68" y="154" text-anchor="middle" class="sm">Duty or</text><text x="68" y="171" text-anchor="middle" class="sm">favour?</text>
+        <rect x="152" y="110" width="136" height="74" rx="6" class="b-card"/><text x="220" y="134" text-anchor="middle" class="hd">Debate 2</text><text x="220" y="154" text-anchor="middle" class="sm">How far must</text><text x="220" y="171" text-anchor="middle" class="sm">they assimilate?</text>
+        <rect x="304" y="110" width="136" height="74" rx="6" class="b-card"/><text x="372" y="134" text-anchor="middle" class="hd">Debate 3</text><text x="372" y="154" text-anchor="middle" class="sm">How long until</text><text x="372" y="171" text-anchor="middle" class="sm">they belong?</text>
+        <rect x="0" y="204" width="440" height="50" rx="6" class="b-ir"/><text x="220" y="225" text-anchor="middle" class="hd">Debate 4</text><text x="220" y="244" text-anchor="middle" class="sm">Is each side actually keeping the deal?</text>
+      </svg>
+      <p class="cap">Debate 4 can't be settled until the first three are. Both sides, he adds, count violations far more than compliance.</p>
+    </div>
+    <ul class="points">
+      <li>He sets out the pro- and anti-immigration case at each stage and doesn't give a verdict. He says neither camp should be painted as villains, and the choice belongs to democratic procedure.</li>
+      <li>Forty years is short for a society and an eternity for a person. Harari's image is a eucalyptus planted in France: an invader to botanists, French to the tree.</li>
+      <li>He argues racism has lost its scientific basis and a new thing has taken its place, <strong>culturism</strong>. His invented countries Coldia and Warmland show how different conflict styles can cost immigrants promotions.</li>
+      <li>He gives culturist claims more standing than racist ones, with three common flaws: mistaking local for objective superiority, being too vague, and prejudging individuals from statistics.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="hope">
+  <span class="label partno">Part III · Chapters 10–14</span>
+  <h2>Despair and Hope</h2>
+  <p class="lede">The challenges are unprecedented, but Harari thinks we can rise to them if we manage our fears and hold our views more humbly.</p>
+</div>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Terrorism</span></div>
+  <div class="body">
+    <div>
+      <h3>Don't panic</h3>
+      <p class="idea">Terrorists can't do much material damage, so they stage theatre and count on us to do the damage ourselves.</p>
+    </div>
+    <div class="fig">
+      <h4>What kills us each year, and what we fear</h4>
+      <div class="bars">
+        <div class="bar c-iris"><div class="row"><span>Air pollution</span><b>~7 million</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-iris"><div class="row"><span>Diabetes and high sugar levels</span><b>up to 3.5 million</b></div><div class="track"><div class="fill" style="width:50%"></div></div></div>
+        <div class="bar c-iris"><div class="row"><span>Traffic accidents</span><b>1.25 million</b></div><div class="track"><div class="fill" style="width:17.86%"></div></div></div>
+        <div class="bar c-flame"><div class="row"><span>Terrorism, since 2001, worldwide</span><b>~25,000</b></div><div class="track"><div class="fill" style="width:.36%"></div></div></div>
+      </div>
+      <p class="cap">Annual figures. Of the terrorism total, the book puts about 50 deaths a year in the EU, 10 in the US and 7 in China, with up to 25,000 elsewhere.</p>
+      <p class="src">Source: figures as reported in ch. 10; bars drawn to scale</p>
+    </div>
+    <div class="fig">
+      <h4>The fly in the china shop</h4>
+      <div class="steps">
+        <div class="step c-flame"><span class="label">1 · The fly</span><b>A small attack</b><span>Too weak to move a teacup, it stages a spectacle.</span></div>
+        <div class="step c-ochre"><span class="label">2 · The ear</span><b>Fear spreads</b><span>Media and imagination amplify it.</span></div>
+        <div class="step c-iris"><span class="label">3 · The bull</span><b>The state overreacts</b><span>It answers with a theatre of security.</span></div>
+        <div class="step c-flame"><span class="label">4 · The wreckage</span><b>Cards reshuffled</b><span>The storm may hand terrorists an ace.</span></div>
+      </div>
+    </div>
+    <ul class="points">
+      <li>Why it works: the modern state promises a public sphere free of political violence. In that silence even a small act is loud, as a lone coin rattles in an empty jar. No medieval king lost his throne to the Black Death, because stopping plagues wasn't his job.</li>
+      <li>Harari's three fronts are clandestine action against networks, a media that keeps perspective, and citizens who free their imagination.</li>
+      <li>Nuclear or biological terrorism would be a different matter. But that hypothetical doesn't justify overreacting to today's attacks.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">War</span></div>
+  <div class="body">
+    <div>
+      <h3>Never underestimate human stupidity</h3>
+      <p class="idea">Major powers seem to have lost the art of winning wars. That protects us, but only up to the limit of human foolishness.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Share of deaths caused by human violence</h4>
+        <div class="bars">
+          <div class="bar c-flame"><div class="row"><span>Early agricultural societies</span><b>up to 15%</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+          <div class="bar c-ochre"><div class="row"><span>Twentieth century</span><b>5%</b></div><div class="track"><div class="fill" style="width:33.3%"></div></div></div>
+          <div class="bar c-iris"><div class="row"><span>Today (2018)</span><b>1%</b></div><div class="track"><div class="fill" style="width:6.67%"></div></div></div>
+        </div>
+        <p class="src">Source: as reported in ch. 11</p>
+      </div>
+      <div class="fig">
+        <h4>Russia against its rivals</h4>
+        <div class="bars">
+          <div class="bar c-flame"><div class="row"><span>Russia</span><b>150m · $4tn</b></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+          <div class="bar c-iris"><div class="row"><span>United States</span><b>325m · $19tn</b></div><div class="track"><div class="fill" style="width:90.5%"></div></div></div>
+          <div class="bar c-iris"><div class="row"><span>European Union</span><b>500m · $21tn</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">Bars show GDP, labels show population and GDP. Harari reads Crimea as a limited success under unusual conditions.</p>
+      </div>
+    </div>
+    <ul class="points">
+      <li>In 1914 elites knew what a profitable war looked like. The US war with Mexico, begun in 1846, added 888,000 square miles for about 13,000 American dead.</li>
+      <li>Today's main assets are knowledge and institutions, which can't be looted. His line: Silicon Valley has no silicon mines.</li>
+      <li>Nuclear and cyber weapons are high-damage, low-profit tools. They can destroy countries but can't build profitable empires.</li>
+      <li>Still, Germany and Japan prospered after defeat, so going to war in the 1930s was a miscalculation. Assuming war is inevitable would be self-fulfilling. Assuming it's impossible would be naive.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Humility</span></div>
+  <div class="body">
+    <div>
+      <h3>You are not the center of the world</h3>
+      <p class="idea">Every group thinks history revolves around it. Harari punctures his own people's version and invites readers to do the same with theirs.</p>
+    </div>
+    <ul class="points">
+      <li>Morality, art and creativity are universal human abilities, older than any nation. He gives examples of ethics in chimpanzees: Freddy, an alpha male, adopted an orphan unrelated to him.</li>
+      <li>He argues that biblical morality wasn't original, pointing to Hammurabi, Egyptian texts, Confucius, Buddha and Mahavira. He treats Judaism's role in history as modest, like that of Freud's mother in modern thought.</li>
+      <li>He is blunt about monotheism, calling it arguably one of the worst ideas ethically, because it encouraged intolerance. His contrast is Ashoka's edict of tolerance around 250 BCE with the Theodosian Decrees of 391.</li>
+      <li>He credits Jewish scientists' extraordinary modern contribution (about 20 percent of science Nobel laureates, under 0.2 percent of the world's population) to individuals rather than to the religion.</li>
+    </ul>
+    <div class="fig">
+      <h4>"The three great religions"?</h4>
+      <div class="bars">
+        <div class="bar c-iris"><div class="row"><span>Christianity</span><b>2.3 bn</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-iris"><div class="row"><span>Islam</span><b>1.8 bn</b></div><div class="track"><div class="fill" style="width:78.3%"></div></div></div>
+        <div class="bar c-ochre"><div class="row"><span>Hinduism</span><b>1 bn</b></div><div class="track"><div class="fill" style="width:43.5%"></div></div></div>
+        <div class="bar c-ochre"><div class="row"><span>Buddhism</span><b>500 m</b></div><div class="track"><div class="fill" style="width:21.7%"></div></div></div>
+        <div class="bar c-ochre"><div class="row"><span>Shinto</span><b>50 m</b></div><div class="track"><div class="fill" style="width:2.17%"></div></div></div>
+        <div class="bar c-ochre"><div class="row"><span>Sikhism</span><b>25 m</b></div><div class="track"><div class="fill" style="width:1.09%"></div></div></div>
+        <div class="bar c-iris"><div class="row"><span>Judaism</span><b>15 m</b></div><div class="track"><div class="fill" style="width:.65%"></div></div></div>
+      </div>
+      <p class="cap">Harari's numbers, against a common Israeli phrase. Violet marks the three it names.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">God</span></div>
+  <div class="body">
+    <div>
+      <h3>Don't take the name of God in vain</h3>
+      <p class="idea">Harari says the word covers two very different things, and that the believer's argument swaps one for the other.</p>
+    </div>
+    <div class="compare">
+      <div class="c-iris"><h5>The cosmic mystery</h5><ul><li>Why is there something, not nothing?</li><li>We can say nothing concrete about it</li><li>The God of late-night campfire talk</li></ul></div>
+      <div class="c-flame"><h5>The worldly lawgiver</h5><ul><li>Rules on food, dress, sex and politics</li><li>We supposedly know exactly what He wants</li><li>The God of crusades and inquisitions</li></ul></div>
+    </div>
+    <ul class="points">
+      <li>Holy books supply the missing link, and he finds no evidence for it. The deeper the mystery, he says, the less likely it cares about dress codes.</li>
+      <li>He reads the third commandment as a ban on using God to justify politics or hatred.</li>
+      <li>Religion can inspire compassion. He cites Ted McIlvenna, the Methodist minister behind a pioneering 1964 dialogue with gay and lesbian activists.</li>
+      <li>But morality doesn't need gods. It means reducing suffering, and it is natural to social mammals. Anger harms the angry person first.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">Secularism</span></div>
+  <div class="body">
+    <div>
+      <h3>Acknowledge your shadow</h3>
+      <p class="idea">Secularism is a positive code, not an absence of belief. Its risk is a bar set so high that movements harden into dogma.</p>
+    </div>
+    <div class="fig">
+      <h4>The secular code</h4>
+      <div class="chips"><span class="chip">Truth</span><span class="chip">Compassion</span><span class="chip">Equality</span><span class="chip">Freedom</span><span class="chip">Courage</span><span class="chip">Responsibility</span></div>
+      <p class="cap">None of these is exclusive to secular people. In Harari's account, a Muslim feminist or Christian environmentalist is a full member, so long as the code prevails where it clashes with doctrine.</p>
+    </div>
+    <ul class="points">
+      <li>Emergencies demand slogans, so inquiry hardens: Stalinism, faith in growth, belief that elections fix failed states.</li>
+      <li>He calls human rights a dogma, and probably the most beneficial one in history. Yet it may not equip us for superhumans and cyborgs.</li>
+      <li>Every creed has a shadow. Science's advantage is that it can in principle admit mistakes, which is why undogmatic movements promise modest change.</li>
+      <li>His test for anyone who wants to lead: name your creed's worst mistake. If you can't, he won't trust you.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART IV ============ -->
+<div class="part" id="truth">
+  <span class="label partno">Part IV · Chapters 15–18</span>
+  <h2>Truth</h2>
+  <p class="lede">If you feel overwhelmed, Harari says, you're on the right track. So how do you avoid being misled?</p>
+</div>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Ignorance</span></div>
+  <div class="body">
+    <div>
+      <h3>You know less than you think</h3>
+      <p class="idea">Our power comes from thinking in groups, and the rational individual is a myth.</p>
+    </div>
+    <ul class="points">
+      <li>Asked to explain a zipper step by step, most confident people couldn't. Steven Sloman and Philip Fernbach call this the <strong>knowledge illusion</strong>: we count what others know as our own.</li>
+      <li>Views follow group loyalty, so throwing facts at people tends to backfire. Scientists' faith in facts may itself be groupthink.</li>
+      <li>Power distorts truth like a black hole. Harari recalls a dinner with Benjamin Netanyahu at which about thirty guests jostled for attention and no secrets emerged.</li>
+      <li>Finding truth means wasting time on the mostly nonsensical periphery, which leaders can't afford. The best anyone can do is admit ignorance, as Socrates did.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Justice</span></div>
+  <div class="body">
+    <div>
+      <h3>Our sense of justice might be out of date</h3>
+      <p class="idea">Morality evolved for a few dozen foragers. It can't trace cause and effect across billions.</p>
+    </div>
+    <ul class="points">
+      <li>A forager knew who made her moccasins. Harari can't say where his lunch comes from. Is a passive shareholder in a polluter guilty of stealing a river?</li>
+      <li>In a connected world he makes the imperative to know supreme. Good intentions fall short, as with the upright postmaster serving the Nazi state.</li>
+    </ul>
+    <div class="fig">
+      <h4>Four ways we escape complexity</h4>
+      <div class="steps">
+        <div class="step c-flame"><span class="label">Downsize</span><b>Two foragers</b><span>Picture a civil war as one good person against one bad.</span></div>
+        <div class="step c-ochre"><span class="label">Personalise</span><b>One child</b><span>People gave more to one sick child than to eight.</span></div>
+        <div class="step c-iris"><span class="label">Conspire</span><b>Twenty puppet-masters</b><span>He says nobody understands enough to pull the strings.</span></div>
+        <div class="step"><span class="label">Dogmatise</span><b>An all-knowing creed</b><span>Comfort and certainty, but is that justice?</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">Post-Truth</span></div>
+  <div class="body">
+    <div>
+      <h3>Some fake news lasts forever</h3>
+      <p class="idea">Harari argues that post-truth is nothing new, because shared fictions are how humans cooperate at scale.</p>
+    </div>
+    <ul class="points">
+      <li>Propaganda is old. His examples run from Russia's denial of its troops in Crimea in 2014 back through Manchukuo and terra nullius, and to Zionist and Israeli denials of a Palestinian people.</li>
+      <li>He provokes deliberately, saying that what a billion people believe for a thousand years gets called religion. He adds that fictions can be beneficial: large-scale cooperation, and Chartres Cathedral.</li>
+      <li>Power needs a balance. Distort reality too far and bullets don't turn to water, as in the Maji Rebellion of 1905. Stick to bare facts and few will follow.</li>
+      <li>None of this means that everything is fake. Under the fiction, he insists, the suffering is real, and some sources do honestly try.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>In 1255 a boy called Hugh was found dead in a well in Lincoln. Rumour blamed the local Jews, and nineteen were executed. England expelled its Jews in 1290. Hugh's tomb drew pilgrims for centuries, and the cathedral repudiated the libel only in 1955.</p>
+    </div>
+    <div class="compare">
+      <div class="c-ochre"><h5>Rule of thumb 1</h5><ul><li>Pay for reliable information. If news is free, you may be the product.</li></ul></div>
+      <div class="c-ochre"><h5>Rule of thumb 2</h5><ul><li>If an issue really matters to you, read the scientific literature.</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">Science Fiction</span></div>
+  <div class="body">
+    <div>
+      <h3>The movies are misleading us about AI</h3>
+      <p class="idea">Science fiction now shapes how most people understand AI, so its errors matter politically.</p>
+    </div>
+    <ul class="points">
+      <li>Its worst sin is to confuse intelligence with consciousness. Harari fears a superhuman elite more than a robot war, and thinks Marx a better guide than Spielberg here.</li>
+      <li><em>The Matrix</em> and <em>The Truman Show</em> assume an authentic self waiting outside the box. He says the brain and society are themselves boxes, and that escape only finds a bigger one.</li>
+      <li>He finds more realism in Pixar's <em>Inside Out</em> (2015), where Riley has no single core self, only interacting mechanisms.</li>
+      <li>He calls Huxley's <em>Brave New World</em> (written in 1931) the most prophetic of all: control through pleasure is more secure than control through fear, and it's hard even to say what's wrong with it.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART V ============ -->
+<div class="part" id="resilience">
+  <span class="label partno">Part V · Chapters 19–21</span>
+  <h2>Resilience</h2>
+  <p class="lede">How do you live in an age of bewilderment, between the old stories and whatever comes next?</p>
+</div>
+
+<article class="chapter" id="ch19">
+  <div class="gutter"><span class="chno">19</span><span class="label">Education</span></div>
+  <div class="body">
+    <div>
+      <h3>Change is the only constant</h3>
+      <p class="idea">Nobody knows what skills 2050 will need. So teach people how to keep reinventing themselves.</p>
+    </div>
+    <ul class="points">
+      <li>A parent in China in 1018 could safely teach rice farming or weaving. Harari says today's parents have no such confidence, because even bodies and minds may change.</li>
+      <li>Schools cram information, which is no longer scarce. What's needed is the skill to sift it and build a broad picture.</li>
+      <li>He reports that many educators favour the four Cs over technical skills: critical thinking, communication, collaboration and creativity.</li>
+      <li>The old split between learning and working is breaking down, so mental flexibility and emotional balance become the core skills.</li>
+    </ul>
+    <div class="fig">
+      <h4>Advice to a fifteen-year-old: whom to rely on?</h4>
+      <div class="rel">
+        <div class="c-flame"><p><b>Adults</b><span>They mean well but may be passing on outdated bias.</span></p><em>Not too much</em></div>
+        <div class="c-flame"><p><b>Technology</b><span>Fine if you know what you want. If not, it shapes your aims for you.</span></p><em>Riskier still</em></div>
+        <div class="c-flame"><p><b>Your inner voice</b><span>It echoes propaganda and advertising, plus biochemical bugs.</span></p><em>Not trustworthy</em></div>
+        <div class="c-iris"><p><b>Knowledge of yourself</b><span>Get to know your operating system before the companies racing to hack it do.</span></p><em>Run faster</em></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch20">
+  <div class="gutter"><span class="chno">20</span><span class="label">Meaning</span></div>
+  <div class="body">
+    <div>
+      <h3>Life is not a story</h3>
+      <p class="idea">The book's longest chapter takes apart the stories we use for meaning, then asks the better question: how do we stop suffering?</p>
+    </div>
+    <ul class="points">
+      <li>A meaningful story needs only two things: a role for me, and a reach beyond my horizon. It needn't be true or complete. Attention stays inside a safe zone, and nobody asks what the elephant stands on.</li>
+      <li>He runs through the Circle of Life (Arjuna, Simba), linear epics (Islam, Zionism, communism), reincarnation, legacy, kindness and romance. In his view each is incomplete or has little evidence behind it.</li>
+      <li>Stories are held up by the weight of their roof: the identities and institutions built on them.</li>
+      <li>Ritual makes them feel real. "Hocus-pocus, X is Y" turns bread into a body and cloth into a nation. India's 2017 flag at Attari kept tearing and being repaired, at public cost.</li>
+      <li>Most people keep a portfolio of stories. After 1945, he notes, about 80 percent of gauleiters and 90 percent of generals went on living. Fascism, by contrast, demands one identity only, and he warns that it looks beautiful in its own mirror.</li>
+      <li>The liberal story says that I create meaning by free choice. He counters that we can do what we desire but can't choose what to desire. The self is itself a story our minds keep rewriting.</li>
+      <li>Buddhism goes further, denying any meaning at all, but "no story" easily becomes a story too. Burma's king stormed Siam's capital in 1767 and later gilded a pagoda with his weight in gold.</li>
+    </ul>
+    <div class="fig">
+      <h4>How small is "eternal"?</h4>
+      <svg viewBox="0 0 440 178" role="img" aria-label="A logarithmic line of years. Jewish people at most 3,000 years; Jerusalem 5,000 years; humans at least 2 million years; Earth 4.5 billion years; universe 13.8 billion years.">
+        <line x1="20" y1="92" x2="424" y2="92" class="ln"/>
+        <path d="M20 86 V98 M184 86 V98 M349 86 V98" class="ln"/>
+        <text x="20" y="116" text-anchor="middle" class="sm t-3">10³</text><text x="184" y="116" text-anchor="middle" class="sm t-3">10⁶</text><text x="349" y="116" text-anchor="middle" class="sm t-3">10⁹ years</text>
+        <circle cx="46" cy="92" r="6" class="f-fl"/><circle cx="58" cy="92" r="6" class="f-fl"/><circle cx="201" cy="92" r="6" class="f-oc"/><circle cx="384" cy="92" r="6" class="f-ir"/><circle cx="411" cy="92" r="6" class="f-ir"/>
+        <path d="M46 84 V28 M58 84 V50 M201 84 V74 M384 84 V50 M411 84 V28" class="ln"/>
+        <text x="4" y="22" class="sm t-fl">Jewish people, ≤3,000</text><text x="64" y="44" class="sm t-fl">Jerusalem, 5,000</text>
+        <text x="209" y="68" class="sm t-oc">Humans, ≥2 million</text>
+        <text x="376" y="44" text-anchor="end" class="sm t-ir">Earth, 4.5 billion</text><text x="436" y="22" text-anchor="end" class="sm t-ir">Universe, 13.8 billion</text>
+        <text x="220" y="160" text-anchor="middle" class="sm">Each step on the line is a thousandfold</text>
+      </svg>
+      <p class="cap">Harari uses these numbers against the claim that Jerusalem is "eternal", and says other national movements are just as narrow. The scale is logarithmic.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The alchemy of sacrifice</h4>
+        <div class="compare">
+          <div class="c-ochre"><h5>I suffer for it</h5><ul><li>Either the story is true, or I'm a gullible fool.</li></ul></div>
+          <div class="c-flame"><h5>I hurt others for it</h5><ul><li>Either the story is true, or I'm a cruel villain.</li></ul></div>
+        </div>
+        <p class="cap">Few people accept either label, so faith deepens. The logic is a fallacy, Harari says, yet it's why suffering makes fictions feel real. He sees the same thing in a costly Ferrari.</p>
+      </div>
+      <div class="fig">
+        <h4>The test: can the hero suffer?</h4>
+        <p class="cap" style="font-size:16px;color:var(--ink)">A nation has no body, so it can't feel pain. The people in it can. To tell fiction from reality, begin with suffering.</p>
+        <span class="label">Sound the alarm at four words</span>
+        <div class="chips c-flame"><span class="chip">sacrifice</span><span class="chip">eternity</span><span class="chip">purity</span><span class="chip">redemption</span></div>
+        <p class="cap">Translate them into real terms: a soldier in agony, a child shaking in fear.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch21">
+  <div class="gutter"><span class="chno">21</span><span class="label">Meditation</span></div>
+  <div class="body">
+    <div>
+      <h3>Just observe</h3>
+      <p class="idea">Harari ends by showing the tint in his own glasses, while warning that what works for him won't work for everyone.</p>
+    </div>
+    <ul class="points">
+      <li>Frustrated by philosophy, he took a ten-day Vipassana course in April 2000, at 24, taught by S. N. Goenka. The instruction was simply to notice the breath, with no theory to accept.</li>
+      <li>He couldn't hold focus for more than ten seconds, and learned that he barely controlled his own mind. He wasn't the CEO, just a poor gatekeeper.</li>
+      <li>We react to bodily sensations, not to events. The insult hurts as a burn in the stomach. His main discovery was that the deepest source of his suffering lay in the patterns of his own mind.</li>
+      <li>Since then he has meditated two hours a day, plus a retreat of a month or two each year. He credits the practice for the focus to write <em>Sapiens</em> and <em>Homo Deus</em>.</li>
+      <li>We can still investigate who we are, he closes, but we should do it now, before algorithms make up our minds for us.</li>
+    </ul>
+    <div class="fig">
+      <h4>Digging from both ends</h4>
+      <svg viewBox="0 0 440 190" role="img" aria-label="A mountain with two tunnels being dug toward each other. From the left, brain research with scanners and microscopes. From the right, direct observation of the mind through meditation. A question mark sits between them.">
+        <path d="M0 166 L140 44 L196 84 L262 22 L440 166 Z" class="b-oc"/>
+        <rect x="0" y="118" width="186" height="26" rx="3" class="b-card"/>
+        <rect x="254" y="118" width="186" height="26" rx="3" class="b-card"/>
+        <text x="90" y="136" text-anchor="middle" class="sm t-ir">Brain: scanners</text>
+        <text x="348" y="136" text-anchor="middle" class="sm t-ir">Mind: meditation</text>
+        <text x="220" y="138" text-anchor="middle" class="hd t-fl" style="font-size:20px">?</text>
+        <text x="220" y="186" text-anchor="middle" class="sm">If brain and mind are one, the tunnels meet</text>
+      </svg>
+      <p class="cap">Scanners record brain activity, not experience. Studying a meditator's brain is like examining a microscope through a magnifying glass, Harari says. And if brain and mind are different things, digging into the mind matters even more.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Harari offers no programme, and he's wary of simple answers. These are habits I'd take from the book.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Thinking</h3>
+      <div class="tk"><b>Swap panic for bewilderment</b><span>Try saying "I don't understand what's going on" before predicting the end.</span></div>
+      <div class="tk"><b>Audit your favourite sources</b><span>You can't check everything, so check what you rely on most, and pay for it.</span></div>
+      <div class="tk"><b>Read the science on what matters</b><span>If you reject a theory, know it first and bring evidence.</span></div>
+    </div>
+    <div class="col">
+      <h3>Judging</h3>
+      <div class="tk"><b>Ask whether the hero can suffer</b><span>Look past nations and causes to the people who feel pain.</span></div>
+      <div class="tk"><b>Hear the four alarm words</b><span>Translate "sacrifice", "eternity", "purity" and "redemption" into real terms.</span></div>
+      <div class="tk"><b>Ask what a creed got wrong</b><span>Distrust anyone who can't name a serious mistake, your own side included.</span></div>
+    </div>
+    <div class="col">
+      <h3>Living</h3>
+      <div class="tk"><b>Know what you want from technology</b><span>Otherwise it will decide your aims for you.</span></div>
+      <div class="tk"><b>Keep several identities</b><span>Family, work, nation and humankind can all claim you. Be wary of anything that demands exclusive loyalty.</span></div>
+      <div class="tk"><b>Watch your own sensations</b><span>Notice what anger feels like in the body, not only what caused it.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Yuval Noah Harari, <em>21 Lessons for the 21st Century</em> (Spiegel &amp; Grau, 2018). Claims and opinions on contested topics are the author's. Figures are as reported in the book. Diagrams were drawn for this page, and loop and chain diagrams are illustrative. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  /* Hero band: three story threads that end one by one, 1930 to 2020 */
+  var canvas = document.getElementById("threads");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var css = function (n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  var lines = [
+    { end: (1945 - 1930) / 90, col: "--ochre", off: -.26, ph: 0 },
+    { end: (1989 - 1930) / 90, col: "--flame", off: .26, ph: 2 },
+    { end: (2016 - 1930) / 90, col: "--iris", off: 0, ph: 4 }
+  ];
+  function draw(t) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var mid = hgt / 2, drift = reduce ? 0 : t * .0009;
+    ctx.lineWidth = 3; ctx.lineCap = "round";
+    lines.forEach(function (l) {
+      ctx.strokeStyle = css(l.col);
+      ctx.beginPath();
+      var last = null;
+      for (var x = 0; x <= l.end * w; x += 3) {
+        var u = x / w;
+        var y = mid + l.off * hgt * (1 - u * .85) + Math.sin(x / 42 + drift + l.ph) * 9;
+        if (last === null) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        last = [x, y];
+      }
+      ctx.stroke();
+      if (last) { ctx.fillStyle = css(l.col); ctx.beginPath(); ctx.arc(last[0], last[1], 5, 0, Math.PI * 2); ctx.fill(); }
+    });
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
