@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Eurasian Century by Hal Brands – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: white paper, gilded continents, pearl-grey
+   glass, red subtitle. Gold = the landmass, red = the challenger, sea = the offshore coalition. */
+:root {
+  --paper: #fbfaf6;
+  --paper-2: #efece3;
+  --card: #ffffff;
+  --ink: #141312;
+  --ink-2: #4a4843;
+  --ink-3: #75716a;
+  --rule: #dfdacd;
+
+  --gold: #94670f;
+  --gold-2: #c9973a;
+  --red: #c4262e;
+  --sea: #3f6b6c;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #121210;
+    --paper-2: #1c1b18;
+    --card: #1f1e1a;
+    --ink: #f0ede5;
+    --ink-2: #b9b4a8;
+    --ink-3: #8f8a7e;
+    --rule: #33312b;
+    --gold: #e2b65f;
+    --gold-2: #c9973a;
+    --red: #ff6f66;
+    --sea: #8cc0bd;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #121210;
+  --paper-2: #1c1b18;
+  --card: #1f1e1a;
+  --ink: #f0ede5;
+  --ink-2: #b9b4a8;
+  --ink-3: #8f8a7e;
+  --rule: #33312b;
+  --gold: #e2b65f;
+  --gold-2: #c9973a;
+  --red: #ff6f66;
+  --sea: #8cc0bd;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-gold { --c: var(--gold); }
+.c-sea { --c: var(--sea); }
+.c-red { --c: var(--red); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: clamp(22px, 3vw, 34px); letter-spacing: .08em; line-height: 1; text-transform: uppercase; color: var(--red); }
+.hero h1 {
+  font-size: clamp(54px, 11vw, 136px);
+  font-weight: 800;
+  font-stretch: 72%;
+  line-height: .86;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 10px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 1192 / 1800;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 30, 10, .35), 0 8px 18px -10px rgba(40, 30, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--red);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  font-stretch: 72%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .01em;
+  color: var(--red);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--gold);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--red);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-cy { fill: var(--gold); }
+.fig svg text.t-red { fill: var(--red); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-cy { stroke: var(--gold); fill: none; }
+.s-cy2 { stroke: var(--gold-2); fill: none; }
+.s-red { stroke: var(--red); fill: none; }
+.f-cy { fill: var(--gold); }
+.f-cy2 { fill: var(--gold-2); }
+.f-red { fill: var(--red); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-cyt { fill: color-mix(in srgb, var(--gold) 14%, var(--card)); }
+.f-redt { fill: color-mix(in srgb, var(--red) 14%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--red); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; letter-spacing: .02em; color: var(--red); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--gold); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three kinds of learning */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--gold); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--gold); }
+.compare .bad h5 { color: var(--red); }
+
+/* equation strip */
+.eq { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: var(--paper-2); border-radius: 6px; padding: 14px 18px; margin: 0; white-space: pre-wrap; color: var(--ink); }
+.eq .k { color: var(--gold); }
+.eq .r { color: var(--red); }
+.eq .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 150px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; color: var(--red); border-top: 2px solid var(--red); padding-top: 12px; letter-spacing: .02em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- This page ---------- */
+.hero .kicker, .hero h1 { font-family: var(--body); font-weight: 500; font-stretch: 100%; color: var(--ink); text-transform: uppercase; }
+.hero .kicker { font-size: clamp(30px, 4.4vw, 54px); letter-spacing: .1em; font-weight: 500; }
+.hero h1 { font-size: clamp(44px, 9.4vw, 112px); line-height: 1; letter-spacing: .035em; margin: 8px 0 0 -.02em; }
+.hero .sub { font-family: var(--body); color: var(--red); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: clamp(17px, 1.9vw, 22px); line-height: 1.3; max-width: 34ch; }
+.band canvas { height: 118px; }
+.part { border-top-color: var(--gold-2); }
+.part h2, .map h3, .toolkit h3 { font-family: var(--body); font-weight: 500; font-stretch: 100%; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); }
+.map .col, .toolkit h3 { border-top-color: var(--gold-2); }
+.map h3, .toolkit h3 { font-size: 25px; }
+.chapter .gutter .label { overflow-wrap: anywhere; }
+.compare h5 { line-height: 1.2; }
+.compare .good h5 { color: var(--sea); }
+.fig svg { max-width: 620px; margin-inline: auto; }
+.fig svg text.t-sea { fill: var(--sea); }
+.s-sea { stroke: var(--sea); fill: none; }
+.f-sea { fill: var(--sea); }
+.f-seat { fill: color-mix(in srgb, var(--sea) 13%, var(--card)); }
+rect.s-sea.f-seat { fill: color-mix(in srgb, var(--sea) 13%, var(--card)); }
+rect.f-card.s-sea { fill: var(--card); }
+rect.f-redt.s-red { fill: color-mix(in srgb, var(--red) 14%, var(--card)); }
+.f-gold-soft { fill: color-mix(in srgb, var(--gold-2) 26%, var(--card)); }
+.f-gold-strong { fill: #8f6414; }
+#d-map .g-heart, #d-map .g-rim, #d-map .g-sea { transition: opacity .25s; }
+#d-map[data-view="mackinder"] .g-rim { opacity: .85; }
+#d-map[data-view="mackinder"] .g-sea { opacity: .6; }
+#d-map[data-view="mahan"] .g-heart { opacity: .5; }
+#d-map[data-view="mahan"] .g-rim { opacity: .55; }
+#d-map[data-view="spykman"] .g-heart { opacity: .45; }
+#d-map[data-view="spykman"] .g-sea { opacity: .75; }
+#d-map[data-view="spykman"] .f-gold-soft { fill: color-mix(in srgb, var(--gold-2) 52%, var(--card)); }
+.node { fill: #c4262e; }
+.fig svg text.halo { paint-order: stroke; stroke: var(--card); stroke-width: 6px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tabs button { font-family: var(--mono); font-size: 12.5px; letter-spacing: .04em; padding: 8px 14px; min-height: 40px; background: transparent; color: var(--ink-2); border: 1px solid var(--rule); border-radius: 4px; cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.chain { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; counter-reset: c; }
+.chain li { position: relative; padding: 8px 12px; background: var(--paper-2); border-radius: 4px; font-size: 15.5px; line-height: 1.3; }
+.chain li:not(:last-child)::after { content: "↓"; position: absolute; left: 14px; bottom: -22px; font-family: var(--mono); font-size: 14px; color: var(--ink-3); }
+.chain li:last-child { background: color-mix(in srgb, var(--red) 14%, var(--card)); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-items: end; }
+.steps li { display: grid; gap: 6px; align-content: start; padding: 14px; background: color-mix(in srgb, var(--sea) 11%, var(--card)); border-top: 3px solid var(--sea); border-radius: 4px; }
+.steps li:nth-child(1) { min-height: 180px; }
+.steps li:nth-child(2) { min-height: 215px; }
+.steps li:nth-child(3) { min-height: 250px; }
+.steps li:nth-child(4) { min-height: 285px; }
+.steps b { font-family: var(--display); font-weight: 750; font-size: 16.5px; line-height: 1.2; }
+.steps li > span:last-child { font-size: 15px; color: var(--ink-2); line-height: 1.4; }
+.steps .label { font-size: 11px; letter-spacing: .05em; }
+.lessons { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; counter-reset: l; }
+.lessons li { counter-increment: l; background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.lessons li::before { content: counter(l); font-family: var(--display); font-weight: 900; font-stretch: 62%; font-size: 34px; line-height: 1; color: var(--gold); }
+.lessons b { font-family: var(--display); font-weight: 800; font-size: 17px; line-height: 1.2; }
+.lessons span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.layers { display: grid; gap: 10px; }
+.layers > div { margin-left: var(--d); padding: 10px 14px; background: color-mix(in srgb, var(--sea) 12%, var(--card)); border-left: 3px solid var(--sea); border-radius: 3px; display: grid; gap: 2px; }
+.layers b { font-family: var(--display); font-weight: 750; font-size: 16px; }
+.layers span { font-size: 15px; color: var(--ink-2); line-height: 1.4; }
+@media (max-width: 900px) {
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps li { min-height: 0 !important; }
+  .lessons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .steps, .lessons { grid-template-columns: minmax(0, 1fr); }
+  .layers > div { margin-left: calc(var(--d) / 3); }
+  .fig { padding: 14px; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Hal Brands · W. W. Norton, 2025</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#theory">The theory</a>
+    <a href="#struggles">Three struggles</a>
+    <a href="#return">The return</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">The</p>
+    <h1><span>Eurasian</span><span>Century</span></h1>
+    <p class="sub">Hot wars, cold wars, and the making of the modern world</p>
+    <p class="dek">Hal Brands reads the last 120 years as one long contest over who commands the world's largest landmass, and argues that the contest has resumed.</p>
+    <div class="byline label">
+      <span>6 chapters</span><span>4 struggles</span><span>1904 to 2024</span><span>~85,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Eurasian Century by Hal Brands: three overlapping frosted-glass globes with gold continents, Europe on the left and Asia on the right, crossed by a ruler marked 1900 to 2020, under a black serif title with a red subtitle">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="ruler"></canvas>
+  <div class="ends label"><span>1904: Mackinder's lecture</span><span>2022: round four</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Introduction</span>
+    <h2>The age of American power was really a fight over one landmass</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Brands opens with four freeze-frames: January 1917, December 1941, March 1947, February 2022. In each, an autocracy is reaching for control of the Old World, and democracies on its edges and across the oceans are working out whether they can stop it.</p>
+      <p>Those scenes are his thesis. Since about 1900, he argues, world politics has turned on Eurasia, a space he defines as Europe, Asia, their offshore islands, and North Africa. Ambitious autocracies try to seize its commanding positions. Offshore democracies, first Britain and then America, team up with allies on the mainland to keep it divided. The two world wars and the Cold War were rounds of that one game, and the rivalry with China, Russia and Iran is the next.</p>
+      <p>War over Eurasia is ancient, so what made this era different? Brands points to frequency, ferocity and reach: two world wars and the opening of a generational cold war came within about thirty years, and each decided who would run the international system.</p>
+      <p>He has two reasons for retelling it. A hostile power that dominated Eurasia could leave even distant democracies choosing between their safety and their freedoms. And every past challenger lost, but none had to. The results turned on choices, so today's leaders need the lessons.</p>
+      <p>The central figure is a half-forgotten British geographer, and the book keeps returning to his 1904 talk. These notes report Brands's case. Most of it is contested argument about live politics, and the account stops around mid-2024.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Why this landmass</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-gold"><span class="big num">1/3+</span><p>Eurasia's share of the Earth's land.</p></div>
+        <div class="stat c-gold"><span class="big num">~70%</span><p>Its share of the world's people, along with most industrial and military potential.</p></div>
+        <div class="stat c-red"><span class="big num">80m</span><p>Lives consumed by the first two battles for it, the world wars.</p></div>
+        <div class="stat c-sea"><span class="big num">3</span><p>Bids for mastery that were beaten back: Germany twice, with Japan the second time, then the Soviet Union.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">The dilemma of the land power</span>
+        <p>Grow strong enough to overpower your neighbours and you also grow strong enough to frighten the whole world into uniting against you. Brands sees that trap in every round.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">The theory</span>
+      <h3>The board</h3>
+      <p class="q">Who saw it coming, and why</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Mackinder's World</b>The thinkers who mapped the game</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Three struggles</span>
+      <h3>The rounds</h3>
+      <p class="q">Two hot wars and a cold one</p>
+      <ol>
+        <li><span>02</span><a href="#ch2"><b>The Great Black Tornado</b>World War I and a failed peace</a></li>
+        <li><span>03</span><a href="#ch3"><b>The Totalitarian Abyss</b>World War II</a></li>
+        <li><span>04</span><a href="#ch4"><b>The Golden Age</b>The Cold War and the free world</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">The return</span>
+      <h3>The rematch</h3>
+      <p class="q">What is happening, and what to do</p>
+      <ol>
+        <li><span>05</span><a href="#ch5"><b>The Second Eurasian Century</b>China, Russia, Iran</a></li>
+        <li><span>06</span><a href="#ch6"><b>Lessons of the Past</b>Nine lessons</a></li>
+      </ol>
+    </div>
+  </div>
+  <p class="label" style="margin-top:18px">The book has six chapters and no parts. The three-way grouping is this page's.</p>
+</section>
+
+<!-- ============ PART: THEORY ============ -->
+<div class="part" id="theory">
+  <span class="label partno">The theory · Chapter 1</span>
+  <h2>The board</h2>
+  <p class="lede">Before the wars came the argument about them. A small group of strategists worked out why geography, technology and tyranny were about to collide, and some of their readers took the wrong lessons.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Mackinder's World</span></div>
+  <div class="body">
+    <div>
+      <h3>Railways, closed frontiers and the modern tyrant</h3>
+      <p class="idea">Mackinder's 1904 lecture spotted the forces that would make Eurasia the century's killing ground. It was wrong on details and right on the shape of things.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A railway as omen.</strong> The Trans-Siberian, nearly 6,000 miles from Moscow to Vladivostok, was finished in 1904. Japan attacked Russia rather than let it be completed unopposed. Brands follows the line through both world wars to 2022, when Putin used it to bring Far Eastern units west, including a brigade later linked to Bucha.</li>
+      <li><strong>The man.</strong> Halford Mackinder (1861–1947) helped found academic geography, sat in Parliament, led the first ascent of Mount Kenya, and never reached the top of British policy. His ideas reached further than he did.</li>
+      <li><strong>Three forces.</strong> On 25 January 1904, to a room with empty seats, he described them. The 400-year Columbian epoch of easy expansion was over, so the great powers would now turn on each other. Railways were cancelling sea power's mobility advantage. And regimes were starting to combine repression with industry, a theme that grew in his later work.</li>
+      <li><strong>The stakes.</strong> Dominant land power would become dominant sea power, since a continental master could build fleets freely. So the century's main event would be continental aggressors against offshore balancers and their mainland footholds.</li>
+      <li><strong>What he missed.</strong> Russia lost in 1905 and the rail line couldn't save it. The next bids came from Germany and Japan on the Crescent, not from the Pivot. His lecture also closed on a racist warning about China.</li>
+      <li><strong>The American school.</strong> Alfred Thayer Mahan, a naval officer miserable at sea, called the ocean a highway and urged America to join Britain in keeping Eurasia balanced. Nicholas Spykman, writing in 1942, showed why a fortress America would slowly be strangled if the Axis held the Old World. Both shaped how Washington later thought.</li>
+      <li><strong>The dark mirror.</strong> Karl Haushofer read Mackinder as a to-do list, and his ideas reached Hitler through Rudolf Hess. Brands says that link is sometimes exaggerated. Haushofer's own son was executed for plotting against Hitler. Aleksandr Dugin has revived the same inversion for Russia.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Three readings of one map</h4>
+      <div class="tabs" role="group" aria-label="Choose a strategist">
+        <button type="button" data-v="mackinder" aria-pressed="true">Mackinder</button>
+        <button type="button" data-v="mahan" aria-pressed="false">Mahan</button>
+        <button type="button" data-v="spykman" aria-pressed="false">Spykman</button>
+      </div>
+      <svg id="d-map" data-view="mackinder" viewBox="0 0 460 300" role="img" aria-label="Schematic of Eurasia as an oval. At the centre is the Heartland or Pivot, covering Russia and Central Asia. Around it is a ring, the Rimland or Inner Crescent, with Western Europe, the Middle East, India and China. Around that are inner seas, and offshore are Britain, Japan and America.">
+        <rect x="0" y="0" width="460" height="300" rx="6" class="f-seat"/>
+        <g class="g-sea">
+          <ellipse cx="222" cy="150" rx="205" ry="128" class="s-sea" stroke-width="2.5" stroke-dasharray="7 6"/>
+          <text x="222" y="292" text-anchor="middle" class="t-sea" style="font-size:12px">sea lanes and inner seas</text>
+        </g>
+        <g class="g-rim">
+          <ellipse cx="222" cy="150" rx="186" ry="112" class="f-gold-soft"/>
+          <text x="66" y="130" class="t-ink" style="font-size:12px">Western</text>
+          <text x="66" y="145" class="t-ink" style="font-size:12px">Europe</text>
+          <text x="118" y="225" class="t-ink" style="font-size:12px">Middle East</text>
+          <text x="232" y="247" class="t-ink" style="font-size:12px">India</text>
+          <text x="338" y="200" class="t-ink" style="font-size:12px">China</text>
+          <text x="222" y="58" text-anchor="middle" class="t-3" style="font-size:11px">Rimland / Inner Crescent</text>
+        </g>
+        <g class="g-heart">
+          <ellipse cx="222" cy="136" rx="98" ry="60" class="f-gold-strong"/>
+          <text x="222" y="132" text-anchor="middle" class="hd" style="fill:#fff">Heartland</text>
+          <text x="222" y="150" text-anchor="middle" style="font-size:11px;fill:#fff">Russia, Central Asia</text>
+          <path d="M140 150 L108 158 M114 150 L106 158 L116 164" class="s-red" stroke-width="2"/>
+          <path d="M305 150 L335 158 M329 150 L337 158 L327 164" class="s-red" stroke-width="2"/>
+          <path d="M222 198 V222 M215 215 L222 223 L229 215" class="s-red" stroke-width="2"/>
+        </g>
+        <g class="g-off">
+          <rect x="4" y="58" width="62" height="26" rx="3" class="f-card s-sea"/>
+          <text x="35" y="75" text-anchor="middle" class="t-ink" style="font-size:11px">Britain</text>
+          <rect x="400" y="96" width="48" height="26" rx="3" class="f-card s-sea"/>
+          <text x="424" y="113" text-anchor="middle" class="t-ink" style="font-size:11px">Japan</text>
+          <rect x="384" y="250" width="66" height="26" rx="3" class="f-card s-sea"/>
+          <text x="417" y="267" text-anchor="middle" class="t-ink" style="font-size:11px">America</text>
+        </g>
+      </svg>
+      <p class="cap" id="map-cap"><strong>Mackinder:</strong> <span id="map-text">the Pivot is what matters. Land power pushes out from an interior no fleet can reach, and his later formula ran "Who rules the Heartland rules the World-Island; whoever rules the World-Island commands the World."</span></p>
+      <p class="src">Schematic, not to scale. Terms from Mackinder, Mahan and Spykman as described in ch. 1</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART: STRUGGLES ============ -->
+<div class="part" id="struggles">
+  <span class="label partno">Three struggles · Chapters 2–4</span>
+  <h2>The rounds</h2>
+  <p class="lede">The same structure three times over: a central power lunges, a ring of enemies forms, and the outcome depends on how early and how well the offshore power commits.</p>
+</div>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">The Great Black Tornado</span></div>
+  <div class="body">
+    <div>
+      <h3>World War I was not pointless</h3>
+      <p class="idea">Brands rejects the futile-slaughter story. The war decided whether an autocratic Germany would gain mastery on land and at sea, and it came close.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Crowe's warning.</strong> On New Year's Day 1907 Eyre Crowe, a German-born British diplomat, finished a 16,000-word memo arguing that the union of the top army and the top navy in one state would force the world to combine against it.</li>
+      <li><strong>Now or never.</strong> Germany had become Europe's largest economy and had encircled itself by bullying its neighbours. By 1914 it was losing the arms race, and leaders steeped in expand-or-die thinking decided war would never be cheaper. Brands assigns several capitals their share of the July crisis, but says Berlin did little except instigate.</li>
+      <li><strong>A failure of deterrence.</strong> Only a firm British commitment might have sobered Germany, and that wasn't politically possible. The full unity that could have prevented war appeared only after it began, which Brands calls a recurring problem of the century.</li>
+      <li><strong>Why it ground on.</strong> Firepower favoured defence, and Germany and France each mobilised a fifth of their populations. Neither side could accept a peace that left Germany's early gains in place.</li>
+      <li><strong>How Germany nearly won.</strong> It had tactical skill, railways that made its central position an asset, a radicalised total-war economy, and creative strategy: it shipped Lenin home to wreck Russia, and used submarines to starve Britain. By early 1918 it had won in the east.</li>
+      <li><strong>Teamwork, slowly.</strong> The Allies won only by pooling shipping, finance and blockade. They agreed on a single commander, Foch, in the emergency of March 1918, as a German offensive tore into their lines.</li>
+      <li><strong>America's gamble and arrival.</strong> Germany bet that U-boats would finish Britain before American troops counted, at a moment when Britain was close to insolvency. Brands wonders whether a more patient Berlin could have outlasted its enemies. By mid-1918 nearly 10,000 American soldiers were landing each day, and 2 million came in all.</li>
+      <li><strong>Why the peace failed.</strong> Versailles, he argues, was far from crushing: Germany paid only 22 billion of its 132 billion gold marks, and it stayed united. The real failure was American withdrawal once the Senate rejected the League. Only Washington had the money and the guarantees to steady Europe.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The closing-window trap</h4>
+      <svg viewBox="0 0 460 240" role="img" aria-label="Illustrative line chart. A challenger's strength rises quickly then flattens. The strength of the surrounding coalition starts lower and rises faster later. Before the lines cross, the challenger is ahead but the lead is shrinking, and that shrinking stretch is marked as the now-or-never zone.">
+        <rect x="60" y="20" width="182" height="176" class="f-redt"/>
+        <text x="151" y="38" text-anchor="middle" class="t-red" style="font-size:12px">now or never</text>
+        <path d="M60 196 H440 M60 20 V196" class="s-3"/>
+        <path d="M60 150 C 120 80, 190 66, 440 56" class="s-red" stroke-width="3"/>
+        <path d="M60 182 C 160 170, 220 110, 300 60 S 400 26, 440 22" class="s-sea" stroke-width="3"/>
+        <line x1="242" y1="20" x2="242" y2="196" class="s-3" stroke-dasharray="3 4"/>
+        <text x="350" y="84" class="t-red" style="font-size:12px">challenger</text>
+        <text x="330" y="36" text-anchor="end" class="t-sea" style="font-size:12px">coalition</text>
+        <text x="250" y="186" class="t-3" style="font-size:11px">lead lost</text>
+        <text x="250" y="214" text-anchor="middle" class="t-3" style="font-size:12px">time →</text>
+        <text x="16" y="110" transform="rotate(-90 16 110)" text-anchor="middle" class="t-3" style="font-size:12px">military strength</text>
+      </svg>
+      <p class="cap">Illustrative curves, no real data. The logic is the book's: a rising autocracy that sees rivals catching up may choose a desperate gamble over slow decline. Germany did so in 1914, and Japan in 1941. Brands argues Putin raced through a similar window in 2022, and warns against assuming that awful costs will deter anyone.</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>What Brest-Litovsk took from Russia</h4>
+        <div class="bars">
+          <div class="bar c-red"><div class="row"><span>Population</span><b>one-third</b></div><div class="track"><div class="fill" style="width:33.3%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>Agricultural land</span><b>32%</b></div><div class="track"><div class="fill" style="width:32%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>Iron ore</span><b>73%</b></div><div class="track"><div class="fill" style="width:73%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>Coal</span><b>89%</b></div><div class="track"><div class="fill" style="width:89%"></div></div></div>
+        </div>
+        <p class="cap">The 1918 treaty showed what victory would have meant: a German empire with the raw materials for global power.</p>
+        <p class="src">Source: figures quoted in ch. 2</p>
+      </div>
+      <div class="fig">
+        <h4>Share of world manufacturing, 1918</h4>
+        <div class="bars">
+          <div class="bar c-sea"><div class="row"><span>Allies, with America</span><b>51.7%</b></div><div class="track"><div class="fill" style="width:51.7%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>Central Powers</span><b>19.2%</b></div><div class="track"><div class="fill" style="width:19.2%"></div></div></div>
+        </div>
+        <p class="cap">The gap makes defeat look fated. Brands insists it wasn't: Paris was threatened in 1914 and again in 1918, and the U-boats nearly won in 1917.</p>
+        <p class="src">Source: ch. 2</p>
+      </div>
+    </div>
+
+    <div class="story">
+      <span class="label">Mackinder in South Russia</span>
+      <p>In 1919–20 Mackinder got to test his ideas as British High Commissioner to the anti-Bolshevik forces in South Russia. He proposed a chain of armed buffer states, arrived as those armies were collapsing, and watched the plan die in Cabinet. He still called the next war's location: the belt between Germany and Russia.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">The Totalitarian Abyss</span></div>
+  <div class="body">
+    <div>
+      <h3>Blocking a challenger early is hard. Rolling one back is ruinous.</h3>
+      <p class="idea">World War II was the grimmest version of Mackinder's forecast, and it showed how much a broken balance costs to repair.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Why fascism expanded.</strong> The war had left aggrieved losers and disappointed winners. Bigness seemed to equal strength, and the Depression closed markets, so autarkic empire looked like the only safety. With America disengaged and Britain drained, nobody was keeping order.</li>
+      <li><strong>Why nobody stopped them.</strong> Democracies couldn't imagine how bad things would get, dreaded repeating 1914, were stretched across many fronts, and were divided. At Munich in 1938 Britain and France probably could have won, Brands says, and they folded.</li>
+      <li><strong>Conquest paid.</strong> Hitler rearmed on plunder, a scheme Brands likens to a Ponzi. Czechoslovakia alone yielded 1.5 million rifles, 2,000 field guns, 750 aircraft and 600 tanks. Stalin supplied raw materials until June 1941.</li>
+      <li><strong>Speed.</strong> Carriers and blitzkrieg compressed time and space. Germany took France with fewer tanks and aircraft than its enemies, and contingency played a big part. In four months Japan swept from Southeast Asia to the Central Pacific.</li>
+      <li><strong>Genocide and geopolitics.</strong> Living space was to be cleared by mass murder. Six million Jews were killed and some 8 million people were enslaved as workers. Japan's forces may have murdered 200,000 civilians at Nanking alone.</li>
+      <li><strong>Choices.</strong> Britain might have sought terms in 1940, but Churchill refused. Roosevelt moved a divided public by steps, through destroyers for bases and Lend-Lease. Hitler then declared war on America on 11 December 1941, believing the clash was coming anyway.</li>
+      <li><strong>The danger year.</strong> Until late 1942 the outcome was open. The nightmare was an Axis link-up through the Middle East and Indian Ocean, which would have cut the alliance apart. Midway turned on codebreakers and a few accurate pilots.</li>
+      <li><strong>The price.</strong> Sixty million dead, moral damage on the winning side too, and Stalin's troops holding half of Europe. In 1943 Mackinder proposed making the wartime alliance permanent around a Midland Ocean, the Atlantic. It was meant to contain Germany. It became the answer to Moscow.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>How two regional wars became one</h4>
+      <svg viewBox="0 0 460 392" role="img" aria-label="Flow between two columns, Europe and Asia. France falls in 1940. Japan joins the Tripartite Pact and pushes into Indochina. America rearms mainly in response to Germany. America's oil embargo and rising production close Japan's window. Japan attacks Pearl Harbor. Hitler declares war on America.">
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" class="f-3"/></marker></defs>
+        <text x="110" y="16" text-anchor="middle" class="hd">Europe, Atlantic</text>
+        <text x="350" y="16" text-anchor="middle" class="hd">Asia, Pacific</text>
+        <line x1="230" y1="26" x2="230" y2="388" class="s-rule" stroke-dasharray="3 5"/>
+        <g class="s-3" stroke-width="1.5">
+          <path d="M210 62 C 240 62, 220 92, 248 94" marker-end="url(#ah)"/>
+          <path d="M248 112 C 220 114, 240 146, 212 148" marker-end="url(#ah)"/>
+          <path d="M210 164 C 240 166, 220 198, 248 200" marker-end="url(#ah)"/>
+          <path d="M350 234 V260" marker-end="url(#ah)"/>
+          <path d="M248 288 C 215 292, 245 330, 212 336" marker-end="url(#ah)"/>
+        </g>
+        <rect x="10" y="36" width="200" height="50" rx="5" class="f-redt s-red"/>
+        <text x="110" y="57" text-anchor="middle" class="t-ink" style="font-size:12.5px">Germany overruns France</text>
+        <text x="110" y="74" text-anchor="middle" class="t-3" style="font-size:11.5px">spring 1940</text>
+        <rect x="250" y="82" width="200" height="50" rx="5" class="f-redt s-red"/>
+        <text x="350" y="103" text-anchor="middle" class="t-ink" style="font-size:12.5px">Japan joins the Axis pact,</text>
+        <text x="350" y="120" text-anchor="middle" class="t-ink" style="font-size:12.5px">moves into Indochina</text>
+        <rect x="10" y="134" width="200" height="50" rx="5" class="f-seat s-sea"/>
+        <text x="110" y="155" text-anchor="middle" class="t-ink" style="font-size:12.5px">America rearms, mostly</text>
+        <text x="110" y="172" text-anchor="middle" class="t-ink" style="font-size:12.5px">because of Germany</text>
+        <rect x="250" y="180" width="200" height="52" rx="5" class="f-seat s-sea"/>
+        <text x="350" y="201" text-anchor="middle" class="t-ink" style="font-size:12.5px">Oil embargo, mid-1941;</text>
+        <text x="350" y="218" text-anchor="middle" class="t-ink" style="font-size:12.5px">Japan's window closing</text>
+        <rect x="250" y="264" width="200" height="50" rx="5" class="f-redt s-red"/>
+        <text x="350" y="285" text-anchor="middle" class="t-ink" style="font-size:12.5px">Pearl Harbor</text>
+        <text x="350" y="302" text-anchor="middle" class="t-3" style="font-size:11.5px">December 1941</text>
+        <rect x="10" y="322" width="200" height="50" rx="5" class="f-redt s-red"/>
+        <text x="110" y="343" text-anchor="middle" class="t-ink" style="font-size:12.5px">Hitler declares war</text>
+        <text x="110" y="360" text-anchor="middle" class="t-3" style="font-size:11.5px">on America, 11 December</text>
+      </svg>
+      <p class="cap">By the end of 1941, Brands says, no crisis was purely regional. Each move in one theatre changed the options in the other. Red marks Axis moves, grey-green American ones.</p>
+      <p class="src">Sequence as told in ch. 3</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Defence spending, 1937 (% of national income)</h4>
+        <div class="bars">
+          <div class="bar c-red"><div class="row"><span>Japan</span><b>28.2%</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>Germany</span><b>23.5%</b></div><div class="track"><div class="fill" style="width:83.3%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>Italy</span><b>14.5%</b></div><div class="track"><div class="fill" style="width:51.4%"></div></div></div>
+          <div class="bar c-sea"><div class="row"><span>United States</span><b>1.5%</b></div><div class="track"><div class="fill" style="width:5.3%"></div></div></div>
+        </div>
+        <p class="src">Source: ch. 3. Bars scaled to the highest value</p>
+      </div>
+      <div class="fig">
+        <h4>The cascading commitment problem</h4>
+        <ol class="chain">
+          <li>America stays out</li>
+          <li>Britain appeases</li>
+          <li>France is left isolated</li>
+          <li>The West looks a poor partner to Stalin</li>
+          <li>Stalin deals with Hitler</li>
+        </ol>
+        <p class="cap">The balance of power doesn't regulate itself. It fails without commitment and common purpose.</p>
+      </div>
+    </div>
+
+    <div class="compare">
+      <div class="good"><h5>Why the Grand Alliance worked</h5><ul><li>It had land armies and command of sea and air. The Soviets tied down 75–80% of German manpower.</li><li>Britain and America fused staffs, intelligence and technology. A British engine in an American P-51 cracked the Luftwaffe.</li><li>Roosevelt and Churchill met ten times.</li><li>It accepted a sordid bargain with Stalin to win.</li></ul></div>
+      <div class="bad"><h5>Why the Axis was less than its parts</h5><ul><li>One-man rule left plans untested. On D-Day, Rommel's reserves waited on a sleeping Hitler.</li><li>Cruelty turned possible collaborators into enemies.</li><li>Germany and Japan held each other in racial contempt and barely coordinated.</li><li>They neglected logistics in a war of movement.</li></ul></div>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Let's divide the whole world."</blockquote>
+      <span class="label">Hitler to Molotov, Berlin, November 1940</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">The Golden Age</span></div>
+  <div class="body">
+    <div>
+      <h3>The round that didn't end in catastrophe</h3>
+      <p class="idea">This time the offshore power stayed. By arming and enriching the rim of Eurasia in peacetime, Brands argues, America turned a cycle of destruction into a free, prosperous order.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Containment.</strong> Mackinder died on 6 March 1947, six days before Truman's speech to Congress declared the Cold War in all but name. George Kennan's middle path between appeasement and war rested on a difference from Hitler: Soviet leaders believed history was on their side, so they could be deterred. Block them, and their inner failures would do the rest.</li>
+      <li><strong>An improvised order.</strong> Nobody planned a global alliance system. It grew crisis by crisis, with Dean Acheson as chief builder. Former enemies Germany and Japan were remade as democracies.</li>
+      <li><strong>Why it worked.</strong> Distance and democracy made America a tolerable hegemon. It couldn't conquer its allies, and it deliberately underused its power over them, opening its markets first. Open trade removed the motive for the old resource wars.</li>
+      <li><strong>Terrifying deterrence.</strong> Unable to match Soviet land power, America threatened nuclear war to prevent a conventional one. Eisenhower's massive retaliation gave way to Kennedy's flexible response, and neither was comfortable.</li>
+      <li><strong>Crises.</strong> Berlin, the Taiwan Strait and Cuba all posed the same problem: stand firm over small stakes without blundering into apocalypse. The method was firmness plus an off-ramp. In Cuba that meant a blockade, a no-invasion pledge and a private promise on missiles in Turkey.</li>
+      <li><strong>The global south.</strong> The contest spread as nearly 100 new states appeared. America backed dictators and coups on the logic of lesser evils. Vietnam was the point of moral and strategic overstretch, and some 14 million people died in Asia's Cold War conflicts.</li>
+      <li><strong>The home front.</strong> Critics feared a garrison state. McCarthyism and presidential secrecy did real harm, but Brands argues democracy survived, and the contest pushed along civil rights and funded the technology behind the digital age.</li>
+      <li><strong>The turn.</strong> The Sino-Soviet split, widened by American pressure on the weaker partner, led to Nixon's opening to Mao. Andrew Marshall urged steering the rivalry toward American strengths. Reagan piled on military, proxy, economic and ideological pressure, then paired it with five summits after the war scare of 1983.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Each crisis raised the floor</h4>
+      <ol class="steps">
+        <li><span class="label">1947 · Greece, Turkey</span><b>Britain can't carry on</b><span>Truman asks Congress for $400 million in aid</span></li>
+        <li><span class="label">1947–48 · Western Europe</span><b>Economies near collapse</b><span>Marshall Plan, $13 billion</span></li>
+        <li><span class="label">1948 · Prague, Berlin</span><b>Coup and blockade</b><span>North Atlantic Treaty, 1949</span></li>
+        <li><span class="label">1950 · Korea</span><b>Invasion</b><span>NATO command, Pacific pacts, defence tripled to 14% of GDP</span></li>
+      </ol>
+      <p class="cap">Containment was an idea until shocks turned it into institutions. As late as 1948 defence spending had fallen to $9.1 billion from $83 billion in 1945, and the treaty began as a paper alliance. "Korea saved us," Acheson said.</p>
+      <p class="src">Source: ch. 4</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Democracies in the world</h4>
+        <div class="bars">
+          <div class="bar c-sea"><div class="row"><span>Early 1940s</span><b>perhaps 12</b></div><div class="track"><div class="fill" style="width:10%"></div></div></div>
+          <div class="bar c-sea"><div class="row"><span>1990</span><b>76</b></div><div class="track"><div class="fill" style="width:63.3%"></div></div></div>
+          <div class="bar c-sea"><div class="row"><span>2000</span><b>120</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">Brands's measure of the payoff. He sets the costs beside it: 7.5% of GDP on defence on average, about 100,000 Americans lost in small wars, and some 20 million dead in the era's wars.</p>
+        <p class="src">Source: ch. 4</p>
+      </div>
+      <div class="stats">
+        <div class="stat c-red"><span class="big num">20%+</span><p>Of Soviet GNP went to the defence complex.</p></div>
+        <div class="stat c-sea"><span class="big num">9×</span><p>Western per capita GDP against the Soviet bloc's by the 1980s.</p></div>
+        <div class="stat c-gold"><span class="big num">4:1</span><p>Soviet deployed missiles junked for each American one under the 1987 INF Treaty.</p></div>
+        <div class="stat"><span class="big num">32,400</span><p>American warheads by 1965, up from 1,169 in 1953.</p></div>
+      </div>
+    </div>
+
+    <div class="compare">
+      <div class="good"><h5>Why Moscow could not gamble</h5><ul><li>Allied commitments and arms closed the short-war escape that tempted Germany and Japan.</li><li>Military and technological trends were running against it in the information age.</li></ul></div>
+      <div class="good"><h5>Why Moscow could afford to quit</h5><ul><li>A democratic Germany and Japan, tied to America, weren't going to attack.</li><li>Reagan offered respect and a better relationship in return for change.</li></ul></div>
+    </div>
+    <div class="story">
+      <span class="label">The achievement, as Brands sees it</span>
+      <p>The system let America's worst enemy feel safe in defeat. Nobody could have said that in 1914 or 1941. After 1991, for the first time in a century, no power could threaten to dominate Eurasia.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART: RETURN ============ -->
+<div class="part" id="return">
+  <span class="label partno">The return · Chapters 5–6</span>
+  <h2>The rematch</h2>
+  <p class="lede">The contest hasn't gone anywhere, Brands argues. The tools are newer and the alignments looser, but the stakes and the structure are familiar.</p>
+</div>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">The Second Eurasian Century</span></div>
+  <div class="body">
+    <div>
+      <h3>Fortress Eurasia against the free world</h3>
+      <p class="idea">China, Russia and Iran want a world safe for autocracy. In Brands's view the best realistic outcome is a new cold war, and the alternative is worse.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Why the peace ended.</strong> America and its allies had about 70% of world GDP and 75% of military spending after the Cold War. Brands finds four flaws in the plan to lock that in. Integration made rivals rich, democracy failed to take root in Russia and China, American primacy blocked their ambitions and scared their regimes, and Washington took a peace dividend while expanding its goals.</li>
+      <li><strong>Security wasn't the issue.</strong> He rejects the idea that NATO threatened Russia's survival. Moscow and Beijing had rarely been safer. What they lacked was empire, glory and regime security.</li>
+      <li><strong>China's hybrid bid.</strong> It has both continental depth and an ocean front, the combination Mackinder feared. Its peacetime buildup is the largest since before World War II, it has the most ships and missiles, and its nuclear arsenal doubled from 2020 to 2023. Eastward, Taiwan is the prize: Xi told the PLA to be ready by 2027. Westward, the Belt and Road and digital networks build a Beijing-centred hinterland.</li>
+      <li><strong>Russia's restoration.</strong> Too weak for global primacy, Moscow can still wreck the European order. Putin's strategy has four prongs: reclaim the post-Soviet space, split the West, project power into flanking regions, and partner with China.</li>
+      <li><strong>Iran's project in disorder.</strong> Qasem Soleimani built a proxy network that may have reached 200,000 troops, and Tehran became dominant in Iraq, Syria, Lebanon and Yemen. Its costs at home are severe, and fear of it is drawing Israel and Gulf states together.</li>
+      <li><strong>What's new.</strong> Cheap drones and missiles, cyber and disinformation, renewed ideological rivalry, a race for AI and chips, and interdependence turned into a weapon. AI-driven surveillance may lower the economic cost of repression.</li>
+      <li><strong>Ukraine as Korea.</strong> Putin expected a quick decapitation. Incompetence, Ukrainian cohesion and Western arms stopped him. NATO added Finland and Sweden, European defence budgets rose 13% in a year, and Japan moved to nearly double its spending. Brands stresses how close it came, and how incomplete the response remains.</li>
+      <li><strong>Reasons for hope and alarm.</strong> American alliances are deep, and China faces demographic decline and a leader who silences dissent. But when troubled autocracies have problems, he warns, they can get more dangerous.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The present-day board</h4>
+      <svg viewBox="0 0 460 372" role="img" aria-label="Three rings. At the core are China, Russia, Iran and North Korea, joined by lines labelled with arms, energy, drones and shells. In a dashed middle ring are swing states: Saudi Arabia and the UAE, Turkey, India, Pakistan, Egypt and Indonesia. On the outer edges are the free-world blocs: NATO Europe to the west, Japan, South Korea, Australia and Taiwan to the east, and America offshore, linking them.">
+        <rect x="6" y="34" width="72" height="250" rx="6" class="f-seat s-sea"/>
+        <text x="42" y="130" text-anchor="middle" class="hd" style="font-size:13.5px">NATO</text>
+        <text x="42" y="150" text-anchor="middle" class="t-3" style="font-size:11px">Europe,</text>
+        <text x="42" y="165" text-anchor="middle" class="t-3" style="font-size:11px">UK, now</text>
+        <text x="42" y="180" text-anchor="middle" class="t-3" style="font-size:11px">Finland,</text>
+        <text x="42" y="195" text-anchor="middle" class="t-3" style="font-size:11px">Sweden</text>
+        <rect x="382" y="34" width="72" height="250" rx="6" class="f-seat s-sea"/>
+        <text x="418" y="130" text-anchor="middle" class="hd" style="font-size:13.5px">Asia</text>
+        <text x="418" y="150" text-anchor="middle" class="t-3" style="font-size:11px">Japan,</text>
+        <text x="418" y="165" text-anchor="middle" class="t-3" style="font-size:11px">S. Korea,</text>
+        <text x="418" y="180" text-anchor="middle" class="t-3" style="font-size:11px">Australia,</text>
+        <text x="418" y="195" text-anchor="middle" class="t-3" style="font-size:11px">Taiwan</text>
+        <rect x="6" y="316" width="448" height="46" rx="6" class="f-seat s-sea"/>
+        <text x="230" y="344" text-anchor="middle" class="hd" style="font-size:14px">America, offshore: alliances, carriers, the dollar</text>
+        <path d="M42 284 V316 M418 284 V316" class="s-sea" stroke-width="2"/>
+        <ellipse cx="230" cy="164" rx="144" ry="136" class="s-3" stroke-dasharray="5 5"/>
+        <text x="230" y="32" text-anchor="middle" class="t-ink halo" style="font-size:11.5px">Saudi Arabia, UAE</text>
+        <text x="230" y="304" text-anchor="middle" class="t-ink halo" style="font-size:11.5px">India · Pakistan · Indonesia</text>
+        <text x="122" y="74" text-anchor="middle" class="t-ink halo" style="font-size:11.5px">Turkey</text>
+        <text x="118" y="252" text-anchor="middle" class="t-ink halo" style="font-size:11.5px">Egypt</text>
+        <text x="230" y="13" text-anchor="middle" class="t-3" style="font-size:11px">swing states</text>
+        <path d="M230 96 L150 160 M230 96 L308 160 M150 160 L308 160 M150 160 L230 232 M308 160 L230 232" class="s-red" stroke-width="1.6"/>
+        <circle cx="230" cy="96" r="34" class="node"/><text x="230" y="101" text-anchor="middle" style="fill:#fff;font-size:13px">Russia</text>
+        <circle cx="150" cy="160" r="30" class="node"/><text x="150" y="165" text-anchor="middle" style="fill:#fff;font-size:13px">Iran</text>
+        <circle cx="308" cy="160" r="42" class="node"/><text x="308" y="165" text-anchor="middle" style="fill:#fff;font-size:14px">China</text>
+        <circle cx="230" cy="232" r="30" class="node"/><text x="230" y="229" text-anchor="middle" style="fill:#fff;font-size:11px">North</text><text x="230" y="243" text-anchor="middle" style="fill:#fff;font-size:11px">Korea</text>
+      </svg>
+      <p class="cap">Links show ties, not treaties: arms and chips, energy, drones, artillery shells, joint exercises, and routes built to dodge sanctions and fleets. Brands says these partners distrust each other and have clashing long-term aims, but it wouldn't take a formal alliance to change the balance. The swing states help decide the result by choosing whose side to lean toward, or by playing both.</p>
+      <p class="src">Schematic after the book's three-camp account, ch. 5</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat c-red"><span class="big num">12×</span><p>China's GDP growth from 1990 to 2016, with military spending up tenfold.</p></div>
+      <div class="stat c-red"><span class="big num">2× / 4×</span><p>Russia's real GDP doubled from 1998 to 2014, and military spending quadrupled.</p></div>
+      <div class="stat c-sea"><span class="big num">6% → 3%</span><p>American defence spending as a share of GDP, from the 1980s to the end of the 1990s.</p></div>
+      <div class="stat c-gold"><span class="big num">1–2m</span><p>Uighurs sent to camps in the half decade after 2017, in a region astride China's routes west.</p></div>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"I need ammunition, not a ride."</blockquote>
+      <span class="label">Zelenskyy, answering an American query about fleeing Kyiv</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Lessons of the Past</span></div>
+  <div class="body">
+    <div>
+      <h3>Nine lessons for the next round</h3>
+      <p class="idea">The threats are new but the problems aren't. Brands's prescription is hawkish and explicit: a long competition, paid for early.</p>
+    </div>
+    <div class="prose">
+      <p>He starts by sketching defeat: Taiwan taken, maritime Asia dominated by Beijing, allies isolated, and autocratic norms spreading outward. He adds that neither Xi nor Putin is Hitler, and that this isn't yet 1938. The front lines run through Ukraine and Taiwan, not Hawaii, which he reads as proof of how strong the American-led position still is.</p>
+    </div>
+
+    <ol class="lessons">
+      <li><b>Regimes matter</b><span>Ideology and geopolitics can't be separated. The worst aggressors were tyrannies, and their strengths were also their flaws. Dictators who silence debate get worse at judging.</span></li>
+      <li><b>America is the balancer</b><span>Late in both world wars, but lethal, and transformative once it stayed. He dismisses talk of an easy retreat into a multipolar world.</span></li>
+      <li><b>Eurasia is one theatre</b><span>Prioritise, as Germany-first did, but don't write regions off. The danger of seeing everything as linked was Vietnam. The danger of the opposite is a one-war military facing trouble in two or three places.</span></li>
+      <li><b>Coalitions decide</b><span>They have to be built and tended. Japan may be to this century what Britain was to the last. Think flexible groupings like AUKUS, and an India that won't be anyone's ally but can still help.</span></li>
+      <li><b>Virtue needs sordid help</b><span>Democracies beat Hitler with Stalin and Moscow with Mao. Today that means Saudi Arabia, Turkey and Vietnam. Pressure on Russia may even push it into a dependence on China that later splits them.</span></li>
+      <li><b>Competition is technological</b><span>Run faster and slow the rival down. He supports restricting China's access to capital, markets and inputs, and accepts that this fragments the economy.</span></li>
+      <li><b>A cold war is the reward</b><span>That's the prize for deterring a hot one. Peace was the product of decades of effort, and the military balance has to be kept.</span></li>
+      <li><b>Mind the home hemisphere</b><span>Eurasian rivals always stir trouble in Latin America. A tighter North American bloc adds strength.</span></li>
+      <li><b>Nothing is destined</b><span>Expansion doesn't have to fail, and progress is what power makes of it. Every round could have gone the other way.</span></li>
+    </ol>
+    <p class="label">The chapter numbers most of these and leaves the third implicit</p>
+
+    <div class="fig">
+      <h4>Denial in depth around Taiwan</h4>
+      <p class="cap">Brands's core asymmetry: proximity favours China, but denying control over water is easier than taking it. His layers run outward from the island.</p>
+      <div class="layers">
+        <div style="--d:0%"><b>Taiwan</b><span>A porcupine, armed and ready to fight to the end</span></div>
+        <div style="--d:14%"><b>First Island Chain</b><span>Strongpoints with anti-ship missiles, patrolled by attack submarines</span></div>
+        <div style="--d:28%"><b>Second Island Chain</b><span>American air power, logistics and long-range strike</span></div>
+        <div style="--d:42%"><b>Distant chokepoints</b><span>A blockade of China's energy and material imports</span></div>
+      </div>
+      <p class="cap">Around those sit full munitions magazines, a coalition defence, prepared economic punishment, and allied arms industries. He also calls for a credible ability to fight a limited nuclear war, the most uncomfortable item, so that China can't use nuclear coercion to keep America out.</p>
+      <p class="src">Horizontal offset suggests distance only. Source: ch. 6</p>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Geography shapes but strategy decides."</blockquote>
+      <span class="label">Hal Brands, closing the book</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book is a history with a policy argument attached. These are habits for reading the news through Brands's framework, stated as his positions rather than settled fact.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Read the board</h3>
+      <div class="tk"><b>Ask who controls what</b><span>Look at rims, inner seas and chokepoints. His examples include Ukraine, Taiwan and the South China Sea.</span></div>
+      <div class="tk"><b>Look at the regime</b><span>Brands ties expansion to how a state is ruled, not only to where it sits.</span></div>
+      <div class="tk"><b>Watch closing windows</b><span>A rising power that feels time slipping may be the most dangerous.</span></div>
+      <div class="tk"><b>Link the theatres</b><span>His test: what does a move in one region do to options in another?</span></div>
+    </div>
+    <div class="col">
+      <h3>Build the coalition</h3>
+      <div class="tk"><b>Commit before the crisis</b><span>Unity arrived too late in 1914 and 1939. He credits peacetime alliances with changing that.</span></div>
+      <div class="tk"><b>Tend relationships constantly</b><span>A diplomat called it gardening. Alliances need upkeep between emergencies.</span></div>
+      <div class="tk"><b>Lead without dictating</b><span>He argues America gained by underusing its power over friends.</span></div>
+      <div class="tk"><b>Expect awkward partners</b><span>He sees moral compromise as the recurring cost of holding the balance, and doesn't hide it.</span></div>
+    </div>
+    <div class="col">
+      <h3>Pay early</h3>
+      <div class="tk"><b>Balance early, not late</b><span>George Marshall's complaint: years with time but no money, then money but no time.</span></div>
+      <div class="tk"><b>Compete on your strengths</b><span>Andrew Marshall's approach: steer the rivalry where it costs the other side most.</span></div>
+      <div class="tk"><b>Firmness plus an off-ramp</b><span>The Cold War pattern: hold the line and leave a way down.</span></div>
+      <div class="tk"><b>Don't trust inevitability</b><span>Past wins were narrow. He warns against treating them as a law of history.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Hal Brands, <em>The Eurasian Century: Hot Wars, Cold Wars, and the Making of the Modern World</em> (W. W. Norton &amp; Company, 2025). Figures are as reported in the book. Views on current politics are the author's, as described here. The closing-window curves and the map and board schematics are illustrative. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  /* --- Ch1: three readings of the map --- */
+  var map = document.getElementById("d-map"), cap = document.getElementById("map-cap");
+  var notes = {
+    mackinder: ["Mackinder:", 'the Pivot is what matters. Land power pushes out from an interior no fleet can reach, and his later formula ran "Who rules the Heartland rules the World-Island; whoever rules the World-Island commands the World."'],
+    mahan: ["Mahan:", "the sea decides. Water is the efficient highway, so whoever controls the waters around Eurasia can starve a land power of trade and back resistance on the shore. He wanted America and Britain doing that together."],
+    spykman: ["Spykman:", 'the rim matters more than the frozen centre. The people, industry and inner seas are there, so "who controls the Rimland rules Eurasia". Fights there need sea, air and land power together.']
+  };
+  var btns = document.querySelectorAll(".tabs button");
+  btns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var v = b.getAttribute("data-v");
+      map.setAttribute("data-view", v);
+      btns.forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+      cap.querySelector("strong").textContent = notes[v][0];
+      cap.querySelector("span").textContent = notes[v][1];
+    });
+  });
+
+  /* --- Hero band: the cover's ruler, with the four rounds marked --- */
+  var canvas = document.getElementById("ruler");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, h = 0, Y0 = 1900, Y1 = 2030;
+  var css = function (n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+  var rounds = [[1914, 1918, "WWI"], [1939, 1945, "WWII"], [1947, 1991, "Cold War"], [2022, 2030, "Now"]];
+  function X(y) { return (y - Y0) / (Y1 - Y0) * w; }
+  function size() {
+    var r = canvas.getBoundingClientRect(), d = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; h = r.height;
+    canvas.width = Math.round(w * d); canvas.height = Math.round(h * d);
+    ctx.setTransform(d, 0, 0, d, 0, 0);
+  }
+  function draw(t) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, h);
+    var gold = css("--gold-2"), red = css("--red"), ink = css("--ink-2"), faint = css("--ink-3"), rule = css("--rule");
+    var mono = css("--mono");
+    var barY = 26, barH = 20, axis = 74;
+    /* moving light, like the glow on the cover's globes */
+    if (!reduce) {
+      var gx = ((t * 0.00002) % 1.3 - 0.15) * w, g = ctx.createRadialGradient(gx, 40, 0, gx, 40, 110);
+      g.addColorStop(0, gold); g.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.globalAlpha = 0.28; ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.globalAlpha = 1;
+    }
+    ctx.textBaseline = "alphabetic"; ctx.font = "11px " + mono;
+    rounds.forEach(function (r, i) {
+      var a = X(r[0]), b = X(r[1]);
+      ctx.fillStyle = i === 2 ? gold : red;
+      ctx.globalAlpha = 0.9;
+      ctx.fillRect(a, barY, b - a, barH);
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = ink; ctx.textAlign = i === 3 ? "right" : "center";
+      ctx.fillText(r[2], i === 3 ? w : (a + b) / 2, barY - 8);
+    });
+    ctx.strokeStyle = rule; ctx.setLineDash([3, 4]); ctx.beginPath();
+    ctx.moveTo(X(1991), barY + barH / 2); ctx.lineTo(X(2022), barY + barH / 2); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = red; ctx.beginPath(); ctx.arc(X(1904), barY + barH / 2, 4, 0, 6.3); ctx.fill();
+    /* ruler */
+    ctx.strokeStyle = faint; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(0, axis); ctx.lineTo(w, axis);
+    var step = w < 500 ? 5 : 1;
+    for (var y = Y0; y <= Y1; y += step) {
+      var big = y % 10 === 0, x = Math.min(X(y), w - 0.5);
+      ctx.moveTo(x, axis - (big ? 7 : 3)); ctx.lineTo(x, axis + (big ? 7 : 3));
+    }
+    ctx.stroke();
+    ctx.fillStyle = ink; ctx.textAlign = "center";
+    var every = w < 500 ? 30 : (w < 800 ? 20 : 10);
+    for (var d = Y0; d <= 2020; d += every) ctx.fillText(String(d), Math.max(16, X(d)), axis + 24);
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { draw(performance.now()); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
