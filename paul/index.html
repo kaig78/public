@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Paul by N. T. Wright – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame, prose held to ~64ch, figures break wider.
+   Palette from the cover: warm ground, cardinal red robe. Red = zeal, ochre = the road. */
+:root {
+  --paper: #f6f1ea;
+  --paper-2: #ebe2d6;
+  --card: #fffbf5;
+  --ink: #17181a;
+  --ink-2: #4a4c50;
+  --ink-3: #77797d;
+  --rule: #dbd7cb;
+
+  --cyan: #8a6a12;
+  --cyan-2: #d8452f;
+  --red: #b3261e;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f1314;
+    --paper-2: #171c1e;
+    --card: #1b2124;
+    --ink: #edf0ef;
+    --ink-2: #b0b7b9;
+    --ink-3: #868e91;
+    --rule: #2a3235;
+    --cyan: #e4c35f;
+    --cyan-2: #ff9c8c;
+    --red: #ff7f6e;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f1314;
+  --paper-2: #171c1e;
+  --card: #1b2124;
+  --ink: #edf0ef;
+  --ink-2: #b0b7b9;
+  --ink-3: #868e91;
+  --rule: #2a3235;
+  --cyan: #e4c35f;
+  --cyan-2: #ff9c8c;
+  --red: #ff7f6e;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-cyan { --c: var(--cyan); }
+.c-red { --c: var(--red); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: clamp(22px, 3vw, 34px); letter-spacing: .08em; line-height: 1; text-transform: uppercase; color: var(--red); }
+.hero h1 {
+  font-size: clamp(54px, 11vw, 136px);
+  font-weight: 800;
+  font-stretch: 72%;
+  line-height: .86;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 10px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 906;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 30, 40, .35), 0 8px 18px -10px rgba(10, 30, 40, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--red);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  font-stretch: 72%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .01em;
+  color: var(--red);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--cyan);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--red);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-cy { fill: var(--cyan); }
+.fig svg text.t-red { fill: var(--red); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-cy { stroke: var(--cyan); fill: none; }
+.s-cy2 { stroke: var(--cyan-2); fill: none; }
+.s-red { stroke: var(--red); fill: none; }
+.f-cy { fill: var(--cyan); }
+.f-cy2 { fill: var(--cyan-2); }
+.f-red { fill: var(--red); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-cyt { fill: color-mix(in srgb, var(--cyan) 14%, var(--card)); }
+.f-redt { fill: color-mix(in srgb, var(--red) 14%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--red); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; letter-spacing: .02em; color: var(--red); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--cyan); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three kinds of learning */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--cyan); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--cyan); }
+.compare .bad h5 { color: var(--red); }
+
+/* equation strip */
+.eq { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: var(--paper-2); border-radius: 6px; padding: 14px 18px; margin: 0; white-space: pre-wrap; color: var(--ink); }
+.eq .k { color: var(--cyan); }
+.eq .r { color: var(--red); }
+.eq .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 150px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; color: var(--red); border-top: 2px solid var(--red); padding-top: 12px; letter-spacing: .02em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast"><span class="label">Book notes · N. T. Wright · HarperOne, 2018</span><nav class="label" aria-label="Sections"><a href="#idea">The idea</a><a href="#life">The life</a><a href="#challenge">The challenge</a><a href="#toolkit">Takeaways</a></nav></header>
+
+<div class="hero"><div><h1><span>Paul</span></h1><p class="sub">A biography</p><p class="dek">New Testament scholar and former bishop N. T. Wright follows Saul of Tarsus from violent zeal to the road to Damascus and across the Roman world, asking what drove the man who wrote the letters.</p><div class="byline label"><span>15 chapters</span><span>c. 60 years</span><span>3 journeys</span></div></div><img class="cover" src="cover.jpg" alt="Cover of Paul: A Biography by N. T. Wright, showing a painting of the apostle in a red robe holding a book"></div>
+
+<section id="idea"><div class="sec-head"><span class="label">Preface &amp; introduction</span><h2>One restless traveller changed the world</h2></div>
+<div class="intro"><div class="prose">
+<p>Culture normally moves like a glacier, Wright says, which is why Paul is so startling. He went from city to city talking about the One God and his son Jesus, setting up small communities and writing them letters that are still explosive.</p>
+<p>After decades of scholarship on Paul, Wright asks a biographer's question: <strong>what made him tick?</strong> He works with all the evidence, including Acts and the disputed letters, and tries to fit the pieces together rather than ruling some out in advance.</p>
+<p>His answer starts with <strong>zeal</strong>. Paul never lost it. What changed was what it was for.</p></div>
+<div class="fig"><span class="label">A life in dates</span><div class="tablecard"><table style="width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums"><tbody><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">c. AD 5–10</th><td style="padding:6px 14px 6px 0">Birth of Saul in Tarsus</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">c. 33</th><td style="padding:6px 14px 6px 0">Revelation on the road to Damascus</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">36–46</th><td style="padding:6px 14px 6px 0">Tarsus, then Antioch with Barnabas</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">47–48</th><td style="padding:6px 14px 6px 0">First journey: Cyprus, South Galatia; Galatians</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">48/49</th><td style="padding:6px 14px 6px 0">Jerusalem conference</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">49–52</th><td style="padding:6px 14px 6px 0">Second journey: Greece, then Corinth</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">53–56</th><td style="padding:6px 14px 6px 0">Ephesus, imprisonment, prison letters</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">57</th><td style="padding:6px 14px 6px 0">Romans, then to Jerusalem</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">59–60</th><td style="padding:6px 14px 6px 0">Voyage to Rome, shipwreck on Malta</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">60–62</th><td style="padding:6px 14px 6px 0">House arrest in Rome</td></tr><tr><th style="text-align:left;font-weight:600;padding:6px 12px 6px 14px;white-space:nowrap;vertical-align:top">c. 64 or later</th><td style="padding:6px 14px 6px 0">Death of Paul</td></tr></tbody></table></div><p style="font-size:.85em;margin:8px 0 0">Wright stresses that most dates are approximate.</p></div></div></section>
+<section id="life"><div class="sec-head"><span class="label">The biography</span><h2>From persecutor to apostle</h2></div>
+<article class="chapter" id="zeal"><div class="gutter"><span class="chno">01</span><span class="label">Zeal</span></div><div class="body"><div><h3>The boy who wanted to be Phinehas</h3><p class="idea">Saul of Tarsus grew up on stories of zeal for the One God, and he believed that violence in God's cause could be righteous.</p></div><ul class="points"><li><strong>A Torah prodigy.</strong> Wright pictures a boy steeped in Israel's scriptures, in a tradition of resisting pagan pressure and of heroes like Phinehas, Elijah and the Maccabees.</li><li><strong>Why he persecuted.</strong> The Jesus movement seemed to attack Torah and Temple, and so to risk God's anger. Saul set off with documents from the chief priests, hoping to be counted as a true covenant member.</li></ul></div></article>
+<article class="chapter" id="damascus"><div class="gutter"><span class="chno">02</span><span class="label">Damascus</span></div><div class="body"><div><h3>The vision, and the years nobody sees</h3><p class="idea">Paul didn't leave Judaism. He came to believe that Israel's God had acted in the crucified and risen Jesus.</p></div><ul class="points"><li><strong>Merkabah mysticism.</strong> Wright reads the Damascus road against Jewish meditation on the throne in Ezekiel: Saul looked for the figure on the throne and saw Jesus.</li><li><strong>Arabia and Tarsus.</strong> After Damascus, Paul went to Arabia, Wright suggests in the manner of Elijah going to Sinai. Then came about a decade in Tarsus, thinking through what it meant. The zeal stayed, but its shape changed.</li><li><strong>Temple and Torah.</strong> Both now pointed beyond themselves to Jesus and the spirit, and the One God was the God of the whole world.</li></ul></div></article>
+<article class="chapter" id="antioch"><div class="gutter"><span class="chno">03</span><span class="label">Antioch</span></div><div class="body"><div><h3>One table for Jews and Gentiles</h3><p class="idea">The great fight of Paul's life was about whether the Messiah's family had one table or two.</p></div><ul class="points"><li><strong>Barnabas.</strong> The "son of encouragement" fetched Saul from Tarsus to Antioch, where the followers were first called Christianoi.</li><li><strong>Cyprus and Galatia.</strong> The first journey, around 47–48, brought in Gentiles and met violent resistance.</li><li><strong>Confronting Peter.</strong> When Peter stopped eating with Gentiles, Paul opposed him to his face. If righteousness came through the law, the Messiah died for nothing. Galatians, which Wright dates to about 48, comes out of this crisis.</li><li><strong>A painful split.</strong> After the Jerusalem conference Paul and Barnabas fell out over John Mark, a blow to the apostle of reconciliation.</li></ul></div></article>
+<article class="chapter" id="europe"><div class="gutter"><span class="chno">04</span><span class="label">Europe</span></div><div class="body"><div><h3>Into the Greek world</h3><p class="idea">Paul took a Jewish message into cities built around other gods, and each one responded differently.</p></div><ul class="points"><li><strong>Philippi and Thessalonica.</strong> The charge was political: a rival king to Caesar. Paul's love for these communities shows in his letters.</li><li><strong>Athens.</strong> Before the Areopagus, under the Parthenon, Paul gave a speech that turned the trial into an argument about the true God.</li><li><strong>Corinth.</strong> He stayed eighteen months, from about 51 to 52, in a lively, class-divided city. On the "meeting in the air", Wright says the picture is of citizens going out to welcome a visiting ruler. Heaven and earth come together, and nobody is snatched away.</li></ul></div></article>
+<article class="chapter" id="ephesus"><div class="gutter"><span class="chno">05</span><span class="label">Ephesus</span></div><div class="body"><div><h3>The darkest years</h3><p class="idea">Paul's most despairing moments may have produced some of his finest writing.</p></div><ul class="points"><li><strong>Prison in Ephesus.</strong> Wright argues for an imprisonment around 55–56 that nearly broke him, and dates Philippians, Philemon, Colossians and Ephesians to it, against the fashion of doubting the last two.</li><li><strong>The new Shema.</strong> In 1 Corinthians Paul reworks Israel's central prayer around Jesus: one God, one Lord.</li><li><strong>Prayer as therapy.</strong> Wright speaks of a breakdown. Paul's long habit of Jesus-focused prayer through the scriptures helped him find his way from despair back to hope.</li></ul></div></article>
+<article class="chapter" id="romans"><div class="gutter"><span class="chno">06</span><span class="label">Romans</span></div><div class="body"><div><h3>The masterpiece</h3><p class="idea">Dictated in Corinth to Tertius around 57, Romans draws Paul's whole thought together.</p></div><ul class="points"><li><strong>Corinth healed.</strong> After the battered letter of 2 Corinthians, he returned to the city.</li><li><strong>Written for unity.</strong> Paul foresaw the danger of Gentile Christians despising Jews, and Wright notes that Marcion later did just that.</li><li><strong>The collection.</strong> Money from Gentile churches for Jerusalem expressed two passions: remember the poor, and one family in the Messiah.</li></ul></div></article>
+<article class="chapter" id="rome"><div class="gutter"><span class="chno">07</span><span class="label">Rome</span></div><div class="body"><div><h3>Prisoner in charge</h3><p class="idea">The last journey shows a man who is weak and strong at once.</p></div><ul class="points"><li><strong>Jerusalem.</strong> The collection trip ended in a riot, arrest and two years in Caesarea. Paul appealed to Caesar.</li><li><strong>Shipwreck.</strong> He is a prisoner, and yet he more or less takes charge of the voyage to Rome.</li><li><strong>The end.</strong> Acts stops with him under house arrest. Wright raises a journey to Spain as a possibility and imagines his death around or after 64, in the persecution under Nero, praying the Shema.</li></ul></div></article>
+</section>
+<section id="challenge"><div class="sec-head"><span class="label">Chapter 15</span><h2>The challenge of Paul</h2></div>
+<div class="intro"><div class="prose">
+<p>Why did he keep going back to synagogues that kept beating him? Why did he run himself into the ground? Wright's answer is a <strong>new kind of community</strong>, one that crossed the lines of ethnicity, class and gender, held together by loyalty (pistis) to Jesus.</p>
+<p>Paul's success came from those small communities, not from a system of ideas alone. They offered a new way of being human in the Roman world, and the church's survival depended on them.</p>
+<p>The book ends with Wright imagining Paul at his execution, praying the Shema he had reshaped: one God, one Lord, loved now with his life.</p></div></div></section>
+<section id="toolkit"><div class="sec-head"><span class="label">Takeaways</span><h2>What to take from it</h2></div>
+<div class="toolkit"><div class="col"><h3>Reading Paul</h3><div class="tk"><b>He is Jewish throughout</b><span>Read him as a Jew rethinking Israel's hope around Jesus.</span></div><div class="tk"><b>Letters are situations</b><span>Each was written to a real crisis.</span></div><div class="tk"><b>Heaven comes to earth</b><span>Paul hopes for renewal, not escape.</span></div></div><div class="col"><h3>Faith</h3><div class="tk"><b>Zeal can be redirected</b><span>The same energy that hurt people came to serve them.</span></div><div class="tk"><b>Prayer carries you</b><span>In despair Paul went to the psalms.</span></div><div class="tk"><b>Weakness is part of it</b><span>His authority came with scars.</span></div></div><div class="col"><h3>Community</h3><div class="tk"><b>One table</b><span>Unity across difference was the point.</span></div><div class="tk"><b>Reconciliation is costly</b><span>Even Paul failed with Barnabas.</span></div><div class="tk"><b>Generosity is theology</b><span>The collection put belief into action.</span></div></div></div></section>
+
+<footer><p>A summary in my own words of N. T. Wright, <em>Paul: A Biography</em> (HarperOne, 2018). Dates follow the book's chronological table and are approximate. Cover image belongs to the publisher.</p><span class="label">Notes compiled Oct 2026</span></footer>
+
+</div>
+</body>
+</html>
