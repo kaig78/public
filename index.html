@@ -54,7 +54,7 @@ h1{font:700 clamp(2.8rem,9vw,5.2rem)/.95 var(--display);letter-spacing:-.03em;ma
 .dot{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--c1),var(--c2));
   box-shadow:0 6px 18px -4px color-mix(in srgb,var(--c1) 70%,transparent);transition:transform .35s}
 .tile:hover .dot{transform:rotate(-8deg) scale(1.08)}
-.tile h2{font:700 1.45rem/1.1 var(--display);letter-spacing:-.01em;margin:10px 0 0}
+.tile h2{font:700 1.45rem/1.1 var(--display);letter-spacing:-.01em;margin:10px 0 0;overflow-wrap:break-word;min-width:0}
 .tile p{margin:0;color:var(--muted);font-size:.93rem}
 .lock{margin-top:auto;padding-top:10px;display:flex;align-items:center;gap:6px;font:600 .72rem/1 var(--ui);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .lock svg{width:12px;height:12px}
@@ -95,12 +95,17 @@ h1{font:700 clamp(2.8rem,9vw,5.2rem)/.95 var(--display);letter-spacing:-.03em;ma
 .agichron{--c1:#b9f03c;--c2:#4a7fe0}
 .paul{--c1:#d8452f;--c2:#e4c35f}
 
+/* book tiles lead with the cover; alt is empty because the title follows */
+.bookcover{display:block;width:min(100%,170px);aspect-ratio:2/3;object-fit:cover;align-self:center;border-radius:4px;
+  box-shadow:0 14px 28px -12px rgba(0,0,0,.7);transition:transform .25s ease}
+.tile:hover .bookcover{transform:translateY(-3px) rotate(-1deg)}
+
 /* section heading between tile groups */
 .section-title{font:700 clamp(1.6rem,4vw,2.2rem)/1.05 var(--display);letter-spacing:-.02em;margin:64px 0 0}
 .section-title + .grid{margin-top:20px}
 
 footer{margin-top:56px;color:var(--muted);font-size:.85rem}
-@media (prefers-reduced-motion:reduce){.aurora i{animation:none}.tile,.dot{transition:none}.tile:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){.aurora i{animation:none}.tile,.dot,.bookcover{transition:none}.tile:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -120,32 +125,32 @@ footer{margin-top:56px;color:var(--muted);font-size:.85rem}
 
   <h2 class="section-title">Book Summaries</h2>
   <div class="grid">
-    <a class="tile vibe" href="vibe/"><span class="dot"></span><h2>Vibe</h2><p>Adam Grant on how connection works and why some people click.</p><span class="lock">Open</span></a>
-    <a class="tile coaching" href="coaching-habit/"><span class="dot"></span><h2>The Coaching Habit</h2><p>Seven questions that make you more coach, less advice-giver.</p><span class="lock">Open</span></a>
-    <a class="tile weeks" href="4000-weeks/"><span class="dot"></span><h2>Four Thousand Weeks</h2><p>Oliver Burkeman on time, limits and choosing what matters.</p><span class="lock">Open</span></a>
-    <a class="tile crucial" href="crucial-conversations/"><span class="dot"></span><h2>Crucial Conversations</h2><p>How to talk when stakes are high and emotions run strong.</p><span class="lock">Open</span></a>
-    <a class="tile influence" href="influence/"><span class="dot"></span><h2>Influence</h2><p>Robert Cialdini's seven principles of persuasion.</p><span class="lock">Open</span></a>
-    <a class="tile gifts" href="gifts-of-imperfection/"><span class="dot"></span><h2>The Gifts of Imperfection</h2><p>Brené Brown's ten guideposts to wholehearted living.</p><span class="lock">Open</span></a>
-    <a class="tile regrets" href="top-five-regrets/"><span class="dot"></span><h2>The Top Five Regrets of the Dying</h2><p>What Bronnie Ware heard at the end of people's lives.</p><span class="lock">Open</span></a>
-    <a class="tile birkenbihl" href="kommunikationstraining/"><span class="dot"></span><h2>Kommunikationstraining</h2><p>Vera F. Birkenbihl on listening, questions and staying calm under stress.</p><span class="lock">Open</span></a>
-    <a class="tile logical" href="being-logical/"><span class="dot"></span><h2>Being Logical</h2><p>D. Q. McInerny's short guide to clear thinking and sound arguments.</p><span class="lock">Open</span></a>
-    <a class="tile faulty" href="attacking-faulty-reasoning/"><span class="dot"></span><h2>Attacking Faulty Reasoning</h2><p>T. Edward Damer's five criteria of a good argument and the fallacies that break them.</p><span class="lock">Open</span></a>
-    <a class="tile triggered" href="getriggert/"><span class="dot"></span><h2>Getriggert?</h2><p>Anouk Algermissen on regulating emotions and talking more calmly.</p><span class="lock">Open</span></a>
-    <a class="tile goodthinking" href="good-thinking/"><span class="dot"></span><h2>Good Thinking</h2><p>David Robert Grimes on spotting bad arguments and thinking more clearly.</p><span class="lock">Open</span></a>
-    <a class="tile fourthings" href="four-things/"><span class="dot"></span><h2>The Four Things That Matter Most</h2><p>Ira Byock on forgiveness, thanks and love before it is too late.</p><span class="lock">Open</span></a>
-    <a class="tile prodigal" href="prodigal-son/"><span class="dot"></span><h2>The Return of the Prodigal Son</h2><p>Henri Nouwen's reflection on Rembrandt's painting and coming home.</p><span class="lock">Open</span></a>
-    <a class="tile lessons" href="30-lessons/"><span class="dot"></span><h2>30 Lessons for Living</h2><p>Karl Pillemer collects practical advice from over a thousand older Americans.</p><span class="lock">Open</span></a>
-    <a class="tile ceo" href="god-is-my-ceo/"><span class="dot"></span><h2>God Is My CEO</h2><p>Larry Julian on running a business by faith in a bottom-line world.</p><span class="lock">Open</span></a>
-    <a class="tile startself" href="start-with-yourself/"><span class="dot"></span><h2>Start With Yourself</h2><p>Emma Grede on building a career and a life from the inside out.</p><span class="lock">Open</span></a>
-    <a class="tile empire" href="empire-of-ai/"><span class="dot"></span><h2>Empire of AI</h2><p>Karen Hao on OpenAI, Sam Altman and the hidden costs of the AI boom.</p><span class="lock">Open</span></a>
-    <a class="tile grokking" href="grokking-ml/"><span class="dot"></span><h2>Grokking Machine Learning</h2><p>Luis Serrano explains the main machine learning models with pictures, not formulas.</p><span class="lock">Open</span></a>
-    <a class="tile healmind" href="heal-your-hurting-mind/"><span class="dot"></span><h2>Heal Your Hurting Mind</h2><p>Craig Groeschel on anxiety, depression and burnout, with biblical hope.</p><span class="lock">Open</span></a>
-    <a class="tile chaos" href="chaos-machine/"><span class="dot"></span><h2>The Chaos Machine</h2><p>Max Fisher on how social media rewired our minds and our world.</p><span class="lock">Open</span></a>
-    <a class="tile alignment" href="alignment-problem/"><span class="dot"></span><h2>The Alignment Problem</h2><p>Brian Christian on teaching machines human values.</p><span class="lock">Open</span></a>
-    <a class="tile supremacy" href="supremacy/"><span class="dot"></span><h2>Supremacy</h2><p>Parmy Olson on Hassabis, Altman and the race to build AI.</p><span class="lock">Open</span></a>
-    <a class="tile platonic" href="platonic/"><span class="dot"></span><h2>Platonic</h2><p>Marisa G. Franco on the science of making and keeping friends.</p><span class="lock">Open</span></a>
-    <a class="tile agichron" href="agi-chronicles/"><span class="dot"></span><h2>The AGI Chronicles</h2><p>Kevin Roose on the race between OpenAI, Anthropic and DeepMind.</p><span class="lock">Open</span></a>
-    <a class="tile paul" href="paul/"><span class="dot"></span><h2>Paul</h2><p>N. T. Wright's biography of the apostle.</p><span class="lock">Open</span></a>
+    <a class="tile book vibe" href="vibe/"><img class="bookcover" src="vibe/cover.jpg" alt="" loading="lazy"><h2>Vibe</h2><p>Adam Grant on how connection works and why some people click.</p><span class="lock">Open</span></a>
+    <a class="tile book coaching" href="coaching-habit/"><img class="bookcover" src="coaching-habit/cover.jpg" alt="" loading="lazy"><h2>The Coaching Habit</h2><p>Seven questions that make you more coach, less advice-giver.</p><span class="lock">Open</span></a>
+    <a class="tile book weeks" href="4000-weeks/"><img class="bookcover" src="4000-weeks/cover.jpg" alt="" loading="lazy"><h2>Four Thousand Weeks</h2><p>Oliver Burkeman on time, limits and choosing what matters.</p><span class="lock">Open</span></a>
+    <a class="tile book crucial" href="crucial-conversations/"><img class="bookcover" src="crucial-conversations/cover.jpg" alt="" loading="lazy"><h2>Crucial Conversations</h2><p>How to talk when stakes are high and emotions run strong.</p><span class="lock">Open</span></a>
+    <a class="tile book influence" href="influence/"><img class="bookcover" src="influence/cover.jpg" alt="" loading="lazy"><h2>Influence</h2><p>Robert Cialdini's seven principles of persuasion.</p><span class="lock">Open</span></a>
+    <a class="tile book gifts" href="gifts-of-imperfection/"><img class="bookcover" src="gifts-of-imperfection/cover.jpg" alt="" loading="lazy"><h2>The Gifts of Imperfection</h2><p>Brené Brown's ten guideposts to wholehearted living.</p><span class="lock">Open</span></a>
+    <a class="tile book regrets" href="top-five-regrets/"><img class="bookcover" src="top-five-regrets/cover.jpg" alt="" loading="lazy"><h2>The Top Five Regrets of the Dying</h2><p>What Bronnie Ware heard at the end of people's lives.</p><span class="lock">Open</span></a>
+    <a class="tile book birkenbihl" href="kommunikationstraining/"><img class="bookcover" src="kommunikationstraining/cover.jpg" alt="" loading="lazy"><h2>Kommunikations&shy;training</h2><p>Vera F. Birkenbihl on listening, questions and staying calm under stress.</p><span class="lock">Open</span></a>
+    <a class="tile book logical" href="being-logical/"><img class="bookcover" src="being-logical/cover.jpg" alt="" loading="lazy"><h2>Being Logical</h2><p>D. Q. McInerny's short guide to clear thinking and sound arguments.</p><span class="lock">Open</span></a>
+    <a class="tile book faulty" href="attacking-faulty-reasoning/"><img class="bookcover" src="attacking-faulty-reasoning/cover.jpg" alt="" loading="lazy"><h2>Attacking Faulty Reasoning</h2><p>T. Edward Damer's five criteria of a good argument and the fallacies that break them.</p><span class="lock">Open</span></a>
+    <a class="tile book triggered" href="getriggert/"><img class="bookcover" src="getriggert/cover.jpg" alt="" loading="lazy"><h2>Getriggert?</h2><p>Anouk Algermissen on regulating emotions and talking more calmly.</p><span class="lock">Open</span></a>
+    <a class="tile book goodthinking" href="good-thinking/"><img class="bookcover" src="good-thinking/cover.jpg" alt="" loading="lazy"><h2>Good Thinking</h2><p>David Robert Grimes on spotting bad arguments and thinking more clearly.</p><span class="lock">Open</span></a>
+    <a class="tile book fourthings" href="four-things/"><img class="bookcover" src="four-things/cover.jpg" alt="" loading="lazy"><h2>The Four Things That Matter Most</h2><p>Ira Byock on forgiveness, thanks and love before it is too late.</p><span class="lock">Open</span></a>
+    <a class="tile book prodigal" href="prodigal-son/"><img class="bookcover" src="prodigal-son/cover.jpg" alt="" loading="lazy"><h2>The Return of the Prodigal Son</h2><p>Henri Nouwen's reflection on Rembrandt's painting and coming home.</p><span class="lock">Open</span></a>
+    <a class="tile book lessons" href="30-lessons/"><img class="bookcover" src="30-lessons/cover.jpg" alt="" loading="lazy"><h2>30 Lessons for Living</h2><p>Karl Pillemer collects practical advice from over a thousand older Americans.</p><span class="lock">Open</span></a>
+    <a class="tile book ceo" href="god-is-my-ceo/"><img class="bookcover" src="god-is-my-ceo/cover.jpg" alt="" loading="lazy"><h2>God Is My CEO</h2><p>Larry Julian on running a business by faith in a bottom-line world.</p><span class="lock">Open</span></a>
+    <a class="tile book startself" href="start-with-yourself/"><img class="bookcover" src="start-with-yourself/cover.jpg" alt="" loading="lazy"><h2>Start With Yourself</h2><p>Emma Grede on building a career and a life from the inside out.</p><span class="lock">Open</span></a>
+    <a class="tile book empire" href="empire-of-ai/"><img class="bookcover" src="empire-of-ai/cover.jpg" alt="" loading="lazy"><h2>Empire of AI</h2><p>Karen Hao on OpenAI, Sam Altman and the hidden costs of the AI boom.</p><span class="lock">Open</span></a>
+    <a class="tile book grokking" href="grokking-ml/"><img class="bookcover" src="grokking-ml/cover.jpg" alt="" loading="lazy"><h2>Grokking Machine Learning</h2><p>Luis Serrano explains the main machine learning models with pictures, not formulas.</p><span class="lock">Open</span></a>
+    <a class="tile book healmind" href="heal-your-hurting-mind/"><img class="bookcover" src="heal-your-hurting-mind/cover.jpg" alt="" loading="lazy"><h2>Heal Your Hurting Mind</h2><p>Craig Groeschel on anxiety, depression and burnout, with biblical hope.</p><span class="lock">Open</span></a>
+    <a class="tile book chaos" href="chaos-machine/"><img class="bookcover" src="chaos-machine/cover.jpg" alt="" loading="lazy"><h2>The Chaos Machine</h2><p>Max Fisher on how social media rewired our minds and our world.</p><span class="lock">Open</span></a>
+    <a class="tile book alignment" href="alignment-problem/"><img class="bookcover" src="alignment-problem/cover.jpg" alt="" loading="lazy"><h2>The Alignment Problem</h2><p>Brian Christian on teaching machines human values.</p><span class="lock">Open</span></a>
+    <a class="tile book supremacy" href="supremacy/"><img class="bookcover" src="supremacy/cover.jpg" alt="" loading="lazy"><h2>Supremacy</h2><p>Parmy Olson on Hassabis, Altman and the race to build AI.</p><span class="lock">Open</span></a>
+    <a class="tile book platonic" href="platonic/"><img class="bookcover" src="platonic/cover.jpg" alt="" loading="lazy"><h2>Platonic</h2><p>Marisa G. Franco on the science of making and keeping friends.</p><span class="lock">Open</span></a>
+    <a class="tile book agichron" href="agi-chronicles/"><img class="bookcover" src="agi-chronicles/cover.jpg" alt="" loading="lazy"><h2>The AGI Chronicles</h2><p>Kevin Roose on the race between OpenAI, Anthropic and DeepMind.</p><span class="lock">Open</span></a>
+    <a class="tile book paul" href="paul/"><img class="bookcover" src="paul/cover.jpg" alt="" loading="lazy"><h2>Paul</h2><p>N. T. Wright's biography of the apostle.</p><span class="lock">Open</span></a>
   </div>
 
   <footer>kaig78.github.io/public</footer>
