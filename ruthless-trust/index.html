@@ -1,0 +1,1152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Ruthless Trust by Brennan Manning – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from the cover: sepia sky and cliff, the brick-red
+   band for trust, cream for the title, a storm grey for fear and wind, gold for glory. */
+:root {
+  --paper: #f6efe3;
+  --paper-2: #ece2d1;
+  --card: #fffaf1;
+  --ink: #241a12;
+  --ink-2: #5a4a3b;
+  --ink-3: #85725f;
+  --rule: #ddd0bc;
+
+  --brick: #9c2b1d;   /* trust */
+  --gold: #9a6c17;    /* glory, gratitude */
+  --storm: #4f5d66;   /* fear, control, wind */
+  --sepia: #8a6a45;   /* the cliff */
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #15100c;
+    --paper-2: #1f1812;
+    --card: #251c15;
+    --ink: #f3eadb;
+    --ink-2: #c7b8a3;
+    --ink-3: #96846f;
+    --rule: #3b3026;
+    --brick: #ec7a62;
+    --gold: #e3b45a;
+    --storm: #9fb0bb;
+    --sepia: #c49a68;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #15100c;
+  --paper-2: #1f1812;
+  --card: #251c15;
+  --ink: #f3eadb;
+  --ink-2: #c7b8a3;
+  --ink-3: #96846f;
+  --rule: #3b3026;
+  --brick: #ec7a62;
+  --gold: #e3b45a;
+  --storm: #9fb0bb;
+  --sepia: #c49a68;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  overflow-wrap: break-word;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--brick); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+.c-brick { --c: var(--brick); }
+.c-gold  { --c: var(--gold); }
+.c-storm { --c: var(--storm); }
+.c-sepia { --c: var(--sepia); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(58px, 11.5vw, 156px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .86;
+  letter-spacing: -.03em;
+  margin-left: -.03em;
+}
+.hero h1 span { display: block; }
+.hero h1 span:last-child { color: var(--brick); }
+.hero .sub {
+  font-family: var(--display);
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1081;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 20, 10, .4), 0 8px 18px -10px rgba(40, 20, 10, .3);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 108%;
+  line-height: 1.02;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 56ch; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(40px, 7vw, 92px);
+  font-weight: 900;
+  font-stretch: 115%;
+  line-height: .92;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 105%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--brick);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-brick { fill: var(--brick); }
+.fig svg text.t-storm { fill: var(--storm); }
+.fig svg text.t-gold { fill: var(--gold); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 16px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-brick { stroke: var(--brick); fill: none; }
+.s-storm { stroke: var(--storm); fill: none; }
+.s-gold { stroke: var(--gold); fill: none; }
+.f-brick { fill: var(--brick); }
+.f-storm { fill: var(--storm); }
+.f-gold { fill: var(--gold); }
+.f-ink { fill: var(--ink); }
+.f-card { fill: var(--card); }
+.f-brickt { fill: color-mix(in srgb, var(--brick) 13%, var(--card)); }
+.f-stormt { fill: color-mix(in srgb, var(--storm) 13%, var(--card)); }
+.f-goldt { fill: color-mix(in srgb, var(--gold) 16%, var(--card)); }
+.svg-narrow { max-width: 460px; width: 100%; margin-inline: auto; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; min-width: 3px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 23px; font-weight: 850; font-stretch: 110%; letter-spacing: -.01em; line-height: 1.1; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; display: block; font-size: 16px; }
+
+/* ---------- Fear map ---------- */
+.fearmap { display: grid; gap: 0; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--card); }
+.fearmap .fr { display: grid; grid-template-columns: minmax(0, 1fr) 36px minmax(0, 1fr); gap: 0 14px; padding: 16px 18px; border-top: 1px solid var(--rule); align-items: start; }
+.fearmap .fr:first-child { border-top: 0; }
+.fearmap .fr.head { background: var(--paper-2); padding-block: 10px; }
+.fearmap b { font-family: var(--display); font-weight: 750; font-size: 17px; display: block; line-height: 1.25; }
+.fearmap span { font-size: 15px; color: var(--ink-2); line-height: 1.45; display: block; }
+.fearmap .fear b { color: var(--storm); }
+.fearmap .ans b { color: var(--brick); }
+.fearmap .arrow { font-family: var(--mono); color: var(--ink-3); text-align: center; padding-top: 2px; }
+.fearmap .ch { font-family: var(--mono); font-size: 11.5px; letter-spacing: .05em; color: var(--ink-3); margin-top: 4px; }
+
+/* ---------- Timeline ---------- */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 92px; top: 8px; bottom: 8px; width: 2px; background: var(--rule); }
+.timeline li { display: grid; grid-template-columns: 80px 24px minmax(0, 1fr); gap: 0 12px; padding: 10px 0; align-items: start; }
+.timeline .when { font-family: var(--mono); font-size: 13px; color: var(--ink-2); text-align: right; padding-top: 3px; font-variant-numeric: tabular-nums; }
+.timeline .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--c, var(--ink-2)); margin: 6px 0 0 5px; position: relative; z-index: 1; box-shadow: 0 0 0 4px var(--card); }
+.timeline .dot.open { background: var(--card); border: 2px solid var(--c, var(--ink-2)); }
+.timeline b { font-family: var(--display); font-weight: 750; font-size: 17px; line-height: 1.25; display: block; }
+.timeline span.t { font-size: 15.5px; color: var(--ink-2); line-height: 1.45; display: block; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink-2); }
+.legend i { width: 12px; height: 12px; border-radius: 50%; background: var(--c); display: inline-block; }
+.legend i.open { background: transparent; border: 2px solid var(--ink-2); }
+
+/* ---------- Steps ---------- */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; align-items: end; }
+.steps li { display: grid; gap: 8px; align-content: end; }
+.steps .blk { border-radius: 4px 4px 0 0; background: color-mix(in srgb, var(--brick) calc(var(--k) * 1%), var(--card)); border: 1px solid color-mix(in srgb, var(--brick) 35%, var(--rule)); border-bottom: 3px solid var(--brick); padding: 10px 12px; display: grid; gap: 4px; align-content: start; }
+.steps .blk b { font-family: var(--display); font-weight: 800; font-size: 17px; line-height: 1.15; }
+.steps .blk span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+.steps .n { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
+
+/* ---------- Venn legend, quads, compare ---------- */
+.vlegend { display: grid; gap: 10px; }
+.vlegend div { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.vlegend .k { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; color: var(--card); background: var(--c); }
+.vlegend b { color: var(--ink); font-weight: 600; }
+.quads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.quads div { border-radius: 6px; padding: 14px; display: grid; gap: 4px; align-content: start; border: 1px solid color-mix(in srgb, var(--c) 30%, var(--rule)); }
+.quads b { font-family: var(--display); font-weight: 800; font-size: 19px; color: var(--c); }
+.quads span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+.compare { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare > div.hl { background: color-mix(in srgb, var(--brick) 9%, var(--card)); }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.spectrum { height: 12px; border-radius: 6px; background: linear-gradient(90deg, var(--storm), color-mix(in srgb, var(--brick) 80%, var(--card)) 50%, var(--gold)); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 108%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 112%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.xlink { margin-top: 40px; display: grid; gap: 8px; border-left: 3px solid var(--brick); padding: 6px 0 6px 20px; max-width: var(--measure); }
+.xlink a { font-family: var(--display); font-weight: 800; font-size: 21px; line-height: 1.2; }
+.xlink p { font-size: 16px; color: var(--ink-2); }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 75ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: 1fr; }
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+  .steps { grid-template-columns: 1fr; }
+  .steps .blk { border-radius: 4px; border-bottom-width: 1px; border-left: 4px solid var(--brick); height: auto !important; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map, .compare, .quads { grid-template-columns: 1fr; }
+  .fearmap .fr { grid-template-columns: 1fr; gap: 6px; }
+  .fearmap .fr.head { display: none; }
+  .fearmap .arrow { display: none; }
+  .timeline::before { left: 11px; }
+  .timeline li { grid-template-columns: 24px minmax(0, 1fr); }
+  .timeline .when { grid-column: 2; grid-row: 1; text-align: left; padding: 0; }
+  .timeline .dot { grid-column: 1; grid-row: 1 / span 2; margin-left: 4px; }
+  .timeline li > div { grid-column: 2; }
+  .chapter .idea { font-size: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Brennan Manning · HarperSanFrancisco, 2000</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#fear">Fear</a>
+    <a href="#story">His story</a>
+    <a href="#way">The way</a>
+    <a href="#difficulty">The difficulty</a>
+    <a href="#jesus">Trusting Jesus</a>
+    <a href="#living">Living it</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span>Ruthless</span><span>Trust</span></h1>
+    <p class="sub">The Ragamuffin's Path to God</p>
+    <p class="dek">A former Franciscan priest and recovering alcoholic argues that what fear needs is not more insight or clarity, but trust: the one thing, he says, that God most wants back from us.</p>
+    <div class="byline label">
+      <span>12 chapters</span><span>Foreword by Richard J. Foster</span><span>~42,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Ruthless Trust by Brennan Manning: a sepia photograph of wind-bent trees on a crumbling cliff top under a cloudy sky, framed by deep red bands carrying the title in cream serif capitals">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="wind"></canvas>
+  <div class="ends label"><span>The wind: what we can't control</span><span>Still standing</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>You don't need more insight. You need to trust what you already have</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>The book starts with a remark from Brennan Manning's spiritual director: Manning had enough insights into the faith to last him centuries, and what he lacked was trust in what he had been given. Manning spent the next two years taking his life and ministry apart and asking whether he actually trusted God. What he learned, he says, is that trusting is a <em>ruthless</em> act.</p>
+      <p>He explains the word in the last chapter. Ruthless means "without pity", and he uses it to mean without <em>self</em>-pity, because, as he puts it, "self-pity is the arch-enemy of trust." Trust here is not a feeling of certainty. It is walking into an unclear future relying on God's presence and promise, while doubts and worries keep coming.</p>
+      <p>His central claim is that a human heart that trusts it is loved pleases God more than any cathedral, symphony or painting. Moving from mistrust to trust is what he calls a <em>second conversion</em>, and it has to be renewed every day. The sign it is happening is a slow shift from self-rejection to self-acceptance, rooted in being accepted by Jesus.</p>
+      <p>Manning writes as a ragamuffin: someone who knows they are broken and stops pretending otherwise. He tells his own failures openly, including a relapse into drinking, and the book reads more like a series of reflections and stories than an argument.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Numbers Manning uses</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-storm"><span class="big num">15 s</span><p>Silence an average Sunday congregation can bear before someone fills it, according to studies he cites.</p></div>
+        <div class="stat c-brick"><span class="big num">18 yrs</span><p>Teresa of Avila kept praying without a single comforting feeling, his picture of trust in the dark.</p></div>
+        <div class="stat c-gold"><span class="big num">2.5×</span><p>How much more prone to colds stressed-out grumblers are than grateful people, per a virologist he cites.</p></div>
+        <div class="stat"><span class="big num">90/90</span><p>Ninety A.A. meetings in ninety days: the hard work trust doesn't excuse you from.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--brick)">
+        <span class="label">The story that frames the book</span>
+        <p>The ethicist John Kavanaugh went to work in Calcutta hoping to find out what to do with his life, and asked Mother Teresa to pray that he would have clarity. She refused. Clarity, she told him, was the thing he was clinging to and had to let go of. She said she would pray that he would trust God instead.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Ch. 1–2</span>
+      <h3>The way</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>The Way of Trust</b>Trust is the gift God wants back</a></li>
+        <li><span>02</span><a href="#ch2"><b>The Way of Gratefulness</b>Gratitude shows who really trusts</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Ch. 3–6</span>
+      <h3>The difficulty, and a bigger God</h3>
+      <ol>
+        <li><span>03</span><a href="#ch3"><b>The Enormous Difficulty</b>Suffering, evil and bad religion</a></li>
+        <li><span>04</span><a href="#ch4"><b>Thinking Big</b>Glory ends the illusion of control</a></li>
+        <li><span>05</span><a href="#ch5"><b>Artists, Mystics, and Clowns</b>Our pictures of God are wrong</a></li>
+        <li><span>06</span><a href="#ch6"><b>Infinite and Intimate</b>Far and near at once</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Ch. 7–8</span>
+      <h3>Trusting Jesus</h3>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>Trusting Jesus</b>Faith plus hope</a></li>
+        <li><span>08</span><a href="#ch8"><b>Tainted Trust</b>Control, presumption, hiding</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Ch. 9–12</span>
+      <h3>Living it</h3>
+      <ol>
+        <li><span>09</span><a href="#ch9"><b>Humble Confidence</b>Humility isn't self-hatred</a></li>
+        <li><span>10</span><a href="#ch10"><b>The Cracked Pot</b>Stop comparing</a></li>
+        <li><span>11</span><a href="#ch11"><b>The Geography of Nowhere</b>God is met now and here</a></li>
+        <li><span>12</span><a href="#ch12"><b>Ruthless Trust</b>Trust without self-pity</a></li>
+      </ol>
+    </div>
+  </div>
+  <p class="label" style="margin-top:16px">The book runs as twelve chapters. The four groups are mine.</p>
+</section>
+
+<!-- ============ FEAR ============ -->
+<section id="fear">
+  <div class="sec-head">
+    <span class="label">Reading it for fear</span>
+    <h2>Fear wants clarity. Manning offers trust instead</h2>
+    <p class="lede">Fear runs through the whole book, though no chapter is named after it. Manning's diagnosis is that much of our anxiety comes from a thin, steady layer of distrust, and that demanding certainty before we move only makes it worse.</p>
+  </div>
+
+  <div class="intro">
+    <div class="fig">
+      <h4>The clarity loop, and the way out</h4>
+      <svg class="svg-narrow" viewBox="0 0 400 550" role="img" aria-label="A loop of five steps: the road ahead is unclear; fear of the unknown; demand clarity, proof and reassurance; none comes, so take control; analysis replaces action and nothing is risked; and back to the start, with each lap feeding the fear. An exit leads from the demand for clarity: let go of clarity. Below it: trust, walking into the unclear with God's presence and promise; act after discernment, accepting the risk of mistakes; worries still come, but get no consent.">
+        <circle cx="200" cy="175" r="118" class="s-storm" stroke-width="1.6" stroke-dasharray="5 5"/>
+        <path d="M261.8 81.5 L275.0 83.7 L268.8 71.7 Z M308.1 204.9 L310.1 218.1 L319.5 208.6 Z M205.0 287.0 L193.0 293.0 L205.0 299.0 Z M95.0 214.4 L85.6 204.8 L83.6 218.1 Z M130.1 87.3 L136.3 75.4 L123.1 77.6 Z" class="f-storm"/>
+        <text x="200" y="186" text-anchor="middle" class="hd">the clarity loop</text>
+        <text x="200" y="206" text-anchor="middle" class="t-3" style="font-size:12px">each lap feeds the fear</text>
+
+        <g>
+          <rect x="132" y="34" width="136" height="46" rx="6" class="f-stormt s-storm" stroke-width="1.4"/>
+          <text x="200" y="54" text-anchor="middle" class="t-ink">The road ahead</text>
+          <text x="200" y="70" text-anchor="middle" class="t-ink">is unclear</text>
+        </g>
+        <g>
+          <rect x="246" y="115" width="134" height="46" rx="6" class="f-stormt s-storm" stroke-width="1.4"/>
+          <text x="313" y="135" text-anchor="middle" class="t-ink">Fear of the</text>
+          <text x="313" y="151" text-anchor="middle" class="t-ink">unknown</text>
+        </g>
+        <g>
+          <rect x="196" y="232" width="150" height="46" rx="6" class="f-stormt s-storm" stroke-width="1.4"/>
+          <text x="271" y="252" text-anchor="middle" class="t-ink">Demand clarity,</text>
+          <text x="271" y="268" text-anchor="middle" class="t-ink">proof, reassurance</text>
+        </g>
+        <g>
+          <rect x="56" y="232" width="134" height="46" rx="6" class="f-stormt s-storm" stroke-width="1.4"/>
+          <text x="123" y="252" text-anchor="middle" class="t-ink">None comes:</text>
+          <text x="123" y="268" text-anchor="middle" class="t-ink">take control</text>
+        </g>
+        <g>
+          <rect x="16" y="115" width="140" height="46" rx="6" class="f-stormt s-storm" stroke-width="1.4"/>
+          <text x="86" y="135" text-anchor="middle" class="t-ink">Analysis replaces</text>
+          <text x="86" y="151" text-anchor="middle" class="t-ink">action; no risk</text>
+        </g>
+
+        <path d="M271 279 V340" class="s-brick" stroke-width="2"/>
+        <path d="M265 333 L271 341 L277 333" class="s-brick" stroke-width="2"/>
+        <text x="260" y="322" text-anchor="end" class="t-brick" style="font-size:12.5px">let go of clarity</text>
+
+        <rect x="40" y="345" width="320" height="50" rx="6" class="f-brickt s-brick" stroke-width="1.6"/>
+        <text x="200" y="366" text-anchor="middle" class="t-ink">Trust: walk into the unclear</text>
+        <text x="200" y="384" text-anchor="middle" class="t-ink">with his presence and promise</text>
+        <path d="M200 396 V411 M195 405 L200 412 L205 405" class="s-brick" stroke-width="1.6"/>
+        <rect x="40" y="415" width="320" height="50" rx="6" class="f-card s-brick" stroke-width="1.4"/>
+        <text x="200" y="436" text-anchor="middle" class="t-ink">Act after discernment, accepting</text>
+        <text x="200" y="454" text-anchor="middle" class="t-ink">that mistakes and hurt can happen</text>
+        <path d="M200 466 V481 M195 475 L200 482 L205 475" class="s-brick" stroke-width="1.6"/>
+        <rect x="40" y="485" width="320" height="50" rx="6" class="f-card s-brick" stroke-width="1.4"/>
+        <text x="200" y="506" text-anchor="middle" class="t-ink">Worries still come,</text>
+        <text x="200" y="524" text-anchor="middle" class="t-ink">but get no consent</text>
+      </svg>
+      <p class="cap">The loop is my drawing of what Manning describes in chapters 1 and 8: we try to remove the risk of trusting by demanding clarity first, and when it doesn't come we take control. His point is that clarity, reassurance and proof can't create trust or keep it going.</p>
+      <p class="src">After ch. 1 (Kavanaugh and Mother Teresa) and ch. 8 (the spies at Canaan)</p>
+    </div>
+
+    <div style="display:grid;gap:24px;align-content:start">
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">“I have never had clarity; what I have always had is trust.”</blockquote>
+        <span class="label">Mother Teresa to John Kavanaugh, as Manning tells it (ch. 1)</span>
+      </div>
+      <div class="prose">
+        <p>Manning does not promise that trust makes fear go away. He says plainly that there is "no trust without worry". Doubts and anxieties follow us all day and turn up in dreams. They are not voluntary, so they are not failures. What matters is whether we consent to them. When they threaten to take over, he answers them with a short, deliberate act of trust: growing still for a moment and hearing Jesus say not to be afraid.</p>
+        <p>He also separates two kinds of fear. One is the dread of a touchy, punishing God, which he wants to get rid of. The other is the Bible's <em>fear of the Lord</em>: awe, reverence, amazement. That one he wants back, and he thinks its loss has done real damage (chapter 6).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:24px">
+    <h4>Where fear shows up in the book, and what Manning sets against it</h4>
+    <div class="fearmap">
+      <div class="fr head"><span class="label">The fear</span><span></span><span class="label">His answer</span></div>
+      <div class="fr"><div class="fear"><b>Fear of the unknown path</b><span>Wanting a clear plan before taking a step.</span><span class="ch">ch. 1, 8</span></div><div class="arrow">→</div><div class="ans"><b>Walk into obscurity</b><span>The next step only shows itself in the present. Clarity isn't given on this earth.</span></div></div>
+      <div class="fr"><div class="fear"><b>Fear of God himself</b><span>A God who keeps score, is easily annoyed, and serves as everyone's disciplinary threat.</span><span class="ch">ch. 1, 3, 6</span></div><div class="arrow">→</div><div class="ans"><b>Look at Jesus</b><span>Learn what God is like from Jesus, not the other way round. Let him replace the old images.</span></div></div>
+      <div class="fr"><div class="fear"><b>Fear of being seen</b><span>Hiding hateful thoughts from God, wearing a mask in front of friends.</span><span class="ch">ch. 1, 7, 8, 9</span></div><div class="arrow">→</div><div class="ans"><b>Accept acceptance</b><span>Raw honesty with Jesus and with a few trusted friends. Trust with limits is tainted trust.</span></div></div>
+      <div class="fr"><div class="fear"><b>Fear of the future</b><span>The mind racing ahead to disasters that haven't happened.</span><span class="ch">ch. 11</span></div><div class="arrow">→</div><div class="ans"><b>Stay in the now</b><span>The terrors of tomorrow are made in the mind. God is met only in the present moment.</span></div></div>
+      <div class="fr"><div class="fear"><b>Loss and suffering</b><span>Death, stillbirth, disaster, evil, relapse.</span><span class="ch">ch. 3, 12</span></div><div class="arrow">→</div><div class="ans"><b>Grieve, then set a limit</b><span>Self-pity is the normal first reaction. The danger is letting it take over.</span></div></div>
+      <div class="fr"><div class="fear"><b>Fear of failing again</b><span>Dread of backsliding and of never being good enough.</span><span class="ch">ch. 1, 9, 12</span></div><div class="arrow">→</div><div class="ans"><b>Fall, get up, repeat</b><span>A track record of grace gives modest confidence that you will keep getting up.</span></div></div>
+    </div>
+    <p class="src">Grouping and wording are mine; each row draws on the chapters listed.</p>
+  </div>
+</section>
+
+<!-- ============ HIS STORY ============ -->
+<section id="story">
+  <div class="sec-head">
+    <span class="label">The author's own account</span>
+    <h2>A ragamuffin's life, as he tells it</h2>
+    <p class="lede">Manning's examples are often his own failures. Pieced together from across the book, they make a rough life story. It is his account. The book dates some events and not others, so the order of the undated ones is my best reading. Only the marriage before the relapse is clear from the text.</p>
+  </div>
+  <div class="intro">
+    <div class="fig">
+      <div class="legend"><span><i style="--c:var(--sepia)"></i>placed by the book</span><span><i class="open"></i>undated; order approximate</span><span><i style="--c:var(--storm)"></i>wound or fall</span><span><i style="--c:var(--brick)"></i>turn toward trust</span></div>
+      <ol class="timeline">
+        <li><span class="when">childhood</span><span class="dot c-storm" style="--c:var(--storm)"></span><div><b>A Depression childhood in Brooklyn</b><span class="t">His father hunted for work and was hardly there. His mother, orphaned at three, couldn't give affection. He has no memory of being held by her, and self-hatred took root.</span></div></li>
+        <li><span class="when">age 6</span><span class="dot" style="--c:var(--storm)"></span><div><b>The windowsill</b><span class="t">On his mother's orders his father walked his older brother Rob to the police station. Brennan watched at the window, sure he would be next. Rob came back behind his father, making a snowball.</span></div></li>
+        <li><span class="when">1956</span><span class="dot" style="--c:var(--sepia)"></span><div><b>Joins the Franciscans</b><span class="t">Shy and afraid of public speaking, he chose to be a brother. The community later called him to the priesthood.</span></div></li>
+        <li><span class="when">age 29</span><span class="dot" style="--c:var(--sepia)"></span><div><b>The young theologian</b><span class="t">Newly ordained and teaching theology, he explained God so confidently that, he jokes, no mystery was left.</span></div></li>
+        <li><span class="when">1968</span><span class="dot" style="--c:var(--brick)"></span><div><b>A night in a Spanish cave</b><span class="t">At the end of an all-night vigil near Zaragoza he experienced God as Abba. Quiet, not dramatic.</span></div></li>
+        <li><span class="when">1970</span><span class="dot" style="--c:var(--brick)"></span><div><b>Christmas Eve in the Bowery</b><span class="t">After serving a meal to street people, he met Dorothy Day, then 73.</span></div></li>
+        <li><span class="when">undated</span><span class="dot open" style="--c:var(--sepia)"></span><div><b>Ministry shut down, marries Roslyn</b><span class="t">They married with no work and no invitations to preach.</span></div></li>
+        <li><span class="when">undated</span><span class="dot open" style="--c:var(--storm)"></span><div><b>Relapse in New Orleans</b><span class="t">Drunk on a curb fifty yards from a detox centre, his marriage collapsing, he passed out. Two staff members carried him in.</span></div></li>
+        <li><span class="when">undated</span><span class="dot open" style="--c:var(--storm)"></span><div><b>A second addiction</b><span class="t">On a silent retreat in Grand Coteau he found he was hooked on ministry, on attention and recognition. Ten friends at a Colorado Springs retreat called him dishonest; he sulked for weeks.</span></div></li>
+        <li><span class="when">undated</span><span class="dot open" style="--c:var(--brick)"></span><div><b>Trust what you've received</b><span class="t">His spiritual director's remark starts two years of re-examination. In the preface he speaks of three years of prayer and study behind the book.</span></div></li>
+        <li><span class="when">2000</span><span class="dot" style="--c:var(--sepia)"></span><div><b>The preface is signed</b><span class="t">New Orleans, 15 March 2000, after some 25 years as a full-time itinerant preacher.</span></div></li>
+      </ol>
+      <p class="src">From ch. 1, 3, 4, 7, 8, 9, 12 and the preface</p>
+    </div>
+    <div class="prose">
+      <p>The book never claims Manning has got trust sorted out. His pattern, he says, is falling down and getting up, over and over. Each time, what gets him up is trusting that he is forgiven, not anything he has done.</p>
+      <p>The windowsill story has a second half. Years later, in prayer, he pictured his mother as a six-year-old on an orphanage windowsill, begging God for parents. His anger at her drained away. He calls that moment the disarming of the greatest enemy of trust in his life.</p>
+      <p>The relapse comes in the chapter on suffering, alongside a stillbirth and natural disasters. He tells it without excuses: the bottle, the five-dollar bill, the second pint, crying out for Jesus. He had done everything that worked for others: meetings, the Twelve Steps, a sponsor, prayer. He couldn't see why it hadn't worked for him.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="way">
+  <span class="label partno">Chapters 1–2</span>
+  <h2>The way</h2>
+  <p class="lede">What trust is, why it matters more than insight, and the test that shows whether you really have it.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">The Way of Trust</span></div>
+  <div class="body">
+    <div>
+      <h3>Trust is the gift God wants back</h3>
+      <p class="idea">Believing that God exists is a matter of the head. Saying "I trust you" is a matter of the heart, and only the second changes you.</p>
+    </div>
+    <ul class="points">
+      <li>Jesus didn't put trust at the edge of his teaching but at the centre. Asked how the Kingdom would come, his answer was trust in God and in him.</li>
+      <li>Trust brings no final clarity. It doesn't calm the chaos or dull the pain. It is what you can still say when nothing is clear, as Jesus did on the cross.</li>
+      <li>Mistrust keeps us chronically anxious: dread that salvation is only for the pious, fear we're bound to backslide, a suspicion that the good news is wishful thinking. Self-hatred, for Manning, is a sign of not trusting that Jesus' work is enough.</li>
+      <li>The way of trust leads into obscurity, not a clear plan. Taking risks needs discernment with family, friends and a mentor first. After that, only trust will act.</li>
+      <li>Legalists distrust people who trust God rather than rules, and their favourite weapon is guilt.</li>
+    </ul>
+    <div class="fig">
+      <h4>Henri Nouwen's last book, word by word</h4>
+      <div class="bars">
+        <div class="bar c-brick"><div class="row"><span>“trust” or “trusting”</span><b>65</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-storm"><div class="row"><span>“faith”</span><b>1</b></div><div class="track"><div class="fill" style="width:1.54%"></div></div></div>
+      </div>
+      <p class="cap"><em>The Inner Voice of Love</em> is 115 pages and was published on the day Nouwen died. His earlier books, Manning notes, are full of the word faith. He reads the shift as faith and hope maturing into trust over a lifetime.</p>
+      <p class="src">Counts as reported by Manning, ch. 1</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">The Way of Gratefulness</span></div>
+  <div class="body">
+    <div>
+      <h3>Gratitude is how you can tell</h3>
+      <p class="idea">Film ten people who all say they trust God for a month. The one who lives with steady gratitude is the one who means it.</p>
+    </div>
+    <ul class="points">
+      <li>Gratitude means seeing your whole life as an unearned gift. Manning tells of the philosopher Jacques Maritain, at 77, skipping across a hilltop and shouting that he was alive.</li>
+      <li>Its opposite is grumbling. Benedict's Rule treats it as a serious offence. Manning loves the line about sending two stout monks to reason with a troublemaker.</li>
+      <li>In 1996 George Gallup Jr. found people who were poor and deeply committed to faith to be more grateful and forgiving than others.</li>
+      <li>Giving thanks for an unanswered prayer or in inner desolation is, in his phrase, a doxology in darkness.</li>
+    </ul>
+    <div class="fig">
+      <h4>Four marks of a grateful life</h4>
+      <div class="quads">
+        <div class="tint c-gold" style="--c:var(--gold)"><b>Inclusive</b><span>Thankful for all of life, failures too. An Irish A.A. member called himself a grateful alcoholic: without the program he'd never have found God.</span></div>
+        <div class="tint c-storm" style="--c:var(--storm)"><b>Attentive</b><span>Busyness, addiction and distraction blind us to each day's gifts. Gratitude needs prayerful awareness.</span></div>
+        <div class="tint c-brick" style="--c:var(--brick)"><b>Contagious</b><span>A woman losing all movement was glad she could still move her neck, then glad of visits. You can't be grateful and resentful at once.</span></div>
+        <div class="tint c-sepia" style="--c:var(--sepia)"><b>Theocentric</b><span>Chesterton: the atheist's worst moment is feeling grateful with nobody to thank. Gratitude trusts there is Someone.</span></div>
+      </div>
+      <p class="src">Manning's four traits, ch. 2</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="difficulty">
+  <span class="label partno">Chapters 3–6</span>
+  <h2>The difficulty, and a bigger God</h2>
+  <p class="lede">Manning faces the strongest objection to trust, then argues that the answer isn't an explanation but a much larger picture of God, one that is also close.</p>
+</div>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">The Enormous Difficulty</span></div>
+  <div class="body">
+    <div>
+      <h3>Suffering is the real objection</h3>
+      <p class="idea">A Christian writer who skips pain and evil is, Manning says, naive, dishonest or out of touch.</p>
+    </div>
+    <ul class="points">
+      <li>He begins with his own grief. His friend Rich Mullins was killed in a car crash at 41. Manning turned down every invitation to speak at memorials, lost in doubt, fear and anger.</li>
+      <li>A woman named Anne Donovan delivered a stillborn baby, and friends told her it was God's will or that heaven had needed a new flower. Platitudes from people who haven't suffered, he says, are not just useless but galling.</li>
+      <li>The scale of evil (death camps, Kosovo, school shootings) leads Louis Dupré to reverse the old question: not how God can allow evil, but how God is still possible. Philosophy, Manning says, runs aground here.</li>
+      <li>Job and the psalms of lament don't defend God. In the end God says Job, angry as he was, spoke rightly, and the polished theologian did not.</li>
+      <li>A second obstacle is Christians who preach a cruel or score-keeping God, like the woman in the French Quarter who welcomed nuclear war as a sign of the Rapture.</li>
+      <li>Only someone who has been through the valley can credibly speak of God in it. Jesus, he says, will look us over for scars, not medals.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Thinking Big</span></div>
+  <div class="body">
+    <div>
+      <h3>A God too big to manage</h3>
+      <p class="idea">The Hebrew <em>kabōd</em>, God's glory, means weight. Feeling that weight even briefly breaks the illusion that we are in control.</p>
+    </div>
+    <ul class="points">
+      <li>The word grows through three meanings: physical weight; then wealth and status; finally a light so bright that God is hidden in it. Moses is allowed to see only God's back as he passes.</li>
+      <li>Manning points to a newly found planetary system around a star 264 trillion miles away and a universe 12 to 15 billion years old. The point is scale, not science.</li>
+      <li>All talk about God is analogy: like and radically unlike. Forget the unlike and we get chummy, predict Armageddon, and claim to know exactly what God wants.</li>
+      <li>He mocks his younger self: newly ordained at 29, he pitied an old friar who said the older he got, the less he understood about God. Aquinas, after his own experience, called his writing straw.</li>
+      <li>A brush with glory leads to adoration, exposes our pictures of a vengeful God as projections, and ends the illusion of control. We accept that we are creatures, and that acceptance is where trust can wake up.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Artists, Mystics, and Clowns</span></div>
+  <div class="body">
+    <div>
+      <h3>Our pictures are flat wrong</h3>
+      <p class="idea">How we see God, other people and ourselves is badly off, and we need people with other eyes to break it open.</p>
+    </div>
+    <ul class="points">
+      <li>Dostoevsky's drunk Marmeladov imagines God welcoming drunkards on the last day precisely because none of them thought they deserved it.</li>
+      <li>Catherine of Siena described God as mad with love. Francis of Assisi, called God's clown, is pictured upside down, seeing everything suspended from God's kindness.</li>
+      <li>After 37 years of pastoral work he concludes that many believers' picture of God is radically wrong. We flatten other people too, reducing them to a label.</li>
+      <li>A wrong view of God often starts with a crushed view of ourselves. A student of his, told by a supervisor she had no gift for teaching, came to him soon after and announced she no longer believed in God.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Infinite and Intimate</span></div>
+  <div class="body">
+    <div>
+      <h3>Hold the distance and the nearness together</h3>
+      <p class="idea">Lose God's otherness and he shrinks to a disciplinarian. Lose his nearness and he becomes a distant spectator.</p>
+    </div>
+    <ul class="points">
+      <li>The cost is awe. Prayer time becomes a checklist. Parker Palmer calls the church an enemy of solitude, keeping people busy until they burn out.</li>
+      <li>Without a sense of God's greatness, faith shrinks to moralising. A child learns that God shares the fussy concerns of every parent, teacher and pastor, and comes to link God with fear. A youth worker who admitted struggling with pornography was fired the same afternoon.</li>
+      <li>But history shows the opposite error too. Reacting against a heresy that denied Christ's divinity, the church stressed his divinity so far that he became remote, and worship turned clerical: communion rails, the priest's back to the people.</li>
+    </ul>
+    <div class="fig">
+      <h4>Manning's balance</h4>
+      <div class="spectrum" aria-hidden="true"></div>
+      <div class="compare">
+        <div style="--c:var(--storm)"><h5>Only far</h5><ul><li>God as cosmic observer</li><li>Jesus remote, on God's side of the gap</li><li>Worship reduced to attendance</li></ul></div>
+        <div class="hl" style="--c:var(--brick)"><h5>Both</h5><ul><li>Almighty, eternal, infinite Abba</li><li>Awe and tenderness together</li><li>Compassionate with our brokenness, still a mystery</li></ul></div>
+        <div style="--c:var(--gold)"><h5>Only near</h5><ul><li>A tame, chatty God</li><li>Faith as moral improvement</li><li>People who claim to know exactly what God thinks</li></ul></div>
+      </div>
+      <p class="cap">He wants neither a spirituality of terror nor a teddy-bear God. He quotes a Hasidic saying that fear without love is imperfect, and love without fear is nothing.</p>
+      <p class="src">Arrangement mine, from ch. 6–7</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="jesus">
+  <span class="label partno">Chapters 7–8</span>
+  <h2>Trusting Jesus</h2>
+  <p class="lede">The book's core definition, and the ways real trust gets corrupted.</p>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Trusting Jesus</span></div>
+  <div class="body">
+    <div>
+      <h3>“Faith + hope = trust.”</h3>
+      <p class="idea">Faith comes from a personal experience of Jesus. Hope is relying on his promise. Trust is the two together.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Manning's equation, with his examples</h4>
+        <svg class="svg-narrow" viewBox="0 0 420 270" role="img" aria-label="Two overlapping circles. Left circle: faith, the experience of Jesus as Lord. Right circle: hope, reliance on his promise. The overlap is trust. Points 1 and 2 sit in the overlap; points 3 and 4 sit in faith alone.">
+          <circle cx="160" cy="140" r="112" class="s-brick" stroke-width="2" style="fill:color-mix(in srgb, var(--brick) 10%, transparent)"/>
+          <circle cx="262" cy="140" r="112" class="s-gold" stroke-width="2" style="fill:color-mix(in srgb, var(--gold) 12%, transparent)"/>
+          <text x="112" y="84" text-anchor="middle" class="hd" style="fill:var(--brick)">Faith</text>
+          <text x="310" y="84" text-anchor="middle" class="hd" style="fill:var(--gold)">Hope</text>
+          <text x="211" y="104" text-anchor="middle" class="hd">Trust</text>
+          <text x="125" y="205" text-anchor="middle" class="t-3" style="font-size:12px">experience</text><text x="125" y="220" text-anchor="middle" class="t-3" style="font-size:12px">of Jesus</text>
+          <text x="300" y="205" text-anchor="middle" class="t-3" style="font-size:12px">reliance on</text><text x="296" y="220" text-anchor="middle" class="t-3" style="font-size:12px">his promise</text>
+          <g style="font-size:12px">
+            <circle cx="198" cy="136" r="12" class="f-brick"/><text x="198" y="140" text-anchor="middle" style="fill:var(--card);font-size:12px">1</text>
+            <circle cx="224" cy="168" r="12" class="f-brick"/><text x="224" y="172" text-anchor="middle" style="fill:var(--card);font-size:12px">2</text>
+            <circle cx="92" cy="122" r="12" class="f-storm"/><text x="92" y="126" text-anchor="middle" style="fill:var(--card);font-size:12px">3</text>
+            <circle cx="104" cy="170" r="12" class="f-storm"/><text x="104" y="174" text-anchor="middle" style="fill:var(--card);font-size:12px">4</text>
+            <text x="320" y="146" text-anchor="middle" class="t-3" style="font-size:12px">no example</text>
+          </g>
+        </svg>
+        <div class="vlegend">
+          <div style="--c:var(--brick)"><span class="k">1</span><span><b>The centurion</b> says he isn't worthy to have Jesus under his roof, yet asks for one word to heal his servant. Jesus says he hasn't found such trust in Israel.</span></div>
+          <div style="--c:var(--brick)"><span class="k">2</span><span><b>The royal official</b> is told his son will live and sets off home on the strength of the word alone.</span></div>
+          <div style="--c:var(--storm)"><span class="k">3</span><span><b>The father of the mute boy</b> believes in Jesus but doubts the cure, and asks for help with his lack of trust. What's missing is hope.</span></div>
+          <div style="--c:var(--storm)"><span class="k">4</span><span><b>The Israelites at Canaan</b> still believe in God but give up on his promise when they see the giants. Manning calls this tainted trust (ch. 8).</span></div>
+        </div>
+        <p class="src">Cases from ch. 7–8; diagram drawn for this page</p>
+      </div>
+      <div style="display:grid;gap:20px;align-content:start">
+        <ul class="points">
+          <li>Biblical knowledge is felt, not just reasoned. We learn what God is like from Jesus, not Jesus from our ideas of God. So trust means letting go of both our frightening and our comforting images of God.</li>
+          <li>Jesus promised presence and a promise, not protection from suffering. Trust doesn't demand explanations. It knows how to wait.</li>
+          <li>A four-year-old fell off a dock into deep water. When his father finally found him clinging to a post under water, the boy said he had just been waiting for his dad. He had a history of being loved.</li>
+          <li>Trust can't be generated by willpower. What is in our power is paying attention to Jesus' faithfulness, so there is no point in beating ourselves up for lacking it.</li>
+        </ul>
+        <div class="fig" style="background:transparent;border-style:dashed">
+          <blockquote class="pull">“the courage to accept acceptance”</blockquote>
+          <span class="label">Paul Tillich's definition of trust, Manning's favourite (ch. 7)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Tainted Trust</span></div>
+  <div class="body">
+    <div>
+      <h3>Two ways trust goes bad, and a third</h3>
+      <p class="idea">Control tries to do God's part. Presumption leaves our own part to God. Hiding keeps parts of us off-limits.</p>
+    </div>
+    <div class="fig">
+      <h4>Trust sits between two failures</h4>
+      <div class="spectrum" aria-hidden="true"></div>
+      <div class="compare">
+        <div style="--c:var(--storm)"><h5>Control</h5><ul><li>Craves proof, then takes charge</li><li>Endless analysis instead of action</li><li>God reduced to a spectator</li></ul></div>
+        <div class="hl" style="--c:var(--brick)"><h5>Trust</h5><ul><li>Does the hard work</li><li>Leaves the outcome to God</li><li>Acts without guarantees</li></ul></div>
+        <div style="--c:var(--gold)"><h5>Presumption</h5><ul><li>Expects God to intervene on demand</li><li>Skips the work: prayer instead of treatment</li><li>Assumes a good outcome is guaranteed</li></ul></div>
+      </div>
+      <p class="src">Arrangement mine, from ch. 8</p>
+    </div>
+    <ul class="points">
+      <li>Edward Farrell names three obstacles to trust: amnesia (forgetting God's past faithfulness), inertia (not acting on his promise) and mañana (putting off until tomorrow what Jesus asks today).</li>
+      <li>Manning never planned his life. He joined the Franciscans in 1956, became a priest, and would never have imagined marrying or wandering the world as an evangelist. Yet he still catches himself trying to manage his life, and says only his hour of silent prayer each morning stops him trying to run the universe.</li>
+      <li>Father Joe Martin of A.A.: you can't ask Jesus to make you a heart surgeon overnight, and you can't ask him to cure your drinking without meetings, a sponsor and the Twelve Steps.</li>
+      <li>Jesus himself wasn't rescued from the cross. Trust doesn't assume God will step in. Often it begins on the far side of despair, once control and manipulation are exhausted.</li>
+      <li>Keeping our fantasies and worries from Jesus amounts to saying we trust him, within limits.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART 4 ============ -->
+<div class="part" id="living">
+  <span class="label partno">Chapters 9–12</span>
+  <h2>Living it</h2>
+  <p class="lede">What trust looks like day to day: humility without self-contempt, no comparisons, attention to the present, and no self-pity.</p>
+</div>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Humble Confidence</span></div>
+  <div class="body">
+    <div>
+      <h3>Humility isn't self-hatred</h3>
+      <p class="idea">Humility here isn't thinking badly of yourself; it's barely having yourself in view at all.</p>
+    </div>
+    <ul class="points">
+      <li>His parable of two seminarians who insult each other daily to become humble ends with both fleeing into self-destruction. A poor self-image keeps all the attention on the self.</li>
+      <li>The North American church's weakness, he says, is refusing to admit its brokenness, and the face we're afraid of losing is only the impostor's mask.</li>
+      <li>An old Franciscan's advice runs down a ladder: be holy; if not, perfect; if not, good; if not, wise; if none of these, carry your weight of sin to God without bitterness. Then the ladder runs back up.</li>
+      <li>Like seed that grows while the farmer sleeps (Mark 4), trust ripens into confidence on its own. Work hard, but the outcome rests with God.</li>
+    </ul>
+    <div class="fig">
+      <h4>How trust grows, as the book describes it</h4>
+      <ol class="steps">
+        <li><span class="n">1</span><div class="blk" style="--k:6;height:120px"><b>Experience</b><span>A personal encounter: recognising Jesus</span></div></li>
+        <li><span class="n">2</span><div class="blk" style="--k:10;height:150px"><b>Faith + hope</b><span>Felt knowledge of him and reliance on his promise</span></div></li>
+        <li><span class="n">3</span><div class="blk" style="--k:14;height:180px"><b>Trust</b><span>The second conversion, renewed daily</span></div></li>
+        <li><span class="n">4</span><div class="blk" style="--k:18;height:210px"><b>Humble confidence</b><span>Ripens of itself from a track record of grace</span></div></li>
+        <li><span class="n">5</span><div class="blk" style="--k:24;height:240px"><b>Ruthless trust</b><span>No self-pity; Isaac laid on the altar</span></div></li>
+      </ol>
+      <p class="cap">Manning quotes Walter Burghardt's sequence: experience of God, love of God, trust in God. Webster's, he notes, calls trust more instinctive and confidence more grounded. The five-step ladder and the rising heights are my arrangement, not the book's. He insists it is renewed daily rather than climbed once.</p>
+      <p class="src">From ch. 1, 7, 9, 12. Heights illustrative</p>
+    </div>
+    <div class="story">
+      <span class="label">The crab without a shell</span>
+      <p>Before a five-day silent retreat in Grand Coteau, Louisiana, his director told him to come out of the shell of his reputation and come to God as just a human being. In those hours he found a second addiction alongside alcohol: ministry, with its recognition. Even his closeness to God had started to stand in for God himself.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">The Cracked Pot</span></div>
+  <div class="body">
+    <div>
+      <h3>Stop comparing</h3>
+      <p class="idea">The cracked pot was only miserable because it compared itself with the perfect one. It never knew it had been watering flowers along the path.</p>
+    </div>
+    <ul class="points">
+      <li>He refuses to squeeze a moral out of the fable. Moralising turns good news into another burden.</li>
+      <li>He reads Martha and Mary differently: Jesus, tired and afraid on his way to Jerusalem, needs company, not dinner. Mary sees it.</li>
+      <li>He rented a New Orleans office to write and was blocked for three months. Meanwhile he started shopping twice a week for Johnny, an 80-year-old neighbour. In prayer he heard that the shopping was the point and the book was a bonus.</li>
+      <li>We are taught to compare ourselves from infancy. The tumbler monk, who had nothing to offer Mary but his circus routine, worshipped more truly than the high mass upstairs.</li>
+      <li>His theme: trust yourself as someone God has given everything needed to live fully. Daniel Krulish, born with multiple learning disabilities, said he wouldn't want to be anyone else. He died at 23 in a fire on 28 December 1997.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">The Geography of Nowhere</span></div>
+  <div class="body">
+    <div>
+      <h3>Now/here</h3>
+      <p class="idea">Run "now" and "here" together and you get "nowhere". Staying there, fully present, is an act of radical trust, because it is the only place God can be met.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Where the mind goes instead</h4>
+        <svg class="svg-narrow" viewBox="0 0 400 190" role="img" aria-label="A horizontal line. On the left, yesterday, labelled replaying past glories and defeats. On the right, tomorrow, labelled rehearsing fearful scenarios. In the middle a bright point, now/here, labelled where God is met and where fear loses its grip.">
+          <path d="M20 92 H380" class="s-3" stroke-width="1.5" stroke-dasharray="4 5"/>
+          <path d="M28 86 L18 92 L28 98 M372 86 L382 92 L372 98" class="s-3" stroke-width="1.5"/>
+          <path d="M175 66 Q120 30 66 70" class="s-storm" stroke-width="1.8"/>
+          <path d="M70 62 L64 72 L76 72" class="s-storm" stroke-width="1.8"/>
+          <path d="M225 66 Q280 30 334 70" class="s-storm" stroke-width="1.8"/>
+          <path d="M330 62 L336 72 L324 72" class="s-storm" stroke-width="1.8"/>
+          <circle cx="200" cy="92" r="26" class="f-brickt s-brick" stroke-width="2"/>
+          <circle cx="200" cy="92" r="6" class="f-brick"/>
+          <text x="50" y="118" text-anchor="middle" class="t-ink">yesterday</text>
+          <text x="50" y="136" text-anchor="middle" class="t-3" style="font-size:12px">replaying</text>
+          <text x="350" y="118" text-anchor="middle" class="t-ink">tomorrow</text>
+          <text x="398" y="136" text-anchor="end" class="t-3" style="font-size:12px">rehearsing fears</text>
+          <text x="200" y="140" text-anchor="middle" class="hd" style="fill:var(--brick)">now / here</text>
+          <text x="200" y="160" text-anchor="middle" class="t-3" style="font-size:12px">the only place God is met</text>
+          <text x="200" y="26" text-anchor="middle" class="t-storm" style="font-size:12px">the mind ricochets</text>
+        </svg>
+        <p class="cap">A Cajun runs home in a panic because his house is on fire, then remembers his name isn't Richard and he doesn't own a house. Manning, drawing on John Shea, says the terrors of the unknown future are made by the mind alone.</p>
+        <p class="src">Drawn for this page, after ch. 11</p>
+      </div>
+      <ul class="points">
+        <li>The Irish hero Fionn's finest music is the music of what is happening. It can only be heard in the present.</li>
+        <li>Manning's own prayer gets hijacked by yesterday's phone call and tomorrow's lecture. On a three-mile walk on Thanksgiving Eve he never noticed he was walking, only tomorrow's dinner.</li>
+        <li>Thich Nhat Hanh: wash the dishes to wash the dishes, not to get to dessert. Attention to ordinary things is preparation for prayer, and it brings compassion for ourselves and others.</li>
+        <li>Children are natural contemplatives until we hurry them. Nor is perfect presence possible or desirable: calm planning is fine as long as it isn't an escape.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Ruthless Trust</span></div>
+  <div class="body">
+    <div>
+      <h3>Trust without self-pity</h3>
+      <p class="idea">Self-pity is the normal first response to loss. Ruthless trust doesn't suppress it. It puts a time limit on it.</p>
+    </div>
+    <ul class="points">
+      <li>The mystic John Tauler prayed for eight years for a teacher, then found a bleeding beggar on the church steps who said he'd never had a bad day, because he accepted everything from God's hand. Tauler later called trust plus gratitude the shortest way to God.</li>
+      <li>Morrie Schwartz, dying, allowed himself a few tears each morning and then turned to what was still good. Self-pity turns malignant when it drives us into isolation, drinking or drugs.</li>
+      <li>Our culture prizes ruthless competition; Jesus asks for ruthless compassion. Dorothy Day told Manning about Peter Claver refusing to leave a dying slave because the man was Christ.</li>
+      <li>Ruthless trust also faces real guilt. A culture where everyone pleads not guilty can only pretend to be forgiven. Manning keeps falling and getting up, and he says forgiving seventy times seven describes Jesus' own practice.</li>
+      <li>He writes warmly about believers tormented by doubt who refuse to fake it. They are not outsiders among ragamuffins, and they are often the most credible witnesses.</li>
+      <li><strong>AH</strong>, for "at home": breathe it out through the day as a reminder that God lives in you. He says being at home is the best way he knows to strip fear of its power.</li>
+      <li>His closing thought is that trust is the highest form of love, so hearing "I trust you" may mean more to Jesus than hearing "I love you".</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From across the book</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Manning offers no program, but his practices and warnings add up to one, especially for fear.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>When fear rises</h3>
+      <div class="tk"><b>Don't consent, then make a small act of trust</b><span>Worry isn't sin. Grow still for a moment, remember you are told not to be afraid, and hand it over.</span></div>
+      <div class="tk"><b>Come back to now</b><span>Notice whether you are replaying the past or rehearsing the future. Fear lives there; God doesn't.</span></div>
+      <div class="tk"><b>Give self-pity a time limit</b><span>Grieve honestly, like Morrie's morning tears, then stop before it turns into isolation.</span></div>
+      <div class="tk"><b>Look at Jesus when God feels far</b><span>If you want to know how God feels about you, look at Jesus, not at infinity.</span></div>
+    </div>
+    <div class="col">
+      <h3>Every day</h3>
+      <div class="tk"><b>An hour of silence</b><span>Manning's own guard against trying to manage his life.</span></div>
+      <div class="tk"><b>Thank God for all of it</b><span>Including what hurt. Gratitude is his test of whether trust is real.</span></div>
+      <div class="tk"><b>Watch his faithfulness</b><span>You can't force trust. You can pay attention to how often God has shown up.</span></div>
+      <div class="tk"><b>Be gentle with your neuroses</b><span>He checks in with his each morning so he can be kind to his neighbours' later.</span></div>
+    </div>
+    <div class="col">
+      <h3>Watch for</h3>
+      <div class="tk"><b>Waiting for clarity</b><span>Discern with others, then act. Proof won't arrive first.</span></div>
+      <div class="tk"><b>Presumption</b><span>Prayer doesn't replace the work. Ninety meetings in ninety days.</span></div>
+      <div class="tk"><b>Hidden rooms</b><span>Tell Jesus everything, and tell a few friends most of it.</span></div>
+      <div class="tk"><b>Comparison</b><span>Nobody will ask you why you weren't Moses.</span></div>
+      <div class="tk"><b>Self-contempt dressed as humility</b><span>Thinking badly of yourself is still thinking about yourself.</span></div>
+    </div>
+  </div>
+
+  <div class="xlink">
+    <span class="label">Read alongside · Faith</span>
+    <a href="../prodigal-son/">The Return of the Prodigal Son →</a>
+    <p>Manning leans on Henri Nouwen throughout: the last book full of the word trust, gratitude for the whole of one's life, the hard work of giving up control. His own picture of trust ends in coming home. Nouwen's book on Rembrandt's painting is about exactly that homecoming.</p>
+  </div>
+</section>
+
+<p style="max-width:70ch;margin:32px auto;padding:0 16px;font-size:15px">Also on fear and trust: <a href="../lifesigns/"><em>Lifesigns</em></a> · <a href="../anxious-for-nothing/"><em>Anxious for Nothing</em></a> · <a href="../dont-give-the-enemy-a-seat/"><em>Don't Give the Enemy a Seat at Your Table</em></a>.</p>
+<footer>
+  <p>A summary in my own words of Brennan Manning, <em>Ruthless Trust: The Ragamuffin's Path to God</em> (HarperSanFrancisco, 2000; read in the HarperCollins e-book edition), with a foreword by Richard J. Foster. Short quotations are from the book. Figures and events are as reported in the book, and Manning's account of his own life is given as he tells it. The four-part grouping, the timeline order of undated events, and all diagrams were made for this page; the heights in the growth ladder are illustrative. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Nov 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  function rgba(hex, a) {
+    var h = hex.replace("#", "");
+    if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+    var n = parseInt(h, 16);
+    return "rgba(" + (n >> 16 & 255) + "," + (n >> 8 & 255) + "," + (n & 255) + "," + a + ")";
+  }
+
+  /* --- Hero: wind streams across; two trees on a cliff bend and hold --- */
+  var canvas = document.getElementById("wind");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  var streaks = [];
+  for (var i = 0; i < 22; i++) streaks.push({ y: ((i * 37) % 100) / 100, o: (i * 173) % 997, len: 30 + (i * 29) % 70, sp: 0.09 + ((i * 13) % 10) / 100 });
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function tree(bx, by, scale, gust, ink) {
+    var lean = 0.55 + gust * 0.25;
+    var tx = bx + scale * lean * 0.9, ty = by - scale;
+    ctx.strokeStyle = ink; ctx.lineCap = "round";
+    ctx.lineWidth = Math.max(2, scale * 0.06);
+    ctx.beginPath(); ctx.moveTo(bx, by);
+    ctx.quadraticCurveTo(bx + scale * 0.05, by - scale * 0.6, tx, ty); ctx.stroke();
+    ctx.lineWidth = Math.max(1.2, scale * 0.03);
+    ctx.beginPath(); ctx.moveTo(bx + scale * 0.12, by - scale * 0.45);
+    ctx.quadraticCurveTo(bx + scale * 0.5, by - scale * 0.55, bx + scale * (0.95 + gust * 0.2), by - scale * 0.48); ctx.stroke();
+    ctx.fillStyle = ink;
+    var blobs = [[0, 0, .34, .14], [.32, .05, .3, .12], [.6, .1, .26, .1], [.86 + gust * .1, .16, .2, .08]];
+    blobs.forEach(function (b) {
+      ctx.beginPath();
+      ctx.ellipse(tx + b[0] * scale, ty + b[1] * scale, b[2] * scale, b[3] * scale, 0.12 + gust * 0.08, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    ctx.beginPath();
+    ctx.ellipse(bx + scale * (0.98 + gust * 0.22), by - scale * 0.48, scale * 0.18, scale * 0.07, 0.1, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var storm = css("--storm"), sepia = css("--sepia"), ink2 = css("--ink-2"), brick = css("--brick");
+    var t = reduce ? 0 : time;
+    var gust = 0.5 + 0.35 * Math.sin(t * 0.0011) + 0.15 * Math.sin(t * 0.0037);
+
+    // wind streaks
+    ctx.lineCap = "round"; ctx.lineWidth = 1.5;
+    streaks.forEach(function (s) {
+      var span = w + 200;
+      var x = ((s.o + t * s.sp * (0.7 + gust)) % span) - 100;
+      var y = 10 + s.y * (hgt * 0.62);
+      ctx.strokeStyle = rgba(storm, 0.35);
+      ctx.beginPath(); ctx.moveTo(x, y);
+      ctx.quadraticCurveTo(x + s.len / 2, y - 3, x + s.len, y); ctx.stroke();
+    });
+
+    // cliff
+    var cs = Math.max(w * 0.42, w - 520);
+    var top = hgt * 0.72;
+    ctx.fillStyle = rgba(sepia, 0.32);
+    ctx.beginPath();
+    ctx.moveTo(cs - 40, hgt);
+    ctx.bezierCurveTo(cs, hgt * 0.95, cs + 30, top + 6, cs + 90, top);
+    ctx.lineTo(w, top - 6); ctx.lineTo(w, hgt); ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = rgba(brick, 0.7); ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(cs + 90, top); ctx.lineTo(w, top - 6); ctx.stroke();
+
+    // grass
+    ctx.strokeStyle = rgba(sepia, 0.8); ctx.lineWidth = 1.2;
+    for (var gx = cs + 100; gx < w; gx += 9) {
+      var gy = top - ((gx - cs - 90) / (w - cs - 90)) * 6;
+      ctx.beginPath(); ctx.moveTo(gx, gy);
+      ctx.quadraticCurveTo(gx + 2, gy - 6, gx + 5 + gust * 5, gy - 9); ctx.stroke();
+    }
+
+    // trees
+    var sc = Math.min(hgt * 0.62, 90);
+    var b1 = cs + (w - cs) * 0.35, b2 = cs + (w - cs) * 0.6;
+    tree(b1, top - 3, sc, gust, rgba(ink2, 0.85));
+    tree(b2, top - 4, sc * 0.78, gust * 1.1, rgba(ink2, 0.7));
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

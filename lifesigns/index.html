@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Lifesigns by Henri Nouwen – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief, same system as the other Nouwen pages.
+   Colours come from the cover: the warm grey of the black-and-white photograph
+   (hands holding a small bird) and the olive-gold title band. Fear gets a cool
+   slate; the three lifesigns take umber (intimacy), olive (fecundity) and gold (ecstasy). */
+:root {
+  --paper: #f6f4ee;
+  --paper-2: #ebe7dc;
+  --card: #fdfcf8;
+  --ink: #1e1d19;
+  --ink-2: #4a4840;
+  --ink-3: #7a776c;
+  --rule: #dcd7ca;
+
+  --gold: #8a7424;
+  --band: #a38b35;
+
+  --fear: #59636f;
+  --intimacy: #8c5a2e;
+  --fecundity: #5a6c27;
+  --ecstasy: #9a760c;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #151410;
+    --paper-2: #1f1d17;
+    --card: #23211b;
+    --ink: #efebe0;
+    --ink-2: #c3beb0;
+    --ink-3: #8f8a7c;
+    --rule: #37342b;
+    --gold: #dcc062;
+    --band: #c9ac4c;
+    --fear: #9ba6b4;
+    --intimacy: #dc9d68;
+    --fecundity: #a9bd6a;
+    --ecstasy: #e6c04f;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #151410;
+  --paper-2: #1f1d17;
+  --card: #23211b;
+  --ink: #efebe0;
+  --ink-2: #c3beb0;
+  --ink-3: #8f8a7c;
+  --rule: #37342b;
+  --gold: #dcc062;
+  --band: #c9ac4c;
+  --fear: #9ba6b4;
+  --intimacy: #dc9d68;
+  --fecundity: #a9bd6a;
+  --ecstasy: #e6c04f;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  overflow-wrap: break-word;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+.c-fear      { --c: var(--fear); }
+.c-intimacy  { --c: var(--intimacy); }
+.c-fecundity { --c: var(--fecundity); }
+.c-ecstasy   { --c: var(--ecstasy); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(52px, 10.5vw, 132px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.03em;
+  color: var(--gold);
+}
+.hero h1 .pre {
+  display: block;
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 700;
+  font-stretch: 100%;
+  letter-spacing: -.005em;
+  line-height: 1.1;
+  margin: 0 0 .35em .08em;
+  color: var(--ink-2);
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  aspect-ratio: 720 / 1080;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 34, 15, .45), 0 8px 18px -10px rgba(40, 34, 15, .3);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.glowband { position: relative; margin-top: 28px; }
+.glowband canvas { display: block; width: 100%; height: 120px; border-radius: 6px; }
+.glowband .ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 8px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--c, var(--ink));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part h2 em { font-style: normal; color: var(--c); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--c, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--c, var(--ink));
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(16px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-width: 0;
+}
+.fig svg.wide { max-width: 640px; margin-inline: auto; }
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-mute { fill: var(--ink-3); }
+.fig svg .disp { font-family: var(--display); font-weight: 800; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 36px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--gold); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+.map { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--c, var(--ink)); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 22px; font-weight: 850; font-stretch: 112%; letter-spacing: -.01em; color: var(--c, var(--ink)); }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px; font-size: 15.5px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 15.5px; }
+
+.intro2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+.steps3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.steps3 div { border-top: 3px solid var(--c, var(--ink)); padding-top: 10px; display: grid; gap: 4px; align-content: start; }
+.steps3 b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; }
+.steps3 span { font-size: 14.5px; color: var(--ink-2); line-height: 1.45; }
+
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+  color: var(--c, var(--ink));
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+.toolkit { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 3px solid var(--c, var(--ink)); padding-top: 12px; color: var(--c, var(--ink)); }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.xlink { display: grid; gap: 8px; border-left: 3px solid var(--band); padding: 6px 0 6px 20px; }
+.xlink a { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 22px; line-height: 1.2; }
+.xlink p + .label { margin-top: 10px; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+@media (max-width: 1000px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 220px; order: -1; transform: rotate(-1.2deg); }
+  .intro2, .epilogue, .part { grid-template-columns: 1fr; }
+  .toolkit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare, .steps3, .toolkit, .map { grid-template-columns: 1fr; }
+  .chapter .idea { font-size: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Henri J. M. Nouwen · Image Books</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#pattern">The pattern</a>
+    <a href="#intimacy">Intimacy</a>
+    <a href="#fecundity">Fecundity</a>
+    <a href="#ecstasy">Ecstasy</a>
+    <a href="#signs">Signs of life</a>
+    <a href="#toolkit">Practices</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span class="pre">Henri Nouwen's</span>Lifesigns</h1>
+    <p class="sub">Intimacy, fecundity and ecstasy in Christian perspective</p>
+    <p class="dek">A priest spending a year among people with mental disabilities in a French village asks why fear runs so much of our lives, and names three signs that we have moved out of its house and into the house of love.</p>
+    <div class="byline label">
+      <span>2 houses</span><span>3 lifesigns</span><span>1 year at l'Arche</span><span>first published 1986</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" width="720" height="1080" alt="Cover of Lifesigns by Henri J. M. Nouwen: a black-and-white photograph of two cupped hands holding a small bird, above an olive-gold band with the title in white capitals and the subtitle in gold on white">
+</div>
+
+<div class="glowband" aria-hidden="true">
+  <canvas id="houses"></canvas>
+  <div class="ends label"><span>House of fear</span><span>House of love</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Fear is useful to somebody</h2>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p>Nouwen opens with an observation. The more people he knows, the more he sees how much fear decides for them. Most of us, he says, live in a <strong style="color:var(--fear)">house of fear</strong> most of the time, and treat it as the normal place to plan a life.</p>
+      <p>His sharpest question is who gains. Whoever can make us afraid can make us obey. Behind the fearful child, student, patient, employee or believer there is usually someone holding them in place: a father, a teacher, a boss, a bishop, a church, even a picture of God. Fear, in his reading, is one of the most effective tools of control.</p>
+      <p>The tool works through questions. The news and the culture hand us their "what if" and "how can I" questions, and once we adopt them, every answer opens a new worry.</p>
+      <blockquote class="pull c-fear">“Fear engenders fear. Fear never gives birth to love.”</blockquote>
+      <span class="label">Nouwen, Introduction</span>
+      <p>So the questions we let steer us matter as much as the answers. In the gospels, he notes, Jesus almost never answered the questions he was given. He set them aside as worries about rank and control, and changed the question. Believers, meanwhile, hear talk of peace and reply "yes, but…", which shows which house they live in.</p>
+      <p>The way out is a voice that keeps sounding through scripture: <em>do not be afraid</em>. The house of love, he insists, is offered in the middle of an anxious world, not only after death.</p>
+      <p>The three words came from Jean Vanier, founder of l'Arche, a network of communities for people with mental disabilities. On a silent Pentecost retreat in Chicago he remarked, almost in passing, that every person is called to intimacy, fecundity and ecstasy. Nouwen later found all three in Jesus' farewell address. He wrote the book during a year at Trosly-Breuil, France, from August 1985.</p>
+    </div>
+    <div class="fig">
+      <h4>Two houses</h4>
+      <svg viewBox="0 0 440 496" role="img" aria-label="Two houses side by side. The house of fear, on the left, holds a branching tree of questions: one what-if question splits into two, then four, then eight. Above it a figure labelled whoever sets the questions holds the power. The house of love, on the right, has three rooms: intimacy from John 15 verse 4, fecundity from verse 5, ecstasy from verse 11. An arrow from left to right is labelled do not be afraid. A dashed arrow back from right to left is labelled yes, but.">
+        <defs>
+          <marker id="ar-h" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--gold)"/></marker>
+          <marker id="ar-hf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--fear)"/></marker>
+        </defs>
+        <!-- house of fear -->
+        <path d="M10 140 L105 70 L200 140 L200 400 L10 400 Z" style="fill:color-mix(in srgb, var(--fear) 9%, var(--card));stroke:var(--fear)" stroke-width="2"/>
+        <text x="105" y="24" text-anchor="middle" font-size="14" class="disp" style="fill:var(--fear)">House of fear</text>
+        <text x="105" y="44" text-anchor="middle" font-size="11" class="t-mute">whoever sets the</text>
+        <text x="105" y="58" text-anchor="middle" font-size="11" class="t-mute">questions holds power</text>
+        <!-- question tree -->
+        <g style="stroke:var(--fear)" stroke-width="1.4" fill="none">
+          <path d="M105 372 L105 330"/>
+          <path d="M105 330 L60 285 M105 330 L150 285"/>
+          <path d="M60 285 L38 238 M60 285 L82 238 M150 285 L128 238 M150 285 L172 238"/>
+          <path d="M38 238 L28 192 M38 238 L48 192 M82 238 L72 192 M82 238 L92 192 M128 238 L118 192 M128 238 L138 192 M172 238 L162 192 M172 238 L182 192"/>
+        </g>
+        <g style="fill:var(--fear)">
+          <circle cx="105" cy="330" r="5"/>
+          <circle cx="60" cy="285" r="4.5"/><circle cx="150" cy="285" r="4.5"/>
+          <circle cx="38" cy="238" r="4"/><circle cx="82" cy="238" r="4"/><circle cx="128" cy="238" r="4"/><circle cx="172" cy="238" r="4"/>
+          <circle cx="28" cy="192" r="3.4"/><circle cx="48" cy="192" r="3.4"/><circle cx="72" cy="192" r="3.4"/><circle cx="92" cy="192" r="3.4"/><circle cx="118" cy="192" r="3.4"/><circle cx="138" cy="192" r="3.4"/><circle cx="162" cy="192" r="3.4"/><circle cx="182" cy="192" r="3.4"/>
+        </g>
+        <text x="105" y="166" text-anchor="middle" font-size="11" class="t-mute">? ? ? ? ? ? ? ?</text>
+        <text x="105" y="390" text-anchor="middle" font-size="12" class="t-ink">“what if…?”</text>
+        <!-- house of love -->
+        <path d="M240 140 L335 70 L430 140 L430 400 L240 400 Z" style="fill:color-mix(in srgb, var(--band) 12%, var(--card));stroke:var(--gold)" stroke-width="2"/>
+        <text x="335" y="24" text-anchor="middle" font-size="14" class="disp" style="fill:var(--gold)">House of love</text>
+        <text x="335" y="44" text-anchor="middle" font-size="11" class="t-mute">offered here,</text>
+        <text x="335" y="58" text-anchor="middle" font-size="11" class="t-mute">not only after death</text>
+        <rect x="256" y="158" width="158" height="68" rx="5" style="fill:color-mix(in srgb, var(--intimacy) 13%, var(--card));stroke:var(--intimacy)" stroke-width="1.6"/>
+        <text x="335" y="186" text-anchor="middle" font-size="15" class="disp" style="fill:var(--intimacy)">Intimacy</text>
+        <text x="335" y="207" text-anchor="middle" font-size="11">home · John 15:4</text>
+        <rect x="256" y="238" width="158" height="68" rx="5" style="fill:color-mix(in srgb, var(--fecundity) 13%, var(--card));stroke:var(--fecundity)" stroke-width="1.6"/>
+        <text x="335" y="266" text-anchor="middle" font-size="15" class="disp" style="fill:var(--fecundity)">Fecundity</text>
+        <text x="335" y="287" text-anchor="middle" font-size="11">fruit · John 15:5</text>
+        <rect x="256" y="318" width="158" height="68" rx="5" style="fill:color-mix(in srgb, var(--ecstasy) 13%, var(--card));stroke:var(--ecstasy)" stroke-width="1.6"/>
+        <text x="335" y="346" text-anchor="middle" font-size="15" class="disp" style="fill:var(--ecstasy)">Ecstasy</text>
+        <text x="335" y="367" text-anchor="middle" font-size="11">joy · John 15:11</text>
+        <!-- crossings -->
+        <path d="M120 444 C170 430, 260 430, 318 430" fill="none" style="stroke:var(--gold)" stroke-width="2" marker-end="url(#ar-h)"/>
+        <text x="220" y="422" text-anchor="middle" font-size="12" style="fill:var(--gold)">“do not be afraid”</text>
+        <path d="M318 456 C260 474, 170 474, 120 462" fill="none" style="stroke:var(--fear)" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#ar-hf)"/>
+        <text x="220" y="492" text-anchor="middle" font-size="12" style="fill:var(--fear)">“yes, but…”</text>
+      </svg>
+      <p class="cap">Schematic of the introduction, drawn for this page. Each fearful question hides more underneath. The voice calls people across; "yes, but" pulls them back.</p>
+    </div>
+  </div>
+
+  <div class="stats" style="margin-top:28px">
+    <div class="stat"><span class="big num">1964</span><p>Jean Vanier takes Raphaël and Philippe, two men from a mental institution with no family, into a small home. The first l'Arche.</p></div>
+    <div class="stat"><span class="big num">19</span><p>Countries the book lists with l'Arche homes by the mid-1980s, from Canada and Haiti to Burkina Faso and India.</p></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col c-fear">
+      <span class="label">Opening</span>
+      <h3>Two houses</h3>
+      <ol><li><span>In</span><a href="#idea"><b>From the House of Fear to the House of Love</b></a></li></ol>
+    </div>
+    <div class="col c-intimacy">
+      <span class="label">Part one</span>
+      <h3>Intimacy</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Intimacy and fear</b></a></li>
+        <li><span>02</span><a href="#ch2"><b>Intimacy and love</b></a></li>
+        <li><span>03</span><a href="#ch3"><b>Intimacy and solidarity</b></a></li>
+      </ol>
+    </div>
+    <div class="col c-fecundity">
+      <span class="label">Part two</span>
+      <h3>Fecundity</h3>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>Fecundity and fear</b></a></li>
+        <li><span>05</span><a href="#ch5"><b>Fecundity and love</b></a></li>
+        <li><span>06</span><a href="#ch6"><b>Fecundity and mission</b></a></li>
+      </ol>
+    </div>
+    <div class="col c-ecstasy">
+      <span class="label">Part three</span>
+      <h3>Ecstasy</h3>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>Ecstasy and fear</b></a></li>
+        <li><span>08</span><a href="#ch8"><b>Ecstasy and love</b></a></li>
+        <li><span>09</span><a href="#ch9"><b>Ecstasy and a new international order</b></a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Closing</span>
+      <h3>Signs of life</h3>
+      <ol>
+        <li><span>C</span><a href="#signs"><b>Signs of Life</b></a></li>
+        <li><span>P</span><a href="#prayer"><b>A Final Prayer</b></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PATTERN ============ -->
+<section id="pattern">
+  <div class="sec-head">
+    <span class="label">The shape of the argument</span>
+    <h2>Not a happy medium</h2>
+    <p class="lede">Each part makes the same three moves. Fear produces two opposite counterfeits. Love is not a compromise between them but a different level altogether. And every personal sign has a worldwide side.</p>
+  </div>
+  <div class="intro2">
+    <div class="fig">
+      <h4>Each lifesign and its two fearful counterfeits</h4>
+      <svg viewBox="0 0 440 450" role="img" aria-label="Three rows. Each has a lower line, the level of fear, with two extremes at its ends and a crossed-out midpoint labelled happy medium. Above sits the lifesign on a higher level, with an arrow out to its global side. Row one: too distant and too close; intimacy; solidarity. Row two: sterility and productivity; fecundity; mission. Row three: routine and rootlessness; ecstasy; a new international order.">
+        <defs>
+          <marker id="ar-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--ink-3)"/></marker>
+        </defs>
+        <text x="0" y="12" font-size="11" class="t-mute">LEVEL OF LOVE ↑</text>
+        <text x="440" y="12" text-anchor="end" font-size="11" class="t-mute">GLOBAL SIDE →</text>
+        <!-- row template: y offsets 20, 165, 310 -->
+        <g transform="translate(0,22)" class="c-intimacy">
+          <rect x="80" y="10" width="150" height="40" rx="6" style="fill:color-mix(in srgb, var(--c) 14%, var(--card));stroke:var(--c)" stroke-width="2"/>
+          <text x="155" y="36" text-anchor="middle" font-size="16" class="disp" style="fill:var(--c)">Intimacy</text>
+          <line x1="155" y1="94" x2="155" y2="56" style="stroke:var(--ink-3)" stroke-width="1.3" stroke-dasharray="3 3" marker-end="url(#ar-p)"/>
+          <line x1="230" y1="30" x2="296" y2="30" style="stroke:var(--c)" stroke-width="1.8" marker-end="url(#ar-p)"/>
+          <text x="302" y="35" font-size="13" class="t-ink">solidarity</text>
+          <line x1="16" y1="100" x2="294" y2="100" style="stroke:var(--fear)" stroke-width="2"/>
+          <circle cx="16" cy="100" r="6" style="fill:var(--fear)"/><circle cx="294" cy="100" r="6" style="fill:var(--fear)"/>
+          <text x="10" y="124" font-size="12" class="t-ink">too distant</text>
+          <text x="300" y="124" text-anchor="end" font-size="12" class="t-ink">too close</text>
+          <text x="10" y="138" font-size="11.5" class="t-mute">flee</text>
+          <text x="300" y="138" text-anchor="end" font-size="11.5" class="t-mute">cling</text>
+          <circle cx="155" cy="100" r="6" style="fill:var(--card);stroke:var(--fear)" stroke-width="1.5"/>
+          <path d="M150 95 L160 105 M160 95 L150 105" style="stroke:var(--fear)" stroke-width="1.5"/>
+          <text x="155" y="124" text-anchor="middle" font-size="11.5" class="t-mute">happy medium?</text>
+        </g>
+        <g transform="translate(0,166)" class="c-fecundity">
+          <rect x="80" y="10" width="150" height="40" rx="6" style="fill:color-mix(in srgb, var(--c) 14%, var(--card));stroke:var(--c)" stroke-width="2"/>
+          <text x="155" y="36" text-anchor="middle" font-size="16" class="disp" style="fill:var(--c)">Fecundity</text>
+          <line x1="155" y1="94" x2="155" y2="56" style="stroke:var(--ink-3)" stroke-width="1.3" stroke-dasharray="3 3" marker-end="url(#ar-p)"/>
+          <line x1="230" y1="30" x2="296" y2="30" style="stroke:var(--c)" stroke-width="1.8" marker-end="url(#ar-p)"/>
+          <text x="302" y="35" font-size="13" class="t-ink">mission</text>
+          <line x1="16" y1="100" x2="294" y2="100" style="stroke:var(--fear)" stroke-width="2"/>
+          <circle cx="16" cy="100" r="6" style="fill:var(--fear)"/><circle cx="294" cy="100" r="6" style="fill:var(--fear)"/>
+          <text x="10" y="124" font-size="12" class="t-ink">sterility</text>
+          <text x="300" y="124" text-anchor="end" font-size="12" class="t-ink">productivity</text>
+          <text x="10" y="138" font-size="11.5" class="t-mute">withdraw</text>
+          <text x="300" y="138" text-anchor="end" font-size="11.5" class="t-mute">manufacture</text>
+          <circle cx="155" cy="100" r="6" style="fill:var(--card);stroke:var(--fear)" stroke-width="1.5"/>
+          <path d="M150 95 L160 105 M160 95 L150 105" style="stroke:var(--fear)" stroke-width="1.5"/>
+          <text x="155" y="124" text-anchor="middle" font-size="11.5" class="t-mute">happy medium?</text>
+        </g>
+        <g transform="translate(0,310)" class="c-ecstasy">
+          <rect x="80" y="10" width="150" height="40" rx="6" style="fill:color-mix(in srgb, var(--c) 14%, var(--card));stroke:var(--c)" stroke-width="2"/>
+          <text x="155" y="36" text-anchor="middle" font-size="16" class="disp" style="fill:var(--c)">Ecstasy</text>
+          <line x1="155" y1="94" x2="155" y2="56" style="stroke:var(--ink-3)" stroke-width="1.3" stroke-dasharray="3 3" marker-end="url(#ar-p)"/>
+          <line x1="230" y1="30" x2="296" y2="30" style="stroke:var(--c)" stroke-width="1.8" marker-end="url(#ar-p)"/>
+          <text x="302" y="27" font-size="13" class="t-ink">a new inter-</text>
+          <text x="302" y="43" font-size="13" class="t-ink">national order</text>
+          <line x1="16" y1="100" x2="294" y2="100" style="stroke:var(--fear)" stroke-width="2"/>
+          <circle cx="16" cy="100" r="6" style="fill:var(--fear)"/><circle cx="294" cy="100" r="6" style="fill:var(--fear)"/>
+          <text x="10" y="124" font-size="12" class="t-ink">routine</text>
+          <text x="300" y="124" text-anchor="end" font-size="12" class="t-ink">rootlessness</text>
+          <text x="10" y="138" font-size="11.5" class="t-mute">freeze</text>
+          <text x="300" y="138" text-anchor="end" font-size="11.5" class="t-mute">scatter</text>
+          <circle cx="155" cy="100" r="6" style="fill:var(--card);stroke:var(--fear)" stroke-width="1.5"/>
+          <path d="M150 95 L160 105 M160 95 L150 105" style="stroke:var(--fear)" stroke-width="1.5"/>
+          <text x="155" y="124" text-anchor="middle" font-size="11.5" class="t-mute">happy medium?</text>
+        </g>
+      </svg>
+      <p class="cap">Drawn for this page from the book's structure. The grey line is where fear lives; both of its ends are fear's work. Nouwen explicitly rejects placing the lifesign at the midpoint: it sits on a different level, where the old choice stops being the guiding question.</p>
+    </div>
+    <div class="prose">
+      <p>This structure is the book's most useful idea for anyone reading it about fear. Fear does not only make us cold or only make us clingy. It does <em>both</em>, and the two look like opposites while serving one purpose: staying safe and in control.</p>
+      <p>The obvious fix is balance. Nouwen grants that this is sensible, then argues it leaves love on fear's ground, renegotiated forever. The real alternative comes as a gift, and from there the old question of how close, how much or how fixed stops running the show.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART ONE: INTIMACY ============ -->
+<div class="part c-intimacy" id="intimacy">
+  <span class="label partno">Part one · John 15:4</span>
+  <h2><em>Intimacy</em></h2>
+  <p class="lede">The first sign is home: a place where we can drop our defences. Nouwen thinks no word sums up the suffering of his century better than "homeless", whether people are driven from their countries or only living among strangers in small student rooms.</p>
+</div>
+
+<div class="prose" style="margin-top:28px">
+  <p class="muted">Even with so many broken homes, he notes, the word still carries warmth. Faith speaks of death as finally coming home, and he points to Rembrandt's painting of the prodigal son, the old father holding his worn-out child, as the picture of that longing.</p>
+</div>
+
+<article class="chapter c-intimacy" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Intimacy and fear</span></div>
+  <div class="body">
+    <div>
+      <h3>Fear runs away or clings</h3>
+      <p class="idea">Fear puts people at a "safe" distance or pulls them into a "safe" closeness. Neither makes a home.</p>
+    </div>
+    <ul class="points">
+      <li>The disciples did both within days: they fled at Gethsemane, then huddled in a closed room.</li>
+      <li>Nouwen admits he does the same with people he fears. He leaves the room or speaks in flat phrases, or he stays too long, laughs too loudly and agrees too quickly. Either way he feels unfree and resents their power over him.</li>
+      <li>Society copies the pattern. Prisons, mental hospitals and refugee camps are built out of sight; we choose safe topics and safe guests. Or we join the clique, sect or club that huddles against outsiders, which grows tempting when fear turns apocalyptic.</li>
+      <li>Both block what intimacy needs most: confessing our wounds and forgiving each other. Distance lets us ignore the other. Closeness gives us an excuse never to say we were hurt.</li>
+      <li>Vanier saw people with disabilities caught in exactly this: left in cold institutions or smothered by overprotection, rejected as aliens or held as property, never given room to grow at their own pace.</li>
+    </ul>
+    <div class="story c-intimacy">
+      <span class="label">The story · How l'Arche began</span>
+      <p>Vanier spent ten years in the British and Canadian navies, studied philosophy and taught in Toronto, still unsure of his calling. In 1964, in the village of Trosly-Breuil, he invited Raphaël and Philippe, two men from an institution with no family, to live with him. He knew he could never send them back. He named the home after Noah's ark, a refuge for frightened people.</p>
+    </div>
+    <div class="fig">
+      <h4>The cupped hand</h4>
+      <svg class="wide" viewBox="0 0 440 190" role="img" aria-label="Three hand shapes holding a small bird. Open hand: a flat line, the bird falls off with an arrow downward, labelled too distant. Closed hand: a tight circle squeezing the bird, labelled too close. Cupped hand: a U-shaped curve with the bird resting inside and space around it, labelled room to grow.">
+        <defs>
+          <marker id="ar-c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--fear)"/></marker>
+        </defs>
+        <!-- open -->
+        <path d="M14 70 Q70 78 126 70" fill="none" style="stroke:var(--fear)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="104" cy="104" r="8" style="fill:var(--fear)"/>
+        <path d="M96 62 Q110 70 106 90" fill="none" style="stroke:var(--fear)" stroke-width="1.4" marker-end="url(#ar-c)"/>
+        <text x="70" y="140" text-anchor="middle" font-size="14" class="disp" style="fill:var(--fear)">Fully open</text>
+        <text x="70" y="158" text-anchor="middle" font-size="11">the bird falls</text>
+        <text x="70" y="174" text-anchor="middle" font-size="11" class="t-mute">too distant</text>
+        <!-- closed -->
+        <circle cx="220" cy="72" r="20" style="fill:color-mix(in srgb, var(--fear) 25%, var(--card));stroke:var(--fear)" stroke-width="5"/>
+        <circle cx="220" cy="72" r="8" style="fill:var(--fear)"/>
+        <text x="220" y="140" text-anchor="middle" font-size="14" class="disp" style="fill:var(--fear)">Closed</text>
+        <text x="220" y="158" text-anchor="middle" font-size="11">the bird is crushed</text>
+        <text x="220" y="174" text-anchor="middle" font-size="11" class="t-mute">too close</text>
+        <!-- cupped -->
+        <path d="M318 34 Q318 104 370 104 Q422 104 422 34" fill="none" style="stroke:var(--intimacy)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="370" cy="78" r="8" style="fill:var(--gold)"/>
+        <circle cx="370" cy="78" r="22" fill="none" style="stroke:var(--gold)" stroke-width="1" stroke-dasharray="2 4"/>
+        <text x="370" y="140" text-anchor="middle" font-size="14" class="disp" style="fill:var(--intimacy)">Cupped</text>
+        <text x="370" y="158" text-anchor="middle" font-size="11">space to grow</text>
+        <text x="370" y="174" text-anchor="middle" font-size="11" class="t-mute">intimacy</text>
+      </svg>
+      <p class="cap">Vanier's teaching gesture, as Nouwen describes it, drawn schematically. He holds out a hand as if it held a wounded bird and asks what happens if he opens it fully, then if he closes it. The cover photograph of this edition shows the same gesture.</p>
+      <div>
+        <blockquote class="pull c-intimacy">“An intimate place is like my cupped hand, neither totally open nor totally closed.”</blockquote>
+        <span class="label">Jean Vanier, as quoted by Nouwen</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-intimacy" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Intimacy and love</span></div>
+  <div class="body">
+    <div>
+      <h3>A home you are given, not one you negotiate</h3>
+      <p class="idea">Intimacy is not the midpoint between too far and too close. It is a wider space, made by God, where that question stops steering.</p>
+    </div>
+    <ul class="points">
+      <li>Popular psychology treats relationships as a negotiation: closeness, but not too much; support, but with space. True enough, Nouwen says, but it leaves love under constant pressure from fear on both sides.</li>
+      <li>The "perfect love" that casts out fear is not compatibility or attraction but God's own love, which we are invited into. The home is made by God, not by human hands.</li>
+      <li>The tragedy is that we search for that home in competence, fame, success, pleasure or altered states, and never look in our own hearts. We become, in his phrase, <em>“people who have an address but are never home”</em>.</li>
+      <li>Spiritual discipline means coming home again and again to hear the "first love": you were loved, accepted and safe before anyone else could give or withhold it. Conversion is coming home. Prayer is how.</li>
+      <li>His model is the hesychast tradition of the Eastern church (<em>hesychia</em> means rest): descending with the mind into the heart, often with the Jesus Prayer. He names Basil Pennington's centering prayer and John Main's Maranatha prayer as variations.</li>
+      <li>At l'Arche, he learned, wounded people cannot be each other's whole home. Expecting it puts superhuman demands on others and ends in hurt. Lasting bonds rest on God's covenant; what people owe each other is a readiness to confess weakness and keep forgiving.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-intimacy" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Intimacy and solidarity</span></div>
+  <div class="body">
+    <div>
+      <h3>The innermost room is as wide as humanity</h3>
+      <p class="idea">Intimacy with God does not shrink into privacy. Finding God's heart means finding everyone already gathered there.</p>
+    </div>
+    <ul class="points">
+      <li>We hear "intimate" as small and exclusive. Nouwen argues the reverse: through the incarnation all human flesh has been taken up, so a Christ without all people is not the true Christ. Lose this link and spirituality turns either private or narrowly activist.</li>
+      <li>The hardest idea, he says, is that God loves everyone with the same unlimited love and each person uniquely. In a competitive world we suspect our being chosen requires someone else's rejection. Deeper prayer frees us to admire other people's gifts without feeling smaller.</li>
+      <li>He separates <strong>action</strong> from <strong>activism</strong>. The activist anxiously tries to heal and restore a broken world. Christian action, in his view, expresses a unity that already exists and points to the one who heals.</li>
+    </ul>
+    <div class="story c-intimacy">
+      <span class="label">The story · An American birthday at La Promesse</span>
+      <p>For the birthday of Brad, an American assistant, a foyer of fourteen residents and assistants from six countries served a "real American meal" on paper plates, with candles stuck in the hamburgers. Among those thirty people, Nouwen saw that here the poor were the hosts, and people of means had come from many countries to their table.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART TWO: FECUNDITY ============ -->
+<div class="part c-fecundity" id="fecundity">
+  <span class="label partno">Part two · John 15:5</span>
+  <h2><em>Fecundity</em></h2>
+  <p class="lede">The second sign is fruitfulness, the sense that your life can bring forth life. Its absence is a quieter epidemic: days that are busy, dull and convinced they have nothing to give.</p>
+</div>
+
+<article class="chapter c-fecundity" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Fecundity and fear</span></div>
+  <div class="body">
+    <div>
+      <h3>Sterility, or frantic productivity</h3>
+      <p class="idea">Fear either shuts us down or drives us to manufacture. Both betray a doubt that our lives can bear fruit.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Sterility</strong> is withdrawal: the more threats we sense, the more we retreat, until we are out of touch with others. Its voice says leave me alone, I mind my own business, there is nothing I can do. People can feel it with children, a job and plenty of success.</li>
+      <li>In the rich world people feel like spare parts in a machine, bored while busy. Among the very poor, the distance from the powerful breeds fatalism. Both end in "I have nothing to offer".</li>
+      <li><strong>Productivity</strong> is the opposite flight. Products are things we make, can repeat and can claim. Friends, deals and decisions can all become products, and we introduce people by their output, as if we are what we make.</li>
+      <li>He sees it in universities. "School" comes from the word for free time, yet students race deadlines and read great books just to tick a requirement. He sees it in a sex industry that sells potency as the way to intimacy.</li>
+      <li>He is not against productivity. But when our worth depends on it we become easy targets for rejection, and no amount of output gives a sense of being at home.</li>
+      <li>His own confession: living with people whose main achievements are dressing, eating and walking frustrates him. He believed in theory that being matters more than doing; at l'Arche he found out how far he was from living it.</li>
+    </ul>
+    <div class="fig">
+      <h4>Fruits are not products</h4>
+      <div class="compare">
+        <div class="c-fear">
+          <h5>Products</h5>
+          <ul>
+            <li>Made by us, and ours to claim</li>
+            <li>Repeatable and predictable</li>
+            <li>Need maintenance against breakdown</li>
+            <li>Measure our worth, so feed the fear</li>
+          </ul>
+        </div>
+        <div class="c-fecundity">
+          <h5>Fruits</h5>
+          <ul>
+            <li>Received as gifts</li>
+            <li>Neither predictable nor definable</li>
+            <li>Need soil, water, air and light: care, not control</li>
+            <li>Grow from intimate love, and call for thanks</li>
+          </ul>
+        </div>
+      </div>
+      <p class="cap">Summary drawn for this page. Both sterility and productivity, he concludes, can betray the same thing: a lack of faith that our lives can bear fruit.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-fecundity" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Fecundity and love</span></div>
+  <div class="body">
+    <div>
+      <h3>Vulnerability, gratitude, care</h3>
+      <p class="idea">Fruit appears where we stop trying to control life. Refusing new life and manufacturing it ourselves are both ways of playing God.</p>
+    </div>
+    <div class="fig">
+      <h4>Three conditions of a fruitful life</h4>
+      <div class="steps3 c-fecundity">
+        <div><b>1 · Vulnerability</b><span>Armed, defensive lives produce walls and missiles, not fruit. God's way is weakness: a dependent child, a powerless preacher, a man executed as useless.</span></div>
+        <div><b>2 · Gratitude</b><span>Thanks means admitting we depend on others, which a culture of self-reliance reads as weakness. Fruits of the Spirit can't be made or exported; they can only be received.</span></div>
+        <div><b>3 · Care</b><span>A seed pulled up every day to check its progress never grows. Fruits ask for a safe environment, not management of every stage.</span></div>
+      </div>
+      <p class="cap">In John 6, Andrew sees five barley loaves and two fish and asks what that is among so many. Jesus gives thanks and shares, and twelve baskets of scraps remain. That shift from hoarding to sharing is, for Nouwen, the move from fear to love.</p>
+    </div>
+    <ul class="points">
+      <li>A student kept telling him she hated God. Arguments did nothing. Then, given time and trust, she told him her whole story, and later wrote that it began a new life.</li>
+      <li>At l'Arche he watches the residents give their hearts directly, sorrow included. They sense a house's mood before the assistants do, which makes them, in his word, barometers. Many assistants say they received more than they gave.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-fecundity" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Fecundity and mission</span></div>
+  <div class="body">
+    <div>
+      <h3>Learning to receive</h3>
+      <p class="idea">As solidarity grows from intimacy, mission grows from fruitfulness, and real mission runs both ways.</p>
+    </div>
+    <ul class="points">
+      <li>On his first trips to Latin America, Nouwen admits, he was fighting his own sense of sterility and wanted to prove himself by fixing things. He warns that wanting to change things can itself turn violent.</li>
+      <li>A few weeks among the poor of Lima, Peru, changed his view. Struck by their joy, peace and gentleness despite great need, he came to see his calling as much receiver as giver.</li>
+      <li>He calls receiving the fruits of the poor one of the great missionary tasks. Wanting only to give, he argues, is a way of staying in control, and so of staying in the house of fear.</li>
+    </ul>
+    <div class="story c-fecundity">
+      <span class="label">The story · Antonio's mother</span>
+      <p>Nouwen said Mass for Antonio, an eighteen-year-old killed in an accident, then mumbled condolences with his eyes on the floor. The mother made him stand straight and look at her. God had given them Antonio for a few years, she said, and they were grateful. She was ministering to him as much as he to her.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART THREE: ECSTASY ============ -->
+<div class="part c-ecstasy" id="ecstasy">
+  <span class="label partno">Part three · John 15:11</span>
+  <h2><em>Ecstasy</em></h2>
+  <p class="lede">The third sign is joy, and Nouwen wants the word back from the mystics. Its Greek root, <em>ek-stasis</em>, means standing outside a fixed, static place.</p>
+</div>
+
+<div class="intro2" style="margin-top:28px">
+  <div class="prose">
+    <p class="muted">A university teacher of his lectured for a year on anxiety. Asked near the end to speak about joy, he tried for three sessions, ran out of ideas and went back to anxiety.</p>
+    <p class="muted">Joy, Nouwen suggests, is hard to describe the way health is: we detail aching legs and say nothing of healthy ones. Maybe it is the deeper, more normal state.</p>
+  </div>
+  <div>
+    <blockquote class="pull c-ecstasy">“Old joy is not joy!”</blockquote>
+    <span class="label">Nouwen, Ecstasy: Introduction</span>
+    <p class="muted" style="margin-top:14px;max-width:44ch">There can be old grief and old sorrow, he argues, but joy is always new, tied to movement, renewal and life.</p>
+  </div>
+</div>
+
+<article class="chapter c-ecstasy" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Ecstasy and fear</span></div>
+  <div class="body">
+    <div>
+      <h3>Routine, or rootlessness</h3>
+      <p class="idea">Fear either freezes us in the familiar or scatters us aimlessly. Neither moves toward joy.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Routine</strong> soothes fear with sameness: "this is how we do things here". Children's bedtime rituals keep the dark at bay. Many routines are healthy; fear shows when any suggestion of change meets violent resistance.</li>
+      <li>A thirty-year-old man at l'Arche told every newcomer the same detailed story of his workshop job. An assistant explained it was how he coped with strangers. Nouwen recognised himself: friends also groan at his favourite success stories.</li>
+      <li>Two men rowing the Atlantic lost their bearings and kept sane with a rigid "mental playpen", even scheduling their conversation topics. Frightened people, he says, readily trade freedom for security.</li>
+      <li><strong>Rootlessness</strong> is the opposite: emotions like a river leaving its bed. Lashing out, self-harm and aimless running can all answer a fear too big to face.</li>
+      <li>At La Forestière, a home for deeply disabled people, Edith often beats her head against hard objects. All he can do, he writes, is stay present without expecting change. Yet even there he finds a joy stronger than the agony: roots beyond rootlessness.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-ecstasy" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Ecstasy and love</span></div>
+  <div class="body">
+    <div>
+      <h3>Celebration, including the sad days</h3>
+      <p class="idea">Joy breaks in from outside the house of fear. It shows up as celebration, which lifts up loss as well as gladness.</p>
+    </div>
+    <ul class="points">
+      <li>Much joy is manufactured: happy hours, cruises, thrillers, a commercial Christmas. He likens it to the good last meal of a man on death row: tasty, but it doesn't keep him alive.</li>
+      <li>Celebration, for him, is not a party for special occasions but an awareness that every moment can be lifted up, including failure, farewell and death. Even death is celebrated, not because it is desirable but because life can be proclaimed in its face.</li>
+      <li>Every night a l'Arche household gathers around a candle and an icon. Sadness is named (Maurice's missed visit, Marie's ill mother, Pierre who won't leave his room) alongside thanks for good food or a new assistant. There are always flowers on the table.</li>
+      <li>Joyful people, he says, are not jokers or optimists. They see evil clearly but are not imprisoned by it. His example is Etty Hillesum, a Dutch Jewish woman writing under Nazi occupation, who let sorrows pass through her like a stream rather than clinging to them.</li>
+      <li>Joy is always shared. A daily Eucharist he began at two universities with one or two students drew very different people into a real community.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-ecstasy" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Ecstasy and a new international order</span></div>
+  <div class="body">
+    <div>
+      <h3>Nations, too, can leave the house of fear</h3>
+      <p class="idea">A joy that ignores the powers shaping whole countries is escapism. In the end, Nouwen argues, nations as well as people must choose between security and freedom.</p>
+    </div>
+    <ul class="points">
+      <li>In Guatemala he heard of a young Indian forced into the army and made to torture his own people. When he came home, his father let him greet his mother and sent him away: he carried death with him.</li>
+      <li>Ecstatic living means leaving the safe place. For a country that means a foreign policy that asks more than how our nation survives, and puts shared humanity ahead of any nationality.</li>
+      <li>Security obsession freezes, he says, whether it is a pistol by the bed or a Trident submarine in the port. Jesus sent his followers to all nations, and nations, not only individuals, are called to convert.</li>
+      <li>He asks for academies and ministries of peace, and above all a belief that rivalry between nations is as outdated as medieval rivalry between cities.</li>
+      <li>A new order, he admits, sounds like a dream. But Beethoven's Fifth now seems always to have existed, and someone had to compose it note by note. The world waits for new St Francises.</li>
+    </ul>
+    <div class="fig">
+      <h4>The hoarders' parable</h4>
+      <svg class="wide" viewBox="0 0 440 340" role="img" aria-label="Concentric squares. At the centre, the stockpile, kept in case of hard times. Around it a thick wall, so high they can no longer see out. Around that a ring of bombs on the walls. Outside, others say we are dying now, with arrows blocked by the walls. Numbered steps: 1 hoard, 2 refuse, 3 wall, 4 arm, 5 fear their own bombs. Caption: their fear of death brought them closer to it.">
+        <defs>
+          <marker id="ar-x" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--ink-3)"/></marker>
+        </defs>
+        <!-- rings -->
+        <rect x="70" y="40" width="240" height="240" rx="8" fill="none" style="stroke:var(--fear)" stroke-width="2" stroke-dasharray="2 6"/>
+        <g style="fill:var(--fear)">
+          <circle cx="110" cy="40" r="5"/><circle cx="160" cy="40" r="5"/><circle cx="210" cy="40" r="5"/><circle cx="260" cy="40" r="5"/>
+          <circle cx="110" cy="280" r="5"/><circle cx="160" cy="280" r="5"/><circle cx="210" cy="280" r="5"/><circle cx="260" cy="280" r="5"/>
+          <circle cx="70" cy="100" r="5"/><circle cx="70" cy="160" r="5"/><circle cx="70" cy="220" r="5"/>
+          <circle cx="310" cy="100" r="5"/><circle cx="310" cy="160" r="5"/><circle cx="310" cy="220" r="5"/>
+        </g>
+        <rect x="100" y="70" width="180" height="180" rx="6" style="fill:color-mix(in srgb, var(--fear) 10%, var(--card));stroke:var(--fear)" stroke-width="10"/>
+        <rect x="145" y="120" width="90" height="70" rx="5" style="fill:color-mix(in srgb, var(--band) 20%, var(--card));stroke:var(--gold)" stroke-width="1.8"/>
+        <text x="190" y="150" text-anchor="middle" font-size="13" class="disp" style="fill:var(--ink)">stockpile</text>
+        <text x="190" y="168" text-anchor="middle" font-size="11.5">“in case”</text>
+        <text x="190" y="226" text-anchor="middle" font-size="11.5" class="t-mute">can't see out</text>
+        <!-- outsiders -->
+        <text x="440" y="96" text-anchor="end" font-size="11.5" class="t-ink">“we are</text>
+        <text x="440" y="111" text-anchor="end" font-size="11.5" class="t-ink">dying now”</text>
+        <line x1="378" y1="160" x2="318" y2="160" style="stroke:var(--ink-3)" stroke-width="1.5" marker-end="url(#ar-x)"/>
+        <line x1="378" y1="200" x2="318" y2="200" style="stroke:var(--ink-3)" stroke-width="1.5" marker-end="url(#ar-x)"/>
+        <text x="0" y="96" font-size="11.5" class="t-ink">others</text>
+        <line x1="10" y1="160" x2="62" y2="160" style="stroke:var(--ink-3)" stroke-width="1.5" marker-end="url(#ar-x)"/>
+        <!-- steps -->
+        <text x="0" y="20" font-size="11" class="t-mute">1 hoard · 2 refuse · 3 build walls · 4 put bombs on them</text>
+        <text x="0" y="310" font-size="11" class="t-mute">5 grow afraid of their own bombs</text>
+        <text x="0" y="330" font-size="12" style="fill:var(--fear)">fear of death brought them closer to it</text>
+      </svg>
+      <p class="cap">Nouwen's own parable about national security, redrawn for this page; it contains no numbers. Each defensive step answers the fear the last one created. Ring = walls, dots = bombs on top of them.</p>
+    </div>
+    <div class="story c-ecstasy">
+      <span class="label">The lamp · l'Arche</span>
+      <p>Nouwen does not claim l'Arche is a new world order, only a lamp on a stand. Vanier writes in a 1985 letter that the communities can't join every big political struggle because particular people, such as Innocente in Bouaké, need their constant presence.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ SIGNS OF LIFE ============ -->
+<section id="signs">
+  <div class="sec-head">
+    <span class="label">Conclusion · Signs of Life</span>
+    <h2>A love-filled home on a fear-filled sea</h2>
+    <p class="lede">Nouwen ends without pretending the fear has gone. His last image is a boat in a storm.</p>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>As he finishes, the news is full of fear: the <em>Achille Lauro</em> hijacking, gloom about Reagan and Gorbachev halting the arms race. Homelessness, fruitlessness and static living are everywhere.</p>
+      <p>Still, the book offers a home now, not after catastrophe. Severely disabled people teach him this best: they don't brood over future disasters, and say in effect that it is good to be together now.</p>
+      <p>He refuses sentimentality. The people in the ark carry the world's fears; the boat rocks and nobody stays unafraid. But Jesus is in the boat, asleep, as in the storm story in Matthew. We keep pointing at the waves and saying "yes, but look", and he patiently keeps repeating where our home is.</p>
+      <p id="prayer">The book closes with a long prayer by Etty Hillesum, written during the Nazi persecution of the Jews in Holland. She resolves not to burden today with worry about tomorrow. The jasmine behind her house has been wrecked by rain, yet she says it keeps blooming within her.</p>
+    </div>
+    <div class="fig">
+      <div class="xlink">
+        <span class="label">Read alongside · Same author · Faith</span>
+        <a href="../prodigal-son/">The Return of the Prodigal Son →</a>
+        <p class="muted" style="font-size:16px">Lifesigns uses Rembrandt's father embracing his son as its image of home in a few lines. The later book stays inside that painting and asks what coming home actually costs.</p>
+        <a href="../life-of-the-beloved/">Life of the Beloved →</a>
+        <p class="muted" style="font-size:16px">The "first love" that speaks before anyone else can accept or reject you becomes, there, the voice that calls you beloved. Pauline Vanier, to whom Lifesigns is dedicated, appears there too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Reflective practices</span>
+    <h2>Moving house, one habit at a time</h2>
+    <p class="lede">Lifesigns is a meditation, not a manual, but each part points to concrete practices. These are the ones it stresses, grouped by theme, starting with fear itself.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col c-fear">
+      <h3>Fear</h3>
+      <div class="tk"><b>Audit your questions</b><span>List the "what if" and "how can I" questions running your week. Ask whose questions they really are.</span></div>
+      <div class="tk"><b>Ask who gains</b><span>When you feel afraid, ask who gets power over you through that fear.</span></div>
+      <div class="tk"><b>Catch the "yes, but"</b><span>Notice when you answer an invitation to love with a "realistic" objection. It shows which house you are in.</span></div>
+    </div>
+    <div class="col c-intimacy">
+      <h3>Intimacy</h3>
+      <div class="tk"><b>Cup your hand</b><span>With people you care for, give neither cold distance nor smothering closeness: a space to grow.</span></div>
+      <div class="tk"><b>Pray from the heart</b><span>A short repeated prayer, such as the Jesus Prayer, to come home to the first love again and again.</span></div>
+      <div class="tk"><b>Don't ask people to be your home</b><span>Expect confession and forgiveness from others, not freedom from every wound.</span></div>
+    </div>
+    <div class="col c-fecundity">
+      <h3>Fecundity</h3>
+      <div class="tk"><b>Fruit or product?</b><span>Ask of what you value: did I make this, or was it given? Treat gifts as gifts.</span></div>
+      <div class="tk"><b>Risk being known</b><span>Confess what you are most ashamed of to someone you trust. It may win a friend, not lose one.</span></div>
+      <div class="tk"><b>Practise receiving</b><span>Let poorer or weaker people give to you, not only receive from you.</span></div>
+    </div>
+    <div class="col c-ecstasy">
+      <h3>Ecstasy</h3>
+      <div class="tk"><b>Spot fearful routines</b><span>Which habits do you defend fiercely? Which story do you tell every stranger?</span></div>
+      <div class="tk"><b>Celebrate every day</b><span>An evening moment to name both sadness and thanks, with a candle or flowers.</span></div>
+      <div class="tk"><b>Choose shared joy</b><span>Joy is "ours": look for regular worship or meals that bind unlikely people.</span></div>
+    </div>
+  </div>
+</section>
+
+<p style="max-width:70ch;margin:32px auto;padding:0 16px;font-size:15px">Also on fear and trust: <a href="../anxious-for-nothing/"><em>Anxious for Nothing</em></a> · <a href="../dont-give-the-enemy-a-seat/"><em>Don't Give the Enemy a Seat at Your Table</em></a> · <a href="../ruthless-trust/"><em>Ruthless Trust</em></a>.</p>
+<footer>
+  <p>A summary in my own words of Henri J. M. Nouwen, <em>Lifesigns: Intimacy, Fecundity, and Ecstasy in Christian Perspective</em> (Image Books, Doubleday, a division of Random House; © 1986). Notes are from the ebook published by The Crown Publishing Group in 2013, whose copyright page reproduces the Image Books edition of September 2003. Short quotations are from the book. Facts are as reported in the book. Diagrams are schematic and were drawn for this page; none of them shows data. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Nov 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  /* Hero band: on the left, restless grey specks circling (the house of fear);
+     on the right, a steady gold glow. Specks that drift right slowly settle and warm. */
+  var canvas = document.getElementById("houses");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, N = 64, dots = [];
+  function css(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+  function seed() {
+    dots = [];
+    for (var i = 0; i < N; i++) {
+      dots.push({ x: Math.random(), y: Math.random(), vx: (Math.random() - .45) * .0018, vy: (Math.random() - .5) * .004, r: 1 + Math.random() * 2, ph: Math.random() * 6.28 });
+    }
+  }
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(time) {
+    if (!w) return;
+    var dark = css("--paper").toLowerCase() === "#151410";
+    var bg = ctx.createLinearGradient(0, 0, w, 0);
+    bg.addColorStop(0, dark ? "#1d1f22" : "#4a4b4d");
+    bg.addColorStop(0.55, dark ? "#24221c" : "#5b5850");
+    bg.addColorStop(1, dark ? "#3a3218" : "#8a7a3e");
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, w, hgt);
+    var lx = w * 0.9, ly = hgt * 0.5;
+    var breathe = reduce ? 1 : 0.9 + 0.1 * Math.sin(time / 1800);
+    var R = (hgt * 0.9 + w * 0.14) * breathe;
+    var g = ctx.createRadialGradient(lx, ly, 0, lx, ly, R);
+    g.addColorStop(0, "rgba(232,205,110,.85)");
+    g.addColorStop(0.2, "rgba(214,186,90,.35)");
+    g.addColorStop(1, "rgba(214,186,90,0)");
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, w, hgt);
+    for (var i = 0; i < dots.length; i++) {
+      var d = dots[i];
+      var calm = Math.max(0, Math.min(1, (d.x - 0.55) / 0.35));
+      if (!reduce) {
+        d.x += d.vx * (1 - calm * 0.8);
+        d.y += (d.vy + Math.sin(time / 260 + d.ph) * .003) * (1 - calm * 0.9);
+        if (d.x < 0) { d.x = 0; d.vx = Math.abs(d.vx); }
+        if (d.x > 0.97) { d.x = Math.random() * 0.3; d.y = Math.random(); }
+        if (d.y < 0 || d.y > 1) { d.vy *= -1; d.y = Math.min(1, Math.max(0, d.y)); }
+      }
+      var flick = reduce ? .55 : (.3 + .4 * Math.abs(Math.sin(time / 170 + d.ph * 3))) * (1 - calm) + .8 * calm;
+      var r = Math.round(196 + 40 * calm), gg = Math.round(198 + 14 * calm), b = Math.round(204 - 110 * calm);
+      ctx.fillStyle = "rgba(" + r + "," + gg + "," + b + "," + flick + ")";
+      ctx.beginPath(); ctx.arc(d.x * w, d.y * hgt, d.r, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  seed(); size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

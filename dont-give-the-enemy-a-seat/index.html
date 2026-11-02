@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Don't Give the Enemy a Seat at Your Table by Louie Giglio – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief, same frame as the other notes.
+   Palette from the cover: signal yellow on black. Yellow marks the Shepherd,
+   truth and the ways out; black/grey marks the Enemy and the lies. */
+:root {
+  --paper: #faf8ef;
+  --paper-2: #f1eedd;
+  --card: #ffffff;
+  --ink: #121210;
+  --ink-2: #4a483d;
+  --ink-3: #78756a;
+  --rule: #dedac6;
+
+  --sun: #fef200;          /* cover yellow, used as a fill with dark text */
+  --sun-ink: #6a6000;      /* yellow-family colour readable as text on paper */
+  --on-sun: #121210;
+  --mark: color-mix(in srgb, #fef200 85%, transparent);
+  --foe: #121210;          /* the Enemy: heavy black */
+  --on-foe: #faf8ef;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #12110b;
+    --paper-2: #1c1b13;
+    --card: #1f1e16;
+    --ink: #f3f1e4;
+    --ink-2: #bdb9a4;
+    --ink-3: #8b8775;
+    --rule: #35332a;
+    --sun: #fef200;
+    --sun-ink: #fef200;
+    --mark: color-mix(in srgb, #fef200 30%, transparent);
+    --foe: #5c5a4d;
+    --on-foe: #f3f1e4;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #12110b;
+  --paper-2: #1c1b13;
+  --card: #1f1e16;
+  --ink: #f3f1e4;
+  --ink-2: #bdb9a4;
+  --ink-3: #8b8775;
+  --rule: #35332a;
+  --sun: #fef200;
+  --sun-ink: #fef200;
+  --mark: color-mix(in srgb, #fef200 30%, transparent);
+  --foe: #5c5a4d;
+  --on-foe: #f3f1e4;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--sun-ink); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.hl { background: linear-gradient(transparent 58%, var(--mark) 0); padding: 0 .1em; }
+.ref { font-family: var(--mono); font-size: .72em; color: var(--ink-3); letter-spacing: .02em; white-space: nowrap; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, .6fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(40px, 7.6vw, 100px);
+  font-weight: 900;
+  font-stretch: 100%;
+  line-height: .9;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+.hero h1 span { display: block; }
+.hero h1 .seat { display: inline; background: var(--sun); color: var(--on-sun); padding: 0 .08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.hero .sub {
+  font-family: var(--display);
+  font-weight: 650;
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.2;
+  margin-top: 22px;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 720 / 1047;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(30, 28, 0, .4), 0 8px 18px -10px rgba(30, 28, 0, .3);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+
+/* nine-word band */
+.nine { margin-top: 32px; display: grid; gap: 10px; }
+.nine ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.nine li { display: grid; gap: 2px; padding: 8px 12px 9px; border-radius: 4px; background: var(--card); border: 1px solid var(--rule); }
+.nine li i { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+.nine li b { font-family: var(--display); font-weight: 850; font-size: clamp(18px, 2.4vw, 28px); line-height: 1; letter-spacing: -.01em; }
+.nine li.on { background: var(--sun); border-color: var(--sun); }
+.nine li.on b, .nine li.on i { color: var(--on-sun); }
+.nine .ends { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 108%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(40px, 7vw, 92px);
+  font-weight: 900;
+  font-stretch: 110%;
+  line-height: .92;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(27px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 104%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 3px solid var(--sun);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(16px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; max-width: 560px; margin-inline: auto; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 12px; }
+.fig svg text.sm { font-size: 11px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.t-sun { fill: var(--sun-ink); }
+.fig svg text.t-onsun { fill: var(--on-sun); }
+.fig svg text.t-onfoe { fill: var(--on-foe); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 14px; fill: var(--ink); }
+.fig svg text.bd { font-family: var(--body); font-size: 12.5px; fill: var(--ink-2); }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.f-ink { fill: var(--ink); }
+.f-ink2 { fill: var(--ink-2); }
+.f-ink3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-sun { fill: var(--sun); }
+.f-foe { fill: var(--foe); }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 900; font-size: 44px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat .big span { background: var(--sun); color: var(--on-sun); padding: 0 .12em; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Book map */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 24px; font-weight: 850; font-stretch: 108%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; display: block; font-size: 16px; }
+
+/* Seating chart */
+.seats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seats > div { background: var(--card); padding: 16px; display: grid; gap: 8px; align-content: start; }
+.seats h5 { font-family: var(--display); font-size: 17px; font-weight: 800; margin: 0; display: flex; gap: 8px; align-items: center; }
+.seats h5 i { width: 14px; height: 14px; border-radius: 3px; flex: none; }
+.seats .in h5 i { background: var(--sun); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 25%, transparent); }
+.seats .around h5 i { border: 1.5px dashed var(--ink-3); }
+.seats .out h5 i { background: var(--foe); }
+.seats p, .seats li { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.seats ul { margin: 0; padding-left: 18px; display: grid; gap: 3px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { font-family: var(--mono); font-size: 12px; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--rule); color: var(--ink-2); text-decoration: line-through; text-decoration-color: var(--ink-3); }
+
+/* Psalm route */
+.route { list-style: none; margin: 0; padding: 0; display: grid; position: relative; }
+.route::before { content: ""; position: absolute; left: 15px; top: 14px; bottom: 14px; width: 2px; background: var(--rule); }
+.route li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 4px 14px; padding: 12px 12px 12px 0; position: relative; border-radius: 6px; }
+.route li .pin { width: 14px; height: 14px; border-radius: 50%; background: var(--card); border: 2px solid var(--ink-2); margin: 6px 0 0 9px; position: relative; z-index: 1; }
+.route li > div { display: grid; gap: 3px; }
+.route .v { font-family: var(--mono); font-size: 12px; color: var(--ink-3); letter-spacing: .05em; text-transform: uppercase; }
+.route b { font-family: var(--display); font-weight: 800; font-size: 18px; line-height: 1.2; }
+.route p { font-size: 15.5px; color: var(--ink-2); line-height: 1.45; }
+.route li.valley { background: color-mix(in srgb, var(--foe) 10%, transparent); }
+.route li.valley .pin { background: var(--foe); border-color: var(--foe); }
+.route li.table { background: color-mix(in srgb, var(--sun) 26%, var(--card)); }
+.route li.table p, .route li.table .v { color: var(--ink); }
+.route li.table .pin { background: var(--sun); border-color: var(--ink); }
+
+/* Lies grid */
+.lies { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; }
+.lie { border-radius: 6px; border: 1px solid var(--rule); background: var(--card); display: grid; grid-template-rows: auto 1fr; overflow: hidden; }
+.lie .hear { background: var(--foe); color: var(--on-foe); padding: 14px; display: grid; gap: 4px; }
+.lie .hear span { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .75; }
+.lie .hear b { font-family: var(--display); font-weight: 750; font-size: 17px; line-height: 1.2; font-style: italic; }
+.lie .truth { padding: 14px; display: grid; gap: 6px; align-content: start; border-top: 4px solid var(--sun); }
+.lie .truth strong { font-family: var(--display); font-weight: 800; font-size: 15px; }
+.lie .truth p { font-size: 14.5px; color: var(--ink-2); line-height: 1.42; }
+
+/* Spiral legend */
+.exits { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 10px; }
+.exit { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; align-items: start; }
+.exit i { width: 26px; height: 26px; border-radius: 50%; background: var(--sun); color: var(--on-sun); font-style: normal; font-family: var(--display); font-weight: 900; display: grid; place-items: center; font-size: 14px; box-shadow: inset 0 0 0 1.5px var(--on-sun); }
+.exit b { font-family: var(--display); font-weight: 750; font-size: 15.5px; display: block; line-height: 1.25; }
+.exit span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* Two-voice table */
+.voices { width: 100%; table-layout: fixed; overflow-wrap: anywhere; border-collapse: collapse; font-size: 15.5px; line-height: 1.4; }
+.voices th, .voices td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+.voices thead th { font-family: var(--display); font-size: 17px; font-weight: 850; border-bottom: 0; }
+.voices thead th.c { background: var(--foe); color: var(--on-foe); border-radius: 6px 6px 0 0; }
+.voices thead th.v { background: var(--sun); color: var(--on-sun); border-radius: 6px 6px 0 0; }
+.voices tbody th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; width: 24%; }
+.voices td { color: var(--ink); width: 38%; }
+
+/* compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare .says { font-family: var(--display); font-weight: 700; font-style: italic; font-size: 17px; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; counter-reset: s; }
+.steps li { border-radius: 6px; padding: 14px; background: var(--paper-2); display: grid; gap: 6px; align-content: start; position: relative; }
+.steps li::before { counter-increment: s; content: counter(s); font-family: var(--display); font-weight: 900; font-size: 30px; line-height: 1; }
+.steps li.go { background: var(--sun); color: var(--on-sun); }
+.steps li.go span { color: var(--on-sun); }
+.steps b { font-family: var(--display); font-weight: 800; font-size: 17px; line-height: 1.2; }
+.steps span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* seeds */
+.seeds { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 10px; }
+.seed { border-radius: 6px; border: 1px solid var(--rule); padding: 14px; display: grid; gap: 6px; align-content: start; background: var(--card); }
+.seed .n { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
+.seed b { font-family: var(--display); font-weight: 800; font-size: 17px; line-height: 1.2; }
+.seed span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 104%;
+  font-size: clamp(24px, 3.2vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* fear */
+.fear { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.moves { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.moves li { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-top: 1px solid var(--rule); font-size: 15.5px; line-height: 1.45; color: var(--ink-2); }
+.moves li:first-child { border-top: 0; }
+.moves li span { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); padding-top: 3px; letter-spacing: .04em; }
+.moves li b { color: var(--ink); font-family: var(--display); font-weight: 750; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 108%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 210px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .fear, .part { grid-template-columns: 1fr; }
+  .map, .toolkit, .seats { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare, .steps { grid-template-columns: 1fr; }
+  .voices { font-size: 14.5px; }
+  .voices th, .voices td { padding: 8px 6px; }
+  .voices tbody th { font-size: 10px; letter-spacing: .02em; width: 24%; } .voices thead th { font-size: 12.5px; padding-inline: 5px; letter-spacing: -.01em; overflow-wrap: normal; }
+  .moves li { grid-template-columns: 1fr; gap: 2px; }
+  .nine li { padding: 6px 9px 7px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .nine li { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+  .nine li:nth-child(2) { animation-delay: .05s; } .nine li:nth-child(3) { animation-delay: .1s; }
+  .nine li:nth-child(4) { animation-delay: .15s; } .nine li:nth-child(5) { animation-delay: .2s; }
+  .nine li:nth-child(6) { animation-delay: .25s; } .nine li:nth-child(7) { animation-delay: .3s; }
+  .nine li:nth-child(8) { animation-delay: .35s; } .nine li:nth-child(9) { animation-delay: .4s; }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Louie Giglio · W Publishing, 2021</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#table">The table</a>
+    <a href="#psalm">Psalm 23</a>
+    <a href="#fear">Fear</a>
+    <a href="#lies">The lies</a>
+    <a href="#back">Taking it back</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span>Don’t give</span><span>the Enemy</span><span>a <span class="seat">seat</span> at</span><span>your table</span></h1>
+    <p class="sub">It’s time to win the battle of your mind . . .</p>
+    <p class="dek">Louie Giglio reads Psalm 23 as a table God sets in the middle of your troubles. The enemies can stand around it. The Enemy doesn’t get a chair.</p>
+    <div class="byline label">
+      <span>10 chapters</span><span>1 psalm</span><span>5 lies</span><span>~45,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Don't Give the Enemy a Seat at Your Table by Louie Giglio: the title in heavy black capitals on a bright yellow background">
+</div>
+
+<div class="nine" aria-label="The nine words: Don't give the Enemy a seat at your table">
+  <ol>
+    <li><i>1</i><b>Don’t</b></li><li><i>2</i><b>give</b></li><li><i>3</i><b>the</b></li><li><i>4</i><b>Enemy</b></li><li><i>5</i><b>a</b></li><li class="on"><i>6</i><b>seat</b></li><li><i>7</i><b>at</b></li><li><i>8</i><b>your</b></li><li><i>9</i><b>table.</b></li>
+  </ol>
+  <div class="ends label"><span>A friend’s whole reply to a long text</span><span>Now the title</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>You can’t stop him prowling. You can stop him sitting down.</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>A few years into planting Passion City Church in Atlanta, Giglio, then fifty, was in one of the hardest seasons of his ministry. He felt attacked, misrepresented and ready to quit. One evening, at the top of his driveway, he typed a long text to a friend about how events had finally proved him right. He wanted pages of support back. The reply was one sentence, nine words long, and it became this book’s title.</p>
+      <p>The friend’s point was that the fight wasn’t really with people. Fear, paranoia and the replayed arguments in his head were coming from somewhere, and it wasn’t his Shepherd. Giglio sets this beside 1 Peter 5:8, where the Devil prowls like a lion. <span class="hl">You can’t stop the prowling, but you do decide who sits at your table.</span></p>
+      <p>The rest of the book reads Psalm 23 through that picture, verse 5 above all: God sets a table for you <em>in the presence of your enemies</em>. The trouble doesn’t go away, but the meal still happens, and it’s meant for two. Giglio says plainly that this is a book of worship, not a self-help plan, and he wrote it with Marcus Brotherton. Even so, it ends with very practical habits for the mind.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The book in numbers</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat"><span class="big num"><span>9</span></span><p>Words in the text that gave the book its title.</p></div>
+        <div class="stat"><span class="big num">2</span><p>Seats at the table as Giglio reads verse 5: you and the Good Shepherd.</p></div>
+        <div class="stat"><span class="big num">5</span><p>Lies which, if you hear them, show the Enemy is already seated.</p></div>
+        <div class="stat"><span class="big num">3</span><p>Moves for taking a thought captive: spot it, bind it, replace it.</p></div>
+        <div class="stat"><span class="big num">7</span><p>Seeds of truth to plant in the garden of your mind.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">How fast it happens</span>
+        <p>On Shelley’s birthday, at a dinner for two at a table for four, a young man recognised Giglio from a conference and came back to share what God had put on his heart. He asked whether he could sit down and was already pulling out a chair before anyone answered. Giglio’s point is how fast it happened. A third person can join the table in under a second.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Chapters 1–3</span>
+      <h3>The table</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Nine Words That Will Change Your Life</b>The text that started it</a></li>
+        <li><span>02</span><a href="#ch2"><b>The Twenty-Third Psalm—Remix</b>A table set in the trouble</a></li>
+        <li><span>03</span><a href="#ch3"><b>Mind If I Sit Down?</b>How the Enemy takes a chair</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 4–5</span>
+      <h3>The Enemy’s playbook</h3>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>Deadly Lies Exposed</b>Five signs he’s seated</a></li>
+        <li><span>05</span><a href="#ch5"><b>Spiral of Sin</b>Lure, shame, repeat</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 6–10</span>
+      <h3>Taking it back</h3>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Freedom Revolution</b>Identity and ways out</a></li>
+        <li><span>07</span><a href="#ch7"><b>Take Every Thought Captive</b>Spot, bind, replace</a></li>
+        <li><span>08</span><a href="#ch8"><b>Grace That Silences Shame</b>From failure to family</a></li>
+        <li><span>09</span><a href="#ch9"><b>Staggered by the Mountain</b>Why the enemies get to watch</a></li>
+        <li><span>10</span><a href="#ch10"><b>The Garden of Your Mind</b>Seven seeds to plant</a></li>
+      </ol>
+    </div>
+  </div>
+  <p class="label" style="margin-top:14px">The book runs as ten chapters. The three groups are mine.</p>
+</section>
+
+<!-- ============ THE TABLE ============ -->
+<section id="table">
+  <div class="sec-head">
+    <span class="label">The core picture</span>
+    <h2>A meal for two, in the middle of the trouble</h2>
+    <p class="lede">Giglio says that if he had written verse 5, he would have asked for a quiet table by the window. Instead, the psalm puts the table where the fighting is. Everything in the book depends on where people stand around that table.</p>
+  </div>
+
+  <div class="fig">
+    <h4>Who sits, who stands, who is refused</h4>
+    <svg viewBox="0 0 400 400" role="img" aria-label="Diagram seen from above. A table with two chairs: you on the left and the Good Shepherd, in yellow, on the right. A dashed ring around the table holds your troubles: anxiety, pressure, addiction, depression, divorce, family collapse, calamity. They stay in view. At the top of the ring the Enemy, drawn in black, drags a third chair toward the table. The third chair is crossed out: refused.">
+      <ellipse cx="200" cy="215" rx="188" ry="150" class="s-3" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <!-- troubles on the ring -->
+      <g>
+        <circle cx="44" cy="140" r="5" class="f-ink3"/><text x="54" y="144" class="sm">anxiety</text>
+        <circle cx="356" cy="140" r="5" class="f-ink3"/><text x="346" y="144" class="sm" text-anchor="end">pressure</text>
+        <circle cx="12" cy="215" r="5" class="f-ink3"/><text x="22" y="219" class="sm">addiction</text>
+        <circle cx="388" cy="215" r="5" class="f-ink3"/><text x="378" y="219" class="sm" text-anchor="end">depression</text>
+        <circle cx="70" cy="321" r="5" class="f-ink3"/><text x="80" y="318" class="sm">divorce</text>
+        <circle cx="330" cy="321" r="5" class="f-ink3"/><text x="320" y="318" class="sm" text-anchor="end">family collapse</text>
+        <circle cx="200" cy="365" r="5" class="f-ink3"/><text x="200" y="352" class="sm" text-anchor="middle">calamity</text>
+      </g>
+      <text x="200" y="300" class="sm t-3" text-anchor="middle">troubles stay in view, not removed</text>
+      <!-- the table -->
+      <rect x="132" y="182" width="136" height="76" rx="8" class="f-card s-ink" stroke-width="1.8"/>
+      <circle cx="165" cy="208" r="9" class="f-paper2 s-3"/><circle cx="235" cy="208" r="9" class="f-paper2 s-3"/>
+      <circle cx="200" cy="236" r="7" class="f-paper2 s-3"/><circle cx="178" cy="240" r="5" class="f-paper2 s-3"/><circle cx="222" cy="240" r="5" class="f-paper2 s-3"/>
+      <!-- chairs -->
+      <rect x="98" y="198" width="26" height="44" rx="4" class="f-paper2 s-ink" stroke-width="1.5"/>
+      <text x="111" y="274" text-anchor="middle" class="hd" style="font-size:12px">you</text>
+      <rect x="276" y="198" width="26" height="44" rx="4" class="f-sun s-ink" stroke-width="1.5"/>
+      <text x="289" y="274" text-anchor="middle" class="hd" style="font-size:12px">Shepherd</text>
+      <!-- the enemy and the third chair -->
+      <circle cx="200" cy="58" r="9" class="f-foe"/>
+      <path d="M186 86 Q186 70 200 70 Q214 70 214 86 Z" class="f-foe"/>
+      <text x="200" y="28" text-anchor="middle" class="hd" style="font-size:12.5px">the Enemy, prowling</text>
+      <text x="200" y="42" text-anchor="middle" class="sm t-3">1 Peter 5:8</text>
+      <path d="M200 92 V128" class="s-2" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <path d="M195 122 L200 130 L205 122" class="s-2" stroke-width="1.5"/>
+      <rect x="187" y="134" width="26" height="36" rx="4" class="s-ink" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <path d="M181 128 L219 176 M219 128 L181 176" class="s-ink" stroke-width="2.5"/>
+      <text x="226" y="160" class="sm t-ink">third chair:</text>
+      <text x="226" y="174" class="sm t-ink">refused</text>
+    </svg>
+    <div class="seats">
+      <div class="in"><h5><i></i>At the table</h5><p>You and the Good Shepherd. All who follow him are welcome, but each table is set for two: fellowship, not a crowd. The food is good, but the point is the company.</p></div>
+      <div class="around"><h5><i></i>Around it</h5><p>Critics, accusers and your real problems. God doesn’t take them away first. He feeds you while they watch. Chapter 9 explains why they get ringside seats.</p></div>
+      <div class="out"><h5><i></i>Refused a chair</h5><p>The Enemy and his voices. Chapter 1 names them:</p><div class="tags"><span>fear</span><span>rage</span><span>lust</span><span>insecurity</span><span>anxiety</span><span>despair</span><span>temptation</span><span>defeat</span></div></div>
+    </div>
+    <p class="cap">Drawn for this page. The troubles in the ring are from Giglio’s description in chapter 2. The seating plan shows his distinction: enemies around the table are part of life, but the Enemy sitting at it is a choice.</p>
+  </div>
+</section>
+
+<!-- ============ PSALM 23 ============ -->
+<section id="psalm">
+  <div class="sec-head">
+    <span class="label">Psalm 23, as the book walks it</span>
+    <h2>From green pastures to a table in a war zone</h2>
+    <p class="lede">Giglio asks readers to set aside the needlepoint-bookmark version of the psalm. Read line by line, it describes a shepherd who leads, corrects, defends and feeds, and the path he leads you on runs through a valley.</p>
+  </div>
+  <div class="figrow">
+    <div class="fig">
+      <h4>The route, verse by verse</h4>
+      <ol class="route">
+        <li><span class="pin"></span><div><span class="v">v.1 · ch. 2</span><b>The shepherd</b><p>Everyone is led by something: culture, the feed or themselves <span class="ref">(2 Peter 2:19)</span>. Giglio rewrites the psalm for someone who shepherds themselves, and it ends with a cup overflowing with rage.</p></div></li>
+        <li><span class="pin"></span><div><span class="v">v.2 · ch. 2</span><b>Green pastures</b><p>The shepherd <em>makes</em> you lie down. That means rest, and it means you stop trying to manage every outcome.</p></div></li>
+        <li><span class="pin"></span><div><span class="v">v.2 · ch. 2</span><b>Still waters</b><p>A thirsty sheep will put its head into a torrent and get dragged under by about fifteen pounds of wet wool. The crook pulls you back from what looks good but would drown you.</p></div></li>
+        <li><span class="pin"></span><div><span class="v">v.3 · ch. 2</span><b>Soul restored, right paths</b><p>The right paths are taken for his name’s sake, and they include hard ground.</p></div></li>
+        <li class="valley"><span class="pin"></span><div><span class="v">v.4 · ch. 2, 4</span><b>The darkest valley</b><p>This is where “even though … I will” faith comes from. You go <em>through</em> the valley, not just into it. The news is not only that God helps but that he is there with you.</p></div></li>
+        <li><span class="pin"></span><div><span class="v">v.4 · ch. 4</span><b>Rod and staff</b><p>This is no pale Sunday-school portrait. The staff hooks you to safety, and the rod beats off the lion and the bear, as the young David did.</p></div></li>
+        <li class="table"><span class="pin"></span><div><span class="v">v.5 · ch. 1–3, 9</span><b>A table among enemies</b><p>The centre of the book: a feast set in the chemo ward, in the divorce, in the job stress. The enemies watch, but they don’t sit down.</p></div></li>
+        <li><span class="pin"></span><div><span class="v">v.5 · ch. 4</span><b>Oil on the head</b><p>Shepherds oiled sheep’s heads so flies and parasites couldn’t breed in their noses and wool. In the same way, God’s Word guards you against lies.</p></div></li>
+        <li><span class="pin"></span><div><span class="v">v.5 · ch. 4</span><b>Overflowing cup</b><p>There is more than enough, and it is meant to be shared, even with people who dislike you. You can only give with open hands, not clenched fists.</p></div></li>
+        <li><span class="pin"></span><div><span class="v">v.6 · ch. 1</span><b>Goodness and love follow</b><p>Where you end up is already settled, so the fear loses its grip.</p></div></li>
+      </ol>
+      <p class="src">The verse labels are my short versions. The readings are Giglio’s, condensed.</p>
+    </div>
+    <div style="display:grid;gap:20px;align-content:start">
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">“You prepare a table before me in the presence of my enemies.”</blockquote>
+        <span class="label">Psalm 23:5, the verse the book keeps returning to</span>
+      </div>
+      <div class="fig">
+        <h4>The “even though … I will” pattern</h4>
+        <p class="cap" style="color:var(--ink)">Habakkuk lists the failures (no figs, no grapes, no grain, no sheep) and still decides to rejoice. Giglio finds the same shape in the three young men at the furnace and in Paul and Silas singing in the stocks at midnight.</p>
+        <p class="cap">His friend Katherine Wolf had a massive brain stem stroke at 26, six months after giving birth. Surgeons removed more than half her cerebellum in an operation of over sixteen hours. She was unconscious for two months, took eighteen months to walk again, and had ten more surgeries. In 2009 she rewrote Habakkuk’s prayer around her own losses: the wheelchair, her paralysed face, a baby she couldn’t care for.</p>
+        <p class="cap">Giglio invites the reader to fill in the blank in the same way. Even though ___, I will.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEAR ============ -->
+<section id="fear">
+  <div class="sec-head">
+    <span class="label">Reading it for fear</span>
+    <h2>Where fear sits at the table</h2>
+  </div>
+  <div class="fear">
+    <div class="prose">
+      <p>Fear isn’t the subject of a single chapter. It runs through the whole book. Fear comes first in Giglio’s list of voices you don’t have to listen to. It drives the paranoia of his driveway text. It is behind the ten spies, the servant at Dothan and Peter by the fire.</p>
+      <p>His answer is never that the danger isn’t real. The valley is real and so are the enemies around the table. What changes is who is with you there. That’s why he suggests a different prayer in a storm: not only <em>help me</em>, but <em>thank you for being in this with me</em>.</p>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull" style="font-size:clamp(22px,2.6vw,30px)">“Even though I walk through the darkest valley, I will fear no evil.”</blockquote>
+        <span class="label">Psalm 23:4, as quoted in chapter 2</span>
+      </div>
+      <p class="muted" style="font-size:16px">One limit worth knowing: this is a devotional book. It doesn’t discuss clinical anxiety, therapy or medication. Giglio also warns against blaming the Devil for everything. If your car won’t start, you need jumper cables, not an exorcism.</p>
+    </div>
+    <div class="fig">
+      <h4>The book’s moves against fear</h4>
+      <ul class="moves">
+        <li><span>ch. 3</span><div><b>Don’t call it normal.</b> Telling yourself that everyone is anxious and nothing can be done is the moment you hand over the chair.</div></li>
+        <li><span>ch. 2</span><div><b>Read all of verse 4.</b> If you stay with the first half (the valley) and forget the second (he is with me), you end up camping in the dark.</div></li>
+        <li><span>ch. 4</span><div><b>Through, not to.</b> The thought <em>I won’t make it</em> doesn’t come from the Shepherd. God parted the sea rather than bridging it, and the way out led through the water.</div></li>
+        <li><span>ch. 4</span><div><b>Surrounded is surrounded.</b> At Dothan an army ringed Elisha’s town. When the servant’s eyes were opened, he saw that army ringed in turn by horses and chariots of fire.</div></li>
+        <li><span>ch. 4</span><div><b>Drop the fists.</b> <em>Everybody hates me</em> usually means walls went up long ago. After a stranger told him God had his back, Giglio kept repeating that line to himself.</div></li>
+        <li><span>ch. 7</span><div><b>Check where the thought came from.</b> The ten spies felt like grasshoppers and decided the Canaanites saw them that way too. Nobody had asked the Canaanites.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="part1">
+  <span class="label partno">Chapters 1–3</span>
+  <h2>The table</h2>
+  <p class="lede">Where the phrase came from, what the psalm actually promises, and how quickly the table can be lost.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Nine Words That Will Change Your Life</span></div>
+  <div class="body">
+    <div>
+      <h3>The text that became a weapon</h3>
+      <p class="idea">The fight he thought he was having with people was really a fight over who got to speak inside his head.</p>
+    </div>
+    <ul class="points">
+      <li>The friend’s reply moved the struggle somewhere else: against powers, not people <span class="ref">(Ephesians 6:12)</span>. Giglio realised his Shepherd wasn’t the one making him afraid.</li>
+      <li>The phrase kept landing with others. First a morning Bible study for the coaches of a struggling pro sports team, then his Passion staff around a real table of snacks, then a Sunday sermon with fruit, cheese and dessert passed down the rows. A mother in a bitter separation and a student with suicidal thoughts told him it was what they needed to hear.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Don’t give the Enemy a seat at your table.”</blockquote>
+      <span class="label">The friend’s reply, all nine words</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">The Twenty-Third Psalm—Remix</span></div>
+  <div class="body">
+    <div>
+      <h3>Life is hard, and the table is set anyway</h3>
+      <p class="idea">The foundation is faith that grows under pressure instead of shrinking: even though this has happened, I will still trust.</p>
+    </div>
+    <ul class="points">
+      <li>The Good Shepherd of the psalm is the Jesus of John 10, who knows his sheep, protects them and lays down his life for them. Hebrews 13:8 links the two: he is the same yesterday, today and forever.</li>
+      <li>The table carries old meaning. There was the bread of the Presence in the tabernacle <span class="ref">(Exodus 25:30)</span> and the promised feast for all peoples <span class="ref">(Isaiah 25:6)</span>. Giglio separates the table of salvation, open to everyone, from the table of fellowship in Psalm 23, which is set for you and him.</li>
+      <li>The real reward is not the food but the company: the King of the ages <span class="ref">(1 Timothy 1:17)</span>, whose works Job called only the outer fringe.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Mind If I Sit Down?</span></div>
+  <div class="body">
+    <div>
+      <h3>It takes a second to lose the table</h3>
+      <p class="idea">The Enemy doesn’t arrive with a pitchfork. He arrives friendly and sympathetic, and helps himself to your brownie.</p>
+    </div>
+    <ul class="points">
+      <li>We hand him the chair whenever we treat worry, envy or a bit of lust as normal for modern life. Giglio insists none of it has to be accepted: the power that raised Jesus lives in believers.</li>
+      <li>He comes disguised as an angel of light <span class="ref">(2 Corinthians 11:14)</span>, sympathising about your awful boss and even quoting Scripture, as he did to Jesus in the wilderness.</li>
+      <li>His tools are the cravings of the body, the cravings of the eyes and pride <span class="ref">(1 John 2:16)</span>. His oldest move, with Eve, is to suggest God is holding something good back.</li>
+      <li>His goal never changes: to steal, kill and destroy <span class="ref">(John 10:10)</span>. It is not your job to stop him prowling. It is your job to keep him from sitting down.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="lies">
+  <span class="label partno">Chapters 4–5</span>
+  <h2>The Enemy’s playbook</h2>
+  <p class="lede">You don’t study the lies to dwell on them. You study them so you can recognise them quickly and look back at the Shepherd.</p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Deadly Lies Exposed</span></div>
+  <div class="body">
+    <div>
+      <h3>Five lies that mean he’s already seated</h3>
+      <p class="idea">If you hear any of these in your own head, there’s a third person at the table.</p>
+    </div>
+    <div class="fig">
+      <h4>What you hear, and what Giglio answers</h4>
+      <div class="lies">
+        <div class="lie"><div class="hear"><span>1 · Comparison</span><b>It’s better at another table.</b></div><div class="truth"><strong>The grass-is-greener pitch</strong><p>He calls the Devil the worst kind of salesman. His examples include a colleague’s new pool, a friend’s perfect posts and a gym friend who left his family for Sonoma. Only one table offers life to the full.</p></div></div>
+        <div class="lie"><div class="hear"><span>2 · Doom</span><b>I’m not going to make it.</b></div><div class="truth"><strong>Through the valley</strong><p>God doesn’t promise to lift you out of the trouble. He promises to bring you through it, and you’ll come out of it with something to tell. Jesus lives in you, so you are not without hope.</p></div></div>
+        <div class="lie"><div class="hear"><span>3 · Worthlessness</span><b>I’m not good enough.</b></div><div class="truth"><strong>Look across the table</strong><p>Humility means thinking of yourself less, not thinking less of yourself. The host booked the table and made the meal, and it cost him his life.</p></div></div>
+        <div class="lie"><div class="hear"><span>4 · Me against the world</span><b>Everybody is against me.</b></div><div class="truth"><strong>God has your back</strong><p>One man told Giglio that everyone at two jobs, and his whole in-law family, hated him. Usually the fists clenched long before anyone else did anything. God is for you, so everyone isn’t against you.</p></div></div>
+        <div class="lie"><div class="hear"><span>5 · No way out</span><b>I’m surrounded.</b></div><div class="truth"><strong>Yes, and so are they</strong><p>This one combines the others. Elisha prayed for his servant’s eyes to be opened, not for rescue, and the servant saw the hills full of fire.</p></div></div>
+      </div>
+      <p class="src">Lies paraphrased from ch. 4; the card layout is mine</p>
+    </div>
+    <ul class="points">
+      <li>The chapter starts with the pale, faraway Jesus in a painting in Giglio’s seventh-grade Sunday school room. Psalm 23 instead shows a shepherd with a weapon in each hand.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Spiral of Sin</span></div>
+  <div class="body">
+    <div>
+      <h3>How a thought becomes a loop</h3>
+      <p class="idea">Sin shows you the lure and hides the hook. Afterwards, the voice that sold it to you prosecutes you for buying it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Desire is the bait.</strong> James 1:13–15 traces temptation to your own desires: desire conceives sin, and sin ends in death. Giglio means spiritual death here, a broken closeness with God, not the loss of salvation.</li>
+      <li><strong>A thought is not yet a sin.</strong> Jesus heard the Devil’s words and was not stained by them. Sin starts when you keep a thought and entertain it, which is why the Sermon on the Mount treats hatred and lust as heart-murder and heart-adultery. Giglio holds that a thought harboured long enough always comes out, either in action or in a softened attitude toward it.</li>
+      <li><strong>The switch.</strong> Once you’ve given in, the enticer becomes the accuser. Condemnation is what officials do to a building just before the wrecking ball.</li>
+      <li><strong>Rededicating the rededication.</strong> Giglio grew up with altar calls and campfire vows never to sin again. Promises made in your own strength wear out, and the end of that road is hiding. The way out is surrender, plus the promise that God provides a way out <span class="ref">(1 Corinthians 10:13)</span>.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The spiral, and where it can be broken</h4>
+      <svg viewBox="0 0 400 362" role="img" aria-label="A six-stage loop drawn clockwise. 1 Trouble: a loss, a stress, an unmet need. 2 A lure: a thought not from God promising relief. 3 Entertained: you host the thought and the Enemy sits down. 4 Acted on: it feels good for a moment. 5 Accused: the enticer turns accuser. 6 Hiding: conceal it, vow never again. Then back to 1, a little worse. Four yellow exits: A between 2 and 3, take the thought captive; B between 3 and 4, take a way-out door; C between 5 and 6, confess and hear conviction not condemnation; D between 6 and 1, surrender instead of rededicating.">
+        <!-- arrows -->
+        <path d="M172 52 H224" class="s-2" stroke-width="1.6"/><path d="M219 47 L227 52 L219 57" class="s-2" stroke-width="1.6"/>
+        <path d="M305 86 V144" class="s-2" stroke-width="1.6"/><path d="M300 139 L305 147 L310 139" class="s-2" stroke-width="1.6"/>
+        <path d="M305 214 V272" class="s-2" stroke-width="1.6"/><path d="M300 267 L305 275 L310 267" class="s-2" stroke-width="1.6"/>
+        <path d="M228 308 H176" class="s-2" stroke-width="1.6"/><path d="M181 303 L173 308 L181 313" class="s-2" stroke-width="1.6"/>
+        <path d="M95 274 V216" class="s-2" stroke-width="1.6"/><path d="M90 221 L95 213 L100 221" class="s-2" stroke-width="1.6"/>
+        <path d="M95 146 V88" class="s-2" stroke-width="1.6"/><path d="M90 93 L95 85 L100 93" class="s-2" stroke-width="1.6"/>
+        <!-- boxes -->
+        <rect x="20" y="20" width="150" height="64" rx="6" class="f-paper2 s-rule" stroke-width="1"/>
+        <text x="32" y="42" class="hd">1 · Trouble</text><text x="32" y="60" class="bd">a loss, a stress,</text><text x="32" y="75" class="bd">an unmet need</text>
+        <rect x="230" y="20" width="150" height="64" rx="6" class="f-paper2 s-rule" stroke-width="1"/>
+        <text x="242" y="42" class="hd">2 · A lure</text><text x="242" y="60" class="bd">a thought not from God,</text><text x="242" y="75" class="bd">promising relief</text>
+        <rect x="230" y="148" width="150" height="64" rx="6" class="f-foe"/>
+        <text x="242" y="170" class="hd t-onfoe" style="fill:var(--on-foe)">3 · Entertained</text><text x="242" y="188" class="bd" style="fill:var(--on-foe)">you host the thought:</text><text x="242" y="203" class="bd" style="fill:var(--on-foe)">the Enemy sits down</text>
+        <rect x="230" y="276" width="150" height="64" rx="6" class="f-paper2 s-rule" stroke-width="1"/>
+        <text x="242" y="298" class="hd">4 · Acted on</text><text x="242" y="316" class="bd">it feels good,</text><text x="242" y="331" class="bd">for a moment</text>
+        <rect x="20" y="276" width="150" height="64" rx="6" class="f-foe"/>
+        <text x="32" y="298" class="hd" style="fill:var(--on-foe)">5 · Accused</text><text x="32" y="316" class="bd" style="fill:var(--on-foe)">the enticer turns</text><text x="32" y="331" class="bd" style="fill:var(--on-foe)">accuser</text>
+        <rect x="20" y="148" width="150" height="64" rx="6" class="f-paper2 s-rule" stroke-width="1"/>
+        <text x="32" y="170" class="hd">6 · Hiding</text><text x="32" y="188" class="bd">conceal it, vow</text><text x="32" y="203" class="bd">“never again”</text>
+        <!-- centre -->
+        <text x="200" y="176" text-anchor="middle" class="sm t-3">each lap</text>
+        <text x="200" y="190" text-anchor="middle" class="sm t-3">starts</text>
+        <text x="200" y="204" text-anchor="middle" class="sm t-3">lower</text>
+        <!-- exits -->
+        <g><circle cx="305" cy="115" r="12" class="f-sun s-ink" stroke-width="1.5"/><text x="305" y="120" text-anchor="middle" class="hd" style="fill:var(--on-sun)">A</text></g>
+        <g><circle cx="305" cy="243" r="12" class="f-sun s-ink" stroke-width="1.5"/><text x="305" y="248" text-anchor="middle" class="hd" style="fill:var(--on-sun)">B</text></g>
+        <g><circle cx="95" cy="245" r="12" class="f-sun s-ink" stroke-width="1.5"/><text x="95" y="250" text-anchor="middle" class="hd" style="fill:var(--on-sun)">C</text></g>
+        <g><circle cx="95" cy="117" r="12" class="f-sun s-ink" stroke-width="1.5"/><text x="95" y="122" text-anchor="middle" class="hd" style="fill:var(--on-sun)">D</text></g>
+      </svg>
+      <div class="exits">
+        <div class="exit"><i>A</i><div><b>Take it captive</b><span>Spot the lie, bind it in Jesus’ name, replace it with Scripture (ch. 7). This is the cheapest exit.</span></div></div>
+        <div class="exit"><i>B</i><div><b>Use a Way Out door</b><span>God provides a way out of every temptation. The doors get smaller the further you go (ch. 6).</span></div></div>
+        <div class="exit"><i>C</i><div><b>Confess, and listen for conviction</b><span>Grace removes guilt and shame alike (ch. 5, 8).</span></div></div>
+        <div class="exit"><i>D</i><div><b>Surrender instead of rededicating</b><span>Stop promising to try harder. Hand the problem over (ch. 5).</span></div></div>
+      </div>
+      <p class="cap">Illustrative layout. The stages and exits come from chapters 5 to 8, but Giglio doesn’t number them or draw them as a loop. He says each lap leaves you where you started, only worse.</p>
+    </div>
+
+    <div class="fig">
+      <h4>Two voices after you fall</h4>
+      <table class="voices">
+        <thead><tr><th scope="col"></th><th scope="col" class="c">Condemnation</th><th scope="col" class="v">Conviction</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Comes from</th><td>Guilt; a posture of hate</td><td>Grace; a posture of love</td></tr>
+          <tr><th scope="row">Does with sin</th><td>Hides it</td><td>Confesses it</td></tr>
+          <tr><th scope="row">Produces</th><td>Remorse: feeling bad about it</td><td>Repentance: turning around</td></tr>
+          <tr><th scope="row">Asks for</th><td>Another rededication</td><td>Full surrender</td></tr>
+          <tr><th scope="row">Leads to</th><td>The next failure</td><td>Real change</td></tr>
+        </tbody>
+      </table>
+      <p class="cap">According to Giglio, the Enemy condemns and God convicts. If you feel a pull to change direction, that is God. If you feel you might as well quit, that is the other voice.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Condemnation is a path to future failure. Conviction is a highway to real change.”</blockquote>
+      <span class="label">Louie Giglio, ch. 5</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="back">
+  <span class="label partno">Chapters 6–10</span>
+  <h2>Taking back the table</h2>
+  <p class="lede">The second half of the book moves from defence to offence: who you are, how to deal with a single thought, what to do after you fail, and what to fill your mind with instead.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Freedom Revolution</span></div>
+  <div class="body">
+    <div>
+      <h3>Stop flailing; stand in who you are</h3>
+      <p class="idea">People caught in quicksand rarely sink out of sight. Grains jam together in what is called a force chain, and people die of exhaustion from fighting it. Fighting sin in your own strength works the same way.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The win is already in.</strong> Giglio piles up the images: in Christ and a new creation, clothed with him, hidden with him, seated with him <span class="ref">(Ephesians 2:6)</span>. You win the battle because of who walks through the valley with you, not because the pressure lets up.</li>
+      <li><strong>Sinner is no longer your identity.</strong> He rejects the sermon that says you are only ever a sinner saved by grace, and calls it bad identity theology. Preach Ephesians 2:8–9 and 2 Corinthians 5:17 together: saved by grace, and now new. He says Jeremiah 17:9 describes a heart that hasn’t yet been made new, while Ezekiel 36:26 promises a new one.</li>
+      <li><strong>Saint is the New Testament word.</strong> He counts more than forty verses that use it for believers. When Paul called himself the worst of sinners, he was ranking how much he needed grace. It wasn’t his name for himself <span class="ref">(Romans 6:1–2)</span>.</li>
+      <li><strong>Way Out signs.</strong> Everywhere in the London Underground, down to the Jubilee line platforms at London Bridge, 23.2 metres below sea level, the signs look different but say the same thing: Way Out. 1 Corinthians 10:13 is God’s version of those signs.</li>
+      <li><strong>The other door.</strong> The gospel is less a ban on sin than an offer to walk with God: the door marked Invitation. Like a newborn zebra kept apart until it knows its mother’s stripes (an example he credits to Priscilla Shirer), you learn the Shepherd’s voice by spending time alone with him.</li>
+    </ul>
+    <div class="fig">
+      <h4>The further you go, the smaller the door</h4>
+      <svg viewBox="0 0 400 214" role="img" aria-label="Side view along a corridor. On the left a large closed door marked Temptation; the best way out is to stay out, with safeguards. Past it the path runs right toward sin, passing three yellow Way Out doors of shrinking size: a house-sized door for saying no to the trip, a pet-sized door for taking the declined card as a sign, and a tiny doll's-house door for getting out of the taxi.">
+        <path d="M10 168 H390" class="s-ink" stroke-width="1.5"/>
+        <!-- temptation door -->
+        <rect x="20" y="56" width="58" height="112" rx="2" class="f-foe"/>
+        <circle cx="68" cy="116" r="3" class="f-sun"/>
+        <text x="49" y="46" text-anchor="middle" class="hd" style="font-size:12px">Temptation</text>
+        <text x="49" y="186" text-anchor="middle" class="sm">stay out:</text>
+        <text x="49" y="200" text-anchor="middle" class="sm">safeguards</text>
+        <!-- path -->
+        <path d="M84 150 C140 150 200 152 360 156" class="s-3" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <path d="M352 151 L362 156 L352 161" class="s-3" stroke-width="1.5"/>
+        <text x="390" y="146" text-anchor="end" class="sm t-3">sin</text>
+        <!-- way out doors -->
+        <rect x="128" y="84" width="40" height="84" rx="2" class="f-sun s-ink" stroke-width="1.5"/>
+        <text x="148" y="76" text-anchor="middle" class="sm t-ink">WAY OUT</text>
+        <text x="148" y="186" text-anchor="middle" class="sm">say no to</text>
+        <text x="148" y="200" text-anchor="middle" class="sm">the trip</text>
+        <rect x="226" y="130" width="26" height="38" rx="2" class="f-sun s-ink" stroke-width="1.5"/>
+        <text x="239" y="122" text-anchor="middle" class="sm t-ink">pet door</text>
+        <text x="239" y="186" text-anchor="middle" class="sm">card declined:</text>
+        <text x="239" y="200" text-anchor="middle" class="sm">take the hint</text>
+        <rect x="318" y="152" width="11" height="16" rx="1" class="f-sun s-ink" stroke-width="1.2"/>
+        <text x="323" y="122" text-anchor="middle" class="sm t-ink">doll’s</text>
+        <text x="323" y="136" text-anchor="middle" class="sm t-ink">house</text>
+        <text x="330" y="186" text-anchor="middle" class="sm">out of</text>
+        <text x="330" y="200" text-anchor="middle" class="sm">the taxi</text>
+      </svg>
+      <p class="cap">Illustrative. Giglio’s example is a girls’ trip to Cancún that went badly last time. You can turn down the invitation. If your card is declined when you book, treat that as a Way Out sign. You can skip the club, or get out of the taxi on the way there. He describes the doors shrinking from a normal door to a pet door to a doll’s-house door, but the best way out is not to open the first door at all: filters, discretion and a few friends who know what you struggle with <span class="ref">(Romans 13:14)</span>.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Take Every Thought Captive</span></div>
+  <div class="body">
+    <div>
+      <h3>Spot it, bind it, replace it</h3>
+      <p class="idea">Christ has won the war, but there are still battles to fight, and nobody else can take your thoughts captive for you.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A personal case.</strong> At eighteen, Giglio flunked out of two schools in one year. The Enemy’s foothold, he says, was laziness. Once he connected his call to ministry with the dull work of undergraduate classes, he begged his way back into Georgia State, did about two years’ work in a little over one, and graduated with his original class.</li>
+      <li><strong>Seeds.</strong> The ten spies had no way of knowing how they looked to the Canaanites, but they felt like grasshoppers, and they wandered for forty years. Giglio lists the seeds to watch for, among them <em>I’ll never change</em>, <em>I am my addiction</em> and <em>I deserve to be bitter</em>.</li>
+      <li><strong>D-Day Plus 1.</strong> On June 7, 1944, the outcome of the war was settled, but Cherbourg, Paris and the Bulge were still to come. The Greek <em>nikos</em> is victory by conquest. You fight from the beachhead, not toward it.</li>
+      <li><strong>The hard part.</strong> He doesn’t soften it: leaving a thought unchallenged is your own failure, and you can’t pin it on your parents.</li>
+    </ul>
+    <div class="fig">
+      <h4>The prayer, worked as a routine</h4>
+      <ol class="steps">
+        <li><b>See the lie</b><span>Ask where the thought came from and whether it matches what God says. If you think <em>I’m pathetic</em>, set it against Colossians 3:12, which calls you holy and dearly loved.</span></li>
+        <li><b>Bind it</b><span>Arrest it. Make a short prayer, aloud or silent, binding it in Jesus’ name, in the spirit of Jude 9. Even Jesus in Gethsemane yielded his will to the Father.</span></li>
+        <li><b>Replace it</b><span>Memorise Scripture so you can play it back to yourself. Jesus answered the tempter by quoting Scripture. Become the DJ of your own thoughts.</span></li>
+        <li class="go"><b>Play offence</b><span>Go through the eight categories of Philippians 4:8 (true, noble, right and so on), or take one promise for each day of the week.</span></li>
+      </ol>
+      <p class="cap">Giglio used this while writing the chapter. He started to think the book would help no one, prayed against the thought, and then a verse from that morning’s reading came back to him: Joshua 1:5, the promise to be with him as with Moses.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“We take captive every thought to make it obedient to Christ.”</blockquote>
+      <span class="label">2 Corinthians 10:5, the basis of the prayer</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Grace That Silences Shame</span></div>
+  <div class="body">
+    <div>
+      <h3>From failure to family</h3>
+      <p class="idea">If he does get a seat, God isn’t finished with you. Confession removes him from the table, and grace deals with what he leaves behind.</p>
+    </div>
+    <div class="compare">
+      <div><h5>Guilt</h5><p class="says">I did something wrong.</p><ul><li>A legal, spiritual state: you’re accountable</li><li>Isaiah, before the holy throne, felt shattered</li><li>Answer: confession. A coal from the altar took his guilt away. On the cross, Jesus took ours</li></ul></div>
+      <div><h5>Shame</h5><p class="says">I am something wrong.</p><ul><li>An emotional state that fuses sin with identity</li><li>Makes you hide, behind fig leaves, walls or busyness</li><li>Answer: grace gives you a new definition. You were a failure; now you are family <span class="ref">(1 John 3:1)</span></li></ul></div>
+    </div>
+    <ul class="points">
+      <li>Confession under 1 John 1:9 doesn’t send Jesus back to the cross. You confess the sin and you also confess that you are already forgiven. The Enemy, by contrast, wants to send you on a long guilt trip.</li>
+      <li>Hester Prynne’s scarlet A is the picture of a life defined by one act, and sometimes by other people’s sins. The Enemy points to your scars as your identity; Jesus offers his scars instead.</li>
+      <li>Peter denied Jesus three times and went back to fishing. Jesus didn’t confront him. He cooked breakfast on the beach, asked three times whether Peter loved him, and gave him work: feed my sheep. Soon after, Peter preached and three thousand people were saved. There were consequences, but Jesus focused on restoring him.</li>
+      <li>Those who look to God are radiant <span class="ref">(Psalm 34:5)</span>. Forgiving yourself, Giglio says, isn’t letting yourself off the hook. It is agreeing with Jesus, who already has.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Staggered by the Mountain</span></div>
+  <div class="body">
+    <div>
+      <h3>Why the enemies get ringside seats</h3>
+      <p class="idea">The strongest defence is to be so taken up with the host that the empty chair stops mattering.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Knowing about vs. knowing.</strong> Giglio and Shelley have known London since 1988, from many visits, not from guidebooks. On a trip with his fast-moving father-in-law they spent 27 minutes at the Butchart Gardens, eight of them buying ice cream, and filmed it to watch at home. Lingering is the point.</li>
+      <li><strong>Mount Rainier.</strong> On a six-week college road trip, Giglio had aced a geography test about the mountain. When he stood in front of it he broke down in tears. That night, in a tent in Coos Bay, he understood it as the difference between information and revelation.</li>
+      <li><strong>Holy, holy, holy.</strong> In Isaiah 6 the seraphim cry out God’s holiness, not his strength or faithfulness. Holy (<em>qadash</em>) means sacred and set apart: God isn’t even in a race with anyone else. Glory (<em>kabod</em>) means weight and worth. Hebrew doubles a word for emphasis and only rarely triples it.</li>
+    </ul>
+    <div class="fig">
+      <h4>So why put the table among the enemies?</h4>
+      <div class="exits">
+        <div class="exit"><i>1</i><div><b>So you learn there is always enough</b><span>He sustains you in every struggle, in front of everyone.</span></div></div>
+        <div class="exit"><i>2</i><div><b>So they watch you shine</b><span>Faces that look to him are radiant. In time the onlookers turn to the one who keeps you glowing. Giglio mentions the twenty-one Christians killed on a Libyan beach.</span></div></div>
+        <div class="exit"><i>3</i><div><b>So they hear your song</b><span>Worship becomes your weapon: <em>I look surrounded, but I’m surrounded by you.</em></span></div></div>
+      </div>
+      <p class="cap">Giglio calls this question the crux of the book. The three answers are his. The numbering is mine.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">The Garden of Your Mind</span></div>
+  <div class="body">
+    <div>
+      <h3>Plant seven seeds</h3>
+      <p class="idea">Seeds blow into the garden uninvited. You decide which ones get water.</p>
+    </div>
+    <ul class="points">
+      <li>The Giglios’ goldendoodle, London, knows the drainage pipe at the dog park is off limits, and on some days you can see her watching for the moment they look away. Giglio asks whether you’ve ever been stuck on one idea like that.</li>
+      <li>Romans 8:6 in the NASB speaks of a mind <em>set on</em> the Spirit, which he takes to mean a new mindset. You win by thinking less about the evil you’re avoiding and more about the God you’re turning toward.</li>
+      <li>He brings the images together. The garden is your mind, the table is fellowship, and the mountain is God’s greatness. All three describe a relationship.</li>
+    </ul>
+    <div class="fig">
+      <h4>The seven seeds, with the verse to memorise</h4>
+      <div class="seeds">
+        <div class="seed"><span class="n">01 · Jeremiah 29:11</span><b>I am in God’s story</b><span>It’s bigger than you and not about you, but you have a seat in it.</span></div>
+        <div class="seed"><span class="n">02 · Psalm 139:13–14</span><b>I am fearfully and wonderfully made</b><span>You were made on purpose: not accidental, not incidental.</span></div>
+        <div class="seed"><span class="n">03 · Ephesians 2:10</span><b>My life has purpose</b><span>Created things have a reason. You are not expendable.</span></div>
+        <div class="seed"><span class="n">04 · 2 Corinthians 5:17</span><b>The cross has the final word</b><span>Forgiven, made right, new. Your guilt is gone.</span></div>
+        <div class="seed"><span class="n">05 · 1 Peter 2:9</span><b>I serve at the pleasure of the King</b><span>Your job is a posting. You are sent out as light so others can see Jesus.</span></div>
+        <div class="seed"><span class="n">06 · Philippians 2:9–11</span><b>Jesus is Lord, and my Lord</b><span>Stronger and higher than anything, with a kingdom that lasts.</span></div>
+        <div class="seed"><span class="n">07 · Romans 8:28</span><b>My God turns evil into good</b><span>No disease, divorce or desert can stop these seeds from growing.</span></div>
+      </div>
+      <p class="cap">Giglio suggests taking one seed a day for a week, or one a week for seven weeks. Personalise each statement and learn its verse by heart.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Practical takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Giglio says this isn’t a three-steps-to-a-pain-free-life book. Still, these are the habits it keeps coming back to.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Spot him</h3>
+      <div class="tk"><b>Listen for the five lies</b><span>Another table is better; I won’t make it; I’m not enough; everyone’s against me; there’s no way out.</span></div>
+      <div class="tk"><b>Ask where a thought came from</b><span>If it doesn’t sound like the Shepherd of Psalm 23, it isn’t from him.</span></div>
+      <div class="tk"><b>Watch your low moments</b><span>Being lonely, angry, tired, hungry or afraid is when the chair scrapes across the floor. That’s how it went for Peter by the fire.</span></div>
+    </div>
+    <div class="col">
+      <h3>Un-seat him</h3>
+      <div class="tk"><b>Bind the thought, by name</b><span>Arrest it in Jesus’ name, out loud if that helps, before it settles in.</span></div>
+      <div class="tk"><b>Take the earliest door</b><span>Safeguards first. If you’re already through, take the next Way Out, however small.</span></div>
+      <div class="tk"><b>Choose conviction over condemnation</b><span>Confess the sin and the forgiveness. Then surrender; don’t rededicate.</span></div>
+    </div>
+    <div class="col">
+      <h3>Fill the table</h3>
+      <div class="tk"><b>Memorise one verse at a time</b><span>Use index cards on the exercise bike, an audio Bible on your commute, or one less TV show.</span></div>
+      <div class="tk"><b>Pray “with me”, not just “help me”</b><span>Thank him for being in the storm with you, then ask how you’ll get through it together.</span></div>
+      <div class="tk"><b>Linger</b><span>Give God more than 27 minutes at the gardens. Climb higher on the mountain. Plant the seven seeds.</span></div>
+    </div>
+  </div>
+</section>
+
+<p style="max-width:70ch;margin:32px auto;padding:0 16px;font-size:15px">Also on fear and trust: <a href="../lifesigns/"><em>Lifesigns</em></a> · <a href="../anxious-for-nothing/"><em>Anxious for Nothing</em></a> · <a href="../ruthless-trust/"><em>Ruthless Trust</em></a>.</p>
+<footer>
+  <p>A summary in my own words of Louie Giglio, <em>Don’t Give the Enemy a Seat at Your Table: It’s Time to Win the Battle of Your Mind . . .</em> (W Publishing, an imprint of Thomas Nelson, 2021). Figures and Bible references are as given in the book. The table, spiral and doors diagrams were drawn for this page and their layouts are illustrative. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Nov 2026</span>
+</footer>
+
+</div>
+</body>
+</html>
