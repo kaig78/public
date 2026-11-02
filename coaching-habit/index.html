@@ -1,0 +1,1294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Coaching Habit by Michael Bungay Stanier – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Sky = asking / the other person, sun = you, the manager,
+   borrowed from the cover's cyan and yellow. Coral marks traps, leaf marks the new habit. */
+:root {
+  --paper: #f4f6f7;
+  --paper-2: #e8eef1;
+  --card: #ffffff;
+  --ink: #13171c;
+  --ink-2: #46505a;
+  --ink-3: #75808a;
+  --rule: #d5dde2;
+
+  --sky: #1290b8;
+  --sun: #f2c200;
+  --sun-ink: #8a6a00;
+  --coral: #d9472f;
+  --leaf: #23885b;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f1316;
+    --paper-2: #182026;
+    --card: #1b242b;
+    --ink: #edf2f5;
+    --ink-2: #b0bcc4;
+    --ink-3: #82909a;
+    --rule: #2b363e;
+    --sky: #5cc6ea;
+    --sun: #ffd23f;
+    --sun-ink: #ffd23f;
+    --coral: #ff7a63;
+    --leaf: #5fcf98;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f1316;
+  --paper-2: #182026;
+  --card: #1b242b;
+  --ink: #edf2f5;
+  --ink-2: #b0bcc4;
+  --ink-3: #82909a;
+  --rule: #2b363e;
+  --sky: #5cc6ea;
+  --sun: #ffd23f;
+  --sun-ink: #ffd23f;
+  --coral: #ff7a63;
+  --leaf: #5fcf98;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--sky); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Colour helpers */
+.c-sky   { --c: var(--sky); }
+.c-sun   { --c: var(--sun); }
+.c-coral { --c: var(--coral); }
+.c-leaf  { --c: var(--leaf); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(52px, 10vw, 132px);
+  font-weight: 900;
+  font-stretch: 115%;
+  line-height: .84;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero h1 .the {
+  display: block;
+  font-size: .32em;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  line-height: 1;
+  margin-bottom: .2em;
+  color: var(--sky);
+}
+.hero h1 .hl { box-shadow: inset 0 -.2em 0 color-mix(in srgb, var(--sun) 70%, transparent); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 856;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 30, 40, .35), 0 8px 18px -10px rgba(10, 30, 40, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.talkband { position: relative; margin-top: 28px; }
+.talkband canvas { display: block; width: 100%; height: 120px; }
+.talkband .ends { display: flex; justify-content: space-between; gap: 12px; }
+.talkband .key { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
+.talkband .key i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; background: var(--c); margin-right: 6px; vertical-align: 0; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter h3 q { quotes: "“" "”"; }
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg text.nm { font-family: var(--display); font-weight: 750; fill: var(--ink); }
+.fig svg text.dim { fill: var(--ink-3); }
+.svg-narrow { max-width: 460px; margin-inline: auto; width: 100%; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+.axis { position: relative; height: 18px; margin-top: 2px; }
+.axis span { position: absolute; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.axis span:first-child { transform: none; }
+.axis-grid { position: absolute; inset: 0; pointer-events: none; }
+.axis-grid i { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--rule); }
+.barwrap { position: relative; display: grid; gap: 14px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* habit formula card */
+.formula { display: grid; gap: 0; border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.formula > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 14px; padding: 14px 16px; background: var(--card); border-top: 1px solid var(--rule); align-items: baseline; }
+.formula > div:first-child { border-top: 0; }
+.formula .k { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--c); font-weight: 500; }
+.formula .k.when { --c: var(--sun-ink); }
+.formula .k.instead { --c: var(--coral); }
+.formula .k.will { --c: var(--leaf); }
+.formula p { font-size: 16px; line-height: 1.45; }
+.formula .old { color: var(--ink-2); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--coral) 60%, transparent); }
+
+/* components list */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-top: 1px solid var(--rule); font-size: 16px; line-height: 1.45; }
+.steps li:first-child { border-top: 0; }
+.steps li::before { content: counter(s, decimal-leading-zero); font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; }
+.steps b { font-family: var(--display); font-weight: 750; font-stretch: 100%; display: block; font-size: 16.5px; }
+.steps span { color: var(--ink-2); }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 7px 13px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); color: var(--ink); }
+.chip.fill { background: color-mix(in srgb, var(--c) 14%, var(--card)); }
+
+/* 3P cards */
+.threep { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.threep div { border-radius: 6px; padding: 16px; display: grid; gap: 6px; align-content: start; border: 1px solid color-mix(in srgb, var(--c) 35%, var(--rule)); }
+.threep b { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 22px; color: var(--c); }
+.threep span { font-size: 14.5px; line-height: 1.4; color: var(--ink-2); }
+.threep .tag { font-family: var(--mono); font-size: 11.5px; color: var(--ink); }
+.scale { display: flex; justify-content: space-between; gap: 10px; margin-top: 4px; }
+.scale-line { height: 6px; border-radius: 3px; background: linear-gradient(90deg, color-mix(in srgb, var(--sky) 25%, var(--paper-2)), var(--sky)); }
+
+/* fog cards */
+.fog { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.fog > div { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; display: grid; gap: 8px; align-content: start; }
+.fog b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 18px; line-height: 1.2; }
+.fog .sym { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+.fog .ask { font-size: 15px; font-style: italic; border-left: 2px solid var(--sky); padding-left: 10px; line-height: 1.4; }
+
+/* script */
+.script {
+  font-family: var(--mono); font-size: 14px; line-height: 1.8;
+  background: var(--paper-2); border-radius: 6px; padding: 18px 20px; margin: 0;
+  white-space: pre-wrap; color: var(--ink);
+}
+.script .k { color: var(--sky); }
+.script .c { color: var(--ink-3); }
+
+/* dials (TERA) */
+.dials { display: grid; gap: 14px; }
+.dial { display: grid; grid-template-columns: 120px minmax(0, 1fr) 70px; gap: 12px; align-items: center; font-size: 14px; }
+.dial b { font-family: var(--display); font-weight: 750; font-stretch: 100%; display: block; line-height: 1.2; }
+.dial small { font-family: var(--mono); font-size: 11px; color: var(--ink-3); display: block; }
+.dial .t { height: 10px; border-radius: 5px; background: linear-gradient(90deg, color-mix(in srgb, var(--coral) 35%, var(--paper-2)), var(--paper-2) 50%, color-mix(in srgb, var(--leaf) 45%, var(--paper-2))); position: relative; }
+.dial .t i { position: absolute; top: -4px; width: 18px; height: 18px; border-radius: 50%; transform: translateX(-50%); }
+.dial .t i.tell { background: var(--card); border: 2px dashed var(--ink-3); }
+.dial .t i.ask { background: var(--card); border: 3px solid var(--sky); }
+.dial .d { font-family: var(--mono); font-size: 12px; text-align: right; }
+.dial-key { display: flex; gap: 18px; flex-wrap: wrap; }
+.dial-key span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.dial-key .tell::before { border: 2px dashed var(--ink-3); }
+.dial-key .ask::before { border: 3px solid var(--sky); }
+
+/* drama roles */
+.roles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.roles > div { border-radius: 6px; padding: 16px; display: grid; gap: 6px; align-content: start; border-top: 4px solid var(--c); background: color-mix(in srgb, var(--c) 7%, var(--card)); }
+.roles b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 20px; }
+.roles .q { font-style: italic; font-size: 15.5px; }
+.roles dl { margin: 4px 0 0; display: grid; gap: 4px; font-size: 14px; line-height: 1.4; }
+.roles dt { font-family: var(--mono); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); margin-top: 6px; }
+.roles dd { margin: 0; color: var(--ink-2); }
+
+/* replies */
+.replies { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.replies div { border-radius: 6px; padding: 12px 14px; background: var(--paper-2); display: grid; gap: 4px; align-content: start; }
+.replies b { font-family: var(--display); font-weight: 800; font-stretch: 100%; font-size: 16px; }
+.replies span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .lbl { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; }
+.compare .good { color: var(--leaf); }
+.compare .bad { color: var(--coral); }
+
+/* checklist */
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.checks li { display: flex; gap: 10px; align-items: baseline; font-size: 16px; line-height: 1.4; }
+.checks li::before { content: "✓"; font-family: var(--mono); font-size: 13px; width: 16px; flex: none; color: var(--leaf); }
+
+/* bookends */
+.bookends { display: grid; grid-template-columns: minmax(0, 1fr) minmax(60px, .7fr) minmax(0, 1fr); gap: 0; align-items: stretch; }
+.bookends .end { border-radius: 6px; padding: 16px; background: var(--sky); color: var(--paper); display: grid; gap: 6px; align-content: start; }
+.bookends .end .label { color: color-mix(in srgb, var(--paper) 78%, var(--sky)); }
+.bookends .end b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 19px; line-height: 1.2; }
+.bookends .mid { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; padding: 0 10px; }
+.bookends .mid .books { display: flex; gap: 3px; align-items: flex-end; height: 64px; }
+.bookends .mid .books i { width: 9px; border-radius: 2px 2px 0 0; background: color-mix(in srgb, var(--ink) 18%, var(--paper-2)); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+.haiku { font-family: var(--display); font-weight: 750; font-stretch: 108%; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; letter-spacing: -.01em; margin: 0; }
+.haiku span { display: block; }
+
+/* masterclass */
+.mc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.mc article { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; display: grid; gap: 10px; align-content: start; }
+.mc header { display: flex; gap: 12px; align-items: baseline; }
+.mc header .n { font-family: var(--display); font-weight: 900; font-stretch: 62%; font-size: 40px; line-height: .8; color: var(--sky); font-variant-numeric: tabular-nums; }
+.mc h3 { font-size: 20px; font-weight: 800; font-stretch: 105%; line-height: 1.15; }
+.mc p { font-size: 15.5px; color: var(--ink-2); line-height: 1.5; }
+.mc .will { font-size: 15px; border-left: 2px solid var(--leaf); padding-left: 10px; color: var(--ink); }
+.mc .will .label { color: var(--leaf); display: block; margin-bottom: 2px; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.hike { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.hike div { border-radius: 6px; padding: 14px; border: 1px dashed color-mix(in srgb, var(--c) 60%, var(--rule)); display: grid; gap: 4px; }
+.hike b { font-family: var(--display); font-weight: 800; font-stretch: 105%; color: var(--c); }
+.hike span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .two, .part { grid-template-columns: 1fr; }
+  .map, .toolkit, .fog, .roles { grid-template-columns: 1fr; }
+  .replies { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .threep, .compare, .hike, .mc { grid-template-columns: 1fr; }
+  .formula > div { grid-template-columns: 1fr; gap: 4px; }
+  .dial { grid-template-columns: 92px minmax(0, 1fr) 52px; }
+  .bookends { grid-template-columns: 1fr; gap: 10px; }
+  .bookends .mid { flex-direction: row; padding: 0; }
+  .bookends .mid .books { height: 34px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<!-- shared arrowheads for the diagrams -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="ah-coral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--coral)"/></marker>
+    <marker id="ah-leaf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--leaf)"/></marker>
+    <marker id="ah-sun" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--sun)"/></marker>
+    <marker id="ah-ink3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--ink-3)"/></marker>
+  </defs>
+</svg>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Michael Bungay Stanier · Box of Crayons Press, 2016</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#habit">The habit</a>
+    <a href="#questions">Seven questions</a>
+    <a href="#masterclass">Masterclass</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span class="the">The</span>Coaching <span class="hl">Habit</span></h1>
+    <p class="sub">Say less, ask more and change the way you lead forever</p>
+    <p class="dek">Michael Bungay Stanier argues that coaching isn't a formal session. It's a ten-minute, everyday habit built from seven short questions.</p>
+    <div class="byline label">
+      <span>7 questions</span><span>8 masterclasses</span><span>1 habit formula</span><span>~28,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Coaching Habit by Michael Bungay Stanier: bold title type on a bright cyan field above a band of sunny yellow, the author's name in a white box">
+</div>
+
+<div class="talkband" aria-hidden="true">
+  <canvas id="talk"></canvas>
+  <div class="ends label"><span>Telling: you talk, they wait</span><span>Asking: they talk, you listen</span></div>
+  <div class="key label"><span class="c-sun"><i></i>You</span><span class="c-sky"><i></i>The other person</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>A little less advice, a little more curiosity</h2>
+  </div>
+  <div class="two">
+    <div class="prose">
+      <p>Everyone agrees managers should coach. Daniel Goleman found coaching had a clearly positive effect on performance and culture, yet it was the leadership style used least, because leaders said they didn't have time. Most managers who tried got training that was too theoretical, never turned it into new behaviour, and fell back into the old way the moment they got back to their desks.</p>
+      <p>Bungay Stanier's answer is to shrink coaching. It isn't an occasional "it's coaching time" event. It's something you do in <strong>ten minutes or less</strong>, every day, in ordinary conversations. And the change is one behaviour: <strong>stay curious a little longer, and rush to action and advice a little more slowly.</strong></p>
+      <p>That's simple but not easy. You've been praised and promoted for having answers. Advice feels useful and keeps you in control. Asking feels slower and less certain. So the book is as much about <a href="#habit">building a habit</a> as it is about the <a href="#questions">seven questions</a> themselves.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Why it matters</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat"><span class="big num">73%</span><p>of managers had received some coaching training (BlessingWhite, 2006).</p></div>
+        <div class="stat"><span class="big num">23%</span><p>of the people being coached said it had a significant effect on their performance or satisfaction.</p></div>
+        <div class="stat"><span class="big num">10%</span><p>said the coaching they got was making things worse.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--sky)">
+        <span class="label">The payoff for you</span>
+        <p>Coaching isn't only good for your people. It lets you work less hard and have more impact, because it breaks three vicious circles that trap busy managers (below).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:24px">
+    <h4>Three vicious circles a coaching habit breaks</h4>
+    <svg class="svg-narrow" style="max-width:640px" viewBox="0 0 480 205" role="img" aria-label="Three loops. Overdependence: you help more, so they rely on you more, so you help more. Overwhelm: you lose focus, so you feel more swamped, so you lose more focus. Disconnection: less meaningful work leads to less engagement, which leads to less meaningful work.">
+      <g>
+        <path d="M98.6 60.1 A44 44 0 0 1 98.6 139.9" fill="none" stroke="var(--coral)" stroke-width="2" marker-end="url(#ah-coral)"/>
+        <path d="M61.4 139.9 A44 44 0 0 1 61.4 60.1" fill="none" stroke="var(--coral)" stroke-width="2" marker-end="url(#ah-coral)"/>
+        <circle cx="80" cy="56" r="4" fill="var(--ink)"/><circle cx="80" cy="144" r="4" fill="var(--ink)"/>
+        <text x="80" y="108" text-anchor="middle" class="nm" font-size="24" style="fill:var(--coral)">1</text>
+        <text x="80" y="40" text-anchor="middle" font-size="10.5">you help more</text>
+        <text x="80" y="168" text-anchor="middle" font-size="10.5">they rely on you more</text>
+        <text x="80" y="196" text-anchor="middle" class="nm" font-size="14">Overdependence</text>
+      </g>
+      <g>
+        <path d="M258.6 60.1 A44 44 0 0 1 258.6 139.9" fill="none" stroke="var(--coral)" stroke-width="2" marker-end="url(#ah-coral)"/>
+        <path d="M221.4 139.9 A44 44 0 0 1 221.4 60.1" fill="none" stroke="var(--coral)" stroke-width="2" marker-end="url(#ah-coral)"/>
+        <circle cx="240" cy="56" r="4" fill="var(--ink)"/><circle cx="240" cy="144" r="4" fill="var(--ink)"/>
+        <text x="240" y="108" text-anchor="middle" class="nm" font-size="24" style="fill:var(--coral)">2</text>
+        <text x="240" y="40" text-anchor="middle" font-size="10.5">you lose focus</text>
+        <text x="240" y="168" text-anchor="middle" font-size="10.5">you feel more swamped</text>
+        <text x="240" y="196" text-anchor="middle" class="nm" font-size="14">Overwhelm</text>
+      </g>
+      <g>
+        <path d="M418.6 60.1 A44 44 0 0 1 418.6 139.9" fill="none" stroke="var(--coral)" stroke-width="2" marker-end="url(#ah-coral)"/>
+        <path d="M381.4 139.9 A44 44 0 0 1 381.4 60.1" fill="none" stroke="var(--coral)" stroke-width="2" marker-end="url(#ah-coral)"/>
+        <circle cx="400" cy="56" r="4" fill="var(--ink)"/><circle cx="400" cy="144" r="4" fill="var(--ink)"/>
+        <text x="400" y="108" text-anchor="middle" class="nm" font-size="24" style="fill:var(--coral)">3</text>
+        <text x="400" y="40" text-anchor="middle" font-size="10.5">less meaningful work</text>
+        <text x="400" y="168" text-anchor="middle" font-size="10.5">less engagement</text>
+        <text x="400" y="196" text-anchor="middle" class="nm" font-size="14">Disconnection</text>
+      </g>
+    </svg>
+    <p class="cap">The more you help, the more your team needs your help, and you become the bottleneck. The more you're pulled in different directions, the less you focus. The more time goes into work with no real purpose, the less engaged everyone is. Coaching builds autonomy, restores focus and points people back to <strong>Great Work</strong>: work with more impact and more meaning.</p>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part 1 · Open and focus</span>
+      <h3>Get to it</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>The Kickstart Question</b>What's on your mind?</a></li>
+        <li><span>02</span><a href="#ch2"><b>The AWE Question</b>And what else?</a></li>
+        <li><span>03</span><a href="#ch3"><b>The Focus Question</b>What's the real challenge here for you?</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 2 · Adult to adult</span>
+      <h3>Get clear</h3>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>The Foundation Question</b>What do you want?</a></li>
+        <li><span>05</span><a href="#ch5"><b>The Lazy Question</b>How can I help?</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 3 · Commit and learn</span>
+      <h3>Get it to stick</h3>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>The Strategic Question</b>If you're saying Yes to this, what are you saying No to?</a></li>
+        <li><span>07</span><a href="#ch7"><b>The Learning Question</b>What was most useful for you?</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE HABIT ============ -->
+<section id="habit">
+  <div class="sec-head">
+    <span class="label">Before the questions</span>
+    <h2>How to build a habit that sticks</h2>
+    <p class="lede">About 45% of what we do while awake is habit, according to a Duke University study. Good intentions lose to autopilot. So the book starts with the mechanics of changing behaviour.</p>
+  </div>
+
+  <div class="two">
+    <div class="fig">
+      <h4>Five ingredients of a new habit</h4>
+      <ol class="steps">
+        <li><div><b>A reason: make a vow</b><span>Link the change to people you care about, not to your own gain. Picturing success too vividly actually lowers motivation.</span></div></li>
+        <li><div><b>A trigger</b><span>If you don't know what sets off the old behaviour, you're already doing it before you notice. Make the trigger specific: not "in team meetings" but "when Jenny asks for feedback on her idea".</span></div></li>
+        <li><div><b>A micro-habit</b><span>Short and specific: something that takes under 60 seconds. Every one of the seven questions fits.</span></div></li>
+        <li><div><b>Deep practice</b><span>Practise small chunks, repeat them many times, and notice and celebrate when it works.</span></div></li>
+        <li><div><b>A plan for slipping</b><span>You will miss a day. Decide in advance what gets you back on track, so one slip doesn't become giving up.</span></div></li>
+      </ol>
+    </div>
+    <div class="fig">
+      <h4>The New Habit Formula</h4>
+      <svg class="svg-narrow" viewBox="0 0 440 220" role="img" aria-label="A fork in the road. From a yellow trigger point labelled when this happens, a thick worn grey road leads up to instead of, the old habit. A thinner green road with an arrow leads down to I will, a new habit under sixty seconds.">
+        <path d="M49 110 C150 110, 170 52, 270 52" fill="none" stroke="var(--ink-3)" stroke-width="9" stroke-linecap="round" stroke-opacity=".35"/>
+        <path d="M49 110 C150 110, 170 168, 268 168" fill="none" stroke="var(--leaf)" stroke-width="3" marker-end="url(#ah-leaf)"/>
+        <circle cx="40" cy="110" r="10" fill="var(--sun)"/>
+        <circle cx="280" cy="52" r="7" fill="var(--ink-3)"/>
+        <circle cx="280" cy="168" r="7" fill="var(--leaf)"/>
+        <text x="296" y="48" class="nm" font-size="14">Instead of…</text>
+        <text x="296" y="65" font-size="10.5">the old habit</text>
+        <text x="296" y="164" class="nm" font-size="14" style="fill:var(--leaf)">I will…</text>
+        <text x="296" y="181" font-size="10.5">new habit, under 60 s</text>
+        <text x="20" y="150" class="nm" font-size="14">When this happens…</text>
+        <text x="20" y="167" font-size="10.5">a specific trigger</text>
+      </svg>
+      <div class="formula">
+        <div><span class="k when">When this happens…</span><p>I'm frustrated in my weekly meeting with Bob because he says "I haven't really thought about it"</p></div>
+        <div><span class="k instead">Instead of…</span><p class="old">asking "Have you thought about X?" and hoping he takes the hint</p></div>
+        <div><span class="k will">I will…</span><p>ask Bob, "So what ideas do you have now?"</p></div>
+      </div>
+      <p class="cap">Charles Duhigg says triggers come in five kinds, and stacking them makes the moment easy to spot:</p>
+      <div class="chips">
+        <span class="chip">Location</span><span class="chip">Time</span><span class="chip">Emotional state</span><span class="chip">Other people</span><span class="chip">The action just before</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="story" style="margin-top:28px">
+    <span class="label">Expect resistance</span>
+    <p>As soon as you try something new, something pushes back. Start with someone easy (or someone it's going so badly with that you have nothing to lose). Start small and master one question before adding the next. Find a buddy to check in with. And when it slips, get back on the horse: the awkward stage of "conscious incompetence" is how you get to competence.</p>
+  </div>
+</section>
+
+<!-- ============ SEVEN QUESTIONS OVERVIEW ============ -->
+<section id="questions">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Seven essential questions</h2>
+    <p class="lede">Each one takes under a minute to ask. Together they make a conversation that starts fast, finds the real issue, and ends with something learned.</p>
+  </div>
+  <div class="two">
+    <div class="fig">
+      <h4>One conversation, start to finish</h4>
+      <svg class="svg-narrow" viewBox="0 0 440 384" role="img" aria-label="A vertical chain of seven numbered questions. 1 Kickstart: what's on your mind. 2 AWE: and what else. 3 Focus: what's the real challenge here for you. 4 Foundation: what do you want. 5 Lazy: how can I help. 6 Strategic: if you're saying yes to this, what are you saying no to. 7 Learning: what was most useful for you. Questions 1 and 7 are highlighted as bookends. A dashed line on the left shows and what else can be added to any of them.">
+        <line x1="64" y1="32" x2="64" y2="356" stroke="var(--rule)" stroke-width="3"/>
+        <line x1="24" y1="32" x2="24" y2="356" stroke="var(--sun)" stroke-width="2" stroke-dasharray="4 4"/>
+        <text transform="translate(14 194) rotate(-90)" text-anchor="middle" font-size="10" style="fill:var(--sun-ink)">+ "and what else?" after any of them</text>
+        <line x1="24" y1="32" x2="44" y2="32" stroke="var(--sun)" stroke-width="1.5" marker-end="url(#ah-sun)"/>
+        <line x1="24" y1="140" x2="44" y2="140" stroke="var(--sun)" stroke-width="1.5" marker-end="url(#ah-sun)"/>
+        <line x1="24" y1="194" x2="44" y2="194" stroke="var(--sun)" stroke-width="1.5" marker-end="url(#ah-sun)"/>
+        <line x1="24" y1="248" x2="44" y2="248" stroke="var(--sun)" stroke-width="1.5" marker-end="url(#ah-sun)"/>
+        <line x1="24" y1="302" x2="44" y2="302" stroke="var(--sun)" stroke-width="1.5" marker-end="url(#ah-sun)"/>
+
+        <circle cx="64" cy="32" r="15" fill="var(--sky)"/><text x="64" y="37" text-anchor="middle" class="nm" font-size="14" style="fill:var(--paper)">1</text>
+        <text x="94" y="27" class="nm" font-size="14">Kickstart</text><text x="94" y="44" font-size="11.5">What's on your mind?</text>
+
+        <circle cx="64" cy="86" r="15" fill="var(--sun)"/><text x="64" y="91" text-anchor="middle" class="nm" font-size="14" style="fill:#16151b">2</text>
+        <text x="94" y="81" class="nm" font-size="14">AWE</text><text x="94" y="98" font-size="11.5">And what else?</text>
+
+        <circle cx="64" cy="140" r="15" fill="var(--card)" stroke="var(--sky)" stroke-width="2"/><text x="64" y="145" text-anchor="middle" class="nm" font-size="14">3</text>
+        <text x="94" y="135" class="nm" font-size="14">Focus</text><text x="94" y="152" font-size="11.5">What's the real challenge here for you?</text>
+
+        <circle cx="64" cy="194" r="15" fill="var(--card)" stroke="var(--sky)" stroke-width="2"/><text x="64" y="199" text-anchor="middle" class="nm" font-size="14">4</text>
+        <text x="94" y="189" class="nm" font-size="14">Foundation</text><text x="94" y="206" font-size="11.5">What do you want?</text>
+
+        <circle cx="64" cy="248" r="15" fill="var(--card)" stroke="var(--sky)" stroke-width="2"/><text x="64" y="253" text-anchor="middle" class="nm" font-size="14">5</text>
+        <text x="94" y="243" class="nm" font-size="14">Lazy</text><text x="94" y="260" font-size="11.5">How can I help?</text>
+
+        <circle cx="64" cy="302" r="15" fill="var(--card)" stroke="var(--sky)" stroke-width="2"/><text x="64" y="307" text-anchor="middle" class="nm" font-size="14">6</text>
+        <text x="94" y="297" class="nm" font-size="14">Strategic</text><text x="94" y="314" font-size="11.5">If you're saying Yes to this,</text><text x="94" y="329" font-size="11.5">what are you saying No to?</text>
+
+        <circle cx="64" cy="356" r="15" fill="var(--sky)"/><text x="64" y="361" text-anchor="middle" class="nm" font-size="14" style="fill:var(--paper)">7</text>
+        <text x="94" y="351" class="nm" font-size="14">Learning</text><text x="94" y="368" font-size="11.5">What was most useful for you?</text>
+      </svg>
+      <p class="cap">Questions 1 and 7 are the <strong>Coaching Bookends</strong>: start fast, finish strong. Question 2 is a booster you can bolt onto every other question.</p>
+    </div>
+    <div class="fig">
+      <h4>What each question does</h4>
+      <ol class="steps">
+        <li><div><b>Kickstart</b><span>Opens a conversation that is focused but leaves the choice of topic to them.</span></div></li>
+        <li><div><b>AWE</b><span>Gets more options, holds back your Advice Monster, and buys you thinking time.</span></div></li>
+        <li><div><b>Focus</b><span>Stops everyone solving the first problem instead of the real one.</span></div></li>
+        <li><div><b>Foundation</b><span>The heart of adult-to-adult relationships: naming what you actually want.</span></div></li>
+        <li><div><b>Lazy</b><span>Turns a vague call for help into a clear request, and saves you hours.</span></div></li>
+        <li><div><b>Strategic</b><span>Saves <em>them</em> hours by making every Yes carry a No.</span></div></li>
+        <li><div><b>Learning</b><span>Turns the conversation into something remembered and gets you feedback.</span></div></li>
+      </ol>
+      <p class="cap">They work with your team, but also with bosses, colleagues, customers, suppliers and (with no guarantees) teenagers. Six of the seven begin with "What".</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="open">
+  <span class="label partno">Part 1 · Questions 1–3</span>
+  <h2>Open and focus</h2>
+  <p class="lede">Start fast, keep the other person producing ideas, and find the real problem before anyone starts fixing the wrong one.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">The Kickstart Question</span></div>
+  <div class="body">
+    <div>
+      <h3><q>What's on your mind?</q></h3>
+      <p class="idea">A Goldilocks opener: open enough to let them choose what matters, focused enough to skip the trivia.</p>
+    </div>
+    <ul class="points">
+      <li>Managers often don't coach because they don't know how to start. Three things stall the start of a conversation: <strong>the Small Talk Tango</strong> (eight of fifteen minutes on the weather), <strong>the Ossified Agenda</strong> (the same standing meeting reading out the same figures), and <strong>the Default Diagnosis</strong> (everyone assumes they know the issue and starts digging, often in the wrong hole).</li>
+      <li>"What's on your mind?" sidesteps all three. It says: let's talk about the thing that matters most to you right now, whether it's exciting, scary or keeping you up at 4 a.m.</li>
+      <li>It also works as a pressure valve. Whatever is on your mind uses energy (the brain is 2% of body weight but uses about 20% of your energy) and quietly narrows what you notice. Saying it out loud frees it.</li>
+      <li>Two kinds of coaching: <strong>for performance</strong> (fixing the fire) and <strong>for development</strong> (growing the person fighting the fire). Development conversations are rarer and the ones people remember.</li>
+    </ul>
+    <div class="fig">
+      <h4>Deepen the focus with the 3Ps</h4>
+      <div class="threep">
+        <div class="tint c-sky"><span class="tag">the content</span><b>Projects</b><span>The work itself. The easiest, most familiar place to start.</span></div>
+        <div class="tint c-sun" style="--c:var(--sun-ink)"><span class="tag">the relationships</span><b>People</b><span>Not really about them: about your role in a relationship that isn't ideal.</span></div>
+        <div class="tint c-leaf"><span class="tag">your own behaviour</span><b>Patterns</b><span>How you get in your own way. Where development conversations happen.</span></div>
+      </div>
+      <div>
+        <div class="scale-line"></div>
+        <div class="scale label"><span>Coaching for performance</span><span>Coaching for development</span></div>
+      </div>
+      <p class="cap">After "What's on your mind?", offer the three angles and let them pick: "We could look at the project side, the people side, or patterns, if there's a way you're getting in your own way. Where should we start?" When one is done, move to another.</p>
+    </div>
+    <div class="story">
+      <span class="label">From the lab</span>
+      <p>"What's on your mind?" is the prompt Facebook used for its status box. It was removed for a while, then brought back, presumably because nothing worked better at getting millions of people to reflect and share.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">The AWE Question</span></div>
+  <div class="body">
+    <div>
+      <h3><q>And what else?</q></h3>
+      <p class="idea">The "best coaching question in the world". The first answer is almost never the only answer, and rarely the best one.</p>
+    </div>
+    <ul class="points">
+      <li><strong>More options mean better decisions.</strong> In a study of 168 organisational decisions, 71% were framed as a simple yes or no. More than half of those failed. Adding even one more option cut the failure rate to about 30%.</li>
+      <li><strong>It tames the Advice Monster.</strong> Organisations reward answers, and our brains crave certainty, so we leap in with solutions before we understand the problem. A 1984 study found doctors interrupted patients after 18 seconds on average. Many managers are just as quick.</li>
+      <li><strong>It buys you time.</strong> When you're not sure what's going on, asking it gives you a moment to think. (The author calls this his professional secret.)</li>
+      <li>Ask it with real curiosity, not as a tic. Ask it at least three times, rarely more than five. Treat "there's nothing else" as success, not panic. When energy drops, switch to "Is there anything else?" to close the topic.</li>
+      <li>Don't overdo it. At a tasting table with 6 jams, shoppers were ten times more likely to buy than at one with 24. Three to five answers is plenty.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Failure rate of management decisions</h4>
+        <div class="barwrap">
+          <div class="axis-grid"><i style="left:0%"></i><i style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i></div>
+          <div class="bar c-coral"><div class="row"><span>Framed as "do it or not"</span><b>&gt; 50%</b></div><div class="track"><div class="fill" style="width:52%"></div></div></div>
+          <div class="bar c-leaf"><div class="row"><span>At least one more option</span><b>~30%</b></div><div class="track"><div class="fill" style="width:30%"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0</span><span style="left:25%">25%</span><span style="left:50%">50%</span><span style="left:75%">75%</span></div>
+        <p class="cap">71% of the 168 decisions Paul Nutt studied were binary choices, about as bad as teenagers at generating options.</p>
+        <p class="src">Source: Paul Nutt, via Chip and Dan Heath's Decisive, cited in ch. 2</p>
+      </div>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <span class="label">The book's haiku</span>
+        <p class="haiku"><span>Tell less and ask more.</span><span>Your advice is not as good</span><span>As you think it is.</span></p>
+        <p class="cap">There's still a place for advice. It's just overused, and it's often advice for a problem you haven't understood yet.</p>
+      </div>
+    </div>
+
+    <div class="fig">
+      <h4>Where "And what else?" fits</h4>
+<pre class="script"><span class="c">after the opener</span>            What's on your mind? <span class="k">… And what else?</span>
+<span class="c">after a plan</span>                <span class="k">And what else could you do?</span>
+<span class="c">after a vague challenge</span>     <span class="k">And what else is a challenge here for you?</span>
+<span class="c">when a bold idea appears</span>    <span class="k">And what else might be possible?</span>
+<span class="c">in a brainstorm</span>             <span class="k">And what else?</span></pre>
+      <p class="src">From the lab: students given a second pass at true/false questions got more right. Three-year-olds who denied peeking at a toy mostly named it correctly when asked "What's the toy?" There's usually something else waiting.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">The Focus Question</span></div>
+  <div class="body">
+    <div>
+      <h3><q>What's the real challenge here for you?</q></h3>
+      <p class="idea">Focus on the real problem, not the first problem.</p>
+    </div>
+    <ul class="points">
+      <li>What people first describe is rarely the actual problem. It may be a symptom, a side issue, a familiar old problem, or a half-baked solution to something unspoken.</li>
+      <li>Jump in to fix it and three things go wrong: you <strong>solve the wrong problem</strong>, you <strong>solve it yourself</strong> (doing your team's work for them), or you <strong>don't solve it at all</strong> because you're now the bottleneck, the "VP of Bottlenecking".</li>
+      <li>"For you" is the key. Adding it to almost any question shifts the conversation from performance to development. In a 1997 study, maths problems that included the word "you" were solved faster and more accurately.</li>
+      <li>Trust the pause after you ask. That moment of silence is the person thinking. And remember there is still a place for advice: if someone asks where the folder is, tell them.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>How the question is built</h4>
+      <svg class="svg-narrow" viewBox="0 0 440 226" role="img" aria-label="A funnel of three layers narrowing downwards. Top: what's the challenge, too vague, gets obvious or abstract answers. Middle: what's the real challenge here, forces a choice among many. Bottom: here for you, makes it personal.">
+        <polygon points="20,16 420,16 380,76 60,76" fill="var(--paper-2)"/>
+        <polygon points="64,84 376,84 336,144 104,144" fill="color-mix(in srgb, var(--sky) 18%, var(--card))"/>
+        <polygon points="108,152 332,152 292,212 148,212" fill="color-mix(in srgb, var(--sky) 38%, var(--card))"/>
+        <text x="220" y="42" text-anchor="middle" class="nm" font-size="15">What's the challenge?</text>
+        <text x="220" y="62" text-anchor="middle" font-size="10.5">too vague: obvious or abstract</text>
+        <text x="220" y="110" text-anchor="middle" class="nm" font-size="15">What's the real challenge here?</text>
+        <text x="220" y="130" text-anchor="middle" font-size="10.5">forces a choice among many</text>
+        <text x="220" y="178" text-anchor="middle" class="nm" font-size="15">…here for you?</text>
+        <text x="220" y="198" text-anchor="middle" font-size="10.5">makes it personal</text>
+      </svg>
+    </div>
+
+    <div class="fig">
+      <h4>Three "Foggy-fiers" and how the question clears them</h4>
+      <div class="fog">
+        <div><span class="label">Popcorn</span><b>Proliferation of challenges</b><span class="sym">One problem pops, then another, then ten. You feel anxious, and secretly pleased at all the advice you could give.</span><span class="ask">"If you had to pick one of these, which would be the real challenge for you?"</span></div>
+        <div><span class="label">Gossip</span><b>Coaching the ghost</b><span class="sym">45 minutes on how impossible John is. Enjoyable, but you can only coach the person in front of you.</span><span class="ask">"I think I understand what's going on with John. What's the real challenge here for you?"</span></div>
+        <div><span class="label">Seminar</span><b>Abstractions &amp; generalisations</b><span class="sym">A big-picture talk about culture and strategy. Lots of "we" and "us", no "I" or "me".</span><span class="ask">"I have a sense of the overall challenge. What's the real challenge here for you?"</span></div>
+      </div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The 1-2-3 combination</h4>
+<pre class="script"><span class="c">open</span>       What's on your mind?
+<span class="c">check</span>      Is there anything else on your mind?
+<span class="c">focus</span>      So what's the real challenge here for you?
+<span class="c">widen</span>      And what else is the real challenge?
+<span class="c">probe</span>      Is there anything else?
+<span class="c">land</span>       So… what's the real challenge here for you?</pre>
+        <p class="cap">The first three questions make a robust script on their own. You'll be surprised how often it's exactly right.</p>
+      </div>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">“Without a good question, a good answer has no place to go.”</blockquote>
+        <span class="label">Clayton Christensen, quoted in ch. 3</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="heart">
+  <span class="label partno">Part 2 · Questions 4–5</span>
+  <h2>Adult to adult</h2>
+  <p class="lede">Two blunt questions about wants and requests. They make the other person say what they need, and stop you rescuing them from it.</p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">The Foundation Question</span></div>
+  <div class="body">
+    <div>
+      <h3><q>What do you want?</q></h3>
+      <p class="idea">An adult relationship means being able to ask for what you want, knowing the answer may be No.</p>
+    </div>
+    <ul class="points">
+      <li>The definition is Peter Block's. The author calls this the Goldfish Question, because people's eyes widen and their mouths open and close with no sound.</li>
+      <li>It's hard for four reasons: we often <strong>don't know</strong> what we want; when we do, we <strong>don't ask</strong>; when we ask, we <strong>aren't clear</strong> enough to be heard (hints, passive-aggressive remarks); and when we're heard, we find it hard to <strong>accept a No</strong>, or to give one.</li>
+      <li>Separate wants from needs. Wants are the surface request. Needs are the human driver underneath. Guessing the need tells you how best to meet the want, and naming your own need makes your requests clearer.</li>
+      <li><strong>Ask, then trade answers.</strong> The question is strong when you ask it, and stronger when you also say what <em>you</em> want. Like a contract, it's an exchange of value.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Wants sit on top of needs</h4>
+        <svg viewBox="0 0 440 270" role="img" aria-label="An iceberg. Above the waterline, a small tip labelled want, the surface request, with the example I want you to talk to the VP for me. Below the waterline, a large mass labelled need, the human driver underneath, containing nine universal needs: affection, creation, recreation, freedom, identity, understanding, participation, protection and subsistence. Participation and protection are highlighted as the likely needs behind the example.">
+          <rect x="0" y="86" width="440" height="184" fill="color-mix(in srgb, var(--sky) 12%, transparent)"/>
+          <line x1="0" y1="86" x2="440" y2="86" stroke="var(--sky)" stroke-width="1.5"/>
+          <polygon points="180,86 205,40 225,52 248,28 268,86" fill="var(--card)" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <polygon points="180,86 268,86 330,118 384,190 330,250 160,258 78,212 68,140 120,100" fill="var(--card)" fill-opacity=".85" stroke="var(--ink-3)" stroke-width="1.5"/>
+          <text x="20" y="36" class="nm" font-size="16">Want</text>
+          <text x="20" y="53" font-size="10.5">the surface request</text>
+          <text x="284" y="40" font-size="10.5">“I want you to talk</text>
+          <text x="284" y="55" font-size="10.5">to the VP for me.”</text>
+          <text x="20" y="112" class="nm" font-size="16">Need</text>
+          <text x="226" y="122" text-anchor="middle" font-size="10.5">the human driver underneath</text>
+          <g font-size="10.5" text-anchor="middle">
+            <text x="145" y="154">AFFECTION</text><text x="226" y="154">CREATION</text><text x="306" y="154">RECREATION</text>
+            <text x="145" y="182">FREEDOM</text><text x="226" y="182">IDENTITY</text><text x="306" y="182">UNDERSTANDING</text>
+            <text x="145" y="210" class="nm" style="fill:var(--sun-ink)">PARTICIPATION</text><text x="226" y="210" class="nm" style="fill:var(--sun-ink)">PROTECTION</text><text x="306" y="210">SUBSISTENCE</text>
+          </g>
+        </svg>
+        <p class="cap">Marshall Rosenberg's nine universal needs (drawn from Manfred Max-Neef). "Talk to the VP for me" might mean <em>protect me, I'm too junior</em>, or <em>participate, do your part</em>.</p>
+      </div>
+      <div class="fig">
+        <h4>Five times a second: safe or dangerous?</h4>
+        <p class="cap">The brain constantly scans for risk or reward, and when unsure it assumes danger. Four drivers (TERA) decide which way it reads a moment. Asking a question, instead of telling, moves three of them up.</p>
+        <div class="dials">
+          <div class="dial"><div><b>Tribe</b><small>with me or against me?</small></div><div class="t"><i class="tell" style="left:42%"></i><i class="ask" style="left:78%"></i></div><span class="d" style="color:var(--leaf)">▲ up</span></div>
+          <div class="dial"><div><b>Expectation</b><small>do I know what's next?</small></div><div class="t"><i class="tell" style="left:62%"></i><i class="ask" style="left:48%"></i></div><span class="d" style="color:var(--coral)">▼ a little</span></div>
+          <div class="dial"><div><b>Rank</b><small>am I less important?</small></div><div class="t"><i class="tell" style="left:30%"></i><i class="ask" style="left:74%"></i></div><span class="d" style="color:var(--leaf)">▲ up</span></div>
+          <div class="dial"><div><b>Autonomy</b><small>do I get a say?</small></div><div class="t"><i class="tell" style="left:24%"></i><i class="ask" style="left:84%"></i></div><span class="d" style="color:var(--leaf)">▲ up</span></div>
+        </div>
+        <div class="dial-key label"><span class="tell">Telling</span><span class="ask">Asking</span></div>
+        <p class="src">Illustrative positions. The book gives the direction of each shift, not measurements.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">From the lab: the miracle question</span>
+      <p>Solution-focused therapists ask: "Suppose a miracle happens tonight while you sleep. Tomorrow morning, how will you know things have got better?" It works because it puts the end before the means. "What do you want?" does the same thing more directly: once people see the destination, the route gets clearer.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">The Lazy Question</span></div>
+  <div class="body">
+    <div>
+      <h3><q>How can I help?</q></h3>
+      <p class="idea">Be helpful, not "helpful". Make them name the request, and stop yourself jumping in to rescue.</p>
+    </div>
+    <ul class="points">
+      <li>Edgar Schein's insight: offering help "one-ups" you. It raises your status and lowers theirs, which is why unrequested help often meets resistance and annoyance.</li>
+      <li>The Karpman Drama Triangle describes three roles we slip into when triggered. They're behaviours, not identities, and we cycle through all three, sometimes in one exchange.</li>
+      <li>Most managers default to <strong>Rescuer</strong>. It feels virtuous but leaves you exhausted and them irritated, and it limits their growth. Rescuers create Victims.</li>
+      <li>You'll never fully escape the triangle. You'll just spot it sooner. "How can I help?" pulls you out faster: it makes them state a clear request, and it stops you assuming what they want. The worst case is being only <em>slightly</em> wrong, doing something close enough that nobody stops you, but not useful.</li>
+      <li>The blunt version is "What do you want from me?" Tone matters: from a Persecutor it sounds aggressive, from a Victim whiny, from a Rescuer smothering. "Out of curiosity…" softens any question.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>The Drama Triangle and the way out</h4>
+        <svg viewBox="0 0 440 330" role="img" aria-label="A triangle with Persecutor at the top left saying it's your fault, Rescuer at the top right saying let me fix it, and Victim at the bottom saying poor me. In the middle a green pill reads how can I help, with an arrow pointing up out of the triangle labelled adult to adult.">
+          <polygon points="80,90 360,90 220,280" fill="color-mix(in srgb, var(--coral) 6%, transparent)" stroke="var(--ink-3)" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="220" y1="140" x2="220" y2="26" stroke="var(--leaf)" stroke-width="2.5" marker-end="url(#ah-leaf)"/>
+          <text x="230" y="26" font-size="11" style="fill:var(--leaf)">out: adult to adult</text>
+          <rect x="158" y="140" width="124" height="28" rx="14" fill="var(--leaf)"/>
+          <text x="220" y="158" text-anchor="middle" font-size="12" style="fill:var(--paper)">How can I help?</text>
+          <text x="220" y="206" text-anchor="middle" font-size="10" class="dim">each role invites the others</text>
+          <circle cx="80" cy="90" r="9" fill="var(--coral)"/>
+          <circle cx="360" cy="90" r="9" fill="var(--sun)"/>
+          <circle cx="220" cy="280" r="9" fill="var(--sky)"/>
+          <text x="80" y="70" text-anchor="middle" class="nm" font-size="15" style="fill:var(--coral)">Persecutor</text>
+          <text x="80" y="52" text-anchor="middle" font-size="10.5">“It's your fault”</text>
+          <text x="360" y="70" text-anchor="middle" class="nm" font-size="15" style="fill:var(--sun-ink)">Rescuer</text>
+          <text x="360" y="52" text-anchor="middle" font-size="10.5">“Let me fix it”</text>
+          <text x="220" y="306" text-anchor="middle" class="nm" font-size="15" style="fill:var(--sky)">Victim</text>
+          <text x="220" y="322" text-anchor="middle" font-size="10.5">“Poor me”</text>
+        </svg>
+      </div>
+      <div class="fig">
+        <h4>What each role gets, and what it costs</h4>
+        <div class="roles" style="grid-template-columns:1fr">
+          <div class="c-sky"><b>Victim</b><span class="q">"It's not my fault, it's theirs."</span><dl><dt>Gets</dt><dd>No responsibility, permission to complain, Rescuers.</dd><dt>Stuck as</dt><dd>"I have no power. I feel useless."</dd></dl></div>
+          <div class="c-coral"><b>Persecutor</b><span class="q">"I'm surrounded by fools."</span><dl><dt>Gets</dt><dd>Feeling superior and in control.</dd><dt>Stuck as</dt><dd>"I don't trust anyone. I feel alone." People do the minimum.</dd></dl></div>
+          <div class="c-sun"><b>Rescuer</b><span class="q">"Let me jump in and fix it."</span><dl><dt>Gets</dt><dd>Moral superiority, feeling indispensable.</dd><dt>Stuck as</dt><dd>"My rescuing doesn't work. I feel burdened."</dd></dl></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fig">
+      <h4>Afraid of the answer? You have four replies, not one</h4>
+      <div class="replies">
+        <div><b>Yes</b><span>Always available. Just not compulsory.</span></div>
+        <div><b>No</b><span>Saying it is how you stop being "helpful".</span></div>
+        <div><b>No, but…</b><span>"I can't do that, but I could do this instead."</span></div>
+        <div><b>Not yet</b><span>"Let me think about that." Buy some time.</span></div>
+      </div>
+    </div>
+
+    <div class="fig">
+      <h4>Avoid the Rescuer sucker punch</h4>
+      <div class="formula">
+        <div><span class="k when">When this happens…</span><p>Someone asks, "How do I…?" or "What do you think I should do about…?" (the cheese in the mousetrap)</p></div>
+        <div><span class="k instead">Instead of…</span><p class="old">giving them the answer</p></div>
+        <div><span class="k will">I will…</span><p>say "Great question. I've got some ideas I'll share. But first, what are your first thoughts?" Then "What else could you do?" Only then add my idea, if it's still needed.</p></div>
+      </div>
+      <p class="src">From the lab: doctors who opened with a general "How can I help?" heard longer, more specific descriptions of symptoms, and got better ratings from patients.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="commit">
+  <span class="label partno">Part 3 · Questions 6–7</span>
+  <h2>Commit and learn</h2>
+  <p class="lede">Protect every Yes with a No, then end the conversation by pinning down what was useful, so it's remembered.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">The Strategic Question</span></div>
+  <div class="body">
+    <div>
+      <h3><q>If you're saying Yes to this, what are you saying No to?</q></h3>
+      <p class="idea">"The essence of strategy is choosing what not to do." (Michael Porter)</p>
+    </div>
+    <ul class="points">
+      <li>Ban "it's a good busy". Busyness isn't success. Ban "work smarter, not harder" too: it's True But Useless. Strategy isn't a binder on the top shelf. It's the everyday choice of what not to do.</li>
+      <li>First get the Yes clear: "What exactly are you saying Yes to? What would being fully committed look like?" Half-hearted, misunderstood Yeses cause most "I never said I'd do that" moments.</li>
+      <li>Then find the two kinds of No. The <strong>No of omission</strong> is what the Yes automatically rules out. The <strong>No of commission</strong> is what you must actively stop to make room for it. Use the 3Ps: which projects to pause, which expectations to manage or relationships to let fade, which habits and old stories to drop.</li>
+      <li>It helps against two biases: the <strong>planning fallacy</strong> (we underestimate how long things take) and <strong>loss aversion</strong> (we overvalue what we already hold).</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>A Yes needs Nos around it</h4>
+        <svg viewBox="0 0 440 240" role="img" aria-label="A central circle labelled Yes inside a dashed ring. On the left, three coral chips for the No of omission, things ruled out by the yes: the 3 pm slot, other options, your evening. On the right, three chips for the No of commission, things stopped to make room: projects pause, people reset, patterns drop.">
+          <text x="12" y="28" class="nm" font-size="13" style="fill:var(--coral)">No of omission</text>
+          <text x="12" y="44" font-size="10">ruled out by the Yes</text>
+          <text x="428" y="28" text-anchor="end" class="nm" font-size="13" style="fill:var(--coral)">No of commission</text>
+          <text x="428" y="44" text-anchor="end" font-size="10">stopped to make room</text>
+          <circle cx="220" cy="130" r="78" fill="none" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="5 5"/>
+          <circle cx="220" cy="130" r="44" fill="color-mix(in srgb, var(--sky) 22%, var(--card))" stroke="var(--sky)" stroke-width="2.5"/>
+          <text x="220" y="138" text-anchor="middle" class="nm" font-size="24" style="fill:var(--sky)">Yes</text>
+          <g stroke="var(--rule)" stroke-width="1.5">
+            <line x1="112" y1="80" x2="160" y2="80"/><line x1="112" y1="130" x2="142" y2="130"/><line x1="112" y1="180" x2="160" y2="180"/>
+            <line x1="328" y1="80" x2="280" y2="80"/><line x1="328" y1="130" x2="298" y2="130"/><line x1="328" y1="180" x2="280" y2="180"/>
+          </g>
+          <g fill="var(--card)" stroke="var(--coral)" stroke-width="1.5">
+            <rect x="12" y="67" width="100" height="26" rx="13"/><rect x="12" y="117" width="100" height="26" rx="13"/><rect x="12" y="167" width="100" height="26" rx="13"/>
+            <rect x="328" y="67" width="100" height="26" rx="13"/><rect x="328" y="117" width="100" height="26" rx="13"/><rect x="328" y="167" width="100" height="26" rx="13"/>
+          </g>
+          <g font-size="10" text-anchor="middle">
+            <text x="62" y="84">the 3 pm slot</text><text x="62" y="134">other options</text><text x="62" y="184">your evening</text>
+            <text x="378" y="84">Projects: pause</text><text x="378" y="134">People: reset</text><text x="378" y="184">Patterns: drop</text>
+          </g>
+        </svg>
+      </div>
+      <div class="fig">
+        <h4>Say Yes more slowly</h4>
+        <p class="cap">Bill Jensen's trick for saying No when you can't: stay curious before committing.</p>
+        <ul class="checks">
+          <li>Why are you asking me? Who else have you asked?</li>
+          <li>When you say urgent, what do you mean?</li>
+          <li>To what standard, and by when?</li>
+          <li>If I could only do part, which part?</li>
+          <li>What should I take off my plate to do this?</li>
+        </ul>
+        <p class="cap">They'll either have good answers (a thoughtful request), go and find answers (you've bought time), or find someone who says Yes faster. To say No without rejecting the person, write the request down and say No to the paper: <strong>Yes to the person, No to the task.</strong></p>
+      </div>
+    </div>
+
+    <div class="fig">
+      <h4>Good and bad reasons, from the author's LinkedIn community</h4>
+      <div class="compare">
+        <div>
+          <h5>Saying Yes</h5>
+          <span class="lbl bad">Bad reasons</span>
+          <ul><li>Anything to get you off the phone</li><li>I know I won't actually do it</li><li>It'll make people like me</li><li>Habit</li></ul>
+          <span class="lbl good">Good reasons</span>
+          <ul><li>I asked questions and got good answers</li><li>I know what I'll stop doing to make room</li><li>It's Great Work for me</li><li>My boss made it clear it's not negotiable</li></ul>
+        </div>
+        <div>
+          <h5>Saying No</h5>
+          <span class="lbl bad">Bad reasons</span>
+          <ul><li>I don't like the person</li><li>I'm comfortable and don't want change</li><li>Attack is the best defence</li><li>Habit</li></ul>
+          <span class="lbl good">Good reasons</span>
+          <ul><li>I asked questions, and now I know it isn't a fit</li><li>I know my priorities and will hold the line</li><li>I want a reputation for being strategic</li></ul>
+        </div>
+      </div>
+      <p class="cap">One study suggested only 10% of managers had the focus and energy to work on what really matters. They're usually not the best-liked people, but they're respected, because they say Yes more slowly.</p>
+    </div>
+
+    <div class="story">
+      <span class="label">Going bigger: Playing to Win</span>
+      <p>For real strategy work the author recommends A.G. Lafley and Roger Martin's five questions, which work for one person or a global company: What is our winning aspiration? Where will we play? How will we win? What capabilities must be in place? What management systems do we need? Underneath all five sits the same question: what are you choosing not to do?</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">The Learning Question</span></div>
+  <div class="body">
+    <div>
+      <h3><q>What was most useful for you?</q></h3>
+      <p class="idea">People don't learn when you tell them, or even when they do something. They learn when they recall and reflect on it.</p>
+    </div>
+    <ul class="points">
+      <li>Chris Argyris called this <strong>double-loop learning</strong>. The first loop fixes the problem. The second steps back to find the insight. This question creates the second loop.</li>
+      <li>In the AGES model (Attention, Generation, Emotion, Spacing), <strong>Generation</strong> is what matters here: we remember what we work out ourselves much better than what we're told. That's why advice is overrated.</li>
+      <li>"To learn, retrieve." Forgetting starts immediately. Asking at the end of a conversation interrupts it. Asking "What have you learned since we last met?" at the next one-to-one does it again.</li>
+      <li>It ends on a high. By Kahneman's peak-end rule, how something ends colours how all of it is remembered. Colonoscopy patients whose procedure ended less painfully remembered about 10% less pain and were about 10% more likely to come back.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The Coaching Bookends</h4>
+      <div class="bookends">
+        <div class="end"><span class="label">Start fast</span><b>"What's on your mind?"</b><span style="font-size:14px">Straight into what matters, no small talk.</span></div>
+        <div class="mid" aria-hidden="true">
+          <div class="books"><i style="height:62%"></i><i style="height:88%"></i><i style="height:74%"></i><i style="height:100%"></i><i style="height:66%"></i><i style="height:82%"></i></div>
+          <span class="label">the conversation</span>
+        </div>
+        <div class="end"><span class="label">Finish strong</span><b>"What was most useful for you?"</b><span style="font-size:14px">Pin down the value before everyone leaves.</span></div>
+      </div>
+      <p class="cap">Then share what was most useful for <em>you</em>. The exchange strengthens the relationship.</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Why this wording beats "What did you learn?"</h4>
+        <ul class="checks">
+          <li>It assumes the conversation <em>was</em> useful</li>
+          <li>It asks for the one big thing, not a list of twelve</li>
+          <li>"For you" makes it personal, so it sticks</li>
+          <li>It gives you feedback on what to do more of</li>
+          <li>It's learning, not judgment (unlike "Was this useful?")</li>
+          <li>It reminds people how useful you are to them</li>
+        </ul>
+      </div>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">“What's essential is to interrupt the process of forgetting.”</blockquote>
+        <span class="label">Brown, Roediger &amp; McDaniel, Make It Stick, quoted in ch. 7</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ MASTERCLASS ============ -->
+<section id="masterclass">
+  <div class="sec-head">
+    <span class="label">Between the chapters</span>
+    <h2>The question masterclass</h2>
+    <p class="lede">Eight short lessons scattered through the book on <em>how</em> to ask. Each comes with its own micro-habit.</p>
+  </div>
+  <div class="mc">
+    <article><header><span class="n">1</span><h3>Ask one question at a time</h3></header><p>A volley of questions feels like driving round the Arc de Triomphe: it's an interrogation, not a conversation.</p><p class="will"><span class="label">I will</span>Ask one question. Then be quiet and wait for the answer.</p></article>
+    <article><header><span class="n">2</span><h3>Cut the intro</h3></header><p>No Bond film starts slowly. Skip the long wind-up before your question. If you need a lead-in, "Out of curiosity…" makes any question lighter.</p><p class="will"><span class="label">I will</span>Ask the question, then shut up and listen.</p></article>
+    <article><header><span class="n">3</span><h3>No fake questions</h3></header><p>"Have you thought of…?" and "What about…?" are advice with a question mark attached.</p><p class="will"><span class="label">I will</span>Ask "And what else?" first. If I still have an idea, offer it openly as an option.</p></article>
+    <article><header><span class="n">4</span><h3>Ask "What", not "Why"</h3></header><p>"Why?" puts people on the defensive and pulls you into fixing things. If you're not fixing it, you don't need the backstory.</p><p class="will"><span class="label">I will</span>Turn "Why did you do that?" into "What were you hoping for here?"</p></article>
+    <article><header><span class="n">5</span><h3>Get comfortable with silence</h3></header><p>Three or four seconds of silence feels endless. But it usually means they're thinking, and that's where the value is.</p><p class="will"><span class="label">I will</span>Take a breath, stay open and keep quiet for another three seconds.</p></article>
+    <article><header><span class="n">6</span><h3>Actually listen</h3></header><p>Nodding like a bobblehead while planning your next question (or dinner) isn't listening.</p><p class="will"><span class="label">I will</span>Really listen, and when I drift, come back.</p></article>
+    <article><header><span class="n">7</span><h3>Acknowledge the answers</h3></header><p>Call and response, like the blues. A short "Yes, that's good" shows you heard before the next "And what else?"</p><p class="will"><span class="label">I will</span>Acknowledge each reply before moving on.</p></article>
+    <article><header><span class="n">8</span><h3>Use every channel</h3></header><p>The questions work just as well by email, chat or text, and they save you writing long advice-filled replies.</p><p class="will"><span class="label">I will</span>Reply to the rambling email with one question: "What's the real challenge here for you?"</p></article>
+  </div>
+</section>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Conclusion</span>
+    <h2>Seven hours lost on a fifteen-minute walk</h2>
+  </div>
+  <div class="two">
+    <div class="prose">
+      <p>As a student in Australia, the author set out alone on a three-day bushwalk. His pack weighed 40 pounds, mostly first-aid kit. Within twenty minutes the path had vanished. Sure he knew the way, he refused to turn back and climbed straight up the mountain through waterfalls and dense scrub to find the trail.</p>
+      <p>Seven hours later, scratched and exhausted, he made camp. A fresh-looking hiker came by. Asked how his walk was going, the hiker said it was hard to tell: he'd only been walking fifteen minutes.</p>
+      <p>Too many manager conversations feel like that hike. The fix is not the seven questions as such. It's <strong>a habit of curiosity</strong>: a little less advice, a little more asking, in your own words.</p>
+    </div>
+    <div class="fig">
+      <h4>Where conversations go wrong</h4>
+      <div class="hike">
+        <div class="c-coral"><b>Too much baggage</b><span>Arriving loaded with answers and fixes.</span></div>
+        <div class="c-coral"><b>Too much certainty</b><span>Assuming you know the destination and the route.</span></div>
+        <div class="c-coral"><b>Leaving the path</b><span>Charging off after the first problem.</span></div>
+        <div class="c-coral"><b>Working too hard</b><span>Doing the climb that should be theirs.</span></div>
+      </div>
+      <p class="cap">And ending up exhausted, having got far less far than you hoped. Build the habit, and you work less hard and have more impact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Pocket version</span>
+    <h2>The toolkit</h2>
+    <p class="lede">What to actually do on Monday. Pick one, write it as a New Habit Formula, and practise it before adding the next.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Open</h3>
+      <div class="tk"><b>Lead with "What's on your mind?"</b><span>In one-to-ones, hallway chats and replies to messages. Then offer the 3Ps: project, people or pattern?</span></div>
+      <div class="tk"><b>Ask "And what else?" three to five times</b><span>Treat "nothing else" as success. Close with "Is there anything else?"</span></div>
+      <div class="tk"><b>Find the real challenge</b><span>"What's the real challenge here for you?" when you hear a list, a ghost or a seminar.</span></div>
+      <div class="tk"><b>Run the 1-2-3 script</b><span>Open, check, focus, widen, probe, land.</span></div>
+    </div>
+    <div class="col">
+      <h3>Clarify</h3>
+      <div class="tk"><b>Ask "What do you want?" and answer it too</b><span>Listen for the need beneath the want, and name your own.</span></div>
+      <div class="tk"><b>Swap rescuing for "How can I help?"</b><span>Or the blunt "What do you want from me?", softened with "Out of curiosity…"</span></div>
+      <div class="tk"><b>Hold back your answer</b><span>"I've got ideas, but what are your first thoughts?" Then "What else could you do?"</span></div>
+      <div class="tk"><b>Remember you have four replies</b><span>Yes, No, No but here's an alternative, or "let me think about it".</span></div>
+    </div>
+    <div class="col">
+      <h3>Close</h3>
+      <div class="tk"><b>Attach a No to every Yes</b><span>"If you're saying Yes to this, what are you saying No to?" Check projects, people and patterns.</span></div>
+      <div class="tk"><b>Say Yes more slowly</b><span>Why me, by when, to what standard, which part, and what comes off my plate?</span></div>
+      <div class="tk"><b>End with "What was most useful for you?"</b><span>Then say what was most useful for you.</span></div>
+      <div class="tk"><b>Ask what, not why, and then be quiet</b><span>One question at a time, no intro, three extra seconds of silence.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Michael Bungay Stanier, <em>The Coaching Habit: Say Less, Ask More &amp; Change the Way You Lead Forever</em> (Box of Crayons Press, 2016). Figures are as reported in the book. Diagrams were drawn for this page, and charts are drawn to the book's numbers. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero band: who's talking. Left: long manager turns. Right: short questions, long answers. --- */
+  var canvas = document.getElementById("talk");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, cols = [];
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t); }
+  function layout() {
+    // Each column is a 3px bar; turns alternate between you (0) and them (1).
+    cols = [];
+    var x = 0, who = 0, step = 5;
+    while (x < w) {
+      var s = ease((x / w - 0.1) / 0.75);
+      var len = who === 0 ? 90 * (1 - s) + 8 : 14 * (1 - s) + 96 * s;
+      for (var k = 0; k < len && x < w; k += step) { cols.push([x, who]); x += step; }
+      x += 12;
+      who = 1 - who;
+    }
+  }
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    layout();
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var mid = hgt / 2, amp = hgt * 0.44;
+    var t = reduce ? 0 : time;
+    var you = css("--sun"), them = css("--sky"), rule = css("--rule");
+    ctx.fillStyle = rule;
+    ctx.fillRect(0, mid - 0.5, w, 1);
+    for (var i = 0; i < cols.length; i++) {
+      var c = cols[i];
+      var n = Math.abs(Math.sin(i * 0.9 + t * 0.004) * Math.sin(i * 0.37 - t * 0.0027 + c[1]));
+      var h = amp * (0.22 + 0.78 * n);
+      ctx.fillStyle = c[1] === 0 ? you : them;
+      if (c[1] === 0) ctx.fillRect(c[0], mid - h, 3, h);
+      else ctx.fillRect(c[0], mid, 3, h);
+    }
+  }
+  var running = false, visible = true, raf = 0, last = 0;
+  function loop(ts) {
+    if (ts - last > 50) { draw(ts); last = ts; }
+    if (running) raf = requestAnimationFrame(loop);
+  }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { draw(performance.now()); });
+  start();
+})();
+</script>
+
+</body>
+</html>

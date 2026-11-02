@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Tools by Phil Stutz &amp; Barry Michels – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the English cover: a magenta-to-red gradient,
+   black spaced capitals, white profiles. Red = the problem (pain, the maze, the cloud),
+   magenta = the Tool and the higher force it reaches. */
+:root {
+  --paper: #f8f3f2;
+  --paper-2: #efe6e5;
+  --card: #fffcfb;
+  --ink: #1c1416;
+  --ink-2: #4e4346;
+  --ink-3: #7b6f73;
+  --rule: #e2d6d6;
+
+  --mag: #a9295a;
+  --mag-2: #c9467a;
+  --red: #d21f29;
+  --cloud: #2b1e23;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #140c0f;
+    --paper-2: #1f1519;
+    --card: #24191d;
+    --ink: #f3ecee;
+    --ink-2: #c4b6bb;
+    --ink-3: #978a8f;
+    --rule: #3a2b31;
+    --mag: #ee72a0;
+    --mag-2: #d65a86;
+    --red: #ff615b;
+    --cloud: #574750;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #140c0f;
+  --paper-2: #1f1519;
+  --card: #24191d;
+  --ink: #f3ecee;
+  --ink-2: #c4b6bb;
+  --ink-3: #978a8f;
+  --rule: #3a2b31;
+  --mag: #ee72a0;
+  --mag-2: #d65a86;
+  --red: #ff615b;
+  --cloud: #574750;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--mag); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-mag { --c: var(--mag); }
+.c-red { --c: var(--red); }
+.c-ink { --c: var(--ink); }
+.grad { background: linear-gradient(90deg, var(--mag), var(--red)); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 3vw, 34px); letter-spacing: .32em; line-height: 1; text-transform: uppercase; color: var(--ink); }
+.hero h1 {
+  font-size: clamp(64px, 13vw, 160px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: .86;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin: 14px 0 0 -.04em;
+  background: linear-gradient(90deg, var(--mag), var(--red));
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 42ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1088;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(60, 10, 25, .38), 0 8px 18px -10px rgba(60, 10, 25, .28);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 120px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--mag), var(--red)) 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 100px);
+  font-weight: 800;
+  font-stretch: 100%;
+  text-transform: uppercase;
+  line-height: .92;
+  letter-spacing: .04em;
+  color: var(--mag);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--red);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--mag);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--red);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-mag { fill: var(--mag); }
+.fig svg text.t-red { fill: var(--red); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 22px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-mag { stroke: var(--mag); fill: none; }
+.s-red { stroke: var(--red); fill: none; }
+.f-mag { fill: var(--mag); }
+.f-red { fill: var(--red); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-magt { fill: color-mix(in srgb, var(--mag) 14%, var(--card)); }
+.f-redt { fill: color-mix(in srgb, var(--red) 14%, var(--card)); }
+.f-none { fill: none; }
+.f-cloud { fill: var(--cloud); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--mag); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 800; font-stretch: 100%; text-transform: uppercase; letter-spacing: .05em; color: var(--mag); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--red); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three-step strip */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--mag); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--mag); }
+.compare .bad h5 { color: var(--red); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 170px; color: var(--mag); }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 800; font-stretch: 100%; text-transform: uppercase; color: var(--mag); border-top: 2px solid var(--mag); padding-top: 12px; letter-spacing: .05em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.xlink { margin-top: 28px; font-size: 16px; color: var(--ink-2); max-width: var(--measure); }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+  .hero h1 { letter-spacing: .03em; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Phil Stutz &amp; Barry Michels · read in German (Arkana, 2012)</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#tools">Four tools</a>
+    <a href="#keeping">Keeping at it</a>
+    <a href="#world">A new world</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">The</p>
+    <h1>Tools</h1>
+    <p class="sub">Transform your problems into courage, confidence, and creativity</p>
+    <p class="dek">A psychiatrist and the lawyer-turned-therapist who learned from him stop asking where a problem came from. They hand you short exercises that turn it into a way in to forces bigger than you.</p>
+    <div class="byline label">
+      <span>8 chapters</span><span>5 tools</span><span>5 higher forces</span><span>~68,000 words in German, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of the English first edition of The Tools by Phil Stutz and Barry Michels: a gradient running from magenta on the left to bright red on the right, the authors' names, title and subtitle in black spaced capitals, and the two O's of TOOLS drawn as white circles cut by two human profiles facing each other">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="flow"></canvas>
+  <div class="ends label"><span>Pain you avoid</span><span>Energy when you move into it</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Chapter 1 · A new way opens up</span>
+    <h2>Stop asking why. Ask which tool.</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Early in his career as a therapist, Barry Michels met Roberta, a woman in her mid-twenties who couldn't stop checking whether her boyfriend was cheating. She already knew why she was insecure (her father had walked out when she was small). She wanted to know how to stop. His supervisors said to dig deeper into her childhood. Instead he went to a seminar by the psychiatrist <strong>Phil Stutz</strong>, learned one exercise and gave it to Roberta. It helped at once, and she became more engaged in therapy, not more demanding.</p>
+      <p>Stutz had reached the same point the hard way. As a young psychiatrist he told Tony, a surgical resident terrified of an exam six months away, that the fear was really about rivalry with his father, and promised he would pass. Tony failed badly. Stutz resolved to answer every plea for relief in the moment, saying whatever came to him, and out of that came the Tools, each reworked hundreds of times with clients.</p>
+      <p>A <strong>tool</strong>, in their sense, is not an insight or a change of attitude. You can see that shouting at people is wrong and still shout the next time someone makes a costly mistake. A tool is a specific procedure you use in a specific situation against a specific problem, every time it comes up. Its deeper value, they claim, is that it connects you to <strong>higher forces</strong>. Call them the collective unconscious or the spiritual world; the name doesn't matter.</p>
+      <p>Michels, a sceptic, couldn't dismiss it because of one memory. Top of his law class at 25, he hated the prestigious firm he joined. At 28 he caught his own dead-eyed reflection in the lobby window, felt a surge of certainty and quit on the spot. Stutz called that a higher force, and said the Tools let you call on it at will.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The book in numbers</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-mag"><span class="big num">4 + 1</span><p>Four basic problems, each with its own tool, plus a fifth tool to keep you using the other four.</p></div>
+        <div class="stat c-red"><span class="big num">60</span><p>Years of psychotherapy practice the two authors say they have between them.</p></div>
+        <div class="stat"><span class="big num">~3 s</span><p>To run a tool once. Twenty uses a day comes to about a minute.</p></div>
+        <div class="stat"><span class="big num">25</span><p>Years since they met when the book was written.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">The water pistol</span>
+        <p>Tony's parting complaint stayed with Stutz: talking about his father had felt like taking on a gorilla with a water pistol. Clients need forces they can feel, not explanations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:32px">
+    <h4>Five problems, five tools, five forces</h4>
+    <div class="tablecard" style="border:0">
+      <div class="scroll-x">
+        <table class="tbl">
+          <thead><tr><th scope="col">Tool</th><th scope="col">The problem it targets</th><th scope="col">What keeps you stuck</th><th scope="col">The higher force</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Reversal of Desire</th><td>Avoiding whatever might hurt</td><td class="r">Instant relief now, regret much later</td><td>Forward motion, the drive of all life</td></tr>
+            <tr><th scope="row">Active Love</th><td>Stewing over someone who wronged you</td><td class="r">The childish belief that life should be fair</td><td>Outflow, a love that accepts everything as it is</td></tr>
+            <tr><th scope="row">Inner Authority</th><td>Freezing up in front of others</td><td class="r">Hiding the Shadow, the part of you you're ashamed of</td><td>Self-expression</td></tr>
+            <tr><th scope="row">The Grateful Flow</th><td>Worry, self-hatred, judging</td><td class="r">Believing worry gives you control over an indifferent universe</td><td>The Source, felt as infinite gratitude</td></tr>
+            <tr><th scope="row">Jeopardy</th><td>Quitting the other four</td><td class="r">The fantasy that something will release you from effort</td><td>Willpower, the one force you have to generate yourself</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="src">Redrawn from the chapter summaries; tool names as in the English edition</p>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I · ch. 2–5</span>
+      <h3>Four tools</h3>
+      <p class="q">One problem, one exercise, one force per chapter</p>
+      <ol>
+        <li><span>02</span><a href="#ch2"><b>Reversal of Desire</b>Moving into pain instead of away</a></li>
+        <li><span>03</span><a href="#ch3"><b>Active Love</b>Getting out of the maze of grievance</a></li>
+        <li><span>04</span><a href="#ch4"><b>Inner Authority</b>Speaking with your Shadow</a></li>
+        <li><span>05</span><a href="#ch5"><b>The Grateful Flow</b>Piercing the Black Cloud</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II · ch. 6–7</span>
+      <h3>Keeping at it</h3>
+      <p class="q">Why everyone stops, and what faith has to do with it</p>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Jeopardy</b>Willpower from your deathbed</a></li>
+        <li><span>07</span><a href="#ch7"><b>Faith in higher forces</b>A sceptic's conversion</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part III · ch. 8</span>
+      <h3>A new world</h3>
+      <p class="q">What the tools could do for a whole society</p>
+      <ol>
+        <li><span>08</span><a href="#ch8"><b>Vision of a new world</b>Three pillars and a quiet revolution</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="tools">
+  <span class="label partno">Part I · Chapters 2–5</span>
+  <h2>Four tools</h2>
+  <p class="lede">Each chapter follows the same pattern: a client stuck in a common trap, the higher force that could free them, a short exercise to reach it, the cues for using it, answers to typical objections, and more client stories.</p>
+</div>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Reversal of Desire</span></div>
+  <div class="body">
+    <div>
+      <h3>Pain shrinks when you walk into it</h3>
+      <p class="idea">Avoiding pain feels good today and costs you your life's possibilities. The fix is to train yourself to want the pain.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Vinny.</strong> A gifted stand-up, 33, stuck in small clubs for over ten years. He skipped a career-making meeting, was booed off at a benefit and turned up drunk to a Hollywood party, calling it refusing to sell out. The real reason: as a boy he performed for customers at his father's funeral home and was beaten for it every night.</li>
+      <li><strong>The Comfort Zone.</strong> Most of us arrange our lives around avoiding pain, then add "warm bath" pleasures such as the internet, food or a joint, which make reality's cold shower harder. The bill comes late: the realisation that you wasted your life.</li>
+      <li><strong>Forward motion.</strong> The first higher force pushes all life into the future; watch a toddler get up after every fall. Adults only get it by choosing it and accepting its pain. You can't steer higher forces from outside like a car. You join them by imitating them, and each tool is a way to do that.</li>
+      <li><strong>The running back.</strong> At 13, Stutz sat next to an 18-year-old football star in art class, who said he wasn't the fastest runner in town but was the best, because he ran straight at tacklers and wanted the hit.</li>
+      <li><strong>The tool.</strong> See the pain as a cloud in front of you and silently call it to you. Move into it, silently insisting that you love pain, until you merge. Feel the cloud spit you out and close behind you, and feel yourself moving forward as pure light: pain sets you free. Use the worst version of the pain.</li>
+      <li><strong>Two cues.</strong> Use it just before something you'd rather avoid, and whenever you catch yourself thinking about it. Vinny used it for two weeks before calling the club owner he had snubbed. After five minutes of abuse, he got a spot that night replacing a comic who had cancelled.</li>
+      <li><strong>Pain that's already happened.</strong> It also works on setbacks, by wanting what has already happened, which is the way out of feeling like a victim. The authors cite Viktor Frankl, who survived four camps, and argue the universe cares about inner strength, not outer success.</li>
+      <li><strong>Courage.</strong> Fear is pain tied to an imagined future. Detach the feeling from the scenario and run the tool on it. Courage, for Stutz, is simply acting despite fear, and since it can't be stored, the tool has to become a reflex.</li>
+      <li><strong>Objections.</strong> Wanting necessary pain isn't masochism, and it doesn't tempt fate: you want the pain, not the event.</li>
+      <li><strong>Other uses.</strong> Marilyn learned to relax around the men she feared, Elizabeth to make unpopular decisions as a new department chair, Michael to fly, and Jeffrey, a police officer, to sit down and write.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Two ways out of the Comfort Zone</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 260" role="img" aria-label="Two panels. Left, avoidance: a figure inside a circle labelled comfort zone heads towards a wide red band labelled pain, turns back before reaching it and returns to the circle; the possibilities beyond the pain stay out of reach. Right, Reversal of Desire: the figure goes straight into the pain band, which is narrower, comes out the other side and continues into an open area labelled possibilities.">
+          <text x="10" y="20" class="hd">Avoiding</text>
+          <circle cx="70" cy="140" r="50" class="f-paper2 s-3" stroke-width="1.5"/>
+          <g id="fig-a1"></g>
+          <text x="70" y="214" text-anchor="middle" class="t-3" style="font-size:11px">comfort zone</text>
+          <rect x="146" y="50" width="40" height="180" rx="4" class="f-redt"/>
+          <rect x="146" y="50" width="40" height="180" rx="4" class="s-red" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <text x="166" y="42" text-anchor="middle" class="t-red">pain</text>
+          <path d="M98 128 C 120 96, 138 100, 139 122 C 140 150, 126 166, 108 158" class="s-2" stroke-width="1.8"/>
+          <path d="M116 152 L106 158 L115 165" class="s-2" stroke-width="1.8"/>
+          <text x="196" y="132" class="t-3" style="font-size:11px">possibilities</text>
+          <text x="196" y="148" class="t-3" style="font-size:11px">out of reach</text>
+          <text x="10" y="248" class="t-3" style="font-size:11px">approach, flinch, retreat</text>
+          <path d="M300 30 V240" class="s-rule"/>
+          <text x="320" y="20" class="hd">Reversal of Desire</text>
+          <circle cx="370" cy="140" r="50" class="f-paper2 s-3" stroke-width="1.5"/>
+          <g id="fig-a2"></g>
+          <text x="370" y="214" text-anchor="middle" class="t-3" style="font-size:11px">comfort zone</text>
+          <rect x="452" y="70" width="22" height="130" rx="4" class="f-redt"/>
+          <rect x="452" y="70" width="22" height="130" rx="4" class="s-red" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <text x="463" y="62" text-anchor="middle" class="t-red">pain</text>
+          <path d="M398 140 H582" class="s-mag" stroke-width="2.4"/>
+          <path d="M574 133 L583 140 L574 147" class="s-mag" stroke-width="2.4"/>
+          <text x="484" y="124" class="t-mag" style="font-size:12px">forward motion</text>
+          <text x="484" y="166" class="t-mag" style="font-size:11px">possibilities</text>
+          <text x="484" y="181" class="t-mag" style="font-size:11px">open up</text>
+        </svg>
+      </div>
+      <p class="cap">Redrawn after the book's two diagrams. Desire for the pain carries the figure through, and the pain shrinks because it is being approached.</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Pain depends on which way you move</h4>
+        <svg viewBox="0 0 320 200" role="img" aria-label="Illustrative curve. The horizontal axis runs from fleeing on the left to approaching on the right. Felt pain is highest when fleeing and falls steadily towards the approaching end.">
+          <path d="M30 170 H300" class="s-2" stroke-width="1.2"/>
+          <path d="M30 170 V24" class="s-2" stroke-width="1.2"/>
+          <path d="M34 36 C 110 46, 170 110, 296 156" class="s-red" stroke-width="2.6"/>
+          <circle cx="40" cy="37" r="4" class="f-red"/>
+          <circle cx="292" cy="155" r="4" class="f-mag"/>
+          <text x="30" y="190" class="t-3" style="font-size:11px">flee</text>
+          <text x="300" y="190" text-anchor="end" class="t-3" style="font-size:11px">approach</text>
+          <text x="38" y="18" class="t-3" style="font-size:11px">felt pain</text>
+          <text x="46" y="120" class="t-red" style="font-size:12px">it chases you</text>
+          <text x="296" y="118" text-anchor="end" class="t-mag" style="font-size:12px">it shrinks</text>
+        </svg>
+        <p class="cap">Illustrative only. The book's claim is that pain isn't fixed: like a monster in a dream it grows as you run and fades when you face it.</p>
+      </div>
+      <div class="fig">
+        <h4>The three steps, in short</h4>
+        <div class="kinds" style="grid-template-columns:minmax(0,1fr)">
+          <div><span class="label">1 · Call it</span><span>See the pain as a cloud ahead of you and summon it.</span></div>
+          <div><span class="label">2 · Love it</span><span>Push deep into it with real desire until you merge.</span></div>
+          <div><span class="label">3 · Be released</span><span>The cloud spits you out; you move forward as light.</span></div>
+        </div>
+        <p class="cap">The first two steps take willpower. In the third you should feel carried by something bigger.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Active Love</span></div>
+  <div class="body">
+    <div>
+      <h3>Get out of the maze</h3>
+      <p class="idea">When you insist on fair treatment, the person who hurt you moves into your head and stays. Sending them love gets you out.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Amanda.</strong> Building a high-end fashion label in her twenties, she was furious that her boyfriend Blake had spent a dinner party talking to another woman. She lay awake plotting revenge, ignored his breakfast in bed, and soon couldn't bear him in the room. They had been together four months, and all her relationships had ended this way.</li>
+      <li><strong>The maze.</strong> Once you're stuck replaying an injustice, the other person becomes your jailer. You forget everything good about them while life goes on without you; Amanda once cut off a friend and missed her goddaughter's first birthday.</li>
+      <li><strong>Why we stay.</strong> Underneath is a child's belief that the world will be fair to you if you're good to it. When it isn't, we demand restitution and refuse to move until we get it.</li>
+      <li><strong>Outflow.</strong> At about five, Stutz sulked in the car through a family trip to the snow until he rescued a shivering lost puppy, felt his heart open, and loved his father again. That kind of love doesn't depend on circumstances; the authors compare it to sunlight. It isn't passivity: you can still confront someone, but you no longer need anything from them.</li>
+      <li><strong>The tool.</strong> Feel your heart expand into the infinite love around you, then shrink back so the love concentrates in your chest. Send all of it to the person, holding nothing back. Feel it enter them and make you one, then relax as the love you gave comes back.</li>
+      <li><strong>Three cues.</strong> Someone makes you angry; an old grievance resurfaces; you picture facing a difficult person. It works on strangers and institutions too, and if a face reignites your anger, picture the body without one.</li>
+      <li><strong>Self-interest, not virtue.</strong> Michels never asks clients to do it because it's right, only because staying angry hurts and paralyses. A car washer cleans every car, a saint's or an enemy's. And, the authors claim, love you give away comes back with more.</li>
+      <li><strong>Objections.</strong> Isn't it letting them off? People sense whether you value the relationship, so confronting from love earns more respect. Isn't it a lie? Emotions are only fragments of the truth.</li>
+      <li><strong>Other uses.</strong> Roger, still brawling with strangers at 40, learned self-control. Marcy, three years without a raise, asked her boss calmly and got one. Mark learned to accept his girlfriend's past.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The choice after someone wrongs you</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 270" role="img" aria-label="A figure on the left has just been wronged. A downward arrow labelled do nothing leads into a square spiral labelled the maze, with the notes replay, revenge, stuck. An upward arrow leads through three boxes, concentration, transmission and penetration, to a sun labelled Outflow, and from there an arrow points right to life moves on.">
+          <g id="fig-b"></g>
+          <text x="54" y="196" text-anchor="middle" class="t-3" style="font-size:11px">wronged</text>
+          <path d="M80 160 L150 218" class="s-red" stroke-width="2"/>
+          <path d="M140 219 L151 219 L148 208" class="s-red" stroke-width="2"/>
+          <text x="84" y="244" class="t-red" style="font-size:11px">do nothing</text>
+          <path id="maze" d="" class="s-red" stroke-width="2"/>
+          <text x="260" y="214" class="t-red">the maze</text>
+          <text x="260" y="234" class="t-3" style="font-size:11px">replay · revenge · waiting for justice</text>
+          <text x="260" y="252" class="t-3" style="font-size:11px">life goes on without you</text>
+          <path d="M80 130 L120 82" class="s-mag" stroke-width="2"/>
+          <path d="M110 84 L121 81 L121 92" class="s-mag" stroke-width="2"/>
+          <rect x="124" y="50" width="104" height="44" rx="6" class="f-magt s-mag" stroke-width="1.5"/>
+          <text x="176" y="69" text-anchor="middle" class="hd" style="font-size:12px">1 Concentration</text>
+          <text x="176" y="85" text-anchor="middle" class="t-3" style="font-size:10.5px">love into chest</text>
+          <path d="M228 72 H244" class="s-mag" stroke-width="1.6"/>
+          <rect x="244" y="50" width="104" height="44" rx="6" class="f-magt s-mag" stroke-width="1.5"/>
+          <text x="296" y="69" text-anchor="middle" class="hd" style="font-size:12px">2 Transmission</text>
+          <text x="296" y="85" text-anchor="middle" class="t-3" style="font-size:10.5px">send it all</text>
+          <path d="M348 72 H364" class="s-mag" stroke-width="1.6"/>
+          <rect x="364" y="50" width="104" height="44" rx="6" class="f-magt s-mag" stroke-width="1.5"/>
+          <text x="416" y="69" text-anchor="middle" class="hd" style="font-size:12px">3 Penetration</text>
+          <text x="416" y="85" text-anchor="middle" class="t-3" style="font-size:10.5px">feel it go in</text>
+          <circle cx="526" cy="72" r="18" class="f-mag"/>
+          <g id="rays" class="s-mag" stroke-width="2"></g>
+          <path d="M468 72 H500" class="s-mag" stroke-width="1.6"/>
+          <text x="526" y="126" text-anchor="middle" class="t-mag">Outflow</text>
+          <path d="M526 136 V160 H586" class="s-mag" stroke-width="2"/>
+          <path d="M578 153 L587 160 L578 167" class="s-mag" stroke-width="2"/>
+          <text x="586" y="184" text-anchor="end" class="t-mag" style="font-size:11px">life moves on</text>
+          <text x="124" y="30" class="t-3" style="font-size:11px">use Active Love</text>
+        </svg>
+      </div>
+      <p class="cap">Redrawn after the book's fork diagram, which clients are told to picture when they feel hurt. Step names as in the English edition.</p>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"I'm not Gandhi, I'm in the fashion business."</blockquote>
+      <span class="label">Amanda, on why she won't love her enemies (my translation from the German)</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Inner Authority</span></div>
+  <div class="body">
+    <div>
+      <h3>Your voice is in the part you hide</h3>
+      <p class="idea">Insecurity comes from a second self you're ashamed of. Hiding it freezes you; bringing it alongside you lets you speak.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Jennifer.</strong> A former model from a small country town got her ten-year-old son onto an elite soccer team, then felt like an outcast among the parents. At a parents' meeting her voice shook and she fled, and she booked a speech coach to lose her accent. On a team bus the mothers told her the truth: she had seemed stunning, aloof and threatening.</li>
+      <li><strong>Freezing.</strong> The "audience" can be one person whose opinion matters to you, and the trigger is inner insecurity. It's costly, because opportunities come through people who feel connected to you.</li>
+      <li><strong>The Shadow.</strong> Asked to give her insecurity a body, Jennifer saw a pudgy, spotty girl of 13 or 14. Following C. G. Jung, the authors call this the Shadow: everything you dislike about yourself in one image that follows you everywhere. It can't be fixed or removed, and outside approval never cancels it. Needing that approval turns other people into emperors giving your worth a thumbs up or down.</li>
+      <li><strong>Self-expression.</strong> Small children at play don't freeze; they are full of the higher force of self-expression. Adults feel it in a heated argument, an improvised bedtime story, or when athletes are "in the zone". As teenagers chasing approval we stuff everything unacceptable into our inmost self, which turns it into the Shadow. So the Shadow is also the way back in.</li>
+      <li><strong>The seminar.</strong> Stutz once read a talk word for word off index cards for two hours, and the audience pitied him. At the break a younger, skinny, ashamed version of himself appeared in his mind and seemed to offer help. He threw away his notes, spoke freely for the next two hours, and got long applause.</li>
+      <li><strong>The tool.</strong> In front of your audience, see your Shadow beside you, facing you. Shift your attention from the audience to it and feel an unbreakable bond. Then turn together to the audience and silently command them to listen, speaking with one voice.</li>
+      <li><strong>Train like weightlifting.</strong> Practise alone, then with people who don't rattle you, then in harder situations, then at big events. The cues are performance anxiety and dreading an event in advance. Jennifer used it at her son's games, in front of the mirror, at an audition that finally went well, and with a sponsor who doubled his donation.</li>
+      <li><strong>Objections.</strong> It doesn't split your personality; denying the Shadow is the problem. Left alone it can take you over, or, banished, leave your life trivial. In partnership with you it becomes what people call the "higher self".</li>
+      <li><strong>Other uses.</strong> Jim overcame shyness with women, Harold asked his father for help, Joe reconnected with his 13-year-old daughter, and Julie broke a writer's block.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Outer authority freezes you; inner authority frees you</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 270" role="img" aria-label="Two panels. Left: a figure with a small dark shadow figure boxed inside it, labelled hidden Shadow. Three large audience figures stand higher up to the right, and a red arrow labelled outer authority points down from them at the figure, which is labelled frozen. Right: the figure stands next to its shadow, joined by a line labelled bond. Three small audience figures stand lower down, and a magenta arrow labelled inner authority points from the pair to them, with the silent command Listen.">
+          <text x="10" y="20" class="hd">Hiding the Shadow</text>
+          <g id="fig-c1"></g>
+          <path d="M66 196 H96" class="s-red" stroke-width="1.2" stroke-dasharray="2 3"/>
+          <rect x="96" y="180" width="30" height="40" rx="3" class="f-card s-red" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <g id="fig-c1s"></g>
+          <text x="111" y="238" text-anchor="middle" class="t-red" style="font-size:11px">hidden Shadow</text>
+          <text x="58" y="256" text-anchor="middle" class="t-ink" style="font-size:12px">frozen</text>
+          <g id="aud-1"></g>
+          <path d="M205 132 L80 168" class="s-red" stroke-width="2.2"/>
+          <path d="M87 160 L79 168 L90 172" class="s-red" stroke-width="2.2"/>
+          <text x="150" y="186" class="t-red" style="font-size:11px">outer authority</text>
+          <path d="M300 30 V250" class="s-rule"/>
+          <text x="320" y="20" class="hd">Inner Authority</text>
+          <g id="fig-c2"></g>
+          <g id="fig-c2s"></g>
+          <path d="M352 182 H370" class="s-mag" stroke-width="2"/>
+          <text x="360" y="252" text-anchor="middle" class="t-mag" style="font-size:11px">you + Shadow</text>
+          <g id="aud-2"></g>
+          <path d="M396 190 L500 212" class="s-mag" stroke-width="2.2"/>
+          <path d="M490 205 L501 212 L491 219" class="s-mag" stroke-width="2.2"/>
+          <text x="404" y="242" class="t-mag" style="font-size:11px">inner authority</text>
+          <text x="410" y="110" class="t-mag">"Listen!"</text>
+          <text x="410" y="128" class="t-3" style="font-size:11px">silent, as one voice</text>
+        </svg>
+      </div>
+      <p class="cap">Redrawn after the book's paired diagrams. The audience looms large while you let it set your worth, and shrinks once the Shadow stands with you.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">The Grateful Flow</span></div>
+  <div class="body">
+    <div>
+      <h3>Gratitude is a sense, not a feeling</h3>
+      <p class="idea">Worry is a superstition that promises control. Counting what you've been given breaks through it to a giving presence.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Elizabeth.</strong> A college counsellor for 14 years, with a devoted police-officer husband and no money worries, she lived in constant crisis: the Thanksgiving turkey, a rash that must be lupus, the melting polar caps. Her husband withdrew. The turning point came when her daughter called her a selfish nag whose help with college applications served Elizabeth's own anxiety.</li>
+      <li><strong>The Black Cloud.</strong> Behind every worry Elizabeth found the same darkness around her. Repeated negative thinking makes a cloud that blocks everything positive; the sun still shines but you can't see it. Inner peace goes, and everything becomes survival.</li>
+      <li><strong>Why positive thinking fails.</strong> Norman Vincent Peale's method felt to Elizabeth like pretending. Negative thoughts are stronger because they feel like control: as a child she lay awake worrying her parents would split up, as if that could stop it. They split up anyway. Underneath, the authors say, is the assumption that the universe is indifferent to us.</li>
+      <li><strong>The Source.</strong> At 14, after weeks of night-time headaches he was sure meant a brain tumour, Stutz got the all-clear. On his next bus ride through a run-down part of Manhattan, everything looked miraculous and his heart overflowed with gratitude. The authors call what he felt the Source, which creates and sustains you. Gratitude here isn't a moral duty but the sense that perceives it.</li>
+      <li><strong>The tool.</strong> Silently list things you're grateful for, slowly, especially ones you take for granted. Name at least five, new ones each time, which takes under thirty seconds. Then drop the words and feel gratitude rising from your heart until you sense an overwhelming, giving presence: the Source.</li>
+      <li><strong>Three cues.</strong> Any negative thought (worry, self-attack, judging, complaining); any idle moment, like a queue or traffic; and fixed times such as waking, meals and bedtime.</li>
+      <li><strong>What changes.</strong> Elizabeth arrived 15 minutes late one day after two carefree hours with an old friend, and used the tool instead of panicking. When her daughter missed her chosen college, Elizabeth was the one offering reassurance. Inner peace, the authors stress, is active and takes constant work.</li>
+      <li><strong>Motivation and success.</strong> Drive that comes from feeling you lack something leaves a permanent sense of something missing. Success can paralyse too: an acquaintance's informal study found few Nobel laureates did comparable work afterwards. Seeing the Source as co-creator lifts the sole responsibility, so you keep taking creative risks.</li>
+      <li><strong>Objections.</strong> Won't I miss real dangers? Write worries down each morning, then use the tool all day. Can the Source be God? It can, but doesn't have to be.</li>
+      <li><strong>Other uses.</strong> John stopped mourning the women he had left, Janet silenced her inner critic and left an exploitative boyfriend, and George, a director, stopped judging everyone around him.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Under the Black Cloud, and through it</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 270" role="img" aria-label="Two panels. Left: a sun at the top, a solid dark cloud below it, and a stooped figure underneath, labelled only the negative feels real. Right: the same sun, now labelled the Source, and the cloud split in two by a beam rising from the figure, labelled gratitude flowing up.">
+          <text x="10" y="20" class="hd">The Black Cloud</text>
+          <circle cx="150" cy="50" r="18" class="f-mag" opacity=".9"/>
+          <g id="cloud-1"></g>
+          <g id="fig-d1"></g>
+          <text x="150" y="252" text-anchor="middle" class="t-3" style="font-size:11px">only the negative feels real</text>
+          <path d="M300 30 V250" class="s-rule"/>
+          <text x="320" y="20" class="hd">The Grateful Flow</text>
+          <polygon points="440,206 424,64 476,64 460,206" class="f-magt"/>
+          <path d="M432 196 L428 74 M450 196 V74 M468 196 L472 74" class="s-mag" stroke-width="1.2" stroke-dasharray="4 5"/>
+          <g id="cloud-2"></g>
+          <circle cx="450" cy="50" r="18" class="f-mag"/>
+          <g id="rays-2" class="s-mag" stroke-width="2"></g>
+          <text x="478" y="44" class="t-mag">the Source</text>
+          <g id="fig-d2"></g>
+          <text x="450" y="252" text-anchor="middle" class="t-mag" style="font-size:11px">gratitude flowing up</text>
+        </svg>
+      </div>
+      <p class="cap">Redrawn after the book's two cloud diagrams. The sun stands for everything that is right with the world; in the second picture the authors name it the Source.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="keeping">
+  <span class="label partno">Part II · Chapters 6–7</span>
+  <h2>Keeping at it</h2>
+  <p class="lede">The tools work, and almost everyone stops using them anyway. The fifth tool is aimed at that, and Michels's own story shows how faith grows from use rather than argument.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Jeopardy</span></div>
+  <div class="body">
+    <div>
+      <h3>Willpower from your deathbed</h3>
+      <p class="idea">No success ever releases you from the work. Seeing your dying self makes the present moment urgent enough to act.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Vinny, part two.</strong> With Reversal of Desire, Vinny landed a role in an expensive new sitcom. Then he dropped the tool, went back to beer, weed and old friends, refused to learn his lines and left therapy. Months later he grabbed Michels outside the lift in tears: he'd been fired, and could barely get out of bed.</li>
+      <li><strong>The fantasy of release.</strong> We are only complete, the authors say, while connected to something bigger, and the connection keeps breaking. So we dream of a fairy-tale event (fame, money, a prize) that will free us from effort, like a self-cleaning kitchen. The German edition calls it an acquittal. It always ends in demoralisation, as it did for Michels at Harvard.</li>
+      <li><strong>The enemy is consumerism.</strong> Every advert says there's something you must have. We consume experiences and people too, and read self-help like a pill. Michels met a woman who had read 75 books on spirituality in a month.</li>
+      <li><strong>The spark.</strong> Vinny remembered a boxer, knocked flat, who came back to life at the count of six. That spark is willpower, the only higher force you must produce yourself. The universe supplies the darkness, the moments you want to give up.</li>
+      <li><strong>Life or death.</strong> Studying for the bar exam (three days, more than half fail) made Michels intensely focused, until the deadline passed. Real willpower, Stutz told him, needs a challenge that never goes away: your future, at stake every moment. Picturing his life without the tools, Vinny saw himself enormous, in an unmade bed, in his mother's house.</li>
+      <li><strong>The tool.</strong> Picture yourself on your deathbed. That old self knows how precious the present is; it sits up and shouts at you not to waste this moment. Feel the secret fear that you've wasted your life, and let it push you to use the tool you need, now.</li>
+      <li><strong>Three cues.</strong> You want to use a tool and can't. You feel you've come far enough not to need them. You're losing commitment to anything that matters, from a diet to a relationship.</li>
+      <li><strong>From consumer to creator.</strong> Back on stage in a tiny club in Pasadena, Vinny just wanted to get better. The authors call this becoming a creator: bringing in something new, setting your own course, staying focused without quick rewards. In a rabbi's story, God made the earth hard so that people would have to create, the one ability that can't be given. Vinny ended up happy, and funnier.</li>
+      <li><strong>Objections.</strong> Isn't willpower the self-will that AA warns against? No: self-will tries to control the universe, while the deathbed submits to time.</li>
+      <li><strong>Other uses.</strong> Ann stopped compulsive online shopping, Alex, a scattered agent, celebrated twenty minutes of focus on one script, and Harriet left a controlling marriage to have a child.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Why people quit, and where Jeopardy cuts in</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 280" role="img" aria-label="A loop. Top row from left to right: use the tools, life improves, then the fantasy I've made it, now I'm released. An arrow goes down to stop using them. Bottom row from right to left: stop using them, then demoralised, can't make yourself start. A second arrow joins stop using them from a setback, labelled too discouraged. From demoralised, a magenta box labelled Jeopardy, the deathbed self shouts don't waste this moment, leads back up to use the tools.">
+          <rect x="20" y="40" width="150" height="56" rx="6" class="f-magt s-mag" stroke-width="1.5"/>
+          <text x="95" y="64" text-anchor="middle" class="hd">Use the tools</text>
+          <text x="95" y="83" text-anchor="middle" class="t-3" style="font-size:11px">on every cue</text>
+          <path d="M170 68 H216" class="s-2" stroke-width="1.6"/><path d="M209 62 L217 68 L209 74" class="s-2" stroke-width="1.6"/>
+          <rect x="220" y="40" width="150" height="56" rx="6" class="f-card s-2" stroke-width="1.5"/>
+          <text x="295" y="64" text-anchor="middle" class="hd">Life improves</text>
+          <text x="295" y="83" text-anchor="middle" class="t-3" style="font-size:11px">a role, a raise</text>
+          <path d="M370 68 H416" class="s-2" stroke-width="1.6"/><path d="M409 62 L417 68 L409 74" class="s-2" stroke-width="1.6"/>
+          <rect x="420" y="40" width="160" height="56" rx="6" class="f-redt s-red" stroke-width="1.5"/>
+          <text x="500" y="64" text-anchor="middle" class="hd">"I've made it"</text>
+          <text x="500" y="83" text-anchor="middle" class="t-red" style="font-size:11px">fantasy of release</text>
+          <path d="M500 96 V162" class="s-red" stroke-width="1.8"/><path d="M494 155 L500 163 L506 155" class="s-red" stroke-width="1.8"/>
+          <rect x="420" y="166" width="160" height="56" rx="6" class="f-redt s-red" stroke-width="1.5"/>
+          <text x="500" y="190" text-anchor="middle" class="hd">Stop using them</text>
+          <text x="500" y="209" text-anchor="middle" class="t-red" style="font-size:11px">old habits return</text>
+          <path d="M420 194 H374" class="s-red" stroke-width="1.8"/><path d="M381 188 L373 194 L381 200" class="s-red" stroke-width="1.8"/>
+          <rect x="220" y="166" width="150" height="56" rx="6" class="f-redt s-red" stroke-width="1.5"/>
+          <text x="295" y="190" text-anchor="middle" class="hd">Demoralised</text>
+          <text x="295" y="209" text-anchor="middle" class="t-red" style="font-size:11px">can't start</text>
+          <path d="M220 194 H174" class="s-mag" stroke-width="2"/><path d="M181 188 L173 194 L181 200" class="s-mag" stroke-width="2"/>
+          <rect x="20" y="166" width="150" height="56" rx="6" class="f-mag"/>
+          <text x="95" y="190" text-anchor="middle" class="hd" style="fill:var(--card)">Jeopardy</text>
+          <text x="95" y="209" text-anchor="middle" style="font-size:11px;fill:var(--card)">deathbed self</text>
+          <path d="M95 166 V100" class="s-mag" stroke-width="2"/><path d="M89 107 L95 99 L101 107" class="s-mag" stroke-width="2"/>
+          <text x="580" y="252" text-anchor="end" class="t-3" style="font-size:11px">setbacks lead here too</text>
+          <path d="M500 240 V226" class="s-3" stroke-width="1.4" stroke-dasharray="3 3"/>
+          <text x="20" y="272" class="t-3" style="font-size:11px">Cues: can't make yourself use a tool · think you no longer need them</text>
+        </svg>
+      </div>
+      <p class="cap">Drawn for this page from Vinny's story and the chapter summary. Success makes the tools seem unnecessary, failure makes using them feel hopeless; Jeopardy targets both.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Faith in higher forces</span></div>
+  <div class="body">
+    <div>
+      <h3>Shut up and use the tool</h3>
+      <p class="idea">Faith, as the authors define it, is the confidence that higher forces will be there when you need them. Michels got it by using a tool, not by winning an argument.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A born sceptic.</strong> Raised by atheist parents, Michels at nine explained to a friend's religious mother why God couldn't exist; it was his last sleepover there. Later the tools worked for him, but his clients seemed to feel something bigger and he didn't.</li>
+      <li><strong>Months of nothing.</strong> His weak spot was anger that went looking for a reason. He set his watch to beep every hour to remind him to use Active Love, and did it for months without ever feeling Outflow.</li>
+      <li><strong>Three dates.</strong> His son was born on 17 January 1992. On the boy's first birthday in 1993, Michels dreamed of an earthquake in his office and used Active Love to die with love in his heart, and felt a love far bigger than his own for a while afterwards. On 17 January 1994 an earthquake hit Los Angeles before dawn and his office building collapsed.</li>
+      <li><strong>Neither road.</strong> He could no longer believe in coincidence, but organised religion felt dogmatic, and New Age thinking, which told one client her negative thoughts had caused her cancer, felt empty.</li>
+      <li><strong>The index card.</strong> Stutz drew a "spiritual system" on a small card: beside physical evolution there is a spiritual one, the growth of the inmost self, which needs higher forces. He refused to debate it and told Michels to pick a problem and use a tool every time it came up.</li>
+      <li><strong>Lunch with Steve.</strong> His best friend, a world-famous theoretical physicist, had once called Hendrix's guitar mere vibration in the air. Dreading a lunch where he'd have to explain his work, Michels used Active Love whenever the dread came, then spoke with unexpected passion. Steve didn't buy the system, but quoted Pascal on the heart and was glad his friend was helping people.</li>
+      <li><strong>Stutz's answer.</strong> Asked where his own faith came from, Stutz described years of crushing exhaustion that no test could explain. Cut off from the world, he turned inward, and the tools came from there. His illness taught him, he says, that the universe cares for us and teaches what we need.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Stutz's index card: the spiritual system</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 280" role="img" aria-label="On the left, a force labelled force of evolution (God, a higher power) sends a broad arrow down to a figure facing a problem such as illness, job loss or confusion. From the figure, a staircase labelled the tools climbs to the right, up to a figure with a sun inside it, labelled creator. A second arrow from the force of evolution points to higher forces at the top of the stairs. Under the stairs: free will, the one thing the universe won't supply.">
+          <rect x="20" y="20" width="200" height="44" rx="6" class="f-paper2 s-3" stroke-width="1.2"/>
+          <text x="120" y="40" text-anchor="middle" class="hd" style="font-size:14px">Force of evolution</text>
+          <text x="120" y="56" text-anchor="middle" class="t-3" style="font-size:10.5px">God, a higher power: any name</text>
+          <path d="M70 64 V150" class="s-red" stroke-width="7" opacity=".8"/>
+          <path d="M60 140 L70 156 L80 140" class="s-red" stroke-width="3"/>
+          <text x="84" y="112" class="t-red" style="font-size:11px">sends the problem</text>
+          <g id="fig-f1"></g>
+          <text x="66" y="250" text-anchor="middle" class="t-red" style="font-size:11px">a problem</text>
+          <text x="66" y="266" text-anchor="middle" class="t-3" style="font-size:10.5px">illness, job loss…</text>
+          <path d="M110 220 H170 V196 H230 V172 H290 V148 H350 V124 H410 V100 H470" class="s-mag" stroke-width="2.4"/>
+          <text x="210" y="234" class="t-mag">the tools</text>
+          <text x="210" y="252" class="t-3" style="font-size:11px">free will: the one thing</text>
+          <text x="210" y="267" class="t-3" style="font-size:11px">the universe won't supply</text>
+          <path d="M220 42 H420 V84" class="s-mag" stroke-width="1.6" stroke-dasharray="5 4"/>
+          <path d="M414 77 L420 86 L426 77" class="s-mag" stroke-width="1.6"/>
+          <text x="436" y="78" class="t-mag">higher forces</text>
+          <text x="236" y="36" class="t-3" style="font-size:11px">same source</text>
+          <g id="fig-f2"></g>
+          <circle cx="540" cy="146" r="7" class="f-mag"/>
+          <text x="540" y="214" text-anchor="middle" class="t-mag">creator</text>
+        </svg>
+      </div>
+      <p class="cap">Redrawn after the card in the book. The problem and the forces that solve it come from the same place; the will to use the tools has to come from you.</p>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Congratulations. You've met the spirituality of the future."</blockquote>
+      <span class="label">Stutz to Michels after the earthquake (my translation from the German)</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="world">
+  <span class="label partno">Part III · Chapter 8</span>
+  <h2>A new world</h2>
+  <p class="lede">The last chapter widens the lens. The authors argue that what each tool does for one person it could do for a society that has lost its spirit.</p>
+</div>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Vision of a new world</span></div>
+  <div class="body">
+    <div>
+      <h3>Every use of a tool is a vote</h3>
+      <p class="idea">The authors' new spirituality rests on experience, personal authority and problems as fuel, and they say it only lives if individuals practise it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Pillar 1: experience, not proof.</strong> Higher forces can be neither proved nor disproved, only experienced with your whole being. The authors point to Alcoholics Anonymous, whose steps help even members who disagree with every point, and to the story of Niels Bohr's horseshoe, which he'd heard works even if you don't believe in it.</li>
+      <li><strong>Pillar 2: you are the authority.</strong> No priest or institution can define spiritual reality for you any more; each person must test it. They point to Catholics who meditate, Jewish Buddhists, and AA's founder Bill Wilson, a stockbroker rather than a doctor.</li>
+      <li><strong>Pillar 3: problems drive growth.</strong> Try picturing your worst problem first as chance in a blind universe, then as a task set by a universe that wants you to grow, and notice which makes you want to work. A consumer finds meaning only when needs are met; a creator finds it in problems.</li>
+      <li><strong>A society's spirit.</strong> They describe a society's spirit as a living organism that should welcome change and put the common good first, and argue that ours is sick: distrustful, risk-averse, everyone for themselves. They cite Lewis Mumford on Rome losing its inner drive.</li>
+      <li><strong>The quiet revolution.</strong> Traditional channels to higher forces have lost power, they argue, so the forces now have to come through individuals. Each tool gets a social version, with an exercise imagining millions doing the same (see the table). Martin Luther King's sermon on loving your enemies is their model.</li>
+      <li><strong>Now it's up to you.</strong> Long-term clients, they say, stand out for how they handle failure. The book asks to be used like a builder's plan, not consumed like fast food.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>One tool, two scales</h4>
+      <div class="tablecard" style="border:0">
+        <div class="scroll-x">
+          <table class="tbl" style="min-width:620px">
+            <thead><tr><th scope="col">Tool</th><th scope="col">In one life</th><th scope="col">In a society, as the authors argue</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Reversal of Desire</th><td>Leave your Comfort Zone</td><td class="r">Face shared pain and sacrifice instead of borrowing against the future; demand leaders who tell the truth</td></tr>
+              <tr><th scope="row">Active Love</th><td>Escape your personal maze</td><td class="r">Stay open even to ideas you loathe, instead of repeating the same shrill debates for decades</td></tr>
+              <tr><th scope="row">Inner Authority</th><td>Speak with your Shadow</td><td class="r">Stop treating people who look or live differently as "others"</td></tr>
+              <tr><th scope="row">The Grateful Flow</th><td>Break the Black Cloud</td><td class="r">Guardians in finance, law, medicine and politics take responsibility once they see how much they were given</td></tr>
+              <tr><th scope="row">Jeopardy</th><td>Keep using the tools</td><td class="r">Act instead of waiting for someone else, like the first bystander who starts CPR and gets others moving</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="src">Summarised from the five subsections of ch. 8</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book insists you practise the exact steps until they're quick, then use them on cue. Here they are as cues and habits.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>On cue</h3>
+      <div class="tk"><b>About to avoid something → Reversal of Desire</b><span>Also when you think about it or feel fear. Call the pain, love it, let it free you.</span></div>
+      <div class="tk"><b>Angry or replaying a grievance → Active Love</b><span>Also before facing a difficult person. Gather love, send it all, feel it go in.</span></div>
+      <div class="tk"><b>Freezing in front of others → Inner Authority</b><span>Also when dreading an event. Shadow beside you, one bond, turn together and silently command attention.</span></div>
+      <div class="tk"><b>Worry, self-attack, judging → The Grateful Flow</b><span>Also in idle moments. Five things, slowly, then the wordless feeling.</span></div>
+      <div class="tk"><b>Can't make yourself, or think you're done → Jeopardy</b><span>Your dying self shouts at you not to waste this moment.</span></div>
+    </div>
+    <div class="col">
+      <h3>Build the habit</h3>
+      <div class="tk"><b>Learn the exact steps first</b><span>Adapt them later if experience suggests it, but keep the cues.</span></div>
+      <div class="tk"><b>Use the worst version</b><span>Rehearse the most extreme pain. Everything else gets easier.</span></div>
+      <div class="tk"><b>Use it more when it does nothing</b><span>Doubt is a cue. It takes practice, like the violin.</span></div>
+      <div class="tk"><b>Train upwards</b><span>Alone, then with safe people, then harder situations, then the big event.</span></div>
+      <div class="tk"><b>Combine tools</b><span>Self-criticism may need both Inner Authority and The Grateful Flow. Trust your instinct.</span></div>
+    </div>
+    <div class="col">
+      <h3>Mind the traps</h3>
+      <div class="tk"><b>Don't wait for fairness</b><span>Demanding justice keeps you in the maze. You can still confront.</span></div>
+      <div class="tk"><b>Don't expect a reward every time</b><span>The universe isn't a trainer tossing fish to a seal. It works on who you are.</span></div>
+      <div class="tk"><b>Distrust "I've made it"</b><span>Success is the moment people quit. That's exactly when to use Jeopardy.</span></div>
+      <div class="tk"><b>Don't read as a consumer</b><span>Skimming for the magic answer is a way of avoiding action.</span></div>
+      <div class="tk"><b>Don't wait for proof</b><span>The authors' claim is that faith follows use, not argument.</span></div>
+    </div>
+  </div>
+  <p class="xlink">Barry Michels comes back to these Tools in his later book <em>Ahead of All Parting</em>. <a href="../ahead-of-all-parting/">Notes on that book are here.</a></p>
+</section>
+
+<footer>
+  <p>A summary in my own words of Phil Stutz and Barry Michels, <em>The Tools: Transform Your Problems into Courage, Confidence, and Creativity</em> (2012), read in the German translation by Erika Ifang, <em>The Tools: Wie Sie wirklich Selbstvertrauen, Lebensfreude, Gelassenheit und innere Stärke gewinnen</em> (Arkana, Munich, 2012). Names of tools, forces and steps follow the English edition; the two quotations are my own translations from the German. Figures are as reported in the book. Diagrams were drawn for this page, most after the book's own sketches; the pain curve is illustrative. The cover shown is the English first edition (Spiegel &amp; Grau, 2012); cover image belongs to its publisher.</p>
+  <span class="label">Notes compiled Nov 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  /* stick figure: feet at (x, y), height ~ 46*s */
+  function person(id, x, y, s, cls, bent) {
+    var g = typeof id === "string" ? document.getElementById(id) : id;
+    if (!g) return;
+    s = s || 1; cls = cls || "s-ink";
+    var hip = y - 20 * s, neck = y - 38 * s, lean = bent ? 7 * s : 0;
+    el("circle", { cx: x + lean * 1.3, cy: neck - 6 * s, r: 6 * s, "class": cls, "stroke-width": 2 }, g);
+    el("path", { d: "M" + (x + lean) + " " + neck + " L" + x + " " + hip + " M" + (x - 9 * s + lean) + " " + (neck + 8 * s) + " L" + (x + 9 * s + lean) + " " + (neck + 8 * s) + " M" + x + " " + hip + " L" + (x - 7 * s) + " " + y + " M" + x + " " + hip + " L" + (x + 7 * s) + " " + y, "class": cls, "stroke-width": 2, "stroke-linecap": "round" }, g);
+  }
+  function solid(id, x, y, s, fillCls) {
+    var g = document.getElementById(id);
+    if (!g) return;
+    s = s || 1;
+    el("circle", { cx: x, cy: y - 44 * s, r: 6 * s, "class": fillCls }, g);
+    el("path", { d: "M" + (x - 8 * s) + " " + (y - 36 * s) + " H" + (x + 8 * s) + " L" + (x + 6 * s) + " " + (y - 18 * s) + " L" + (x + 8 * s) + " " + y + " H" + (x - 8 * s) + " L" + (x - 6 * s) + " " + (y - 18 * s) + " Z", "class": fillCls }, g);
+  }
+
+  /* ch2 */
+  person("fig-a1", 70, 162, 1);
+  person("fig-a2", 370, 162, 1);
+  /* ch3 */
+  person("fig-b", 54, 178, 1);
+  var maze = document.getElementById("maze");
+  if (maze) {
+    var cx = 205, cy = 220, d = "M" + cx + " " + cy, step = 6, dir = 0, len = 1, x = cx, y = cy;
+    for (var i = 0; i < 13; i++) {
+      var L = len * step;
+      if (dir === 0) x += L; else if (dir === 1) y -= L; else if (dir === 2) x -= L; else y += L;
+      d += " L" + x + " " + y;
+      dir = (dir + 1) % 4; if (i % 2 === 1) len++;
+    }
+    maze.setAttribute("d", d);
+  }
+  function rays(id, cx, cy, r0, r1) {
+    var g = document.getElementById(id);
+    if (!g) return;
+    for (var k = 0; k < 8; k++) {
+      var a = k * Math.PI / 4;
+      el("line", { x1: cx + Math.cos(a) * r0, y1: cy + Math.sin(a) * r0, x2: cx + Math.cos(a) * r1, y2: cy + Math.sin(a) * r1, "stroke-linecap": "round" }, g);
+    }
+  }
+  rays("rays", 526, 72, 24, 34);
+  rays("rays-2", 450, 50, 24, 32);
+  /* ch4 */
+  person("fig-c1", 58, 222, 1.15);
+  solid("fig-c1s", 111, 216, .62, "f-ink");
+  var a1 = document.getElementById("aud-1");
+  [200, 234, 268].forEach(function (x) { person(a1, x, 118, 1.4, "s-2"); });
+  person("fig-c2", 340, 222, 1.15);
+  solid("fig-c2s", 380, 222, 1.05, "f-mag");
+  var a2 = document.getElementById("aud-2");
+  [522, 547, 572].forEach(function (x) { person(a2, x, 232, .75, "s-2"); });
+  /* ch5 clouds */
+  var clipN = 0;
+  function cloud(id, cx, cy, w, split) {
+    var g = document.getElementById(id);
+    if (!g) return;
+    var bumps = [[-0.36, 0.04, .17], [-0.16, -0.08, .22], [0.1, -0.06, .21], [0.33, 0.04, .17], [0, 0.08, .2], [-0.24, 0.1, .16], [0.22, 0.1, .16]];
+    var halves = split ? [[cx - w, cx - 28], [cx + 28, cx + w]] : [[cx - w, cx + w]];
+    halves.forEach(function (hv) {
+      var cid = "cl" + (++clipN);
+      var cp = el("clipPath", { id: cid }, g);
+      el("rect", { x: hv[0], y: cy - w, width: hv[1] - hv[0], height: 2 * w }, cp);
+      var sub = el("g", { "clip-path": "url(#" + cid + ")" }, g);
+      bumps.forEach(function (b) { el("circle", { cx: cx + b[0] * w, cy: cy + b[1] * w, r: b[2] * w, "class": "f-cloud" }, sub); });
+    });
+  }
+  cloud("cloud-1", 150, 128, 190, false);
+  cloud("cloud-2", 450, 128, 190, true);
+  person("fig-d1", 150, 238, 1, "s-ink", true);
+  person("fig-d2", 450, 238, 1, "s-ink");
+  /* ch7 */
+  person("fig-f1", 66, 230, 1);
+  person("fig-f2", 540, 196, 1.6, "s-mag");
+
+  /* --- Hero band: a dense red knot of pain on the left; particles that pass through it leave as spreading magenta light --- */
+  var canvas = document.getElementById("flow");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  var N = 140, parts = [];
+  var seed = 7;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  for (var j = 0; j < N; j++) parts.push({ ph: rnd(), lane: rnd() * 2 - 1, sp: 0.6 + rnd() * 0.8, wob: rnd() * 6.28, r: 1.2 + rnd() * 1.8 });
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t); }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var t = reduce ? 0 : time * 0.00005;
+    var mag = css("--mag"), red = css("--red");
+    var mid = hgt / 2, gate = 0.3;
+    /* the pain band */
+    ctx.globalAlpha = .12; ctx.fillStyle = red;
+    ctx.fillRect(w * gate - 10, 4, 20, hgt - 8);
+    for (var k = 0; k < N; k++) {
+      var p = parts[k];
+      var u = (p.ph + t * p.sp) % 1;
+      var x = u * w;
+      var past = ease((u - gate) / 0.45);
+      var spread = 0.14 + 0.82 * past;
+      var y = mid + p.lane * spread * (hgt / 2 - 6) + Math.sin(u * 18 + p.wob + time * 0.0012 * (reduce ? 0 : 1)) * (1 - past) * 6;
+      ctx.beginPath();
+      ctx.arc(x, y, p.r * (0.8 + past * 0.6), 0, Math.PI * 2);
+      ctx.fillStyle = u < gate ? red : mag;
+      ctx.globalAlpha = u < gate ? 0.55 : 0.35 + 0.5 * past;
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

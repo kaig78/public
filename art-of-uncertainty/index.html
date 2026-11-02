@@ -1,0 +1,1275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Art of Uncertainty by David Spiegelhalter – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: Pelican turquoise and the egg's yolk yellow
+   on near-black type. Teal = what we know or can model, yolk = chance, surprise, the unmodelled. */
+:root {
+  --paper: #f2f8f8;
+  --paper-2: #e2eeee;
+  --card: #ffffff;
+  --ink: #132022;
+  --ink-2: #435457;
+  --ink-3: #6f8083;
+  --rule: #cfe0e0;
+
+  --teal: #0b7f83;     /* text-safe turquoise */
+  --teal-2: #4cc6c8;   /* cover turquoise, for fills */
+  --yolk: #f5c400;     /* yolk, for fills */
+  --yolk-ink: #8a6400; /* yolk, text-safe */
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0c1516;
+    --paper-2: #142123;
+    --card: #172628;
+    --ink: #e9f3f3;
+    --ink-2: #adc0c2;
+    --ink-3: #849799;
+    --rule: #26393b;
+    --teal: #5fd3d5;
+    --teal-2: #3fb7ba;
+    --yolk: #ffd23a;
+    --yolk-ink: #ffd23a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0c1516;
+  --paper-2: #142123;
+  --card: #172628;
+  --ink: #e9f3f3;
+  --ink-2: #adc0c2;
+  --ink-3: #849799;
+  --rule: #26393b;
+  --teal: #5fd3d5;
+  --teal-2: #3fb7ba;
+  --yolk: #ffd23a;
+  --yolk-ink: #ffd23a;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  overflow-x: hidden;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-cyan { --c: var(--teal); }
+.c-red { --c: var(--yolk); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: clamp(22px, 3vw, 34px); letter-spacing: -.01em; line-height: 1; color: var(--teal); }
+.hero h1 {
+  font-size: clamp(54px, 10.5vw, 132px);
+  font-weight: 800;
+  font-stretch: 88%;
+  line-height: .88;
+  letter-spacing: -.03em;
+  color: var(--ink);
+  margin: 10px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero h1 .yolk { color: var(--yolk-ink); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 42ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 965;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 40, 40, .35), 0 8px 18px -10px rgba(10, 40, 40, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--teal-2);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  font-stretch: 80%;
+  line-height: .9;
+  letter-spacing: -.03em;
+  color: var(--teal);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--teal-2);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--teal);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 3px solid var(--yolk);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-cy { fill: var(--teal); }
+.fig svg text.t-red { fill: var(--yolk-ink); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-cy { stroke: var(--teal); fill: none; }
+.s-cy2 { stroke: var(--teal-2); fill: none; }
+.s-red { stroke: var(--yolk); fill: none; }
+.f-cy { fill: var(--teal); }
+.f-cy2 { fill: var(--teal-2); }
+.f-red { fill: var(--yolk); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-cyt { fill: color-mix(in srgb, var(--teal-2) 18%, var(--card)); }
+.f-redt { fill: color-mix(in srgb, var(--yolk) 22%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+.legend i.ln { width: 18px; height: 3px; border-radius: 2px; vertical-align: 3px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+.track .seg { position: absolute; top: 0; bottom: 0; background: var(--c, var(--ink)); border-radius: 2px; }
+.axis { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); }
+
+/* coin strips */
+.flips { display: grid; gap: 14px; }
+.flips .strip { display: grid; gap: 6px; }
+.flips .cells { display: grid; grid-template-columns: repeat(20, minmax(0, 1fr)); gap: 3px; }
+.flips .cells span { aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; font-family: var(--mono); font-size: clamp(8px, 1.6vw, 12px); font-weight: 500; }
+.flips .H { background: var(--teal-2); color: #062224; }
+.flips .T { background: var(--paper-2); color: var(--ink-2); }
+.flips .run { outline: 2px solid var(--yolk); outline-offset: 1px; }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat.c-red .big { color: var(--yolk-ink); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--teal-2); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 28px; font-weight: 800; font-stretch: 80%; letter-spacing: -.01em; color: var(--teal); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--teal); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three kinds */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--teal); }
+
+/* quadrant */
+.quad { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.quad > div { background: var(--card); padding: 14px 16px; display: grid; gap: 4px; align-content: start; }
+.quad .hd { background: var(--paper-2); font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.quad .rh { writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; padding: 10px 6px; }
+.quad b { font-family: var(--display); font-weight: 800; font-size: 17px; }
+.quad span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.quad .deep { background: color-mix(in srgb, var(--yolk) 16%, var(--card)); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--teal); }
+.compare .bad h5 { color: var(--yolk-ink); }
+
+/* equation strip */
+.eq { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: var(--paper-2); border-radius: 6px; padding: 14px 18px; margin: 0; white-space: pre-wrap; color: var(--ink); overflow-wrap: anywhere; }
+.eq .k { color: var(--teal); }
+.eq .r { color: var(--yolk-ink); }
+.eq .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 800; font-stretch: 80%; letter-spacing: -.01em; color: var(--teal); border-top: 2px solid var(--teal-2); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map { grid-template-columns: minmax(0, 1fr); }
+  .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+  .quad { grid-template-columns: minmax(0, 1fr); }
+  .quad .rh { writing-mode: horizontal-tb; transform: none; text-align: left; }
+  .quad .corner { display: none; }
+  .quad .colhd { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · David Spiegelhalter · Pelican, 2024</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#owning">Owning it</a>
+    <a href="#chance">Chance</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#future">The future</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">The Art of</p>
+    <h1><span>Uncer&shy;tainty</span></h1>
+    <p class="sub">How to navigate chance, ignorance, risk and luck</p>
+    <p class="dek">David Spiegelhalter argues that uncertainty is not a feature of the world but a relationship between you and it. Put numbers on it, keep a little doubt in reserve, and say so openly.</p>
+    <div class="byline label">
+      <span>16 chapters</span><span>Intro + manifesto</span><span>4 parts (my grouping)</span><span>~90,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Art of Uncertainty by David Spiegelhalter: a plain turquoise background with dark title type, the author's name in white, and a fried egg with two yellow yolks">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="futures"></canvas>
+  <div class="ends label"><span>Now</span><span>Possible futures</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Introduction</span>
+    <h2>Uncertainty is yours, so own it</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>On 29 January 1918 Cecil Spiegelhalter, a gas officer near Passchendaele, was blown up on his way back from the front line. It looked like bad luck, but it kept him away from the front just before his old battalion met the German spring offensive. His grandson, the author, exists thanks to a chain of small accidents like that.</p>
+      <p>The book's big idea is that <strong>uncertainty is a relationship</strong> between someone and the world, so two well-informed people can sensibly hold different probabilities. Judgement is unavoidable, but not anything goes: probabilities can be scored against what happens.</p>
+      <p>From there he moves outwards, from chance and luck through Bayesian learning, science and blame to forecasting, disasters and decisions. Throughout he asks for slow thinking about not-knowing, and enough humility to turn Rumsfeld's "unknown unknowns" into acknowledged ones.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Why it matters</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-red"><span class="big num">30%</span><p>The Joint Chiefs' estimate for the Bay of Pigs succeeding. The report to Kennedy turned it into "a fair chance".</p></div>
+        <div class="stat c-cyan"><span class="big num">59%</span><p>Share of live facial-recognition alerts that would be false, for a system with a 1-in-1,000 false alert rate.</p></div>
+        <div class="stat c-red"><span class="big num">1 in 342m</span><p>The chance claimed at Lucia de Berk's trial. Statisticians later put it as high as 1 in 25, and she was freed.</p></div>
+        <div class="stat c-cyan"><span class="big num">10%</span><p>Probability the Bank of England's fan charts leave unassigned, for "something else". The 2020 Covid crash fell there.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kinds" style="margin-top:32px">
+    <div><span class="label">What we cannot know</span><b>Aleatory</b><span>Chance about the future: the coin still spinning in the air. No amount of study removes it.</span></div>
+    <div><span class="label">What we do not know</span><b>Epistemic</b><span>Ignorance about a fact that is already settled: the coin caught and covered. Someone else may know.</span></div>
+    <div><span class="label">What we cannot even list</span><b>Deep</b><span>We can't write down all the possible outcomes, let alone weigh them. Needs humility and resilience more than a model.</span></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I · ch. 1–2</span>
+      <h3>Owning it</h3>
+      <p class="q">Whose uncertainty, and in what units</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Uncertainty is personal</b>Subjects, objects, feelings</a></li>
+        <li><span>02</span><a href="#ch2"><b>Into numbers</b>Vague words, proper scores</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II · ch. 3–6</span>
+      <h3>Chance</h3>
+      <p class="q">The rules of the game, and what they mean</p>
+      <ol>
+        <li><span>03</span><a href="#ch3"><b>Probability</b>Dice, points, de Finetti</a></li>
+        <li><span>04</span><a href="#ch4"><b>Coincidences</b>Counting the opportunities</a></li>
+        <li><span>05</span><a href="#ch5"><b>Luck</b>What luck really is</a></li>
+        <li><span>06</span><a href="#ch6"><b>Randomness</b>Clumpy, useful, mostly fake</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part III · ch. 7–10</span>
+      <h3>Evidence</h3>
+      <p class="q">Learning from data without fooling yourself</p>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>Being Bayesian</b>Updating with humility</a></li>
+        <li><span>08</span><a href="#ch8"><b>Science</b>All models are wrong</a></li>
+        <li><span>09</span><a href="#ch9"><b>Confidence</b>How sure is the analysis?</a></li>
+        <li><span>10</span><a href="#ch10"><b>Blame</b>Climate, courts, cancer</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part IV · ch. 11–16</span>
+      <h3>The future</h3>
+      <p class="q">Forecasts, disasters and decisions</p>
+      <ol>
+        <li><span>11</span><a href="#ch11"><b>Prediction</b>From goals to climate</a></li>
+        <li><span>12</span><a href="#ch12"><b>Risk</b>Fat tails and registers</a></li>
+        <li><span>13</span><a href="#ch13"><b>Deep uncertainty</b>Something else</a></li>
+        <li><span>14</span><a href="#ch14"><b>Communication</b>Trustworthy, not trusted</a></li>
+        <li><span>15</span><a href="#ch15"><b>Decisions</b>Tolerable risk, burnt toast</a></li>
+        <li><span>16</span><a href="#ch16"><b>The future</b>AI and a manifesto</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="owning">
+  <span class="label partno">Part I · Chapters 1–2 · the book has no formal parts; this grouping is mine</span>
+  <h2>Owning it</h2>
+  <p class="lede">Uncertainty always belongs to someone. Once you accept that, you can express it as a number, and a number can be checked.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Uncertainty is personal</span></div>
+  <div class="body">
+    <div>
+      <h3>Your probability, not <em>the</em> probability</h3>
+      <p class="idea">Two people can rightly hold different probabilities for the same event, because each knows different things.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The covered coin.</strong> Before a flip, your uncertainty is about a future nobody can know. Once the coin is caught and hidden it is about a settled fact you happen not to know. Spiegelhalter, having peeked, holds 0 or 1 while you still say a half.</li>
+      <li><strong>Its anatomy.</strong> Uncertainty is "conscious awareness of ignorance", with a subject, a checkable object, a source, an expression and often a feeling.</li>
+      <li><strong>Edge-sorting.</strong> In 2012 Phil Ivey won over £7.7 million at Crockfords by having key cards turned so he could read them from their backs. The cards stayed just as random; only his knowledge changed. The Supreme Court called it cheating.</li>
+      <li><strong>Not everyone wants to know.</strong> In a German survey of about 1,000 adults, 88% did not want to know when they would die. Intolerance of uncertainty is linked to anxiety and depression.</li>
+      <li><strong>Denial has costs.</strong> Ministers insisted beef was safe during BSE; over 170 people later died of vCJD.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Into numbers</span></div>
+  <div class="body">
+    <div>
+      <h3>"A fair chance" is not a number</h3>
+      <p class="idea">Words like <em>likely</em> mean very different things to different people. Numbers can be checked and scored.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Bay of Pigs.</strong> The Joint Chiefs gave the 1961 invasion about a 30% chance. The briefing called this "a fair chance", meaning not too good, and Kennedy apparently read it as reasonable odds.</li>
+      <li><strong>Words drift.</strong> Leaflets call a side effect "common" at 1–10%. Statin patients guessed "common" constipation meant 34%; the real rate is about 4%. People's median reading of "likely" is 60%, while the IPCC's "likely" means 66–100%.</li>
+      <li><strong>Abbottabad.</strong> Advisers put bin Laden's presence at anywhere from 30% to 90%. Obama called it 50–50. Spiegelhalter thinks the spread itself was useful information.</li>
+      <li><strong>Score the forecasters.</strong> A proper scoring rule penalises confident mistakes heavily, so stating your honest probability gives you the best expected score. Good probabilities are <em>calibrated</em> (70% claims come true about 70% of the time) and <em>discriminating</em>. Nate Silver's 28.6% for Trump in 2016 was not "wrong".</li>
+      <li><strong>Foxes beat hedgehogs.</strong> In Philip Tetlock's experiments, cautious, adaptable foxes outperformed confident one-theory hedgehogs. The winning habits: aggregation, meta-cognition and humility.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Why the quiz punishes bluffing</h4>
+      <div class="legend"><span><i class="ln" style="--c:var(--teal)"></i>proper (quadratic) score</span><span><i class="ln" style="--c:var(--yolk)"></i>naive linear score</span></div>
+      <div class="scroll-x">
+        <svg id="d-score" viewBox="0 0 600 270" role="img" aria-label="Expected score for someone who is honestly 70 percent sure, plotted against the confidence they claim from 5 to 10 out of 10. Under the book's quadratic rule the expected score peaks at plus 4 when they claim 7, and falls to minus 5 if they claim 10. Under a linear rule it keeps rising to plus 10 at a claim of 10, which rewards exaggeration."></svg>
+      </div>
+      <p class="cap">The curves are for someone who is honestly 70% sure. The quiz rule pays 25 minus a penalty that grows with the square of the probability put on the wrong answer. Claiming exactly 7/10 then earns the most on average (+4), and bluffing 10/10 drops to −5. A rule that scores by plain distance from the answer rewards bluffing instead: +10.</p>
+      <p class="src">Scores from the book's quiz rule and its worked example, ch. 2; curves computed from them</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="chance">
+  <span class="label partno">Part II · Chapters 3–6</span>
+  <h2>Chance</h2>
+  <p class="lede">The mathematics of chance arrived late and works very well. It still can't say what probability actually is, and our intuitions about randomness are poor.</p>
+</div>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Probability</span></div>
+  <div class="body">
+    <div>
+      <h3>Gamblers wrote the rules. Nobody agrees what they mean.</h3>
+      <p class="idea">The whole theory rests on a few simple rules, but no instrument can measure a probability. In Spiegelhalter's view it is always a judgement.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Late arrival.</strong> People gambled on knucklebones for at least 5,000 years, yet nobody analysed chance until Gerolamo Cardano counted the 36 outcomes of two dice around 1550.</li>
+      <li><strong>The problem of points.</strong> If a first-to-three coin game is stopped at tails-heads-tails, the leader wins three of the four possible endings. Fermat and Pascal split the stake by expected winnings, here 60 to 20 ducats. Probability trees give the rules: multiply along a branch, add across branches.</li>
+      <li><strong>Counting gets huge.</strong> A deck has about 8 × 10<sup>67</sup> orders, so a good shuffle is almost certainly new. Casanova's sums made his 1758 French lottery reliably profitable.</li>
+      <li><strong>Swamped, not corrected.</strong> Bernoulli's law of large numbers pulls proportions towards the true rate. Early imbalances aren't evened out. They just get diluted. Believing an absent number is "due" is the gambler's fallacy.</li>
+      <li><strong>What is it?</strong> Every "objective" definition quietly depends on judgement. Ramsey and Bruno de Finetti built probability on personal belief. De Finetti's book opens: "Probability does not exist." His exchangeability theorem still lets us act <em>as if</em> chances exist.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Coincidences</span></div>
+  <div class="body">
+    <div>
+      <h3>What's the chance of that? Higher than you think.</h3>
+      <p class="idea">Rare events are common when there are many chances for them to happen. Count the opportunities before being amazed.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Count the opportunities.</strong> His Cambridge collection gathered about 5,000 coincidence stories. The method: probability of the specific event times the number of chances for something similar gives an expected count. With about 13 million cohabiting couples, around 36,000 should share a birthday.</li>
+      <li><strong>The e<sup>−m</sup> shortcut.</strong> If you expect <em>m</em> rare events, the chance of none is about e<sup>−m</sup>. 23 people form 253 pairs, so <em>m</em> = 0.693 and a shared birthday is slightly more likely than not. In the 2023 Women's World Cup, 16 of the 32 squads of 23 were expected to have a match. 17 did.</li>
+      <li><strong>Clusters and courts.</strong> Three plane crashes in eight days in July 2014 had a 1 in 1,000 chance for that window, but about 0.59 for some such cluster within ten years. Lucia de Berk's "1 in 342 million" shrank to as little as 1 in 25.</li>
+      <li><strong>Check the assumptions.</strong> Six double-yolked eggs in a box were called a 1-in-10<sup>18</sup> event. But double yolks can be spotted and packed together; he bought a box labelled "double-yolked".</li>
+    </ul>
+
+    <div class="fig">
+      <h4>One rule for many coincidences: expect <em>m</em>, and P(at least one) ≈ 1 − e<sup>−m</sup></h4>
+      <div class="scroll-x">
+        <svg id="d-pois" viewBox="0 0 600 260" role="img" aria-label="Curve of the probability of at least one event against the expected number m, rising from 0 to 98 percent at m equals 4. Marked points: m equals 0.693 gives 50 percent, the birthday problem with 23 people; m equals 1 gives 63 percent, the shuffled locker keys; m equals 1.9 gives about 85 percent, twenty people's last two phone digits; m equals 3 gives 95 percent."></svg>
+      </div>
+      <p class="cap">The only input is the expected count. Hand a team's locker keys back at random and the expected number of matches is 1 whatever the team size, so the chance of at least one stays around 63%.</p>
+      <p class="src">Values from ch. 4 (tables 4.1 and 4.3); the phone example's exact probability is 87%</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Luck</span></div>
+  <div class="body">
+    <div>
+      <h3>Luck is chance with your name on it</h3>
+      <p class="idea">The luck that matters most is the hand you were dealt at birth. After that it is chance, plus what you make of it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Kinds of luck.</strong> Resultant (how things turn out), circumstantial (right or wrong place) and constitutive (who you were born as). Spiegelhalter rates the last as the biggest of all.</li>
+      <li><strong>Luck you didn't know you had.</strong> NASA later estimated early Shuttle flights had about a 10% chance of disaster, and only a 6% chance of reaching the 25th launch, Challenger, without a loss.</li>
+      <li><strong>Waiting times.</strong> Derren Brown's televised ten heads in a row took about 1,600 attempts at 1 in 1,024 each: a bit unlucky. With a constant chance per try, the most likely moment for success is the very first one, which is why random events cluster.</li>
+      <li><strong>Luck in league tables.</strong> He gives a 67% probability that 2022–3 champions Manchester City really were the best team.</li>
+      <li><strong>Making your own.</strong> "Lucky" people spot opportunities and bounce back, and serendipity like penicillin came from prepared research. For parents of children having heart surgery, "unforeseeable factors" proved the kindest name for chance.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>How much of a league table is luck?</h4>
+      <div class="bars">
+        <div class="bar c-red"><div class="row"><span>Points spread if every match were decided by coin-flip</span><b>39–66</b></div><div class="track"><div class="seg" style="left:20.3%;width:36.5%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Actual spread, Premier League 2022–3 (Southampton to Man City)</span><b>25–89</b></div><div class="track"><div class="seg" style="left:1.4%;width:86.5%"></div></div></div>
+        <div class="axis"><span>24 pts</span><span>98 pts</span></div>
+      </div>
+      <p class="cap">Decide every match at random using the season's real mix of home wins, draws and away wins, and a 27-point spread appears anyway. Against the real 64 points, about 42% of the spread is chance. Germany's Bundesliga 1 came out at 58%.</p>
+      <p class="src">Source: ch. 5, figure 5.2 and table 5.1</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Randomness</span></div>
+  <div class="body">
+    <div>
+      <h3>Random is clumpy</h3>
+      <p class="idea">Whether the world is deterministic hardly matters in practice. What matters is effective randomness, which is clumpier than we expect and very useful.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Chance or complexity?</strong> Software put his chance of carrying the BRCA2 gene at 33%; he didn't. Is Mendel's 50:50 true randomness or complicated mechanics? He sidesteps it: your uncertainty is the same either way.</li>
+      <li><strong>Monte Carlo.</strong> Stanisław Ulam simulated Solitaire games he couldn't calculate, then applied the trick to chain reactions in the Manhattan Project. Most modern random number generators are fully deterministic, just chaotic enough to pass.</li>
+      <li><strong>Lotto.</strong> After 50 UK draws ball 39 had appeared once and was "due". It caught up through dilution, not correction. On draw nine, 133 people shared a jackpot whose numbers made a neat pattern on the ticket.</li>
+      <li><strong>Uses.</strong> Randomness gives fairness, balanced clinical trials and unpredictability, from penalty kicks to minefields, provided it is real: the 1969 Vietnam draft lottery took 26 of 31 December birthdays and 14 from January.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Spot the fake: real coins produce long runs</h4>
+      <div class="flips" id="d-flips"></div>
+      <p class="cap">In twenty real flips there is a 78% chance of a run of four or more. Made-up sequences rarely have one, and a longest run of only two has a 2% chance. Real sequences switch about 9.5 times; people invent far more. Both strips are illustrative; the probabilities are the book's.</p>
+      <p class="src">Classroom exercise and figure 6.6, ch. 6</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="evidence">
+  <span class="label partno">Part III · Chapters 7–10</span>
+  <h2>Evidence</h2>
+  <p class="lede">Bayes turns data into revised belief. Science adds models, which are always wrong somewhere. And blame depends on asking the right causal question.</p>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Being Bayesian</span></div>
+  <div class="body">
+    <div>
+      <h3>Update, but leave room to be fooled</h3>
+      <p class="idea">Bayes' theorem turns evidence into revised belief. Keeping a small probability on "I may be wrong" lets it notice when something surprising is going on.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Vaccinated deaths.</strong> In June 2021 most UK Covid deaths were among the vaccinated. With rough figures (95% vaccinated, 2% risk unvaccinated, 90% protection) 19 of every 29 deaths would be. Most people killed in cars wear seatbelts too.</li>
+      <li><strong>Odds form.</strong> Posterior odds = likelihood ratio × prior odds. At Bletchley Park Alan Turing added up logs of likelihood ratios by hand, a method later rediscovered as the "naive Bayes" spam filter.</li>
+      <li><strong>Cromwell's rule.</strong> Following Dennis Lindley, never give anything probability 1 or 0 unless it is logically certain. It is named after Cromwell's 1650 plea to the Church of Scotland: "think it possible that you may be mistaken."</li>
+      <li><strong>The Bayesian brain.</strong> Perception may work the same way, predicting from an internal model and adjusting when the senses disagree.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Needles and hay: a 1-in-1,000 error rate, yet most alerts are wrong</h4>
+      <div class="scroll-x">
+        <svg id="d-lfr" viewBox="0 0 600 300" role="img" aria-label="Expected frequency tree for 10,000 people scanned by live facial recognition. 10 are on the watchlist and the system flags 7 of them. 9,990 are not on the list and 1 in 1,000 of them, about 10, are falsely flagged. Of 17 alerts, 10 are false: 59 percent.">
+          <rect x="230" y="10" width="140" height="44" rx="6" class="f-paper2"/>
+          <text x="300" y="30" text-anchor="middle" class="hd">10,000</text>
+          <text x="300" y="46" text-anchor="middle" class="t-3" style="font-size:11px">people scanned</text>
+          <path d="M300 54 V70 H140 V88 M300 70 H460 V88" class="s-3" stroke-width="1.4"/>
+          <rect x="70" y="88" width="140" height="44" rx="6" class="f-cyt s-cy" stroke-width="1.4"/>
+          <text x="140" y="108" text-anchor="middle" class="hd">10</text>
+          <text x="140" y="124" text-anchor="middle" class="t-3" style="font-size:11px">on watchlist</text>
+          <rect x="390" y="88" width="140" height="44" rx="6" class="f-paper2"/>
+          <text x="460" y="108" text-anchor="middle" class="hd">9,990</text>
+          <text x="460" y="124" text-anchor="middle" class="t-3" style="font-size:11px">not on list</text>
+          <path d="M140 132 V146 H80 V162 M140 146 H200 V162 M460 132 V146 H400 V162 M460 146 H520 V162" class="s-3" stroke-width="1.4"/>
+          <text x="80" y="182" text-anchor="middle" class="big t-cy">7</text>
+          <text x="80" y="198" text-anchor="middle" style="font-size:11px">alert (70%)</text>
+          <text x="200" y="182" text-anchor="middle" class="big t-3">3</text>
+          <text x="200" y="198" text-anchor="middle" style="font-size:11px">missed</text>
+          <text x="400" y="182" text-anchor="middle" class="big t-red">10</text>
+          <text x="400" y="198" text-anchor="middle" style="font-size:11px">false alert (1/1,000)</text>
+          <text x="520" y="182" text-anchor="middle" class="big t-3">9,980</text>
+          <text x="520" y="198" text-anchor="middle" style="font-size:11px">left alone</text>
+          <path d="M20 220 H580" class="s-rule"/>
+          <text x="20" y="244" class="hd">17 alerts</text>
+          <g id="d-lfr-dots"></g>
+          <text x="20" y="288" class="t-ink">So if "George" is flagged, he is more likely not on the list: 10/17 = 59%.</text>
+        </svg>
+      </div>
+      <p class="cap">The Metropolitan Police's claimed rates for the 2023 coronation, applied to a crowd of 10,000 with 10 people of interest. A likelihood ratio of 700 can't overcome a prior of 10 in 10,000. Forgetting that is base-rate neglect.</p>
+      <p class="src">Source: ch. 7, figure 7.3 and table 7.1</p>
+    </div>
+
+    <div class="fig">
+      <h4>Cromwell's rule: a 1% doubt lets you discover the trick</h4>
+      <div class="legend"><span><i class="ln" style="--c:var(--ink-3)"></i>P(Bag 2), no doubt allowed</span><span><i class="ln" style="--c:var(--teal)"></i>P(Bag 2), with 1% doubt</span><span><i class="ln" style="--c:var(--yolk)"></i>P(trick bag), with 1% doubt</span></div>
+      <div class="scroll-x">
+        <svg id="d-crom" viewBox="0 0 600 270" role="img" aria-label="Line chart over 0 to 20 dotted balls drawn in a row. Without allowing for deception, belief in Bag 2 climbs towards 100 percent and stays there. If 1 percent prior probability is put on a trick bag, belief in Bag 2 rises at first, then collapses after about a dozen dotted balls as belief in the trick bag rises past one half and heads towards certainty."></svg>
+      </div>
+      <p class="cap">Bag 1 supposedly holds one dotted ball in three, Bag 2 two in three, but yours is all dotted. With no room for doubt, Bayes grows ever surer of Bag 2. With 1% on a trick bag, the trick wins after about a dozen draws. My recomputation of the book's example, splitting the 1% between all-dotted and all-striped bags.</p>
+      <p class="src">After figure 7.5, ch. 7</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Science</span></div>
+  <div class="body">
+    <div>
+      <h3>Every interval assumes the model is right</h3>
+      <p class="idea">Margins of error are calculated as if every assumption in the model holds. None is ever fully true, so the margins are usually too narrow.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Measurement admits judgement.</strong> Metrology adds judged "Type B" uncertainty to statistical "Type A". Michelson's 1879 data gave ±15.5 km/s for the speed of light; he reported ±51, yet was still 152 km/s too high. Official values of constants keep moving outside their error bars.</li>
+      <li><strong>Dexamethasone.</strong> In the RECOVERY trial 29.3% of ventilated patients given the steroid died within 28 days, against 41.4% (relative risk 0.71, interval 0.58–0.86). It saved an estimated 1 million lives in nine months.</li>
+      <li><strong>Read P-values gently.</strong> A P-value measures how compatible the data are with "no effect". It is not the probability that the null hypothesis is true. Sander Greenland suggests calling confidence intervals "compatibility intervals". Spiegelhalter prefers Bayesian posteriors, which here give 99.985% probability that the drug lowers mortality.</li>
+      <li><strong>Many models.</strong> On 14 October 2020 twelve UK models estimated Covid's R, and many of their intervals didn't overlap. Simpler models give narrower intervals, not truer ones. Even physics' 5-sigma discoveries have been withdrawn.</li>
+      <li><strong>Five remedies.</strong> State caveats prominently, test sensitivity to the assumptions, combine independent teams, add judged Type B uncertainty, and treat P-values as rough indicators.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"All models are wrong, but some are useful."</blockquote>
+      <span class="label">George Box, quoted in ch. 8</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Confidence</span></div>
+  <div class="body">
+    <div>
+      <h3>Two kinds of 50%</h3>
+      <p class="idea">A probability needs a second label: how far you trust the evidence and analysis behind it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Same number, different footing.</strong> "50%" for a tested coin and "50%" for which of two coins is heavier differ hugely in backing. Intelligence agencies grade their analytic confidence low, moderate or high.</li>
+      <li><strong>Infected blood.</strong> For the UK inquiry his group simulated hepatitis C infections from transfusions 10,000 times: a median 26,800 infected in 1970–91 (21,300–38,800). They declared only moderate confidence, and for hepatitis B declined to give numbers at all.</li>
+      <li><strong>Many scales.</strong> The IPCC, medicine's GRADE and SAGE all rate confidence; SAGE thought closing schools would cut R by 0.2–0.5, with low confidence. Whether a rating adds to a probability or replaces it is rarely clear.</li>
+    </ul>
+    <div class="compare">
+      <div class="good"><h5>Direct uncertainty</h5><ul><li>About the claim itself</li><li>A probability, interval or distribution</li><li>From statistical models or expert judgement</li></ul></div>
+      <div class="bad"><h5>Indirect uncertainty</h5><ul><li>About the basis for the claim</li><li>Quality of data, expert agreement, gaps in information</li><li>A confidence or quality rating</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Blame</span></div>
+  <div class="body">
+    <div>
+      <h3>Effects of causes, causes of effects</h3>
+      <p class="idea">"Does A raise the risk of B?" and "Did A cause this B?" are different questions. Science, courts and climate studies answer the second with very different tools.</p>
+    </div>
+    <ul class="points">
+      <li><strong>HRT.</strong> Observational studies said HRT cut heart disease by about 35%; a 2002 trial found an 18% increase. They had studied different women, and timing was key.</li>
+      <li><strong>Hazard is not risk.</strong> IARC put processed meat in Group 1 with smoking because both <em>can</em> cause cancer, not because they are equally risky. After aspartame was rated "possibly carcinogenic" in 2023, WHO advice still allowed fourteen cans of diet drink a day.</li>
+      <li><strong>Attribution.</strong> Norwegian women who smoked had 14 times the lung-cancer risk of non-smokers, so about 93% of their cases are attributable to smoking. In civil courts, a relative risk above 2 implies a probability of causation above 50%. That logic won John Cookson compensation for bladder cancer after working with dyes.</li>
+      <li><strong>Forensic odds.</strong> DNA evidence should be reported as a likelihood ratio. The prosecutor's fallacy flips the probability of a match given innocence into the probability of innocence given a match. In Sally Clark's case the "1 in 73 million" figure ignored that two sudden infant deaths can share a cause, and that double murder is also extremely rare. Kathryn Folbigg spent twenty years in prison before being freed in 2023.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>A small shift in the average, a huge shift in the extremes</h4>
+      <div class="legend"><span><i class="ln" style="--c:var(--ink-3)"></i>natural climate only</span><span><i class="ln" style="--c:var(--yolk)"></i>with human influence</span><span><i class="ln" style="--c:var(--teal)"></i>September 2023: 15.2°C</span></div>
+      <div class="scroll-x">
+        <svg id="d-tail" viewBox="0 0 600 260" role="img" aria-label="Two bell curves of UK September mean temperature, one for a natural climate centred near 12 degrees and one with human influence centred near 14 degrees. A line at 15.2 degrees marks September 2023. The shaded tail beyond it is tiny under the natural curve, 0.023 percent, and much larger under the human-influenced curve, 2.7 percent."></svg>
+      </div>
+      <p class="cap">The Met Office estimated a 2.7% chance of a September this warm with human influence, against 0.023% without: a ratio near 100, which it declined to quote. Curve shapes are illustrative; only the tail probabilities are the book's.</p>
+      <p class="src">Source: ch. 10, figure 10.2 (Met Office rapid attribution)</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART IV ============ -->
+<div class="part" id="future">
+  <span class="label partno">Part IV · Chapters 11–16</span>
+  <h2>The future</h2>
+  <p class="lede">Prediction gets harder with distance and with human behaviour in the loop. At the far end: leave room for "something else", build resilience, communicate without spin.</p>
+</div>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Prediction</span></div>
+  <div class="body">
+    <div>
+      <h3>The further out, the less the model knows</h3>
+      <p class="idea">Simple models predict well in stable settings. Over longer horizons, assumptions about structure and human behaviour dominate.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Football.</strong> Simple Poisson goal models for the last 2008–9 Premier League weekend got nine of ten results right. A Brier penalty of 0.34 against 0.59 for a no-skill forecast is a 43% skill score. The next year he did badly.</li>
+      <li><strong>Weather.</strong> In 1987 Michael Fish said no hurricane was coming. Re-run as a 50-member ensemble, over 30% of members showed hurricane-force winds.</li>
+      <li><strong>Fan charts.</strong> The Bank of England shows 30%, 60% and 90% bands and leaves 10% outside them. The 25% annualised fall in early 2020 was far off the scale of its May 2018 chart, but it belonged to the 10% the Bank had left open.</li>
+      <li><strong>Lifetimes.</strong> Halley's 1693 life table priced annuities by age. Annual death risk roughly doubles every eight years; girls born in 2020 are projected to live to 90.3 on average.</li>
+      <li><strong>Climate.</strong> The IPCC downgrades its multi-model 90% ranges to 66%. Modeller David Stainforth prefers robust, flexible responses to ever-bigger models.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Risk</span></div>
+  <div class="body">
+    <div>
+      <h3>It's the tails that sink ships</h3>
+      <p class="idea">Disasters live in the extremes of a distribution. Models built for typical cases badly underestimate them.</p>
+    </div>
+    <ul class="points">
+      <li><strong>MV Derbyshire.</strong> The 90,000-ton carrier vanished in a typhoon in 1980 and 44 people died. Fat-tailed extreme value models showed a hatch-crushing wave was very likely once it was damaged.</li>
+      <li><strong>Thin tails, false comfort.</strong> In 2007 a Goldman Sachs executive reported 25-standard-deviation moves several days running. Under a normal curve each is about a 1 in 10<sup>135</sup> event, so the model was wrong. Wealth and terrorist casualties follow fat-tailed power laws.</li>
+      <li><strong>F-N curves.</strong> Rasmussen's 1975 nuclear study plotted accident frequency against deaths, putting a 1,000-death accident across 100 plants at about 1 in 1,000,000 a year. Three Mile Island followed in 1979.</li>
+      <li><strong>Risk registers.</strong> The UK plans for "reasonable worst cases". Swine flu's 65,000 planning figure was reported as a forecast; 460 died. The 2017 register gave emerging diseases up to 100 deaths; Covid-19 was on over 230,000 UK death certificates by 2023's end.</li>
+      <li><strong>Fair criticisms.</strong> Risk analysis can be spuriously precise (a cable car risk of 1 in 15,397,000 years) and narrow. He still thinks it vital, limits acknowledged.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Deep uncertainty</span></div>
+  <div class="body">
+    <div>
+      <h3>Leave a slot for "something else"</h3>
+      <p class="idea">When we can't list what might happen, the answer is humility, diverse imagination and resilience, plus some probability set aside for the unlisted.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Two kinds of surprise.</strong> A <em>perfect storm</em> is a familiar event from far out in the tail, like Fukushima's 15-metre tsunami against a 5.5-metre wall. A <em>black swan</em> is something nobody had considered.</li>
+      <li><strong>Meta-ignorance.</strong> Worst is not knowing that you don't know; next is assuming your model captured everything. Our concepts themselves are a map, not the territory.</li>
+      <li><strong>Against Knight and Keynes.</strong> He rejects the split between measurable "risk" and unmeasurable "uncertainty": well-defined outcomes can still get judged probabilities.</li>
+      <li><strong>Scenarios.</strong> Use red teams, reasoning backwards from a feared end state, even commissioned science fiction, and watch for people's reactions to new situations.</li>
+    </ul>
+    <div class="fig">
+      <h4>Four ways to respond, depending on what you can specify</h4>
+      <div class="quad">
+        <div class="hd corner"></div>
+        <div class="hd colhd">Outcomes can be listed</div>
+        <div class="hd colhd">Outcomes can't be listed</div>
+        <div class="hd rh">Probabilities OK</div>
+        <div><b>A · Model it</b><span>Standard risk analysis with acknowledged limits, as in the National Risk Register.</span></div>
+        <div><b>D · Add "something else"</b><span>List what you can and give the rest a probability, like the fan chart's 10% or Cromwell's small doubt.</span></div>
+        <div class="hd rh">No probabilities</div>
+        <div><b>B · Soften the numbers</b><span>Ranges, uncertainty tables with arrows, rankings, or just a list. He thinks experts can usually still judge.</span></div>
+        <div class="deep"><b>C · Deep uncertainty</b><span>Scenarios, diverse viewpoints and red teams, aiming for strategies that hold up whatever happens.</span></div>
+      </div>
+      <p class="cap">Redrawn as a grid from figure 13.1. The less you can specify, the less formal the method has to become.</p>
+      <p class="src">Based on a proposal by Andy Stirling, ch. 13</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">Communication</span></div>
+  <div class="body">
+    <div>
+      <h3>Aim to be trustworthy, not trusted</h3>
+      <p class="idea">Honest communication shows the uncertainty. The evidence suggests this doesn't cost trust, and balanced messages win over sceptics.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Over- and understating.</strong> Caveats on Iraq's weapons vanished from public reports before the 2003 war; tobacco's "merchants of doubt" manufactured uncertainty instead.</li>
+      <li><strong>The Krebs list.</strong> In a crisis, say what we know, what we don't know, what we're doing to find out, what you can do meanwhile, and that the advice will change. Politicians find the second and fifth points hardest.</li>
+      <li><strong>Absolute and relative risk.</strong> Heavy TV viewing came with 2.5 times the risk of a fatal embolism: one extra death per 19,000 years of five-hour nights. Yet at L'Aquila in 2009 a low absolute earthquake risk was at least a hundred times normal, and a quake killed 300.</li>
+      <li><strong>Formats.</strong> Keep denominators fixed, give both framings, avoid "1 in 100-year" return periods, and prefer gradient or fan-style bands to hard-edged error bars.</li>
+      <li><strong>It works.</strong> Inform rather than persuade, be balanced, admit uncertainty and weak evidence, pre-empt misunderstandings. In experiments with over 1,000 people, sceptics found balanced messages on vaccines and nuclear power clearly more trustworthy.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Micromorts: a one-in-a-million chance of death</h4>
+      <div class="bars">
+        <div class="bar c-red"><div class="row"><span>Motorcycle, 7,500 miles</span><b>1,000</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Car, 7,500 miles</span><b>25</b></div><div class="track"><div class="fill" style="width:59.9%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>One skydive</span><b>8</b></div><div class="track"><div class="fill" style="width:47.6%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Train, 7,500 miles</span><b>1</b></div><div class="track"><div class="fill" style="width:25%"></div></div></div>
+        <div class="bar c-ink"><div class="row"><span>Any ordinary day (non-natural causes, England and Wales)</span><b>0.8</b></div><div class="track"><div class="fill" style="width:22.6%"></div></div></div>
+        <div class="axis"><span>0.1</span><span>log scale</span><span>1,000</span></div>
+      </div>
+      <p class="cap">A fixed unit makes very different activities comparable, though people feel voluntary and imposed risks very differently. The table also explains, he admits, why he does not ride motorbikes.</p>
+      <p class="src">Source: table 14.1, ch. 14 (average values)</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Decisions</span></div>
+  <div class="body">
+    <div>
+      <h3>Quantify what you can, then build in slack</h3>
+      <p class="idea">Formal decision theory only works in "small worlds". In the large world, use numbers as far as you reasonably can, then aim for robustness.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Humans aren't Homo economicus.</strong> Identical game-show outcomes get opposite choices when framed as gains or losses; we buy both lottery tickets and insurance; and we prefer a bag with known odds (ambiguity aversion).</li>
+      <li><strong>Four strategies.</strong> Full analysis, semi-quantified analysis, rules of thumb, or stories. He favours the second and distrusts emotionally driven narratives.</li>
+      <li><strong>Tolerable risk.</strong> The Health and Safety Executive treats a 1 in 1,000,000 annual risk of death at work as broadly acceptable. It treats 1 in 1,000 as intolerable for workers and 1 in 10,000 for the public. In between, risks must be reduced as far as is reasonably practicable.</li>
+      <li><strong>Burnt toast.</strong> Heavy eaters of burnt food take in about 1/160 of an acrylamide dose shown low-risk in mice, but two safety factors of 100 set the limit at a thumbnail of toast a day. Ridicule sank the 2017 campaign.</li>
+      <li><strong>Precaution has costs.</strong> No Fukushima workers died in the accident, but the evacuation was followed by nearly 1,800 "disaster-related" deaths. For deep uncertainty he lists redundancy, robustness, resilience, reversibility, adaptivity, openness and balance.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Two thresholds, not one: the tolerability of risk</h4>
+      <div class="scroll-x">
+        <svg id="d-tol" viewBox="0 0 600 280" role="img" aria-label="Ladder of annual risk of death at work on a log scale. Above 1 in 1,000 is intolerable for workers; above 1 in 10,000 is intolerable for the public. Below 1 in 1,000,000 is broadly acceptable. Between, risks are tolerable only if reduced as low as reasonably practicable.">
+          <text x="20" y="22" class="hd">Annual risk of death</text>
+          <rect x="190" y="34" width="250" height="56" rx="4" class="f-redt"/>
+          <rect x="190" y="90" width="250" height="132" rx="0" class="f-paper2"/>
+          <rect x="190" y="222" width="250" height="40" rx="4" class="f-cyt"/>
+          <g id="d-tol-ticks"></g>
+          <text x="315" y="62" text-anchor="middle" class="hd">Intolerable</text>
+          <text x="315" y="80" text-anchor="middle" class="t-3" style="font-size:11px">for workers</text>
+          <text x="315" y="146" text-anchor="middle" class="hd">Tolerable if ALARP</text>
+          <text x="315" y="164" text-anchor="middle" class="t-3" style="font-size:11px">as low as reasonably practicable</text>
+          <text x="315" y="246" text-anchor="middle" class="hd">Broadly acceptable</text>
+          <path d="M190 134 H470" class="s-red" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="476" y="131" class="t-red" style="font-size:12px">public limit</text>
+          <text x="476" y="146" class="t-red" style="font-size:12px">1 in 10,000</text>
+        </svg>
+      </div>
+      <p class="cap">A single "safe" limit implies everything above it is dangerous. Two thresholds leave a middle zone where risk is reduced as far as is proportionate.</p>
+      <p class="src">After figure 15.2 (UK Health and Safety Executive, R2P2, 2001)</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">The future</span></div>
+  <div class="body">
+    <div>
+      <h3>Own it, number it, stay humble</h3>
+      <p class="idea">The book ends with existential odds, overconfident AI, and a manifesto that pulls its lessons together.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Our own existence.</strong> Asking how probable our existence was makes little sense: nobody could have assessed it beforehand.</li>
+      <li><strong>Doom numbers.</strong> Published odds of catastrophe range from Martin Rees's 50–50 for civilisation this century to 1 in 2 trillion for an asteroid. He reads them mostly as expressions of concern.</li>
+      <li><strong>AI.</strong> He worked on uncertainty in AI in the 1980s. Today's large language models deliver everything with the same confidence, true or false. He used them while writing, and checked everything they produced. He wants AI whose stated uncertainty is calibrated.</li>
+      <li><strong>The manifesto.</strong> Own your uncertainty. Use numbers that are calibrated and discriminating, and remember they are judgements. Update like a Bayesian but keep Cromwell's doubt. Treat model outputs as rough guides. Leave room for "something else". Take risks without being reckless.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Not a self-help book, it insists, but its habits travel well.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Owning it</h3>
+      <div class="tk"><b>Say "my probability"</b><span>Name the subject and the object. Someone with different information can rightly disagree.</span></div>
+      <div class="tk"><b>Swap words for numbers</b><span>"Likely" can mean 25% or 90%. If you must use words, define them and remind people of the definitions.</span></div>
+      <div class="tk"><b>Score yourself</b><span>Your 70% calls should come true about 70% of the time.</span></div>
+      <div class="tk"><b>Be a fox</b><span>Combine sources, change your mind, give probabilities rather than verdicts.</span></div>
+    </div>
+    <div class="col">
+      <h3>Weighing evidence</h3>
+      <div class="tk"><b>Count the opportunities</b><span>Before saying "that can't be chance", multiply the rare probability by the number of chances it had to happen.</span></div>
+      <div class="tk"><b>Draw the frequency tree</b><span>Start from a crowd of 10,000. Base rates decide whether an "accurate" alert is probably wrong.</span></div>
+      <div class="tk"><b>Never 0, never 1</b><span>Keep a small probability on "I may be mistaken" so evidence can still change your mind.</span></div>
+      <div class="tk"><b>Distrust narrow intervals</b><span>They assume the model is true. Ask for sensitivity checks, several models and a confidence rating.</span></div>
+      <div class="tk"><b>Separate hazard from risk</b><span>"Can cause" isn't "will, at real doses". Ask for absolute numbers.</span></div>
+    </div>
+    <div class="col">
+      <h3>Deciding & telling</h3>
+      <div class="tk"><b>Watch the tails</b><span>Thin-tailed models make disasters look impossible.</span></div>
+      <div class="tk"><b>Keep a "something else"</b><span>Whatever your list of outcomes, give some probability to none of the above.</span></div>
+      <div class="tk"><b>Use the Krebs five</b><span>What we know, what we don't, what we're doing about it, what you can do, and that the advice will change.</span></div>
+      <div class="tk"><b>Inform, don't persuade</b><span>Balanced messages earn trust from the sceptics you most need to reach.</span></div>
+      <div class="tk"><b>Robust beats optimal</b><span>Build in slack, prefer moves you can reverse, and count the harms of excessive precaution too.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of David Spiegelhalter, <em>The Art of Uncertainty: How to Navigate Chance, Ignorance, Risk and Luck</em> (Pelican Books, 2024). Figures are as reported in the book. Diagrams were drawn for this page. The Cromwell's-rule curves are my recomputation of the book's example, and the coin strips and the climate curve shapes are illustrative. The grouping into four parts is mine. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent, txt) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (txt != null) n.textContent = txt;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function pathFrom(pts) {
+    return pts.map(function (p, i) { return (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); }).join(" ");
+  }
+  /* generic axes: x0,x1 in px, y0 (bottom), y1 (top) */
+  function axes(svg, o) {
+    el("path", { d: "M" + o.x0 + " " + o.y1 + " V" + o.y0 + " H" + o.x1, "class": "s-3", "stroke-width": 1 }, svg);
+    (o.yt || []).forEach(function (t) {
+      var y = o.sy(t[0]);
+      el("path", { d: "M" + o.x0 + " " + y + " H" + o.x1, "class": "s-rule", "stroke-width": 1 }, svg);
+      el("text", { x: o.x0 - 8, y: y + 4, "text-anchor": "end", "class": "t-3", style: "font-size:11px" }, svg, t[1]);
+    });
+    (o.xt || []).forEach(function (t) {
+      var x = o.sx(t[0]);
+      el("text", { x: x, y: o.y0 + 18, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, svg, t[1]);
+    });
+    if (o.xl) el("text", { x: (o.x0 + o.x1) / 2, y: o.y0 + 36, "text-anchor": "middle", style: "font-size:12px" }, svg, o.xl);
+  }
+
+  /* --- Ch2: expected score vs claimed confidence, honest belief 0.7 --- */
+  var sc = document.getElementById("d-score");
+  if (sc) {
+    var X0 = 60, X1 = 580, Y0 = 220, Y1 = 20;
+    var sx = function (c) { return X0 + (c - 0.5) / 0.5 * (X1 - X0); };
+    var sy = function (v) { return Y0 - (v + 6) / 18 * (Y0 - Y1); };
+    axes(sc, { x0: X0, x1: X1, y0: Y0, y1: Y1, sx: sx, sy: sy,
+      yt: [[-5, "−5"], [0, "0"], [4, "+4"], [10, "+10"]],
+      xt: [[.5, "5"], [.6, "6"], [.7, "7"], [.8, "8"], [.9, "9"], [1, "10"]],
+      xl: "confidence claimed (out of 10)" });
+    var q = [], lin = [];
+    for (var c = 0.5; c <= 1.0001; c += 0.01) {
+      q.push([sx(c), sy(0.7 * (25 - 100 * (1 - c) * (1 - c)) + 0.3 * (25 - 100 * c * c))]);
+      lin.push([sx(c), sy(20 * (c - 0.5))]);
+    }
+    el("path", { d: pathFrom(lin), "class": "s-red", "stroke-width": 2.5 }, sc);
+    el("path", { d: pathFrom(q), "class": "s-cy", "stroke-width": 2.5 }, sc);
+    el("path", { d: "M" + sx(.7) + " " + Y1 + " V" + Y0, "class": "s-3", "stroke-width": 1, "stroke-dasharray": "3 3" }, sc);
+    el("text", { x: sx(.7) + 6, y: Y0 - 8, "class": "t-3", style: "font-size:11px" }, sc, "honest belief: 70%");
+    el("circle", { cx: sx(.7), cy: sy(4), r: 5, "class": "f-cy" }, sc);
+    el("text", { x: sx(.7) - 8, y: sy(4) - 10, "text-anchor": "end", "class": "t-cy" }, sc, "honest: +4");
+    el("circle", { cx: sx(1), cy: sy(-5), r: 5, "class": "f-cy" }, sc);
+    el("text", { x: sx(1) - 10, y: sy(-5) + 4, "text-anchor": "end", "class": "t-cy" }, sc, "bluff 10/10: −5");
+    el("circle", { cx: sx(1), cy: sy(10), r: 5, "class": "f-red" }, sc);
+    el("text", { x: sx(1) - 10, y: sy(10) + 22, "text-anchor": "end", "class": "t-red" }, sc, "linear rule pays the bluff: +10");
+  }
+
+  /* --- Ch4: 1 - e^-m --- */
+  var po = document.getElementById("d-pois");
+  if (po) {
+    var PX0 = 60, PX1 = 580, PY0 = 210, PY1 = 20;
+    var psx = function (m) { return PX0 + m / 4 * (PX1 - PX0); };
+    var psy = function (p) { return PY0 - p * (PY0 - PY1); };
+    axes(po, { x0: PX0, x1: PX1, y0: PY0, y1: PY1, sx: psx, sy: psy,
+      yt: [[0, "0%"], [.5, "50%"], [1, "100%"]],
+      xt: [[0, "0"], [1, "1"], [2, "2"], [3, "3"], [4, "4"]],
+      xl: "expected number of events, m" });
+    var pts = [];
+    for (var m = 0; m <= 4.0001; m += 0.04) pts.push([psx(m), psy(1 - Math.exp(-m))]);
+    el("path", { d: pathFrom(pts), "class": "s-cy", "stroke-width": 2.5 }, po);
+    [[0.693, "23 people: 50%", -1], [1, "lost keys: 63%", 1], [1.9, "20 people, phone digits: ~85%", 1], [3, "m = 3: 95%", 1]].forEach(function (d, i) {
+      var x = psx(d[0]), y = psy(1 - Math.exp(-d[0]));
+      el("circle", { cx: x, cy: y, r: 5, "class": "f-red" }, po);
+      var ty = i === 0 ? y + 22 : y + 20;
+      el("text", { x: x + (i === 0 ? 8 : 6), y: ty, "class": i === 0 ? "t-ink" : "", style: "font-size:12px" }, po, d[1]);
+    });
+  }
+
+  /* --- Ch6: coin strips --- */
+  var fl = document.getElementById("d-flips");
+  if (fl) {
+    var rows = [
+      ["Invented by a student (illustrative)", "HTHHTHTTHTHHTHTTHTHT", "longest run 2 · 15 switches"],
+      ["Real coin (illustrative)", "HHTHHHHHTTHTTTHTHHTT", "longest run 5 · 9 switches"]
+    ];
+    rows.forEach(function (r) {
+      var s = document.createElement("div"); s.className = "strip";
+      var lab = document.createElement("div"); lab.className = "label"; lab.textContent = r[0] + " — " + r[2];
+      var cells = document.createElement("div"); cells.className = "cells";
+      var seq = r[1], best = [0, 0], cur = 0;
+      for (var i = 0; i < seq.length; i++) { cur = (i && seq[i] === seq[i - 1]) ? cur + 1 : 1; if (cur > best[1]) best = [i - cur + 1, cur]; }
+      for (var j = 0; j < seq.length; j++) {
+        var sp = document.createElement("span");
+        sp.className = seq[j] + (best[1] >= 4 && j >= best[0] && j < best[0] + best[1] ? " run" : "");
+        sp.textContent = seq[j];
+        cells.appendChild(sp);
+      }
+      s.appendChild(lab); s.appendChild(cells); fl.appendChild(s);
+    });
+  }
+
+  /* --- Ch7: 17 alert dots --- */
+  var ld = document.getElementById("d-lfr-dots");
+  if (ld) {
+    for (var k = 0; k < 17; k++) {
+      el("circle", { cx: 120 + k * 26, cy: 240, r: 9, "class": k < 7 ? "f-cy" : "f-red" }, ld);
+    }
+    el("text", { x: 120 + 3 * 26, y: 266, "text-anchor": "middle", "class": "t-cy", style: "font-size:11px" }, ld, "7 real");
+    el("text", { x: 120 + 11.5 * 26, y: 266, "text-anchor": "middle", "class": "t-red", style: "font-size:11px" }, ld, "10 false");
+  }
+
+  /* --- Ch7: Cromwell's rule --- */
+  var cr = document.getElementById("d-crom");
+  if (cr) {
+    var CX0 = 60, CX1 = 580, CY0 = 220, CY1 = 20, N = 20;
+    var csx = function (n) { return CX0 + n / N * (CX1 - CX0); };
+    var csy = function (p) { return CY0 - p * (CY0 - CY1); };
+    axes(cr, { x0: CX0, x1: CX1, y0: CY0, y1: CY1, sx: csx, sy: csy,
+      yt: [[0, "0%"], [.5, "50%"], [1, "100%"]],
+      xt: [[0, "0"], [5, "5"], [10, "10"], [15, "15"], [20, "20"]],
+      xl: "dotted balls drawn in a row" });
+    var naive = [], b2 = [], tr = [];
+    for (var n = 0; n <= N; n++) {
+      var w1 = Math.pow(1 / 3, n), w2 = Math.pow(2 / 3, n);
+      naive.push([csx(n), csy(w2 / (w1 + w2))]);
+      var a = .495 * w1, b = .495 * w2, t3 = .005 * 1, t0 = n === 0 ? .005 : 0;
+      var tot = a + b + t3 + t0;
+      b2.push([csx(n), csy(b / tot)]);
+      tr.push([csx(n), csy(t3 / tot)]);
+    }
+    el("path", { d: pathFrom(naive), "class": "s-3", "stroke-width": 2, "stroke-dasharray": "5 4" }, cr);
+    el("path", { d: pathFrom(b2), "class": "s-cy", "stroke-width": 2.5 }, cr);
+    el("path", { d: pathFrom(tr), "class": "s-red", "stroke-width": 2.5 }, cr);
+    el("text", { x: csx(12) + 6, y: csy(.57) + 16, "class": "t-red", style: "font-size:12px" }, cr, "trick suspected");
+  }
+
+  /* --- Ch10: climate tails (illustrative shapes) --- */
+  var tl = document.getElementById("d-tail");
+  if (tl) {
+    var TX0 = 30, TX1 = 580, TY0 = 200, lo = 9.5, hi = 17;
+    var tsx = function (t) { return TX0 + (t - lo) / (hi - lo) * (TX1 - TX0); };
+    var dens = function (t, mu, sd) { var z = (t - mu) / sd; return Math.exp(-z * z / 2); };
+    var curves = [[12.2, .8, "s-3", "f-3"], [13.9, .8, "s-red", "f-red"]];
+    var obs = 15.2;
+    curves.forEach(function (cv) {
+      var line = [], tail = [[tsx(obs), TY0]];
+      for (var t = lo; t <= hi + 1e-9; t += .05) {
+        var y = TY0 - 160 * dens(t, cv[0], cv[1]);
+        line.push([tsx(t), y]);
+        if (t >= obs) tail.push([tsx(t), y]);
+      }
+      tail.push([tsx(hi), TY0]);
+      el("path", { d: pathFrom(tail) + " Z", "class": cv[3], opacity: .35 }, tl);
+      el("path", { d: pathFrom(line), "class": cv[2], "stroke-width": 2.5 }, tl);
+    });
+    el("path", { d: "M" + TX0 + " " + TY0 + " H" + TX1, "class": "s-3", "stroke-width": 1 }, tl);
+    [10, 12, 14, 16].forEach(function (t) { el("text", { x: tsx(t), y: TY0 + 18, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, tl, t + "°C"); });
+    el("path", { d: "M" + tsx(obs) + " 24 V" + TY0, "class": "s-cy", "stroke-width": 2 }, tl);
+    el("text", { x: tsx(obs) + 6, y: 36, "class": "t-cy", style: "font-size:12px" }, tl, "2023");
+    el("text", { x: tsx(12.2), y: 30, "text-anchor": "middle", "class": "t-3", style: "font-size:12px" }, tl, "natural");
+    el("text", { x: tsx(13.9), y: 30, "text-anchor": "middle", "class": "t-red", style: "font-size:12px" }, tl, "human-influenced");
+    el("text", { x: tsx(obs) + 30, y: 150, "class": "t-red", style: "font-size:12px" }, tl, "with us: 2.7%");
+    el("text", { x: tsx(obs) + 30, y: 176, "class": "t-3", style: "font-size:12px" }, tl, "natural: 0.023%");
+    el("text", { x: (TX0 + TX1) / 2, y: TY0 + 40, "text-anchor": "middle", style: "font-size:12px" }, tl, "UK mean September temperature (shapes illustrative)");
+  }
+
+  /* --- Ch15: tolerability ticks --- */
+  var tt = document.getElementById("d-tol-ticks");
+  if (tt) {
+    [[90, "1 in 1,000"], [134, "1 in 10,000"], [178, "1 in 100,000"], [222, "1 in 1,000,000"]].forEach(function (d) {
+      el("path", { d: "M180 " + d[0] + " H190", "class": "s-2", "stroke-width": 1.2 }, tt);
+      el("text", { x: 174, y: d[0] + 4, "text-anchor": "end", style: "font-size:12px" }, tt, d[1]);
+    });
+    el("path", { d: "M190 90 H440 M190 222 H440", "class": "s-ink", "stroke-width": 1.5 }, tt);
+    el("text", { x: 20, y: 54, "class": "t-3", style: "font-size:11px" }, tt, "higher risk ↑");
+  }
+
+  /* --- Hero band: possible futures fanning out from now --- */
+  var canvas = document.getElementById("futures");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, seed = 7;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  function gauss() { return (rnd() + rnd() + rnd() + rnd() - 2) * 1.2; }
+  var P = 46, STEPS = 90, paths = [];
+  function build() {
+    paths = [];
+    for (var i = 0; i < P; i++) {
+      var y = 0, pts = [0], drift = (rnd() - .5) * .02;
+      for (var s = 1; s <= STEPS; s++) { y += gauss() * .028 + drift; pts.push(y); }
+      paths.push(pts);
+    }
+  }
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  var chosen = 5, progress = 1;
+  function draw() {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var mid = hgt / 2, amp = hgt * .45;
+    var teal = css("--teal-2"), yolk = css("--yolk");
+    ctx.lineCap = "round";
+    for (var i = 0; i < P; i++) {
+      var pts = paths[i], isC = i === chosen;
+      var last = isC ? Math.max(1, Math.round(STEPS * progress)) : STEPS;
+      ctx.beginPath();
+      for (var s = 0; s <= last; s++) {
+        var x = s / STEPS * (w - 8) + 4;
+        var y = mid + Math.max(-1, Math.min(1, pts[s])) * amp;
+        if (s === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = isC ? yolk : teal;
+      ctx.globalAlpha = isC ? 1 : .32;
+      ctx.lineWidth = isC ? 2.6 : 1.1;
+      ctx.stroke();
+      if (isC) {
+        var lx = last / STEPS * (w - 8) + 4, lyv = mid + Math.max(-1, Math.min(1, pts[last])) * amp;
+        ctx.beginPath(); ctx.arc(lx, lyv, 4.5, 0, Math.PI * 2); ctx.fillStyle = yolk; ctx.fill();
+      }
+    }
+    ctx.globalAlpha = 1;
+    ctx.beginPath(); ctx.arc(4, mid, 5, 0, Math.PI * 2); ctx.fillStyle = css("--ink"); ctx.fill();
+  }
+  var running = false, visible = true, raf = 0, t0 = 0;
+  function loop(t) {
+    if (!t0) t0 = t;
+    var cyc = ((t - t0) / 6000) % 1;
+    var np = Math.min(1, cyc / .8);
+    if (np < progress) { chosen = Math.floor(rnd() * P); }
+    progress = np;
+    draw();
+    if (running) raf = requestAnimationFrame(loop);
+  }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  build(); size(); draw();
+  window.addEventListener("resize", function () { size(); draw(); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  if (window.matchMedia) { var mq = window.matchMedia("(prefers-color-scheme: dark)"); if (mq.addEventListener) mq.addEventListener("change", draw); }
+  start();
+})();
+</script>
+
+</body>
+</html>

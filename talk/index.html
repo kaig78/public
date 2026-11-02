@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Talk by Alison Wood Brooks – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: navy, cream letters, amber fairy lights,
+   silver wire. --cyan holds the navy accent and --red the amber one, so that class
+   names stay shared with the other pages. Amber = warmth and action, navy = structure. */
+:root {
+  --paper: #fdf6ec;
+  --paper-2: #f3e9da;
+  --card: #fffcf6;
+  --ink: #0f2f4d;
+  --ink-2: #3e5469;
+  --ink-3: #5f7184;
+  --rule: #e3d8c6;
+
+  --cyan: #14406a;
+  --cyan-2: #2f6496;
+  --red: #a95b00;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0c2740;
+    --paper-2: #113250;
+    --card: #15395a;
+    --ink: #fdf3e6;
+    --ink-2: #cfd8e0;
+    --ink-3: #a3b3c1;
+    --rule: #28506f;
+    --cyan: #a9cbea;
+    --cyan-2: #7fb0dc;
+    --red: #ffb84d;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0c2740;
+  --paper-2: #113250;
+  --card: #15395a;
+  --ink: #fdf3e6;
+  --ink-2: #cfd8e0;
+  --ink-3: #a3b3c1;
+  --rule: #28506f;
+  --cyan: #a9cbea;
+  --cyan-2: #7fb0dc;
+  --red: #ffb84d;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-cyan { --c: var(--cyan); }
+.c-red { --c: var(--red); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: clamp(22px, 3vw, 34px); letter-spacing: .08em; line-height: 1; text-transform: uppercase; color: var(--red); }
+.hero h1 {
+  font-size: clamp(54px, 11vw, 136px);
+  font-weight: 800;
+  font-stretch: 72%;
+  line-height: .86;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 10px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1095;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 35, 60, .35), 0 8px 18px -10px rgba(10, 35, 60, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--red);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  font-stretch: 72%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .01em;
+  color: var(--red);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--cyan);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--red);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-cy { fill: var(--cyan); }
+.fig svg text.t-red { fill: var(--red); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-cy { stroke: var(--cyan); fill: none; }
+.s-cy2 { stroke: var(--cyan-2); fill: none; }
+.s-red { stroke: var(--red); fill: none; }
+.f-cy { fill: var(--cyan); }
+.f-cy2 { fill: var(--cyan-2); }
+.f-red { fill: var(--red); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-cyt { fill: color-mix(in srgb, var(--cyan) 14%, var(--card)); }
+.f-redt { fill: color-mix(in srgb, var(--red) 14%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--red); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; letter-spacing: .02em; color: var(--red); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--cyan); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three kinds of learning */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--cyan); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--cyan); }
+.compare .bad h5 { color: var(--red); }
+
+/* equation strip */
+.eq { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: var(--paper-2); border-radius: 6px; padding: 14px 18px; margin: 0; white-space: pre-wrap; color: var(--ink); }
+.eq .k { color: var(--cyan); }
+.eq .r { color: var(--red); }
+.eq .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 150px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; color: var(--red); border-top: 2px solid var(--red); padding-top: 12px; letter-spacing: .02em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+
+/* ---------- This page ---------- */
+.hero h1 { color: var(--cyan); letter-spacing: .04em; font-size: clamp(84px, 15vw, 190px); margin-top: 0; }
+.hero h1 i { font-style: normal; display: inline-block; }
+.hero h1 i.a { transform: rotate(4deg) translateY(.05em); }
+.hero h1 i.l { transform: rotate(3deg) translateY(.1em); }
+.hero h1 i.k { transform: translateY(.14em); }
+.hero .sub { margin-top: 34px; }
+.band canvas { background: #123c62; border-radius: 6px; }
+.band .ends { margin-top: 8px; }
+.chapter .chno { color: var(--red); }
+.chapter .points li::before { background: var(--red); }
+.map li span:first-child { color: var(--red); font-weight: 500; }
+.fit svg { width: 100%; max-width: 560px; margin-inline: auto; }
+.fit { min-width: 0; }
+.fig .scroll-x { max-width: 100%; }
+.stat > p strong { color: var(--c, var(--ink)); font-family: var(--display); font-size: 18px; }
+.kinds.six { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kinds.six .avoid { grid-column: span 3; }
+.kinds .avoid .label { color: var(--red); }
+.figrow > .fig, .figrow > .story { min-width: 0; }
+@media (max-width: 560px) {
+  .hero h1 { font-size: 104px; }
+  .kinds.six { grid-template-columns: minmax(0, 1fr); }
+  .kinds.six .avoid { grid-column: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Alison Wood Brooks · Crown, 2025</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#game">The game</a>
+    <a href="#maxims">The maxims</a>
+    <a href="#tests">The tests</a>
+    <a href="#epilogue">Epilogue</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1 aria-label="Talk"><i>T</i><i class="a">A</i><i class="l">L</i><i class="k">K</i></h1>
+    <p class="sub">The science of conversation and the art of being ourselves</p>
+    <p class="dek">Alison Wood Brooks treats everyday talk as a skill with a research base. You can't script it, but you can prepare for it, get better at it and repair it when it goes wrong.</p>
+    <div class="byline label">
+      <span>8 chapters and a half</span><span>4 maxims</span><span>~80,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Talk by Alison Wood Brooks: tall cream letters spelling TALK tumble down a navy background, threaded by two speech-bubble outlines made of silver wire and glowing amber fairy lights">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="lights"></canvas>
+  <div class="ends label"><span>Hello</span><span>A lifetime of conversations</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Introduction</span>
+    <h2>We do it all the time, and we're amateurs</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Brooks's toddler seemed to say "love you" for the first time and kissed her nose. Brooks welled up, walked down the hall, then realised the word was "lick". The child had licked her. Most misreadings are less funny. Years earlier Brooks told a close friend over soup dumplings that she had doubts about the boyfriend. The talk seemed to go well. Two days later a photo of an engagement ring arrived.</p>
+      <p>Brooks's claim is that conversation is one of the hardest things people do. Two things make it hard. The <strong>context</strong> keeps shifting: who is there, what is on the table, whether someone just dimmed the lights. And our <strong>purposes</strong> are many, often hidden, and often in conflict with each other and with our partner's. Every turn is a run of tiny choices that two or more minds have to coordinate without discussing them.</p>
+      <p>We also get almost no feedback. Nobody tells you which joke broke the ice or which topic change stung. Brooks had an unusual advantage: an identical twin, Sarah, whom she could watch make nearly the same choices from close range, and who told her bluntly when she got them wrong.</p>
+      <p>She went on to run a lab at Harvard Business School that records and transcribes real conversations at scale, including speed dates, parole hearings, sales calls and doctor visits. The book grew out of her course, TALK: How to Talk Gooder in Business and Life, designed in 2019.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Why it matters</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-red"><span class="big num">&lt;10%</span><p>Share of negotiators' turns that actually held a question. They estimated more than 50%.</p></div>
+        <div class="stat c-cyan"><span class="big num">44%</span><p>How often listeners really caught a speaker's meaning in Keysar's tests. They thought it was 85%.</p></div>
+        <div class="stat c-red"><span class="big num">18%</span><p>People who think ahead about what to talk about. 27% spend at least five minutes on what to wear.</p></div>
+        <div class="stat c-cyan"><span class="big num">5×</span><p>Jump in strangers lending a phone after a needless apology for the rain: 9% to 47%.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <h3>The game</h3>
+      <p class="q">What conversation is</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>The Coordination Game</b>Choices made without asking</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <h3>The maxims</h3>
+      <p class="q">Four reminders for playing it well</p>
+      <ol>
+        <li><span>T</span><a href="#ch2"><b>Topics</b>The pieces on the board</a></li>
+        <li><span>A</span><a href="#ch3"><b>Asking</b>The hands that move them</a></li>
+        <li><span>L</span><a href="#ch4"><b>Levity</b>What keeps people in the game</a></li>
+        <li><span>K</span><a href="#ch5"><b>Kindness</b>Helping others play their best</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <h3>The tests</h3>
+      <p class="q">Where the maxims get stretched</p>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Many Minds</b>Groups and status</a></li>
+        <li><span>07</span><a href="#ch7"><b>Difficult Moments</b>Disagreement and identity</a></li>
+        <li><span>08</span><a href="#ch8"><b>Apologies</b>Repair over the long run</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE GAME ============ -->
+<div class="part" id="game">
+  <span class="label partno">Chapter 1</span>
+  <h2>The game</h2>
+  <p class="lede">Conversation used to be a high art with written rules. Now it's closer to jazz: you learn the patterns and improvise with whoever turns up.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Coordination</span></div>
+  <div class="body">
+    <div>
+      <h3>Every turn is a guess about another mind</h3>
+      <p class="idea">Think of talk as a coordination game: each player chooses without being able to ask, and the outcome depends on everyone's choices.</p>
+    </div>
+    <ul class="points">
+      <li><strong>From salons to strangers.</strong> In the eighteenth-century Age of Conversation, talk meant elevated exchange among the cultivated. Kant's dinners had rules: usually five to eight guests, a menu of topics running from news to serious matters to jesting, and no know-it-alls. As cities filled up, Adam Smith saw strangers having to work out the rules as they went.</li>
+      <li><strong>Schelling's focal points.</strong> Asked where to meet a stranger in New York without any contact, a surprising share of Thomas Schelling's subjects picked Grand Central's information booth at noon. Conversation is the same puzzle repeated relentlessly, a stream of what Brooks calls micro-decisions.</li>
+      <li><strong>Words do things.</strong> J. L. Austin showed that speech isn't only description. We request, promise and apologise with it. So you always have at least one purpose, and so does your partner. Finding them takes self-reading, mind-reading and room-reading.</li>
+      <li><strong>Grice's rules, and why we break them.</strong> Paul Grice argued that talk rests on cooperation and proposed four maxims: be truthful, concise, relevant and clear. Real talk breaks all of them, often for good reasons. Filler words such as <em>um</em> warn a partner that you're uncertain, and white lies can be kind.</li>
+      <li><strong>Words became data.</strong> Erving Goffman eavesdropped in casinos and asylums. Conversation analysts typed up tapes by hand. Automatic transcription and language processing now let researchers count words across thousands of people and link them to outcomes. One result: men and women are equally talkative, at about sixteen thousand words a day.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The conversational compass</h4>
+      <div class="fit">
+        <svg viewBox="0 0 520 430" role="img" aria-label="A compass with two axes. Vertical: high to low informational. Horizontal: low to high relational. Upper left is Advance, with learn, decide and persuade. Upper right is Connect, with brainstorm, seek advice and apologise. Lower left is Protect, with conceal, maintain privacy and fill time. Lower right is Savor, with reminisce, flatter and have fun. A dashed line joins persuade and have fun: the farther apart two goals sit, the more tension between them.">
+          <rect x="30" y="30" width="228" height="178" class="f-cyt"/>
+          <rect x="262" y="30" width="228" height="178" class="f-redt"/>
+          <rect x="30" y="212" width="228" height="178" class="f-paper2"/>
+          <rect x="262" y="212" width="228" height="178" class="f-redt" opacity=".55"/>
+          <path d="M260 26 V394 M26 210 H494" class="s-2" stroke-width="1.5"/>
+          <text x="260" y="18" text-anchor="middle" class="t-3">high informational</text>
+          <text x="260" y="412" text-anchor="middle" class="t-3">low informational</text>
+          <text x="30" y="428" class="t-3">← low relational</text>
+          <text x="490" y="428" text-anchor="end" class="t-3">high relational →</text>
+          <text x="46" y="62" class="big t-cy">Advance</text>
+          <text x="474" y="62" text-anchor="end" class="big t-red">Connect</text>
+          <text x="46" y="378" class="big t-ink">Protect</text>
+          <text x="474" y="378" text-anchor="end" class="big t-red">Savor</text>
+          <text x="46" y="94">learn</text><text x="46" y="118">decide</text><text x="46" y="142" class="t-ink">persuade</text>
+          <text x="474" y="94" text-anchor="end">brainstorm</text><text x="474" y="118" text-anchor="end">seek advice</text><text x="474" y="142" text-anchor="end">apologise</text>
+          <text x="46" y="286">conceal</text><text x="46" y="310">maintain privacy</text><text x="46" y="334">fill time</text>
+          <text x="474" y="286" text-anchor="end">reminisce</text><text x="474" y="310" text-anchor="end">flatter</text><text x="474" y="334" text-anchor="end" class="t-ink">have fun</text>
+          <path d="M116 150 L400 326" class="s-red" stroke-width="1.8" stroke-dasharray="5 5"/>
+          <circle cx="116" cy="150" r="4" class="f-red"/><circle cx="400" cy="326" r="4" class="f-red"/>
+        </svg>
+      </div>
+      <p class="cap">Every quadrant holds legitimate goals. The dashed line shows the point of the map: the farther apart two goals sit, the harder they are to pursue together. Try persuading a friend to babysit while also laughing as much as possible. Your partner has a compass too, and any turn can reset it. Brooks says thirty seconds spent placing your goals helps a lot.</p>
+      <p class="src">Redrawn from the compass in ch. 1, with a selection of its example purposes</p>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"the art of negotiating change with style"</blockquote>
+      <span class="label">Wynton Marsalis on jazz, which Brooks offers as the model for talk</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ THE MAXIMS ============ -->
+<div class="part" id="maxims">
+  <span class="label partno">Chapters 2–5</span>
+  <h2>The maxims</h2>
+  <p class="lede">Topics and Asking steer you toward good ground. Levity keeps everyone engaged while you're there. Kindness makes sure people feel heard and are heard. In practice each one feeds the others.</p>
+</div>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">T</span><span class="label">Chapter 2 · Topics</span></div>
+  <div class="body">
+    <div>
+      <h3>Good topics are made, not found</h3>
+      <p class="idea">Thirty seconds of preparation beats talent, and the skill lies in managing a topic more than in choosing one.</p>
+    </div>
+    <ul class="points">
+      <li><strong>You can't rate a topic in advance.</strong> With Mike Yeomans, Brooks had a thousand people rank fifty topics by expected enjoyment. "When did you last cry in front of another person?" came second to last, yet people often enjoyed discussing it. Topics are co-created, so breakfast can be dull with one uncle and wonderful with another.</li>
+      <li><strong>The Myth of Naturalness.</strong> We see a smooth talker and assume it's effortless. So 53% of people call topic prep unnecessary, 34% expect it to feel forced, and 50% think it will reduce enjoyment. Only 12% expect it to help.</li>
+      <li><strong>Why prep works.</strong> In the moment, instinctive system 1 thinking grabs whatever is nearest: the rain, the appetiser, your own news. Writing topics down beforehand offloads the work. In Brooks's studies, even thirty seconds of forethought meant shorter pauses and fewer stumbles, especially between topics. In class, conversations with prepped topics rated far higher, and by the end over 90% of students ranked prep as a top-three takeaway.</li>
+      <li><strong>Small talk is a doorway.</strong> Hugo and Josie, four-minute speed daters, spent eight turns on the weather and both rated the date terribly. Brooks blames the failure to move on, not the small talk. Concrete questions and personal disclosures move a conversation up, since disclosure tends to draw disclosure back.</li>
+      <li><strong>Switch more than feels polite.</strong> Pairs told to get through twelve topics in ten minutes covered nine, against five for pairs left to their natural pace. They gave their talks 6 out of 7 for enjoyment, against 5, and lost no depth. In 1,600 long online conversations, 20% felt they had covered too few topics and 11% too many.</li>
+      <li><strong>Three signs the juice has run out.</strong> Longer shared pauses, more polite laughter, and people repeating themselves. Mirror questions are weak evidence of interest because they're often reflex. A partner calling back to a topic is strong evidence.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>The topic pyramid, and how people get stuck on it</h4>
+      <div class="fit">
+        <svg viewBox="0 0 590 340" role="img" aria-label="A three-tier pyramid. The base is small talk, topics anyone can discuss. The middle is tailored talk, topics some groups could discuss. The top is deep talk, topics only this group could discuss. A route climbs from the weather in France, to growing up in France, to feeling homesick, then steps back down. A small loop at the base marks the doom spiral of staying on the weather.">
+          <path d="M210 16 L320 116 H100 Z" class="f-redt s-red" stroke-width="1.5"/>
+          <path d="M100 116 H320 L394 216 H26 Z" class="f-cyt s-cy" stroke-width="1.5"/>
+          <path d="M26 216 H394 L420 310 H6 Z" class="f-paper2 s-3" stroke-width="1.5"/>
+          <text x="210" y="90" text-anchor="middle" class="t-ink" style="font-size:12px">feeling homesick</text>
+          <text x="210" y="172" text-anchor="middle" class="t-ink" style="font-size:12px">growing up in France</text>
+          <text x="210" y="272" text-anchor="middle" class="t-ink" style="font-size:12px">the weather in France</text>
+          <path d="M210 256 C 160 225, 165 205, 205 184 M214 156 C 250 135, 250 122, 216 98" class="s-red" stroke-width="2" stroke-linecap="round"/>
+          <path d="M198 182 L206 183 L203 191 M209 98 L216 97 L216 105" class="s-red" stroke-width="2"/>
+          <circle cx="90" cy="262" r="20" class="s-3" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <text x="90" y="300" text-anchor="middle" class="t-3" style="font-size:11px">doom spiral</text>
+          <text x="432" y="62" class="hd">Deep talk</text><text x="432" y="82" class="t-3" style="font-size:11px">only this group</text>
+          <text x="432" y="162" class="hd">Tailored talk</text><text x="432" y="182" class="t-3" style="font-size:11px">many groups, not all</text>
+          <text x="432" y="262" class="hd">Small talk</text><text x="432" y="282" class="t-3" style="font-size:11px">any group</text>
+          <text x="6" y="332" class="t-3" style="font-size:11px">The peak isn't the goal of every chat. Brief exchanges can stay at the base.</text>
+        </svg>
+      </div>
+      <p class="cap">The route uses Brooks's suggestion for Hugo and Josie: France's weather could have led to his childhood there, and then to missing home. Conversations cycle up and down. Terry Gross, she notes, steps back down after an intimate question.</p>
+      <p class="src">Tiers after the figure in ch. 2; route drawn for this page</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Topics covered in ten minutes</h4>
+        <div class="bars">
+          <div class="bar c-red"><div class="row"><span>Told to switch often</span><b>9</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+          <div class="bar c-cyan"><div class="row"><span>Natural pace</span><b>5</b></div><div class="track"><div class="fill" style="width:55.6%"></div></div></div>
+        </div>
+        <p class="cap">Enjoyment was 6 out of 7 against 5. Switching more cost no depth.</p>
+      </div>
+      <div class="story" style="align-self:center">
+        <span class="label">Prep can be anything</span>
+        <p>Mike, a tech strategist, turns <em>This American Life</em> episodes into portable stories for lulls in shoptalk. Carolina, Brooks's fearless college friend, opened a lockdown call with a blunt question about vaginal mesh. Within minutes they were on family planning and a painful rift with her mother and brother.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">A</span><span class="label">Chapter 3 · Asking</span></div>
+  <div class="body">
+    <div>
+      <h3>Be interested, not interesting</h3>
+      <p class="idea">Questions move the pieces, and the danger in most conversations is asking too few.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Askers are better liked.</strong> Strangers in fifteen-minute chats averaged 6.5 questions. When Brooks's team told some to ask more than nine and others fewer than four, the high askers were liked significantly more. On speed dates, one extra question per date across twenty dates won one more second date.</li>
+      <li><strong>Nobody notices the link.</strong> High askers didn't think they were liked more, and outside readers of the transcripts missed the connection too. That's why the habit doesn't correct itself. Matchmaker Rachel Greenwald calls the worst cases ZQs, for Zero Questions.</li>
+      <li><strong>Sensitive questions are safer than we fear.</strong> In five experiments with over 1,400 people, researchers found no evidence that asking about salary or affairs did more harm than benign questions, among friends or strangers. Risk rises with broken trust, live conflict, power gaps and audiences. Brooks was fine being asked about pregnancy quietly by a friend, and not having it shouted across a room of thirty colleagues.</li>
+      <li><strong>Follow-ups do the work.</strong> In her analysis of 398 strangers, four types emerged: introductory, mirror, topic-switching and follow-up. Follow-ups drove nearly all of the likability gain, since they show you were listening. Mirror questions added none. Follow-ups also drift, so they double as stealth topic switches.</li>
+      <li><strong>Borrow from the masters.</strong> Gross tries one or two follow-ups, then jumps if there's no treasure. Oprah Winfrey asks about feeling. Barbara Walters moved people through past, present and future.</li>
+      <li><strong>Is there a limit?</strong> In speed dates and stranger chats, Brooks's team couldn't find one. In sales calls analysed by Gong, more than twenty questions per ten minutes did worse than fifteen to twenty, though still better than fewer than ten.</li>
+      <li><strong>Open beats closed for connection.</strong> Open-ended questions draw twice as many words. In negotiation role-plays, instructing people to ask more of them produced more information, more liking and more trades. Don't spoil them by offering candidate answers.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>What people ask as a conversation goes on</h4>
+      <div class="legend">
+        <span><i style="--c:var(--red)"></i>follow-up</span>
+        <span><i style="--c:var(--cyan)"></i>topic-switching</span>
+        <span><i style="--c:var(--ink-2)"></i>mirror</span>
+        <span><i style="--c:var(--ink-3)"></i>introductory</span>
+      </div>
+      <div class="scroll-x">
+        <svg id="d-q" viewBox="0 0 600 300" role="img" aria-label="Line chart of the share of turns containing each question type across a fifteen-minute conversation. Introductory questions start near 22 percent and vanish by minute three. Topic-switching questions peak near 24 percent in the second minute and decline to under 10. Mirror questions peak near 20 and decay slowly. Follow-up questions rise to about 23 percent by minute four and stay near 20 until the final minutes."></svg>
+      </div>
+      <p class="cap">Follow-ups take over once people have found something to talk about. Topic switches fade, which Brooks reads as a missed opportunity. Mirror questions linger because they're easy. Values are read off the book's chart by eye, so treat them as approximate.</p>
+      <p class="src">After Brooks and colleagues' study of 398 strangers, figure in ch. 3</p>
+    </div>
+
+    <div class="compare">
+      <div class="bad"><h5>Patterns that backfire</h5><ul><li><strong>Boomerasking:</strong> asking in order to answer it yourself</li><li><strong>Gotchas:</strong> questions built to prove someone wrong</li><li><strong>Repeats:</strong> the same demand, reworded</li></ul></div>
+      <div class="good"><h5>What sets them apart</h5><ul><li>The harm lies in perceived motive, not in the words</li><li>Good questions read as curiosity and care</li><li>If you want to brag, just say it</li></ul></div>
+    </div>
+
+    <div class="story">
+      <span class="label">The hundred-dollar lesson</span>
+      <p>Brooks used to hold up a $100 bill and let her negotiation students compete for it. They offered arguments, flowers and investment schemes. Eventually a quiet student said, in effect, may I please have it?</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Zero questions means zero second dates."</blockquote>
+      <span class="label">Rachel Greenwald, matchmaker</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">L</span><span class="label">Chapter 4 · Levity</span></div>
+  <div class="body">
+    <div>
+      <h3>Find the fun, don't try to be funny</h3>
+      <p class="idea">Levity is any move that adds positive energy. It doesn't need a joke, and most laughter isn't about jokes anyway.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Tom and Cassie.</strong> Out of a Stanford dataset of eleven hundred four-minute dates, one pair stands out. They joked about being bad at speed dating and turned her home state into a guessing game. None of it was very funny. Both wanted a second date.</li>
+      <li><strong>It helps with everything else.</strong> Andrew Oswald's team found happier people 12% more productive. Teresa Amabile linked happiness to creativity. Leslie John found people 1.9 times more likely to reveal personal information on a whimsical website than on a serious one. Levity signals that it's safe to play, and safety lets people take risks.</li>
+      <li><strong>We use it less with age.</strong> 84% of 23-year-olds report smiling and laughing a lot the day before. That falls to 68% at 50 and 61% around 80.</li>
+      <li><strong>The fear is overblown.</strong> Brooks, Schweitzer and Bitterly found that people overestimate how often humour goes badly. Managers assigned to make one joke were over 9% more likely to be voted into leadership. Even flopped jokes raised perceived confidence. Naming the flop is a fine recovery.</li>
+      <li><strong>Aim up, not at people.</strong> Affiliative humour raises psychological safety, and aggressive humour lowers it. Self-deprecation worked for Ric Keller, who likened himself to Elizabeth Taylor's seventh husband. Being too benign costs you a laugh. Being too cruel can cost a relationship.</li>
+      <li><strong>Moves anyone can try.</strong> Fuss over a tiny detail, as Seinfeld does. Compare unlike things. Call back to old jokes: two friends still ask whether events come with a "welcome beverage", after a spam offer for a million-dollar holiday. Keep a stable of stories, retiring any that nobody co-narrates. Get weird: Mike once asked a dull table which body part they'd remove from the homunculus.</li>
+      <li><strong>Compliments work even when suspect.</strong> Flattery sold more in an experiment where readers knew it was an advert. Students sent to compliment strangers underestimated how good it felt for the receiver. Praise what people did rather than how they look.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Levity's job on the chart of emotions</h4>
+        <div class="fit"><svg id="d-wheel1" viewBox="0 0 440 400" role="img" aria-label="A circular chart with arousal on the vertical axis and pleasure on the horizontal. An amber arrow runs from the low-arousal, unpleasant corner containing sad and bored, up to the high-arousal, pleasant corner containing excited and joyous."></svg></div>
+        <p class="cap">Boredom is the quiet threat: fewer glances, longer pauses, flatter words. Levity lifts a conversation diagonally out of it.</p>
+      </div>
+      <div class="fig">
+        <h4>What laughter is really for</h4>
+        <div class="bars">
+          <div class="bar c-cyan"><div class="row"><span>Laughs that followed jokes, stories or pranks (Provine)</span><b>20%</b></div><div class="track"><div class="fill" style="width:20%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>Laughs serving other purposes than mirth (Brooks)</span><b>70%+</b></div><div class="track"><div class="fill" style="width:70%"></div></div></div>
+        </div>
+        <p class="cap">Robert Provine's team logged over two thousand laughs across Baltimore, mostly after banal remarks. Laughter fills gaps and smooths things over. The easiest move: when someone tries a joke, laugh out loud.</p>
+        <p class="src">Provine's year of eavesdropping; Brooks's own laughter studies, ch. 4</p>
+      </div>
+    </div>
+
+    <div class="kinds">
+      <div><span class="label">Too benign</span><b>Walking downstairs</b><span>Nothing wrong, nothing funny.</span></div>
+      <div><span class="label">Sweet spot</span><b>Fake fall into a silly pose</b><span>A violation that turns out harmless.</span></div>
+      <div><span class="label">Too violating</span><b>Falling and breaking an arm</b><span>Real harm. The sweet spot moves with the people present.</span></div>
+    </div>
+    <p class="src" style="font-family:var(--mono);font-size:11.5px;color:var(--ink-3)">Benign Violation Theory, Peter McGraw and Caleb Warren, as described in ch. 4</p>
+
+    <div class="story">
+      <span class="label">What people regret</span>
+      <p>Asked for ideal traits in a partner, people may not even mention fun. Asked how their favourite people make them feel, they always say happy. Jennifer Aaker reports that the most common deathbed regret she heard was not spending more time laughing with loved ones.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">K</span><span class="label">Chapter 5 · Kindness</span></div>
+  <div class="body">
+    <div>
+      <h3>Put their needs first, and show you heard</h3>
+      <p class="idea">Kindness means working out what a partner needs and helping them get it. Your own egocentrism is what stands in the way.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A model conversation.</strong> In 2019, two months after his mother's death, Anderson Cooper sat down with Stephen Colbert to talk about grief. They asked fourteen questions in twenty minutes and laughed every few minutes. Then Colbert gently disagreed with Cooper's wish for a visible scar, and answered a hard question with one word: yes. Brooks locates the conversation's power in each man's focus on the other.</li>
+      <li><strong>The illusion of understanding.</strong> Piaget thought children outgrow extreme egocentrism around seven. Boaz Keysar's experiments suggest adults barely do. People even believed they'd caught tone in a language they didn't speak.</li>
+      <li><strong>Respect has a grammar.</strong> Stanford researchers coded over 36,000 officer utterances from 981 Oakland traffic stops. Brooks draws three rules from it. Make people feel seen and known, good to be with, and worthy of care. The study's central finding, she reports, was that officers used more respectful language with white drivers than with Black drivers.</li>
+      <li><strong>Rudeness is catching.</strong> Trevor Foulk's work shows negative micro-behaviours spreading like a cold, even to bystanders, though a civil encounter can overwrite the effect. An executive once asked Brooks whether her class was worth his time, and she was furious. Months later she learned he was seriously ill and rationing his energy. Hence: give the benefit of the doubt.</li>
+      <li><strong>Our minds wander.</strong> Brooks's team found people reporting 76% attention and 24% wandering in chats with strangers, likely an underestimate. Only a third of participants noticed a nonsense sentence dropped into a real conversation. Attention did rise when people were paid for it.</li>
+      <li><strong>Responsive beats active.</strong> Nods and smiles can be faked. Words can't: follow-ups, paraphrases, credit, call-backs. Generic <em>mm-hmms</em> even made storytellers worse in Janet Bavelas's work. Off-topic interruptions are rude, but on-topic ones signal engagement, as when Colbert and Cooper finish each other's sentences.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Same language</h4>
+        <div class="bars">
+          <div class="bar c-cyan"><div class="row"><span>Listeners thought they understood</span><b>85%</b></div><div class="track"><div class="fill" style="width:85%"></div></div></div>
+          <div class="bar c-cyan"><div class="row"><span>Speakers thought they were understood</span><b>70%</b></div><div class="track"><div class="fill" style="width:70%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>Actually understood</span><b>44%</b></div><div class="track"><div class="fill" style="width:44%"></div></div></div>
+        </div>
+      </div>
+      <div class="fig">
+        <h4>Chinese speakers, American listeners</h4>
+        <div class="bars">
+          <div class="bar c-cyan"><div class="row"><span>Listeners thought they understood</span><b>65%</b></div><div class="track"><div class="fill" style="width:65%"></div></div></div>
+          <div class="bar c-cyan"><div class="row"><span>Speakers thought they were understood</span><b>50%</b></div><div class="track"><div class="fill" style="width:50%"></div></div></div>
+          <div class="bar c-red"><div class="row"><span>Actually understood</span><b>35%</b></div><div class="track"><div class="fill" style="width:35%"></div></div></div>
+        </div>
+        <p class="cap">Listeners picked one of four possible meanings for a spoken line.</p>
+        <p class="src">Keysar and coauthors, ch. 5</p>
+      </div>
+    </div>
+
+    <div class="fig">
+      <h4>Which words read as respect at a traffic stop</h4>
+      <div class="scroll-x">
+        <svg id="d-respect" viewBox="0 0 600 330" role="img" aria-label="Diverging bar chart of selected language features. Most respectful: apologising, then for you, gratitude and reassurance, then last names and formal titles, then safety, positive words and hedges. Least respectful: hands on the wheel, then first names, informal titles, negative words and questions."></svg>
+      </div>
+      <p class="cap">A selection of the study's 22 features. Bar lengths are read off the book's chart by eye, so treat them as approximate. Context matters: first names rank low here, while in friendlier settings most people like them.</p>
+      <p class="src">Stanford study of Oakland body-camera footage, April 2014, as charted in ch. 5</p>
+    </div>
+
+    <div class="story">
+      <span class="label">The song in fifteen minutes</span>
+      <p>Brooks paired 204 strangers to write and record a song. Producer Claire asked singer John what he'd like before stating her own view, admitted her weakness, and later reminded him of his own fear to show he'd overcome it. Their gluten-free ditty about a lemon pop won the $20 prize.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ THE TESTS ============ -->
+<div class="part" id="tests">
+  <span class="label partno">Chapters 6–8</span>
+  <h2>The tests</h2>
+  <p class="lede">After a half-chapter pause to breathe, the book turns to what stretches the maxims: more minds, real differences, and harm that needs repair.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Many Minds</span></div>
+  <div class="body">
+    <div>
+      <h3>Groups are a different beast</h3>
+      <p class="idea">More people means more possibility and more chaos. Someone has to watch status and take care of the group.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Join the pair.</strong> Raj, a student with party panic, tried walking up to two people talking. They were glad of it. Groups give everyone breathing room, since you don't have to speak at every turn.</li>
+      <li><strong>Hidden hierarchies.</strong> Every group ranks its members without saying so, and the order can shift by topic. High-status talkers take more airtime, which raises their status further. Larger groups tend to concentrate the talking in fewer people.</li>
+      <li><strong>Gender as a case study.</strong> Victoria Brescoll found that female US senators speak less than male ones, whatever their power, and that the fear of backlash behind this was accurate. Observers of both sexes judged outspoken women more harshly. Brooks argues that the higher-status members should help, starting by talking less.</li>
+      <li><strong>Pulling in from above.</strong> As a graduate student, Brooks was being boxed out of a conversation on a stoop until an eminent professor told the newcomer that Alison grew up sailing and did cool research. Status tends to reduce perspective-taking, so it takes effort. High-status members can credit others by name, admit failures, and share eye contact evenly.</li>
+      <li><strong>Moving up from below.</strong> Adam Galinsky's phrase is that status determines your range: low-status members have fewer acceptable moves. The workable ones are small. Ask a question, where ignorance is an asset. Paraphrase. Nudge a topic. Compliment. Smile.</li>
+      <li><strong>Be a steward.</strong> The term is from Lucid Meetings founder Elise Keith. At a Wigilia supper for forty-two loud relatives near Detroit, tiny Great Busia stood, raised a piece of bread, and sent everyone into quiet two-minute pairs for exchanging wishes. Many wept. Then the rumpus resumed.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Why groups get hard so fast</h4>
+      <div class="fit"><svg id="d-net" viewBox="0 0 600 180" role="img" aria-label="Four networks with every person connected to every other. Two people have 1 connection, four have 6, five have 10, and eight have 28."></svg></div>
+      <pre class="eq"><span class="c">connections =</span> <span class="k">N × (N − 1)</span> <span class="c">÷ 2</span></pre>
+      <p class="cap">Each line is a relationship to keep in mind. With six or more people, research suggests a single conversation tends to splinter, which may be why Kant capped his table.</p>
+      <p class="src">Formula from ch. 6, note 1</p>
+    </div>
+
+    <div class="compare">
+      <div class="good"><h5>Partition</h5><ul><li>Split into pairs or small groups</li><li>Shares airtime by structure</li><li>Keeps improvisation and privacy</li><li>Risk: people feel stuck in a sidebar</li></ul></div>
+      <div class="bad"><h5>Centralise</h5><ul><li>One thread, by agenda, turns or a chair</li><li>Gives togetherness and shared information</li><li>Loses serendipity</li><li>Risk: dominant voices, silent onlookers</li></ul></div>
+    </div>
+    <p class="muted" style="max-width:var(--measure);font-size:16px">Alternate them. Keith's 1-2-4-all moves from solo thought to pairs, fours, then everyone.</p>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Difficult Moments</span></div>
+  <div class="body">
+    <div>
+      <h3>Aim to learn, not to win</h3>
+      <p class="idea">Disagreement doesn't have to hurt. Find the layer where the difference lies, stay receptive, and you may persuade more by trying less.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The dreaded exercise.</strong> Late in the course, students pair up on the hot-button issue where they're furthest apart. They arrive filled with dread. Around 40% then name it their favourite of more than twenty exercises.</li>
+      <li><strong>The receptiveness recipe.</strong> Julia Minson, Mike Yeomans and Hanne Collins studied the language of civil disagreement across hundreds of thousands of conversations. Receptive speakers saw fewer blow-ups and persuaded more. Partners tend to match it.</li>
+      <li><strong>The learning mindset.</strong> We underestimate how much others are willing to learn, then treat them accordingly, and conflict follows. Letting go of persuasion lets beliefs update. In Brooks's example, brothers arguing over their mother's care each find out what the other has quietly paid for and fears.</li>
+      <li><strong>Identity is the hot core.</strong> In 2013, new to teaching, Brooks showed a photo of Tom Brady and joked that the "ladies" should enjoy the view. Three LGBTQ+ students came to see her about it. She was stung, thought it over, and apologised. Their approach, and her response, left the class closer.</li>
+      <li><strong>Get perspective, don't take it.</strong> Across 25 studies by Eyal, Steffel and Epley, trying to imagine another's view never helped accuracy. Asking did. The Golden Rule misleads here, as Brooks sees it, because people differ.</li>
+      <li><strong>Don't avoid it.</strong> Brooks cites Richeson and Shelton's finding that would-be allies are often the most avoidant. Yet Kiara Sanchez found that talking about race brought Black and white friends closer six months on, and Broockman and Kalla found that ten-minute talks with transgender canvassers in Florida reduced transphobia.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Where a difference lives</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 300" role="img" aria-label="A cross-section of the earth with four layers. Above ground is content, what we can see and hear. At the crust is feelings. Lower is the bedrock of motives. At the core is identity. An arrow on the left points downward: harder to see, slower to shift.">
+          <rect x="40" y="20" width="550" height="62" rx="4" class="f-paper2"/>
+          <path d="M40 82 C 160 72, 300 92, 590 80 V150 H40 Z" style="fill:color-mix(in srgb, var(--red) 14%, var(--card))"/>
+          <path d="M40 150 C 200 140, 380 160, 590 148 V220 H40 Z" style="fill:color-mix(in srgb, var(--red) 26%, var(--card))"/>
+          <path d="M40 220 C 200 212, 420 232, 590 218 V288 Q590 292 586 292 H44 Q40 292 40 288 Z" style="fill:color-mix(in srgb, var(--red) 42%, var(--card))"/>
+          <text x="58" y="50" class="hd">Content</text>
+          <text x="58" y="68" style="font-size:11.5px">words, sounds, gestures</text>
+          <text x="58" y="118" class="hd">Feelings</text>
+          <text x="58" y="136" class="t-ink" style="font-size:11.5px">you're thrilled, I'm bored</text>
+          <text x="58" y="188" class="hd">Motives</text>
+          <text x="58" y="206" class="t-ink" style="font-size:11.5px">incompatible goals</text>
+          <text x="58" y="256" class="hd">Identity</text>
+          <text x="58" y="274" class="t-ink" style="font-size:11.5px">who we are</text>
+          <text x="270" y="50" style="font-size:12px">You say to-may-to, I say to-mah-to</text>
+          <text x="270" y="118" class="t-ink" style="font-size:12px">Her kind interest feels intrusive</text>
+          <text x="270" y="188" class="t-ink" style="font-size:12px">Her job in Dallas, his family in Seattle</text>
+          <text x="270" y="256" class="t-ink" style="font-size:12px">A joke that assumes who you love</text>
+          <path d="M20 24 V284 M14 276 L20 286 L26 276" class="s-2" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <p class="cap">Moving down, differences get harder to see and slower to shift. Tiny surface remarks can shoot straight to the core. The first job in a hard moment is working out which layer you're on.</p>
+      <p class="src">After the layers figure in ch. 7</p>
+    </div>
+
+    <div class="kinds six">
+      <div><span class="label">Do</span><b>Acknowledge</b><span>Repeat what you heard, so they feel heard and errors surface.</span></div>
+      <div><span class="label">Do</span><b>Affirm</b><span>Add a positive verdict. Treat them as the clever one in the scene.</span></div>
+      <div><span class="label">Do</span><b>Flag agreement</b><span>Name what you share before and after the split.</span></div>
+      <div><span class="label">Do</span><b>Hedge</b><span>Maybe, possibly, I wonder. It reads as reasonable, not weak.</span></div>
+      <div><span class="label">Do</span><b>Frame positively</b><span>Talk about what you might gain, not what you might lose.</span></div>
+      <div><span class="label">Do</span><b>Tell your story</b><span>Personal history humanises in a way recited facts can't.</span></div>
+      <div class="avoid"><span class="label">Avoid</span><b>Lecture words</b><span>Because, therefore, always and never make you sound dogmatic. They suit a report, not a dialogue.</span></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Cooling down: go across, not diagonal</h4>
+        <div class="fit"><svg id="d-wheel2" viewBox="0 0 440 400" role="img" aria-label="The same emotion chart. A solid arrow runs straight across from anxious to excited, keeping arousal the same. A dashed arrow runs diagonally from anxious to calm, which asks you to change both pleasure and arousal."></svg></div>
+        <p class="cap">Brooks's research finds it easier to relabel anxiety as excitement than to calm down, because your heart can keep racing. You change the label, not the body.</p>
+      </div>
+      <div class="fig">
+        <h4>Other ways to lower the heat</h4>
+        <ul class="points" style="font-size:16px">
+          <li><strong>Change the setting.</strong> Stand, walk outside, move from email to a call. </li>
+          <li><strong>Name it.</strong> Labelling a partner's feeling can build trust. A colleague of Brooks asks whether a class should hit refresh.</li>
+          <li><strong>Find the source.</strong> People who knew why they felt something regulated it better and were happier, in a study of over five thousand momentary reports.</li>
+          <li><strong>Leave.</strong> Sometimes only time helps. A row over a word-game clue at a campfire split one family for years.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="story">
+      <span class="label">The drama nobody could hear</span>
+      <p>Emma and her sister Samantha had barely spoken in two years. For an assignment she called during Samantha's drive. A scornful remark about her outdoors club stung, but instead of defending herself Emma agreed, then asked about Samantha's travel plans. A transcript would look dull. By the end Samantha had a graduation invitation, and she accepted it.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"getting perspective, not taking perspective"</blockquote>
+      <span class="label">Eyal, Steffel and Epley on how we come to understand another mind</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Apologies</span></div>
+  <div class="body">
+    <div>
+      <h3>Don't make it about you</h3>
+      <p class="idea">Apologising is nearly always better than not. A good apology shows you see the harm, and a promise to change points to what comes next.</p>
+    </div>
+    <ul class="points">
+      <li><strong>It's never about the papers.</strong> On <em>Couples Therapy</em>, Tashira and Dru fight over a pile of paperwork. Her clipped apology makes things worse, and his missing apology about housework has its own cost. Small moments stand for unmet needs. Their therapist, Orna Guralnik, says apologies signal two things: that you see through your partner's eyes, and that you accept responsibility.</li>
+      <li><strong>What the evidence says.</strong> Brooks writes that no study of conversations has found not apologising to be better. Those who apologise end up with higher status. When hospitals allowed or required doctors to apologise, litigation became less likely.</li>
+      <li><strong>Blame needn't be yours.</strong> On rainy days, a research assistant asked strangers at a Philadelphia station to lend him a phone. A superfluous apology for the rain took compliance from 9% to 47%. Karina Schumann found that frequent apologisers didn't devalue their apologies. Only low-quality ones hurt.</li>
+      <li><strong>The cardinal sin.</strong> BP's Tony Hayward called the Deepwater Horizon spill a "disruption", after a blowout that killed eleven workers. Then he added the line below. Good apologies stay on the recipient's experience. Tashira's complaint about the laundry is the small version, known in the Brooks house as snowballing. Asking for forgiveness also tips the focus toward you.</li>
+      <li><strong>Sooner is better, and late still counts.</strong> You can acknowledge someone's pain before you know who's at fault. Brooks's son Kevin broke her nose as a toddler and apologised, unprompted, at seven, after reading <em>Diary of a Wimpy Kid</em>.</li>
+      <li><strong>Feedback is part of repair.</strong> Only 3% of people told a survey-taker about food or lipstick on her face. Be swift and private. State your good intent. Start positive, then separate the critical part clearly. Look ahead rather than back.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Over 3,000 parole hearings: what apology language did</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 220" role="img" aria-label="Lewicki's seven elements of apology sorted by their link to parole release. Explanation for the crime hurt. Statement of apology, remorse, restitution, self-castigation and request for forgiveness showed no strong positive link. Promise to change was the only element with a strong positive link.">
+          <path d="M20 170 H580" class="s-2" stroke-width="1.5"/>
+          <path d="M572 164 L581 170 L572 176" class="s-2" stroke-width="1.5"/>
+          <text x="20" y="194" class="t-3">less likely release</text>
+          <text x="580" y="194" text-anchor="end" class="t-3">more likely release</text>
+          <rect x="24" y="98" width="130" height="56" rx="6" class="f-cyt s-cy" stroke-width="1.5"/>
+          <text x="89" y="122" text-anchor="middle" class="t-ink" style="font-size:12.5px">Explaining</text>
+          <text x="89" y="140" text-anchor="middle" class="t-3" style="font-size:11px">the crime</text>
+          <rect x="176" y="24" width="238" height="130" rx="6" class="f-paper2"/>
+          <text x="295" y="50" text-anchor="middle" class="t-3" style="font-size:11px">no strong positive link</text>
+          <text x="295" y="74" text-anchor="middle" style="font-size:12.5px">"I'm sorry"</text>
+          <text x="295" y="92" text-anchor="middle" style="font-size:12.5px">remorse · restitution</text>
+          <text x="295" y="110" text-anchor="middle" style="font-size:12.5px">self-castigation</text>
+          <text x="295" y="128" text-anchor="middle" style="font-size:12.5px">asking forgiveness</text>
+          <rect x="436" y="98" width="140" height="56" rx="6" class="f-redt s-red" stroke-width="1.5"/>
+          <text x="506" y="122" text-anchor="middle" class="t-ink" style="font-size:12.5px">Promise</text>
+          <text x="506" y="140" text-anchor="middle" class="t-ink" style="font-size:12.5px">to change</text>
+        </svg>
+      </div>
+      <p class="cap">Boxes show direction only, not effect size. In Nevada, explaining the crime hurt about as much as a prior felony. A promise to change helped about as much as being a woman rather than a man. The more concrete the promise the better, Brooks says, such as weekly AA meetings. In trust games, later actions then carried on what the promise began.</p>
+      <p class="src">Brooks, Donnelly and Collins, Nevada and Kentucky, 2017; elements from Roy Lewicki, ch. 8</p>
+    </div>
+
+    <div class="fig">
+      <h4>Closeness lines: an apology is a fork</h4>
+      <div class="fit"><svg id="d-lines" viewBox="0 0 600 200" role="img" aria-label="Two strings run together with lit knots marking conversations, then a rift opens. On one branch an apology brings the strings back together. On the other, with no apology, they drift apart and the lights go out."></svg></div>
+      <p class="cap">An illustration, not data. It builds on Olivia de Recat's drawings of how two lives converge and part. Brooks imagines each conversation as a knot on the string, and later as a light. Dev and Anil's rift lasted two years: Dev had fired Anil, his near-brother, and stopped replying. A call with prepared questions, real follow-ups and an apology brought them back. In their second call they banned the word sorry.</p>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"I'd like my life back."</blockquote>
+      <span class="label">Tony Hayward, BP chief executive, in an apology on May 30, 2010</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue</span>
+    <h2>You're better at this than you think</h2>
+    <p class="lede">The goal is variety and small improvements, not constant greatness.</p>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Visiting a friend who had been in chemotherapy, Brooks found she'd made a topic list labelled with Whitney Houston song titles. Some topics went stale, and the sadness was hard to voice. It was still one of the best conversations of Brooks's life.</p>
+      <p>That points to a third pillar of well-being. Shigehiro Oishi and Erin Westgate add <strong>psychological richness</strong> to happiness and meaning. A good life includes variety, bitter parts too. Brooks's own research finds that talking with a wider mix of people makes us happier.</p>
+      <p>Then a surprise from Christopher Welker and colleagues in 2023. We usually rate ourselves above average at things. Conversation shows a below-average effect. We credit others with the Myth of Naturalness and ourselves with what Brooks calls the Myth of Suckiness.</p>
+      <p>She closes by admitting the TALK maxims aren't really maxims. They're reminders, and sometimes the best talk comes from breaking them on purpose. She asks for small things: one more follow-up, one prepared topic, one laugh, one call-back. Erving Goffman, she notes, credited conversation as the spark that "lights up the world".</p>
+    </div>
+    <div class="fig">
+      <h4>Three pillars of a good life</h4>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-cyan"><p><strong>Happiness</strong><br>Feeling good</p></div>
+        <div class="stat c-cyan"><p><strong>Meaning</strong><br>Feeling your life serves a purpose</p></div>
+        <div class="stat c-red"><p><strong>Richness</strong><br>Variety, new experiences, ups and downs. Mixed conversations supply it.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Habits drawn from across the book, sorted by when you'd use them. The book's appendix has many more exercises and topic lists.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Before</h3>
+      <div class="tk"><b>Take thirty seconds</b><span>Write down a few topics. You needn't use them. Having them frees your mind to listen.</span></div>
+      <div class="tk"><b>Place your goals</b><span>What do you want? What might they want? Where do those conflict?</span></div>
+      <div class="tk"><b>Check the last chat</b><span>What was left hanging? How did the guitar lessons go? That's your call-back.</span></div>
+      <div class="tk"><b>Plan the structure</b><span>Hosting more than a handful? Decide when to split up and when to come together.</span></div>
+    </div>
+    <div class="col">
+      <h3>During</h3>
+      <div class="tk"><b>Ask one more follow-up</b><span>When you have nothing to say, ask. Banal questions keep things alive, and that's a form of care.</span></div>
+      <div class="tk"><b>Leave before the juice runs out</b><span>Pauses, polite laughs and repeats all mean switch. It's less rude than you fear.</span></div>
+      <div class="tk"><b>Say what you noticed</b><span>Paraphrase, credit, call back. Spoken proof of listening can't be faked.</span></div>
+      <div class="tk"><b>Support others' fun</b><span>Laugh out loud at someone's brave joke. Give the compliment you were thinking.</span></div>
+    </div>
+    <div class="col">
+      <h3>When it's hard</h3>
+      <div class="tk"><b>Aim to learn</b><span>Acknowledge, affirm, find common ground, hedge. Drop "because" and "always".</span></div>
+      <div class="tk"><b>Ask, don't imagine</b><span>You can't reliably guess another mind. Go and find out.</span></div>
+      <div class="tk"><b>Reframe, then shift</b><span>Call anxiety excitement. Change the room. Name the mood.</span></div>
+      <div class="tk"><b>Apologise fast and often</b><span>Keep it about them, skip the explanation and the request for forgiveness, and promise something concrete.</span></div>
+      <div class="tk"><b>Keep your promise</b><span>Then do the thing. Tashira put the T-shirt on.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Alison Wood Brooks, <em>Talk: The Science of Conversation and the Art of Being Ourselves</em> (Crown, 2025). Figures are as reported in the book. The question-type and respect charts are read off the book's figures by eye and are approximate. The pyramid route and the closeness-lines fork are illustrative. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent, txt) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (txt !== undefined) n.textContent = txt;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+
+  /* --- Ch3: question types over time. Values read off the book's chart by eye. --- */
+  var q = document.getElementById("d-q");
+  if (q) {
+    var X0 = 44, X1 = 590, Y0 = 262, Y1 = 14, YMAX = 30;
+    var px = function (m) { return X0 + (m / 16) * (X1 - X0); };
+    var py = function (v) { return Y0 - (v / YMAX) * (Y0 - Y1); };
+    [0, 10, 20, 30].forEach(function (v) {
+      el("line", { x1: X0, x2: X1, y1: py(v), y2: py(v), "class": "s-rule" }, q);
+      el("text", { x: X0 - 8, y: py(v) + 4, "text-anchor": "end", "class": "t-3", style: "font-size:11px" }, q, v + "%");
+    });
+    [0, 5, 10, 15].forEach(function (m) {
+      el("text", { x: px(m), y: Y0 + 18, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, q, m);
+    });
+    el("text", { x: X1, y: Y0 + 34, "text-anchor": "end", "class": "t-3", style: "font-size:11px" }, q, "minutes into conversation");
+    var series = [
+      { d: [22, 4.7, .5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], s: "var(--ink-3)", w: 1.4 },
+      { d: [11.5, 19.7, 11.2, 9.2, 8.6, 5.6, 6.4, 5.8, 4.9, 6.2, 3.8, 4, 3.6, 3.6, 1.9, 2.3], s: "var(--ink-2)", w: 1.6, dash: "6 5" },
+      { d: [15.5, 24, 19.3, 10.3, 12.6, 10.3, 8.1, 9, 9.9, 7, 7.9, 6.4, 6.7, 6.4, 4.4, 2.4], s: "var(--cyan)", w: 2.4 },
+      { d: [.8, 10, 19.3, 22.9, 22.1, 21.4, 20.6, 19, 19.7, 18.8, 19.6, 15.8, 17.4, 14.5, 9.2, 2.4], s: "var(--red)", w: 3 }
+    ];
+    series.forEach(function (S) {
+      var pts = S.d.map(function (v, i) { return px(i + .5).toFixed(1) + "," + py(v).toFixed(1); }).join(" ");
+      var a = { points: pts, fill: "none", "stroke-width": S.w, "stroke-linejoin": "round", style: "stroke:" + S.s };
+      if (S.dash) a["stroke-dasharray"] = S.dash;
+      el("polyline", a, q);
+    });
+  }
+
+  /* --- Ch4 and ch7: chart of emotions --- */
+  function wheel(id, words, draw) {
+    var g = document.getElementById(id);
+    if (!g) return;
+    var cx = 220, cy = 196, r = 150;
+    el("defs", {}, g).innerHTML = '<marker id="' + id + '-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" style="fill:var(--red)"/></marker>';
+    el("circle", { cx: cx, cy: cy, r: r, "class": "f-card s-2", "stroke-width": 1.5 }, g);
+    el("path", { d: "M" + (cx - r) + " " + cy + " H" + (cx + r) + " M" + cx + " " + (cy - r) + " V" + (cy + r), "class": "s-3", "stroke-width": 1 }, g);
+    el("text", { x: cx, y: 22, "text-anchor": "middle", "class": "t-3" }, g, "high arousal");
+    el("text", { x: cx, y: 382, "text-anchor": "middle", "class": "t-3" }, g, "low arousal");
+    el("text", { x: 4, y: cy - 8, "class": "t-3", style: "font-size:11px" }, g, "unpleasant");
+    el("text", { x: 436, y: cy - 8, "text-anchor": "end", "class": "t-3", style: "font-size:11px" }, g, "pleasant");
+    words.forEach(function (w) {
+      el("text", { x: w[1], y: w[2], "text-anchor": "middle", "class": w[3] || "t-ink" }, g, w[0]);
+    });
+    draw(g, "url(#" + id + "-a)");
+  }
+  wheel("d-wheel1", [["Afraid", 150, 96, "t-3"], ["Angry", 118, 150, "t-3"], ["Sad", 118, 256], ["Bored", 160, 306], ["Excited", 292, 96], ["Joyous", 330, 150], ["Calm", 296, 306, "t-3"]], function (g, m) {
+    el("path", { d: "M152 282 C 190 250, 230 200, 262 120", "class": "s-red", "stroke-width": 3, "marker-end": m }, g);
+    el("text", { x: 240, y: 236, "class": "t-red" }, g, "levity");
+  });
+  wheel("d-wheel2", [["Anxious", 124, 128], ["Excited", 316, 128], ["Calm", 296, 306], ["Bored", 160, 306, "t-3"], ["Sad", 118, 256, "t-3"]], function (g, m) {
+    el("path", { d: "M166 124 H270", "class": "s-red", "stroke-width": 3, "marker-end": m }, g);
+    el("path", { d: "M136 140 L278 290", "class": "s-red", "stroke-width": 1.5, "stroke-dasharray": "5 5", "marker-end": m }, g);
+    el("text", { x: 218, y: 112, "text-anchor": "middle", "class": "t-red", style: "font-size:12px" }, g, "reframe");
+    el("text", { x: 150, y: 226, "class": "t-3", style: "font-size:11px" }, g, "harder");
+  });
+
+  /* --- Ch5: respect coefficients, approximate reading of the book's chart --- */
+  var rs = document.getElementById("d-respect");
+  if (rs) {
+    var R = [["Apologising", 1.25], ["“For you”", 1], ["Gratitude", 1], ["Reassurance", 1], ["Last names", .8], ["Formal titles", .8], ["Safety", .5], ["Positive words", .25], ["Hedges", .25], ["Questions", -.25], ["Negative words", -.25], ["Informal titles", -.67], ["First names", -.85], ["Hands on the wheel", -1.17]];
+    var zero = 330, unit = 150, rowH = 22;
+    R.forEach(function (d, i) {
+      var y = 8 + i * rowH, w = Math.abs(d[1]) * unit, pos = d[1] > 0;
+      el("rect", { x: pos ? zero : zero - w, y: y, width: w, height: rowH - 6, rx: 2, "class": pos ? "f-red" : "f-cy" }, rs);
+      el("text", { x: pos ? zero - 8 : zero + 8, y: y + 12, "text-anchor": pos ? "end" : "start", "class": "t-ink", style: "font-size:12px" }, rs, d[0]);
+    });
+    el("line", { x1: zero, x2: zero, y1: 2, y2: 8 + R.length * rowH, "class": "s-2", "stroke-width": 1.2 }, rs);
+    el("text", { x: 590, y: 322, "text-anchor": "end", "class": "t-red", style: "font-size:11px" }, rs, "more respectful →");
+    el("text", { x: 20, y: 322, "class": "t-cy", style: "font-size:11px" }, rs, "← less respectful");
+  }
+
+  /* --- Ch6: everyone connected to everyone --- */
+  var net = document.getElementById("d-net");
+  if (net) {
+    [[2, 1], [4, 6], [5, 10], [8, 28]].forEach(function (g, gi) {
+      var n = g[0], cx = 75 + gi * 150, cy = 72, r = 52, P = [];
+      for (var i = 0; i < n; i++) {
+        var t = -Math.PI / 2 + (n === 2 ? Math.PI / 2 : 0) + i * 2 * Math.PI / n;
+        P.push([cx + r * Math.cos(t), cy + r * Math.sin(t)]);
+      }
+      for (var a = 0; a < n; a++) for (var b = a + 1; b < n; b++) {
+        el("line", { x1: P[a][0], y1: P[a][1], x2: P[b][0], y2: P[b][1], "class": "s-cy", "stroke-width": 1, opacity: .6 }, net);
+      }
+      P.forEach(function (p) { el("circle", { cx: p[0], cy: p[1], r: 6, "class": "f-red" }, net); });
+      el("text", { x: cx, y: 148, "text-anchor": "middle", "class": "hd" }, net, g[1] + (g[1] === 1 ? " link" : " links"));
+      el("text", { x: cx, y: 168, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, net, n + " people");
+    });
+  }
+
+  /* --- Ch8: closeness lines fork, illustrative --- */
+  var ln = document.getElementById("d-lines");
+  if (ln) {
+    var wire = function (d, c) { el("path", { d: d, fill: "none", "stroke-width": 1.8, "class": c }, ln); };
+    wire("M10 96 C 80 92, 130 92, 200 92 C 240 92, 270 66, 310 58 C 380 44, 420 52, 590 54", "s-red");
+    wire("M10 104 C 80 108, 130 108, 200 108 C 240 108, 270 76, 310 68 C 380 54, 420 62, 590 62", "s-red");
+    wire("M200 92 C 240 110, 270 118, 310 124 C 400 134, 500 118, 590 104", "s-3");
+    wire("M200 108 C 240 130, 270 150, 310 160 C 400 182, 500 186, 590 190", "s-3");
+    [[40, 95], [90, 93], [140, 92], [190, 92], [360, 50], [420, 50], [480, 52], [540, 53]].forEach(function (p) {
+      el("circle", { cx: p[0], cy: p[1], r: 9, "class": "f-red", opacity: .22 }, ln);
+      el("circle", { cx: p[0], cy: p[1], r: 4, "class": "f-red" }, ln);
+    });
+    [[360, 130], [440, 128], [520, 118]].forEach(function (p) { el("circle", { cx: p[0], cy: p[1], r: 3.5, "class": "f-3", opacity: .6 }, ln); });
+    el("text", { x: 200, y: 66, "text-anchor": "middle", "class": "t-ink", style: "font-size:12px" }, ln, "harm");
+    el("path", { d: "M200 72 V88", "class": "s-2", "stroke-width": 1.2 }, ln);
+    el("text", { x: 590, y: 30, "text-anchor": "end", "class": "t-red" }, ln, "apology, then change");
+    el("text", { x: 400, y: 196, "text-anchor": "middle", "class": "t-3" }, ln, "no apology");
+  }
+
+  /* --- Hero band: two strings of lights that drift apart and rejoin --- */
+  var cv = document.getElementById("lights");
+  if (!cv || !cv.getContext) return;
+  var ctx = cv.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, h = 0;
+  function gap(u) {
+    return .05 + .3 * Math.exp(-Math.pow((u - .02) / .1, 2)) + .16 * Math.pow(Math.sin(u * 15), 2) * Math.exp(-Math.pow((u - .36) / .13, 2)) + .34 * Math.exp(-Math.pow((u - .68) / .08, 2));
+  }
+  function line(u, side) { return h * (.5 + side * gap(u)) + Math.sin(u * 9 + side) * h * .05; }
+  function size() {
+    var r = cv.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; h = r.height;
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(t) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, h);
+    [-1, 1].forEach(function (side) {
+      ctx.beginPath();
+      for (var x = 0; x <= w; x += 3) { var y = line(x / w, side); if (x) ctx.lineTo(x, y); else ctx.moveTo(x, y); }
+      ctx.strokeStyle = "#c8d2db"; ctx.lineWidth = 1.2; ctx.stroke();
+      var n = Math.max(12, Math.round(w / 46));
+      for (var i = 0; i <= n; i++) {
+        var u = (i + (side > 0 ? .5 : 0)) / n;
+        if (u > 1) continue;
+        var bx = u * w, by = line(u, side);
+        var tw = reduce ? .8 : .62 + .38 * Math.sin(t * .0016 + i * 2.4 + side);
+        var g = ctx.createRadialGradient(bx, by, 0, bx, by, 15);
+        g.addColorStop(0, "rgba(255,190,90," + (.85 * tw) + ")");
+        g.addColorStop(.3, "rgba(250,150,70," + (.32 * tw) + ")");
+        g.addColorStop(1, "rgba(250,150,70,0)");
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(bx, by, 15, 0, 6.3); ctx.fill();
+        ctx.fillStyle = "#ffe6b0"; ctx.beginPath(); ctx.arc(bx, by, 2.4, 0, 6.3); ctx.fill();
+      }
+    });
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(cv);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  start();
+})();
+</script>
+
+</body>
+</html>

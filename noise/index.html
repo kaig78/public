@@ -1,0 +1,1269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Noise by Kahneman, Sibony and Sunstein – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: white paper, graphite scribble, red subtitle,
+   yellow pencil with its bare wood tip. Red = bias, graphite = noise, pencil = the fix. */
+:root {
+  --paper: #fafaf6;
+  --paper-2: #efeee8;
+  --card: #ffffff;
+  --ink: #1b1b1d;
+  --ink-2: #4c4c50;
+  --ink-3: #77777b;
+  --rule: #dcdbd3;
+
+  --bias: #c9302b;
+  --noise: #44464c;
+  --pencil: #e5a91a;
+  --wood: #a9652a;
+  --ash: #9b9da3;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #131315;
+    --paper-2: #1d1d20;
+    --card: #1f1f23;
+    --ink: #f0efea;
+    --ink-2: #b9b8b2;
+    --ink-3: #8d8c88;
+    --rule: #323236;
+    --bias: #ff6f63;
+    --noise: #c3c5cc;
+    --pencil: #f5c24a;
+    --wood: #dc9d63;
+    --ash: #7f8188;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #131315;
+  --paper-2: #1d1d20;
+  --card: #1f1f23;
+  --ink: #f0efea;
+  --ink-2: #b9b8b2;
+  --ink-3: #8d8c88;
+  --rule: #323236;
+  --bias: #ff6f63;
+  --noise: #c3c5cc;
+  --pencil: #f5c24a;
+  --wood: #dc9d63;
+  --ash: #7f8188;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  overflow-x: clip;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--bias); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label { font-family: var(--mono); font-size: 12px; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3); }
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Masthead */
+.mast { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 22px; border-bottom: 1px solid var(--rule); }
+.mast nav { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); gap: clamp(24px, 5vw, 72px); align-items: end; padding-block: clamp(32px, 6vw, 72px) 8px; }
+.hero h1 { font-size: clamp(76px, 14vw, 176px); font-weight: 900; font-stretch: 125%; line-height: .84; letter-spacing: -.035em; margin-left: -.04em; }
+.hero .sub { font-family: var(--display); font-weight: 650; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.2; margin-top: 22px; color: var(--bias); }
+.hero .dek { font-style: italic; font-size: clamp(19px, 1.9vw, 23px); line-height: 1.45; color: var(--ink-2); margin-top: 18px; max-width: 38ch; }
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover { justify-self: end; width: 100%; max-width: 310px; aspect-ratio: 1161 / 1800; border-radius: 3px; box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(20, 20, 24, .35), 0 8px 18px -10px rgba(20, 20, 24, .25); transform: rotate(1.6deg); background: var(--paper-2); object-fit: cover; }
+.scribble { margin-top: 28px; }
+.scribble canvas { display: block; width: 100%; height: 110px; }
+.scribble .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* Sections */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 { font-size: clamp(34px, 5vw, 58px); font-weight: 850; font-stretch: 112%; line-height: 1; letter-spacing: -.02em; }
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+.twoup { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Part openers */
+.part { margin-top: clamp(64px, 9vw, 120px); padding-top: 26px; border-top: 3px solid var(--ink); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 48px; align-items: end; }
+.part h2 { font-size: clamp(38px, 6.2vw, 80px); font-weight: 900; font-stretch: 118%; line-height: .94; letter-spacing: -.03em; }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 20px 40px; padding-top: clamp(44px, 6vw, 72px); }
+.chapter .chno { font-family: var(--display); font-weight: 900; font-stretch: 62%; font-size: 92px; line-height: .8; color: var(--ink); font-variant-numeric: tabular-nums; }
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; font-stretch: 108%; line-height: 1.05; letter-spacing: -.015em; }
+.chapter .idea { font-size: 22px; line-height: 1.45; margin-top: 12px; max-width: 46ch; font-style: italic; }
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before { content: ""; position: absolute; left: 2px; top: .72em; width: 12px; height: 2px; background: var(--bias); }
+.story { max-width: var(--measure); border-left: 2px solid var(--ink); padding: 2px 0 2px 20px; display: grid; gap: 6px; }
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* Figures */
+.fig { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: clamp(18px, 3vw, 28px); display: grid; gap: 18px; min-width: 0; }
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig > svg { max-width: 560px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+
+/* Bars */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; overflow: hidden; }
+.fill { position: absolute; top: 0; bottom: 0; left: 0; background: var(--c, var(--ink)); border-radius: 2px; }
+.axis { position: relative; height: 18px; margin-top: 2px; }
+.axis span { position: absolute; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+.axis span:first-child { transform: none; }
+.axis span:last-child { transform: translateX(-100%); }
+.seg { display: flex; height: 22px; border-radius: 2px; overflow: hidden; gap: 1px; }
+.seg i { display: block; height: 100%; }
+.key { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.key i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* Book map */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 20px; margin-top: 48px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 12px; align-content: start; }
+.map h3 { font-size: 22px; font-weight: 850; font-stretch: 112%; letter-spacing: -.01em; line-height: 1.1; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.3; }
+.map li a { text-decoration: none; font-family: var(--display); font-weight: 650; font-size: 15.5px; }
+.map li a:hover { text-decoration: underline; }
+.map li span { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 2px; }
+
+/* Targets */
+.targets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.targets figure { margin: 0; display: grid; gap: 6px; text-align: center; }
+.targets figcaption { font-family: var(--display); font-weight: 750; font-size: 15px; line-height: 1.2; }
+.targets figcaption span { display: block; font-family: var(--mono); font-weight: 400; font-size: 11.5px; color: var(--ink-3); margin-top: 2px; }
+.btn { font-family: var(--mono); font-size: 12.5px; letter-spacing: .03em; color: var(--ink); background: var(--paper-2); border: 1px solid var(--rule); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.btn:hover { border-color: var(--ink-3); }
+.btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Error explorer */
+.explore { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 24px; align-items: center; }
+.sliders { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 14px 24px; }
+.sliders label { display: grid; gap: 4px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); }
+.sliders input { width: 100%; }
+#s-bias { accent-color: var(--bias); }
+#s-noise { accent-color: var(--noise); }
+.readout { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; font-size: 14px; color: var(--ink-2); line-height: 1.3; }
+.readout b { display: block; font-family: var(--display); font-weight: 850; font-size: 28px; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* Sentencing grids */
+.grids { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 18px; }
+.grids figure { margin: 0; display: grid; gap: 8px; }
+.grids figcaption { font-size: 14.5px; line-height: 1.35; color: var(--ink-2); }
+.grids figcaption b { display: block; font-family: var(--display); font-size: 15.5px; color: var(--ink); }
+
+/* Cascade */
+.cascade { display: grid; grid-template-columns: 62px repeat(7, minmax(0, 1fr)); gap: 6px 4px; align-items: center; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.cascade .who { text-align: center; font-size: 11.5px; color: var(--ink-3); }
+.cascade .p { text-align: center; border-radius: 4px; padding: 6px 0; background: var(--paper-2); color: var(--ink); }
+.cascade .p.t { background: color-mix(in srgb, var(--bias) 16%, var(--card)); color: var(--bias); font-weight: 500; }
+.cascade .p.j { background: color-mix(in srgb, var(--pencil) 28%, var(--card)); }
+
+/* Protocol flow */
+.flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; counter-reset: s; }
+.flow li { counter-increment: s; background: var(--paper-2); border-radius: 6px; padding: 14px; display: grid; gap: 4px; align-content: start; font-size: 15px; line-height: 1.4; color: var(--ink-2); }
+.flow li::before { content: "0" counter(s); font-family: var(--mono); font-size: 12px; color: var(--wood); }
+.flow b { font-family: var(--display); font-weight: 750; font-size: 16px; color: var(--ink); line-height: 1.2; }
+.flow .last { background: color-mix(in srgb, var(--pencil) 24%, var(--card)); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* pull quote */
+.pull { max-width: 26ch; font-family: var(--display); font-weight: 750; font-stretch: 112%; font-size: clamp(26px, 3.3vw, 38px); line-height: 1.12; letter-spacing: -.015em; margin: 0; }
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.objs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 210px; order: -1; transform: rotate(-1.2deg); }
+  .twoup, .part, .explore { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+  .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .targets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .compare, .flow { grid-template-columns: 1fr; }
+  .cascade { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .cascade .rowlab { grid-column: 1 / -1; margin-top: 4px; }
+  .cascade .sp { display: none; }
+  .readout b { font-size: 24px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Kahneman, Sibony, Sunstein · Little, Brown Spark, 2021</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#p1">Finding</a>
+    <a href="#p2">Measuring</a>
+    <a href="#p3">Predicting</a>
+    <a href="#p4">Causes</a>
+    <a href="#p5">Reducing</a>
+    <a href="#p6">Limits</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1>Noise</h1>
+    <p class="sub">A Flaw in Human Judgment</p>
+    <p class="dek">Same case, same facts, different professional, different answer. The authors argue that this scatter does as much harm as bias and gets a fraction of the attention.</p>
+    <div class="byline label">
+      <span>28 chapters</span><span>6 parts</span><span>3 authors</span><span>~115,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Noise: the white title sits on a dense graphite scribble made by a yellow pencil, with the subtitle in red below">
+</div>
+
+<div class="scribble" aria-hidden="true">
+  <canvas id="scrib"></canvas>
+  <div class="ends label"><span>Judgment, unaided</span><span>With decision hygiene</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Two kinds of error, and we only talk about one</h2>
+  </div>
+  <div class="twoup">
+    <div class="prose">
+      <p>Bias is error that leans one way. Noise is error that scatters. The authors are <strong>Daniel Kahneman</strong>, a psychologist, <strong>Olivier Sibony</strong>, a strategy professor, and <strong>Cass Sunstein</strong>, a legal scholar. Bias, they complain, stars in every discussion of judgment while noise goes unmeasured.</p>
+      <p>Noise here means <strong>unwanted variability in judgments that ought to match</strong>: two doctors, one patient; two underwriters, one risk. It isn't diversity of taste or competition between ideas. It matters where an organisation treats its professionals as interchangeable and assigns a case to whoever is free.</p>
+      <p>The book has a surprising practical core. You can measure noise without knowing the right answer, and you can reduce it without knowing which errors you're preventing. They call that second part <strong>decision hygiene</strong>.</p>
+    </div>
+    <div class="fig">
+      <span class="label">How loud it gets</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat"><span class="big num">55%</span><p>Median gap between two underwriters quoting the same risk. Executives expected about 10%.</p></div>
+        <div class="stat"><span class="big num">5–88%</span><p>Asylum grant rates of two judges in one Miami courthouse.</p></div>
+        <div class="stat"><span class="big num">3.8 yrs</span><p>Average gap between two federal judges sentencing the same case, where the mean sentence was 7.0 years.</p></div>
+        <div class="stat"><span class="big num">71%</span><p>Average difference when the same software developers estimated the same task on two days.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:24px">
+    <h4>Bias leans, noise scatters, and noise shows from behind</h4>
+    <div class="targets" id="targets"></div>
+    <div class="btns"><button class="btn" id="flip" aria-pressed="false" type="button">Look at the back of the target</button></div>
+    <p class="cap">Turn the targets round and the bull's-eye disappears: you can no longer judge bias, but you see the noise just as well. Shot positions are illustrative, after the book's opening figures.</p>
+  </div>
+
+  <div class="map">
+    <div class="col"><span class="label">Part I</span><h3>Finding noise</h3><ol>
+      <li><span>01</span><a href="#ch1">Crime and Noisy Punishment</a></li>
+      <li><span>02</span><a href="#ch2">A Noisy System</a></li>
+      <li><span>03</span><a href="#ch3">Singular Decisions</a></li>
+    </ol></div>
+    <div class="col"><span class="label">Part II</span><h3>Your mind is a measuring instrument</h3><ol>
+      <li><span>04</span><a href="#ch4">Matters of Judgment</a></li>
+      <li><span>05</span><a href="#ch5">Measuring Error</a></li>
+      <li><span>06</span><a href="#ch6">The Analysis of Noise</a></li>
+      <li><span>07</span><a href="#ch7">Occasion Noise</a></li>
+      <li><span>08</span><a href="#ch8">How Groups Amplify Noise</a></li>
+    </ol></div>
+    <div class="col"><span class="label">Part III</span><h3>Noise in predictive judgments</h3><ol>
+      <li><span>09</span><a href="#ch9">Judgments and Models</a></li>
+      <li><span>10</span><a href="#ch10">Noiseless Rules</a></li>
+      <li><span>11</span><a href="#ch11">Objective Ignorance</a></li>
+      <li><span>12</span><a href="#ch12">The Valley of the Normal</a></li>
+    </ol></div>
+    <div class="col"><span class="label">Part IV</span><h3>How noise happens</h3><ol>
+      <li><span>13</span><a href="#ch13">Heuristics, Biases, and Noise</a></li>
+      <li><span>14</span><a href="#ch14">The Matching Operation</a></li>
+      <li><span>15</span><a href="#ch15">Scales</a></li>
+      <li><span>16</span><a href="#ch16">Patterns</a></li>
+      <li><span>17</span><a href="#ch17">The Sources of Noise</a></li>
+    </ol></div>
+    <div class="col"><span class="label">Part V</span><h3>Improving judgments</h3><ol>
+      <li><span>18</span><a href="#ch18">Better Judges for Better Judgments</a></li>
+      <li><span>19</span><a href="#ch19">Debiasing and Decision Hygiene</a></li>
+      <li><span>20</span><a href="#ch20">Sequencing Information in Forensic Science</a></li>
+      <li><span>21</span><a href="#ch21">Selection and Aggregation in Forecasting</a></li>
+      <li><span>22</span><a href="#ch22">Guidelines in Medicine</a></li>
+      <li><span>23</span><a href="#ch23">Defining the Scale in Performance Ratings</a></li>
+      <li><span>24</span><a href="#ch24">Structure in Hiring</a></li>
+      <li><span>25</span><a href="#ch25">The Mediating Assessments Protocol</a></li>
+    </ol></div>
+    <div class="col"><span class="label">Part VI</span><h3>Optimal noise</h3><ol>
+      <li><span>26</span><a href="#ch26">The Costs of Noise Reduction</a></li>
+      <li><span>27</span><a href="#ch27">Dignity</a></li>
+      <li><span>28</span><a href="#ch28">Rules or Standards?</a></li>
+    </ol></div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="p1">
+  <span class="label partno">Part I · Chapters 1–3</span>
+  <h2>Finding noise</h2>
+  <p class="lede">A courtroom shows noise can be unjust. An insurer shows it can be expensive. A one-off decision shows that seeing no scatter doesn't mean there isn't any.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Crime and Noisy Punishment</span></div>
+  <div class="body">
+    <div>
+      <h3>A sentence shouldn't depend on the judge you draw</h3>
+      <p class="idea">Discretion once looked humane. Then people measured what it produced.</p>
+    </div>
+    <ul class="points">
+      <li>In 1973 Judge Marvin Frankel set out cases like two first offenders passing bad cheques: $58.40 earned one man fifteen years, $35.20 earned the other 30 days.</li>
+      <li>A 1981 study gave 208 federal judges the same sixteen hypothetical cases. On only three did all agree that prison was right.</li>
+      <li>Irrelevant details also move outcomes. Studies link rulings to the local football result, the defendant's birthday and the temperature outside.</li>
+      <li>The Sentencing Reform Act of 1984 produced guidelines with 43 offence levels, and studies found the gap between judges shrank. In 2005 the Supreme Court made them advisory. Judges mostly welcomed this. Crystal Yang's data on nearly 400,000 defendants showed the harsh-judge penalty, 2.8 months before, doubling afterwards.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">A Noisy System</span></div>
+  <div class="body">
+    <div>
+      <h3>The noise audit</h3>
+      <p class="idea">Give many professionals the same file separately, then compare. The result is nearly always a shock.</p>
+    </div>
+    <ul class="points">
+      <li>At an insurer, the median gap was 55% for underwriters and 43% for claims adjusters. When one quoted $9,500, the other said $16,700, not the $10,500 people imagined. One executive put the yearly cost in the hundreds of millions.</li>
+      <li>828 senior executives expected about 10%. Forty-two investors at one firm, valuing the same stock, came in at 41%.</li>
+      <li>Errors don't cancel. A noisy system judges different cases once each, so one overpriced policy and one underpriced policy are two mistakes, not a correct average.</li>
+      <li>The <strong>illusion of agreement</strong> hides all this. Veterans gain confidence by agreeing with their past selves, and offices avoid contact with disagreement.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Singular Decisions</span></div>
+  <div class="body">
+    <div>
+      <h3>One shot still has a scatter</h3>
+      <p class="idea">A one-off choice is a repeated decision that happens to be made once.</p>
+    </div>
+    <ul class="points">
+      <li>In 2014 President Obama kept borders open during Ebola and sent three thousand people to West Africa. Different advisers might have led elsewhere.</li>
+      <li>You can't measure noise in a decision made once, but its sources are still present, as with a single shot from an unsteady hand. So the methods that help recurrent judgments should help unique ones too.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="p2">
+  <span class="label partno">Part II · Chapters 4–8</span>
+  <h2>Your mind is a measuring instrument</h2>
+  <p class="lede">A judgment assigns a value on a scale, and the instrument is a person. Like any instrument it can be off-centre, shaky, or both.</p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Matters of Judgment</span></div>
+  <div class="body">
+    <div>
+      <h3>Between arithmetic and taste</h3>
+      <p class="idea">A judgment call is a question where we allow some disagreement, but not much.</p>
+    </div>
+    <ul class="points">
+      <li>Asked to rate a fictional CEO candidate, 115 MBA students ranged from 10 to 95 on a 100-point scale. Variability enters at each step: noticing cues, blending them, turning an impression into a number.</li>
+      <li>What ends the task is an <strong>internal signal</strong>: the answer feels coherent. It isn't evidence of accuracy.</li>
+      <li><strong>Predictive</strong> judgments aim at a true value, so disagreement means someone is wrong. <strong>Evaluative</strong> judgments, like sentences or grades, have no bull's-eye, but scatter still breaks fairness. The authors would grade the process, not the single result.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Measuring Error</span></div>
+  <div class="body">
+    <div>
+      <h3>Bias and noise count the same</h3>
+      <p class="idea">Overall error is bias squared plus noise squared. A given cut to either buys the same improvement.</p>
+    </div>
+    <ul class="points">
+      <li>Gauss's mean squared error, dating from 1795, is the standard yardstick. Squaring makes big misses count far more: going from 11cm off to 10cm is worth 21 times going from 1cm off to a perfect hit.</li>
+      <li>In the fictional firm GoodSell, forecasts of market share averaged 44% with a standard deviation of 10, and the truth turned out to be 34%. Bias and noise are both 10. The boss wants to see the bias before touching noise. The equation says he is wrong: the two are independent.</li>
+      <li>Bias has to be large to match noise. With a normal curve the two tie only when 84% of judgments fall on one side of the truth.</li>
+      <li>The equation covers predictions, not evaluations. Hence the advice to separate facts from values: estimate an elevator's load neutrally, then choose the safety margin.</li>
+    </ul>
+    <div class="fig">
+      <h4>Try the error equation</h4>
+      <div class="btns" id="presets">
+        <button class="btn" type="button" data-b="10" data-n="10" aria-pressed="true">GoodSell</button>
+        <button class="btn" type="button" data-b="5" data-n="10" aria-pressed="false">Halve the bias</button>
+        <button class="btn" type="button" data-b="10" data-n="5" aria-pressed="false">Halve the noise</button>
+      </div>
+      <div class="explore">
+        <svg id="bell" viewBox="0 0 380 210" role="img" aria-label="Bell curve of forecast errors. A vertical line marks zero error, the true value. The dashed curve is the original GoodSell distribution and the solid curve moves with the sliders."></svg>
+        <svg id="pyth" viewBox="0 0 200 200" role="img" aria-label="Right triangle whose short sides are bias and noise. The squares on the short sides add up to the square on the long side, which is mean squared error."></svg>
+      </div>
+      <div class="sliders">
+        <label>Bias (average error): <span id="v-bias">10</span>
+          <input id="s-bias" type="range" min="0" max="20" step="1" value="10"></label>
+        <label>Noise (standard deviation): <span id="v-noise">10</span>
+          <input id="s-noise" type="range" min="1" max="20" step="1" value="10"></label>
+      </div>
+      <div class="readout">
+        <div><b id="r-mse">200</b>overall error (MSE)</div>
+        <div><b id="r-share">50%</b>of it from bias</div>
+        <div><b id="r-side">84%</b>of forecasts above the truth</div>
+      </div>
+      <p class="cap">Compare the two halving buttons. Both give an MSE of 125. Halving the noise looks worse, because 98% of forecasts now overshoot and bias is 80% of what's left, but the average miss hasn't grown.</p>
+      <p class="src">Source: the GoodSell example in ch. 5, a fictional case. Slider positions are for exploration.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">The Analysis of Noise</span></div>
+  <div class="body">
+    <div>
+      <h3>Level noise and pattern noise</h3>
+      <p class="idea">Some judges are harsher overall. They also disagree about which cases deserve it.</p>
+    </div>
+    <ul class="points">
+      <li>In the 1981 audit, 208 judges times 16 cases gives a 3,328-cell table. Mean sentences ran from 1 year to 15.3. For the average case, the mean was 7.0 years and the standard deviation 3.4: that is the system noise.</li>
+      <li><strong>Level noise</strong>, the spread of judges' personal averages, was 2.4 years. It behaves like a personality trait.</li>
+      <li><strong>Pattern noise</strong> is the rest: each judge's own reaction to a type of case. Here it was about as large as level noise, and the squares add up again.</li>
+    </ul>
+    <div class="fig">
+      <h4>What each kind of noise does to the table</h4>
+      <div class="grids" id="grids"></div>
+      <p class="cap">Rows are judges, columns are cases ordered from mild to severe, and darker cells mean longer sentences. With level noise the rows differ but every judge ranks the cases alike. With pattern noise the rankings themselves break up. All values are illustrative.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Occasion Noise</span></div>
+  <div class="body">
+    <div>
+      <h3>You disagree with yourself</h3>
+      <p class="idea">Your answer is one draw from a cloud of answers you could have given.</p>
+    </div>
+    <ul class="points">
+      <li>Wine experts tasting the same wines blind scored just 18% identically. This second lottery picks your mood and the moment.</li>
+      <li><strong>The crowd within:</strong> Vul and Pashler found that averaging two guesses from one person beats either guess. Asked straight away, it's worth a tenth of a second opinion; after three weeks, a third; arguing against your first estimate, about half.</li>
+      <li>Triggers include mood (good moods make people more gullible), fatigue (doctors prescribe more opioids late in the day) and sequence (US asylum judges are 19% less likely to grant after two grants).</li>
+      <li>Reassuringly, you resemble yourself more than you resemble a colleague: occasion noise was the smaller part wherever it could be sized. In a tightly controlled memory study, every measured factor together explained only 11% of a person's variation.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">How Groups Amplify Noise</span></div>
+  <div class="body">
+    <div>
+      <h3>Discussion can make it worse</h3>
+      <p class="idea">Averaging independent views removes noise. Letting people hear each other first can add it back.</p>
+    </div>
+    <ul class="points">
+      <li>Salganik's music experiment ran history eight times with 72 unknown songs. When people could see download counts, rankings diverged wildly: beyond the very best and worst, early luck decided.</li>
+      <li>A single artificial up-vote raised a comment's mean rating by 25% after five months.</li>
+      <li><strong>Cascades</strong> spread because people reasonably trust those who spoke first, or don't want to look difficult. <strong>Polarisation</strong> pushes a group past its own starting point.</li>
+      <li>In the authors' jury work, deliberating juries were far noisier than "statistical juries" built by taking the median of six separate opinions. And 27% of juries landed at or above the award of their harshest member.</li>
+    </ul>
+    <div class="fig">
+      <h4>A hiring cascade</h4>
+      <div class="cascade" role="img" aria-label="Seven colleagues speak in turn. Privately they lean in different directions or have no view. Arthur speaks first for Thomas and all six others publicly say Thomas.">
+        <span class="sp"></span><span class="who">Arthur</span><span class="who">Barbara</span><span class="who">Charles</span><span class="who">David</span><span class="who">Erica</span><span class="who">Frank</span><span class="who">George</span>
+        <span class="rowlab">Privately</span><span class="p t">T</span><span class="p">?</span><span class="p j">J</span><span class="p">?</span><span class="p j">J</span><span class="p">S</span><span class="p">?</span>
+        <span class="rowlab">Out loud</span><span class="p t">T</span><span class="p t">T</span><span class="p t">T</span><span class="p t">T</span><span class="p t">T</span><span class="p t">T</span><span class="p t">T</span>
+      </div>
+      <p class="cap">Candidates are Thomas, Sam and Julie. The room looks unanimous, yet the verdict rests on one opening remark. Names are from the book; the private leanings shown beyond Arthur's, Barbara's and Charles's are illustrative.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="p3">
+  <span class="label partno">Part III · Chapters 9–12</span>
+  <h2>Noise in predictive judgments</h2>
+  <p class="lede">Predictions can be checked, so they show how much noise costs. The measure used is percent concordant (PC): the chance that the person rated higher really does come out ahead. 50% is a coin toss.</p>
+</div>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Judgments and Models</span></div>
+  <div class="body">
+    <div>
+      <h3>The model of you beats you</h3>
+      <p class="idea">Most of what feels like subtlety in expert judgment turns out to be noise.</p>
+    </div>
+    <ul class="points">
+      <li>Paul Meehl argued in 1954 that simple formulas generally outdo clinicians at combining information. A 2000 review of 136 studies: formulas won 63, 65 were ties, humans won 8.</li>
+      <li>Lewis Goldberg built simple statistical models of individual judges and found the crude copy usually predicted better than the original. In one replication the model beat its human for all 98 participants. A model strips out your subtleties and your noise, and losing the noise wins.</li>
+      <li>Yu and Kuncel went further with 847 executive candidates, testing 10,000 linear formulas with random weights. These beat the human experts 77% of the time in one sample and 100% in two others.</li>
+      <li>The <strong>illusion of validity</strong> confuses how good a case looks with how it will turn out.</li>
+    </ul>
+    <div class="fig">
+      <h4>How often the better-rated person really does better</h4>
+      <div class="bars" id="ladder"></div>
+      <div class="axis" aria-hidden="true"><span style="left:0">50% coin toss</span><span style="left:50%">75%</span><span style="left:100%">100%</span></div>
+      <p class="src">Source: Yu &amp; Kuncel study (ch. 9, 10); review of personnel selection (ch. 11); interview studies (ch. 24)</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Noiseless Rules</span></div>
+  <div class="body">
+    <div>
+      <h3>From back-of-envelope to machine learning</h3>
+      <p class="idea">Rules at both ends of the sophistication scale beat people, and being noise-free is a large part of why.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Equal weights.</strong> In 1974 Robyn Dawes showed that simply adding standardised predictors did about as well as regression. Regression fits flukes in its sample: in one case .69 shrank to .57 on new data, while equal weights managed .60.</li>
+      <li><strong>Frugal rules.</strong> A two-input bail score (age, missed court dates) did better than virtually all human judges at predicting flight.</li>
+      <li><strong>Machine learning.</strong> Trained on 758,027 bail decisions, Mullainathan's model could cut crime by up to 24% with the same number jailed, or detention by up to 42% with no more crime. The authors report 41% fewer people of colour jailed at the judges' crime rate, while warning that algorithms can also entrench discrimination.</li>
+      <li>Meehl's <strong>broken leg</strong>: override a model when you hold decisive information it couldn't consider, and not because you dislike its answer.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Objective Ignorance</span></div>
+  <div class="body">
+    <div>
+      <h3>The biggest limit is the world</h3>
+      <p class="idea">What can't be known caps every forecast, and gut feeling acts as if it doesn't.</p>
+    </div>
+    <ul class="points">
+      <li>Ignorance has two parts: what cannot be known, and what could be known but isn't. Believing you can predict anyway is the <strong>denial of ignorance</strong>.</li>
+      <li>Philip Tetlock tracked almost 300 experts over two decades. The average roughly matched a chimp throwing darts, and those with the clearest theories were the most confident and the least accurate.</li>
+      <li>Models win, but modestly: across the review's studies, clinicians were right 68% of the time and formulas 73%. A heart-attack model with more than 2,400 variables still found only 30% actual heart attacks in its top risk decile.</li>
+      <li>Why bother, then? Nobody would pick a 59% lottery ticket over a 65% one at the same price. The real price is giving up the warm internal signal.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">The Valley of the Normal</span></div>
+  <div class="body">
+    <div>
+      <h3>Why everything looks explainable afterwards</h3>
+      <p class="idea">Events we could not have predicted still feel understood once they've happened.</p>
+    </div>
+    <ul class="points">
+      <li>In the Fragile Families challenge, 160 teams used thousands of data points on almost five thousand children to predict outcomes at fifteen. The best model reached .22 for eviction (PC 57%). Across social psychology a typical correlation is about .21.</li>
+      <li>Memory finds a cause and stops, so the result feels inevitable. The opposite outcome would have had an equally good story.</li>
+      <li><strong>Causal thinking</strong> is easy and tells stories about cases. <strong>Statistical thinking</strong>, the outside view, takes effort and sees cases as members of a class. Noise is visible only to the second.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Causally, noise is nowhere; statistically, it is everywhere.”</blockquote>
+      <span class="label">Kahneman, Sibony and Sunstein, ch. 17</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART IV ============ -->
+<div class="part" id="p4">
+  <span class="label partno">Part IV · Chapters 13–17</span>
+  <h2>How noise happens</h2>
+  <p class="lede">The machinery of fast thinking produces shared error when everyone trips the same way, and noise when each person trips differently.</p>
+</div>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Heuristics, Biases, and Noise</span></div>
+  <div class="body">
+    <div>
+      <h3>Three families of bias</h3>
+      <p class="idea">Psychological bias becomes statistical bias when shared, and noise when it differs from person to person.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Substitution:</strong> we answer an easier question. Asked how probable something is, we judge how similar it seems, and ignore base rates. With CEO turnover near 15% a year, about 72% of new CEOs last two years, a number few readers think to seek.</li>
+      <li><strong>Conclusion bias:</strong> we start from what we want. Anchoring belongs here too.</li>
+      <li><strong>Excessive coherence:</strong> first impressions stick. The same four adjectives about a candidate read very differently depending on which comes first.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">The Matching Operation</span></div>
+  <div class="body">
+    <div>
+      <h3>Too extreme, and too coarse</h3>
+      <p class="idea">We translate intensities across scales effortlessly, and the translation ignores how weak the link is.</p>
+    </div>
+    <ul class="points">
+      <li>Told only that Julie read fluently at four, people guess a college GPA of 3.7 or 3.8. They've matched one percentile to another as though reading age predicted grades perfectly.</li>
+      <li>Matching predictions are <strong>nonregressive</strong>: they forget that extremes drift toward the mean, as with the hit director's next film.</li>
+      <li>People reliably label only about seven categories on a scale. Comparing cases side by side discriminates far better, though it costs more effort.</li>
+    </ul>
+    <div class="fig">
+      <h4>Correcting a matching prediction</h4>
+      <svg viewBox="0 0 440 112" role="img" aria-label="Number line of grade point average from 3.0 to 4.0. The class mean is about 3.2, the intuitive matching guess is 3.8, and the corrected prediction, 20 percent of the way from mean to guess, is about 3.3.">
+        <line x1="20" y1="66" x2="420" y2="66" stroke="var(--rule)" stroke-width="2"/>
+        <line x1="100" y1="66" x2="340" y2="66" stroke="var(--ash)" stroke-width="2" stroke-dasharray="4 4"/>
+        <line x1="100" y1="66" x2="148" y2="66" stroke="var(--pencil)" stroke-width="6"/>
+        <circle cx="100" cy="66" r="7" fill="var(--noise)"/>
+        <circle cx="148" cy="66" r="8" fill="var(--pencil)" stroke="var(--ink)" stroke-width="1.5"/>
+        <circle cx="340" cy="66" r="7" fill="var(--bias)"/>
+        <text x="96" y="46" text-anchor="end" font-size="13">mean 3.2</text>
+        <text x="148" y="26" text-anchor="middle" font-size="13" style="fill:var(--ink)">best guess ≈3.3</text>
+        <path d="M148 32 V54" stroke="var(--ink-3)" stroke-width="1"/>
+        <text x="340" y="46" text-anchor="middle" font-size="13">matching 3.8</text>
+        <text x="20" y="92" font-size="12">3.0</text><text x="420" y="92" text-anchor="end" font-size="12">4.0</text>
+      </svg>
+      <p class="cap">Start from the outside-view average, then move toward your intuition only in proportion to the evidence's real correlation with the outcome. The authors put reading age at .20 at most, so you travel a fifth of the way.</p>
+      <p class="src">Source: Appendix C</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Scales</span></div>
+  <div class="body">
+    <div>
+      <h3>Jurors agree on outrage and not on dollars</h3>
+      <p class="idea">Much disagreement lies in the ruler, not in what people think.</p>
+    </div>
+    <ul class="points">
+      <li>In Kahneman, Sunstein and Schkade's study, 899 people rated injury cases on outrage, punitive intent or dollars. Mean outrage and punitive intent correlated at .98. People swapped "how much punishment?" for "how angry am I?"</li>
+      <li>A dollar scale has no top and no natural reference, so the first number you pick is arbitrary, and later numbers keep in proportion to it. Convert awards to ranks and most of the disagreement disappears.</li>
+      <li>US law bars telling juries what other cases got. The authors argue that this assumes an ability people lack, and that an agreed anchor case would tie the scale down.</li>
+    </ul>
+    <div class="fig">
+      <h4>Share of variance that is noise, same cases, different scale</h4>
+      <div class="bars">
+        <div class="bar" style="--c:var(--ash)"><div class="row"><span>Punitive intent, 0–6</span><b>51%</b></div><div class="track"><div class="fill" style="width:51%"></div></div></div>
+        <div class="bar" style="--c:var(--ash)"><div class="row"><span>Outrage, 0–6</span><b>71%</b></div><div class="track"><div class="fill" style="width:71%"></div></div></div>
+        <div class="bar" style="--c:var(--bias)"><div class="row"><span>Damages in dollars</span><b>94%</b></div><div class="track"><div class="fill" style="width:94%"></div></div></div>
+        <div class="bar" style="--c:var(--pencil)"><div class="row"><span>Same dollar awards, turned into ranks</span><b>49%</b></div><div class="track"><div class="fill" style="width:49%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Patterns</span></div>
+  <div class="body">
+    <div>
+      <h3>Your judgment personality</h3>
+      <p class="idea">Pattern noise isn't random. It's as personal and persistent as character.</p>
+    </div>
+    <ul class="points">
+      <li>Give Julie a messier life story and people pick different cues, so disagreement grows.</li>
+      <li>Pattern error splits into a stable part and a passing part (occasion noise). The stable part comes from your history: a case reminds you of a relative, and would again next week.</li>
+      <li>Judges, like personalities, have signature reactions. That is delightful in a friend and an error in a professional.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">The Sources of Noise</span></div>
+  <div class="body">
+    <div>
+      <h3>The biggest part is the one they missed</h3>
+      <p class="idea">The authors began by thinking of residual noise as random. It turned out to be mostly stable and personal.</p>
+    </div>
+    <ul class="points">
+      <li>Bail models of 173 judges applied to 141,833 cases showed stable pattern noise at 26% of total variance against 7% for level noise.</li>
+      <li>This matters because level noise is the only kind organisations can sometimes monitor without an audit. Equalising average severity leaves most of the problem in place.</li>
+      <li>Noise escapes notice because bias makes a good story after a failure, and noise can't appear in a story about one case.</li>
+    </ul>
+    <div class="fig">
+      <h4>How error breaks down</h4>
+      <div class="seg" title="Overall error"><i style="width:100%;background:var(--ink)"></i></div>
+      <div class="seg"><i style="width:36%;background:var(--bias)"></i><i style="width:64%;background:var(--ink-3)"></i></div>
+      <div class="seg"><i style="width:36%;background:transparent"></i><i style="width:16%;background:var(--wood)"></i><i style="width:48%;background:var(--ink-3)"></i></div>
+      <div class="seg"><i style="width:36%;background:transparent"></i><i style="width:16%;background:transparent"></i><i style="width:36%;background:var(--pencil)"></i><i style="width:12%;background:var(--ash)"></i></div>
+      <div class="key"><span><i style="background:var(--ink)"></i>MSE</span><span><i style="background:var(--bias)"></i>bias²</span><span><i style="background:var(--ink-3)"></i>system noise²</span><span><i style="background:var(--wood)"></i>level²</span><span><i style="background:var(--pencil)"></i>stable pattern²</span><span><i style="background:var(--ash)"></i>occasion²</span></div>
+      <p class="cap">Each row splits the one above. Widths are illustrative; the ordering follows the authors' tentative conclusion.</p>
+      <h4>Level against pattern, measured</h4>
+      <div class="bars">
+        <div class="bar"><div class="row"><span>Insurance underwriters</span><b>20 / 80</b></div><div class="seg"><i style="width:20%;background:var(--wood)"></i><i style="width:80%;background:var(--ink-3)"></i></div></div>
+        <div class="bar"><div class="row"><span>Bail judges (modelled)</span><b>21 / 79</b></div><div class="seg"><i style="width:21%;background:var(--wood)"></i><i style="width:79%;background:var(--ink-3)"></i></div></div>
+        <div class="bar"><div class="row"><span>Punitive damages, three scales</span><b>~38 / ~62</b></div><div class="seg"><i style="width:38%;background:var(--wood)"></i><i style="width:62%;background:var(--ink-3)"></i></div></div>
+        <div class="bar"><div class="row"><span>Federal sentencing</span><b>slightly under half level</b></div><div class="seg"><i style="width:47%;background:var(--wood)"></i><i style="width:53%;background:var(--ink-3)"></i></div></div>
+      </div>
+      <div class="key"><span><i style="background:var(--wood)"></i>level noise, % of system noise</span><span><i style="background:var(--ink-3)"></i>pattern noise</span></div>
+      <p class="src">Source: ch. 10, 17. Bail split: 79% pattern as reported. Federal sentencing bar drawn approximately; the book gives no exact figure.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART V ============ -->
+<div class="part" id="p5">
+  <span class="label partno">Part V · Chapters 18–25</span>
+  <h2>Improving judgments</h2>
+  <p class="lede">First audit, then pick better judges, then adopt hygiene. Five case studies each feature one strategy, and a final protocol combines them.</p>
+</div>
+
+<article class="chapter" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">Better Judges for Better Judgments</span></div>
+  <div class="body">
+    <div>
+      <h3>Skill, intelligence, and how you think</h3>
+      <p class="idea">The best judges keep looking for reasons they might be wrong.</p>
+    </div>
+    <ul class="points">
+      <li>Where outcomes can be checked, you can identify true experts. Elsewhere you have <strong>respect-experts</strong>, trusted because peers respect their training, experience and confident stories.</li>
+      <li>General mental ability predicts performance, at about .50 for complex jobs, and keeps mattering even inside the top 1%.</li>
+      <li>The one style measure found to predict forecasting was <strong>actively open-minded thinking</strong>: seeking out evidence against your own view.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch19">
+  <div class="gutter"><span class="chno">19</span><span class="label">Debiasing and Decision Hygiene</span></div>
+  <div class="body">
+    <div>
+      <h3>Treatment versus handwashing</h3>
+      <p class="idea">Debiasing needs you to know the error in advance. Hygiene doesn't.</p>
+    </div>
+    <ul class="points">
+      <li>Debiasing can come after the fact (the UK Treasury's <em>Green Book</em> adjusts for optimism) or before it, through nudges like pension auto-enrolment or through training. Training is hard to carry across fields.</li>
+      <li>So the authors propose a <strong>decision observer</strong>, invited by the decision makers, who uses a checklist to spot signs of bias in real time. They say the evidence so far is informal.</li>
+      <li><strong>Decision hygiene</strong> works like handwashing. You prevent errors you'll never identify, so the win is invisible and the routine is thankless.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch20">
+  <div class="gutter"><span class="chno">20</span><span class="label">Sequencing Information in Forensic Science</span></div>
+  <div class="body">
+    <div>
+      <h3>Hygiene 1: control what people see, and when</h3>
+      <p class="idea">Accurate information can still damage a judgment if it arrives too early.</p>
+    </div>
+    <ul class="points">
+      <li>After the 2004 Madrid train bombings, which killed 192 people, FBI examiners matched a print to Oregon lawyer Brandon Mayfield. He had not left the US in a decade. He was held for two weeks and later paid $2 million. A respected first examiner set off a cascade.</li>
+      <li>Itiel Dror re-showed examiners their own past prints with stories attached. Four of five changed an identification in one study. In another, 4 of 24 decisions moved. With no story at all, a 2012 study still found about one decision in ten altered after seven months.</li>
+      <li>A 2011 FBI study put false positives near one in six hundred. That is low, and much higher than jurors would likely believe.</li>
+      <li>The fix: <strong>linear sequential unmasking</strong>. Reveal only what's needed, document each step before seeing the next, and keep verifiers unaware of the first conclusion.</li>
+    </ul>
+    <div class="fig">
+      <h4>Everyone's noisy but me</h4>
+      <div class="bars">
+        <div class="bar" style="--c:var(--ash)"><div class="row"><span>Cognitive bias is a concern in forensic science</span><b>71%</b></div><div class="track"><div class="fill" style="width:71%"></div></div></div>
+        <div class="bar" style="--c:var(--bias)"><div class="row"><span>My own judgments are influenced by it</span><b>26%</b></div><div class="track"><div class="fill" style="width:26%"></div></div></div>
+      </div>
+      <p class="src">Survey of 400 forensic scientists in 21 countries, ch. 20</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch21">
+  <div class="gutter"><span class="chno">21</span><span class="label">Selection and Aggregation in Forecasting</span></div>
+  <div class="body">
+    <div>
+      <h3>Hygiene 2: pick well, then average</h3>
+      <p class="idea">Averaging independent judgments is the closest thing to a guaranteed improvement.</p>
+    </div>
+    <ul class="points">
+      <li>Forecasters are overconfident: returns landed inside US finance chiefs' 80% ranges only 36% of the time.</li>
+      <li>Averaging divides noise by the square root of the number of judgments. It does nothing for shared bias, which is why independence matters.</li>
+      <li>Options include a select crowd of top performers, prediction markets, and the Delphi method with its one-meeting version: estimate, talk, estimate.</li>
+      <li>In the Good Judgment Project, tens of thousands of volunteers gave probabilities, scored on calibration and on taking a stand. About 2% stood out as <strong>superforecasters</strong>, reportedly beating intelligence analysts who could read secret data.</li>
+      <li>Their edge is less raw intelligence than habit: breaking questions into parts, starting from base rates, updating relentlessly. Tetlock calls this <strong>perpetual beta</strong>.</li>
+      <li>Training, teaming and selection all improved accuracy. Satopää and colleagues found that all three worked mainly by cutting noise, even the training built to fight bias.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The square-root law</h4>
+        <svg id="sqrt" viewBox="0 0 400 220" role="img" aria-label="Curve of remaining noise against number of judgments averaged. One judgment leaves 100 percent, four leave 50 percent, twenty-five leave 20 percent and one hundred leave 10 percent."></svg>
+        <p class="cap">Four judgments halve the noise, if truly independent.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch22">
+  <div class="gutter"><span class="chno">22</span><span class="label">Guidelines in Medicine</span></div>
+  <div class="body">
+    <div>
+      <h3>Hygiene 3: decompose into simple sub-judgments</h3>
+      <p class="idea">A good guideline replaces one hard judgment with several easy ones.</p>
+    </div>
+    <ul class="points">
+      <li>Early angiogram readers disagreed 31% of the time on whether a major vessel was more than 70% blocked. Mammogram false negatives ranged from 0% to over 50% across radiologists in one study.</li>
+      <li>Virginia Apgar's 1952 newborn score rates colour, pulse, reflexes, muscle tone and breathing from 0 to 2 each. Since a total of 7 or more signals good health, the judgment is now five small steps and a sum. Other scores work similarly.</li>
+      <li>Psychiatry is the hard case. Early studies found two psychiatrists agreeing just 50–57% of the time, and DSM revisions have helped only modestly.</li>
+    </ul>
+    <div class="fig">
+      <h4>Cancer screening orders through the clinic day</h4>
+      <svg viewBox="0 0 420 190" role="img" aria-label="Line chart of screening order rates: 63.7 percent at 8 a.m., 48.7 percent at 11 a.m., 56.2 percent at noon and 47.8 percent at 5 p.m.">
+        <g stroke="var(--rule)"><line x1="40" y1="30" x2="400" y2="30"/><line x1="40" y1="90" x2="400" y2="90"/><line x1="40" y1="150" x2="400" y2="150"/></g>
+        <text x="34" y="34" text-anchor="end" font-size="12">65%</text><text x="34" y="94" text-anchor="end" font-size="12">55%</text><text x="34" y="154" text-anchor="end" font-size="12">45%</text>
+        <polyline points="50,38 158,128 194,83 374,133" fill="none" stroke="var(--bias)" stroke-width="2.5"/>
+        <g fill="var(--bias)"><circle cx="50" cy="38" r="4.5"/><circle cx="158" cy="128" r="4.5"/><circle cx="194" cy="83" r="4.5"/><circle cx="374" cy="133" r="4.5"/></g>
+        <text x="60" y="34" font-size="13" style="fill:var(--ink)">63.7</text><text x="150" y="148" text-anchor="middle" font-size="13" style="fill:var(--ink)">48.7</text><text x="202" y="76" font-size="13" style="fill:var(--ink)">56.2</text><text x="374" y="122" text-anchor="middle" font-size="13" style="fill:var(--ink)">47.8</text>
+        <g font-size="12" text-anchor="middle"><text x="50" y="178">8 a.m.</text><text x="158" y="178">11 a.m.</text><text x="204" y="178">noon</text><text x="374" y="178">5 p.m.</text></g>
+      </svg>
+      <p class="cap">A possible explanation is that doctors run behind and drop preventive talk. Lines join the four times the book reports.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch23">
+  <div class="gutter"><span class="chno">23</span><span class="label">Defining the Scale in Performance Ratings</span></div>
+  <div class="body">
+    <div>
+      <h3>Hygiene 4: a shared scale, anchored in real cases</h3>
+      <p class="idea">Most of what a performance rating measures is the rater.</p>
+    </div>
+    <ul class="points">
+      <li>In 360-degree reviews, true performance usually explains 20–30% of variance. The rest, 70–80%, is noise. It stays high even for purely developmental feedback.</li>
+      <li>Deloitte counted 2 million hours a year on its 65,000 people. One industrial firm rated 98% of managers as fully meeting expectations.</li>
+      <li>Rankings beat ratings, because lenient and tough raters use the same ranks. The flaw in forced ranking is the forcing: in a random ten, the chance of exactly two top-20% performers is just 30%.</li>
+      <li>The authors favour <strong>frame-of-reference training</strong> and <strong>case scales</strong>: raters compare each person with shared anchor examples. It works, and has seldom caught on.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch24">
+  <div class="gutter"><span class="chno">24</span><span class="label">Structure in Hiring</span></div>
+  <div class="body">
+    <div>
+      <h3>Hygiene 5: break it up and delay the verdict</h3>
+      <p class="idea">The unstructured interview is a confident ritual with modest predictive power.</p>
+    </div>
+    <ul class="points">
+      <li>First minutes drive outcomes, down to the handshake, and interviewers then steer toward confirmation. In one experiment candidates answered at random and no interviewer noticed.</li>
+      <li>Google found its interviews predicted nothing, then rebuilt them on three principles. <strong>Decomposition:</strong> four defined assessments. <strong>Independence:</strong> behavioural questions scored against a rubric, with ratings filed before colleagues talk. <strong>Delayed holistic judgment:</strong> a committee decides at the end, anchored on the average. Four interviews replaced as many as twenty-five.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch25">
+  <div class="gutter"><span class="chno">25</span><span class="label">The Mediating Assessments Protocol</span></div>
+  <div class="body">
+    <div>
+      <h3>Options are like candidates</h3>
+      <p class="idea">Run a strategic decision the way a good structured interview runs.</p>
+    </div>
+    <ul class="points">
+      <li>In the book's composite case, a CEO, Joan, applies this to a possible acquisition. It mostly changes the agenda.</li>
+      <li>The analysts' report comes back without the usual rosy unity, as some ratings are strong and others aren't. That unevenness is the benefit.</li>
+    </ul>
+    <div class="fig">
+      <h4>The protocol, step by step</h4>
+      <ol class="flow">
+        <li><b>List the assessments</b>Short, complete, non-overlapping, agreed before any analysis.</li>
+        <li><b>Use the outside view</b>Base rates and reference classes; ratings relative to peers.</li>
+        <li><b>Keep them apart</b>Separate analysts; every chapter ends in its own rating, with awkward facts kept in.</li>
+        <li><b>One agenda item each</b>The board reviews assessments in turn and holds back its overall view.</li>
+        <li><b>Estimate, talk, estimate</b>Private anonymous rating, discussion of the gaps, then a second rating.</li>
+        <li class="last"><b>Then decide</b>With the profile in view, judgment takes over.</li>
+      </ol>
+      <p class="cap">Joan doesn't simply average the ratings. People game formulas. In the authors' phrase, “delay intuition, but don't ban it.”</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART VI ============ -->
+<div class="part" id="p6">
+  <span class="label partno">Part VI · Chapters 26–28</span>
+  <h2>Optimal noise</h2>
+  <p class="lede">The right amount of noise isn't zero. Still, the authors conclude that nearly every reason to tolerate today's levels is either weak or specific to one crude remedy.</p>
+</div>
+
+<article class="chapter" id="ch26">
+  <div class="gutter"><span class="chno">26</span><span class="label">The Costs of Noise Reduction</span></div>
+  <div class="body">
+    <div>
+      <h3>When the cure is too blunt</h3>
+      <p class="idea">If one remedy is bad, the authors say, look for a better one and don't settle for the noise.</p>
+    </div>
+    <ul class="points">
+      <li>Cost is sometimes a fair objection: nobody needs five teachers grading each essay. It's often an excuse too.</li>
+      <li>Rules can be consistently wrong, as with three-strikes laws.</li>
+      <li>Algorithms can be noiseless and biased, through predictors tied to race or gender or skewed training data. The authors accept the risk and argue that algorithms can be tested in ways human minds can't, and that good ones can beat people on both accuracy and fairness. They stress "can", not "will".</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch27">
+  <div class="gutter"><span class="chno">27</span><span class="label">Dignity</span></div>
+  <div class="body">
+    <div>
+      <h3>Five more objections, taken seriously</h3>
+      <p class="idea">Most of these target rigid rules, and not the milder forms of hygiene.</p>
+    </div>
+    <div class="objs">
+      <div class="tk"><b>Dignity</b><span>People want an individual hearing. True, the authors say, but it isn't worth more deaths and unfairness. Three judges hearing a case still give one.</span></div>
+      <div class="tk"><b>Changing values</b><span>Rigid rules can freeze old norms. Rules can be revisited, though, and shared scales and aggregation still adapt.</span></div>
+      <div class="tk"><b>Gaming</b><span>Clear rules have edges to slip past, as with tax. The question is how much evasion against how much noise.</span></div>
+      <div class="tk"><b>Deterrence</b><span>A penalty lottery scares the risk-averse and not the risk-seeking. Better, they suggest, to raise the penalty and drop the noise.</span></div>
+      <div class="tk"><b>Morale and creativity</b><span>Taking away discretion can feel like becoming a cog. Pick methods like structuring that keep people thinking.</span></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch28">
+  <div class="gutter"><span class="chno">28</span><span class="label">Rules or Standards?</span></div>
+  <div class="body">
+    <div>
+      <h3>Who does the thinking, and when</h3>
+      <p class="idea">Rules settle the judgment in advance. Standards hand it to whoever applies them.</p>
+    </div>
+    <div class="compare">
+      <div><h5>Rules</h5><ul><li>"The limit is 65 mph"</li><li>Remove discretion, so reduce noise</li><li>Costly to write, cheap to apply</li><li>Suit many repeat decisions and agents you can't fully trust</li><li>Can drive discretion underground: three-strikes prosecutors quietly avoided felony charges</li></ul></div>
+      <div><h5>Standards</h5><ul><li>"Drive prudently"</li><li>Delegate judgment, so invite noise</li><li>Cheap to write, costly to apply</li><li>Suit trusted agents, or groups that can't agree on specifics</li><li>Need hygiene around them to stay consistent</li></ul></div>
+    </div>
+    <ul class="points">
+      <li>The choice comes down to the cost of decisions and the cost of errors. Facebook backed its public standards with a private rulebook of about 12,000 words.</li>
+      <li>US disability benefits moved to a matrix after look-alike claimants got different results. Jerry Mashaw named this bureaucratic justice.</li>
+      <li>The authors argue that the law should do far more about noise, and that it can sometimes count as a rights violation.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ CONCLUSION ============ -->
+<section id="conclusion">
+  <div class="sec-head">
+    <span class="label">Review and conclusion</span>
+    <h2>Taking noise seriously</h2>
+  </div>
+  <div class="twoup">
+    <div class="prose">
+      <p>The closing chapter reduces the book to six principles of hygiene. Judgment is for accuracy, not self-expression. Think statistically. Split the problem. Hold off intuition. Collect independent views. Prefer comparisons.</p>
+      <p>The epilogue pictures organisations where noise audits are routine and disagreement is open.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Wherever there is judgment, there is noise, and more of it than you think.”</blockquote>
+      <span class="label">Kahneman, Sibony and Sunstein, ch. 2</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the book's practices and appendices</span>
+    <h2>The toolkit</h2>
+    
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Measure</h3>
+      <div class="tk"><b>Run a noise audit</b><span>Realistic cases, all qualified staff, working separately. Call it a decision-making study. Don't say "noise" to participants.</span></div>
+      <div class="tk"><b>Record expectations first</b><span>Have executives state the disagreement they expect and would accept, in writing, before results arrive.</span></div>
+    </div>
+    <div class="col">
+      <h3>Decide</h3>
+      <div class="tk"><b>Collect views before discussion</b><span>Written or anonymous, so the first speaker doesn't set the outcome.</span></div>
+      <div class="tk"><b>Ask for the base rate</b><span>How do cases like this usually go? Start there, then adjust.</span></div>
+      <div class="tk"><b>Regress your forecast</b><span>Move from the mean toward your intuition only as far as the evidence's correlation allows.</span></div>
+    </div>
+    <div class="col">
+      <h3>Alone</h3>
+      <div class="tk"><b>Consult your crowd within</b><span>Guess again later, or assume you were wrong and re-estimate, then average.</span></div>
+      <div class="tk"><b>Compare, don't label</b><span>Rank essays or candidates against each other, or against anchor cases.</span></div>
+      <div class="tk"><b>Stay in perpetual beta</b><span>Try, fail, analyse, adjust. Treat changing your mind as part of the job.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Daniel Kahneman, Olivier Sibony and Cass R. Sunstein, <em>Noise: A Flaw in Human Judgment</em> (Little, Brown Spark, 2021). Figures are as reported in the book. Target positions, the sentencing grids, the error breakdown widths and part of the cascade are illustrative. Diagrams were drawn for this page, and charts are drawn to the book's numbers. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function seeded(s) { return function () { s = (s * 9301 + 49297) % 233280; return s / 233280; }; }
+  function gauss(r) { return Math.sqrt(-2 * Math.log(1 - r() * .999)) * Math.cos(2 * Math.PI * r()); }
+
+  /* --- Four targets --- */
+  var tg = document.getElementById("targets");
+  if (tg) {
+    var teams = [
+      ["Team A", "accurate", 0, 0, 6],
+      ["Team B", "biased", 34, -30, 6],
+      ["Team C", "noisy", 0, 0, 33],
+      ["Team D", "biased and noisy", 40, -36, 22]
+    ];
+    var rings = [];
+    teams.forEach(function (t, i) {
+      var fig = document.createElement("figure");
+      var svg = el("svg", { viewBox: "0 0 200 200", role: "img", "aria-label": t[0] + ": " + t[1] + " shots on a target" }, fig);
+      var bg = el("rect", { x: 4, y: 4, width: 192, height: 192, rx: 4, fill: "var(--paper-2)" }, svg);
+      var g = el("g", {}, svg);
+      [86, 62, 38, 14].forEach(function (r, j) {
+        el("circle", { cx: 100, cy: 100, r: r, fill: j === 3 ? "var(--bias)" : (j % 2 ? "var(--card)" : "var(--paper)"), stroke: "var(--ink-3)", "stroke-width": 1 }, g);
+      });
+      rings.push(g);
+      var r = seeded(31 + i * 17);
+      for (var k = 0; k < 5; k++) {
+        var x = 100 + t[2] + gauss(r) * t[4], y = 100 + t[3] + gauss(r) * t[4];
+        x = Math.max(12, Math.min(188, x)); y = Math.max(12, Math.min(188, y));
+        el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: 6.5, fill: "var(--ink)", stroke: "var(--paper)", "stroke-width": 1.5 }, svg);
+      }
+      var cap = document.createElement("figcaption");
+      cap.innerHTML = t[0] + "<span>" + t[1] + "</span>";
+      fig.appendChild(cap);
+      tg.appendChild(fig);
+    });
+    var flip = document.getElementById("flip");
+    flip.addEventListener("click", function () {
+      var on = flip.getAttribute("aria-pressed") !== "true";
+      flip.setAttribute("aria-pressed", on);
+      flip.textContent = on ? "Look at the front of the target" : "Look at the back of the target";
+      rings.forEach(function (g) { g.style.display = on ? "none" : ""; });
+    });
+  }
+
+  /* --- Error explorer --- */
+  var bell = document.getElementById("bell"), pyth = document.getElementById("pyth");
+  var sb = document.getElementById("s-bias"), sn = document.getElementById("s-noise");
+  function phi(z) { // normal CDF
+    var t = 1 / (1 + .2316419 * Math.abs(z));
+    var d = .3989423 * Math.exp(-z * z / 2);
+    var p = d * t * (.3193815 + t * (-.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+    return z > 0 ? 1 - p : p;
+  }
+  function curve(m, s, fill) {
+    var X = function (v) { return 14 + (v + 30) / 90 * 352; };
+    var pts = [], peak = 1 / 5 * .4;
+    for (var v = -30; v <= 60; v += 1) {
+      var h = Math.exp(-.5 * Math.pow((v - m) / s, 2)) / s * .4;
+      pts.push(X(v).toFixed(1) + "," + (172 - Math.min(h / peak, 1.06) * 142).toFixed(1));
+    }
+    return { line: "M" + pts.join(" L"), area: "M" + X(-30) + ",172 L" + pts.join(" L") + " L" + X(60) + ",172 Z", X: X };
+  }
+  function draw() {
+    var b = +sb.value, n = +sn.value;
+    document.getElementById("v-bias").textContent = b;
+    document.getElementById("v-noise").textContent = n;
+    var mse = b * b + n * n;
+    document.getElementById("r-mse").textContent = mse;
+    document.getElementById("r-share").textContent = Math.round(b * b / mse * 100) + "%";
+    document.getElementById("r-side").textContent = Math.round(phi(b / n) * 100) + "%";
+    while (bell.firstChild) bell.removeChild(bell.firstChild);
+    var base = curve(10, 10), cur = curve(b, n), X = cur.X;
+    el("path", { d: cur.area, fill: "var(--ash)", opacity: .35 }, bell);
+    el("path", { d: base.line, fill: "none", stroke: "var(--ink-3)", "stroke-width": 1.5, "stroke-dasharray": "4 4" }, bell);
+    el("path", { d: cur.line, fill: "none", stroke: "var(--noise)", "stroke-width": 2.5 }, bell);
+    el("line", { x1: 14, x2: 366, y1: 172, y2: 172, stroke: "var(--rule)", "stroke-width": 1.5 }, bell);
+    el("line", { x1: X(0), x2: X(0), y1: 14, y2: 172, stroke: "var(--pencil)", "stroke-width": 3 }, bell);
+    if (b > 0) el("line", { x1: X(0), x2: X(b), y1: 186, y2: 186, stroke: "var(--bias)", "stroke-width": 4 }, bell);
+    var t = el("text", { x: X(0), y: 11, "text-anchor": "middle", "font-size": 13 }, bell); t.textContent = "truth";
+    [-20, 0, 20, 40].forEach(function (v) {
+      var l = el("text", { x: X(v), y: 204, "text-anchor": "middle", "font-size": 12 }, bell);
+      l.textContent = (v > 0 ? "+" : "") + v;
+    });
+
+    while (pyth.firstChild) pyth.removeChild(pyth.firstChild);
+    var s = 3, x0 = 70, y0 = 130, N = n * s, B = b * s;
+    var A = [x0 + N, y0], C = [x0, y0 - B];
+    var P = [B, -N];
+    el("polygon", { points: [A, C, [C[0] + P[0], C[1] + P[1]], [A[0] + P[0], A[1] + P[1]]].map(function (p) { return p.join(","); }).join(" "), fill: "var(--ink)", opacity: .86 }, pyth);
+    el("rect", { x: x0, y: y0, width: N, height: N, fill: "var(--ash)" }, pyth);
+    if (B) el("rect", { x: x0 - B, y: y0 - B, width: B, height: B, fill: "var(--bias)" }, pyth);
+    function lab(x, y, tx, col, min, size) {
+      if (size < min) return;
+      var q = el("text", { x: x, y: y, "text-anchor": "middle", "dominant-baseline": "middle", "font-size": 11 }, pyth);
+      q.style.fill = col; q.textContent = tx;
+    }
+    lab(x0 + N / 2, y0 + N / 2, "noise²", "#1b1b1d", 28, N);
+    lab(x0 - B / 2, y0 - B / 2, "bias²", "#fff", 28, B);
+    lab((A[0] + C[0] + P[0]) / 2, (A[1] + C[1] + P[1]) / 2, "MSE", "var(--paper)", 0, 1);
+    document.querySelectorAll("#presets .btn").forEach(function (x) {
+      x.setAttribute("aria-pressed", (+x.dataset.b === b && +x.dataset.n === n));
+    });
+  }
+  if (bell && pyth) {
+    sb.addEventListener("input", draw); sn.addEventListener("input", draw);
+    document.querySelectorAll("#presets .btn").forEach(function (x) {
+      x.addEventListener("click", function () { sb.value = x.dataset.b; sn.value = x.dataset.n; draw(); });
+    });
+    draw();
+  }
+
+  /* --- Sentencing grids (illustrative) --- */
+  var grids = document.getElementById("grids");
+  if (grids) {
+    var J = 6, C = 8, r2 = seeded(77);
+    var lvl = [], pat = [];
+    for (var j = 0; j < J; j++) { lvl.push((j - 2.5) * .15 + (r2() - .5) * .08); pat.push([]); for (var c = 0; c < C; c++) pat[j].push((r2() - .5) * .62); }
+    var cols = [
+      ["No noise", "Every judge gives every case the same sentence.", function () { return 0; }],
+      ["Level noise", "Some rows run dark, others light.", function (j) { return lvl[j]; }],
+      ["Level + pattern", "Judges now rank the cases differently.", function (j, c) { return lvl[j] + pat[j][c]; }]
+    ];
+    cols.forEach(function (d) {
+      var f = document.createElement("figure");
+      var svg = el("svg", { viewBox: "0 0 " + (C * 24) + " " + (J * 24), role: "img", "aria-label": d[0] + " grid of judges by cases" }, f);
+      for (var j = 0; j < J; j++) for (var c = 0; c < C; c++) {
+        var v = Math.max(.04, Math.min(1, (c + .5) / C + d[2](j, c)));
+        el("rect", { x: c * 24 + 1, y: j * 24 + 1, width: 22, height: 22, rx: 2, fill: "color-mix(in srgb, var(--ink) " + Math.round(v * 92) + "%, var(--paper-2))" }, svg);
+      }
+      var cap = document.createElement("figcaption");
+      cap.innerHTML = "<b>" + d[0] + "</b>" + d[1];
+      f.appendChild(cap); grids.appendChild(f);
+    });
+  }
+
+  /* --- PC ladder --- */
+  var lad = document.getElementById("ladder");
+  if (lad) {
+    var rows = [
+      ["What executives say about their own hiring calls", 75, 85, "75–85%", "var(--bias)"],
+      ["Doctoral psychologists rating executives (r = .15)", 55, 55, "55%", "var(--noise)"],
+      ["Equal-weight formula, same ratings (r = .25)", 58, 58, "58%", "var(--pencil)"],
+      ["Regression, same ratings (r = .32)", 60, 60, "60%", "var(--pencil)"],
+      ["Personnel selection: human judges (r = .28)", 59, 59, "59%", "var(--noise)"],
+      ["Personnel selection: mechanical (r = .44)", 65, 65, "65%", "var(--pencil)"],
+      ["Unstructured interview", 56, 61, "56–61%", "var(--noise)"],
+      ["Structured interview", 65, 69, "65–69%", "var(--pencil)"]
+    ];
+    lad.innerHTML = rows.map(function (r) {
+      var l = (r[1] - 50) * 2, w = Math.max((r[2] - r[1]) * 2, 1.6);
+      return '<div class="bar"><div class="row"><span>' + r[0] + '</span><b>' + r[3] + '</b></div><div class="track"><div class="fill" style="left:' + l + '%;width:' + w + '%;background:' + r[4] + '"></div></div></div>';
+    }).join("");
+  }
+
+  /* --- Square-root law --- */
+  var sq = document.getElementById("sqrt");
+  if (sq) {
+    var mx = 100, X2 = function (n) { return 46 + Math.sqrt(n) / 10 * 334; }, Y2 = function (f) { return 186 - f * 170; };
+    [0, .5, 1].forEach(function (f) {
+      el("line", { x1: 46, x2: 384, y1: Y2(f), y2: Y2(f), stroke: "var(--rule)" }, sq);
+      var t = el("text", { x: 40, y: Y2(f) + 4, "text-anchor": "end", "font-size": 12 }, sq); t.textContent = f * 100 + "%";
+    });
+    var p = [];
+    for (var n = 1; n <= mx; n++) p.push(X2(n).toFixed(1) + "," + Y2(1 / Math.sqrt(n)).toFixed(1));
+    el("polyline", { points: p.join(" "), fill: "none", stroke: "var(--bias)", "stroke-width": 2.5 }, sq);
+    [1, 4, 25, 100].forEach(function (n) {
+      var x = X2(n), y = Y2(1 / Math.sqrt(n));
+      el("circle", { cx: x, cy: y, r: 4.5, fill: "var(--bias)" }, sq);
+      var t = el("text", { x: x, y: 208, "text-anchor": "middle", "font-size": 12 }, sq); t.textContent = n;
+      var v = el("text", { x: x + (n === 100 ? -4 : 8), y: y - 9, "font-size": 13, "text-anchor": n === 100 ? "end" : "start" }, sq);
+      v.style.fill = "var(--ink)"; v.textContent = Math.round(100 / Math.sqrt(n)) + "%";
+    });
+  }
+
+  /* --- Hero band: a pencil scribble that settles into one line --- */
+  var cv = document.getElementById("scrib");
+  if (cv && cv.getContext) {
+    var ctx = cv.getContext("2d");
+    var paint = function () {
+      var r = cv.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cv.width = r.width * dpr; cv.height = r.height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, r.width, r.height);
+      var cs = getComputedStyle(document.documentElement);
+      ctx.strokeStyle = cs.getPropertyValue("--noise").trim();
+      ctx.lineCap = "round";
+      var rnd = seeded(5), H = r.height, W = r.width, mid = H / 2;
+      for (var k = 0; k < 7; k++) {
+        ctx.globalAlpha = .34; ctx.lineWidth = .9 + rnd() * .8;
+        ctx.beginPath();
+        var x = 0, up = true; ctx.moveTo(0, mid);
+        while (x < W) {
+          var t = x / W, amp = Math.pow(1 - Math.min(t / .86, 1), 1.5) * (H / 2 - 4);
+          x += 5 + rnd() * 7;
+          var y = mid + (up ? -1 : 1) * amp * (.45 + rnd() * .55);
+          ctx.lineTo(x, y); up = !up;
+        }
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1; ctx.lineWidth = 2.5;
+      ctx.strokeStyle = cs.getPropertyValue("--pencil").trim();
+      ctx.beginPath(); ctx.moveTo(W * .86, mid); ctx.lineTo(W, mid); ctx.stroke();
+    };
+    paint();
+    window.addEventListener("resize", paint);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(paint);
+    if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", paint);
+    new MutationObserver(paint).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  }
+})();
+</script>
+</body>
+</html>

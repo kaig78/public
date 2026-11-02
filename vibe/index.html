@@ -1,0 +1,1348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Vibe by Adam Grant – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Cool = outcome-focused bonds, warm = process-focused bonds,
+   borrowed from the cover's blue and orange puzzle pieces. */
+:root {
+  --paper: #f5f5f8;
+  --paper-2: #ebebf1;
+  --card: #ffffff;
+  --ink: #16151b;
+  --ink-2: #4b4a57;
+  --ink-3: #7a7887;
+  --rule: #d8d7e0;
+
+  /* the four wavelengths */
+  --assoc: #2a66d4;
+  --ally: #6a43d6;
+  --pal: #e8700d;
+  --comp: #d93356;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #111016;
+    --paper-2: #1a1920;
+    --card: #1e1d25;
+    --ink: #eeedf4;
+    --ink-2: #b2b0c0;
+    --ink-3: #868494;
+    --rule: #2f2d38;
+    --assoc: #6f9dff;
+    --ally: #a98cff;
+    --pal: #ff9d4a;
+    --comp: #ff6d88;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #111016;
+  --paper-2: #1a1920;
+  --card: #1e1d25;
+  --ink: #eeedf4;
+  --ink-2: #b2b0c0;
+  --ink-3: #868494;
+  --rule: #2f2d38;
+  --assoc: #6f9dff;
+  --ally: #a98cff;
+  --pal: #ff9d4a;
+  --comp: #ff6d88;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--assoc); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Wavelength colour helpers */
+.c-assoc { --c: var(--assoc); }
+.c-ally  { --c: var(--ally); }
+.c-pal   { --c: var(--pal); }
+.c-comp  { --c: var(--comp); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(96px, 19vw, 236px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .8;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 36ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 596 / 900;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(20, 16, 40, .35), 0 8px 18px -10px rgba(20, 16, 40, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.waveband { position: relative; margin-top: 28px; }
+.waveband canvas { display: block; width: 100%; height: 120px; }
+.waveband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+.axis { position: relative; height: 18px; margin-top: 2px; }
+.axis span { position: absolute; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.axis span:first-child { transform: none; }
+.axis-grid { position: absolute; inset: 0; pointer-events: none; }
+.axis-grid i { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--rule); }
+.barwrap { position: relative; display: grid; gap: 14px; }
+
+/* Icon rows (bridge study) */
+.people { display: flex; gap: 6px; flex-wrap: wrap; }
+.people i {
+  width: 22px; height: 30px; display: block; position: relative;
+}
+.people i::before { content: ""; position: absolute; left: 6px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--rule); }
+.people i::after { content: ""; position: absolute; left: 2px; top: 12px; width: 18px; height: 18px; border-radius: 9px 9px 3px 3px; background: var(--rule); }
+.people i.on::before, .people i.on::after { background: var(--c); }
+.people-grid { display: grid; gap: 14px; }
+.people-grid .row { display: grid; grid-template-columns: minmax(0, 220px) auto minmax(0, 1fr); gap: 14px; align-items: center; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+/* ---------- Wavelengths ---------- */
+.wl-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.matrix { display: grid; grid-template-columns: 92px 1fr 1fr; grid-template-rows: auto 1fr 1fr; gap: 6px; }
+.matrix .ax { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; }
+.matrix .ax.top { justify-content: center; padding-bottom: 4px; }
+.matrix .ax.side { justify-content: flex-end; text-align: right; padding-right: 6px; }
+.quad { border-radius: 6px; padding: 16px; min-height: 132px; display: grid; align-content: space-between; gap: 10px; border: 1px solid color-mix(in srgb, var(--c) 30%, var(--rule)); }
+.quad h4 { font-size: 22px; font-weight: 850; font-stretch: 110%; color: var(--c); letter-spacing: -.01em; }
+.quad p { font-size: 14.5px; line-height: 1.35; color: var(--ink-2); }
+.quad .what { font-family: var(--mono); font-size: 12px; color: var(--ink); }
+
+.combos { display: grid; gap: 10px; }
+.combo { display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 14px; align-items: center; padding: 10px 0; border-top: 1px solid var(--rule); }
+.combo:first-child { border-top: 0; }
+.combo .pips { display: flex; gap: 4px; }
+.combo .pips i { width: 14px; height: 14px; border-radius: 50%; background: var(--c); }
+.combo .pips i.off { background: transparent; box-shadow: inset 0 0 0 1.5px var(--rule); }
+.combo b { font-family: var(--display); font-weight: 750; font-stretch: 100%; display: block; font-size: 16px; }
+.combo span { font-size: 15px; color: var(--ink-2); }
+
+table.wl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 860px; font-size: 15.5px; line-height: 1.42; }
+table.wl th, table.wl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.wl thead th { border-bottom: 0; padding-bottom: 16px; position: relative; }
+table.wl thead th.wl-h { border-top: 5px solid var(--c); background: color-mix(in srgb, var(--c) 9%, var(--card)); }
+table.wl thead th.wl-h:first-of-type { border-top-left-radius: 0; }
+table.wl thead .nm { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 22px; color: var(--c); letter-spacing: -.01em; display: block; }
+table.wl thead .tag { font-family: var(--mono); font-size: 12px; color: var(--ink-2); font-weight: 400; display: block; margin-top: 4px; }
+table.wl tbody th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; width: 150px; padding-top: 17px; }
+table.wl tbody td { color: var(--ink); }
+table.wl tbody td.q { font-style: italic; }
+table.wl tbody tr:hover td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+table.wl .hl { font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+.mini-q { display: inline-grid; grid-template-columns: 7px 7px; gap: 2px; margin-right: 8px; vertical-align: 2px; }
+.mini-q i { width: 7px; height: 7px; background: var(--rule); border-radius: 1px; }
+.mini-q i.on { background: var(--c); }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* closeness myth vs reality */
+.tracks { display: grid; gap: 22px; }
+.track-line { display: grid; gap: 10px; }
+.track-line .line { position: relative; height: 2px; background: var(--rule); margin: 14px 8px; }
+.stops { display: flex; justify-content: space-between; position: relative; }
+.stops span { font-family: var(--mono); font-size: 11.5px; color: var(--ink-2); text-align: center; flex: 1; }
+.stop-dots { position: absolute; inset: -6px 0 auto 0; display: flex; justify-content: space-between; }
+.stop-dots i { width: 14px; height: 14px; border-radius: 50%; background: var(--ink); }
+.dials { display: grid; gap: 10px; }
+.dial { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 12px; align-items: center; font-size: 14px; }
+.dial b { font-family: var(--display); font-weight: 750; font-stretch: 100%; color: var(--c); }
+.dial .t { height: 10px; border-radius: 5px; background: linear-gradient(90deg, color-mix(in srgb, var(--c) 10%, var(--paper-2)), var(--c)); position: relative; }
+.dial .t i { position: absolute; top: -4px; width: 18px; height: 18px; border-radius: 50%; background: var(--card); border: 3px solid var(--c); transform: translateX(-50%); }
+.dial-scale { display: flex; justify-content: space-between; padding-left: 116px; }
+
+/* predictor list */
+.predict { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.predict ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.predict li { display: flex; gap: 10px; align-items: baseline; font-size: 16px; }
+.predict li::before { font-family: var(--mono); font-size: 13px; width: 16px; flex: none; }
+.predict .no li { color: var(--ink-3); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--comp) 70%, transparent); }
+.predict .no li::before { content: "✕"; color: var(--comp); text-decoration: none; }
+.predict .yes li::before { content: "✓"; color: var(--assoc); }
+
+/* if-then code block */
+.ifthen {
+  font-family: var(--mono); font-size: 14px; line-height: 1.8;
+  background: var(--paper-2); border-radius: 6px; padding: 18px 20px; margin: 0;
+  white-space: pre-wrap; color: var(--ink);
+}
+.ifthen .k { color: var(--ally); }
+.ifthen .c { color: var(--ink-3); }
+
+/* ambivalence grid */
+.amb { display: grid; grid-template-columns: 112px 1fr 1fr; grid-template-rows: auto 1fr 1fr; gap: 6px; }
+.amb .cell { border-radius: 6px; padding: 14px; background: var(--paper-2); display: grid; gap: 4px; align-content: start; min-height: 104px; }
+.amb .cell b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 18px; }
+.amb .cell span { font-size: 14px; color: var(--ink-2); line-height: 1.35; }
+.amb .cell.hot { background: color-mix(in srgb, var(--comp) 14%, var(--card)); box-shadow: inset 0 0 0 2px var(--comp); }
+.amb .cell.hot b { color: var(--comp); }
+.amb .ax { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; }
+.amb .ax.top { justify-content: center; }
+.amb .ax.side { justify-content: flex-end; text-align: right; padding-right: 6px; }
+
+/* sandwich */
+.sandwiches { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; }
+.sw { display: grid; gap: 6px; align-content: start; }
+.sw .layer { border-radius: 4px; padding: 8px 12px; font-size: 14px; font-family: var(--mono); }
+.sw .praise { background: color-mix(in srgb, var(--pal) 22%, var(--card)); }
+.sw .crit { background: var(--ink); color: var(--paper); }
+.sw .crit.buried { opacity: .55; }
+.sw .split { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sw .split .layer { min-height: 70px; display: flex; align-items: center; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 16px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--ink); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.ai-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.ai-grid div { border-radius: 6px; padding: 14px; border: 1px dashed color-mix(in srgb, var(--c) 60%, var(--rule)); display: grid; gap: 4px; }
+.ai-grid b { font-family: var(--display); font-weight: 800; font-stretch: 105%; color: var(--c); }
+.ai-grid span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .wl-intro, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .matrix { grid-template-columns: 26px 1fr 1fr; }
+  .matrix .ax.side { writing-mode: vertical-rl; transform: rotate(180deg); justify-content: center; padding: 0; }
+  .amb { grid-template-columns: 26px 1fr 1fr; }
+  .amb .ax.side { writing-mode: vertical-rl; transform: rotate(180deg); justify-content: center; padding: 0; }
+  .quad { padding: 12px; min-height: 120px; }
+  .quad h4 { font-size: 18px; }
+  .predict, .sandwiches, .compare, .ai-grid { grid-template-columns: 1fr; }
+  .people-grid .row { grid-template-columns: 1fr; gap: 6px; }
+  .dial { grid-template-columns: 86px minmax(0, 1fr); }
+  .dial-scale { padding-left: 98px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Adam Grant · Viking, 2026</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#wavelengths">Four wavelengths</a>
+    <a href="#spark">Spark</a>
+    <a href="#sustain">Sustain</a>
+    <a href="#scale">Scale</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1>Vibe</h1>
+    <p class="sub">The secrets of strong connections in a lonely world</p>
+    <p class="dek">Adam Grant argues that chemistry isn't luck. It's made in how two people interact, which means it can be learned.</p>
+    <div class="byline label">
+      <span>10 chapters</span><span>3 parts</span><span>4 wavelengths</span><span>~70,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Vibe by Adam Grant: two glossy puzzle pieces, one blue and one orange, joined by a gold zipper">
+</div>
+
+<div class="waveband" aria-hidden="true">
+  <canvas id="wave"></canvas>
+  <div class="ends label"><span>Two people, out of phase</span><span>In sync</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>A vibe lives between people, not inside them</h2>
+  </div>
+  <div class="wl-intro">
+    <div class="prose">
+      <p>We talk about vibes as something a person or a room gives off. Grant's point is that a vibe is the quality of a connection, and it only exists in the interaction. The word comes from the Latin for vibration. When two people vibe, they're in rhythm, and researchers can measure it: brainwaves and heartbeats start to synchronise.</p>
+      <p>Connection runs on <strong>interaction rituals</strong>, the habits and scripts that shape how we talk. Good rituals cement bonds. Stale ones, like small talk about traffic at every holiday dinner, keep relationships shallow for years.</p>
+      <p>The book has three parts: how connection <a href="#spark">sparks</a>, how it's <a href="#sustain">sustained</a>, and how it <a href="#scale">scales</a> to groups. The thread running through all three is the four <a href="#wavelengths">wavelengths</a> people connect on.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Why it matters</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat"><span class="big num">4×</span><p>The share of US adults with no close friends quadrupled between 1990 and 2020.</p></div>
+        <div class="stat"><span class="big num">½</span><p>When people list their friends, only about half of those friends list them back.</p></div>
+        <div class="stat"><span class="big num">~½</span><p>About half of our conversations have a mismatch between what we want from the other person and what we get.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--pal)">
+        <span class="label">The ritual to steal: pebbling</span>
+        <p>Penguins court by presenting smooth pebbles. People do it by sending a link, a meme or an article that made them think of someone. A pebble that recalls a specific detail about the other person (their axolotls, their dive) works better than generic praise. Being friendly says <em>I like you</em>. Being specific says <em>I see you</em>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part 1</span>
+      <h3>Spark</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Striking a Match</b>Compatibility is built, not found</a></li>
+        <li><span>02</span><a href="#ch2"><b>Fast Friends</b>Intensity speeds up attachment</a></li>
+        <li><span>03</span><a href="#ch3"><b>Love at Second Sight</b>First impressions mislead</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 2</span>
+      <h3>Sustain</h3>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>Absence Makes the Heart Grow Fonder</b>Depth beats frequency</a></li>
+        <li><span>05</span><a href="#ch5"><b>It's Complicated</b>Handling mixed feelings</a></li>
+        <li><span>06</span><a href="#ch6"><b>Good Vibrations</b>Conflict can bring people closer</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part 3</span>
+      <h3>Scale</h3>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>Planned Serendipity</b>Great gatherings are choreographed</a></li>
+        <li><span>08</span><a href="#ch8"><b>Unity Through Division</b>Belonging needs a niche</a></li>
+        <li><span>09</span><a href="#ch9"><b>All for One</b>Squads need alignment, not affection</a></li>
+        <li><span>10</span><a href="#ch10"><b>Everything Is Relative</b>Family traditions that bend</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WAVELENGTHS ============ -->
+<section id="wavelengths">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Four kinds of friendship</h2>
+    <p class="lede">"Friend" is too broad a label. Grant sorts every relationship by <em>why</em> people connect, not where they met. The result is four wavelengths, and most strong bonds run on more than one.</p>
+  </div>
+
+  <div class="wl-intro">
+    <div class="fig">
+      <h4>Two questions place every bond</h4>
+      <div class="matrix" role="img" aria-label="Two by two matrix. Columns: focus on outcome or process. Rows: formed by convenience or commitment. Associates are outcome and convenience, pals are process and convenience, allies are outcome and commitment, companions are process and commitment.">
+        <span></span>
+        <span class="ax top">Focus: outcome</span>
+        <span class="ax top">Focus: process</span>
+        <span class="ax side">Formed by convenience</span>
+        <div class="quad tint c-assoc"><h4>Associates</h4><p>Exchange favours and resources. Reciprocity keeps it going.</p><span class="what">compatible needs</span></div>
+        <div class="quad tint c-pal"><h4>Pals</h4><p>Like doing the same stuff. Fun is the point.</p><span class="what">compatible interests</span></div>
+        <span class="ax side">Formed by commitment</span>
+        <div class="quad tint c-ally"><h4>Allies</h4><p>On a mission together. United by purpose.</p><span class="what">compatible goals</span></div>
+        <div class="quad tint c-comp"><h4>Companions</h4><p>Confide in and lean on each other. Built on care.</p><span class="what">compatible values</span></div>
+      </div>
+      <p class="cap">With associates and allies you care about the result of your time together. With pals and companions you're there for the time itself. Associates and pals usually come from convenience. Allies and companions come from a choice.</p>
+    </div>
+
+    <div class="fig">
+      <h4>Strong bonds stack wavelengths</h4>
+      <div class="combos">
+        <div class="combo"><div class="pips"><i class="c-assoc off"></i><i class="c-ally" style="--c:var(--ally)"></i><i class="c-pal" style="--c:var(--pal)"></i><i class="off"></i></div><div><b>Allies + pals</b><span>Your go-to collaborators: shared purpose, and you enjoy the work together.</span></div></div>
+        <div class="combo"><div class="pips"><i class="off"></i><i class="off"></i><i style="--c:var(--pal)"></i><i style="--c:var(--comp)"></i></div><div><b>Pals + companions</b><span>Your closest friends: a great night out or a shoulder to cry on.</span></div></div>
+        <div class="combo"><div class="pips"><i class="off"></i><i style="--c:var(--ally)"></i><i class="off"></i><i style="--c:var(--comp)"></i></div><div><b>Allies + companions</b><span>Your ride-or-die: maybe not your idea of fun, but you have each other's backs.</span></div></div>
+        <div class="combo"><div class="pips"><i style="--c:var(--assoc)"></i><i style="--c:var(--ally)"></i><i style="--c:var(--pal)"></i><i style="--c:var(--comp)"></i></div><div><b>All four</b><span>The ideal romantic partner. Just don't expect them to be your <em>only</em> source of all four.</span></div></div>
+      </div>
+      <p class="cap">One isn't better than another. Across studies of more than 50,000 people, the happiest have a balanced portfolio. Missing companions feels like <strong>loneliness</strong>, missing pals like <strong>joylessness</strong>, missing allies like <strong>aimlessness</strong>.</p>
+    </div>
+  </div>
+
+  <div class="tablecard" style="margin-top:24px">
+    <div class="scroll-x">
+      <table class="wl">
+        <thead>
+          <tr>
+            <th scope="col"><span class="label">Compare</span></th>
+            <th scope="col" class="wl-h c-assoc"><span class="nm"><span class="mini-q"><i class="on"></i><i></i><i></i><i></i></span>Associates</span><span class="tag">transactional ties</span></th>
+            <th scope="col" class="wl-h c-ally"><span class="nm"><span class="mini-q"><i></i><i></i><i class="on"></i><i></i></span>Allies</span><span class="tag">partnerships of purpose</span></th>
+            <th scope="col" class="wl-h c-pal"><span class="nm"><span class="mini-q"><i></i><i class="on"></i><i></i><i></i></span>Pals</span><span class="tag">alliances of amusement</span></th>
+            <th scope="col" class="wl-h c-comp"><span class="nm"><span class="mini-q"><i></i><i></i><i></i><i class="on"></i></span>Companions</span><span class="tag">connections of care</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Joined by</th><td class="hl">Compatible needs</td><td class="hl">Compatible goals</td><td class="hl">Compatible interests</td><td class="hl">Compatible values</td></tr>
+          <tr><th scope="row">What it runs on</th><td>Reciprocity. You trade resources and favours.</td><td>A shared mission: volunteering, worship, a startup, a team.</td><td>Doing the same things for fun: hiking, games, comedy, sport.</td><td>Confiding and emotional support when things go wrong.</td></tr>
+          <tr><th scope="row">Focus · origin</th><td>Outcome · convenience</td><td>Outcome · commitment</td><td>Process · convenience</td><td>Process · commitment</td></tr>
+          <tr><th scope="row">Best ritual to start</th><td>Face to face, to set the terms of the exchange</td><td>Side by side, heads together on a task</td><td>Side by side, rubbing elbows and joking around</td><td>Face to face, lending each other an ear</td></tr>
+          <tr><th scope="row">Skip small talk with</th><td class="q">No need. A pragmatic exchange can still have great chemistry.</td><td class="q">"What's your biggest challenge?"</td><td class="q">"What do you love to do?"</td><td class="q">"What's one of your regrets?"</td></tr>
+          <tr><th scope="row">From Grant's life</th><td>Neighbours who share school runs, his web programmers, a distant cousin who's a dermatologist</td><td>His podcast team, research lab, early readers of his books</td><td>People who share his love of anagrams, Mario Kart, Seinfeld, padel ("anything but golf")</td><td>His wife and kids, a few mentors, his remaining middle-school friends</td></tr>
+          <tr><th scope="row">Tell them news</th><td>Not expected</td><td>Text them good news</td><td>Call them with good news</td><td>They're who you go to with bad news</td></tr>
+          <tr><th scope="row">Wedding test</th><td>Don't expect an invitation</td><td>Don't expect an invitation</td><td>Should plan the bachelor or bachelorette party</td><td>Hurt if they're not in the wedding party</td></tr>
+          <tr><th scope="row">Forget their birthday</th><td>Fine. Greetings aren't needed.</td><td>Optional unless you're close</td><td>Not the end of the world</td><td>Can strike a real blow</td></tr>
+          <tr><th scope="row">Friction looks like</th><td>Disagreeing with the painter over the bill</td><td>Morning vs. evening meetings; keep the startup or shut it down</td><td>Karaoke or a rom-com; dating each other's exes</td><td>Resolve it now or cool off first; fixing vs. just listening</td></tr>
+          <tr><th scope="row">Turns sour when</th><td>They're unpleasant or unreliable (keep it distant)</td><td>They get in the way of your goals</td><td>They kill your joy</td><td>They violate your values</td></tr>
+          <tr><th scope="row">How to keep it</th><td>Low effort. Hope they answer the late-night plumber question.</td><td>New shared projects</td><td>Low-maintenance games, pranks, an annual trip</td><td>Conversation plus new shared experiences</td></tr>
+          <tr><th scope="row">In a team</th><td>Fine for temporary or rotating teams</td><td>The baseline every squad needs</td><td>Pal squads respond faster (joy fuels speed)</td><td>Companion squads have fewer accidents (care fuels vigilance)</td></tr>
+          <tr><th scope="row">If it's missing</th><td>—</td><td>Aimlessness</td><td>Joylessness</td><td>Loneliness</td></tr>
+          <tr><th scope="row">Pair from the book</th><td>Cosmonaut Dmitry Kondratyev treated crewmate Cady Coleman as an associate until training forced a reset.</td><td>Lincoln and his war secretary Stanton: close allies, never pals. Stanton couldn't stand Lincoln's jokes.</td><td>Ginsburg and Scalia bonded over opera and New Year's Eves before they ever sat on the same court.</td><td>Astronaut Paolo Nespoli called Cady Coleman his "space brother".</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">The small grid next to each name shows its square in the matrix above</span></div>
+  </div>
+
+  <div class="figrow" style="margin-top:24px">
+    <div class="fig">
+      <h4>Closeness isn't a ladder</h4>
+      <div class="tracks">
+        <div class="track-line">
+          <span class="label">How we think it works</span>
+          <div class="line"><div class="stop-dots"><i></i><i></i><i></i><i></i></div></div>
+          <div class="stops"><span>Acquaintance</span><span>Associate</span><span>Ally or pal</span><span>Companion</span></div>
+        </div>
+        <div class="track-line">
+          <span class="label">How it actually works</span>
+          <div class="dials">
+            <div class="dial c-assoc"><b>Associate</b><div class="t"><i style="left:78%"></i></div></div>
+            <div class="dial c-ally"><b>Ally</b><div class="t"><i style="left:55%"></i></div></div>
+            <div class="dial c-pal"><b>Pal</b><div class="t"><i style="left:88%"></i></div></div>
+            <div class="dial c-comp"><b>Companion</b><div class="t"><i style="left:12%"></i></div></div>
+          </div>
+          <div class="dial-scale label"><span>Distant</span><span>Close</span></div>
+        </div>
+      </div>
+      <p class="cap">Each wavelength has its own dial from distant to close, and relationships add or drop wavelengths in any order. You can have a very close pal who is barely a companion. The example settings above show one such relationship.</p>
+    </div>
+    <div class="fig">
+      <h4>When wavelengths don't match</h4>
+      <p class="cap" style="font-size:16px;color:var(--ink)">Mismatched expectations produce static. A school friend wants to start a business with you. A work ally unloads his marriage problems on you. Your car salesman asks when you're free to hang out.</p>
+      <p class="cap">Grant's daughter Joanna has a word for the last one: a <strong>palvader</strong>, someone who barges into a friendship you didn't sign up for. The fix is to find out which frequency the other person is open to before pushing your own.</p>
+      <p class="cap">It also explains a lot of family conflict. Relatives are expected to be companions, but nobody chose each other, so the shared values may not be there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="spark">
+  <span class="label partno">Part 1 · Chapters 1–3</span>
+  <h2>Sparking connection</h2>
+  <p class="lede">Three beliefs keep us from bonding: that we must find the right person, that chemistry happens instantly, and that closeness takes a long time. Grant takes them apart one by one.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Striking a Match</span></div>
+  <div class="body">
+    <div>
+      <h3>Compatibility is built, not found</h3>
+      <p class="idea">Chemistry is a property of an interaction, not of two individuals. You can't predict it from profiles, but you can create it.</p>
+    </div>
+    <ul class="points">
+      <li>In speed-dating studies, people answered questions on nearly 200 traits and preferences beforehand. Nothing in them, alone or combined, predicted who would click. Machine learning couldn't either.</li>
+      <li>Similarity helps people start talking and then barely matters. Across more than 300 studies with over 35,000 people, matching opinions and traits had little or no effect on chemistry or closeness. Opposites don't reliably attract either.</li>
+      <li>Proximity does a lot of the work. Couples named next-door neighbours as friends four times as often as people four doors down. Police cadets seated alphabetically became close to whoever happened to sit next to them.</li>
+      <li>Swap origin stories. Talking about where you came from builds bonds faster than talking about future plans, even when the stories reveal differences.</li>
+      <li>Doing a task side by side turns strangers into allies; talking face to face moves them toward companionship. In a contest of 25 bridge-building ideas, the winner was a beer advert: strangers with opposing views built a bar together, then chose to have a drink.</li>
+    </ul>
+    <div class="fig">
+      <h4>What predicts whether two people click</h4>
+      <div class="predict">
+        <div>
+          <span class="label">Weak predictors</span>
+          <ul class="no" style="margin-top:10px"><li>Similar personalities</li><li>Complementary "opposite" traits</li><li>Matching politics and opinions</li><li>Compatible star signs (46,000 Swedish marriages: no effect)</li></ul>
+        </div>
+        <div>
+          <span class="label">What actually builds it</span>
+          <ul class="yes" style="margin-top:10px"><li>Being near each other often</li><li>The rituals a pair develops together</li><li>Shared origin stories</li><li>Finding a shared need, goal, interest or value</li></ul>
+        </div>
+      </div>
+      <p class="src">Source: studies cited in Vibe, ch. 1</p>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Astronauts Cady Coleman and Paolo Nespoli looked like a bad match: she was a careful, flute-playing chemist, he was a headstrong parachutist. Trainers doubted they'd work together. They built their own shorthand, caught a supply ship in orbit without saying a word, and became like siblings. Their reserved Russian crewmate only warmed up after a trainer had the crew cook dinner and tell each other how they became astronauts.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Fast Friends</span></div>
+  <div class="body">
+    <div>
+      <h3>Intensity, not time, speeds up attachment</h3>
+      <p class="idea">The more you feel together, the faster you bond together.</p>
+    </div>
+    <ul class="points">
+      <li>On average it takes about 50 hours to turn an acquaintance into a friend. But the averages hide a wide range: nearly a quarter of adults made a friend within five hours.</li>
+      <li>Shared emotional intensity speeds things up: a swaying bridge, a hard workout, a haunted house, a public speaking class. Adversity isn't the ingredient, intensity is, so no hazing needed. Intensity amplifies feelings that are already there. It doesn't invent them.</li>
+      <li>Skip the small talk. Strangers randomly assigned to go straight to deep questions ended up happier and closer than they expected. Introverts gained the most.</li>
+      <li>Show bounded vulnerability. Admitting a mistake or a flaw makes people like you more, according to an analysis of 57 experiments. Pouring out pain without checking on the listener is a trauma dump, and it pushes people away.</li>
+      <li>Keep it two-way. Good conversations are a series of invitations, not declarations. If you're only waiting to show your own snow globe, the other person can tell.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Hours of interaction it takes to become friends</h4>
+      <div class="barwrap">
+        <div class="axis-grid"><i style="left:0%"></i><i style="left:22.73%"></i><i style="left:45.45%"></i><i style="left:68.18%"></i><i style="left:90.91%"></i></div>
+        <div class="bar c-pal"><div class="row"><span>Fastest quarter of adults: acquaintance → friend</span><b>≤ 5 h</b></div><div class="track"><div class="fill" style="width:2.27%"></div></div></div>
+        <div class="bar"><div class="row"><span>Average: acquaintance → friend</span><b>~50 h</b></div><div class="track"><div class="fill" style="width:22.73%"></div></div></div>
+        <div class="bar"><div class="row"><span>Average to good friends: college freshmen</span><b>100+ h</b></div><div class="track"><div class="fill" style="width:45.45%"></div></div></div>
+        <div class="bar"><div class="row"><span>Average to good friends: adults</span><b>200+ h</b></div><div class="track"><div class="fill" style="width:90.91%"></div></div></div>
+      </div>
+      <div class="axis"><span style="left:0%">0</span><span style="left:22.73%">50</span><span style="left:45.45%">100</span><span style="left:68.18%">150</span><span style="left:90.91%">200 h</span></div>
+      <p class="cap">The speed depended on the pair, not on how many hours they logged.</p>
+      <p class="src">Source: Jeffrey Hall's surveys of newcomers to a city and college freshmen, cited in ch. 2</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Same woman, same survey, different bridge</h4>
+        <div class="people-grid">
+          <div class="row"><span style="font-size:15px">Sturdy bridge, 10 ft above a stream</span><div class="people c-assoc" aria-label="1 of 8 called"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><b class="num" style="font-family:var(--mono);font-weight:500">1 in 8 called</b></div>
+          <div class="row"><span style="font-size:15px">Swaying bridge, 230 ft above rapids</span><div class="people c-pal" aria-label="4 of 8 called"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div><b class="num" style="font-family:var(--mono);font-weight:500">1 in 2 called</b></div>
+        </div>
+        <p class="cap">A researcher asked hikers to fill in a survey, then gave them her number. Meeting her on the scary bridge quadrupled the call rate.</p>
+        <p class="src">Source: classic Vancouver bridge experiments, 1970s, cited in ch. 2</p>
+      </div>
+      <div class="fig">
+        <h4>Deep talk across a divide</h4>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>Different discussion groups</span><b>1×</b></div><div class="track"><div class="fill" style="width:6.45%;background:var(--ink-3)"></div></div></div>
+          <div class="bar c-ally"><div class="row"><span>Same group, same nationality</span><b>3.3×</b></div><div class="track"><div class="fill" style="width:21.29%"></div></div></div>
+          <div class="bar c-comp"><div class="row"><span>Same group, Israeli + Palestinian</span><b>15.5×</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">Likelihood that two teenagers at a three-week peace camp named each other as close friends. The bonds were still stronger a year later.</p>
+        <p class="src">Source: Seeds of Peace camp study, cited in ch. 2</p>
+      </div>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Share from your scars, not from your wounds.”</blockquote>
+      <span class="label">Psychologist Susan David, quoted by Grant on the line between vulnerability and a trauma dump</span>
+    </div>
+
+    <div class="story">
+      <span class="label">The story</span>
+      <p>In 1971 Durham, Klan leader C.P. Ellis and civil rights activist Ann Atwater had nearly come to blows. A mediator, Bill Riddick, made them co-chairs of a school desegregation committee and put them in an empty school for ten intense days. Exhausted, they discovered they shared the same fears for their kids and the same shame about being poor. Ellis tore up his Klan card in public, and Atwater later spoke at his funeral.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Love at Second Sight</span></div>
+  <div class="body">
+    <div>
+      <h3>First impressions mislead, because people shape-shift</h3>
+      <p class="idea">Some of the people we end up liking most are people we first disliked. We bond best when we change the situation and let each other change.</p>
+    </div>
+    <ul class="points">
+      <li>We blame bad behaviour on character and ignore the situation (the fundamental attribution error). A short slice of someone's behaviour is a poor sample.</li>
+      <li>People are "consistent in their inconsistencies". Each person has <strong>if-then signatures</strong>: situations that reliably bring out their best or worst. Researchers who watched camp kids for about 167 hours each found the aggressive kids were kind in some settings, and vice versa.</li>
+      <li>Trade user manuals. Tell people what brings out your best and worst. Friends who could guess each other's triggers fought less. Managers who discussed theirs with new teams got along better for months.</li>
+      <li>Look for people who expand you. Self-expression starts bonds; <strong>self-expansion</strong> deepens them. Couples whose relationships help them grow show more brain synchrony and feel closer.</li>
+      <li>Bonds can also fade when the rituals that fed them stop. Tolkien and Lewis drifted once their weekly Inklings meetings ended.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Reading if-then signatures</h4>
+<pre class="ifthen"><span class="k">if</span> you send Grant a short email <span class="k">then</span> he replies fast
+<span class="k">if</span> you send him a long text   <span class="k">then</span> he might never reply
+
+<span class="k">if</span> Dwight Schrute faces a subordinate <span class="k">then</span> dominant
+<span class="k">if</span> he faces a superior               <span class="k">then</span> submissive
+
+<span class="c">// first impression: "Brené Brown is a guru who attacks critics"</span>
+<span class="k">if</span> she's quoted out of context <span class="k">then</span> she pushes back hard
+<span class="k">if</span> someone asks her for help   <span class="k">then</span> she shows up early</pre>
+        <p class="cap">Grant and Brené Brown had a public spat in 2016 and didn't speak for four years. Working together with a sports team showed him the other side of her pattern. They're now close friends and co-host a podcast.</p>
+      </div>
+      <div class="fig">
+        <h4>Self-expression vs. self-expansion</h4>
+        <svg viewBox="0 0 440 220" role="img" aria-label="Left: two circles touching, labelled self-expression. Right: two overlapping circles, each surrounded by a larger dashed ring, labelled self-expansion.">
+          <circle cx="70" cy="100" r="46" fill="color-mix(in srgb, var(--assoc) 18%, transparent)" stroke="var(--assoc)" stroke-width="2"/>
+          <circle cx="162" cy="100" r="46" fill="color-mix(in srgb, var(--pal) 18%, transparent)" stroke="var(--pal)" stroke-width="2"/>
+          <text x="116" y="190" text-anchor="middle" font-size="13">Self-expression</text>
+          <text x="116" y="208" text-anchor="middle" font-size="11" style="fill:var(--ink-3)">share who you are</text>
+          <circle cx="300" cy="100" r="64" fill="none" stroke="var(--assoc)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <circle cx="352" cy="100" r="64" fill="none" stroke="var(--pal)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <circle cx="300" cy="100" r="46" fill="color-mix(in srgb, var(--assoc) 18%, transparent)" stroke="var(--assoc)" stroke-width="2"/>
+          <circle cx="352" cy="100" r="46" fill="color-mix(in srgb, var(--pal) 18%, transparent)" stroke="var(--pal)" stroke-width="2"/>
+          <text x="326" y="190" text-anchor="middle" font-size="13">Self-expansion</text>
+          <text x="326" y="208" text-anchor="middle" font-size="11" style="fill:var(--ink-3)">grow into new versions</text>
+        </svg>
+        <p class="cap">Pals with different interests give you new hobbies. Allies with different skills give you new goals. Companions with different principles help you find new values.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>When Tolkien and Lewis met at Oxford in 1926 they clashed. Lewis wrote in his diary that Tolkien needed a smack. A reading group on Norse myths changed the setting, and they talked until 2:30 a.m. about gods and giants. A bet to write the stories they wanted to read led to Narnia and The Lord of the Rings.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="sustain">
+  <span class="label partno">Part 2 · Chapters 4–6</span>
+  <h2>Sustaining connection</h2>
+  <p class="lede">The rituals that start a bond are rarely the ones that keep it. In seven years only about 30% of our pals and companions are still in the same role, and half are gone entirely.</p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Absence Makes the Heart Grow Fonder</span></div>
+  <div class="body">
+    <div>
+      <h3>Depth beats frequency</h3>
+      <p class="idea">Strong bonds don't need constant contact. Time apart can even improve them.</p>
+    </div>
+    <ul class="points">
+      <li>Couples felt more love after a day apart. Siblings often get closer once one leaves for college.</li>
+      <li>The best teams are <strong>bursty</strong>: quiet stretches, then surges of intense collaboration. Separation lets people rethink, refuel, retool and reconnect.</li>
+      <li>Most people can spend up to 75% of their time alone without feeling isolated. Loneliness is cured by more meaningful interaction, not more interaction. At Atlassian, quarterly gatherings did more for team bonds than days in the office.</li>
+      <li>Reconnect with dormant ties. Fewer than a third of people send the reconnection notes they draft, yet about 90% of reconnections turn out to be fun. Calling beats texting, and it isn't more awkward.</li>
+      <li>Don't read reply speed as closeness. It mostly reflects how full someone's plate is.</li>
+      <li>Host a group dinner instead of separate catch-ups. Introducing your people to each other keeps you connected to all of them.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>A short note, a few times a year</h4>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>No notes</span><b>3.5%</b></div><div class="track"><div class="fill" style="width:87.5%;background:var(--ink-3)"></div></div></div>
+          <div class="bar c-comp"><div class="row"><span>Brief caring notes</span><b>1.8%</b></div><div class="track"><div class="fill" style="width:45%"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">2%</span><span style="left:100%;transform:translateX(-100%)">4%</span></div>
+        <p class="cap">Suicide rate over two years among discharged patients who had declined further care. Staff sent simple notes, monthly at first and later quarterly.</p>
+        <p class="src">Source: San Francisco study, cited in ch. 4</p>
+      </div>
+      <div class="fig">
+        <h4>Steady drip vs. bursts</h4>
+        <svg viewBox="0 0 520 210" role="img" aria-label="Two timelines. The first has small evenly spaced ticks. The second has three clusters of tall spikes separated by quiet gaps labelled time apart.">
+          <text x="0" y="16" font-size="12">Constant contact</text>
+          <line x1="0" y1="62" x2="520" y2="62" stroke="var(--rule)" stroke-width="1"/>
+          <g fill="var(--ink-3)">
+            <rect x="4" y="50" width="4" height="12"/><rect x="24" y="50" width="4" height="12"/><rect x="44" y="50" width="4" height="12"/><rect x="64" y="50" width="4" height="12"/><rect x="84" y="50" width="4" height="12"/><rect x="104" y="50" width="4" height="12"/><rect x="124" y="50" width="4" height="12"/><rect x="144" y="50" width="4" height="12"/><rect x="164" y="50" width="4" height="12"/><rect x="184" y="50" width="4" height="12"/><rect x="204" y="50" width="4" height="12"/><rect x="224" y="50" width="4" height="12"/><rect x="244" y="50" width="4" height="12"/><rect x="264" y="50" width="4" height="12"/><rect x="284" y="50" width="4" height="12"/><rect x="304" y="50" width="4" height="12"/><rect x="324" y="50" width="4" height="12"/><rect x="344" y="50" width="4" height="12"/><rect x="364" y="50" width="4" height="12"/><rect x="384" y="50" width="4" height="12"/><rect x="404" y="50" width="4" height="12"/><rect x="424" y="50" width="4" height="12"/><rect x="444" y="50" width="4" height="12"/><rect x="464" y="50" width="4" height="12"/><rect x="484" y="50" width="4" height="12"/><rect x="504" y="50" width="4" height="12"/>
+          </g>
+          <text x="0" y="98" font-size="12">Bursty</text>
+          <line x1="0" y1="170" x2="520" y2="170" stroke="var(--rule)" stroke-width="1"/>
+          <g fill="var(--ally)">
+            <rect x="10" y="134" width="5" height="36"/><rect x="22" y="118" width="5" height="52"/><rect x="34" y="126" width="5" height="44"/><rect x="46" y="112" width="5" height="58"/><rect x="58" y="138" width="5" height="32"/>
+            <rect x="214" y="122" width="5" height="48"/><rect x="226" y="110" width="5" height="60"/><rect x="238" y="116" width="5" height="54"/><rect x="250" y="130" width="5" height="40"/>
+            <rect x="420" y="128" width="5" height="42"/><rect x="432" y="108" width="5" height="62"/><rect x="444" y="114" width="5" height="56"/><rect x="456" y="104" width="5" height="66"/><rect x="468" y="124" width="5" height="46"/><rect x="480" y="136" width="5" height="34"/>
+          </g>
+          <g stroke="var(--ink-3)" stroke-width="1" fill="none">
+            <path d="M78 186 h120"/><path d="M78 182 v8"/><path d="M198 182 v8"/>
+            <path d="M270 186 h134"/><path d="M270 182 v8"/><path d="M404 182 v8"/>
+          </g>
+          <text x="138" y="204" text-anchor="middle" font-size="11">time apart</text>
+          <text x="337" y="204" text-anchor="middle" font-size="11">time apart</text>
+        </svg>
+        <div class="chips" style="gap:6px">
+          <span class="chip" style="font-size:14px;padding:5px 11px">Rethink</span><span class="chip" style="font-size:14px;padding:5px 11px">Refuel</span><span class="chip" style="font-size:14px;padding:5px 11px">Retool</span><span class="chip" style="font-size:14px;padding:5px 11px">Reconnect</span>
+        </div>
+        <p class="cap">Monty Python wrote <em>Life of Brian</em> in bursts separated by months apart. Between sessions John Cleese made <em>Fawlty Towers</em>, which made him a better writer for the group. Illustrative diagram, not data.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Pat DeReamer and Mary Kroger met at 12. For more than 80 years they've mailed the same 1944 birthday card back and forth, signing and dating it each year. Sometimes they go seven years without seeing each other. The card set a world record, and it's the pebble that keeps them calling.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">It's Complicated</span></div>
+  <div class="body">
+    <div>
+      <h3>Mixed relationships hurt most</h3>
+      <p class="idea">Don't try to tolerate or erase someone's vices. Contain them, and look for the virtues.</p>
+    </div>
+    <ul class="points">
+      <li>Ambivalent ties are harder on us than purely bad ones. Five minutes with someone who gives you mixed feelings raises blood pressure more than time with someone you simply dislike. A boss who is sometimes supportive and sometimes demeaning is worse for your health than one who is only demeaning.</li>
+      <li>We have about as many ambivalent ties as positive ones, and experience doesn't make us better at handling them.</li>
+      <li><strong>Accept</strong> what's tolerable. 69% of couples' conflicts are perpetual problems. Adding acceptance to couples therapy improved relationships across 17 experiments. Validate feelings rather than mock them.</li>
+      <li><strong>Contain</strong> the rest with boundaries that name the situation, not just the behaviour. Abuse is never in the acceptable zone.</li>
+      <li>Find virtues in vices, as Ginsburg and Scalia did across opposing votes. The final test: does this person live your most important values, or violate them?</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Four reactions to a person</h4>
+        <div class="amb" role="img" aria-label="Two by two grid. Rows: their top virtues are underwhelming or uplifting. Columns: their top vices are tolerable or intolerable. Underwhelming and tolerable gives indifferent. Underwhelming and intolerable gives negative. Uplifting and tolerable gives positive. Uplifting and intolerable gives ambivalent, the frenemy.">
+          <span></span><span class="ax top">Vices: tolerable</span><span class="ax top">Vices: intolerable</span>
+          <span class="ax side">Virtues: underwhelming</span>
+          <div class="cell"><b>Indifferent</b><span>Acquaintance or associate</span></div>
+          <div class="cell"><b>Negative</b><span>Enemy. Minimise contact.</span></div>
+          <span class="ax side">Virtues: uplifting</span>
+          <div class="cell"><b>Positive</b><span>Pal, ally or companion</span></div>
+          <div class="cell hot"><b>Ambivalent</b><span>Frenemy. The hardest kind to handle.</span></div>
+        </div>
+      </div>
+      <div class="fig">
+        <h4>Setting a boundary that names the situation</h4>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>Pistons win rate before Rasheed Wallace</span><b>61%</b></div><div class="track"><div class="fill" style="width:61%;background:var(--ink-3)"></div></div></div>
+          <div class="bar c-assoc"><div class="row"><span>With him</span><b>77%</b></div><div class="track"><div class="fill" style="width:77%"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+        <p class="cap">Rasheed Wallace held the NBA record for ejections. Detroit's Joe Dumars didn't ask him to change. He drew one line: let it out at the referees in the first three quarters, but no technicals in crunch time, no ejections, no suspensions. Wallace wasn't ejected once that season, and the Pistons won the 2004 title.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Good Vibrations</span></div>
+  <div class="body">
+    <div>
+      <h3>Conflict can bring you closer</h3>
+      <p class="idea">The problem is usually not that we fight, but that we avoid the fight and then fight badly.</p>
+    </div>
+    <ul class="points">
+      <li>People who gave honest feedback expected it to go badly. Two weeks later both giver and receiver felt closer. Across a dozen studies we're too pessimistic about candour.</li>
+      <li>Lead with why. Students accepted teachers' criticism far better when it came with one sentence saying the teacher had high standards and believed they could meet them.</li>
+      <li>Drop the compliment sandwich. The critique gets lost and the praise sounds fake. Separate the two, or ask which they'd like to hear first.</li>
+      <li>Ghosting hurts more than a clear no. Being ignored damages self-esteem more than being rejected.</li>
+      <li>Invent friction rituals: hold hands while arguing, blame an imaginary coworker, schedule a weekly "beef session". Newlyweds who watched and discussed one film a week for a month were about half as likely to split up three years later.</li>
+      <li>Walk down the ladder of inference. Instead of assuming you know someone's motives, ask them.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The ladder of inference</h4>
+        <svg viewBox="0 0 480 300" role="img" aria-label="A ladder with three rungs. Bottom rung: observation, the dish wasn't rinsed. Middle rung: assumption, they only think of themselves. Top rung: conclusion, they don't care about me. An arrow on the left points up, labelled we climb fast. An arrow on the right points down, labelled walk down by asking.">
+          <g stroke="var(--ink)" stroke-width="3" stroke-linecap="round">
+            <line x1="70" y1="20" x2="70" y2="290"/>
+            <line x1="140" y1="20" x2="140" y2="290"/>
+          </g>
+          <g stroke="var(--ink)" stroke-width="3">
+            <line x1="70" y1="60" x2="140" y2="60"/>
+            <line x1="70" y1="150" x2="140" y2="150"/>
+            <line x1="70" y1="240" x2="140" y2="240"/>
+          </g>
+          <circle cx="105" cy="60" r="7" fill="var(--comp)"/>
+          <circle cx="105" cy="150" r="7" fill="var(--pal)"/>
+          <circle cx="105" cy="240" r="7" fill="var(--assoc)"/>
+          <text x="164" y="54" font-size="11" style="fill:var(--comp)">CONCLUSION</text>
+          <text x="164" y="74" font-size="14" style="fill:var(--ink);font-family:var(--body)">"You don't care about me."</text>
+          <text x="164" y="144" font-size="11" style="fill:var(--pal)">ASSUMPTION</text>
+          <text x="164" y="164" font-size="14" style="fill:var(--ink);font-family:var(--body)">"You only think of yourself."</text>
+          <text x="164" y="234" font-size="11" style="fill:var(--assoc)">OBSERVATION</text>
+          <text x="164" y="254" font-size="14" style="fill:var(--ink);font-family:var(--body)">You didn't rinse your dish.</text>
+          <g stroke="var(--ink-3)" stroke-width="1.5" fill="none">
+            <path d="M30 270 V40"/><path d="M24 50 L30 38 L36 50"/>
+          </g>
+          <text x="22" y="160" font-size="11" transform="rotate(-90 22 160)" text-anchor="middle">we climb fast</text>
+        </svg>
+        <p class="cap">To walk down, ask how they saw it. Glennon Doyle was sure her wife Abby Wambach over-ordered pizza out of carelessness. Asked on stage, Abby explained she grew up afraid there wouldn't be enough food. The fix was to agree to eat the leftovers.</p>
+      </div>
+      <div class="fig">
+        <h4>Feedback: closed vs. open-faced sandwich</h4>
+        <div class="sandwiches">
+          <div class="sw">
+            <span class="label">The usual way</span>
+            <div class="layer praise">Praise</div>
+            <div class="layer crit buried">Critique (gets lost)</div>
+            <div class="layer praise">Praise</div>
+          </div>
+          <div class="sw">
+            <span class="label">Grant's way</span>
+            <div class="split"><div class="layer praise">Strengths</div><div class="layer crit">Room to grow</div></div>
+            <p class="cap" style="font-size:14px">Ask which they want first, or go straight to "Here's what would make you even more effective."</p>
+          </div>
+        </div>
+        <p class="cap">Be clear in what you say and kind in why you say it. Brutal honesty is usually more brutal than honest.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>In 2001 Metallica was close to breaking up. A performance coach, Phil Towle, told them to fight more, not less. After months of blow-ups, walkouts and finally learning to ask instead of assume, they released a number-one album. Drummer Lars Ulrich described the change as fighting for each other instead of to win.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="scale">
+  <span class="label partno">Part 3 · Chapters 7–10</span>
+  <h2>Scaling connection</h2>
+  <p class="lede">Groups are harder than pairs, but they give us something pairs can't: belonging, and what sociologist Émile Durkheim called collective effervescence.</p>
+</div>
+
+<div class="figrow" style="margin-top:32px">
+  <div class="fig">
+    <h4>Two's company</h4>
+    <div class="barwrap">
+      <div class="bar c-assoc"><div class="row"><span>Pairs of roommates who stayed together</span><b>45%</b></div><div class="track"><div class="fill" style="width:45%"></div></div></div>
+      <div class="bar c-pal"><div class="row"><span>Trios who stayed together</span><b>29%</b></div><div class="track"><div class="fill" style="width:29%"></div></div></div>
+    </div>
+    <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+    <p class="cap">Harvard freshmen randomly assigned to rooms. A third person makes factions and gossip possible. Yet belonging to more groups predicts more happiness and less depression, even for introverts.</p>
+  </div>
+  <div class="fig">
+    <h4>Our circles have changed shape</h4>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div><svg id="net-web" viewBox="0 0 220 220" role="img" aria-label="A web: eight people around a circle, many connected to each other."></svg><p class="label" style="text-align:center">Then: interwoven web</p></div>
+      <div><svg id="net-hub" viewBox="0 0 220 220" role="img" aria-label="A hub and spokes: one person in the middle connected to eight people who don't know each other."></svg><p class="label" style="text-align:center">Now: hub and spokes</p></div>
+    </div>
+    <p class="cap">Most Americans don't have a friend group. Many of the people in our lives don't know each other, so they can't look out for us together.</p>
+  </div>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Planned Serendipity</span></div>
+  <div class="body">
+    <div>
+      <h3>Great gatherings are choreographed</h3>
+      <p class="idea">The interactions aren't scripted, but the stage is set.</p>
+    </div>
+    <ul class="points">
+      <li>Audit meetings first. Nearly a third may be unnecessary. When one software company deleted all recurring meetings and rebuilt the calendar from scratch, people saved about 11 hours a month.</li>
+      <li>Give the event a bold purpose built around one wavelength. "Listening to Customer Feedback" became "Why Do Our Customers Hate Our Product? A Roundtable." Admin Night turns paying bills into a pal activity.</li>
+      <li>People don't mix at mixers. At one cocktail party, 95% planned to meet new people, yet guests were twice as likely to talk with people they already knew.</li>
+      <li>Give guests a list of people to meet, even a random one. Seat them at round tables, rotate seats, and escalate the prompts from playful to personal.</li>
+      <li>Set clear norms with a fun penalty: don't talk to people you know, invite hoverers into your circle, no phones (or eat a vomit-flavoured jelly bean).</li>
+      <li>Use silence. Writing before sharing makes groups more creative and lets them go deeper.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Only four reasons to meet</h4>
+        <div class="chips"><span class="chip">Bond</span><span class="chip">Learn</span><span class="chip">Create</span><span class="chip">Decide</span></div>
+        <p class="cap">If a gathering doesn't do at least one, it doesn't need to happen.</p>
+      </div>
+      <div class="fig">
+        <h4>A random list of 16 people to meet</h4>
+        <div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="stat"><span class="big num" style="color:var(--ally)">+57%</span><p>more new people met by women at an IT conference</p></div>
+          <div class="stat"><span class="big num" style="color:var(--ally)">+60%</span><p>higher odds of a new job within the next year</p></div>
+        </div>
+        <p class="cap">Men, the majority in the room, barely needed it. For women, a little structure removed the barrier to approaching strangers.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>Grant's childhood neighbour Jeff Zaslow, a newspaper advice columnist, ran a singles party called Zazz Bash for 12 years. He planned every detail: nametags with a favourite word, a shoe-swap game, themed contests. At least 78 marriages came out of it. Grant's test for any gathering: do attendees fear missing the next one, and do people who skipped regret missing the last?</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Unity Through Division</span></div>
+  <div class="body">
+    <div>
+      <h3>To unite a community, divide it</h3>
+      <p class="idea">People want to fit in and stand out at the same time. Smaller distinct groups inside a larger one give them both.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Optimal distinctiveness</strong>: we prefer groups that make up about 20% of a community over ones that make up 45%.</li>
+      <li>Give people a distinct role, not just a seat. In the jigsaw classroom, each student teaches one piece of the lesson. At tomato processor Morning Star, after a year every employee may rewrite their own job, if colleagues agree it serves the mission.</li>
+      <li>Build belonging before day one. New hires who shared their personal highlight reel with their team were about half as likely to quit. Freshmen who read older students' stories of feeling like outsiders did better for years.</li>
+      <li>Bigger isn't worse. Bullying is more common in classes of 15–20 than of 25–30, because victims have fewer potential allies.</li>
+      <li>Nest groups under a shared cause. Make each one special, not superior. Hogwarts sorts similar kids together and gets rivalry; mix each house as a cross-section instead.</li>
+    </ul>
+    <div class="fig">
+      <h4>The house model that worked</h4>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px;align-items:center">
+        <svg id="houses" viewBox="0 0 320 320" role="img" aria-label="A large circle representing a school of about 900 students, containing four smaller circles for four houses. Each house contains a mix of differently coloured dots, showing each house is a cross-section of the school."></svg>
+        <div class="prose" style="gap:.8em">
+          <p class="cap" style="font-size:16px;color:var(--ink)">In 2003, principal Paul Turnbull split his troubled 900-student junior high in California into four houses of about 230: the Red Sea Monkeys, Blue Pirates, White Buccaneers and Golden Vikings. Every teacher joined one too.</p>
+          <p class="cap">Houses competed all year in trivia, dodgeball and service drives. Each house mixed athletes, theatre kids and student leaders, and all four shared an ocean theme. Within two years suspensions fell by nearly half, bullying and fights dropped, and test scores rose.</p>
+          <p class="src">Source: Goleta Valley Junior High, ch. 8</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">All for One</span></div>
+  <div class="body">
+    <div>
+      <h3>Squads need alignment, not affection</h3>
+      <p class="idea">A team doesn't have to bond as a group. It has to bond to the group and its purpose.</p>
+    </div>
+    <ul class="points">
+      <li>Across 195 studies, liking each other mattered less for performance than commitment to the purpose and pride in the team. A company is not a family.</li>
+      <li>Agreement means holding the same opinions. Alignment means upholding the same goals. Nonprofit theatres thrived when their leaders agreed on a mission, whichever mission it was.</li>
+      <li>Keep it to four values or fewer, drawn from real stories, ranked, translated into specific behaviours, and backed by accountability.</li>
+      <li>Hold up a mirror. Specific, immediate feedback changes behaviour far more than a vague warning.</li>
+      <li>Screen out people who kiss up and kick down, admire the wrong role models, or always play the victim. Culture is defined by the worst behaviour tolerated.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Banned players who stopped being toxic</h4>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>Told the category of their offence</span><b>50%</b></div><div class="track"><div class="fill" style="width:50%;background:var(--ink-3)"></div></div></div>
+          <div class="bar c-ally"><div class="row"><span>Shown their actual chat logs</span><b>70%</b></div><div class="track"><div class="fill" style="width:70%"></div></div></div>
+          <div class="bar c-ally"><div class="row"><span>Shown the logs within 5–10 minutes</span><b>92%</b></div><div class="track"><div class="fill" style="width:92%"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+        <p class="src">Source: League of Legends experiments, ch. 9</p>
+      </div>
+      <div class="fig">
+        <h4>Pick the second wavelength for the mission</h4>
+        <div class="compare">
+          <div class="c-pal"><h5 style="color:var(--pal)">Pal squads</h5><ul><li>Nicknames, pranks, jokes about strange calls</li><li>Joy speeds up thinking and action</li><li><strong style="color:var(--ink)">Faster response times</strong></li></ul></div>
+          <div class="c-comp"><h5 style="color:var(--comp)">Companion squads</h5><ul><li>Birthdays remembered, favourite snacks stocked</li><li>Care makes people vigilant</li><li><strong style="color:var(--ink)">Fewer accidents</strong></li></ul></div>
+        </div>
+        <p class="cap">From a study of firefighter crews. Personal bonds matter more the longer a squad stays together.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>In 2020 Grant worked with the US women's national soccer team, split between veterans and newcomers. The players chose four ranked values: leave it better, bloodbath mentality, do your sh*t, and don't be an a**hole. Each came with concrete behaviours, from mentoring rookies to cleaning up popcorn in the break room. Quiet defender Becky Sauerbrunn, whom teammates named as the most representative player, became captain. Grant is careful not to claim credit for their 2024 Olympic gold.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Everything Is Relative</span></div>
+  <div class="body">
+    <div>
+      <h3>Family traditions that bend</h3>
+      <p class="idea">Close families balance keeping old traditions with inventing new ones.</p>
+    </div>
+    <ul class="points">
+      <li>Ask at Friday dinner: "Who did you help this week?" Then add "Who helped you?" so kids learn to choose kind friends. Counting contributions motivates more than counting blessings.</li>
+      <li>Tell family stories, the setbacks as well as the successes. Kids who know more of them have higher self-esteem and less anxiety. Make it a trivia game so it doesn't get boring.</li>
+      <li>Screens hurt only when everyone retreats into separate worlds. Watching or playing together (a family Survivor league, Mario Kart with cousins) brings families closer.</li>
+      <li>Widen the circle: cousin camps without parents or phones, chosen family, traditions borrowed from new in-laws.</li>
+      <li>Build pair bonds: one-on-one time with each child, siblings without parents, parents without kids. And don't expect a partner to be your everything.</li>
+    </ul>
+    <div class="fig">
+      <h4>Routine vs. tradition</h4>
+      <div class="compare">
+        <div><h5>Routine</h5><ul><li>Fixed</li><li>Says "this is what needs to be done"</li><li>Dinner at six sharp</li><li>Can turn into something kids rebel against</li></ul></div>
+        <div><h5>Tradition</h5><ul><li>Flexible, reinvented when the family changes</li><li>Says "this is who we are"</li><li>Cake for breakfast on birthdays; T. rex costumes at the airport</li><li>Linked to more closeness, even in families that don't get along</li></ul></div>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story</span>
+      <p>In 2016 Wanda Dench texted the wrong number to invite her grandson to Thanksgiving. The stranger, teenager Jamal Hinton, joked back asking whether he could still get a plate. She said yes, and he came. They've spent every Thanksgiving together since, through her husband's death and her cancer, and now live five minutes apart.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue</span>
+    <h2>Why a chatbot can't be on your wavelength</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>Grant isn't against AI. Chatbots can help people find the right words, plan a gathering, or get support at 3 a.m. Within a year of their launch they were rated as more empathetic than the average person in text.</p>
+      <p>His worry is that machines make interaction frictionless, and friction is how we learn. An awkward conversation teaches small talk. A failed friendship teaches how to stay in touch. A bad breakup teaches how to handle conflict.</p>
+      <p>The leaders of the AI labs he spoke to shared the same main fear: not robots wiping out humans, but AI replacing human bonds.</p>
+    </div>
+    <div class="fig">
+      <h4>All four wavelengths need two sides</h4>
+      <div class="ai-grid">
+        <div class="c-assoc"><b>Associate</b><span>Requires needs to trade. A machine has none.</span></div>
+        <div class="c-ally"><b>Ally</b><span>Requires a shared goal. A machine has no goals of its own.</span></div>
+        <div class="c-pal"><b>Pal</b><span>Requires shared joy. A machine can't feel it.</span></div>
+        <div class="c-comp"><b>Companion</b><span>Requires mutual care. A machine can simulate it, not feel it.</span></div>
+      </div>
+      <p class="cap">A vibe takes two people. A machine can imitate one, but it can't take part in one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the book's 40 actions</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Grant calls this an idea book, not a self-help book, but it ends with practical steps. These are the ones that stand out most.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Spark</h3>
+      <div class="tk"><b>Look for a wavelength, not a match</b><span>Ask which needs, goals, interests or values you share, rather than whether your personalities fit.</span></div>
+      <div class="tk"><b>Choose the question for the wavelength</b><span>"What do you love to do?" for pals, "What's your biggest challenge?" for allies, "What's one of your regrets?" for companions.</span></div>
+      <div class="tk"><b>Exchange origin stories and user manuals</b><span>Share how you got here and what brings out your best and worst.</span></div>
+      <div class="tk"><b>Do something intense together</b><span>A hard workout, a scary ride, a class neither of you is good at.</span></div>
+    </div>
+    <div class="col">
+      <h3>Sustain</h3>
+      <div class="tk"><b>Send pebbles</b><span>A link or memory that shows you remembered something specific about them.</span></div>
+      <div class="tk"><b>Make contact rare but rich</b><span>An annual trip or a monthly game beats dull weekly catch-ups.</span></div>
+      <div class="tk"><b>Accept, then contain</b><span>Let small habits go. Set boundaries that say when a behaviour is a problem.</span></div>
+      <div class="tk"><b>Ask before you conclude</b><span>"Can you help me see how you saw it?" Then walk down the ladder together.</span></div>
+    </div>
+    <div class="col">
+      <h3>Scale</h3>
+      <div class="tk"><b>Introduce your people to each other</b><span>Be the one who opens circles. Bridges energise more than deepening existing bonds.</span></div>
+      <div class="tk"><b>Design the gathering</b><span>A clear purpose, a list of people to meet, assigned seats, deeper prompts as the night goes on, and one fun rule.</span></div>
+      <div class="tk"><b>Give everyone a niche and a role</b><span>Distinct groups nested under a common cause, so each person is needed and not just included.</span></div>
+      <div class="tk"><b>Evolve family traditions</b><span>Keep the meaning, change the form, and make time one on one.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Adam Grant, <em>Vibe: The Secrets of Strong Connections in a Lonely World</em> (Viking, 2026). Figures are as reported in the book. Diagrams were drawn for this page, and charts are drawn to the book's numbers. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+
+  /* --- Network diagrams --- */
+  function nodes(n, cx, cy, r, offset) {
+    var out = [];
+    for (var i = 0; i < n; i++) {
+      var a = (i / n) * Math.PI * 2 + (offset || 0);
+      out.push([cx + Math.cos(a) * r, cy + Math.sin(a) * r]);
+    }
+    return out;
+  }
+  var web = document.getElementById("net-web");
+  if (web) {
+    var p = nodes(8, 110, 110, 80, -Math.PI / 2);
+    var links = [];
+    for (var i = 0; i < 8; i++) { links.push([i, (i + 1) % 8]); links.push([i, (i + 2) % 8]); if (i % 2 === 0) links.push([i, (i + 3) % 8]); }
+    links.forEach(function (l) { el("line", { x1: p[l[0]][0], y1: p[l[0]][1], x2: p[l[1]][0], y2: p[l[1]][1], stroke: "var(--ink-3)", "stroke-width": 1.2, "stroke-opacity": .7 }, web); });
+    var cols = ["--assoc", "--ally", "--pal", "--comp"];
+    p.forEach(function (q, i) { el("circle", { cx: q[0], cy: q[1], r: 10, fill: "var(" + cols[i % 4] + ")" }, web); });
+  }
+  var hub = document.getElementById("net-hub");
+  if (hub) {
+    var h = nodes(8, 110, 110, 80, -Math.PI / 2);
+    h.forEach(function (q) { el("line", { x1: 110, y1: 110, x2: q[0], y2: q[1], stroke: "var(--ink-3)", "stroke-width": 1.2, "stroke-opacity": .7 }, hub); });
+    var cols2 = ["--assoc", "--ally", "--pal", "--comp"];
+    h.forEach(function (q, i) { el("circle", { cx: q[0], cy: q[1], r: 10, fill: "var(" + cols2[i % 4] + ")" }, hub); });
+    el("circle", { cx: 110, cy: 110, r: 13, fill: "var(--ink)" }, hub);
+    var t = el("text", { x: 110, y: 145, "text-anchor": "middle", "font-size": 11 }, hub); t.textContent = "you";
+  }
+
+  /* --- Houses diagram --- */
+  var houses = document.getElementById("houses");
+  if (houses) {
+    el("circle", { cx: 160, cy: 160, r: 152, fill: "var(--paper-2)", stroke: "var(--rule)", "stroke-width": 1.5 }, houses);
+    var names = ["Red Sea Monkeys", "Blue Pirates", "White Buccaneers", "Golden Vikings"];
+    var centres = [[103, 103], [217, 103], [103, 217], [217, 217]];
+    var dotCols = ["--assoc", "--ally", "--pal", "--comp"];
+    var seed = 7;
+    function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+    centres.forEach(function (c, hIdx) {
+      el("circle", { cx: c[0], cy: c[1], r: 52, fill: "var(--card)", stroke: "var(--ink)", "stroke-width": 1.5 }, houses);
+      var placed = 0, tries = 0, pts = [];
+      while (placed < 18 && tries < 800) {
+        tries++;
+        var a = rnd() * Math.PI * 2, r = Math.sqrt(rnd()) * 36;
+        var x = c[0] + Math.cos(a) * r, y = c[1] + Math.sin(a) * r - 4;
+        if (pts.some(function (q) { return Math.hypot(q[0] - x, q[1] - y) < 10; })) continue;
+        pts.push([x, y]);
+        el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: 3.6, fill: "var(" + dotCols[(placed + hIdx) % 4] + ")" }, houses);
+        placed++;
+      }
+      var lbl = el("text", { x: c[0], y: c[1] + 66, "text-anchor": "middle", "font-size": 10 }, houses);
+      lbl.textContent = names[hIdx];
+    });
+  }
+
+  /* --- Hero wave: two waves fall into sync --- */
+  var canvas = document.getElementById("wave");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : 1 - Math.pow(1 - t, 3); }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var mid = hgt / 2, amp = hgt * 0.32;
+    var drift = reduce ? 0 : time * 0.0011;
+    ctx.lineWidth = 3; ctx.lineCap = "round";
+    var cols = [css("--assoc"), css("--pal")];
+    for (var k = 0; k < 2; k++) {
+      ctx.beginPath();
+      for (var x = 0; x <= w; x += 2) {
+        var u = x / w;                    // 0 → 1 across the band
+        var s = ease((u - 0.12) / 0.62);  // how "in sync" this point is
+        var f1 = 2 * Math.PI / 150;
+        var f2 = k === 0 ? f1 : 2 * Math.PI / (96 + 54 * s);
+        var phase = k === 0 ? 0 : (1 - s) * Math.PI * 0.9;
+        var a = amp * (k === 0 ? 1 : 0.78 + 0.22 * s);
+        var y = mid + Math.sin(x * f2 - drift + phase) * a;
+        if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = cols[k];
+      ctx.globalAlpha = k === 0 ? 0.95 : 0.85;
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

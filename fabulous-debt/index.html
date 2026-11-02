@@ -1,0 +1,1183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>A Fabulous Debt by Robin Wigglesworth – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: an Old Master portrait on near-black olive,
+   the title in antique gold, a pale slip of paper, a touch of red at the lips.
+   Gold = credit working as intended, rust = where the debt machine breaks. */
+:root {
+  --paper: #f5f1e7;
+  --paper-2: #ebe4d3;
+  --card: #fffcf4;
+  --ink: #1a1813;
+  --ink-2: #4b463c;
+  --ink-3: #777064;
+  --rule: #dcd3c0;
+
+  --gold: #85662a;
+  --gold-2: #b49658;
+  --rust: #a8391f;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #12110e;
+    --paper-2: #1c1a15;
+    --card: #201d18;
+    --ink: #efe9dc;
+    --ink-2: #bbb2a2;
+    --ink-3: #8e8676;
+    --rule: #342f27;
+    --gold: #d6b571;
+    --gold-2: #b49658;
+    --rust: #ea7a5e;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #12110e;
+  --paper-2: #1c1a15;
+  --card: #201d18;
+  --ink: #efe9dc;
+  --ink-2: #bbb2a2;
+  --ink-3: #8e8676;
+  --rule: #342f27;
+  --gold: #d6b571;
+  --gold-2: #b49658;
+  --rust: #ea7a5e;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-cyan { --c: var(--gold); }
+.c-red { --c: var(--rust); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: clamp(22px, 3vw, 34px); letter-spacing: .08em; line-height: 1; text-transform: uppercase; color: var(--rust); }
+.hero h1 {
+  font-size: clamp(54px, 11vw, 136px);
+  font-weight: 800;
+  font-stretch: 72%;
+  line-height: .86;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 10px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1087;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(30, 22, 8, .45), 0 8px 18px -10px rgba(30, 22, 8, .3);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--gold);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  font-stretch: 72%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .01em;
+  color: var(--gold);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--gold-2);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--gold-2);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--rust);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-cy { fill: var(--gold); }
+.fig svg text.t-red { fill: var(--rust); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-cy { stroke: var(--gold); fill: none; }
+.s-cy2 { stroke: var(--gold-2); fill: none; }
+.s-red { stroke: var(--rust); fill: none; }
+.f-cy { fill: var(--gold); }
+.f-cy2 { fill: var(--gold-2); }
+.f-red { fill: var(--rust); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-cyt { fill: color-mix(in srgb, var(--gold) 16%, var(--card)); }
+.f-redt { fill: color-mix(in srgb, var(--rust) 14%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--gold); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; letter-spacing: .02em; color: var(--gold); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--gold); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three kinds */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--gold); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--gold); }
+.compare .bad h5 { color: var(--rust); }
+
+/* equation strip */
+.eq { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: var(--paper-2); border-radius: 6px; padding: 14px 18px; margin: 0; white-space: pre-wrap; color: var(--ink); }
+.eq .k { color: var(--gold); }
+.eq .r { color: var(--rust); }
+.eq .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 150px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; color: var(--gold); border-top: 2px solid var(--gold); padding-top: 12px; letter-spacing: .02em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map, .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Robin Wigglesworth · Portfolio / Penguin, 2026</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#invention">Invention</a>
+    <a href="#expansion">Expansion</a>
+    <a href="#reinvention">Reinvention</a>
+    <a href="#machine">The machine</a>
+    <a href="#conclusion">How much?</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">A</p>
+    <h1><span>Fabulous</span><span>Debt</span></h1>
+    <p class="sub">The epic story of how bonds built the modern world</p>
+    <p class="dek">The FT’s Robin Wigglesworth follows the tradable IOU from a forced war loan in medieval Venice to today’s $100-trillion-plus government debt, and argues it is now finance’s most powerful machine.</p>
+    <div class="byline label">
+      <span>Intro + 19 chapters</span><span>1171 → 2025</span><span>~115,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of A Fabulous Debt by Robin Wigglesworth: a cropped Old Master portrait of a man in black against a dark background, his hands holding a small folded paper, with the title in large antique-gold capitals across the middle">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="seesaw"></canvas>
+  <div class="ends label"><span>Price</span><span>Yield moves the other way</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Introduction</span>
+    <h2>The market that can intimidate a president</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>The book opens in April 2025. A week after unveiling sweeping tariffs, President Trump paused most of them for ninety days. Stocks had been falling for weeks, but Wigglesworth reports that what alarmed Treasury Secretary Scott Bessent and Commerce Secretary Howard Lutnick was the bond market: the yield on the Treasury bond due in 2035 had jumped from a low of 3.8% to 4.5% by the morning of 9 April. Trump himself admitted that the bond market’s jitters had prompted the pause.</p>
+      <p>A bond is a loan cut into tradable pieces, usually paying a fixed coupon. Because the coupon is fixed, a falling price means a rising <strong>yield</strong>, the return a new buyer actually gets. Treasury yields are the benchmark for borrowers everywhere.</p>
+      <p>Bonds have a dull reputation. Wigglesworth’s case is that they are now the most important part of the financial system, probably bigger than banking itself, and that this shift is the defining issue in finance today.</p>
+      <p>Clinton adviser James Carville wanted to <em>“come back as the bond market”</em>; the author thinks that is truer than ever.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The scale of it</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-cyan"><span class="big num">$188T</span><p>Bonds outstanding by mid-2025, per the Bank for International Settlements. Global stocks were worth roughly $130 trillion.</p></div>
+        <div class="stat"><span class="big num">~$190T</span><p>Total assets of every bank in the world, and much of that is itself bonds and bond derivatives.</p></div>
+        <div class="stat c-cyan"><span class="big num">$3.2T</span><p>Bonds BlackRock held for clients at the end of 2025, more than the $3.1 trillion of debts on JPMorgan’s balance sheet.</p></div>
+        <div class="stat c-red"><span class="big num">45 days</span><p>Liz Truss’s time as UK prime minister before the gilt market helped force her out in 2022.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kinds" style="margin-top:32px">
+    <div><span class="label">The technology</span><b>Pool and trade</b><span>Many small savings become one large loan, and any holder can sell their slice. Tradability makes borrowing cheap.</span></div>
+    <div><span class="label">The politics</span><b>Creditor-citizens</b><span>Spreading a state’s debt among its own people gives them a stake in its survival.</span></div>
+    <div><span class="label">The danger</span><b>Mania and plumbing</b><span>Because bonds feel safe they are used as collateral and bought on borrowed money. When buyers vanish, that becomes the problem.</span></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Ch. 1–4</span>
+      <h3>Invention</h3>
+      <p class="q">City-states, a republic and a new nation learn to borrow</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>The Merchants of Venice</b></a></li>
+        <li><span>02</span><a href="#ch2"><b>The Bog of Europe</b></a></li>
+        <li><span>03</span><a href="#ch3"><b>The Credit of England</b></a></li>
+        <li><span>04</span><a href="#ch4"><b>A National Blessing</b></a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Ch. 5–8</span>
+      <h3>Expansion</h3>
+      <p class="q">Global, industrial, rated and sold to everyone</p>
+      <ol>
+        <li><span>05</span><a href="#ch5"><b>From Poyais with Love</b></a></li>
+        <li><span>06</span><a href="#ch6"><b>Cooke’s Crisis</b></a></li>
+        <li><span>07</span><a href="#ch7"><b>The Language of Credit</b></a></li>
+        <li><span>08</span><a href="#ch8"><b>Public Credit Immortal</b></a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Ch. 9–13</span>
+      <h3>Reinvention</h3>
+      <p class="q">Broken by inflation, rebuilt offshore, sliced and swapped</p>
+      <ol>
+        <li><span>09</span><a href="#ch9"><b>The Monstrous Monkey House</b></a></li>
+        <li><span>10</span><a href="#ch10"><b>The Outsider</b></a></li>
+        <li><span>11</span><a href="#ch11"><b>The Shepherd</b></a></li>
+        <li><span>12</span><a href="#ch12"><b>Scenius</b></a></li>
+        <li><span>13</span><a href="#ch13"><b>Weapons of Math Destruction</b></a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Ch. 14–19</span>
+      <h3>The machine</h3>
+      <p class="q">Funds, leverage, central banks and the debt mountain</p>
+      <ol>
+        <li><span>14</span><a href="#ch14"><b>The New Bond Kings</b></a></li>
+        <li><span>15</span><a href="#ch15"><b>Repo Men</b></a></li>
+        <li><span>16</span><a href="#ch16"><b>The Pisaster</b></a></li>
+        <li><span>17</span><a href="#ch17"><b>Through the Looking Glass</b></a></li>
+        <li><span>18</span><a href="#ch18"><b>To Infinity and Beyond</b></a></li>
+        <li><span>19</span><a href="#conclusion"><b>How Much Is Too Much?</b></a></li>
+      </ol>
+    </div>
+  </div>
+  <p class="label" style="margin-top:16px">The book runs as 19 chapters with no parts. The four eras are this summary’s grouping.</p>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="invention">
+  <span class="label partno">Era I · Chapters 1–4</span>
+  <h2>Invention</h2>
+  <p class="lede">Venice invented the bond, the Dutch spread it through society, Britain built a superpower on it, and Hamilton used it to bind a new country.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Venice, 1171</span></div>
+  <div class="body">
+    <div>
+      <h3>A forced loan that nobody could repay</h3>
+      <p class="idea">The bond began as an emergency war levy. What turned it into a lasting institution was a fixed coupon that was reliably paid and a claim that could be sold to someone else.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The trigger.</strong> On 12 March 1171 the Byzantine emperor had more than 20,000 Venetians arrested and their goods seized. To pay for a revenge fleet, Doge Vitale II Michiel assessed citizens’ wealth and compelled them to lend at 5% a year.</li>
+      <li><strong>The twist.</strong> The receipts, <em>prestiti</em>, were tradable. The expedition collapsed in plague, a mob killed the doge in 1172, and the loan was never repaid; interest kept flowing and the debt became permanent.</li>
+      <li><strong>The first bond market.</strong> Rialto dealers traded the claims. In 1262 Venice merged its debts into one <em>Monte</em> (“mountain”) at 5%, with creditors paid before almost all other spending.</li>
+      <li><strong>Creditors as constituents.</strong> The Great Council that managed the debt was full of the city’s largest lenders, so default was against their own interest.</li>
+      <li><strong>Price as a verdict.</strong> The Monte traded at 80–100% of face until the 1370s, then fell to around 20% in the 1380s war with Genoa.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Why price and yield move in opposite directions</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 262" role="img" aria-label="Chart of price against yield to maturity for a ten-year bond with a 1,000 dollar face value and a 4 percent coupon. The curve slopes down: at a price of 1,100 the yield is 2.84 percent, at 1,000 it is 4 percent, and at 900 it is 5.31 percent.">
+          <g id="py-grid"></g>
+          <path d="M70.0 34.8 L87.5 42.9 L105.0 50.8 L122.5 58.6 L140.0 66.1 L157.5 73.5 L175.0 80.6 L192.5 87.6 L210.0 94.4 L227.5 101.0 L245.0 107.5 L262.5 113.8 L280.0 120.0 L297.5 126.0 L315.0 131.9 L332.5 137.6 L350.0 143.2 L367.5 148.6 L385.0 153.9 L402.5 159.1 L420.0 164.2 L437.5 169.1 L455.0 173.9 L472.5 178.6 L490.0 183.2 L507.5 187.7 L525.0 192.1 L542.5 196.3 L560.0 200.5" class="s-cy" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M198.8 90 V210 M280 120 V210 M371.7 150 V210" class="s-3" stroke-dasharray="3 4"/>
+          <circle cx="198.8" cy="90" r="6" class="f-cy"/>
+          <circle cx="280" cy="120" r="6" class="f-ink"/>
+          <circle cx="371.7" cy="150" r="6" class="f-red"/>
+          <text x="208" y="80" class="t-cy">$1,100 → 2.84%</text>
+          <text x="290" y="113" class="t-ink">$1,000 → 4.00%</text>
+          <text x="382" y="144" class="t-red">$900 → 5.31%</text>
+          <text x="315" y="252" text-anchor="middle" class="t-3" style="font-size:11px">yield to maturity</text>
+        </svg>
+      </div>
+      <p class="cap">Book example: a ten-year bond with a $1,000 face value paying a fixed $40 a year. Worried investors bid the price down, so the fixed coupon gives a new buyer a higher return. The curve between the three marked points is calculated with standard bond maths.</p>
+      <p class="src">Figures from ch. 1. Curve computed for this page.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Netherlands</span></div>
+  <div class="body">
+    <div>
+      <h3>A wet country that borrowed its way to power</h3>
+      <p class="idea">The Dutch took the bond out of the city walls. Ordinary savers in many towns lent to each other, and the whole country could borrow cheaply even while at war.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Water boards.</strong> Local boards financed the dikes with <em>renten</em>, annuity-style bonds. When drifting ice broke a dike on the River Lek on New Year’s Day 1624, the local board sold over fifty goatskin bonds and raised about 23,000 guilders for the repair.</li>
+      <li><strong>Cheaper money in wartime.</strong> Holland’s borrowing cost was over 8% around 1550–60. By the late 1600s it was 3–4%, despite decades of war with Spain.</li>
+      <li><strong>The contrast.</strong> Philip II of Spain defaulted four times and paid nearly 10% on short loans; after the 1575 default, unpaid Spanish troops sacked Antwerp.</li>
+      <li><strong>The first corporate bond.</strong> The Dutch East India Company (VOC) raised 6,424,588 guilders from shareholders in 1602 and barely issued shares again. It grew on debt instead. The earliest known VOC bond, from 26 October 1622, paid 6.25%.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">England</span></div>
+  <div class="body">
+    <div>
+      <h3>Consols: parliamentary credit beats a bigger enemy</h3>
+      <p class="idea">After 1688, England copied Dutch finance and put its debt in Parliament’s hands rather than the king’s. One deep, uniform pool of debt let a smaller country outspend France for more than a century.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Before and after.</strong> In the 1600s England paid 8–14% to borrow, the Dutch 3–5%. After 1688, debt rose from £1 million to almost £17 million in the Nine Years’ War, yet yields fell to about 3% by the 1730s.</li>
+      <li><strong>Sampson Gideon.</strong> This stockjobber steadied the market in the 1745 Jacobite scare and helped Prime Minister Henry Pelham cut the rate on £58.7 million of 4% debt, in steps, to 3% and merge it into one perpetual bond: the Consol.</li>
+      <li><strong>The Consol’s advantages.</strong> A debtor answerable to Parliament, strong property rights, open accounts, identical securities and confidence there would always be a buyer.</li>
+      <li><strong>Waterloo.</strong> Debt reached about £900 million, more than twice GDP. French <em>rentes</em> sometimes sold for a tenth of face value, while Consols rarely fell below half. Their post-war recovery toward par, the author says, gave Britain a large wealth effect that helped finance industry.</li>
+      <li><strong>The title.</strong> Macaulay, mocking the prophets of ruin, called it <em>“a gigantic, a fabulous debt”</em>.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Credibility sets the price of money</h4>
+      <div class="legend"><span><i class="sq" style="--c:var(--gold)"></i>trusted borrowers</span><span><i class="sq" style="--c:var(--rust)"></i>borrowers in trouble or untrusted</span></div>
+      <div class="scroll-x">
+        <svg id="d-rates" viewBox="0 0 600 330" role="img" aria-label="Range chart of borrowing costs reported in chapters 1 to 4. Venice's Monte before the 1370s: 5 to 6.25 percent. Holland in the late 1600s: 3 to 4 percent. British Consols over two centuries: 3 to 5 percent. England in the 1600s: 8 to 14 percent. Spain's loans under Philip II: almost 10 percent on average. Venice during the 1380s war: about 25 percent. United States in 1787: 25 to 40 percent. France's rentes in the Napoleonic wars: up to 50 percent."></svg>
+      </div>
+      <p class="cap">Ranges as reported in the book. They are not like-for-like: some are market yields, some loan rates, and France’s figure is implied by rentes at a tenth of face value. Accountable borrowers who paid on time borrowed for less.</p>
+      <p class="src">Figures from ch. 1–4 (Homer &amp; Sylla’s A History of Interest Rates is the main source cited)</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">United States</span></div>
+  <div class="body">
+    <div>
+      <h3>Hamilton turns a ruined credit into a national asset</h3>
+      <p class="idea">By taking over the states’ war debts and paying everyone in full, Hamilton made bondholders an interest group with a reason to keep the union together.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Starting point.</strong> In 1787 American government bonds traded below 15 cents on the dollar, a yield of 25–40%. Congress couldn’t tax, and the federal government owed $54 million while the states owed $25 million more.</li>
+      <li><strong>The First Report (January 1790).</strong> Hamilton argued for paying whoever held the paper in full: buyers had bought fairly, and tracing original holders would be unjust and unworkable.</li>
+      <li><strong>The deal.</strong> James Madison led the opposition, convinced <em>“a public debt is a public curse”</em>. At a dinner arranged by Jefferson, Madison accepted federal assumption of state debts in exchange for siting the capital on the Potomac.</li>
+      <li><strong>Results.</strong> By early 1791 the new 6% bonds traded near 85–90 cents. When William Duer’s attempt to corner them collapsed in 1792, Hamilton’s sinking fund bought bonds to calm the panic, an early version of what is now called quantitative easing.</li>
+      <li><strong>Louisiana.</strong> Napoleon sold it for $15 million. Barings and Hope &amp; Co. bought the $11.25 million of 6% US bonds from France at a 13.3% discount and resold them in London and Amsterdam.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="expansion">
+  <span class="label partno">Era II · Chapters 5–8</span>
+  <h2>Expansion</h2>
+  <p class="lede">Bonds went international, industrial and public, and produced the first global bond bust, a railway crash and credit ratings.</p>
+</div>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">London, 1820s</span></div>
+  <div class="body">
+    <div>
+      <h3>Rothschild’s template, and a country that didn’t exist</h3>
+      <p class="idea">Nathan Rothschild made foreign bonds easy for British savers to buy. Investors looking for higher yields then bought almost anything, including bonds from a country that didn’t exist.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The template.</strong> Rothschild’s 1818 £5 million loan to Prussia was a sterling bearer bond with interest payable in London, and Prussia had to accept checks on its borrowing. It set the pattern for a borderless market.</li>
+      <li><strong>Poyais.</strong> In October 1822 the Scottish adventurer Gregor MacGregor sold a £200,000 bond for Poyais, an invented Central American country. Of 250 settlers on the first two ships, about 180 died.</li>
+      <li><strong>The 1825 bust.</strong> When the Bank of England tightened credit as gold flowed out, Latin American bonds that had been used as loan collateral collapsed. Every Latin American borrower except Brazil eventually defaulted, 73 of 770 English banks failed, and British GDP fell 13% in 1826. The Bank only slowly accepted the role of lender of last resort.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Where a nineteenth-century bond’s face value went</h4>
+      <div class="scroll-x">
+        <svg id="d-under" viewBox="0 0 600 230" role="img" aria-label="Two stacked bars dividing a bond's face value. Book's worked example of a 1 million pound bond underwritten at 75, sold at 90, with a 5 percent fee: the borrower receives 712,500 pounds, the bankers and jobbers 187,500, and investors' discount to face is 100,000. Mexico 1823, 3.2 million pounds of face value: Mexico got about 1.18 million, about 0.42 million went in commissions, prepaid interest and the sinking fund, Goldschmidt's resale margin was about 0.26 million, and buyers' discount to face was about 1.34 million."></svg>
+      </div>
+      <p class="cap">The borrower owed the full face value but received only part of it. Mexico’s 1823 bond, underwritten at 50 with £421,360 deducted, raised about £1.18 million against a £3.2 million liability. Goldschmidt resold at 58; the book puts its take, with fees, near £300,000.</p>
+      <p class="src">Figures from ch. 5. The segments of Mexico’s bar are derived from those numbers.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Railroads</span></div>
+  <div class="body">
+    <div>
+      <h3>Jay Cooke saves the Union, then sinks Wall Street</h3>
+      <p class="idea">Bonds can spread risk among many investors. They don’t help when the unsold bonds end up on a bank’s own books.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Selling the Civil War.</strong> With $50 bonds, 2,500 salesmen and heavy advertising, Cooke raised over a quarter of the Union’s $6.2 billion of wartime bonds, notes and currency.</li>
+      <li><strong>Rails on bonds.</strong> US railway bonds outstanding rose from $416 million in 1867 to more than $5 billion by 1890. Cooke agreed to sell $100 million of Northern Pacific bonds at 7.3%. When buyers dried up after a Vienna crash in 1873, the unsold bonds and loans to the railroad stayed on his firm’s books.</li>
+      <li><strong>18 September 1873.</strong> Jay Cooke &amp; Co. couldn’t raise $1 million against collateral that was already pledged. The NYSE closed for ten days, 71 railways defaulted in 1874 alone, and the Long Depression lasted more than five years.</li>
+      
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Ratings</span></div>
+  <div class="body">
+    <div>
+      <h3>From credit gossip to a legal standard</h3>
+      <p class="idea">Ratings started as a way to fill an information gap. Regulation then made them mandatory, and when issuers began paying for them their incentives changed.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Three founders.</strong> Lewis Tappan’s Mercantile Agency (1841) reported on merchants’ credit; Henry Varnum Poor’s manual (1868) gathered railroad data; in 1909 John Moody graded nearly 1,300 railroad bonds from Aaa to E.</li>
+      <li><strong>Built into regulation.</strong> In 1936 US banks were barred from buying “speculative” securities as defined by rating manuals. In 1975 the SEC formally designated Moody’s, S&amp;P and Fitch, which today hold roughly 90% of the market between them.</li>
+      <li><strong>The conflict.</strong> In the 1970s the agencies switched from charging investors to charging the issuers whose bonds they rated. After 2008 the official crisis inquiry called them essential to what went wrong.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Liberty bonds</span></div>
+  <div class="body">
+    <div>
+      <h3>A nation of bondholders</h3>
+      <p class="idea">America paid for the First World War by turning bond buying into a test of patriotism, and its government debt was never paid down again.</p>
+    </div>
+    <ul class="points">
+      <li><strong>From 350,000 to 34 million.</strong> Bankers told Treasury Secretary William McAdoo that only about 350,000 Americans owned bonds. By the end of the war around 34 million had bought federal bonds. The first Liberty Loan, at 3.5%, drew about four million subscribers and was oversubscribed, and five loans raised $21.4 billion in total.</li>
+      <li><strong>The campaign.</strong> Charlie Chaplin rallied crowds on Wall Street, preachers gave Liberty bond sermons, and people who refused to buy were sometimes shamed.</li>
+      <li><strong>Prices fell anyway.</strong> Trading showed the bonds were priced too richly; they slipped below par, and a $1.7 billion buyback fund couldn’t lift them back.</li>
+      <li><strong>The legacy.</strong> Researchers link the campaign to more stock and bond ownership afterwards. US government debt never shrank back, which realised Hamilton’s idea of “public credit immortal”.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="reinvention">
+  <span class="label partno">Era III · Chapters 9–13</span>
+  <h2>Reinvention</h2>
+  <p class="lede">Capital controls and inflation nearly finished the bond market. It came back offshore, then grew into junk, mortgage securities and derivatives.</p>
+</div>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Bretton Woods</span></div>
+  <div class="body">
+    <div>
+      <h3>The dollar replaces gold, and bonds lose money</h3>
+      <p class="idea">Bretton Woods tied currencies to the dollar and the dollar to gold. The capital controls it needed broke up the international bond market, and the inflation that followed nearly finished bonds as an investment.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Keynes versus White.</strong> In July 1944 Keynes’s global clearing currency lost to Harry Dexter White’s plan: the dollar was fixed to gold at $35 an ounce.</li>
+      <li><strong>Financial repression.</strong> From 1942 the Fed held long Treasury yields at 2.5% while inflation peaked near 20% in 1947. The 1951 Treasury Accord gave the Fed its independence to set rates.</li>
+      <li><strong>The Triffin dilemma.</strong> To supply the world with dollars the US had to run deficits, so the dollars held abroad eventually far exceeded the gold behind them. By 1969 US gold reserves were $10.5 billion against $40 billion of dollars in foreign official reserves. Nixon suspended convertibility on 15 August 1971.</li>
+      <li><strong>Inflation.</strong> The ten-year yield peaked at 15.84% in September 1981. Someone who bought a ten-year Treasury in 1970 had lost nearly half their money in real terms by 1980.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Eurobonds</span></div>
+  <div class="body">
+    <div>
+      <h3>Siegmund Warburg brings international bonds back to London</h3>
+      <p class="idea">Rules made to protect the dollar pushed a new market offshore, and it put London back at the centre of international finance.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Eurodollars.</strong> Dollars held abroad escaped US caps on deposit rates (Regulation Q); by the late 1960s European banks held $53 billion of them.</li>
+      <li><strong>Autostrade, 1 July 1963.</strong> S. G. Warburg arranged a $15 million, 5.5% bearer bond for Italy’s motorway company. To avoid taxes it was formally issued at Schiphol airport and listed in Luxembourg, and many buyers were anonymous clients of Swiss private banks.</li>
+      <li><strong>Washington helps.</strong> Kennedy’s Interest Equalization Tax, proposed that month, drove foreign borrowers out of New York: $40 million of foreign bonds sold there in 1964, against about $545 million of dollar Eurobonds.</li>
+      <li><strong>New products.</strong> Floating-rate notes tied to LIBOR came out of this market. By 1982 Eurobond issuance exceeded the US domestic corporate market; today it is over €13 trillion.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Junk</span></div>
+  <div class="body">
+    <div>
+      <h3>Michael Milken’s high-yield market</h3>
+      <p class="idea">Milken was right that a diversified portfolio of risky bonds pays investors more than enough to cover defaults. Where he went wrong was assuming that held for the much riskier bonds his own market created.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Hickman’s study.</strong> W. Braddock Hickman found that from 1900 to 1943 low-rated bonds out-returned high-rated ones despite more defaults. At Drexel, Milken built a market on that: trading, a loyal buyer network, and from 1977 new junk issues.</li>
+      <li><strong>Scale and power.</strong> Junk outstanding grew from $15 billion (1976) to $125 billion a decade later. Drexel held close to 70% of the market, and its “highly confident letter” let raiders bid for companies.</li>
+      <li><strong>The fall.</strong> Drexel pleaded guilty to six felonies and paid $673 million. Milken pleaded guilty in April 1990, served twenty-two months, and was pardoned in 2020. Drexel went bankrupt in February 1990.</li>
+      <li><strong>What lasted.</strong> A 1989 study found more than 16% of high-yield bonds issued in 1977–86 had already defaulted, because buyout debt was far riskier than the fallen angels in Hickman’s data. Still, the book reports that since mid-1986 junk bonds have returned over seventeen times investors’ money, against about ten times for investment grade, and the market is now about $5 trillion.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Securitization</span></div>
+  <div class="body">
+    <div>
+      <h3>Turning mortgages into bonds</h3>
+      <p class="idea">Lewis Ranieri at Salomon Brothers turned home loans into tradable bonds, and bank business began moving into the bond market.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Earlier versions.</strong> Prussia’s 1769 <em>Pfandbriefe</em> became Europe’s covered bonds, which the book says have never lost money. In the Depression about $8 billion of America’s $10 billion of 1920s mortgage bonds defaulted.</li>
+      <li><strong>The pass-through.</strong> Ginnie Mae’s first modern mortgage-backed security (February 1970) pooled loans and passed the monthly payments on to investors with a government guarantee. Because homeowners can repay early, investors never knew when they would get their money back.</li>
+      <li><strong>Ranieri’s solution.</strong> A former mailroom worker, Ranieri profited from a 1981 tax break for thrifts that sold mortgages, then split the cash flows into tranches. The first was a $1 billion, three-tranche collateralized mortgage obligation for Freddie Mac in 1983. He lobbied for a 1984 law that let most institutional investors buy them, and for 1986 tax rules that made far larger deals possible.</li>
+      <li><strong>Growth.</strong> Mortgage securities went from under $100 billion in 1980 to nearly $1 trillion a decade later.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“Securitization is like fertilizer. You can grow tomatoes or blow up buildings.”</blockquote>
+      <span class="label">Simon Mikhailovich, hedge fund manager, quoted in ch. 12</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Derivatives</span></div>
+  <div class="body">
+    <div>
+      <h3>Futures, swaps and credit default swaps</h3>
+      <p class="idea">After 1971, interest rates and exchange rates could be traded separately from the bonds themselves. That made risk easier to hedge and also easier to hide.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Futures on money.</strong> Leo Melamed paid Milton Friedman $5,000 for a feasibility study and opened currency futures at the Merc on 16 May 1972. Treasury and Eurodollar futures followed.</li>
+      <li><strong>Swaps.</strong> In August 1981 Salomon arranged for the World Bank to service IBM’s Swiss franc and Deutschmark debts in return for IBM servicing new World Bank dollar bonds. Each side got cheaper funding. Interest-rate swaps reached about $5 billion by the end of 1982. Within a decade, swaps of all kinds referenced $4.6 trillion.</li>
+      <li><strong>Credit default swaps.</strong> In 1994 JPMorgan’s Blythe Masters paid the EBRD to bear the default risk of a $4.8 billion Exxon credit line. The 1997 BISTRO deal, below, became the model for synthetic CDOs.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Tranching: who takes the first losses</h4>
+      <div class="scroll-x">
+        <svg id="d-bistro" viewBox="0 0 600 250" role="img" aria-label="Diagram of JPMorgan's 1997 BISTRO deal. Credit risk on 307 corporate loans worth just under 10 billion dollars is transferred to a 700 million dollar bond. The bond is split into two tranches: a junior tranche rated Ba2 that absorbs the first 237 million dollars of losses, and a senior tranche rated triple-A that only takes losses beyond that. The 700 million dollars raised is held in Treasuries."></svg>
+      </div>
+      <p class="cap">The loans stayed on JPMorgan’s books, but the bond carried their risk, so regulators granted capital relief. The Ba2 (junk) slice takes the first $237 million of losses; triple-A is hit only after.</p>
+      <p class="src">Figures from ch. 12–13. The bar is drawn to scale.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART IV ============ -->
+<div class="part" id="machine">
+  <span class="label partno">Era IV · Chapters 14–18</span>
+  <h2>The machine</h2>
+  <p class="lede">Power moved from bankers to funds, leverage came through repo and money funds, and each breakdown needed a bigger central bank rescue.</p>
+</div>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">PIMCO</span></div>
+  <div class="body">
+    <div>
+      <h3>Bill Gross trades bonds actively</h3>
+      <p class="idea">Most investors used to buy bonds and hold them to maturity. Gross showed that trading them actively could produce large returns, and bond fund managers gained more power than the banks that sold to them.</p>
+    </div>
+    <ul class="points">
+      <li><strong>From the vault to trading.</strong> In 1971 Gross was clipping coupons in Pacific Mutual’s vault. He talked the firm into letting him trade a $5 million account, which became PIMCO. A former blackjack card-counter, he called his method “structural alpha”: many small, systematic edges.</li>
+      <li><strong>The edges.</strong> These included short-dated junk bonds paired with futures, selling options on bond volatility (“selling the noise”), insisting on large allocations of new issues, which tended to be priced slightly cheap, and a mispriced Ginnie Mae futures contract that made $70 million at once.</li>
+      <li><strong>Peak and exit.</strong> PIMCO grew past $2 trillion; Gross left in September 2014, a day before he expected to be fired.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">LTCM, 1998</span></div>
+  <div class="body">
+    <div>
+      <h3>Repo and leverage</h3>
+      <p class="idea">A repo is a short-term loan secured on bonds. Long-Term Capital Management used it to turn tiny price gaps into large profits, until the gaps widened and lenders demanded more collateral.</p>
+    </div>
+    <ul class="points">
+      <li><strong>How repo works.</strong> Sell a bond and agree to buy it back tomorrow at a slightly higher price; the difference is the interest. The safer the bond, the more you can borrow.</li>
+      <li><strong>The trades.</strong> John Meriwether’s former Salomon team, with Myron Scholes and Robert Merton as partners, started in 1994 with $1.25 billion. One early trade: a new thirty-year Treasury yielded 7.24% and a six-month-older one 7.36%. LTCM bought $1 billion of the older bond, shorted the new one, levered about 25 times, and profited when the gap closed.</li>
+      <li><strong>The crash.</strong> By spring 1998 it held $134 billion of assets on about $4.5 billion of capital. After Russia’s moratorium on 17 August its spreads widened instead of narrowing, it lost 44% that month, and the New York Fed organised a rescue by Wall Street banks.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Leverage turned 2.45% into 42.8% (1995)</h4>
+        <div class="bars">
+          <div class="bar c-ink"><div class="row"><span>Return on total assets</span><b>2.45%</b></div><div class="track"><div class="fill" style="width:5.7%"></div></div></div>
+          <div class="bar c-cyan"><div class="row"><span>Return on investors’ capital, after fees</span><b>42.8%</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">Leverage works both ways: at $134 billion on $4.5 billion, a few percent off asset values erases the capital.</p>
+        <p class="src">Figures from ch. 15</p>
+      </div>
+      <div class="fig">
+        <h4>The margin spiral</h4>
+        <svg viewBox="0 0 320 250" role="img" aria-label="A loop of four steps: prices move against leveraged trades; lenders demand more collateral, called margin calls; funds sell whatever they can to raise cash; the forced selling pushes prices further, which triggers more margin calls.">
+          <circle cx="160" cy="125" r="78" class="s-red" stroke-width="2" stroke-dasharray="5 5"/>
+          <g id="spiral-arrows"></g>
+          <rect x="95" y="22" width="130" height="44" rx="6" class="f-card s-red" stroke-width="1.5"/>
+          <text x="160" y="40" text-anchor="middle" class="t-ink" style="font-size:12px">prices move</text>
+          <text x="160" y="56" text-anchor="middle" class="t-ink" style="font-size:12px">against the trade</text>
+          <rect x="190" y="103" width="124" height="44" rx="6" class="f-card s-red" stroke-width="1.5"/>
+          <text x="252" y="121" text-anchor="middle" class="t-ink" style="font-size:12px">lenders demand</text>
+          <text x="252" y="137" text-anchor="middle" class="t-ink" style="font-size:12px">more collateral</text>
+          <rect x="95" y="184" width="130" height="44" rx="6" class="f-card s-red" stroke-width="1.5"/>
+          <text x="160" y="202" text-anchor="middle" class="t-ink" style="font-size:12px">funds sell what</text>
+          <text x="160" y="218" text-anchor="middle" class="t-ink" style="font-size:12px">they can</text>
+          <rect x="6" y="103" width="124" height="44" rx="6" class="f-card s-red" stroke-width="1.5"/>
+          <text x="68" y="121" text-anchor="middle" class="t-ink" style="font-size:12px">prices fall</text>
+          <text x="68" y="137" text-anchor="middle" class="t-ink" style="font-size:12px">further</text>
+        </svg>
+        <p class="cap">The loop recurs: LTCM in 1998, Bear Stearns’s funds in 2007, the Treasury basis trade in 2020. LTCM’s Victor Haghani later concluded its trades were mostly sound but too big for its capital.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">2008</span></div>
+  <div class="body">
+    <div>
+      <h3>Money market funds: the keystone species</h3>
+      <p class="idea">Wigglesworth argues that the global financial crisis was as much a bond-market crisis as a banking crisis, and that at its centre was a run on short-term funding that nobody had properly mapped.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The keystone.</strong> Money market funds are the <em>Pisaster</em>, a small starfish whose removal upsets a whole ecosystem: they supply the repo and commercial paper much of finance runs on.</li>
+      <li><strong>Leverage fails.</strong> Bear Stearns’s two mortgage funds turned about $1.9 billion of investors’ money into more than $20 billion of mostly CDO holdings, financed by repo. In June 2007 they collapsed; the bank itself fell to a repo run in March 2008.</li>
+      <li><strong>Breaking the buck.</strong> The oldest money fund, Reserve Primary, had dropped its ban on commercial paper in 2006; holding $785 million of Lehman paper, it fell below $1 a share. In one week $349 billion fled prime funds, until the Treasury guaranteed the industry.</li>
+      <li><strong>The fix.</strong> Prime funds now have floating values and have shrunk to about $1.2 trillion, while government-only funds manage more than $6 trillion. The author’s verdict is that the risks moved outside the banks rather than going away.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">QE</span></div>
+  <div class="body">
+    <div>
+      <h3>When the central bank buys bonds</h3>
+      <p class="idea">Now that so much lending goes through the bond market, cutting overnight interest rates isn’t always enough, so central banks also buy long-term bonds to push down long-term rates.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Origins.</strong> Japan tried it hesitantly in 2001. The Fed began on 25 November 2008 with $600 billion of agency mortgage bonds; by 2016 its balance sheet was $4.5 trillion.</li>
+      <li><strong>Through the looking glass.</strong> With QE and negative policy rates in Europe and Japan, bonds with negative yields peaked above $18 trillion. A Danish bank offered negative-rate mortgages, and even some junk-rated European companies’ bonds traded at negative yields. Post-COVID inflation ended it.</li>
+      <li><strong>Does it work?</strong> A 2021 ECB review found every central-bank study positive, but only about half of independent ones.</li>
+    </ul>
+    <pre class="eq"><span class="c">How QE creates money (the book’s example)</span>
+Fed buys <span class="k">$1bn Treasury</span> from a pension fund → pays with new <span class="k">central bank reserves</span>
+pension fund deposits it at its bank → bank holds <span class="k">$1bn reserves</span>, owes <span class="r">$1bn deposit</span>
+<span class="c">net: the Fed has created short-term debt (reserves) to buy long-term debt; every balance sheet still balances</span></pre>
+  </div>
+</article>
+
+<article class="chapter" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">March 2020</span></div>
+  <div class="body">
+    <div>
+      <h3>The safest market breaks</h3>
+      <p class="idea">In the “dash for cash”, investors sold Treasuries because those were the only bonds they could sell, and the market that was meant to be the safe haven stopped working properly.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Signs of trouble.</strong> The ten-year yield hit a record low of about 0.5% on 9 March, then rose to nearly 1.2% by 18 March in the middle of a stock crash. Older, off-the-run Treasuries effectively stopped trading.</li>
+      <li><strong>Why.</strong> Post-2008 rules left banks less room to absorb selling. Hedge funds ran a basis trade, buying Treasuries and shorting futures with repo leverage of up to about a hundred times; their short futures passed $750 billion. Margin calls forced them to sell.</li>
+      <li><strong>The Fed’s response.</strong> On 15 March the Fed cut rates to near zero and promised at least $700 billion of bond purchases. On 23 March it promised unlimited purchases and a facility to buy corporate bonds. Its balance sheet eventually grew by about $4.7 trillion, yet it bought under $14 billion of corporate bonds: the promise alone reopened the market.</li>
+      <li><strong>The author’s view.</strong> Wigglesworth argues the Fed was right, but that it was still a bond-market bailout. The New York Fed’s Daleep Singh: <em>“you can’t destroy risk, you can only move it”</em>.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Three groups sold Treasuries in March 2020</h4>
+      <div class="bars">
+        <div class="bar c-cyan"><div class="row"><span>Foreign investors, mostly central banks raising dollars</span><b>~$290bn</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-ink"><div class="row"><span>Mutual funds meeting investor withdrawals</span><b>~$270bn</b></div><div class="track"><div class="fill" style="width:93%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Hedge funds unwinding leveraged trades</span><b>~$200bn</b></div><div class="track"><div class="fill" style="width:69%"></div></div></div>
+      </div>
+      <p class="cap">Net sales as estimated by the Bank for International Settlements. The book thinks the hedge fund figure is far too low; some officials put it above $1 trillion.</p>
+      <p class="src">Figures from ch. 18</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ CONCLUSION ============ -->
+<section id="conclusion">
+  <div class="sec-head">
+    <span class="label">Chapter 19 · How Much Is Too Much?</span>
+    <h2>A $340 trillion mountain and a 400-year-old bond</h2>
+    <p class="lede">Wigglesworth ends between two positions. Warnings about ruinous debt have been wrong for three centuries, yet today’s debt levels still worry him, and he thinks a bond-market crisis may be what finally forces governments to act.</p>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>By late 2025 government debt worldwide had passed $100 trillion; with companies, banks and households, total debt topped $340 trillion, nearly four times global output, mostly in bonds.</p>
+      <p><strong>Ferguson’s Law</strong>, Niall Ferguson’s 2025 proposal, says a great power is in trouble once interest costs exceed defence spending. The US crossed that line in 2024. Wigglesworth treats it as a rough rule of thumb: Britain probably broke it at the height of empire, and Japan’s debt is nearly 240% of GDP with no crisis.</p>
+      <p>All three big agencies have now cut America’s triple-A (S&amp;P 2011, Fitch 2023, Moody’s 2025). Recent turmoil, he argues, came from policy mistakes unwinding leveraged trades, not solvency fears, but the kindling for a larger fire is there.</p>
+      <p>He ends in Utrecht in December 2024, at the 400th birthday of the 1624 dike bond from chapter 2. It still pays interest, now €13.61 a year, collected by its owner, the New York Stock Exchange.</p>
+    </div>
+    <div class="fig">
+      <h4>Ferguson’s Law, United States 2024</h4>
+      <div class="bars">
+        <div class="bar c-red"><div class="row"><span>Interest on federal debt</span><b>$880bn · 3.1% of GDP</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Defence spending</span><b>$850bn · 3.0% of GDP</b></div><div class="track"><div class="fill" style="width:96.6%"></div></div></div>
+      </div>
+      <p class="cap">Interest is forecast to reach nearly 5% of GDP by 2049. Wigglesworth thinks a little spending discipline and somewhat higher taxes could ease it.</p>
+      <p class="src">Figures from ch. 19</p>
+    </div>
+  </div>
+
+  <div class="tablecard" style="margin-top:28px">
+    <div class="scroll-x">
+      <table class="tbl">
+        <thead><tr><th scope="col">Crisis</th><th scope="col">Bonds that seemed safe</th><th scope="col">What turned them into a problem</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">1825</th><td>Latin American government bonds</td><td class="r">Used as loan collateral; credit tightened as defaults began.</td></tr>
+          <tr><th scope="row">1873</th><td>Railway bonds backed by a famous banker</td><td class="r">Unsold bonds stuck on the bank’s books; no buyers in the autumn cash squeeze.</td></tr>
+          <tr><th scope="row">1929–33</th><td>1920s mortgage bonds</td><td class="r">Small savers trusted the issuers; about $8bn of $10bn defaulted.</td></tr>
+          <tr><th scope="row">1998</th><td>High-grade bonds in tiny-spread trades</td><td class="r">Heavy repo leverage; Russia’s moratorium widened every spread at once.</td></tr>
+          <tr><th scope="row">2008</th><td>Triple-A mortgage tranches; money funds</td><td class="r">Repo and commercial paper funding ran; ratings had been wrong.</td></tr>
+          <tr><th scope="row">2020</th><td>US Treasuries</td><td class="r">Dealers had less room; leveraged hedge fund trades hit margin calls.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Compiled for this page from ch. 5, 6, 12, 15, 16 and 18</span></div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The book is a history, not an investment guide. These lessons recur across its 850 years.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Reading the market</h3>
+      <div class="tk"><b>Read the yield, not the coupon</b><span>The trading price shows what lenders really demand.</span></div>
+      <div class="tk"><b>Credibility cuts borrowing costs</b><span>From Venice to Hamilton, accountable borrowers paid less.</span></div>
+      <div class="tk"><b>Treasuries set the base rate for everyone</b><span>Mortgages, company bonds and other countries’ debt are all priced off US yields.</span></div>
+    </div>
+    <div class="col">
+      <h3>Spotting danger</h3>
+      <div class="tk"><b>A bad loan is still bad when it’s in a bond</b><span>Packaging doesn’t change the borrower: railways, Poyais, subprime.</span></div>
+      <div class="tk"><b>Being able to sell isn’t the same as finding a buyer</b><span>In a crisis buyers disappear.</span></div>
+      <div class="tk"><b>Ask what the leverage is</b><span>A tiny spread levered many times is a big bet in disguise.</span></div>
+    </div>
+    <div class="col">
+      <h3>The bigger picture</h3>
+      <div class="tk"><b>A nation’s debt isn’t a household’s</b><span>Macaulay’s point: much of it is owed to the country’s own citizens, and growth can outpace it.</span></div>
+      <div class="tk"><b>But it is not unlimited</b><span>No ratio marks the danger point, and markets can still force a change of course, as Liz Truss found in 2022.</span></div>
+      <div class="tk"><b>Risk moves, it doesn’t disappear</b><span>Safer banks pushed risk into funds and money markets.</span></div>
+      <div class="tk"><b>Rescues have a cost</b><span>Each one teaches people to expect the next.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Robin Wigglesworth, <em>A Fabulous Debt: The Epic Story of How Bonds Built the Modern World</em> (Portfolio / Penguin, 2026). Figures are as reported in the book. The price–yield curve, the underwriting segments and the tranche bar are calculated from the book’s numbers for this page. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Nov 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent, text) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+
+  /* --- Ch1: price-yield grid --- */
+  var g = document.getElementById("py-grid");
+  if (g) {
+    [700, 800, 900, 1000, 1100, 1200, 1300].forEach(function (p) {
+      var y = 210 - (p - 700) / 600 * 180;
+      el("line", { x1: 70, y1: y, x2: 560, y2: y, "class": "s-rule" }, g);
+      el("text", { x: 62, y: y + 4, "text-anchor": "end", "class": "t-3", style: "font-size:11px" }, g, "$" + p.toLocaleString("en-US"));
+    });
+    for (var yy = 1; yy <= 8; yy++) {
+      var x = 70 + (yy - 1) / 7 * 490;
+      el("text", { x: x, y: 230, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, g, yy + "%");
+    }
+    el("text", { x: 70, y: 18, "class": "t-3", style: "font-size:11px" }, g, "price");
+  }
+
+  /* --- Ch3: borrowing-cost ranges --- */
+  var r = document.getElementById("d-rates");
+  if (r) {
+    var rows = [
+      ["Holland, late 1600s", 3, 4, "f-cy", "3–4%"],
+      ["British Consols, ~2 centuries", 3, 5, "f-cy", "3–5%"],
+      ["Venice’s Monte, to the 1370s", 5, 6.25, "f-cy", "5–6.25%"],
+      ["England, 1600s", 8, 14, "f-red", "8–14%"],
+      ["Spain’s loans, Philip II", 10, 10, "f-red", "~10% avg"],
+      ["Venice, 1380s war with Genoa", 25, 25, "f-red", "~25%"],
+      ["United States, 1787", 25, 40, "f-red", "25–40%"],
+      ["France’s rentes, Napoleonic wars", 50, 50, "f-red", "up to 50%"]
+    ];
+    var x0 = 250, x1 = 560, sc = (x1 - x0) / 50;
+    [0, 10, 20, 30, 40, 50].forEach(function (v) {
+      var x = x0 + v * sc;
+      el("line", { x1: x, y1: 14, x2: x, y2: 300, "class": "s-rule" }, r);
+      el("text", { x: x, y: 318, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, r, v + "%");
+    });
+    rows.forEach(function (d, i) {
+      var y = 34 + i * 35;
+      el("text", { x: 0, y: y + 5, "class": "t-ink", style: "font-size:12px" }, r, d[0]);
+      var a = x0 + d[1] * sc, b = x0 + d[2] * sc;
+      if (b - a < 6) { el("circle", { cx: a, cy: y, r: 6, "class": d[3] }, r); }
+      else { el("rect", { x: a, y: y - 7, width: b - a, height: 14, rx: 3, "class": d[3] }, r); }
+      var lx = Math.max(a, b) + 10, anchor = "start";
+      if (lx > 540) { lx = Math.min(a, b) - 10; anchor = "end"; }
+      el("text", { x: lx, y: y + 4, "text-anchor": anchor, "class": d[3] === "f-cy" ? "t-cy" : "t-red", style: "font-size:11px" }, r, d[4]);
+    });
+  }
+
+  /* --- Ch15: clockwise arrowheads on the margin spiral --- */
+  var sa = document.getElementById("spiral-arrows");
+  if (sa) {
+    [45, 135, 225, 315].forEach(function (deg) {
+      var a = deg * Math.PI / 180, cx = 160 + 78 * Math.cos(a), cy = 125 + 78 * Math.sin(a);
+      var tx = -Math.sin(a), ty = Math.cos(a), nx = -ty, ny = tx;
+      var tip = [cx + tx * 7, cy + ty * 7], b1 = [cx - tx * 5 + nx * 6, cy - ty * 5 + ny * 6], b2 = [cx - tx * 5 - nx * 6, cy - ty * 5 - ny * 6];
+      el("path", { d: "M" + b1.join(" ") + " L" + tip.join(" ") + " L" + b2.join(" ") + " Z", "class": "f-red" }, sa);
+    });
+  }
+
+  /* --- Ch5: underwriting split --- */
+  var u = document.getElementById("d-under");
+  if (u) {
+    var W = 580, bx = 10;
+    var bars = [
+      { y: 38, title: "Book’s example · £1m face, underwritten at 75, sold at 90, 5% fee", total: 1000000,
+        segs: [[712500, "f-cy", "borrower £712,500"], [187500, "f-red", "bankers £187,500"], [100000, "f-paper2", "discount £100k"]] },
+      { y: 138, title: "Mexico, 1823 · £3.2m face, underwritten at 50, resold at 58", total: 3200000,
+        segs: [[1178640, "f-cy", "Mexico ~£1.18m"], [421360, "f-redt", "deductions £0.42m"], [256000, "f-red", "resale ~£0.26m"], [1344000, "f-paper2", "buyers’ discount ~£1.34m"]] }
+    ];
+    bars.forEach(function (b) {
+      el("text", { x: bx, y: b.y - 12, "class": "hd", style: "font-size:13.5px" }, u, b.title);
+      var x = bx;
+      b.segs.forEach(function (s, i) {
+        var w = s[0] / b.total * W;
+        el("rect", { x: x, y: b.y, width: w, height: 30, "class": s[1] + (s[1] === "f-paper2" || s[1] === "f-redt" ? " s-rule" : "") }, u);
+        var last = i === b.segs.length - 1;
+        el("text", { x: last ? x + w : x + 4, y: b.y + 48 + (i % 2) * 16, "text-anchor": last ? "end" : "start", "class": s[1] === "f-cy" ? "t-cy" : (s[1] === "f-paper2" ? "t-3" : "t-red"), style: "font-size:11px" }, u, s[2]);
+        x += w;
+      });
+    });
+  }
+
+  /* --- Ch13: BISTRO tranches --- */
+  var bi = document.getElementById("d-bistro");
+  if (bi) {
+    el("text", { x: 10, y: 20, "class": "hd" }, bi, "307 corporate loans · just under $10bn");
+    for (var i = 0; i < 61; i++) el("rect", { x: 10 + i * 9.4, y: 32, width: 7, height: 14, rx: 1.5, "class": "f-cyt s-cy2" }, bi);
+    el("path", { d: "M300 54 V86", "class": "s-2", "stroke-width": 1.5 }, bi);
+    el("path", { d: "M294 80 L300 87 L306 80", "class": "s-2", "stroke-width": 1.5 }, bi);
+    el("text", { x: 312, y: 74, "class": "t-3", style: "font-size:11px" }, bi, "credit risk transferred");
+    el("text", { x: 10, y: 108, "class": "hd" }, bi, "$700m BISTRO bond");
+    var bx0 = 10, bw = 580, junior = 237 / 700 * bw;
+    el("rect", { x: bx0, y: 118, width: junior, height: 38, "class": "f-red" }, bi);
+    el("rect", { x: bx0 + junior, y: 118, width: bw - junior, height: 38, "class": "f-cy" }, bi);
+    el("text", { x: bx0 + 8, y: 142, style: "font-size:12px;fill:var(--card)" }, bi, "junior · Ba2 · $237m");
+    el("text", { x: bx0 + junior + 8, y: 142, style: "font-size:12px;fill:var(--card)" }, bi, "senior · AAA · $463m");
+    el("path", { d: "M" + bx0 + " 172 H" + (bx0 + junior - 8), "class": "s-red", "stroke-width": 2 }, bi);
+    el("path", { d: "M" + (bx0 + junior - 14) + " 166 L" + (bx0 + junior - 6) + " 172 L" + (bx0 + junior - 14) + " 178", "class": "s-red", "stroke-width": 2 }, bi);
+    el("text", { x: bx0 + junior + 4, y: 176, "class": "t-red", style: "font-size:11px" }, bi, "losses on the loans fill from the left");
+    el("text", { x: bx0 + junior + 4, y: 194, "class": "t-cy", style: "font-size:11px" }, bi, "senior hit only once the junior slice is gone");
+    el("text", { x: 10, y: 228, "class": "t-3", style: "font-size:11px" }, bi, "Proceeds parked in Treasuries, so the cover is there if loans go bad.");
+  }
+
+  /* --- Hero band: price and yield as a seesaw --- */
+  var canvas = document.getElementById("seesaw");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var rc = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = rc.width; hgt = rc.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function wave(u, t) {
+    return Math.sin(u * 9.4 + t) * 0.5 + Math.sin(u * 23 - t * 1.4) * 0.22 + Math.sin(u * 3.1 + t * 0.4) * 0.28;
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var t = reduce ? 0.6 : time * 0.0004;
+    var mid = hgt / 2, amp = hgt * 0.34;
+    var gold = css("--gold-2"), rust = css("--rust"), rule = css("--rule");
+    /* coupon ticks along the baseline */
+    ctx.fillStyle = rule;
+    for (var x = 6; x < w; x += 22) ctx.fillRect(x, mid - 0.5, 10, 1);
+    ctx.lineCap = "round"; ctx.lineJoin = "round";
+    [[1, gold, 2.2], [-1, rust, 1.6]].forEach(function (s) {
+      ctx.beginPath();
+      for (var x = 0; x <= w; x += 3) {
+        var y = mid - s[0] * wave(x / w, t) * amp;
+        if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = s[1]; ctx.lineWidth = s[2]; ctx.globalAlpha = s[0] > 0 ? 0.95 : 0.75;
+      ctx.stroke();
+    });
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

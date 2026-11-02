@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Kommunikationstraining by Vera F. Birkenbihl – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. The three ego states borrow the cover's colours:
+   red = Parent, blue = Adult, yellow = Child. */
+:root {
+  --paper: #f7f6f2;
+  --paper-2: #edebe4;
+  --card: #ffffff;
+  --ink: #17161a;
+  --ink-2: #4a4851;
+  --ink-3: #78757f;
+  --rule: #dcd9d0;
+
+  /* the three ego states */
+  --par: #d22a2f;
+  --adu: #1f74b8;
+  --chi: #d9a300;
+  --chi-ink: #8c6900;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #121115;
+    --paper-2: #1b1a1f;
+    --card: #1f1e24;
+    --ink: #efedf2;
+    --ink-2: #b4b1bd;
+    --ink-3: #888592;
+    --rule: #312f38;
+    --par: #ff6a6a;
+    --adu: #6cb0ff;
+    --chi: #ffcf3f;
+    --chi-ink: #ffd75e;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #121115;
+  --paper-2: #1b1a1f;
+  --card: #1f1e24;
+  --ink: #efedf2;
+  --ink-2: #b4b1bd;
+  --ink-3: #888592;
+  --rule: #312f38;
+  --par: #ff6a6a;
+  --adu: #6cb0ff;
+  --chi: #ffcf3f;
+  --chi-ink: #ffd75e;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--adu); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+em.de { font-style: italic; color: var(--ink-2); }
+
+/* Ego-state colour helpers */
+.c-par { --c: var(--par); }
+.c-adu { --c: var(--adu); }
+.c-chi { --c: var(--chi); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.c-chi .hd, .c-chi h4, .c-chi b.hd { color: var(--chi-ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(34px, 7.2vw, 92px);
+  font-weight: 900;
+  font-stretch: 72%;
+  line-height: .86;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  margin-left: -.03em;
+}
+.hero h1 span { display: block; }
+.hero h1 .l1 { color: var(--par); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .orig { font-family: var(--mono); font-size: 13px; color: var(--ink-3); margin-top: 8px; }
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 776;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(20, 16, 40, .35), 0 8px 18px -10px rgba(20, 16, 40, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.rallyband { position: relative; margin-top: 28px; }
+.rallyband canvas { display: block; width: 100%; height: 130px; }
+.rallyband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter > *, .chapter .body > *, .wl-intro > * { min-width: 0; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; fill: var(--ink); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+/* ---------- Ego states ---------- */
+.wl-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.states { display: grid; gap: 10px; }
+.state { border-radius: 6px; padding: 16px; display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 4px 14px; align-items: start; border: 1px solid color-mix(in srgb, var(--c) 30%, var(--rule)); }
+.state .ltr { grid-row: span 3; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-weight: 900; font-size: 26px; color: #fff; background: var(--c); }
+.c-chi.state .ltr { color: #1a1505; }
+.state h4 { font-size: 21px; font-weight: 850; font-stretch: 108%; color: var(--c); letter-spacing: -.01em; }
+.state p { font-size: 15px; line-height: 1.4; color: var(--ink-2); }
+.state .say { font-family: var(--mono); font-size: 12.5px; color: var(--ink); }
+
+table.wl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.wl th, table.wl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.wl thead th { border-bottom: 0; padding-bottom: 16px; }
+table.wl thead th.wl-h { border-top: 5px solid var(--c); background: color-mix(in srgb, var(--c) 9%, var(--card)); }
+table.wl thead .nm { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 21px; color: var(--c); letter-spacing: -.01em; display: block; }
+table.wl thead .c-chi .nm { color: var(--chi-ink); }
+table.wl thead .tag { font-family: var(--mono); font-size: 12px; color: var(--ink-2); font-weight: 400; display: block; margin-top: 4px; }
+table.wl tbody th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; width: 150px; padding-top: 17px; }
+table.wl tbody td.q { font-style: italic; }
+table.wl tbody tr:hover td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+table.wl .hl { font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* OK grid */
+.amb { display: grid; grid-template-columns: 112px 1fr 1fr; grid-template-rows: auto 1fr 1fr; gap: 6px; }
+.amb .cell { border-radius: 6px; padding: 14px; background: var(--paper-2); display: grid; gap: 4px; align-content: start; min-height: 104px; }
+.amb .cell b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 17px; }
+.amb .cell span { font-size: 14px; color: var(--ink-2); line-height: 1.35; }
+.amb .cell.good { background: color-mix(in srgb, var(--adu) 14%, var(--card)); box-shadow: inset 0 0 0 2px var(--adu); }
+.amb .cell.good b { color: var(--adu); }
+.amb .cell.hot b { color: var(--par); }
+.amb .ax { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; }
+.amb .ax.top { justify-content: center; }
+.amb .ax.side { justify-content: flex-end; text-align: right; padding-right: 6px; }
+
+/* predictor lists */
+.predict { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.predict ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.predict li { display: flex; gap: 10px; align-items: baseline; font-size: 16px; }
+.predict li::before { font-family: var(--mono); font-size: 13px; width: 16px; flex: none; }
+.predict .no li { color: var(--ink-2); }
+.predict .no li::before { content: "✕"; color: var(--par); }
+.predict .yes li::before { content: "✓"; color: var(--adu); }
+
+/* code-ish block */
+.ifthen {
+  font-family: var(--mono); font-size: 14px; line-height: 1.8;
+  background: var(--paper-2); border-radius: 6px; padding: 18px 20px; margin: 0;
+  white-space: pre-wrap; color: var(--ink);
+}
+.ifthen .k { color: var(--adu); }
+.ifthen .x { color: var(--par); }
+.ifthen .c { color: var(--ink-3); }
+
+/* layered order (anti-fog) */
+.orders { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; }
+.ord { display: grid; gap: 6px; align-content: start; }
+.ord .layer { border-radius: 4px; padding: 8px 12px; font-size: 14px; font-family: var(--mono); }
+.ord .expl { background: color-mix(in srgb, var(--adu) 16%, var(--card)); }
+.ord .main { background: var(--ink); color: var(--paper); }
+.ord .fogged { background: repeating-linear-gradient(45deg, var(--paper-2) 0 6px, color-mix(in srgb, var(--ink-3) 25%, var(--paper-2)) 6px 12px); color: var(--ink-3); }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 16px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--ink); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* role cards */
+.roles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.roles div { border-radius: 6px; padding: 14px; border: 1px dashed color-mix(in srgb, var(--c, var(--par)) 60%, var(--rule)); display: grid; gap: 4px; align-content: start; }
+.roles b { font-family: var(--display); font-weight: 800; font-stretch: 105%; color: var(--c, var(--par)); }
+.roles .c-chi b { color: var(--chi-ink); }
+.roles span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+.roles q { font-family: var(--mono); font-size: 12.5px; color: var(--ink); quotes: "“" "”"; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+/* exercises grid */
+.drills { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.drill { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; display: grid; gap: 8px; align-content: start; }
+.drill .label { display: flex; justify-content: space-between; gap: 8px; }
+.drill h4 { font-size: 19px; font-weight: 800; font-stretch: 105%; line-height: 1.2; }
+.drill p { font-size: 15.5px; color: var(--ink-2); line-height: 1.5; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .wl-intro, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .amb { grid-template-columns: 26px 1fr 1fr; }
+  .amb .ax.side { writing-mode: vertical-rl; transform: rotate(180deg); justify-content: center; padding: 0; }
+  .amb .cell { padding: 10px; }
+  .predict, .orders, .compare, .roles, .trio { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Vera F. Birkenbihl · mvg, 1975 · read in German</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#states">Parent, Adult, Child</a>
+    <a href="#theory">Theory</a>
+    <a href="#newthoughts">New thoughts</a>
+    <a href="#practice">Practice</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1 aria-label="Kommunikationstraining"><span class="l1">Kommunikations-</span><span>training</span></h1>
+    <p class="sub">Communication Training: shaping relationships that work</p>
+    <p class="orig">Original subtitle: Zwischenmenschliche Beziehungen erfolgreich gestalten · read in the 35th German edition</p>
+    <p class="dek">Vera F. Birkenbihl argues that most conversations go wrong not over the facts but over self-esteem. Protect the other person's sense of worth, and the message gets through.</p>
+    <div class="byline label">
+      <span>13 theory chapters</span><span>3 parts</span><span>30+ exercises</span><span>~73,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Kommunikationstraining by Vera F. Birkenbihl: a yellow and a blue face in profile, fitted together like two halves of one square">
+</div>
+
+<div class="rallyband" aria-hidden="true">
+  <canvas id="rally"></canvas>
+  <div class="ends label"><span>Complementary: the ball keeps going</span><span>Crossed: it drops</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Communicate with the person, not just the message</h2>
+  </div>
+  <div class="wl-intro">
+    <div class="prose">
+      <p>The book opens with a fable. Leo the lion roars "Who is king of the animals?" at a hare, a deer and a zebra, and they all agree. Emboldened, he even cows a rhino. Then he roars at an elephant, who taps him on the head with one foot and pushes him into the sand up to his neck.</p>
+      <p>Birkenbihl draws five lessons from it. We build a picture of ourselves by comparing ourselves with others. We act on that picture. The picture doesn't have to match reality. When the gap gets too big, communication suffers. And when communication suffers, so does our <strong>self-esteem</strong> (<em class="de">Selbstwertgefühl</em>, which she shortens to SWG).</p>
+      <p>Everything else in the book hangs on that last point. In every exchange we listen, often unconsciously, for one thing: <em>does the other person see me as OK?</em> When we hear a no, we stop listening to the message and start defending ourselves.</p>
+      <p>First published in 1975 and revised for decades, the book is two books in one: a <a href="#theory">theory part</a> you can read on its own, and a <a href="#practice">practice part</a> of exercises and games, most of them for small groups.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Numbers from the book</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule);grid-template-columns:repeat(2,minmax(0,1fr))">
+        <div class="stat"><span class="big num">90%</span><p>How much of a conversation can be "ballast" once someone's self-esteem has been hurt.</p></div>
+        <div class="stat"><span class="big num">3%</span><p>People in her frown experiment who could finish a simple task while being frowned at. Even they wavered by the fourth or fifth round.</p></div>
+        <div class="stat" style="grid-column:1/-1"><span class="big num">90 of 100</span><p>People who will respect you more, not less, if you openly admit that you're nervous.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--chi)">
+        <span class="label">The opening dialogue</span>
+        <p>"It's five to six, hurry up!" – "And you're still dawdling!" – "Of course, it's always my fault when we're late!" A couple heading out for the evening turn a question about the time into a fight in six lines. Neither said anything about the time again. Birkenbihl's question is why people react so "strangely", and how to react better.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I · Theory</span>
+      <h3>Foundations</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Self-Esteem</b>The centre everything refers to</a></li>
+        <li><span>02</span><a href="#ch2"><b>Human Needs</b>The five-level tower</a></li>
+        <li><span>03</span><a href="#ch3"><b>Motivation</b>Carrot, not kick</a></li>
+        <li><span>04</span><a href="#ch4"><b>Transactional Analysis</b>Parent, Adult, Child</a></li>
+        <li><span>05</span><a href="#ch5"><b>Defence Manoeuvres</b>Four ways to feel small</a></li>
+        <li><span>06</span><a href="#ch6"><b>Images and Fog</b>Why opinions resist change</a></li>
+        <li><span>07</span><a href="#ch7"><b>Feedback Techniques</b>Questions and listening</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part I · New thoughts</span>
+      <h3>Later additions</h3>
+      <ol>
+        <li><span>08</span><a href="#ch8"><b>Bio-Logic / Psycho-Logic</b>The reptile in the room</a></li>
+        <li><span>09</span><a href="#ch9"><b>Agreeing to Differ</b>Her word: <em>Zweinigung</em></a></li>
+        <li><span>10</span><a href="#ch10"><b>Levels of Communication</b>Content and relationship</a></li>
+        <li><span>11</span><a href="#ch11"><b>Brain-Friendly?</b>Learning is not cramming</a></li>
+        <li><span>12</span><a href="#ch12"><b>Language and Thought</b>Words build realities</a></li>
+        <li><span>13</span><a href="#ch13"><b>Closing Part I</b>A plan for practice</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Parts II–III</span>
+      <h3>Practice</h3>
+      <ol>
+        <li><span>II</span><a href="#practice"><b>Inventory</b>Where do I stand?</a></li>
+        <li><span>II</span><a href="#practice"><b>Inner attitude &amp; the four never-evers</b>Role-play dead ends</a></li>
+        <li><span>II</span><a href="#practice"><b>The feelings wheel</b>A tool for honest talks</a></li>
+        <li><span>II</span><a href="#practice"><b>Fear, feedback, alter ego</b>Games for groups</a></li>
+        <li><span>III</span><a href="#practice"><b>Info sheets</b>Background to selected sections</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EGO STATES ============ -->
+<section id="states">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Three voices in every person</h2>
+    <p class="lede">Birkenbihl borrows Eric Berne's transactional analysis. At any moment each of us speaks from one of three ego states, and each remark lands on one of the other person's three. Most of the book's advice can be read through this lens.</p>
+  </div>
+
+  <div class="wl-intro">
+    <div class="fig">
+      <h4>Parent, Adult, Child</h4>
+      <div class="states">
+        <div class="state tint c-par"><span class="ltr">P</span><h4>Parent</h4><p>Rules, morals, prejudices and habits copied from our parents. Comes in two forms: the <strong>critical</strong> Parent who scolds, and the <strong>nurturing</strong> Parent who comforts and helps.</p><span class="say">"That's not how it's done!" · "Does it hurt?"</span></div>
+        <div class="state tint c-adu"><span class="ltr">A</span><h4>Adult</h4><p>The analyst. Gathers facts, weighs them, draws conclusions. Its criticism finds errors instead of complaining about them.</p><span class="say">"What does it cost?" · "The results show…"</span></div>
+        <div class="state tint c-chi"><span class="ltr">C</span><h4 class="hd">Child</h4><p>Wants, feelings, curiosity, play, sulking. Self-esteem lives here. When it feels attacked it becomes the <strong>weeping Child</strong>.</p><span class="say">"I want that!" · "Why is it always my fault?"</span></div>
+      </div>
+      <p class="cap">She writes "childlike", never "childish": the labels describe, they don't judge. In private, let your Child out. At work, learn to tell your Child's wishes apart from Adult arguments ("This wall needs a picture to look balanced" often just means "I want a picture here").</p>
+    </div>
+
+    <div class="fig">
+      <h4>Three kinds of transaction</h4>
+      <div class="trio">
+        <div>
+          <svg viewBox="0 0 200 230" role="img" aria-label="Complementary transaction: two stacks of three circles labelled P, A and C. An arrow goes from the left Adult to the right Adult and another arrow comes back the same way.">
+            <g id="t1"></g>
+          </svg>
+          <p class="label" style="text-align:center">Complementary</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 200 230" role="img" aria-label="Crossed transaction: an arrow goes from the left Adult to the right Adult, but the reply goes from the right Child to the left Parent, so the lines cross.">
+            <g id="t2"></g>
+          </svg>
+          <p class="label" style="text-align:center">Crossed</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 200 230" role="img" aria-label="Ulterior transaction: a solid arrow from Adult to Adult carries the spoken message while a dashed arrow from Child to Child carries the hidden one.">
+            <g id="t3"></g>
+          </svg>
+          <p class="label" style="text-align:center">Ulterior</p>
+        </div>
+      </div>
+      <p class="cap"><strong>Complementary:</strong> the state that was addressed answers back, and the ball keeps flying, even if two weeping Children are quarrelling. <strong>Crossed:</strong> you aim at someone's Adult and hit their Child. <strong>Ulterior:</strong> a hidden message rides under the spoken one, like the late-night invitation to "see my etchings" or the salesman's "your neighbour said you couldn't afford this".</p>
+    </div>
+  </div>
+
+  <div class="tablecard" style="margin-top:24px">
+    <div class="scroll-x">
+      <table class="wl">
+        <thead>
+          <tr>
+            <th scope="col"><span class="label">Compare</span></th>
+            <th scope="col" class="wl-h c-par"><span class="nm">Parent</span><span class="tag">critical and nurturing</span></th>
+            <th scope="col" class="wl-h c-adu"><span class="nm">Adult</span><span class="tag">analytical</span></th>
+            <th scope="col" class="wl-h c-chi"><span class="nm">Child</span><span class="tag">free and weeping</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Contains</th><td class="hl">Rules, conscience, prejudice, care</td><td class="hl">Facts, thinking, intellect</td><td class="hl">Drives, feelings, creativity, self-esteem</td></tr>
+          <tr><th scope="row">Typical words</th><td class="q">"You should…" · "Everybody knows that!" · "Be reasonable!" · "Can I help?"</td><td class="q">"How does it work?" · "Can we budget for it?" · "According to our figures…"</td><td class="q">"I want that!" · "Look what I can do!" · "Leave me alone!" · "It's not my fault!"</td></tr>
+          <tr><th scope="row">Body language</th><td>Raised index finger, crossed arms, wrinkled nose, raised eyebrows, or a warm hug</td><td>Thoughtful look, fingertips together, pointing, listening</td><td>Laughing, jumping, pouting, stamping, crying, a cheeky grin</td></tr>
+          <tr><th scope="row">At its best</th><td>Protects and comforts</td><td>Makes decisions</td><td>Joy, curiosity, play, intimacy</td></tr>
+          <tr><th scope="row">At its worst</th><td>Intolerant, lecturing, knows without reasons</td><td>Used to dress up the Child's wishes as "facts"</td><td>Sulks, manipulates, defends, accuses</td></tr>
+          <tr><th scope="row">Office example</th><td>Boss: "Impossible! Always three copies!" (critical) … "Never mind, we'll photocopy it." (nurturing)</td><td>Assistant: "Here's the report."</td><td>Assistant: "I'm hopeless! I knew that and forgot!"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Ego states rarely appear "pure"</span></div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="theory">
+  <span class="label partno">Part I · Chapters 1–7</span>
+  <h2>The theory</h2>
+  <p class="lede">Each chapter opens with the same formula: "Communicating well means…" – respecting self-esteem, meeting needs, motivating properly, understanding transactions, not answering defence with defence, and checking what actually arrived.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Self-Esteem</span></div>
+  <div class="body">
+    <div>
+      <h3>Self-esteem is the centre we refer everything to</h3>
+      <p class="idea">Whenever the other person's self-esteem is hurt, communication suffers.</p>
+    </div>
+    <ul class="points">
+      <li>We can only learn our worth by comparison, so we depend partly on how others judge us. Those judgements always reach us through communication.</li>
+      <li>As long as we hear no judgement, or a positive one, we can focus on the message. Once we think we hear a negative one, we focus on the judgement instead.</li>
+      <li>Try her list: write down ten things you do and ask "why?" until you hit bottom. Everything we do, she argues, is ultimately done to keep, defend or raise our self-esteem.</li>
+      <li>Her experiments show how dependent we are: have four colleagues tell someone they look ill, or frown at someone naming animals ("the dog barks, the cat meows"). After three or four frowns most people lose their footing on the easiest task.</li>
+      <li>People who claim they never feel "not OK" are risky. They don't notice when they hurt others, and they rarely admit they were wrong.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Five factors that keep self-esteem intact</h4>
+        <svg viewBox="0 0 480 330" role="img" aria-label="Diagram: a circle in the centre labelled self-esteem, surrounded by five boxes. Top left: acting in line with one's conscience. Top right: others confirming one's self-image. Bottom left: appreciation of the person. Bottom right: recognition of performance. Bottom centre: eros and sex.">
+          <g stroke="var(--rule)" stroke-width="1.5">
+            <line x1="240" y1="165" x2="110" y2="62"/><line x1="240" y1="165" x2="370" y2="62"/>
+            <line x1="240" y1="165" x2="110" y2="200"/><line x1="240" y1="165" x2="370" y2="200"/>
+            <line x1="240" y1="165" x2="240" y2="282"/>
+          </g>
+          <g>
+            <rect x="10" y="22" width="200" height="74" rx="6" fill="var(--card)" stroke="var(--par)" stroke-width="2"/>
+            <text x="22" y="46" font-size="11" style="fill:var(--par)">1 · CONSCIENCE</text>
+            <text x="22" y="66" font-size="13">Keep the rules you've</text>
+            <text x="22" y="83" font-size="13">taken on as your own</text>
+            <rect x="270" y="22" width="200" height="74" rx="6" fill="var(--card)" stroke="var(--adu)" stroke-width="2"/>
+            <text x="282" y="46" font-size="11" style="fill:var(--adu)">2 · SELF-IMAGE</text>
+            <text x="282" y="66" font-size="13">Others see you the way</text>
+            <text x="282" y="83" font-size="13">you'd like to be</text>
+            <rect x="10" y="166" width="200" height="66" rx="6" fill="var(--card)" stroke="var(--chi)" stroke-width="2"/>
+            <text x="22" y="190" font-size="11" style="fill:var(--chi-ink)">3 · THE PERSON</text>
+            <text x="22" y="210" font-size="13">Being valued for who</text>
+            <text x="22" y="226" font-size="13">you are</text>
+            <rect x="270" y="166" width="200" height="66" rx="6" fill="var(--card)" stroke="var(--chi)" stroke-width="2"/>
+            <text x="282" y="190" font-size="11" style="fill:var(--chi-ink)">4 · THE PERFORMANCE</text>
+            <text x="282" y="210" font-size="13">Recognition for what</text>
+            <text x="282" y="226" font-size="13">you've done</text>
+            <rect x="140" y="262" width="200" height="62" rx="6" fill="var(--card)" stroke="var(--ink-3)" stroke-width="2"/>
+            <text x="152" y="286" font-size="11" style="fill:var(--ink-3)">5 · EROS / SEX</text>
+            <text x="152" y="306" font-size="13">Partnership and the</text>
+            <text x="152" y="321" font-size="13">physical bond</text>
+          </g>
+          <circle cx="240" cy="148" r="46" fill="var(--ink)"/>
+          <text x="240" y="144" text-anchor="middle" font-size="15" class="hd" style="fill:var(--paper)">Self-</text>
+          <text x="240" y="163" text-anchor="middle" font-size="15" class="hd" style="fill:var(--paper)">esteem</text>
+        </svg>
+        <p class="cap">Factors 3 and 4 can only be given through communication: a kind word, praise, a sincere compliment. Factor 5 is a double one. A couple can be happy as partners and struggle physically, or the reverse, and either gap makes both feel not OK. Her advice: however angry you are, never attack someone there. Those wounds don't heal.</p>
+      </div>
+      <div class="fig">
+        <h4>When the message beats the person</h4>
+        <div class="story" style="border-color:var(--par)">
+          <span class="label">The hotel restaurant</span>
+          <p>An American couple ask for food just before midnight. The head waiter returns: "Unfortunately the kitchen is…" – "Don't you speak English?" – "…already closed…" – he finishes in German – "…but you can still have a sandwich." The wife is furious that a hotel like this can't even offer a sandwich. In her anger she hadn't heard the word.</p>
+        </div>
+        <p class="cap">The waiter focused so hard on his message that he forgot the people. Feeling ignored, the guest stopped thinking clearly. Upset people misunderstand things they would normally never miss.</p>
+        <div class="story" style="border-color:var(--chi)">
+          <span class="label">Conscience</span>
+          <p>Benny, a Baptist insurance agent, may neither drink nor lie. When a client toasts a signed policy, he either drinks and feels guilty, or refuses and gets teased. Pushing someone to act against their conscience always attacks their self-esteem, and mocking it says "my conscience is better than yours".</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Human Needs</span></div>
+  <div class="body">
+    <div>
+      <h3>Meet people on the level where they are</h3>
+      <p class="idea">Someone fighting for a lower level of needs can't hear anything about the higher ones.</p>
+    </div>
+    <ul class="points">
+      <li>Two openings with the same aim: "Bert, listen to what happened at work…" versus "Bert, I'd like your opinion on something. Got a minute?" The second asks for his view (recognition) and lets him choose to listen.</li>
+      <li>She sorts all needs into Maslow's five levels. Don't force a conversation on someone who is tired, hungry or has a headache. Someone worried about their job only hears what affects their security.</li>
+      <li>Levels 3 and 4 are psychological survival. Mocking someone's group or withholding recognition can trigger the same "brainless" reactions as a physical threat.</li>
+      <li><strong>Strokes</strong> (<em class="de">Streicheleinheiten</em>, from Berne): any attention counts, and negative strokes are better than none. A marriage is only truly over when the partners have nothing left to say to each other.</li>
+      <li>People who show off really need it: an insecure base makes them overdo level 4. Some people deliberately provoke anger, because being scolded at least means being noticed.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The needs tower</h4>
+        <svg viewBox="0 0 440 300" role="img" aria-label="A tower of five stacked blocks. From bottom: 1 basic needs like food, sleep and breathing; 2 security; 3 belonging; 4 ego needs like status and recognition; 5 self-actualisation. Brackets on the right group levels 1 and 2 as physical survival and levels 3 and 4 as psychological survival.">
+          <g font-size="13">
+            <rect x="20" y="236" width="300" height="50" rx="3" fill="color-mix(in srgb, var(--par) 22%, var(--card))" stroke="var(--par)" stroke-width="1.5"/>
+            <text x="34" y="258" class="hd">1 · Basic needs</text><text x="34" y="276" font-size="11.5">food, water, sleep, breathing</text>
+            <rect x="40" y="182" width="260" height="50" rx="3" fill="color-mix(in srgb, var(--par) 12%, var(--card))" stroke="var(--par)" stroke-width="1.5"/>
+            <text x="54" y="204" class="hd">2 · Security</text><text x="54" y="222" font-size="11.5">home, income, insurance</text>
+            <rect x="60" y="128" width="220" height="50" rx="3" fill="color-mix(in srgb, var(--chi) 26%, var(--card))" stroke="var(--chi)" stroke-width="1.5"/>
+            <text x="74" y="150" class="hd">3 · Belonging</text><text x="74" y="168" font-size="11.5">family, team, club</text>
+            <rect x="80" y="74" width="180" height="50" rx="3" fill="color-mix(in srgb, var(--chi) 14%, var(--card))" stroke="var(--chi)" stroke-width="1.5"/>
+            <text x="94" y="96" class="hd">4 · Ego needs</text><text x="94" y="114" font-size="11.5">status, recognition</text>
+            <rect x="100" y="20" width="140" height="50" rx="3" fill="color-mix(in srgb, var(--adu) 18%, var(--card))" stroke="var(--adu)" stroke-width="1.5"/>
+            <text x="114" y="42" class="hd">5 · Self-</text><text x="114" y="60" class="hd">actualisation</text>
+          </g>
+          <g stroke="var(--ink-3)" stroke-width="1.2" fill="none">
+            <path d="M332 184 h8 v102 h-8"/><path d="M296 76 h44"/><path d="M332 76 h8 v102 h-8"/>
+          </g>
+          <text x="350" y="232" font-size="11">physical</text><text x="350" y="247" font-size="11">survival</text>
+          <text x="350" y="124" font-size="11">psychological</text><text x="350" y="139" font-size="11">survival</text>
+          <text x="350" y="44" font-size="11">the "winner"</text>
+        </svg>
+        <p class="cap">After an emergency landing, scientist Dr Ford stops thinking about his paper and asks about food, then water, then shelter. Only once small groups form among the survivors does he open his paper again. Pull out the lower blocks and the upper ones stop mattering.</p>
+      </div>
+      <div class="fig">
+        <h4>Loved for being, or for doing?</h4>
+        <div class="compare">
+          <div class="c-adu"><h5 style="color:var(--adu)">"Being"-stroked</h5><ul><li>Loved simply because they exist</li><li>Feel accepted, set modest goals</li><li>Expect acceptance without effort</li><li>Ask "what happened?" when things fail</li><li>Think elites are born</li></ul></div>
+          <div class="c-par"><h5 style="color:var(--par)">"Doing"-stroked</h5><ul><li>Loved when they achieve something</li><li>Set high goals, motivated from within</li><li>Need praise for performance to stay OK</li><li>Ask "who did it?" when things fail</li><li>Think elites are made</li></ul></div>
+        </div>
+        <p class="cap">Plot yourself on a line between the two: how you were stroked as a child, how you're stroked today, and how you stroke others. Balanced people's turns of phrase split about 50/50. The point is to praise each person in the currency they value.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Motivation</span></div>
+  <div class="body">
+    <div>
+      <h3>Motivating means replacing an old behaviour</h3>
+      <p class="idea">Speak to one of the other person's unmet needs and show them which behaviour satisfies it.</p>
+    </div>
+    <ul class="points">
+      <li>Only momentary behaviour changes instantly. Habits were learned, so changing them is a learning process, and learning takes time. Try putting on the other shoe first for a few weeks and count your relapses.</li>
+      <li>Three steps: recognise the other person's need, define its fulfilment as the goal, and describe the goal so vividly that the new behaviour follows. <em>"Don't sell the steak, sell the sizzle."</em></li>
+      <li>The golden rule: good motivation leaves <strong>both</strong> sides satisfied. If only one side is, it was manipulation, like Jacob buying Esau's birthright for a bowl of stew. The manipulated person resents it later, and rightly so.</li>
+      <li>Negative motivation (Herzberg's "KITA", the kick) can work, but only with constant pressure and control. Bosses who use it and then complain that people slack off the moment they look away haven't understood it.</li>
+      <li>Positive motivation fails most often for two fixable reasons: "doing" people who get no praise, and praise that misses what matters to the person. Fake praise counts as three negative strokes once it's spotted.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Carrot or kick</h4>
+        <div class="compare">
+          <div><h5 style="color:var(--adu)">Positive motivation</h5><ul><li>Shows a need being met</li><li>Needs no pressure</li><li>Needs little control: you can turn your back</li><li>The person keeps going on their own</li></ul></div>
+          <div><h5 style="color:var(--par)">Negative motivation</h5><ul><li>Threatens a need (job, bonus)</li><li>Needs lasting pressure</li><li>Needs constant control</li><li>The old behaviour returns as soon as nobody's watching</li></ul></div>
+        </div>
+        <p class="cap">Try positive first. If you have to fall back on pressure, keep it fair: respect the person's dignity and guarantee their needs as long as they meet the demands.</p>
+      </div>
+      <div class="fig">
+        <h4>Turn the threat around</h4>
+<pre class="ifthen"><span class="x">✕</span> "If you don't eat your spinach, no playing!"
+<span class="k">✓</span> "Eat your spinach now, then you can play."
+
+<span class="x">✕</span> "Work cleanly or work somewhere else!"
+<span class="k">✓</span> "Less waste means a bigger profit share for you."
+
+<span class="c">// the negative version only needs your own needs;</span>
+<span class="c">// the positive one forces you to think about theirs</span></pre>
+        <p class="cap">Her drill: rewrite six threats as carrots and notice which version comes to you more easily.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The gasket factory</span>
+      <p>Karl loads rubber blanks so carelessly that 20% of each batch is scrap. Foreman Weber listens and hears "nobody thanks you for doing it right" and "if good work paid more, it'd be different". So he explains the profit share and how scrap costs four times over: lost material, rerun production, inspection and disposal. Then he works out what less scrap would mean for Karl at year end, without a minute of extra work. Karl's old motive is swapped for a new one, and the new behaviour follows. Weber only needs to keep praising it now and then.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Transactional Analysis</span></div>
+  <div class="body">
+    <div>
+      <h3>When the ball lands on the wrong player</h3>
+      <p class="idea">Most crossed transactions happen when you aim at someone's Adult or Parent and hit their weeping Child.</p>
+    </div>
+    <ul class="points">
+      <li>Think of a friendly game of table tennis, where you play the ball so the other person can return it. In a crossed transaction the ball drops.</li>
+      <li>The weeping Child shows itself in moaning ("why does this always happen to me?"), apologising, self-blame, blaming others or circumstances, feeling accused when nobody accused you, making yourself smaller or bigger, belittling others, or fleeing.</li>
+      <li>Its shield is up, so arguments can't reach the Adult behind it. "Be reasonable!" makes things worse: it's a Parent remark that says "you idiot".</li>
+      <li>The fix: answer the weeping Child with the nurturing Parent, a reassuring stroke, until the shield comes down. Then switch back to the Adult. The wiser one gives in, and the wiser one is whoever sees what's going on.</li>
+      <li>Energy decides which state we speak from. Tired, stressed, sick or threatened, we fall back on ready-made Parent opinions or the Child's reflexes, because the Adult's analysis costs energy.</li>
+    </ul>
+    <div class="fig">
+      <h4>Rescuing a crossed transaction</h4>
+<pre class="ifthen"><span class="c">// late for the theatre</span>
+Michael (A → A):   "Where are my cufflinks?"
+Evi     (C → P):   "You always blame me when you can't find your things!"
+<span class="c">// crossed: he aimed at her Adult, her weeping Child answered</span>
+
+<span class="x">✕</span> "I didn't blame you, you idiot!"     <span class="c">his Child defends</span>
+<span class="x">✕</span> "Now be reasonable!"                 <span class="c">his critical Parent</span>
+<span class="k">✓</span> "Of course I mislaid them. I just thought you might know.
+   Do you think we'll still make it?"  <span class="c">nurturing Parent, then back to Adult</span>
+Evi     (A):       "I think so, if you let me finish."</pre>
+      <p class="cap">She adds an old prayer for the moments when someone is being especially obtuse: let me walk a mile in my neighbour's moccasins before I judge them.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Defence Manoeuvres</span></div>
+  <div class="body">
+    <div>
+      <h3>Every defence says "I feel small right now"</h3>
+      <p class="idea">What counts is not whether someone was attacked, but whether they feel attacked. And defence almost always provokes counter-defence.</p>
+    </div>
+    <ul class="points">
+      <li>Conversations full of defence turn into duels with only losers and apparent winners. Apparent victories have to be won again next time, like Leo, who needed fresh proof of his power with every animal.</li>
+      <li>The elephant would have looked far stronger if he had just walked on. <em>Strength you have to prove, you don't have.</em></li>
+      <li>Following Thomas Harris, the goal is "I'm OK – you're OK". "I'm OK – you're not OK" comes across as arrogant. "I'm not OK – you're OK" leaves you feeling threatened. Either one invites defence.</li>
+      <li>Anger is part of defence, because it tempts us to hit back. Getting angry at a show-off proves his inflation worked.</li>
+      <li>Two rules come out of it: <strong>what's true is not what was said, but what the other person heard</strong>, and there's no guarantee they heard what you meant.</li>
+    </ul>
+
+    <div class="tablecard">
+      <div class="scroll-x">
+        <table class="wl">
+          <thead>
+            <tr>
+              <th scope="col"><span class="label">Variant</span></th>
+              <th scope="col" class="wl-h c-chi"><span class="nm">Shrink yourself</span><span class="tag">defend, apologise</span></th>
+              <th scope="col" class="wl-h c-par"><span class="nm">Inflate yourself</span><span class="tag">brag, pull rank</span></th>
+              <th scope="col" class="wl-h c-adu"><span class="nm">Withdraw</span><span class="tag">flee the situation</span></th>
+              <th scope="col" class="wl-h c-par"><span class="nm">Shrink the other</span><span class="tag">attack</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">At the press</th><td>Dieter: "What did I do wrong? I really try my best!"</td><td>Willi: "I've been here ten years! Your white coat isn't better than my grey one."</td><td>Egon: "I'm off on my break, it's nearly twelve."</td><td>Manfred: "So now it's my fault the machine doesn't heat?"</td></tr>
+            <tr><th scope="row">Counter-defence</th><td class="q">"Why are you apologising? Are you always this touchy?"</td><td class="q">"Then why are you still just a press operator after ten years?"</td><td class="q">"If my presence is so unbearable, off you go!"</td><td class="q">Sharp reply, and the circle keeps turning</td></tr>
+            <tr><th scope="row">What it means</th><td>He feels accused, not that you accused him</td><td>He needs recognition to prop up his self-esteem</td><td>He feels unequal to you or the situation, not that he dislikes you</td><td>He feels unsure or threatened, not that he thinks you're stupid</td></tr>
+            <tr><th scope="row">The trap</th><td>You feel guilty and start defending yourself</td><td>You feel threatened by his size</td><td>You take it as rejection</td><td>You feel attacked and hit back</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tablenote"><span class="label">Same trigger each time: "All your rings are scrap!", said in a sharp tone. The real cause was a faulty heater.</span></div>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Who do I feel bigger or smaller than?</h4>
+        <div class="amb" role="img" aria-label="Two by two grid. Rows: I'm OK or I'm not OK. Columns: you're OK or you're not OK. I'm OK and you're OK is the goal. I'm OK and you're not OK risks arrogance. I'm not OK and you're OK makes you feel threatened. I'm not OK and you're not OK is a dead end.">
+          <span></span><span class="ax top">You're OK</span><span class="ax top">You're not OK</span>
+          <span class="ax side">I'm OK</span>
+          <div class="cell good"><b>The goal</b><span>Equal size. Nobody needs to prove anything.</span></div>
+          <div class="cell hot"><b>Lion and hare</b><span>Arrogance. The other person is likely to defend.</span></div>
+          <span class="ax side">I'm not OK</span>
+          <div class="cell hot"><b>Hare and lion</b><span>You feel threatened and reach for one of the four variants.</span></div>
+          <div class="cell"><b>Dead end</b><span>Nobody has energy left for the other.</span></div>
+        </div>
+        <p class="cap">The book describes the first three positions. Bigger or smaller always depends on the area: in the same conversation you can feel bigger in expertise and smaller in status.</p>
+      </div>
+      <div class="fig">
+        <h4>How the foreman defused it</h4>
+        <div class="story" style="border-color:var(--adu)">
+          <span class="label">The good version</span>
+          <p>Weber happens by just as Dieter freezes. "What do you mean by scrap, Mr Kurz?" – "They're not vulcanised properly." – Weber looks at a ring: "Aha, still half raw." – Kurz: "Something's wrong with the temperature." Dieter breathes out. Weber: "So, Dieter, it's clearly the press."</p>
+        </div>
+        <p class="cap">One question moved the talk to the Adult and gave Dieter's self-esteem back without anyone having to apologise. The person who sees through a defence manoeuvre is in their Adult, so it's up to them to improve the conversation.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Images and Fog</span></div>
+  <div class="body">
+    <div>
+      <h3>Every opinion is an investment the mind defends</h3>
+      <p class="idea">Building an image of the world costs energy, so the organism protects it. Attack an image and you put the other person in a fog.</p>
+    </div>
+    <ul class="points">
+      <li>Images (<em class="de">Bilder</em>) are stored ideas, opinions and pictures. Each one cost energy to make and is coloured by emotion, which adds to the investment. Every decision taken on the basis of an image raises it further.</li>
+      <li>Mrs Bauer believes Napoleon was French. She writes an indignant letter to a magazine that called him Corsican and gets a printed reply proving her wrong. Now she has a public decision riding on the old image, so changing it is even harder.</li>
+      <li>Grief is a massive image exchange: thousands of small images of a partner have to be replaced at once. That's why it takes months or years, and why sudden deaths are harder to bear.</li>
+      <li>Being preoccupied causes psychological fog. A driver dodging a crash hears nothing his boss says. Someone whose important image is under attack hears only fragments of your arguments.</li>
+      <li>A joke smashes two images together and releases the energy that kept them apart, as laughter if it's no threat to you, as indignation if it is. The more OK you feel, the more easily you laugh at yourself.</li>
+      <li>Your self-image is the most important image of all, and it shows without words. The more OK you see yourself, the more OK you come across.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Images are stacked like bricks</h4>
+        <svg viewBox="0 0 480 270" role="img" aria-label="A wall of bricks. One brick in the lowest row is highlighted in red and pushed partly out, labelled the attacked image. The bricks stacked above it are tinted and outlined with dashes, labelled images built on it, which would fall with it.">
+          <g id="wall"></g>
+          <g stroke="var(--ink-3)" stroke-width="1.2" fill="none">
+            <path d="M210 252 V262 H330"/>
+          </g>
+          <text x="336" y="266" font-size="12" style="fill:var(--par)">the attacked image</text>
+          <text x="360" y="44" font-size="12" style="fill:var(--ink-3)">images built</text>
+          <text x="360" y="60" font-size="12" style="fill:var(--ink-3)">on top of it</text>
+        </svg>
+        <p class="cap">Knock out a low brick and everything resting on it is in danger. That's why an attack on a basic belief feels like an attack on the whole person, and why the defence is so fierce. Diagram drawn for this page.</p>
+      </div>
+      <div class="fig">
+        <h4>The anti-fog method</h4>
+        <div class="orders">
+          <div class="ord">
+            <span class="label">Method I · you know you'll hit an image</span>
+            <div class="layer expl">Explanation</div>
+            <div class="layer expl">Explanation</div>
+            <div class="layer expl">Explanation</div>
+            <div class="layer main">Main statement last</div>
+            <p class="cap" style="font-size:14px">The other person isn't in the fog yet, so the reasons get through, and you can work towards the conclusion together.</p>
+          </div>
+          <div class="ord">
+            <span class="label">Method II · you hit one by accident</span>
+            <div class="layer main">Main statement (already out)</div>
+            <div class="layer fogged">Explanations vanish in the fog</div>
+            <div class="layer expl">Calm things down, change topic</div>
+            <div class="layer expl">Return later with Method I</div>
+            <p class="cap" style="font-size:14px">Once someone is in the fog, more arguments only thicken it.</p>
+          </div>
+        </div>
+        <p class="cap">Before any image attack, ask: is it really necessary? Is now the right time, or is the other person tired? And how ready would I be to accept their image?</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The wife who wanted to work</span>
+      <p>Mrs Maurer's husband believes a wife should only work if money forces her to. Every time she raises it directly, he goes into the fog. So she starts from his own complaint that she's been on edge, mentions how cheerful she was the week she helped the writer next door sort his archive, and lets him reach the conclusion himself: "I'm beginning to see where this is going." Then she drops the subject. Next time the ground is prepared.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Feedback Techniques</span></div>
+  <div class="body">
+    <div>
+      <h3>Check what arrived, and show that you accept</h3>
+      <p class="idea">Responsibility for being understood lies first with the sender. If the sender forgets, the receiver should check back.</p>
+    </div>
+    <ul class="points">
+      <li>"Is the report done?" – "How could it be, Karsten is still at the land registry!" – "I meant the one for the tax office." One check-back ("Do you mean the building report?") would have saved the exchange.</li>
+      <li><strong>Paraphrase</strong>: say the other person's message back in your own words. "May I sum up?" doesn't signal that you weren't listening, it proves that you were.</li>
+      <li>The <strong>language of non-acceptance</strong>: judging, preaching, moralising, warning, ordering, interfering, interrupting, controlling. It makes people defensive, or makes them keep their problems to themselves.</li>
+      <li>Acceptance has to be shown: eye contact, a smile, a nod, your body turned towards the speaker. An insecure person reads the absence of praise as criticism. 71% of German managers found "If it doesn't taste good, you'll hear about it" rude at dinner, and most of them ran their teams exactly that way.</li>
+      <li>Interfering, as when a father redesigns his son's sandcastle, says "you're not good enough". Not interfering says the opposite, as long as it isn't indifference.</li>
+      <li>Learn all the theory you can, she says, quoting Jung, then forget it when you sit across from someone. Tune in to the person, not the message.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Three kinds of question</h4>
+        <div class="states">
+          <div class="state tint c-adu"><span class="ltr">?</span><h4>Closed</h4><p>Can only be answered yes or no. Good for quick facts, quiet people, or narrowing down like a doctor.</p><span class="say">"Did you close all the windows?"</span></div>
+          <div class="state tint c-chi"><span class="ltr">…</span><h4 class="hd">Open</h4><p>Can never be answered yes or no. Essential when you want a real opinion.</p><span class="say">"What do you think of the new CD?"</span></div>
+          <div class="state tint c-par"><span class="ltr">!</span><h4>Leading</h4><p>Has the answer built in. Usually manipulative: "So you saw him <em>run</em> out?" Useful only to return to common ground.</p><span class="say">"So we agree on this much?"</span></div>
+        </div>
+      </div>
+      <div class="fig">
+        <h4>Active listening</h4>
+        <div class="compare">
+          <div><h5 style="color:var(--par)">Without it</h5><ul><li>"Another awful day!"</li><li>"You're always moaning!" <span class="muted">(critical Parent)</span></li><li>She defends herself and keeps the anger</li></ul></div>
+          <div><h5 style="color:var(--adu)">With it</h5><ul><li>"Another awful day!"</li><li>"You sound annoyed."</li><li>Missed tram, stolen taxi, broken lift. "I hope the rest of your day is better."</li></ul></div>
+        </div>
+        <p class="cap">Thomas Gordon's two versions: <strong>door-openers</strong> ("Tell me about it", "I'd like to hear your view") and <strong>paraphrase-questions</strong> that reflect the other person's thoughts back without judging them.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ NEW THOUGHTS ============ -->
+<div class="part" id="newthoughts">
+  <span class="label partno">Part I · Chapters 8–13</span>
+  <h2>New thoughts</h2>
+  <p class="lede">Added in the sixth edition and later moved into the theory part: brain research, Watzlawick's realities, and a learning plan. Birkenbihl calls the book a "psychological supermarket": take what suits you.</p>
+</div>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Bio-Logic / Psycho-Logic</span></div>
+  <div class="body">
+    <div>
+      <h3>Under stress, the thinking brain goes offline</h3>
+      <p class="idea">The weeping Child doesn't refuse logic out of stubbornness. Its stress hormones have partly switched off the part of the brain that does logic.</p>
+    </div>
+    <ul class="points">
+      <li>Following MacLean's model, she describes three layers: the ancient <strong>reptile brain</strong> (fight or flight, fear, rage, envy; barely able to learn), the <strong>limbic system</strong> (feelings and stress hormones) and the <strong>new brain</strong>, which she calls the "thinking brain".</li>
+      <li>When the reptile takes over, the limbic system releases stress hormones, and what's left is less <em>Homo sapiens</em> than <em>"HoRmo sapiens"</em>, a creature run by its hormones.</li>
+      <li>Some people fall into the reptile brain now and then. Others react from it chronically. She calls the first kind of logic bio-logic, which often turns ordinary logic into pseudo-logic.</li>
+      <li>She separates bad stress (distress) from good stress (eustress), which produces "joy hormones" instead.</li>
+      <li>Watch for people who think they're in their Adult while their hormones are in charge. That's where "Now be reasonable!" comes from.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three brains in one head</h4>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px;align-items:center">
+        <svg viewBox="0 0 360 260" role="img" aria-label="Three nested shapes. The outer layer in blue is the thinking brain, which thinks, weighs and listens. Inside it the yellow limbic system handles feelings and stress hormones. At the core the red reptile brain handles fight or flight. An arrow labelled stress points from the core outward, crossing out the thinking brain.">
+          <ellipse cx="170" cy="135" rx="160" ry="112" fill="color-mix(in srgb, var(--adu) 14%, var(--card))" stroke="var(--adu)" stroke-width="2"/>
+          <ellipse cx="170" cy="160" rx="104" ry="74" fill="color-mix(in srgb, var(--chi) 22%, var(--card))" stroke="var(--chi)" stroke-width="2"/>
+          <ellipse cx="170" cy="184" rx="52" ry="38" fill="color-mix(in srgb, var(--par) 26%, var(--card))" stroke="var(--par)" stroke-width="2"/>
+          <text x="170" y="50" text-anchor="middle" class="hd" font-size="15" style="fill:var(--adu)">Thinking brain</text>
+          <text x="170" y="68" text-anchor="middle" font-size="11">think · weigh · listen · ask</text>
+          <text x="170" y="114" text-anchor="middle" class="hd" font-size="14" style="fill:var(--chi-ink)">Limbic system</text>
+          <text x="170" y="131" text-anchor="middle" font-size="11">feelings · stress hormones</text>
+          <text x="170" y="182" text-anchor="middle" class="hd" font-size="13" style="fill:var(--par)">Reptile</text>
+          <text x="170" y="198" text-anchor="middle" font-size="11">fight or flight</text>
+          <g stroke="var(--par)" stroke-width="2" fill="none" stroke-linecap="round">
+            <path d="M222 178 C 268 160, 292 120, 300 84"/><path d="M292 92 L300 82 L306 95"/>
+            <path d="M290 60 l22 22 M312 60 l-22 22"/>
+          </g>
+          <text x="262" y="214" font-size="11" style="fill:var(--par)">stress</text>
+        </svg>
+        <div class="prose" style="gap:.8em">
+          <p class="cap" style="font-size:16px;color:var(--ink)">Seen this way, everything in the chapter on defence manoeuvres makes biological sense. A person under threat can't think clearly, listen, ask or argue in that moment, however much they want to.</p>
+          <p class="cap">The practical consequence is to lower the threat first and argue second. Her game "the four never-evers" (see <a href="#practice">Practice</a>) lets you feel the difference from the inside.</p>
+          <p class="src">Simplified model as used in the book, ch. 8</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Agreeing to Differ</span></div>
+  <div class="body">
+    <div>
+      <h3>Two realities, and a word for agreeing to differ</h3>
+      <p class="idea">When in doubt, say nothing, ask a question first.</p>
+    </div>
+    <ul class="points">
+      <li>We assume there's only one reality, our own. "It's hot in here," she sighs at a party. "Nonsense, it isn't hot!" says her husband, as though only his perception counts.</li>
+      <li>A travel agent tells a client who rejects charter flights, "You've got that wrong." A colleague doubts that a whole-food diet could cause real weight loss. In both cases a question ("What makes you say that?") would have opened the conversation. Whoever asks, leads.</li>
+      <li>Following Paul Watzlawick: <strong>first-order reality</strong> is what can be measured. <strong>Second-order reality</strong> is the meaning and value we give it: taste, religion, opinion. Most arguments are about the second while pretending to be about the first.</li>
+      <li>Watch out for "constraints of the facts" (<em class="de">Sachzwänge</em>) used by managers, politicians, teachers and parents to push their own second-order reality.</li>
+      <li>English has "let's agree to differ"; German had nothing like it. So she coined <strong><em class="de">Zweinigung</em></strong>, a blend of "two" and "agreement", which says: we see this differently, and that's fine. It also helps separate our opinion from our person.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The three-bowl experiment</h4>
+        <svg viewBox="0 0 480 220" role="img" aria-label="Three bowls of water in a row: hot on the left in red, lukewarm in the middle, cold on the right in blue. A person holds one hand in the hot bowl and one in the cold bowl for a minute, then both hands go into the middle bowl. The hand from the hot bowl reports cold, the hand from the cold bowl reports warm.">
+          <g id="bowls"></g>
+        </svg>
+        <p class="cap">One hand in hot water, one in iced water, for about a minute. Then both go into the lukewarm middle bowl. The same water feels icy to one hand and warm to the other. For chronic know-it-alls she suggests a four-bowl version.</p>
+      </div>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">“It can be bolder to doubt what is known than to explore the unknown.”</blockquote>
+        <span class="label">A line by Kaspar, quoted by Watzlawick, Beavin and Jackson, which Birkenbihl proposes as a motto (my translation)</span>
+        <p class="cap">Her exercise: for a few weeks, sort remarks you hear and read into first- and second-order realities, ideally with others. That this regularly causes heated debates, she notes, should give us pause.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Levels of Communication</span></div>
+  <div class="body">
+    <div>
+      <h3>The relationship decides what the content means</h3>
+      <p class="idea">Every message travels on two levels at once, and when the relationship level is disturbed the content gets lost.</p>
+    </div>
+    <ul class="points">
+      <li>Watzlawick's rule: every communication has a <strong>content level</strong> and a <strong>relationship level</strong>, and the second defines the first.</li>
+      <li>At a party one woman looks at another's necklace and says "Are those pearls real". Without the tone, nobody can know if it's admiration, envy or an insult, yet seminar groups always guess at once.</li>
+      <li>The content level is the "head" level, run by the thinking brain. The relationship level carries tone, face and gesture, and with them pressure, which can impress or oppress.</li>
+      <li>When the relationship is badly disturbed, stop pushing content. Talk about the relationship instead: "I have the feeling I've hurt you. I'm sorry." Or: "I think you're angry now. Is that right?" Only once the fog has cleared can you return to content.</li>
+    </ul>
+    <div class="fig">
+      <h4>Two channels, one message</h4>
+      <div class="compare">
+        <div><span class="label">Content level</span><h5>What is said</h5><ul><li>Words, facts, information</li><li>Run by the thinking brain</li><li>Gets through freely while the relationship is neutral or good</li></ul></div>
+        <div style="background:color-mix(in srgb, var(--par) 9%, var(--card))"><span class="label">Relationship level</span><h5 style="color:var(--par)">How it is said</h5><ul><li>Tone, face, posture, silence</li><li>Information about the information</li><li>Once it turns negative, it drowns out the content</li></ul></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Brain-Friendly?</span></div>
+  <div class="body">
+    <div>
+      <h3>Most learning problems are teaching problems</h3>
+      <p class="idea">If you don't understand an explanation, the fault almost always lies with the sender.</p>
+    </div>
+    <ul class="points">
+      <li>Her own early research grew out of being a "victim of the school system". Education level is one of many factors that shape any conversation, so learning belongs in a book on communication.</li>
+      <li>Learning isn't <strong>cramming</strong>. Cramming forces in facts you haven't understood, which is fine for PIN numbers. Real learning gets easier the more you know, because new things hang on what's already there.</li>
+      <li>Successful learning releases dopamine, which makes you want more. It raises self-esteem and makes you more intelligent and more creative, because new ideas are surprising links between existing knowledge.</li>
+      <li>People who learn regularly also explain better. Her motto: there's no dry theory, only dry theorists.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Language and Thought</span></div>
+  <div class="body">
+    <div>
+      <h3>Words don't just describe reality, they shape it</h3>
+      <p class="idea">We never send 100% of a message. The listener fills in the rest from what they know, and doesn't notice doing it.</p>
+    </div>
+    <ul class="points">
+      <li>In a restaurant the waiter asks "Pork?" and someone says "That's me." Fine at dinner. Not fine with in-house acronyms and jargon, where the listener can't fill the gaps.</li>
+      <li>A warehouse burned down because a worker threw a cigarette end into an "empty" barrel. It was an empty <em>petrol</em> barrel, full of explosive fumes. The word "empty" told him it was safe.</li>
+      <li>Take words literally to see the pictures inside them. German <em class="de">Ent-täuschung</em> (disappointment) is literally the end of a deception, and so, oddly, a gain.</li>
+      <li>Concepts such as "justice" are human ideals rather than facts of nature, which is no reason to give them up, but a reason to be less bitter when the world doesn't follow them.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Closing Part I</span></div>
+  <div class="body">
+    <div>
+      <h3>Communicating well is a skill, like driving</h3>
+      <p class="idea">You can't be perfect with everyone. Make the effort where the person or the outcome really matters.</p>
+    </div>
+    <ul class="points">
+      <li>Good communication costs energy. If you did it perfectly all the time you'd have none left for your work and your life.</li>
+      <li>Honesty has limits: some motives are unconscious, the truth can hurt the other person, and it can harm you with someone who doesn't want an open exchange. Always respect the other person's psychological privacy.</li>
+      <li>Kahlil Gibran's image: a couple shouldn't try to merge into one temple pillar, but be two pillars that carry the roof together.</li>
+      <li>Learner drivers think they'll never manage clutch, mirror and indicator at once, then do it without thinking. Communication works the same way: once a behaviour becomes a habit, it costs no extra energy.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Her learning plan</h4>
+<pre class="ifthen"><span class="k">1</span> list the aspects you want to master
+<span class="k">2</span> read Part II, tick the exercises that fit
+<span class="k">3</span> decide how much time per day or week
+<span class="k">4</span> carry a small notebook everywhere
+
+<span class="c">week 1</span>  hand out positive strokes
+<span class="c">week 2</span>  watch for the four never-evers
+<span class="c">week …</span>  one point per week, notes several times a day
+<span class="c">then</span>    one week off, start again at point 1</pre>
+        <p class="cap">On your second round you'll find the first point has kept improving on its own. Share the plan with a friend or set up a small practice group: their encouragement is itself a stroke, and strokes speed up any learning.</p>
+      </div>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">“We expect a lot from others. Is it too much to ask that we make an effort to communicate better?”</blockquote>
+        <span class="label">Birkenbihl's closing argument for Part I, paraphrased</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PRACTICE ============ -->
+<section id="practice">
+  <div class="sec-head">
+    <span class="label">Parts II–III · Practice</span>
+    <h2>Exercises and games</h2>
+    <p class="lede">Reading only gets you to "yes, yes". To change a habit you have to feel the theory, which is why the second half of the book is exercises, most of them for small groups without a trainer, just someone to run the game.</p>
+  </div>
+
+  <div class="wl-intro">
+    <div class="fig">
+      <h4>The four never-evers</h4>
+      <div class="roles">
+        <div class="c-par"><b>The attacker</b><span>Scolds, nags, bangs the table.</span><q>"Typical, nobody listens to me!"</q></div>
+        <div class="c-chi"><b>The trivialiser</b><span>Doesn't take the problem or the speaker seriously.</span><q>"In fifty years it won't matter."</q></div>
+        <div class="c-adu"><b>The "be reasonable"</b><span>Repeats one sentence whose hidden message is "you idiot".</span><q>"Oh, be reasonable."</q></div>
+        <div style="--c:var(--ink-3)"><b>The topic-changer</b><span>Always drifts off the subject.</span><q>"Apparently it'll rain tomorrow."</q></div>
+      </div>
+      <p class="cap">Four players are a family that has been arguing for two hours about where to go on holiday. The attacker starts, three rounds each, then everyone takes their left neighbour's role until each has played all four. Nobody ever agrees on a destination, and that's the lesson. Afterwards: which role was hardest? Which do you use in real life? Who do you know who's stuck in one?</p>
+    </div>
+    <div class="fig">
+      <h4>The feelings wheel</h4>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:18px;align-items:center">
+        <svg id="wheel" viewBox="0 0 300 300" role="img" aria-label="A circular wheel divided into eight sectors of feelings, each with three rings: the outer ring for slight, the middle for moderate and the inner for intense feelings. The centre is a rest zone. Yellow and blue chips from two people lie on several sectors."></svg>
+        <div class="prose" style="gap:.7em">
+          <p class="cap" style="font-size:16px;color:var(--ink)">An American tool for open talks. Two people sit facing each other and silently place chips on the feelings they have about each other: outer ring for slight, inner ring for intense.</p>
+          <p class="cap">A free zone takes feelings the wheel doesn't list, such as jealousy. The rest zone in the middle is where you put a chip when you need a pause. Then you talk about the chips, one by one or going round the wheel.</p>
+          <p class="src">Illustrative: the book's printed wheel lists many more feelings</p>
+        </div>
+      </div>
+      <p class="cap">Feelings that can't be said get passed down the line: boss to father, father to mother, mother to child. One couple discovered at the wheel that he still brought up a batch of burnt steaks from years ago. She now laughs at his superior moments, and he catches himself.</p>
+    </div>
+  </div>
+
+  <div class="drills" style="margin-top:24px">
+    <div class="drill"><span class="label"><span>Inventory</span><span>alone</span></span><h4>The stick-figure test</h4><p>Draw yourself next to your father and your mother. Are you bigger, smaller or the same size in self-esteem? Then draw a self-portrait, full body, and answer the questions on info sheet 5.</p></div>
+    <div class="drill"><span class="label"><span>Inner attitude</span><span>2 people</span></span><h4>One minute, eyes closed</h4><p>Think about a positive (or negative) aspect of the person opposite. Open your eyes; they have to guess which. Your attitude shows without a word.</p></div>
+    <div class="drill"><span class="label"><span>Strokes</span><span>group</span></span><h4>One good thing each</h4><p>Everyone tells everyone else one thing they like about them. Many people find positive things harder to say than they expected, even when they feel them.</p></div>
+    <div class="drill"><span class="label"><span>Directness</span><span>2 people</span></span><h4>The one-word method</h4><p>Hold a conversation one word per sentence: "Mother-in-law." – "Mother-in-law?" – "Tomorrow." – "Fear." – "Why?" – "Time." You catch your stock phrases, and you can't wrap feelings in "facts".</p></div>
+    <div class="drill"><span class="label"><span>Body language</span><span>2 people</span></span><h4>Back to back, face to face</h4><p>Talk back to back, like a couple calling from different rooms. Then face each other in silence, then with gestures only, eyes closed with touch only, and finally with everything at once.</p></div>
+    <div class="drill"><span class="label"><span>Nerves</span><span>mirror or partner</span></span><h4>The towel test</h4><p>Cover everything but your eyes and hold eye contact. After about two minutes it gets awkward. Notice which muscles tighten and where. Then do something mildly embarrassing in public and write down your reactions straight after.</p></div>
+    <div class="drill"><span class="label"><span>Fear</span><span>in real life</span></span><h4>As-if, or admit it</h4><p>A little nervous? Act <em>as if</em> you were confident for a minute or two, and others respond as if you were. Very nervous? Say so. Nothing disarms like admitting what the other person was about to notice anyway.</p></div>
+    <div class="drill"><span class="label"><span>Questions</span><span>2–10 people</span></span><h4>The sawdust riddle</h4><p>"A man enters his room, doesn't see the sawdust, and shoots himself." Find out why using closed questions only; each open question costs a point. The answer is on info sheet 6.</p></div>
+    <div class="drill"><span class="label"><span>Alter ego</span><span>group</span></span><h4>"I am you now"</h4><p>Speak as another participant: "My name is Y, I've been sitting here since yesterday wondering what this is for…" They correct you. Then one player acts out someone's own habit, like constant interrupting, until that person sees it from the other side.</p></div>
+  </div>
+</section>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Afterword</span>
+    <h2>Why it has stayed a standard work</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>First published in 1975, the book anticipated adult-education trends of the 1980s, transactional analysis among them, and passed 117,000 copies by its 13th edition. Birkenbihl kept revising it for decades, moving the "new thoughts" into the theory and answering readers' questions in later afterwords.</p>
+      <p>Some parts show their age: the examples are set in a 1970s gasket factory, the gender roles are of their time, and a few references now feel dated. The core argument hasn't aged at all. People defend their self-esteem before they listen, and whoever notices that first is the one who can rescue the conversation.</p>
+      <p>Her closing advice is to practise in company. Communication always happens with other people, so it's no surprise the best learning does too.</p>
+    </div>
+    <div class="fig">
+      <h4>The book in six sentences</h4>
+      <div class="states">
+        <div class="state c-par"><span class="ltr">1</span><p style="grid-column:2">What's true is not what you said but what the other person heard.</p></div>
+        <div class="state c-chi"><span class="ltr">2</span><p style="grid-column:2">Every defence means "I feel small right now".</p></div>
+        <div class="state c-adu"><span class="ltr">3</span><p style="grid-column:2">The wiser one gives in, and the wiser one is whoever understands what's happening.</p></div>
+        <div class="state c-par"><span class="ltr">4</span><p style="grid-column:2">Strength you have to prove, you don't have.</p></div>
+        <div class="state c-chi"><span class="ltr">5</span><p style="grid-column:2">When in doubt, say nothing, ask a question first.</p></div>
+        <div class="state c-adu"><span class="ltr">6</span><p style="grid-column:2">Good motivation leaves both sides satisfied.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From theory and practice</span>
+    <h2>The toolkit</h2>
+    <p class="lede">The habits that come up again and again across the book, sorted by when you'd use them.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>In the moment</h3>
+      <div class="tk"><b>Read defence as a signal</b><span>Apologising, showing off, leaving or attacking all mean the other person feels small. Don't answer in kind.</span></div>
+      <div class="tk"><b>Stroke the weeping Child first</b><span>A reassuring word from the nurturing Parent, then back to facts once the shield is down.</span></div>
+      <div class="tk"><b>Ask before you contradict</b><span>"What makes you say that?" beats "You've got that wrong."</span></div>
+      <div class="tk"><b>Talk about the relationship</b><span>When the mood is off, stop pushing content: "I think I've hurt you. Is that right?"</span></div>
+    </div>
+    <div class="col">
+      <h3>Before you persuade</h3>
+      <div class="tk"><b>Is this image swap necessary?</b><span>Every change of opinion costs the other person energy. Skip the ones that don't matter.</span></div>
+      <div class="tk"><b>Reasons first, conclusion last</b><span>If you know you'll hit a belief, explain your way towards the main point so it doesn't vanish in the fog.</span></div>
+      <div class="tk"><b>Sell the sizzle</b><span>Find their unmet need, make its fulfilment the goal, and describe it vividly. Both sides should win.</span></div>
+      <div class="tk"><b>Agree to differ</b><span>On matters of taste, faith or opinion, settle for a <em>Zweinigung</em> instead of a victory.</span></div>
+    </div>
+    <div class="col">
+      <h3>Practice</h3>
+      <div class="tk"><b>One point per week</b><span>A notebook, one heading for six days, notes several times a day, then the next point.</span></div>
+      <div class="tk"><b>Praise in their currency</b><span>Being-stroked people want to feel accepted, doing-stroked people want their work seen. Never fake it.</span></div>
+      <div class="tk"><b>Check what arrived</b><span>Paraphrase, use open questions for opinions, and remember the sender is responsible for being understood.</span></div>
+      <div class="tk"><b>Admit big nerves</b><span>Small nerves: act as if. Big nerves: say so, and most people will respect you more.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Vera F. Birkenbihl, <em>Kommunikationstraining: Zwischenmenschliche Beziehungen erfolgreich gestalten</em> (mvg Verlag; first published 1975), read in the 35th German edition (2015). English quotations are my own translations. Numbers are as reported in the book. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function txt(parent, x, y, s, attrs) {
+    var a = { x: x, y: y };
+    for (var k in attrs) a[k] = attrs[k];
+    var t = el("text", a, parent); t.textContent = s; return t;
+  }
+
+  /* --- Transaction diagrams: two P/A/C stacks --- */
+  var rowsY = { P: 52, A: 118, C: 184 };
+  var cols = { P: "var(--par)", A: "var(--adu)", C: "var(--chi)" };
+  function stacks(g) {
+    [44, 156].forEach(function (x) {
+      ["P", "A", "C"].forEach(function (s) {
+        el("circle", { cx: x, cy: rowsY[s], r: 25, fill: "color-mix(in srgb, " + cols[s] + " 18%, var(--card))", stroke: cols[s], "stroke-width": 2 }, g);
+        txt(g, x, rowsY[s] + 6, s, { "text-anchor": "middle", "font-size": 17, "class": "hd" });
+      });
+    });
+  }
+  // from/to are ego states; rtl draws the reply from the right stack to the left one
+  function arrow(g, from, to, dy, rtl, dashed, colour) {
+    var col = colour || "var(--ink)";
+    var x1 = rtl ? 130 : 70, x2 = rtl ? 70 : 130, y1 = rowsY[from] + dy, y2 = rowsY[to] + dy;
+    var l = el("line", { x1: x1, y1: y1, x2: x2, y2: y2, stroke: col, "stroke-width": 2.2 }, g);
+    if (dashed) l.setAttribute("stroke-dasharray", "5 4");
+    var a = Math.atan2(y2 - y1, x2 - x1), s = 9;
+    var p1 = [x2 - s * Math.cos(a - .45), y2 - s * Math.sin(a - .45)], p2 = [x2 - s * Math.cos(a + .45), y2 - s * Math.sin(a + .45)];
+    el("path", { d: "M" + x2 + " " + y2 + " L" + p1 + " L" + p2 + " Z", fill: col }, g);
+  }
+  var t1 = document.getElementById("t1"), t2 = document.getElementById("t2"), t3 = document.getElementById("t3");
+  if (t1) { stacks(t1); arrow(t1, "A", "A", -7); arrow(t1, "A", "A", 7, true); txt(t1, 100, 222, "A ⇄ A", { "text-anchor": "middle", "font-size": 12 }); }
+  if (t2) { stacks(t2); arrow(t2, "A", "A", 0); arrow(t2, "C", "P", 0, true, false, "var(--par)"); txt(t2, 100, 222, "A → A, C → P", { "text-anchor": "middle", "font-size": 12 }); }
+  if (t3) { stacks(t3); arrow(t3, "A", "A", 0); arrow(t3, "C", "C", 0, false, true, "var(--chi-ink)"); txt(t3, 100, 222, "said A, meant C", { "text-anchor": "middle", "font-size": 12 }); }
+
+  /* --- Brick wall --- */
+  var wall = document.getElementById("wall");
+  if (wall) {
+    var bw = 64, bh = 30, x0 = 20, y0 = 222, rows = 6;
+    // the attacked brick: bottom row, index 3 (x = 20 + 3*66)
+    var hitX = x0 + 3 * (bw + 2);
+    for (var r = 0; r < rows; r++) {
+      var off = (r % 2) ? bw / 2 : 0;
+      for (var i = -1; i < 5; i++) {
+        var x = x0 + off + i * (bw + 2), y = y0 - r * (bh + 2);
+        if (x < x0 - 1 || x + bw > x0 + 5 * (bw + 2)) continue;
+        var dist = Math.abs((x + bw / 2) - (hitX + bw / 2));
+        var depends = r > 0 && dist <= r * (bw / 2 + 1) - 4 && dist < 1.6 * bw;
+        var isHit = r === 0 && Math.abs(x - hitX) < 1;
+        el("rect", {
+          x: isHit ? x + 26 : x, y: isHit ? y + 10 : y, width: bw, height: bh, rx: 2,
+          fill: isHit ? "color-mix(in srgb, var(--par) 30%, var(--card))" : depends ? "color-mix(in srgb, var(--par) 9%, var(--card))" : "var(--paper-2)",
+          stroke: isHit ? "var(--par)" : depends ? "var(--par)" : "var(--rule)",
+          "stroke-width": isHit ? 2 : 1.4,
+          "stroke-dasharray": depends ? "4 3" : "none"
+        }, wall);
+      }
+    }
+  }
+
+  /* --- Three bowls --- */
+  var bowls = document.getElementById("bowls");
+  if (bowls) {
+    var spec = [
+      { x: 80, c: "var(--par)", t: "hot" },
+      { x: 240, c: "var(--ink-3)", t: "lukewarm" },
+      { x: 400, c: "var(--adu)", t: "cold" }
+    ];
+    spec.forEach(function (b) {
+      el("path", { d: "M" + (b.x - 62) + " 120 Q" + b.x + " 210 " + (b.x + 62) + " 120 Z", fill: "color-mix(in srgb, " + b.c + " 20%, var(--card))", stroke: b.c, "stroke-width": 2 }, bowls);
+      el("path", { d: "M" + (b.x - 56) + " 130 Q" + b.x + " 140 " + (b.x + 56) + " 130", fill: "none", stroke: b.c, "stroke-width": 1.2, "stroke-opacity": .6 }, bowls);
+      txt(bowls, b.x, 202, b.t, { "text-anchor": "middle", "font-size": 13 });
+    });
+    // step 1 arrows: hands in outer bowls
+    txt(bowls, 80, 40, "1 · left hand", { "text-anchor": "middle", "font-size": 11 });
+    txt(bowls, 400, 40, "1 · right hand", { "text-anchor": "middle", "font-size": 11 });
+    el("path", { d: "M80 50 V108", stroke: "var(--par)", "stroke-width": 2, fill: "none" }, bowls);
+    el("path", { d: "M400 50 V108", stroke: "var(--adu)", "stroke-width": 2, fill: "none" }, bowls);
+    // step 2: both hands into the middle
+    el("path", { d: "M92 44 C 150 20, 200 40, 228 104", stroke: "var(--par)", "stroke-width": 1.6, fill: "none", "stroke-dasharray": "4 4" }, bowls);
+    el("path", { d: "M388 44 C 330 20, 280 40, 252 104", stroke: "var(--adu)", "stroke-width": 1.6, fill: "none", "stroke-dasharray": "4 4" }, bowls);
+    txt(bowls, 240, 16, "2 · both hands here", { "text-anchor": "middle", "font-size": 11 });
+    txt(bowls, 196, 82, "“icy”", { "text-anchor": "end", "font-size": 13, style: "fill:var(--adu)" });
+    txt(bowls, 284, 82, "“warm”", { "text-anchor": "start", "font-size": 13, style: "fill:var(--par)" });
+  }
+
+  /* --- Feelings wheel --- */
+  var wheel = document.getElementById("wheel");
+  if (wheel) {
+    var feelings = ["joy", "anger", "fear", "sadness", "pride", "hurt", "affection", "shame"];
+    var cx = 150, cy = 150, radii = [138, 106, 74], rest = 36, n = feelings.length;
+    function arcPath(r1, r2, a1, a2) {
+      var p = function (r, a) { return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; };
+      var A = p(r2, a1), B = p(r2, a2), C = p(r1, a2), D = p(r1, a1);
+      return "M" + A + " A" + r2 + " " + r2 + " 0 0 1 " + B + " L" + C + " A" + r1 + " " + r1 + " 0 0 0 " + D + " Z";
+    }
+    for (var k = 0; k < n; k++) {
+      var a1 = (k / n) * Math.PI * 2 - Math.PI / 2, a2 = ((k + 1) / n) * Math.PI * 2 - Math.PI / 2;
+      for (var ring = 0; ring < 3; ring++) {
+        var outer = radii[ring], inner = ring < 2 ? radii[ring + 1] : rest;
+        el("path", { d: arcPath(inner, outer, a1, a2), fill: "color-mix(in srgb, var(--ink) " + (4 + ring * 5) + "%, var(--card))", stroke: "var(--card)", "stroke-width": 2 }, wheel);
+      }
+      var mid = (a1 + a2) / 2, lr = 122;
+      txt(wheel, (cx + lr * Math.cos(mid)).toFixed(1), (cy + lr * Math.sin(mid) + 4).toFixed(1), feelings[k], { "text-anchor": "middle", "font-size": 10.5 });
+    }
+    el("circle", { cx: cx, cy: cy, r: rest - 2, fill: "var(--paper-2)", stroke: "var(--rule)" }, wheel);
+    txt(wheel, cx, cy - 2, "rest", { "text-anchor": "middle", "font-size": 10 });
+    txt(wheel, cx, cy + 11, "zone", { "text-anchor": "middle", "font-size": 10 });
+    // chips: [sector, ring, who]
+    var chips = [[0, 1, 0], [6, 2, 0], [1, 1, 1], [5, 2, 1], [6, 0, 1], [3, 0, 0]];
+    chips.forEach(function (c) {
+      var a = ((c[0] + .5) / n) * Math.PI * 2 - Math.PI / 2 + (c[2] ? .14 : -.14);
+      var rr = [122, 90, 56][c[1]];
+      el("circle", { cx: (cx + rr * Math.cos(a)).toFixed(1), cy: (cy + rr * Math.sin(a)).toFixed(1), r: 7.5, fill: c[2] ? "var(--adu)" : "var(--chi)", stroke: "var(--card)", "stroke-width": 2 }, wheel);
+    });
+  }
+
+  /* --- Hero rally: complementary volleys, then a crossed one drops --- */
+  var canvas = document.getElementById("rally");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function paddle(x, y, col) {
+    ctx.fillStyle = col;
+    ctx.beginPath();
+    if (ctx.roundRect) ctx.roundRect(x - 5, y - 22, 10, 44, 5); else ctx.rect(x - 5, y - 22, 10, 44);
+    ctx.fill();
+  }
+  var DUR = 1150, CYCLE = 5;
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var L = 26, R = w - 26, base = hgt * 0.62, arc = hgt * 0.42;
+    var yel = css("--chi"), blu = css("--adu"), red = css("--par"), rule = css("--rule");
+    // net
+    ctx.strokeStyle = rule; ctx.lineWidth = 2; ctx.setLineDash([4, 5]);
+    ctx.beginPath(); ctx.moveTo(w / 2, hgt * 0.55); ctx.lineTo(w / 2, hgt); ctx.stroke(); ctx.setLineDash([]);
+    if (reduce) {
+      paddle(L, base, yel); paddle(R, base, blu);
+      ctx.fillStyle = css("--ink-3");
+      for (var s = 0; s <= 24; s++) {
+        var f = s / 24, x = L + 14 + (R - L - 28) * f, y = base - Math.sin(Math.PI * f) * arc;
+        ctx.globalAlpha = .25 + .75 * f; ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      return;
+    }
+    var t = time / DUR, n = Math.floor(t), f = t - n;
+    var toRight = n % 2 === 0;
+    var crossed = n % CYCLE === CYCLE - 1;
+    var from = toRight ? L + 14 : R - 14, to = toRight ? R - 14 : L + 14;
+    // receiving paddle looks in the wrong place on a crossed ball
+    var recvY = crossed ? base - hgt * 0.38 * Math.min(1, f * 2) : base;
+    paddle(L, toRight ? base : recvY, yel);
+    paddle(R, toRight ? recvY : base, blu);
+    // trail + ball
+    var pts = [];
+    for (var j = 0; j < 7; j++) {
+      var ff = f - j * 0.035; if (ff < 0) break;
+      var bx, by;
+      if (crossed && ff > 0.82) {
+        var g = (ff - 0.82) / 0.18;
+        bx = from + (to - from) * (0.82 + g * 0.16);
+        by = base - Math.sin(Math.PI * 0.82) * arc + g * g * hgt * 0.9;
+      } else {
+        bx = from + (to - from) * ff;
+        by = base - Math.sin(Math.PI * ff) * arc;
+      }
+      pts.push([bx, by]);
+    }
+    var ballCol = crossed && f > 0.6 ? red : css("--ink");
+    pts.forEach(function (p, j) {
+      ctx.globalAlpha = j === 0 ? 1 : 0.28 - j * 0.03;
+      ctx.fillStyle = ballCol;
+      ctx.beginPath(); ctx.arc(p[0], p[1], j === 0 ? 6 : 4, 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

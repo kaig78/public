@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>World on the Brink by Dmitri Alperovitch – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Cinzel:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief, same frame as the other summaries.
+   Palette from the cover: warm off-white paper, black classical capitals between
+   thin gold rules, a gilded eagle above and a gilded dragon below.
+   Gold = American / allied leverage, rust = Chinese pressure and risk. */
+:root {
+  --paper: #f6f4ef;
+  --paper-2: #ebe7dc;
+  --card: #fffdf8;
+  --ink: #161412;
+  --ink-2: #4a4640;
+  --ink-3: #78736a;
+  --rule: #ddd6c6;
+
+  --gold: #93690f;
+  --gold-2: #cfa752;
+  --rust: #a3401b;
+
+  --serif-cap: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #121110;
+    --paper-2: #1c1a17;
+    --card: #1e1c19;
+    --ink: #efebe3;
+    --ink-2: #b9b2a5;
+    --ink-3: #8c867b;
+    --rule: #33302a;
+    --gold: #dcb662;
+    --gold-2: #a8853b;
+    --rust: #ec865c;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #121110;
+  --paper-2: #1c1a17;
+  --card: #1e1c19;
+  --ink: #efebe3;
+  --ink-2: #b9b2a5;
+  --ink-3: #8c867b;
+  --rule: #33302a;
+  --gold: #dcb662;
+  --gold-2: #a8853b;
+  --rust: #ec865c;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  overflow-wrap: break-word;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-gold { --c: var(--gold); }
+.c-rust { --c: var(--rust); }
+.c-ink { --c: var(--ink); }
+.c-3 { --c: var(--ink-3); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--serif-cap); font-weight: 600; font-size: clamp(24px, 3.4vw, 40px); letter-spacing: .14em; line-height: 1; text-transform: uppercase; color: var(--ink); }
+.hero h1 {
+  font-family: var(--serif-cap);
+  font-size: clamp(64px, 13vw, 160px);
+  font-weight: 600;
+  line-height: .9;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 14px 0 0 -.03em;
+  padding-block: 14px 10px;
+  border-block: 1px solid var(--gold-2);
+  box-shadow: 0 -5px 0 -4px var(--gold-2), 0 5px 0 -4px var(--gold-2);
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 42ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1116;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 30, 10, .35), 0 8px 18px -10px rgba(40, 30, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 120px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--gold);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-family: var(--serif-cap);
+  font-size: clamp(40px, 6.4vw, 88px);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: .98;
+  letter-spacing: .04em;
+  color: var(--ink);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; color: var(--gold); }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--serif-cap);
+  font-weight: 600;
+  font-size: 84px;
+  line-height: .8;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--gold);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--rust);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-gd { fill: var(--gold); }
+.fig svg text.t-rs { fill: var(--rust); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.sm { font-size: 11px; }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-gd { stroke: var(--gold); fill: none; }
+.s-gd2 { stroke: var(--gold-2); fill: none; }
+.s-rs { stroke: var(--rust); fill: none; }
+.f-gd { fill: var(--gold); }
+.f-gd2 { fill: var(--gold-2); }
+.f-rs { fill: var(--rust); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-gdt { fill: color-mix(in srgb, var(--gold) 14%, var(--card)); }
+.f-rst { fill: color-mix(in srgb, var(--rust) 13%, var(--card)); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; min-width: 2px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--gold); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-family: var(--serif-cap); font-size: 26px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--gold); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* grid of named cards */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds.k5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.kinds.k4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--gold); }
+.kinds .label.rs { color: var(--rust); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--gold); }
+.compare .bad h5 { color: var(--rust); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-family: var(--serif-cap); font-size: 24px; font-weight: 600; text-transform: uppercase; color: var(--ink); border-top: 2px solid var(--gold); padding-top: 12px; letter-spacing: .04em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .kinds.k5, .kinds.k4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kinds.k5 > div:last-child { grid-column: 1 / -1; }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 64px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats, .kinds, .kinds.k5, .kinds.k4, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+  .hero h1 { letter-spacing: .03em; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Dmitri Alperovitch with Garrett M. Graff · PublicAffairs, 2024</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#part1">Cold War II</a>
+    <a href="#part2">Game plan</a>
+    <a href="#conclusion">Conclusion</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">World on the</p>
+    <h1>Brink</h1>
+    <p class="sub">How America can beat China in the race for the twenty-first century</p>
+    <p class="dek">A cybersecurity founder who learned to hunt Chinese and Russian hackers argues that the United States is already in a second cold war, that the flash point is Taiwan, and that America can win if it buys time and stops spreading itself thin.</p>
+    <div class="byline label">
+      <span>9 chapters</span><span>2 parts</span><span>1 imagined invasion</span><span>~120,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of World on the Brink by Dmitri Alperovitch with Garrett M. Graff: on an off-white background a gilded eagle swoops down from the top and a gilded dragon coils along the bottom, with the title in black classical capitals set between thin gold rules">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="strait"></canvas>
+  <div class="ends label"><span>Today is not the day</span><span>Tomorrow could be</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Prologue &amp; introduction</span>
+    <h2>Every morning, Xi should decide not today</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>The book opens with an invented future. On 13 November 2028, days after a US election, with Washington run by caretakers, Xi Jinping issues Taiwan an ultimatum. When Taipei refuses, helicopters fly from amphibious ships toward the Port of Taipei and the airports, hovercraft race up the Tamsui River toward the government district, and the island's internet goes dark. The scenario ends with an American president being woken to decide whether to fight.</p>
+      <p>Alperovitch came to this subject through hackers. In 2009, at McAfee, he led the investigation into Operation Aurora, the Chinese break-in at Google, and later exposed Night Dragon and Shady RAT. He concluded that the real question was <em>who</em> was attacking and why, not which malware. That idea shaped CrowdStrike, which he co-founded, and this book: America, he argues, has a China problem, not a cyber problem.</p>
+      <p>His thesis has two halves. China and Russia are weaker than they look, and the United States is stronger. But the next stretch, perhaps as short as thirty years before China's demographic decline sets in, is the most dangerous since the start of the first Cold War. The goal is to deter an invasion of Taiwan day by day until the window closes, and to keep America's lead while doing it. He sums this up in a Latin motto, <em>Sinae deterrendae sunt</em>: China must be deterred.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Why the author calls it a brink</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-rust"><span class="big num">60%</span><p>For over a century no US rival reached 60% of US GDP. China passed that mark in 2014 (Rush Doshi's figure).</p></div>
+        <div class="stat c-gold"><span class="big num">4×</span><p>Times President Biden publicly said the US would defend Taiwan. There is no treaty that obliges it.</p></div>
+        <div class="stat"><span class="big num">~30 yrs</span><p>How long China's window as a superpower may last before its demographic and economic problems catch up.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">The cyber lesson he carries over</span>
+        <p>Spam, he notes, went from about 2% of email to 90% in roughly a year because a thinking opponent adapted to every defence. Geopolitics works the same way: you study the adversary's motives before you study its tools.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I</span>
+      <h3>Cold War II</h3>
+      <p class="q">How we got here, and who really holds the cards</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>The Road to the Brink</b>A century of hope and betrayal</a></li>
+        <li><span>02</span><a href="#ch2"><b>Distracted and Disoriented</b>America never named the war</a></li>
+        <li><span>03</span><a href="#ch3"><b>The Taiwan Dilemma</b>Why Xi may do what Putin did</a></li>
+        <li><span>04</span><a href="#ch4"><b>They Are Weaker</b>Russia's and China's real limits</a></li>
+        <li><span>05</span><a href="#ch5"><b>We Are Stronger</b>The Five I's</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II</span>
+      <h3>Game plan</h3>
+      <p class="q">Four steps to win without a war</p>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Enable Innovation</b>Chips, minerals, people</a></li>
+        <li><span>07</span><a href="#ch7"><b>Defend Innovation</b>Munitions, cyber, trade</a></li>
+        <li><span>08</span><a href="#ch8"><b>Say Yes to Our Friends</b>Tough love and an economic NATO</a></li>
+        <li><span>09</span><a href="#ch9"><b>Say No to Distractions</b>Russia, Iran, North Korea</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Endgame</span>
+      <h3>Conclusion</h3>
+      <p class="q">What winning would look like</p>
+      <ol>
+        <li><span>→</span><a href="#conclusion"><b>Taiwan is the new Berlin</b>Stall until stability arrives</a></li>
+        <li><span>→</span><a href="#toolkit"><b>The toolkit</b>The argument in fifteen moves</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="part1">
+  <span class="label partno">Part I · Chapters 1–5</span>
+  <h2>Cold War II, a new era</h2>
+  <p class="lede">The first half explains why the US was slow to notice the contest, why Taiwan sits at its centre, and why, on a sober count, America's position is stronger than headlines suggest.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">The road to the brink</span></div>
+  <div class="body">
+    <div>
+      <h3>One salami slice at a time</h3>
+      <p class="idea">China rose inside an American-built order while taking territory in steps too small to fight over.</p>
+    </div>
+    <ul class="points">
+      <li><strong>May 2014 as a starting gun.</strong> In one month the Justice Department indicted five officers of PLA Unit 61398 for economic hacking, a Chinese oil rig moved into waters Vietnam claims, and dredgers were caught building land on Johnson Reef. Alperovitch suggests historians may date Cold War II from here.</li>
+      <li><strong>The relationship that never settles.</strong> George Marshall brokered a ceasefire between Mao and Chiang in 1946, and it collapsed. The author traces US policy through four presidents: FDR treated China as a great power, Truman "lost" it, Nixon reopened it, and Carter recognised Beijing, ended the defence treaty with Taiwan and left behind the deliberately vague Taiwan Relations Act. A fifth, Clinton, changed China's view of America by letting it into the WTO.</li>
+      <li><strong>Lessons China drew.</strong> Watching the Gulf War, and then two US carrier groups sent near Taiwan in 1996, Beijing realised it could not match America at sea, so it started a crash programme of missiles and ships designed to keep the US Navy away. The accidental 1999 bombing of its Belgrade embassy was widely read in China as deliberate.</li>
+      <li><strong>Prosperity under US protection.</strong> In a generation China went from 90% of people below the $2-a-day poverty line to 3%, on trade routes the US Navy kept open.</li>
+      <li><strong>The reef template.</strong> At Mischief Reef, deep inside the Philippines' economic zone, China followed a sequence it later repeated elsewhere: markers, then concrete, then temporary shelters, then a base. A 2016 tribunal in The Hague rejected China's claims. Beijing ignored the ruling.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Salami tactics: each slice too thin to fight over</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 260" role="img" aria-label="Staircase diagram of Mischief Reef. On the left a dashed column shows the size of a single grab that would provoke a fight. Four steps then rise from left to right: February 1995 flag and sheds on stilts; November 1998 concrete buildings and a 300-metre pier; 2014 dredging adds more than 1,000 acres; 2016 an 8,000-foot runway and air defences. Each new slice, shown in dark gold, is smaller than the dashed grab, yet the finished base ends up far larger.">
+          <line x1="20" y1="200" x2="590" y2="200" class="s-2" stroke-width="1.2"/>
+          <rect x="22" y="140" width="44" height="60" class="s-rs" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+          <text x="22" y="120" class="t-rs sm">one big</text><text x="22" y="133" class="t-rs sm">grab</text>
+          <text x="22" y="218" class="t-rs sm">would be</text><text x="22" y="232" class="t-rs sm">fought</text>
+          <rect x="85"  y="176" width="118" height="24" class="f-gd"/>
+          <rect x="208" y="170" width="118" height="30" class="f-gdt"/><rect x="208" y="146" width="118" height="24" class="f-gd"/>
+          <rect x="331" y="146" width="118" height="54" class="f-gdt"/><rect x="331" y="110" width="118" height="36" class="f-gd"/>
+          <rect x="454" y="110" width="118" height="90" class="f-gdt"/><rect x="454" y="66" width="118" height="44" class="f-gd"/>
+          <text x="89"  y="170" class="t-ink sm">Feb 1995</text>
+          <text x="212" y="140" class="t-ink sm">Nov 1998</text>
+          <text x="335" y="104" class="t-ink sm">2014</text>
+          <text x="458" y="60"  class="t-ink sm">2016</text>
+          <text x="89"  y="218" class="sm">flag; sheds</text><text x="89" y="232" class="sm">on stilts</text>
+          <text x="212" y="218" class="sm">concrete,</text><text x="212" y="232" class="sm">300 m pier</text>
+          <text x="335" y="218" class="sm">dredged:</text><text x="335" y="232" class="sm">1,000+ acres</text>
+          <text x="458" y="218" class="sm">8,000 ft runway,</text><text x="458" y="232" class="sm">air defences</text>
+          <text x="20" y="22" class="hd">Mischief Reef, Spratly Islands</text>
+          <text x="20" y="254" class="t-3 sm">Template: buoys → concrete markers → temporary facilities → permanent base</text>
+        </svg>
+      </div>
+      <p class="cap">Dates and features are from the book; step heights are illustrative. Each new slice (dark gold) stays smaller than a grab that would be fought (dashed), yet the base keeps growing. Thomas Schelling compared salami tactics to a child edging into water after being told to stay out. Each step looks too small to resist, but together they add up to a new reality, which is what happened in the South China Sea.</p>
+      <p class="src">Source: ch. 1, drawing on Gregory Poling and Thomas Schelling</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Distracted and disoriented</span></div>
+  <div class="body">
+    <div>
+      <h3>America keeps missing the start of cold wars</h3>
+      <p class="idea">The other side declared the rivalry long ago; Washington still talks about "strategic competition".</p>
+    </div>
+    <ul class="points">
+      <li><strong>Incoherence over Ukraine.</strong> In late 2021 the author put it to Jake Sullivan that the US would not send troops to defend Ukraine yet still backed its eventual NATO membership, which would oblige it to do exactly that. To him this showed a country that no longer knew what it wanted.</li>
+      <li><strong>A cheap success.</strong> For under $100 billion, roughly seven weeks of Pentagon spending, the West helped Ukraine wreck Russia's offensive army without US casualties. But "as long as it takes" still has no defined end.</li>
+      <li><strong>Cold War I began in 1920, not 1947.</strong> Wilson sent about 13,000 troops into Russia; about 400 died for nothing lasting. The Bolsheviks then treated the West as an enemy for two decades, stealing its industrial secrets while Western firms built their factories. The author sees the parallel with China.</li>
+      <li><strong>China's turn.</strong> Tiananmen, the Gulf War and the Soviet collapse convinced Beijing that America was its main threat. It hid its strength, bought cheap "assassin's mace" weapons such as diesel submarines with anti-ship missiles, and secured WTO entry. Its economy went from 10% of America's to 70% in two decades.</li>
+      <li><strong>A new kind of cold war.</strong> Xi now speaks of a "great struggle". Alperovitch prefers the label Cold War II over "Cold War 2.0": a distinct contest, not a sequel.</li>
+    </ul>
+
+    <div class="compare">
+      <div class="good"><h5>Cold War I (US vs USSR)</h5><ul><li>Little trade between the blocs</li><li>Moscow exported revolution and ideology</li><li>Each side expected the other's system to collapse</li><li>Rigid blocs: West, East, non-aligned</li><li>America had a clear plan: containment</li></ul></div>
+      <div class="bad"><h5>Cold War II (US vs China)</h5><ul><li>Deeply intertwined economies</li><li>Beijing seeks influence and silence, not regime change</li><li>Both assume the other is here to stay</li><li>Fluid coalitions; even allies hedge</li><li>"Strategic competition" with no stated end goal</li></ul></div>
+    </div>
+
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Russia is a hurricane. China is climate change."</blockquote>
+      <span class="label">Rob Joyce, NSA, quoted by the author on why Ukraine is a distraction</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">The Taiwan dilemma</span></div>
+  <div class="body">
+    <div>
+      <h3>Why Xi may repeat Putin's gamble</h3>
+      <p class="idea">An ageing, isolated leader, a modernised army and a prize slipping away: the conditions that preceded the invasion of Ukraine.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Reading Putin.</strong> Alperovitch, who grew up in Moscow, sees Putin as the bully from a Soviet apartment courtyard and a gambler whose risks (Chechnya, Georgia, Crimea, Syria) had always paid off. By 2021 he was nearly seventy, isolated by Covid and surrounded by yes-men, and watched Ukraine move west. That is why the author predicted the invasion in public in December 2021.</li>
+      <li><strong>The same checklist for Xi.</strong> Xi has also turned seventy, scrapped term limits in 2018, holds the state, party and military top jobs, and has said Taiwan cannot be left to the next generation. Meanwhile Taiwan is moving away: in a 2023 poll only about 1% wanted unification as soon as possible. A Pentagon official told the author China's takeaway from Ukraine is that America won't fight a nuclear power.</li>
+      <li><strong>Five reasons Taiwan matters to Xi:</strong> <em>history</em> (lost during the "century of humiliation"), <em>destiny</em> (unfinished civil war), <em>security</em> (fear of US encirclement), <em>geography</em> (the gateway to the Pacific) and <em>ego</em> (achieving what Mao couldn't). Deng's advice to hide strength and bide time has, in the author's paraphrase, become "show off your strength, waste no time".</li>
+      <li><strong>History is on Taiwan's side.</strong> The author argues that the Qing loosely held only the western third for two centuries and faced 159 sizeable revolts. Mao himself told Edgar Snow in 1936 that Formosa could have independence. No government has ever ruled the mainland and Taiwan at the same time.</li>
+      <li><strong>A Munich war game.</strong> When Taiwan "fell" in a 2023 simulation he ran, players representing US allies said they would now treat China as Asia's leading power. US credibility rests on Taiwan.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Why the island is a cork in China's bottle</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 250" role="img" aria-label="Cross-section from the Chinese coast to the open Pacific. The Taiwan Strait averages about 330 feet deep, so submarines there are easy to track. Taiwan sits on the edge of the continental shelf; east of it the seabed drops to about 13,000 feet, where submarines can hide. A dashed arc shows Chinese submarines having to slip out through gaps in the First Island Chain, held by US partners. Not to scale.">
+          <line x1="20" y1="70" x2="590" y2="70" class="s-gd2" stroke-width="1.4"/>
+          <path d="M20 70 L20 40 L70 46 L96 70 Z" class="f-rst s-rs" stroke-width="1"/>
+          <text x="24" y="34" class="t-rs sm">China</text>
+          <path d="M96 70 L120 100 L330 100 L345 70 L352 44 L392 38 L410 70 L430 110 L470 200 L590 214 L590 236 L20 236 L20 70 Z" class="f-paper2"/>
+          <path d="M96 70 L120 100 L330 100" class="s-3" stroke-width="1.2"/>
+          <path d="M410 70 L430 110 L470 200 L590 214" class="s-3" stroke-width="1.2"/>
+          <path d="M330 100 L345 70 L352 44 L392 38 L410 70 Z" class="f-gd" opacity=".85"/>
+          <text x="436" y="88" class="t-gd sm">Taiwan</text>
+          <ellipse cx="160" cy="86" rx="15" ry="4.5" class="f-rs"/>
+          <text x="200" y="91" class="sm t-ink">~330 ft: easy to track</text>
+          <text x="455" y="150" class="sm t-ink">13,000 ft: subs hide</text>
+          <path d="M165 78 C 220 10, 470 10, 520 132" class="s-rs" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <path d="M512 124 L521 134 L524 121" class="s-rs" stroke-width="1.4"/>
+          <text x="200" y="22" class="sm t-rs">the way out: gaps in the island chain</text>
+          <text x="20" y="248" class="t-3 sm">First Island Chain: Japan · Taiwan · Philippines. Not to scale.</text>
+        </svg>
+      </div>
+      <p class="cap">Depths are from the book; the profile is schematic. Holding Taiwan would give China's submarines and navy open access to the Pacific and ease its "Malacca dilemma": about 70% of its oil imports pass through a strait that narrows to 1.7 miles and is patrolled by the US Navy. MacArthur called the island an unsinkable aircraft carrier.</p>
+      <p class="src">Source: ch. 3</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>How people in Taiwan identify</h4>
+        <div class="bars">
+          <div class="bar c-gold"><div class="row"><span>Taiwanese</span><b>60%+</b></div><div class="track"><div class="fill" style="width:60%"></div></div></div>
+          <div class="bar c-3"><div class="row"><span>Both Taiwanese and Chinese</span><b>~33%</b></div><div class="track"><div class="fill" style="width:33%"></div></div></div>
+          <div class="bar c-rust"><div class="row"><span>Chinese</span><b>~3%</b></div><div class="track"><div class="fill" style="width:3%"></div></div></div>
+        </div>
+        <p class="cap">Separately, about 1% want unification as soon as possible and 6% at some later date. China's crackdown in Hong Kong made "one country, two systems" hard for anyone in Taiwan to believe.</p>
+      </div>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">"We control all the choke points."</blockquote>
+        <span class="label">Morris Chang, TSMC founder, aged 92, on China's dependence on Western chip technology</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">They are weaker</span></div>
+  <div class="body">
+    <div>
+      <h3>Two rivals running out of road</h3>
+      <p class="idea">Russia has crippled itself, and the four things that powered China's rise are all running down.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Not ten feet tall.</strong> In the 2016 DNC hack, CrowdStrike found two Russian services bumbling through the same network unaware of each other, and their leak sites flopped until WikiLeaks stepped in. Adversaries, the author says, usually get too much credit.</li>
+      <li><strong>Russia as a gangster state.</strong> Alperovitch sees Putin as shaped less by the KGB than by 1990s "Bandit Petersburg" racketeering. The war has cost Russia roughly 30% of its military power and over 60% of its 3,500 operational tanks. At the 2023 Victory Day parade a single T-34 crossed Red Square.</li>
+      <li><strong>Russia's demographic decline.</strong> Moscow ruled almost 300 million people in 1991 and now has 146 million. By 2100 the population may be 67 million. Stopping the decline would take over a million immigrants a year for eighty years. The author expects it to end up closer to a nuclear-armed North Korea than to a great power.</li>
+      <li><strong>China's four engines are stalling:</strong> workers, capital, resources and willing trading partners. Fertility is about 1.3 children per woman, down from 3.6 when the one-child policy began. Real estate is about 30% of GDP (US housing never exceeded 13%), local government debt is around $9 trillion, and income per person is about a sixth of America's ($12,500 against about $70,000).</li>
+      <li><strong>Few friends.</strong> China grows only 65% of its own food. The Belt and Road reached 147 countries but left cracked dams and half-built railways; heads of state at its forum fell from 37 in 2019 to 23 in 2023. "Wolf warrior" diplomacy has made China unpopular almost everywhere.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Who will support China's elderly</h4>
+        <div class="bars">
+          <div class="bar c-gold"><div class="row"><span>2000s: per 100 working-age adults</span><b>~10 elderly</b></div><div class="track"><div class="fill" style="width:8.3%"></div></div></div>
+          <div class="bar c-3"><div class="row"><span>Today</span><b>20 elderly</b></div><div class="track"><div class="fill" style="width:16.7%"></div></div></div>
+          <div class="bar c-rust"><div class="row"><span>2100 (World Economic Forum)</span><b>up to 120</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">The working-age population began shrinking in 2011. By 2050 China will have about 100 million fewer people, and young Chinese will have a fifth as many cousins as today. The author asks whether parents of only children will support wars.</p>
+        <p class="src">Source: ch. 4; 2000s value from "ten workers per elderly person"</p>
+      </div>
+      <div class="fig">
+        <h4>Russia's shrinking base</h4>
+        <div class="bars">
+          <div class="bar c-3"><div class="row"><span>Soviet Union, 1991</span><b>~300m</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+          <div class="bar c-gold"><div class="row"><span>United States, 1991</span><b>250m</b></div><div class="track"><div class="fill" style="width:83%"></div></div></div>
+          <div class="bar c-rust"><div class="row"><span>Russia, 2023</span><b>~146m</b></div><div class="track"><div class="fill" style="width:48.7%"></div></div></div>
+          <div class="bar c-rust"><div class="row"><span>Russia, possible by 2100</span><b>67m</b></div><div class="track"><div class="fill" style="width:22.3%"></div></div></div>
+        </div>
+        <p class="cap">Russia's foreign-born population is about 5 million (3%). The US has about 40 million immigrants (14%).</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">We are stronger</span></div>
+  <div class="body">
+    <div>
+      <h3>The Five I's</h3>
+      <p class="idea">America's advantages reinforce each other, and its rivals can't copy them.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A partnership closer than any alliance.</strong> On Christmas Eve 2003, fearing a nuclear attack on Washington, NSA chief Michael Hayden told Britain's GCHQ that if Washington went down, GCHQ would take over. The Five Eyes intelligence-sharing partnership is the author's example of an alliance network no rival has.</li>
+      <li><strong>An immigrant's evidence.</strong> Alperovitch left Moscow in 1994 with three suitcases. By forty he had taken a company public. In America, 13% of billionaires are immigrants; Xi sent his only daughter to Harvard; about 300,000 Chinese students come to the US each year.</li>
+      <li><strong>Rule of law vs rule by law.</strong> Khodorkovsky lost Yukos and Jack Ma lost Ant Group's record IPO after crossing the ruler. In the US you can raise money on an idea (CrowdStrike raised about $1.1 billion) and sell to one huge market.</li>
+      <li><strong>The dollar isn't going anywhere.</strong> Dollar reserves look as if they fell, but the 2000 peak was an anomaly caused by the euro's arrival. The renminbi is not freely convertible and nobody trusts China's currency controls.</li>
+      <li><strong>Influence and ideas.</strong> US defence spending equals the next ten militaries combined, mostly allies'. China's last war was against Vietnam in 1979. And a system built for argument adapts better than one ruler.</li>
+    </ul>
+
+    <div class="kinds k5">
+      <div><span class="label">I · 1</span><b>Immigration</b><span>The world's talent still wants to come here and become American.</span></div>
+      <div><span class="label">I · 2</span><b>Innovation</b><span>Easy to start, hire, fail and protect inventions.</span></div>
+      <div><span class="label">I · 3</span><b>Investment</b><span>Deep capital, about ten thousand banks, one vast market.</span></div>
+      <div><span class="label">I · 4</span><b>Influence</b><span>Alliances, the dollar and a military that can reach anywhere.</span></div>
+      <div><span class="label">I · 5</span><b>Ideas</b><span>A republic designed for peaceful dissent, which keeps it adaptable.</span></div>
+    </div>
+
+    <div class="fig">
+      <h4>Share of world currency reserves held in dollars</h4>
+      <div class="bars">
+        <div class="bar c-gold"><div class="row"><span>US dollar, 1990</span><b>56%</b></div><div class="track"><div class="fill" style="width:56%"></div></div></div>
+        <div class="bar c-gold"><div class="row"><span>US dollar, 2000 (pre-euro peak)</span><b>72%</b></div><div class="track"><div class="fill" style="width:72%"></div></div></div>
+        <div class="bar c-gold"><div class="row"><span>US dollar, today</span><b>58%</b></div><div class="track"><div class="fill" style="width:58%"></div></div></div>
+        <div class="bar c-rust"><div class="row"><span>Chinese renminbi, today</span><b>&lt;3%</b></div><div class="track"><div class="fill" style="width:3%"></div></div></div>
+      </div>
+      <p class="cap">Measured over three decades the dollar's share has barely moved. Gold, Bitcoin and other BRICS currencies all have problems that prevent them from replacing it.</p>
+      <p class="src">Source: ch. 5</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="part2">
+  <span class="label partno">Part II · Chapters 6–9</span>
+  <h2>A game plan for victory</h2>
+  <p class="lede">Four steps: enable American innovation, defend it, make it easy for allies to side with the US, and refuse distractions. The common thread is leverage: increase China's dependence on the West and reduce the West's dependence on China.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Enable innovation</span></div>
+  <div class="body">
+    <div>
+      <h3>Everything begins with the chips</h3>
+      <p class="idea">Control the machines that make chips, secure the minerals, and attract the best people.</p>
+    </div>
+    <ul class="points">
+      <li><strong>How fabrication left America.</strong> US fabs made 37% of the world's chips in 1990 and 13% by 2010; today the US share is 12%. Morris Chang's TSMC built a business making chips designed by others. Taiwan now produces nearly 40% of the world's new computing power each year.</li>
+      <li><strong>Old chips still matter.</strong> The author proposes calling chips above 20 nm "foundational" rather than "mature" or "legacy". An iPhone has a few advanced chips and dozens of foundational ones, and he compares the latter to aluminium in an aircraft. China, blocked from the cutting edge, is subsidising foundational chips and selling them 20 to over 30% below competitors.</li>
+      <li><strong>Where to squeeze.</strong> Only the US, the Netherlands and Japan make the tools for a modern fab. Export controls from 7 October 2022 and 17 October 2023 cut off advanced AI chips and toolmaking, and barred US citizens and green-card holders from working in China's advanced chip industry. He wants controls on all chipmaking equipment, but <em>not</em> on most chips: the aim is to keep China dependent on imports, not to cut it off.</li>
+      <li><strong>Four steps against a Chinese "chip breakout":</strong> allied controls on equipment; moving production away from Taiwan (the CHIPS Act's $76 billion is a start); making clear that seizing Taiwan will never deliver TSMC's know-how (otherwise the "silicon shield" becomes a "silicon honeypot"); and threatening a total chip embargo if China invades.</li>
+      <li><strong>Minerals.</strong> China mines about 65% of rare earths and processes about 85%, and 96% of exported lithium concentrate goes there for processing. After GM sold Magnequench, maker of smart-bomb magnets, to a Chinese-backed group in 1995, production moved to China. The author wants permitting reform, duties on subsidised imports, clean refineries, recycling and a club of mineral allies.</li>
+      <li><strong>People.</strong> Immigrants founded 44 of 87 US unicorns in 2016, yet H-1B visas are capped at 85,000 a year. He would give vetted science graduates a green card, then invest in AI, biotech, space and green tech, and guard AI models against theft.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Six links in the chain, and the one China can't forge</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 300" role="img" aria-label="Flow diagram of the six groups of companies every electronic device needs, in two rows. Row one: design software, where US firms dominate but software is easy to steal; chemicals and materials, where Japan has a near-monopoly that China could eventually build; and manufacturing equipment, made only in the US, Netherlands and Japan, which the author calls the decisive choke point. Row two: chip design, led by the US but spreading; fabrication by TSMC, Samsung and Intel; and packaging and assembly, much of it in China and Southeast Asia. Missing any one of the six stops production.">
+          <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="f-3"/></marker></defs>
+          <g id="chain"></g>
+          <text x="20" y="292" class="t-3 sm">Choke-point strength is my reading of the chapter's assessment, not a measured score.</text>
+        </svg>
+      </div>
+      <p class="cap">The author's point is that you need all six: having five gets you no closer to a working phone or missile than having one. Software is easy to copy and chemicals can be learned, but extreme-ultraviolet machines rely on Western lasers, German mirrors and constant on-site servicing. He considers copying that whole chain harder than landing a person on Mars.</p>
+      <p class="src">Source: ch. 6</p>
+    </div>
+
+    <div class="fig">
+      <h4>Why a chip embargo would hurt China far more than Russia</h4>
+      <div class="bars">
+        <div class="bar c-rust"><div class="row"><span>China's chip imports, 2022</span><b>$417bn</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-3"><div class="row"><span>China's crude-oil imports, 2022</span><b>$360bn</b></div><div class="track"><div class="fill" style="width:86.3%"></div></div></div>
+        <div class="bar c-gold"><div class="row"><span>Russia's chip imports, 2021</span><b>$0.5bn</b></div><div class="track"><div class="fill" style="width:.12%"></div></div></div>
+      </div>
+      <p class="cap">Russia got around Western bans by buying black-market chips through China. Nobody can smuggle $417 billion of chips. From 2014 to 2020 China's domestic share of its own chip needs only moved from 15.1% to 15.9%.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Defend innovation</span></div>
+  <div class="body">
+    <div>
+      <h3>Too expensive, and too few</h3>
+      <p class="idea">The US has the world's largest defence budget but can't produce enough munitions for a long war, and it hasn't made China pay for theft.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The Javelin math.</strong> When Biden visited the Troy, Alabama, Javelin plant in 2022, the roughly 7,000 Javelins sent to Ukraine amounted to a quarter of US stocks and over three years of production. In its first year of war Ukraine fired about 7,700 shells a day, while US plants produced about 14,000 a month.</li>
+      <li><strong>Hooked on exquisite weapons.</strong> The F-35 may cost nearly $2 trillion over its life, and planned F-22 purchases fell from 750 to 187. Meanwhile the drone both sides in Ukraine prefer is China's cheap DJI quadcopter.</li>
+      <li><strong>"The Last Supper."</strong> At a 1993 Pentagon dinner, defence executives were told to consolidate. Fifty-one aerospace firms became five, and defence-industry jobs fell from 3 million in 1985 to about 1.1 million in 2021. Today two firms make missile rocket motors and one makes most cruise-missile engines.</li>
+      <li><strong>Taiwan can't be resupplied like Ukraine.</strong> CSIS estimates a war would use 5,000 missiles in three weeks. Taiwan is waiting on a $19 billion backlog, including Javelins and Stingers ordered in December 2015. The author's priorities: munitions stockpiled on the island, more attack submarines, hardened bases in Japan and Guam, and forces trained to fight without GPS.</li>
+      <li><strong>Make theft costly.</strong> In his account, Chinese intelligence stole parts designs for the C919 airliner from Western suppliers. His remedy is to sanction the beneficiaries, even entire industries, and to set clear cyber norms. In 2016 the US indicted the Russian team that leaked DNC emails but not the one that only spied, because the problem was releasing the material, not taking it.</li>
+      <li><strong>Trade tools.</strong> In the author's view, admitting China to the WTO was the biggest mistake, because its rules assume market economies. He recommends US tariff powers (Sections 301, 201 and 232), an "IPEF+" bloc without China, and reciprocity: with US platforms banned in China, TikTok should not reach about 150 million Americans.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Artillery shells per month</h4>
+        <div class="bars">
+          <div class="bar c-3"><div class="row"><span>US production, early in the war</span><b>~14,000</b></div><div class="track"><div class="fill" style="width:5.6%"></div></div></div>
+          <div class="bar c-gold"><div class="row"><span>Scranton plant expansion target</span><b>70,000</b></div><div class="track"><div class="fill" style="width:28%"></div></div></div>
+          <div class="bar c-rust"><div class="row"><span>What Ukraine told the EU it needs</span><b>250,000</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">Every three weeks Ukraine used as much ammunition as the US normally uses in a year. Orders take 13 to 18 months to start arriving.</p>
+      </div>
+      <div class="fig">
+        <h4>One hypersonic missile, or 43 Tomahawks</h4>
+        <svg viewBox="0 0 300 150" role="img" aria-label="One large rust dot, representing a hypersonic Conventional Prompt Strike missile at over 56 million dollars, beside 43 small gold dots, the number of 1.3-million-dollar Tomahawk cruise missiles the same money buys.">
+          <circle cx="40" cy="62" r="26" class="f-rs"/>
+          <text x="40" y="112" text-anchor="middle" class="sm t-rs">1 × $56m+</text>
+          <g id="toms"></g>
+          <text x="96" y="140" class="sm t-gd">43 × $1.3m</text>
+        </svg>
+        <p class="cap">The navy plans to buy 64 hypersonic rounds. Enough cheap missiles can overwhelm any air defence, and the US already has over 4,000 Tomahawks.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Say yes to our friends</span></div>
+  <div class="body">
+    <div>
+      <h3>Make it safe to stand with America</h3>
+      <p class="idea">China punishes allies one at a time. The US should defend them together, and ask more of them in return.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Who pays for helping.</strong> After Canada arrested Huawei's CFO at US request, China detained "the two Michaels", Kovrig and Spavor, for 1,019 days. Earlier, the Garratts, a Canadian couple running a café in Dandong, were seized when Canada held a Chinese spy for the FBI. The US gave Canada little more than sympathy.</li>
+      <li><strong>Economic bullying.</strong> Australia called for an inquiry into Covid's origins, and China hit about $13 billion of its exports: rock lobsters (94% of which had gone to China), barley, timber, and wine with tariffs up to 212%. Norway's salmon, Taiwan's pineapples and Lithuania's chip-containing products were also targeted. Washington did not organise any airlift of pineapples.</li>
+      <li><strong>Tough love for Taiwan.</strong> Taiwan has 23 million people and terrain made for defence, but has spent on F-16s that need intact runways, M1 tanks and a $1.5 billion home-built submarine. Until 2024 conscription lasted four months, and in 2022 45% were not at all or only slightly worried about invasion. The author wants a "porcupine": anti-ship missiles, mines, drones, trained reservists, buried munitions, and ports ready to wreck, as Ukraine wrecked the Hostomel runways.</li>
+      <li><strong>Strong medicine for Europe.</strong> Many European leaders privately accept that China will take Taiwan. He argues that they would have no choice but to cut ties with China the moment Americans and Japanese started dying in the Pacific, so deterrence is in their interest too.</li>
+      <li><strong>Get the undecided off the fence.</strong> Court India as an equal, invest in Indonesia, deepen AUKUS and the Quad, and pitch predictable rules against Beijing's whims rather than democracy against autocracy.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>TAME: an Article 5 for trade</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 270" role="img" aria-label="Loop diagram of the proposed Treaty of Allied Market Economies. Step one: China coerces one member, for example tariffs of up to 212 percent on Australian wine. Step two: the economic Article 5 is triggered. Step three splits in two: members jointly impose trade barriers, sanctions and export controls on the aggressor, and they absorb the victim's stranded exports so the punished industry is made whole. Step four: coercion costs more than it gains. A dashed arrow returns to China: it thinks twice before trying again, which is deterrence.">
+          <defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="f-3"/></marker></defs>
+          <rect x="20" y="40" width="150" height="70" rx="6" class="f-rst s-rs" stroke-width="1.4"/>
+          <text x="32" y="64" class="hd">1 · Coercion</text>
+          <text x="32" y="84" class="sm">China singles out</text>
+          <text x="32" y="99" class="sm">one member</text>
+          <rect x="225" y="40" width="150" height="70" rx="6" class="f-card s-ink" stroke-width="1.4"/>
+          <text x="237" y="64" class="hd">2 · Trigger</text>
+          <text x="237" y="84" class="sm">attack on one =</text>
+          <text x="237" y="99" class="sm">attack on all</text>
+          <rect x="430" y="18" width="150" height="62" rx="6" class="f-gdt s-gd" stroke-width="1.4"/>
+          <text x="442" y="40" class="hd">3a · Punish</text>
+          <text x="442" y="58" class="sm">tariffs, sanctions</text>
+          <text x="442" y="72" class="sm">and export controls</text>
+          <rect x="430" y="92" width="150" height="62" rx="6" class="f-gdt s-gd" stroke-width="1.4"/>
+          <text x="442" y="114" class="hd">3b · Repair</text>
+          <text x="442" y="132" class="sm">allies buy the wine,</text>
+          <text x="442" y="146" class="sm">lobster, barley</text>
+          <rect x="225" y="180" width="150" height="62" rx="6" class="f-card s-gd" stroke-width="1.4"/>
+          <text x="237" y="204" class="hd">4 · Coercion fails</text>
+          <text x="237" y="222" class="sm">costs more than</text>
+          <text x="237" y="236" class="sm">it gains</text>
+          <path d="M170 75 H222" class="s-3" stroke-width="1.4" marker-end="url(#ar2)"/>
+          <path d="M375 70 L427 52" class="s-3" stroke-width="1.4" marker-end="url(#ar2)"/>
+          <path d="M375 82 L427 118" class="s-3" stroke-width="1.4" marker-end="url(#ar2)"/>
+          <path d="M505 154 C 505 200, 430 211, 378 211" class="s-3" stroke-width="1.4" marker-end="url(#ar2)"/>
+          <path d="M225 211 C 120 211, 95 160, 95 113" class="s-gd" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ar2)"/>
+          <text x="112" y="150" class="sm t-gd">deterrence:</text>
+          <text x="112" y="164" class="sm t-gd">China thinks twice</text>
+          <text x="20" y="264" class="t-3 sm">Treaty of Allied Market Economies, as proposed in ch. 8</text>
+        </svg>
+      </div>
+      <p class="cap">Australia's coal shows step 3b can work: after China's ban, the coal went to buyers who had lost Russian and Indonesian supply, a reshuffle rather than a loss. The author sees Australia, Japan, Lithuania, Norway, Sweden, the Czech Republic, the Philippines and Taiwan as likely early members. As with NATO, the best sanctions are the ones never used, and the alliance only happens if the US commits first.</p>
+      <p class="src">Source: ch. 8</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Say no to distractions</span></div>
+  <div class="body">
+    <div>
+      <h3>One test for every other crisis</h3>
+      <p class="idea">Ask of each crisis: does this help contain China, or pull attention away from it?</p>
+    </div>
+    <ul class="points">
+      <li><strong>The pivot that never was.</strong> Obama's 2011 "Pivot to Asia" was derailed by Syria, Crimea and ISIS; Biden's by Ukraine and the Hamas attack on Israel. Top-level attention is finite and must be rationed.</li>
+      <li><strong>Russia: aim for neutrality, not friendship.</strong> Russian imperial ambitions will outlast Putin, Alperovitch argues, but becoming China's junior partner will gall Russian elites who see themselves as European. Keep arming Ukraine and its neighbours, but offer Moscow a roadmap: an end to aggression, reparations, then gradual sanctions relief. The goal is a Russia standing apart from both blocs, not a "reverse Kissinger" alliance against China.</li>
+      <li><strong>North Korea: accept the bomb, lower the temperature.</strong> North Korea has an estimated fifty warheads and will not give them up after seeing what happened to Saddam and Gaddafi. Trade economic integration for verifiable limits on proliferation, testing and the DMZ.</li>
+      <li><strong>Iran: delay and deter.</strong> Iran is one order away from a bomb. Slow it down by diplomacy, prepare to deter it, perhaps with a defence pact for Saudi Arabia, and above all stop the know-how spreading further.</li>
+      <li><strong>Let China spend its own attention.</strong> When Beijing brokered a Saudi–Iranian rapprochement in 2023, the author welcomed it, since time it spends there is time it doesn't spend on Taiwan.</li>
+    </ul>
+
+    <div class="kinds">
+      <div><span class="label rs">Russia</span><b>Contain and wait</b><span>Until Moscow decides that being China's vassal state is a worse deal than standing on its own.</span></div>
+      <div><span class="label rs">Iran</span><b>Delay the threshold</b><span>Hold off the bomb, counter its regional aggression, and prevent a regional nuclear arms race.</span></div>
+      <div><span class="label rs">North Korea</span><b>Deter and curb</b><span>Protect South Korea and Japan, and stop arms trafficking, cyber-theft and proliferation.</span></div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ CONCLUSION ============ -->
+<section id="conclusion">
+  <div class="sec-head">
+    <span class="label">Conclusion</span>
+    <h2>Taiwan is the Berlin of Cold War II</h2>
+    <p class="lede">In 1961 a US ambassador put the odds of war or a humiliating Western retreat over Berlin at close to 50–50. Then Khrushchev built a wall, and Kennedy understood that the Soviets had given up on taking the city.</p>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>The author argues that without Taiwan the US–China rivalry would be manageable: trade, cyber and human-rights disputes that are serious but unlikely to lead to war. So the job is the one Truman, Eisenhower and Kennedy did with Berlin: hold the outpost and avoid a general war until a stable arrangement emerges.</p>
+      <p>He names two worst cases. One is war between nuclear powers that reaches US territory. The other is China taking Taiwan without a fight, leaving Asia to accommodate Beijing and making later wars over other disputed territory more likely.</p>
+      <p>Victory, in his account, does not mean the collapse of the Communist Party. It means delay: buying Taiwan time to arm itself, hoping Xi's successor is more cautious, and arriving at a cold but stable relationship like the one Kennedy's successors had with Moscow. His version of "speak softly and carry a big stick" is to tone down the rhetoric and step up deterrence.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"A wall is a hell of a lot better than a war."</blockquote>
+      <span class="label">John F. Kennedy, August 1961, quoted in the conclusion</span>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:32px">
+    <h4>Unidirectional entanglement: decouple in one direction only</h4>
+    <div class="scroll-x">
+      <svg viewBox="0 0 600 230" role="img" aria-label="Before and after diagram of dependence between the West and China. Before: dependence runs both ways at similar strength, with the West relying on China for rare earths, mineral processing and foundational chips, and China relying on the West for chipmaking tools, advanced chips and finance. After the strategy: the arrow of China's dependence on the West grows thick, while the arrow of the West's dependence on China shrinks thin. The aim is leverage, not full decoupling. Arrow widths are illustrative.">
+        <text x="20" y="22" class="hd">Today</text>
+        <text x="320" y="22" class="hd">The goal</text>
+        <!-- today -->
+        <rect x="20" y="40" width="80" height="120" rx="6" class="f-gdt s-gd" stroke-width="1.2"/>
+        <text x="60" y="104" text-anchor="middle" class="t-ink">West</text>
+        <rect x="200" y="40" width="80" height="120" rx="6" class="f-rst s-rs" stroke-width="1.2"/>
+        <text x="240" y="104" text-anchor="middle" class="t-ink">China</text>
+        <path d="M200 74 H118" class="s-gd" stroke-width="7"/><path d="M104 74 L120 63 L120 85 Z" class="f-gd"/>
+        <path d="M100 126 H182" class="s-rs" stroke-width="7"/><path d="M196 126 L180 115 L180 137 Z" class="f-rs"/>
+        <!-- goal -->
+        <rect x="320" y="40" width="80" height="120" rx="6" class="f-gdt s-gd" stroke-width="1.2"/>
+        <text x="360" y="104" text-anchor="middle" class="t-ink">West</text>
+        <rect x="500" y="40" width="80" height="120" rx="6" class="f-rst s-rs" stroke-width="1.2"/>
+        <text x="540" y="104" text-anchor="middle" class="t-ink">China</text>
+        <path d="M500 76 H426" class="s-gd" stroke-width="16"/><path d="M404 76 L428 56 L428 96 Z" class="f-gd"/>
+        <path d="M400 128 H486" class="s-rs" stroke-width="2"/><path d="M496 128 L485 122 L485 134 Z" class="f-rs"/>
+        <text x="20" y="184" class="sm"><tspan class="t-gd">gold:</tspan> China relies on the West (chip tools, advanced chips, finance)</text>
+        <text x="20" y="202" class="sm"><tspan class="t-rs">rust:</tspan> the West relies on China (rare earths, processing, foundational chips)</text>
+        <text x="20" y="224" class="t-3 sm">Widths illustrative. Leverage, not full decoupling.</text>
+      </svg>
+    </div>
+    <p class="cap">The author argues that full decoupling would be unrealistic and would make China freer to ignore Western interests. Instead he wants one-way entanglement: China more dependent on Western supply chains, the West less dependent on China. He expects Beijing to try the mirror-image strategy, and thinks whoever wins that race will shape the century.</p>
+    <p class="src">Source: conclusion and ch. 6</p>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Alperovitch's prescriptions in fifteen moves. They are his argument, not settled consensus.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Read the rival</h3>
+      <div class="tk"><b>Study the who before the how</b><span>Ask about motive, fear and ego before looking at weapons or code. The problem is the adversary, not the malware.</span></div>
+      <div class="tk"><b>Believe what leaders say</b><span>Putin published his case for invading Ukraine in advance. Xi talks openly of a "great struggle" and of rejuvenation.</span></div>
+      <div class="tk"><b>Watch for closing windows</b><span>Ageing leaders, a prize slipping away and a rebuilt army together are a warning sign.</span></div>
+      <div class="tk"><b>Count the slices</b><span>Small encroachments add up. Respond before the reef has a runway.</span></div>
+      <div class="tk"><b>Don't inflate the threat</b><span>Clumsy hackers and a struggling army are not superpowers. Weigh demography and debt alongside headlines.</span></div>
+    </div>
+    <div class="col">
+      <h3>Build leverage</h3>
+      <div class="tk"><b>Control the tools, not the products</b><span>Ban chipmaking equipment while still selling most chips, so China stays dependent on the West.</span></div>
+      <div class="tk"><b>Buy volume, not only exquisite weapons</b><span>Mines, anti-ship missiles, shells and drones are what deter a crossing, and they must be pre-positioned.</span></div>
+      <div class="tk"><b>Punish the beneficiary</b><span>Sanction the companies and industries that profit from stolen intellectual property, not just the hackers.</span></div>
+      <div class="tk"><b>Recruit talent</b><span>Offer a green card to every vetted foreign science graduate of a US university.</span></div>
+      <div class="tk"><b>Insist on reciprocity</b><span>Openness should be matched. Access to the US market should depend on access to China's.</span></div>
+    </div>
+    <div class="col">
+      <h3>Hold the line</h3>
+      <div class="tk"><b>Back friends who take the hit</b><span>Treat coercion of one ally as aimed at all, and compensate the industries China punishes.</span></div>
+      <div class="tk"><b>Ask allies to do more</b><span>Taiwan must become a porcupine, and Europe must see that a war over Taiwan would hit it too.</span></div>
+      <div class="tk"><b>Run every crisis through one filter</b><span>Does it help deter China? If not, share the burden or set it aside.</span></div>
+      <div class="tk"><b>Use time as the weapon</b><span>A delay of a month, a year or a leader's term is a win. Patience won Cold War I.</span></div>
+      <div class="tk"><b>Speak softly, deter hard</b><span>Avoid gestures that provoke without deterring, and do the quiet military and economic work instead.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Dmitri Alperovitch with Garrett M. Graff, <em>World on the Brink: How America Can Beat China in the Race for the Twenty-First Century</em> (PublicAffairs, 2024). Figures are as reported in the book; arguments are the author's. The salami-tactics, strait-depth, chip-chain and leverage diagrams are schematic, with illustrative proportions. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent, text) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+
+  /* --- Ch6: six-stage chip chain --- */
+  var chain = document.getElementById("chain");
+  if (chain) {
+    var stages = [
+      { n: "1 · Design software", who: "US (Cadence et al.)", note: "easy to steal", s: 1 },
+      { n: "2 · Chemicals", who: "Japan, near-monopoly", note: "China could learn", s: 2 },
+      { n: "3 · Equipment", who: "US · NL · Japan only", note: "the real choke point", s: 3, key: true },
+      { n: "4 · Chip design", who: "US-led: Apple, NVIDIA", note: "spreading abroad", s: 1 },
+      { n: "5 · Fabrication", who: "TSMC, Samsung, Intel", note: "Taiwan concentrated", s: 2 },
+      { n: "6 · Packaging", who: "China, SE Asia", note: "China already strong", s: 0 }
+    ];
+    stages.forEach(function (st, i) {
+      var row = i < 3 ? 0 : 1;
+      var col = row ? (5 - i) : i;           /* second row runs right-to-left */
+      var x = 20 + col * 196, y = 20 + row * 132, w = 172, h = 104;
+      el("rect", { x: x, y: y, width: w, height: h, rx: 6, "class": st.key ? "f-gdt s-gd" : "f-card s-3", "stroke-width": st.key ? 2.2 : 1.2 }, chain);
+      el("text", { x: x + 12, y: y + 24, "class": "hd" }, chain, st.n);
+      el("text", { x: x + 12, y: y + 44, "class": "sm t-ink" }, chain, st.who);
+      el("text", { x: x + 12, y: y + 62, "class": "sm " + (st.key ? "t-gd" : "") }, chain, st.note);
+      for (var d = 0; d < 3; d++) {
+        el("rect", { x: x + 12 + d * 26, y: y + 76, width: 22, height: 10, rx: 2, "class": d < st.s ? "f-gd" : "f-paper2" }, chain);
+      }
+      el("text", { x: x + 96, y: y + 85, "class": "sm t-3" }, chain, "choke");
+    });
+    /* arrows */
+    el("path", { d: "M192 72 H213", "class": "s-3", "stroke-width": 1.4, "marker-end": "url(#ar)" }, chain);
+    el("path", { d: "M388 72 H409", "class": "s-3", "stroke-width": 1.4, "marker-end": "url(#ar)" }, chain);
+    el("path", { d: "M498 124 V149", "class": "s-3", "stroke-width": 1.4, "marker-end": "url(#ar)" }, chain);
+    el("path", { d: "M412 204 H391", "class": "s-3", "stroke-width": 1.4, "marker-end": "url(#ar)" }, chain);
+    el("path", { d: "M216 204 H195", "class": "s-3", "stroke-width": 1.4, "marker-end": "url(#ar)" }, chain);
+  }
+
+  /* --- Ch7: 43 Tomahawks --- */
+  var toms = document.getElementById("toms");
+  if (toms) {
+    for (var i = 0; i < 43; i++) {
+      var c = i % 11, r = Math.floor(i / 11);
+      el("circle", { cx: 102 + c * 17, cy: 30 + r * 22, r: 5.5, "class": "f-gd" }, toms);
+    }
+  }
+
+  /* --- Hero band: the strait, day after day --- */
+  var canvas = document.getElementById("strait");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, N = 9;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var t = reduce ? 0 : time * 0.0004;
+    var gold = css("--gold"), gold2 = css("--gold-2"), rust = css("--rust");
+    var gap = (hgt - 24) / (N - 1);
+    ctx.lineCap = "round";
+    for (var k = 0; k < N; k++) {
+      var base = 12 + k * gap;
+      ctx.beginPath();
+      for (var x = 0; x <= w; x += 4) {
+        var u = x / w;
+        /* swell is rough on the left and calms toward the right: stalling works */
+        var amp = (1 - u * 0.8) * 7;
+        var y = base + Math.sin(u * 18 + k * 0.9 - t * 2) * amp + Math.sin(u * 7 + k * 1.7 + t) * amp * 0.5;
+        if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = k % 2 ? gold2 : gold;
+      ctx.globalAlpha = 0.55 + 0.04 * k;
+      ctx.lineWidth = 1.3;
+      ctx.stroke();
+    }
+    /* one marker per "day" drifting right */
+    ctx.globalAlpha = 1;
+    var days = 14;
+    for (var d = 0; d < days; d++) {
+      var p = ((d / days) + (reduce ? 0 : time * 0.00002)) % 1;
+      var cx = p * w, cy = hgt / 2 + Math.sin(p * 18 - t * 2) * (1 - p * 0.8) * 6;
+      ctx.beginPath();
+      ctx.arc(cx, cy, 2.6, 0, Math.PI * 2);
+      ctx.fillStyle = p < 0.12 ? rust : gold;
+      ctx.fill();
+    }
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

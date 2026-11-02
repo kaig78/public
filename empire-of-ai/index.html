@@ -1,0 +1,1418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Empire of AI by Karen Hao – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: cool greys and black type in an oval.
+   One accent, a dry oxide red, marks what the empire takes and who pays for it. */
+:root {
+  --paper: #f3f3f2;
+  --paper-2: #e6e6e4;
+  --card: #ffffff;
+  --ink: #141414;
+  --ink-2: #474746;
+  --ink-3: #7b7b79;
+  --rule: #d4d4d1;
+  --grey: #a3a3a0;
+
+  --accent: #b23a22;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #111111;
+    --paper-2: #1b1b1b;
+    --card: #1e1e1e;
+    --ink: #ededeb;
+    --ink-2: #b4b4b1;
+    --ink-3: #888886;
+    --rule: #303030;
+    --grey: #5e5e5c;
+    --accent: #ff7a5c;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #111111;
+  --paper-2: #1b1b1b;
+  --card: #1e1e1e;
+  --ink: #ededeb;
+  --ink-2: #b4b4b1;
+  --ink-3: #888886;
+  --rule: #303030;
+  --grey: #5e5e5c;
+  --accent: #ff7a5c;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+.acc { color: var(--accent); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(64px, 12vw, 158px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .84;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero h1 span { display: block; }
+.hero h1 .of { font-weight: 400; font-stretch: 80%; font-size: .42em; letter-spacing: 0; line-height: 1.2; color: var(--ink-3); font-style: italic; font-family: var(--body); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 912;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 10, 10, .38), 0 8px 18px -10px rgba(10, 10, 10, .28);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.waveband { position: relative; margin-top: 28px; }
+.waveband canvas { display: block; width: 100%; height: 130px; }
+.waveband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+.story.hot { border-color: var(--accent); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink, .fig svg .t-ink text { fill: var(--ink); }
+.fig svg .t-mute, .fig svg .t-mute text { fill: var(--ink-3); }
+.fig svg .t-acc, .fig svg .t-acc text, .fig svg .t-ink text.t-acc { fill: var(--accent); }
+.fig svg .t-disp, .fig svg .t-disp text { font-family: var(--display); font-weight: 750; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; min-width: 0; }
+.scroll-x > svg { min-width: 560px; }
+.scroll-x > svg.wide { min-width: 640px; }
+.fig svg.narrow { max-width: 680px; margin-inline: auto; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; min-width: 2px; }
+.fill.acc { --c: var(--accent); }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat .big.acc { color: var(--accent); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.stats.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.stats .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px; font-size: 15.5px; line-height: 1.4; }
+.map li a { text-decoration: none; color: var(--ink-2); }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; color: var(--ink); }
+.bookends { display: flex; gap: 10px 28px; flex-wrap: wrap; margin-top: 18px; }
+.bookends a { text-decoration: none; }
+.bookends a b { font-family: var(--display); font-weight: 700; font-stretch: 100%; color: var(--ink); }
+
+/* Two-column intro */
+.intro2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Comparison table */
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 720px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; color: var(--ink); border-bottom: 2px solid var(--ink); }
+table.tbl thead th.acc { color: var(--accent); border-bottom-color: var(--accent); }
+table.tbl tbody th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; width: 150px; padding-top: 17px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* Ladder (mission creep, release steps) */
+.ladder { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.ladder li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.ladder li:first-child { border-top: 0; }
+.ladder .yr { font-family: var(--mono); font-size: 14px; color: var(--ink-3); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.ladder b { font-family: var(--display); font-weight: 750; font-stretch: 100%; display: block; font-size: 16.5px; line-height: 1.3; }
+.ladder span.d { font-size: 15px; color: var(--ink-2); line-height: 1.45; display: block; }
+.ladder li.hot .yr, .ladder li.hot b { color: var(--accent); }
+
+/* clans */
+.clans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.clan { border: 1px solid var(--rule); border-radius: 6px; padding: 14px; display: grid; gap: 6px; align-content: start; background: var(--paper-2); }
+.clan b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 18px; }
+.clan span { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+.clan .who { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .hot h5 { color: var(--accent); }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 7px 13px; border-radius: 999px; border: 1.5px solid var(--ink); }
+.chip.acc { border-color: var(--accent); color: var(--accent); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro2, .epilogue, .part { grid-template-columns: minmax(0, 1fr); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map, .compare, .clans, .stats, .stats.two { grid-template-columns: minmax(0, 1fr); }
+  .ladder li { grid-template-columns: 52px minmax(0, 1fr); gap: 10px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Karen Hao · Penguin Press, 2025</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#empire">The empire model</a>
+    <a href="#part1">I</a>
+    <a href="#part2">II</a>
+    <a href="#part3">III</a>
+    <a href="#part4">IV</a>
+    <a href="#epilogue">Epilogue</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span>Empire</span><span class="of">of</span><span>AI</span></h1>
+    <p class="sub">Dreams and nightmares in Sam Altman's OpenAI</p>
+    <p class="dek">Karen Hao tells the inside story of OpenAI and argues that today's AI giants behave like empires: they take data, labour, land and water from others and justify it with a mission to save the world.</p>
+    <div class="byline label">
+      <span>Prologue + 18 chapters</span><span>4 parts</span><span>300+ interviews</span><span>~140,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Empire of AI by Karen Hao: black lettering inside an oval on a grey gradient">
+</div>
+
+<div class="waveband" aria-hidden="true">
+  <canvas id="flow"></canvas>
+  <div class="ends label"><span>Data · labour · land · water</span><span>The empire</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>A company that said it would be different</h2>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p>OpenAI began in 2015 as a nonprofit. It promised to share its research, to put humanity ahead of profit and to act as a check on Google. Karen Hao first profiled the lab for <em>MIT Technology Review</em> in 2019. By then, she writes, those promises were already slipping away. Over the next five years OpenAI became what it had said it would not be: secretive, aggressively commercial and racing its rivals.</p>
+      <p>The book has two strands. One is the inside story: Sam Altman's rise, the scaling bet that produced GPT-3 and ChatGPT, the feuds between "safety" and "commercial" camps, and the November 2023 weekend when the board fired Altman and then took him back. The other strand travels to Kenya, Venezuela, Chile and Uruguay to show who pays for the technology.</p>
+      <p>The two strands meet in one argument. Hao says the AI giants act like <a href="#empire">empires</a>. They claim resources that aren't theirs, rely on cheap and hidden labour, control what is known about their own systems, and justify all of it with a mission to save humanity.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The book in numbers</span>
+      <div class="stats two" style="border:0;border-radius:0">
+        <div class="stat"><span class="big num">300+</span><p>Interviews with about 260 people, including more than 90 current or former OpenAI staff. OpenAI and Altman declined to take part.</p></div>
+        <div class="stat"><span class="big num acc">$130m</span><p>What OpenAI actually received of the $1 billion its founders pledged in 2015. Less than $45m of it came from Musk.</p></div>
+        <div class="stat"><span class="big num">100m</span><p>ChatGPT users two months after launch. OpenAI staff had called it a "low-key research preview".</p></div>
+        <div class="stat"><span class="big num">$157bn</span><p>OpenAI's valuation after its October 2024 round, with a condition attached: convert to a for-profit within two years.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I · 2015–2020</span>
+      <h3>The founding</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Divine Right</b>Musk, Altman and a dinner</a></li>
+        <li><span>02</span><a href="#ch2"><b>A Civilizing Mission</b>The nonprofit runs out of money</a></li>
+        <li><span>03</span><a href="#ch3"><b>Nerve Center</b>Inside the lab in 2019</a></li>
+        <li><span>04</span><a href="#ch4"><b>Dreams of Modernity</b>How AI got this way</a></li>
+        <li><span>05</span><a href="#ch5"><b>Scale of Ambition</b>GPT-2, GPT-3 and the bet on size</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II · 2019–2022</span>
+      <h3>The turn</h3>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Ascension</b>Altman's 10x and the clans</a></li>
+        <li><span>07</span><a href="#ch7"><b>Science in Captivity</b>Gebru and "Stochastic Parrots"</a></li>
+        <li><span>08</span><a href="#ch8"><b>Dawn of Commerce</b>Products, Codex, Altman's bets</a></li>
+        <li><span>09</span><a href="#ch9"><b>Disaster Capitalism</b>The hidden workforce</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part III · 2021–2023</span>
+      <h3>Apex</h3>
+      <ol>
+        <li><span>10</span><a href="#ch10"><b>Gods and Demons</b>Doomers, Boomers, GPT-4</a></li>
+        <li><span>11</span><a href="#ch11"><b>Apex</b>ChatGPT changes everything</a></li>
+        <li><span>12</span><a href="#ch12"><b>Plundered Earth</b>Data centres and water</a></li>
+        <li><span>13</span><a href="#ch13"><b>The Two Prophets</b>Washington and the board</a></li>
+        <li><span>14</span><a href="#ch14"><b>Deliverance</b>Annie Altman's story</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part IV · 2023–2025</span>
+      <h3>The reckoning</h3>
+      <ol>
+        <li><span>15</span><a href="#ch15"><b>The Gambit</b>Murati and Sutskever speak up</a></li>
+        <li><span>16</span><a href="#ch16"><b>Cloak-and-Dagger</b>Five days in November</a></li>
+        <li><span>17</span><a href="#ch17"><b>Reckoning</b>The "Omnicrisis" of May 2024</a></li>
+        <li><span>18</span><a href="#ch18"><b>A Formula for Empire</b>How the mission keeps shifting</a></li>
+      </ol>
+    </div>
+  </div>
+  <div class="bookends label">
+    <a href="#prologue"><b>Prologue</b> · A Run for the Throne</a>
+    <a href="#epilogue"><b>Epilogue</b> · How the Empire Falls</a>
+    <span>Part names on this page are descriptive; the book numbers its parts only.</span>
+  </div>
+</section>
+
+<!-- ============ EMPIRE MODEL ============ -->
+<section id="empire">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Why "empire"?</h2>
+    <p class="lede">Hao says she tried other metaphors and only this one fit. She is clear that today's AI companies don't use the open violence of colonial empires. Her claim is that the pattern is the same: take from the edges, pile up wealth at the centre, and tell a story that makes it look like progress.</p>
+  </div>
+
+  <div class="fig">
+    <h4>The empire model of AI</h4>
+    <div class="scroll-x">
+      <svg viewBox="0 0 720 400" role="img" aria-label="Diagram of the empire model. Four inputs on the left, data, labour, land and energy, and water, flow into a central oval labelled AI empire. Two outputs flow out to the right: models and products, and capital. Above the oval: justified by the mission of AGI for all. Below: costs stay at the edges, such as trauma, low pay, drought and emissions.">
+      <defs>
+        <marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-3)"/></marker>
+        <marker id="ah1b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink)"/></marker>
+      </defs>
+      <g fill="var(--paper-2)" stroke="var(--rule)" stroke-width="1.2">
+        <rect x="10" y="30" width="200" height="64" rx="6"/>
+        <rect x="10" y="120" width="200" height="64" rx="6"/>
+        <rect x="10" y="210" width="200" height="64" rx="6"/>
+        <rect x="10" y="300" width="200" height="64" rx="6"/>
+      </g>
+      <g font-size="13" class="t-ink">
+        <text x="24" y="56" class="t-ink t-disp">DATA</text>
+        <text x="24" y="146" class="t-ink t-disp">LABOUR</text>
+        <text x="24" y="236" class="t-ink t-disp">LAND + ENERGY</text>
+        <text x="24" y="326" class="t-ink t-disp">WATER</text>
+      </g>
+      <g font-size="11.5">
+        <text x="24" y="78">web, books, art, video</text>
+        <text x="24" y="168">annotators, $1.46–3.74/h</text>
+        <text x="24" y="258">megacampus data centres</text>
+        <text x="24" y="348">cooling in drought zones</text>
+      </g>
+      <g stroke="var(--ink-3)" stroke-width="1.6" fill="none" marker-end="url(#ah1)">
+        <path d="M210 62 C 240 62, 250 160, 268 182"/>
+        <path d="M210 152 C 235 152, 245 196, 264 200"/>
+        <path d="M210 242 C 235 242, 245 222, 264 220"/>
+        <path d="M210 332 C 240 332, 250 260, 268 238"/>
+      </g>
+      <ellipse cx="380" cy="210" rx="116" ry="80" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/>
+      <text x="380" y="206" text-anchor="middle" font-size="22" class="t-ink t-disp">AI EMPIRE</text>
+      <text x="380" y="230" text-anchor="middle" font-size="11.5">OpenAI and its rivals</text>
+      <text x="380" y="112" text-anchor="middle" font-size="12" class="t-ink">Justified by the mission: AGI for all</text>
+      <g stroke="var(--ink)" stroke-width="1.8" fill="none" marker-end="url(#ah1b)">
+        <path d="M494 190 L 528 160"/>
+        <path d="M494 230 L 528 262"/>
+      </g>
+      <g fill="var(--card)" stroke="var(--ink)" stroke-width="1.4">
+        <rect x="532" y="124" width="178" height="60" rx="6"/>
+        <rect x="532" y="236" width="178" height="60" rx="6"/>
+      </g>
+      <text x="546" y="150" font-size="13" class="t-ink t-disp">MODELS</text>
+      <text x="546" y="171" font-size="11.5">ChatGPT, GPT-4, APIs</text>
+      <text x="546" y="262" font-size="13" class="t-ink t-disp">CAPITAL</text>
+      <text x="546" y="283" font-size="11.5">$157bn valuation, 2024</text>
+      <text x="380" y="322" text-anchor="middle" font-size="12" class="t-acc">Costs stay at the edges:</text>
+      <text x="380" y="340" text-anchor="middle" font-size="11.5" class="t-acc">trauma, low pay, drought, emissions</text>
+    </svg>
+      </div>
+    <p class="cap">Inputs come from people and places with little say in the matter. The products and profits go back to a handful of companies in the US. A mission of "AGI that benefits all of humanity", plus the threat of a rival winning first, is what makes this look acceptable.</p>
+    <p class="src">Drawn from the prologue's definition of empire and the case studies in chs. 9 and 12</p>
+  </div>
+
+  <div class="tablecard" style="margin-top:24px">
+    <div class="scroll-x">
+      <table class="tbl">
+        <thead>
+          <tr><th scope="col"><span class="label">Feature</span></th><th scope="col">Empires of old</th><th scope="col" class="acc">Empires of AI, per Hao</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Seize resources</th><td>Land, minerals and crops taken from colonised territories</td><td>Writers' and artists' work, people's online posts, plus the land, energy and water for data centres</td></tr>
+          <tr><th scope="row">Exploit labour</th><td>Subjugated people mine, farm and refine for the centre</td><td>Data workers in Kenya, Venezuela and elsewhere clean and label data for very little pay</td></tr>
+          <tr><th scope="row">Control knowledge</th><td>The centre decides what counts as science and civilisation</td><td>Top researchers are pulled into a few companies, models stay closed, and critical research is squeezed out</td></tr>
+          <tr><th scope="row">Civilising mission</th><td>Claims of superiority and "modernity" make conquest look like a gift</td><td>AGI will cure disease, solve climate change and bring abundance to everyone</td></tr>
+          <tr><th scope="row">Rival empire</th><td>An arms race with other powers justifies anything</td><td>"We must win before" Google, or before China, justifies speed and secrecy</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Hao's caveat: no overt violence, same structure</span></div>
+  </div>
+
+  <div class="fig" style="margin-top:24px">
+    <h4>From nonprofit to "capped profit" to for-profit</h4>
+    <div class="scroll-x">
+      <svg class="wide" viewBox="0 0 920 290" role="img" aria-label="Timeline of OpenAI's structure and funding. Nonprofit phase: 2015 nonprofit launched with one billion dollars pledged; 2018 Musk walks away, only about 130 million dollars ever arrived; 2018 charter published. Capped-profit phase: 2019 OpenAI LP created with returns capped at 100 times; 2019 Microsoft invests one billion; 2020 to 2021 Microsoft adds two billion with a new cap of 6 times; 2023 Microsoft invests ten billion after ChatGPT; 2023 board fires Altman, who returns within five days. 2024: 6.6 billion raised at a 157 billion valuation, and a plan to become a for-profit public benefit corporation.">
+        <rect x="20" y="128" width="309" height="24" fill="var(--paper-2)" stroke="var(--rule)"/>
+        <rect x="329" y="128" width="437" height="24" fill="var(--grey)" opacity=".55"/>
+        <rect x="766" y="128" width="134" height="24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="5 4"/>
+        <text x="30" y="144" font-size="11" class="t-ink">NONPROFIT</text>
+        <text x="339" y="144" font-size="11" class="t-ink">CAPPED-PROFIT LP UNDER A NONPROFIT BOARD</text>
+        <text x="776" y="144" font-size="11" class="t-acc">FOR-PROFIT PBC?</text>
+        <g stroke="var(--ink-3)" stroke-width="1">
+          <line x1="110" y1="98" x2="110" y2="128"/><line x1="285" y1="98" x2="285" y2="128"/><line x1="460" y1="98" x2="460" y2="128"/><line x1="635" y1="98" x2="635" y2="128"/><line x1="810" y1="98" x2="810" y2="128"/>
+          <line x1="197.5" y1="152" x2="197.5" y2="184"/><line x1="372.5" y1="152" x2="372.5" y2="184"/><line x1="547.5" y1="152" x2="547.5" y2="184"/><line x1="722.5" y1="152" x2="722.5" y2="184"/>
+        </g>
+        <g text-anchor="middle" font-size="12">
+          <text x="110" y="52" class="t-acc">2015</text><text x="110" y="72" class="t-ink">Nonprofit launched</text><text x="110" y="90">$1bn pledged</text>
+          <text x="285" y="52" class="t-acc">2018</text><text x="285" y="72" class="t-ink">Charter published</text><text x="285" y="90">AGI to benefit all</text>
+          <text x="460" y="52" class="t-acc">2019</text><text x="460" y="72" class="t-ink">Microsoft: $1bn</text><text x="460" y="90">its returns capped 20x</text>
+          <text x="635" y="52" class="t-acc">2023</text><text x="635" y="72" class="t-ink">Microsoft: $10bn</text><text x="635" y="90">after ChatGPT</text>
+          <text x="810" y="52" class="t-acc">2024</text><text x="810" y="72" class="t-ink">$6.6bn at $157bn</text><text x="810" y="90">must convert in 2 yrs</text>
+          <text x="197.5" y="204" class="t-acc">2018</text><text x="197.5" y="224" class="t-ink">Musk walks away</text><text x="197.5" y="242">~$130m ever arrived</text>
+          <text x="372.5" y="204" class="t-acc">2019</text><text x="372.5" y="224" class="t-ink">OpenAI LP created</text><text x="372.5" y="242">investors capped 100x</text>
+          <text x="547.5" y="204" class="t-acc">2020–21</text><text x="547.5" y="224" class="t-ink">Microsoft: $2bn more</text><text x="547.5" y="242">new cap: 6x</text>
+          <text x="722.5" y="204" class="t-acc">Nov 2023</text><text x="722.5" y="224" class="t-ink">Board fires Altman</text><text x="722.5" y="242">back within 5 days</text>
+        </g>
+      </svg>
+    </div>
+    <p class="cap">Each step was presented as the way to serve the original mission. In December 2024 OpenAI announced plans to turn its for-profit arm into a public benefit corporation. The nonprofit would stay on as a separate entity but lose its board's control over the business.</p>
+    <p class="src">Dates and figures as reported in chs. 2, 6, 11, 16 and 18</p>
+  </div>
+</section>
+
+<!-- ============ PROLOGUE ============ -->
+<article class="chapter" id="prologue">
+  <div class="gutter"><span class="chno">P</span><span class="label">A Run for the Throne</span></div>
+  <div class="body">
+    <div>
+      <h3>Five days that showed who was really in charge</h3>
+      <p class="idea">The board fired Altman to protect the mission. Within a week the board was gone and Altman was back.</p>
+    </div>
+    <ul class="points">
+      <li>On Friday, 17 November 2023, Altman was in Las Vegas for the Formula One race. He joined a video call and four of his five board members told him he was fired. The public statement said he had not been "consistently candid" with the board.</li>
+      <li>Staff were stunned. Ilya Sutskever, the chief scientist and a board member, could not explain the decision at an all-hands meeting. Anger grew quickly, especially because a tender offer that would let staff sell shares worth millions was days away.</li>
+      <li>Greg Brockman quit. Microsoft, OpenAI's biggest backer, had been told minutes before the announcement. By Sunday night Satya Nadella was offering Altman a new lab at Microsoft, and most employees signed a letter threatening to follow him. Sutskever signed it too.</li>
+      <li>By Tuesday the deal was done. Altman returned as CEO. Two of the independent directors, Helen Toner and Tasha McCauley, left the board. Bret Taylor and Larry Summers joined.</li>
+      <li>For Hao the episode settled a question. A nonprofit board had been designed to rein in the company if needed. When it tried, money and loyalty to one man won.</li>
+    </ul>
+    <div class="story">
+      <span class="label">Hao's frame</span>
+      <p>Hao says AI is not one technology but many, and the form now dominant is heading somewhere alarming. Its makers spend vast resources to grow ever larger models and push the costs onto people far away. She stresses that this direction is a choice and could be reversed.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="part1">
+  <span class="label partno">Part I · Chapters 1–5</span>
+  <h2>The founding</h2>
+  <p class="lede">A nonprofit set up to counter Google finds out that its plan for AGI needs enormous computing power. Getting it means giving up most of what made it different.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Divine Right</span></div>
+  <div class="body">
+    <div>
+      <h3>Two men, one fear, and a dinner</h3>
+      <p class="idea">OpenAI grew out of Elon Musk's fear of Google's DeepMind and Sam Altman's gift for telling a story about the future.</p>
+    </div>
+    <ul class="points">
+      <li>Musk had come to fear that AI could wipe out humanity. He saw DeepMind's Demis Hassabis as a dangerous figure, and Google's deal to buy DeepMind alarmed him. In 2015 Altman, then president of Y Combinator, emailed him. Altman wrote that someone would build AI, so it might as well be people who would do it safely. He suggested a lab along the lines of a "Manhattan Project for AI".</li>
+      <li>In summer 2015 Altman hosted a dinner to recruit top researchers. Musk named the project OpenAI. Hao notes that nearly everyone at that table would later leave it, many after falling out with Altman.</li>
+      <li>Altman grew up in St. Louis, the eldest of four children. He was driven and charming, and also anxious. He left Stanford to found Loopt, a location app that sold in 2012 for $43.4 million, about what investors had put in. Senior staff there twice asked the board to fire him. Each time the board backed him.</li>
+      <li>His mentors shaped his worldview. From Paul Graham he got Y Combinator, which he led from age 28. From Peter Thiel he took the idea that founders should aim for monopoly. He built a dense network of people who owed him favours or shared investments with him.</li>
+      <li>Hao also introduces Altman's sister Annie. Her life went in a very different direction from his, and she returns in chapter 14.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"You could parachute him into an island full of cannibals and come back in 5 years and he'd be the king."</blockquote>
+      <span class="label">Paul Graham on Sam Altman, quoted in ch. 1</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">A Civilizing Mission</span></div>
+  <div class="body">
+    <div>
+      <h3>The nonprofit runs into the cost of compute</h3>
+      <p class="idea">Once OpenAI decided AGI depended on scale, its nonprofit form became something to work around.</p>
+    </div>
+    <ul class="points">
+      <li>Greg Brockman, formerly of Stripe, and Ilya Sutskever, a star student of Geoffrey Hinton, became the founding pair. Other founding members were offered a $175,000 base salary; Sutskever was offered nearly $2 million, and Google bid even more to keep him. OpenAI launched in December 2015 with a $1 billion pledge and talk of openness. Hao notes that in later correspondence the founders said openness could be dropped once it had served its purpose.</li>
+      <li>Not everyone was impressed. Timnit Gebru, then a Stanford PhD student, watched a mostly white, male group being treated like celebrities at the launch. She wrote a critical letter about it.</li>
+      <li>In its first year the lab had no clear direction. It worked on robots, video games and many other things. Musk grew impatient as DeepMind's AlphaGo made headlines.</li>
+      <li>In 2017 Brockman and Sutskever asked what reaching AGI would really take. Their answer was compute. Dario Amodei and Danny Hernandez found that the compute used in leading AI work had doubled every 3.4 months, far faster than Moore's Law. Brockman called it "OpenAI's Law". It meant OpenAI needed huge numbers of expensive Nvidia GPUs.</li>
+      <li>Musk proposed taking control himself, or folding OpenAI into Tesla. Altman won over Brockman and Sutskever instead. Musk left in early 2018. Of the $1 billion pledged, only about $130 million ever arrived.</li>
+      <li>Altman's answer was OpenAI LP, a "capped-profit" company nested under the nonprofit. First-round investors could earn up to 100 times their money. Microsoft invested $1 billion in July 2019. A demo of GPT-2 helped win over Bill Gates.</li>
+    </ul>
+    <div class="fig">
+      <h4>The scaling bet: OpenAI's Law vs Moore's Law</h4>
+      <div class="scroll-x">
+      <svg viewBox="0 0 640 320" role="img" aria-label="Line chart on a logarithmic scale over six years. Moore's Law, doubling every two years, rises to about 8 times. Compute used in leading AI work, doubling every 3.4 months, rises to about 300,000 times.">
+        <g stroke="var(--rule)" stroke-width="1">
+          <line x1="70" y1="270" x2="600" y2="270"/><line x1="70" y1="230" x2="600" y2="230"/><line x1="70" y1="190" x2="600" y2="190"/><line x1="70" y1="150" x2="600" y2="150"/><line x1="70" y1="110" x2="600" y2="110"/><line x1="70" y1="70" x2="600" y2="70"/><line x1="70" y1="30" x2="600" y2="30"/>
+        </g>
+        <g font-size="11" text-anchor="end" class="t-mute">
+          <text x="62" y="274">1x</text><text x="62" y="234">10x</text><text x="62" y="194">100x</text><text x="62" y="154">1,000x</text><text x="62" y="114">10,000x</text><text x="62" y="74">100,000x</text><text x="62" y="34">1,000,000x</text>
+        </g>
+        <g font-size="11" text-anchor="middle" class="t-mute">
+          <text x="70" y="292">year 0</text><text x="246.7" y="292">year 2</text><text x="423.3" y="292">year 4</text><text x="600" y="292">year 6</text>
+        </g>
+        <line x1="70" y1="270" x2="600" y2="234" stroke="var(--ink-3)" stroke-width="2.5"/>
+        <line x1="70" y1="270" x2="600" y2="51" stroke="var(--accent)" stroke-width="3"/>
+        <circle cx="600" cy="234" r="4.5" fill="var(--ink-3)"/>
+        <circle cx="600" cy="51" r="5" fill="var(--accent)"/>
+        <text x="590" y="222" font-size="12" text-anchor="end">Moore's Law: x2 every 2 years → ~8x</text>
+        <text x="586" y="40" font-size="12" text-anchor="end" class="t-acc">"OpenAI's Law": x2 every 3.4 months → ~300,000x</text>
+      </svg>
+      </div>
+      <p class="cap">If chips alone couldn't keep up, the only way to stay on the curve was to buy far more of them. The nonprofit could not raise that kind of money, and that is what drove OpenAI towards a profit-making structure.</p>
+      <p class="src">Doubling rates as reported in ch. 2; the book gives the six-year rise as "30 million percent". Endpoints approximate.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Nerve Center</span></div>
+  <div class="body">
+    <div>
+      <h3>Three days inside the lab</h3>
+      <p class="idea">In August 2019 Hao found an organisation that couldn't say what AGI was, but was sure it had to get there first.</p>
+    </div>
+    <ul class="points">
+      <li>Hao spent three days embedded at OpenAI's new office in San Francisco's Mission District. Outside, the city was dealing with homelessness and gentrification. Inside, the office was calm and comfortable.</li>
+      <li>She asked Brockman and Sutskever why AGI was worth billions. Brockman pointed to climate change and medicine: an AGI could solve problems too complex for people. When she pressed for specifics, their answers went round in circles.</li>
+      <li>She raised the environmental cost of training large models. Sutskever accepted it but said AGI would make up for it, for example by helping to fix the climate. In other words, OpenAI was betting that it would succeed.</li>
+      <li>Some floors were off limits to her, some meetings were closed, and staff were careful about what they said. A lab that had promised openness now kept tight control over its message.</li>
+      <li>Brockman insisted the new structure didn't change the mission. He also said staying on the compute curve was a matter of survival. Hao says this belief that OpenAI had to be first or perish drove much of what came next.</li>
+      <li>Her February 2020 profile described a gap between OpenAI's public image and how it actually worked. OpenAI's leaders were unhappy, and the company stopped talking to her for three years.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The analogy</span>
+      <p>Asked how AGI's benefits would be shared, Brockman compared OpenAI to a power company: a central utility delivering cheap, reliable service to everyone. He could not explain how OpenAI would actually become one.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Dreams of Modernity</span></div>
+  <div class="body">
+    <div>
+      <h3>How AI got this way</h3>
+      <p class="idea">The current form of AI did not win only on scientific merit. It also suited the business model of big tech.</p>
+    </div>
+    <ul class="points">
+      <li>Hao cites the economists Daron Acemoglu and Simon Johnson: new technologies promise shared progress, but without countervailing power the gains go to the few. The cotton gin made the American South rich and greatly expanded slavery.</li>
+      <li>"Artificial intelligence" was a marketing term from the start. John McCarthy coined it in 1956 to attract funding and attention. There is still no agreed definition of intelligence, so the goal can always be moved.</li>
+      <li>Two camps competed for decades. Symbolists encode rules and knowledge. Connectionists build neural networks that learn from data. Hao points out that neural networks won partly because they need large amounts of data and compute, which big tech companies happen to have.</li>
+      <li>After a team led by Hinton, with Sutskever, made a breakthrough in 2012, Google and others bought up the talent. Corporate AI investment rose from $14.6 billion in 2013 to $235 billion in 2022. Industry coauthors appeared on 55 percent of the most influential AI papers in 2018–19, up from 24 percent a decade earlier.</li>
+      <li>Hao calls the hunt for training data "data colonialism". She reported cases of facial recognition and surveillance spreading in China and South Africa as companies collected ever more data.</li>
+      <li>Neural networks are statistical pattern matchers, so they can be unreliable, biased and opaque. Examples include a self-driving Uber that killed a pedestrian in 2018, invented court citations, and discriminatory outputs. Scaling has not fixed this.</li>
+    </ul>
+    <div class="compare">
+      <div><h5>Symbolic AI</h5><ul><li>Rules and knowledge written in explicitly</li><li>Accurate retrieval, easier to inspect</li><li>Hard to scale by hand</li><li>Lost funding and attention after the 1980s</li></ul></div>
+      <div class="hot"><h5>Neural networks (deep learning)</h5><ul><li>Learn patterns from huge datasets</li><li>Flexible but unpredictable and opaque</li><li>Need vast data and compute</li><li>A natural fit for big tech's resources and business model</li></ul></div>
+    </div>
+    <div class="story">
+      <span class="label">The point about Moore's Law</span>
+      <p>Hao notes that Moore's Law was never a law of physics. It was a business observation about how quickly the chip industry chose to invest. The "law" of scaling is the same: a choice about where money goes, presented as if it were inevitable.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Scale of Ambition</span></div>
+  <div class="body">
+    <div>
+      <h3>GPT-2, GPT-3 and the bet on size</h3>
+      <p class="idea">Sutskever's belief in scale, Amodei's safety reasoning and Microsoft's money all pointed in one direction: bigger.</p>
+    </div>
+    <ul class="points">
+      <li>Sutskever held an unusual view for the time: neural networks only had to be made big enough. When Google published the Transformer in 2017, he pushed OpenAI to use it. Alec Radford trained GPT-1 on about 7,000 unpublished books.</li>
+      <li>GPT-2 (1.5 billion parameters) wrote fluent text, including disturbing material. In February 2019 Jack Clark, OpenAI's policy director, held back the full model as too dangerous and released it in stages. Researchers were angry, while many policymakers liked the move. In Hao's account it also became a way to build influence in Washington.</li>
+      <li>Amodei treated research as a "portfolio of bets" and backed the "pure language" hypothesis. His reasoning was that if OpenAI didn't scale up first, someone less careful would. This only works if AGI is assumed to be inevitable.</li>
+      <li>For GPT-3 his team, "Nest", scaled up to around 10,000 GPUs and 175 billion parameters, more than 100 times GPT-2. They ran out of good text and added a wider Reddit scrape and Wikipedia, then Common Crawl, a vast dump of the web. For GPT-4 the filters were loosened further.</li>
+      <li>Hao follows the consequences. With less filtering, the data contained more toxic material, so the models produced more of it, and humans were needed to clean up. The researcher Abeba Birhane called this "hate scaling". Workers in Kenya would later be hired to do that cleanup.</li>
+    </ul>
+    <div class="fig">
+      <h4>More data, less filtering</h4>
+      <ol class="ladder">
+        <li><span class="yr">GPT-1</span><div><b>~7,000 unpublished books</b><span class="d">A curated, fairly clean source</span></div></li>
+        <li><span class="yr">GPT-2</span><div><b>WebText: pages shared on Reddit</b><span class="d">Only links with at least three upvotes; about 8 million documents; 1.5bn parameters</span></div></li>
+        <li><span class="yr">GPT-3</span><div><b>Wider Reddit scrape, Wikipedia, books, Common Crawl</b><span class="d">Common Crawl is a vast, messy web archive; 175bn parameters</span></div></li>
+        <li class="hot"><span class="yr">GPT-4</span><div><b>Quality bars lowered further</b><span class="d">The need for quantity wins out, and more harm has to be removed afterwards by people</span></div></li>
+      </ol>
+      <p class="src">As described in ch. 5</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="part2">
+  <span class="label partno">Part II · Chapters 6–9</span>
+  <h2>The turn</h2>
+  <p class="lede">With Altman in charge, OpenAI starts selling. Critics of large models are pushed aside, and a hidden workforce in the Global South is hired to make the models fit to sell.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Ascension</span></div>
+  <div class="body">
+    <div>
+      <h3>Altman's 10x, and a company split into clans</h3>
+      <p class="idea">Altman remade OpenAI around speed and secrecy. The people most worried about safety ended up leaving to start a rival.</p>
+    </div>
+    <ul class="points">
+      <li>Altman believed new CEOs must "refound" their company. His rule of thumb was 10x: 10x better technology, 10x growth. A vision memo in late 2019 said OpenAI had to "be number one" in technical results, compute, money and preparedness. It should keep Microsoft happy, share less research, and still make sure the world saw it as winning.</li>
+      <li>Security tightened. Altman worried about leaks and about rivals abroad. Monitoring software was installed, and staff began to feel that the work itself was dangerous.</li>
+      <li>In the same memo Altman described three "clans": Exploratory Research (Sutskever), Safety (Dario Amodei's group) and Startup (Brockman). He asked them to "unite as one tribe". In practice they pulled further apart, especially once the pandemic sent everyone home.</li>
+      <li>Brockman started building a product, an API for GPT-3. Safety wanted to keep the model back to preserve OpenAI's lead time for safety research. A rumour that Google was about to release its own model ended the stalemate. The API launched in June 2020. Google's model didn't appear.</li>
+      <li>GPT-3 made OpenAI famous in tech circles. Microsoft agreed to invest another $2 billion with a lower profit cap of 6x. Commercialisation had won.</li>
+      <li>At the end of 2020 Dario and Daniela Amodei and several colleagues left. In May 2021 they launched Anthropic as a public benefit corporation. Inside OpenAI this became known as "The Divorce". Hao says it was framed as a disagreement about safety, but disputes over power and trust in Altman played a part too.</li>
+    </ul>
+    <div class="fig">
+      <h4>Altman's three clans</h4>
+      <div class="clans">
+        <div class="clan"><b>Exploratory Research</b><span>"We will pursue important new ideas even if we fail many times."</span><span class="who">Face: Sutskever</span></div>
+        <div class="clan"><b>Safety</b><span>"We will have an unwavering commitment to doing the right thing."</span><span class="who">Face: Dario Amodei</span></div>
+        <div class="clan"><b>Startup</b><span>"We'll figure out a way to make it happen."</span><span class="who">Face: Brockman</span></div>
+      </div>
+      <p class="cap">The labels come from Altman's late-2019 memo; staff matched the faces to them. Over the next few years the fight narrowed to two sides, Safety against Applied, the commercial division that grew out of Startup.</p>
+      <p class="src">Quoted in ch. 6</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Science in Captivity</span></div>
+  <div class="body">
+    <div>
+      <h3>The paper Google didn't want published</h3>
+      <p class="idea">When researchers questioned whether ever-bigger language models were a good idea, the industry's answer was to silence them.</p>
+    </div>
+    <ul class="points">
+      <li>In 2019 Emma Strubell and colleagues estimated the energy and carbon cost of training large models. The figures shocked the field, and GPT-3, a year later, was far bigger than anything they had measured.</li>
+      <li>Timnit Gebru, who had co-written the landmark "Gender Shades" study of facial recognition with Joy Buolamwini and co-founded Black in AI, now co-led Google's ethical AI team. When colleagues praised GPT-3 on an internal mailing list, she pointed out its failures, including its racist and sexist output.</li>
+      <li>With the linguist Emily M. Bender, Margaret Mitchell and others, she wrote "On the Dangers of Stochastic Parrots". It set out the environmental costs, the biased data, and the risk that fluent text would be mistaken for understanding.</li>
+      <li>Google asked her to retract the paper or remove the Google authors, without saying clearly who objected or why. She set conditions. Google said she had resigned. She said she had been fired. Mitchell was fired less than three months later. Hao published the first detailed account of the paper's contents.</li>
+      <li>Jeff Dean, Google's AI chief, worked on a paper arguing that the carbon estimates were far too high, using internal data Google had never published before. Hao reports that some researchers found the argument weak and convenient for Google.</li>
+      <li>The longer-term effect was a step back from open science. After ChatGPT, companies largely stopped publishing details of their models. Hao argues this harms scientific integrity: claims about capabilities can no longer be checked.</li>
+    </ul>
+    <div class="story hot">
+      <span class="label">Why it mattered</span>
+      <p>The firing became a symbol of the problem: the people best placed to study AI's harms worked inside the companies whose business depended on it. The "Stochastic Parrots" paper became a rallying cry, and Gebru went on to found an independent institute, DAIR (see the <a href="#epilogue">epilogue</a>).</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Dawn of Commerce</span></div>
+  <div class="body">
+    <div>
+      <h3>From research lab to product company</h3>
+      <p class="idea">OpenAI now had customers, which meant it had to decide what its models were allowed to do. Altman, meanwhile, was making his own big bets.</p>
+    </div>
+    <ul class="points">
+      <li>A 2021 research road map set the plan: scale GPT-3 another 10x on a new Microsoft supercomputer, find "2x" and "10x" efficiency tricks, add images and code, and look for "the breakthrough system of the future".</li>
+      <li>Real users caused real problems. Replika, a companion app, was banned after users used GPT-3 for sexual chats and the bot sometimes gave emotionally manipulative replies. Latitude's AI Dungeon game, which had API access through Brockman's brother, was used to generate scenarios of child sexual abuse.</li>
+      <li>Codex, a GPT-3 model trained on GitHub code, became GitHub Copilot. Within two years it had a million paying subscribers. That success went to Microsoft and GitHub, and OpenAI staff began to want their own consumer products.</li>
+      <li>Altman's personal investments followed the same pattern. In 2021 he put $180 million into Retro Biosciences (longevity) and $375 million into Helion (fusion), and backed Worldcoin, an iris-scanning crypto project. He also launched the OpenAI Startup Fund.</li>
+      <li>Altman liked to say he held no equity in OpenAI and earned a salary of $65,000. Hao notes that his wealth and influence came from the network of companies around it.</li>
+    </ul>
+    <div class="stats">
+      <div class="stat"><span class="big num">$180m</span><p>Altman's investment in Retro Biosciences, which works on extending human lifespan.</p></div>
+      <div class="stat"><span class="big num">$375m</span><p>Altman's investment in Helion Energy, a nuclear fusion startup. Microsoft later agreed to buy power from it.</p></div>
+      <div class="stat"><span class="big num">$65k</span><p>Altman's annual OpenAI salary, with no equity, which he cited as proof he wasn't in it for the money.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Disaster Capitalism</span></div>
+  <div class="body">
+    <div>
+      <h3>The workers who make the models safe to sell</h3>
+      <p class="idea">The AI industry finds its cheapest labour wherever a crisis has left people desperate, and leaves once they ask for more.</p>
+    </div>
+    <ul class="points">
+      <li>To build a filter that would keep its models from producing harmful text, OpenAI needed people to read and label huge numbers of horrific examples. In late 2021 it contracted Sama, an outsourcing firm in Nairobi, Kenya. Workers on the "PBJ" projects earned on average $1.46 to $3.74 an hour.</li>
+      <li>Mophat Okinyi was a quality analyst on the sexual content team. He was expected to review 15,000 pieces of content a month, some of it written partly by OpenAI's own software to cover the worst cases. His mental health declined, and his partner left. Sama ended the contract in March 2022. Okinyi could not afford continued therapy.</li>
+      <li>Hao traces the wider system, which the researchers Mary L. Gray and Siddharth Suri called "ghost work". Self-driving car companies first built a global industry of data labelling. When Venezuela's economy collapsed, educated Venezuelans flooded onto platforms such as Appen and Scale AI's Remotasks.</li>
+      <li>Oskarina Fuentes, a Venezuelan engineer living in Colombia, organised her life around tasks that came and went without warning. She traded tips with other workers on Telegram and Discord.</li>
+      <li>Scale AI, Hao reports, followed a repeating playbook: offer good pay in a market hit by crisis, then cut pay once workers flood in, then move on. In March 2024 it blocked Kenya from Remotasks entirely.</li>
+      <li>RLHF, reinforcement learning from human feedback, made this work central. Contractors wrote model answers and ranked outputs, which turned GPT-3 into InstructGPT and then into ChatGPT. Winnie, a worker in Nairobi, wrote prompts for projects with names like Flamingo Generation. The work paid well for a few months and then disappeared.</li>
+    </ul>
+    <div class="fig">
+      <h4>The playbook Hao describes</h4>
+      <div class="scroll-x">
+      <svg class="narrow" viewBox="0 0 640 370" role="img" aria-label="Cycle diagram with five steps, clockwise. One: an economy collapses, as in Venezuela. Two: a platform pays well and sign-ups surge. Three: pay is cut as tasks dry up. Four: workers are dropped or accounts cut off. Five: the platform moves to the next market, such as Kenya or the Philippines, and the cycle repeats.">
+        <ellipse cx="320" cy="200" rx="210" ry="140" fill="none" stroke="var(--rule)" stroke-width="2" stroke-dasharray="6 5"/>
+        <g fill="var(--ink-3)">
+          <polygon points="0,-6 12,0 0,6" transform="translate(443.5 86.7) rotate(25.8)"/>
+          <polygon points="0,-6 12,0 0,6" transform="translate(519.7 243.3) rotate(116)"/>
+          <polygon points="0,-6 12,0 0,6" transform="translate(320 340) rotate(180)"/>
+          <polygon points="0,-6 12,0 0,6" transform="translate(120.3 243.3) rotate(244)"/>
+          <polygon points="0,-6 12,0 0,6" transform="translate(196.5 86.7) rotate(-25.8)"/>
+        </g>
+        <g stroke-width="1.4">
+          <rect x="235" y="32" width="170" height="56" rx="6" fill="var(--card)" stroke="var(--accent)"/>
+          <rect x="435" y="129" width="170" height="56" rx="6" fill="var(--card)" stroke="var(--ink)"/>
+          <rect x="358" y="285" width="170" height="56" rx="6" fill="var(--card)" stroke="var(--ink)"/>
+          <rect x="112" y="285" width="170" height="56" rx="6" fill="var(--card)" stroke="var(--ink)"/>
+          <rect x="35" y="129" width="170" height="56" rx="6" fill="var(--card)" stroke="var(--ink)"/>
+        </g>
+        <g font-size="13.5" class="t-ink t-disp">
+          <text x="248" y="56" class="t-acc t-disp">1 Economy collapses</text>
+          <text x="448" y="153" class="t-ink t-disp">2 Platform pays well</text>
+          <text x="371" y="309" class="t-ink t-disp">3 Pay is cut</text>
+          <text x="125" y="309" class="t-ink t-disp">4 Workers dropped</text>
+          <text x="48" y="153" class="t-ink t-disp">5 Next market</text>
+        </g>
+        <g font-size="11.5">
+          <text x="248" y="76">Venezuela, late 2010s</text>
+          <text x="448" y="173">sign-ups surge</text>
+          <text x="371" y="329">tasks and rates fall</text>
+          <text x="125" y="329">accounts cut off</text>
+          <text x="48" y="173">Kenya, Philippines…</text>
+        </g>
+        <text x="320" y="196" text-anchor="middle" font-size="12" class="t-ink">a race to the bottom</text>
+        <text x="320" y="216" text-anchor="middle" font-size="11" class="t-mute">as reported for Scale AI's Remotasks</text>
+      </svg>
+      </div>
+      <p class="cap">Firms that tried to pay living wages, such as CloudFactory, struggled to compete, and Sama itself came under the same pressure. Hao calls this a defining feature of empire: wealth built on labour that is paid very little.</p>
+      <p class="src">Reconstructed from Hao's reporting in ch. 9</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="big num acc">$1.46–3.74</span><p>Average hourly pay for Sama workers on OpenAI's content-filter project in Kenya.</p></div>
+      <div class="stat"><span class="big num">15,000</span><p>Pieces of content a month that Okinyi was contracted to review on the sexual content team.</p></div>
+      <div class="stat"><span class="big num">Mar 2024</span><p>Scale blocks Kenya from Remotasks as a whole country, cutting off workers such as Winnie.</p></div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="part3">
+  <span class="label partno">Part III · Chapters 10–14</span>
+  <h2>Apex</h2>
+  <p class="lede">ChatGPT makes OpenAI famous around the world. Data centres spread into drought zones, Altman wins over Washington, and the board starts to lose trust in him.</p>
+</div>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Gods and Demons</span></div>
+  <div class="body">
+    <div>
+      <h3>Doomers, Boomers and the making of GPT-4</h3>
+      <p class="idea">Two quasi-religious camps fought over OpenAI. Both of them assumed that AGI was coming.</p>
+    </div>
+    <ul class="points">
+      <li>Effective altruism (EA) arrived in Silicon Valley with a method: rank causes by "expected value". Rogue AI ranked as a top existential risk. Money from Open Philanthropy and Sam Bankman-Fried's FTX Future Fund flowed into AI safety until FTX collapsed in November 2022.</li>
+      <li>Two camps formed: <strong>Doomers</strong>, who feared AI could end humanity, and <strong>Boomers</strong>, who saw rapid progress as a moral duty. Some saw Anthropic and OpenAI as the face of each camp. Others saw OpenAI itself as the battleground.</li>
+      <li>DALL-E 2 launched in March 2022 amid fights between the Applied and Safety teams. For DALL-E 3, the team left some disturbing images in the training data. In December 2023 Shane Jones, a Microsoft engineer, found that Microsoft's image tool built on DALL-E 3 produced violent and sexualised images from simple prompts.</li>
+      <li>To get more training data, Brockman turned to YouTube and collected more than a million hours of video. Bill Gates told the team he'd only pay attention once GPT-4 scored a 5 on the AP Biology exam. Brockman used Khan Academy's question bank, and by late August 2022 the model passed. Gates was won over.</li>
+      <li>Altman resisted closer oversight from the board, which was meeting about once a quarter. He wanted directors to act more like advisers.</li>
+      <li>At a leadership retreat, Sutskever burned a wooden effigy. He said it stood for an AGI that seemed aligned but turned out to be deceptive, and that OpenAI's duty was to destroy such a thing.</li>
+    </ul>
+    <div class="compare">
+      <div class="hot"><h5>Doomers</h5><ul><li>Rogue AI is an existential risk</li><li>Slow down, withhold, align first</li><li>Close to effective altruism and Open Philanthropy money</li><li>Saw Anthropic as their home</li></ul></div>
+      <div><h5>Boomers</h5><ul><li>Fast technological progress is a moral duty</li><li>Ship, scale, learn in public</li><li>Close to the commercial Applied division</li><li>Saw OpenAI's for-profit arm as theirs</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Apex</span></div>
+  <div class="body">
+    <div>
+      <h3>A "low-key research preview" changes everything</h3>
+      <p class="idea">ChatGPT was rushed out because of a rumour about a competitor. Its success locked in OpenAI's turn to commerce.</p>
+    </div>
+    <ul class="points">
+      <li>In autumn 2022 a rumour went round that Anthropic was about to release a chatbot. It wasn't. OpenAI's executives still decided not to wait for GPT-4. They released a chat version of GPT-3.5 on 30 November and called it a low-key research preview.</li>
+      <li>Within five days it had a million users, and within two months a hundred million, at the time the fastest-growing consumer app ever. Servers kept crashing. GPUs ran so short that other projects stalled.</li>
+      <li>Hiring surged, and the culture changed. Newcomers expected a fast-moving startup. Long-time staff felt the mission-driven lab they had joined was gone.</li>
+      <li>Microsoft rebuilt its strategy around OpenAI. Nadella moved GPUs away from Microsoft's own research to OpenAI-based products, and invested $10 billion more.</li>
+      <li>The trust and safety team was overwhelmed by the run of launches, and its leader soon burned out. GPT-4 still made things up at high rates.</li>
+      <li>OpenAI and Microsoft began planning a supercomputer code-named Stargate, estimated to cost $100 billion to build.</li>
+    </ul>
+    <div class="fig">
+      <h4>How fast ChatGPT took off</h4>
+      <div class="bars">
+        <div class="bar"><div class="row"><span>Users after 5 days</span><b>1 million</b></div><div class="track"><div class="fill" style="width:1%"></div></div></div>
+        <div class="bar"><div class="row"><span>Users after 2 months</span><b>100 million</b></div><div class="track"><div class="fill acc" style="width:100%"></div></div></div>
+      </div>
+      <p class="cap">Many OpenAI staff only learned of the launch afterwards. The team expected modest interest.</p>
+      <p class="src">Figures as reported in ch. 11</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Plundered Earth</span></div>
+  <div class="body">
+    <div>
+      <h3>Data centres, water and the new extraction</h3>
+      <p class="idea">The AI boom needs land, power, water and minerals, and it often takes them from places that already gave up a great deal.</p>
+    </div>
+    <ul class="points">
+      <li>Chile shows the long history. The Atacama Desert supplies copper and lithium, and minerals make up nearly 60 percent of Chile's exports. Under Pinochet even water was privatised. Indigenous Atacameño communities such as Sonia Ramos's live with arsenic, depleted water and the promise that extraction means progress.</li>
+      <li>Data centres have grown from server rooms to "hyperscale" sites and now to "megacampuses" needing as much power as a city. Microsoft alone spent more than $55 billion on infrastructure in fiscal 2024.</li>
+      <li>OpenAI's training ran on a series of Microsoft supercomputers that Altman called "phases". One Iowa site used around 11.5 million gallons of water in a single month while training GPT-4, about 6 percent of the district's water, during a drought. Altman did not discuss the environmental cost at company meetings.</li>
+      <li>In Santiago, Google planned a data centre that would use 169 litres of drinking water per second during a megadrought. Residents in the activist group MOSACAT read the entire 347-page filing and fought it. In 2024 a court ruled that Google could not build a water-cooled data centre there.</li>
+      <li>In Uruguay, during its worst drought in decades, the sociologist Daniel Pena forced Google to disclose its water plans. Google later switched to a waterless design. In Quilicura, young activists questioned Microsoft's claims about its cooling innovations.</li>
+      <li>Hao ends with a counter-example: researchers and students imagined data centres that give back, for example by storing water visibly or serving as public spaces.</li>
+    </ul>
+    <div class="fig">
+      <h4>The supercomputer "phases" behind OpenAI's models</h4>
+      <div class="scroll-x">
+        <svg class="narrow" viewBox="0 0 640 372" role="img" aria-label="Five supercomputer phases shown as squares of increasing size. Phase 1 in Iowa: 10,000 Nvidia V100 chips, trained GPT-3. Phase 2 in Iowa: started with 18,000 A100s, trained GPT-4. Phase 3 in Arizona: hundreds of thousands of H100s, several billion dollars. Phase 4 in Wisconsin: Nvidia B100s, Altman expected about 10 billion dollars. Phase 5, Stargate: a single supercomputer estimated at 100 billion dollars.">
+          <g stroke="var(--rule)"><line x1="0" y1="72" x2="640" y2="72"/><line x1="0" y1="144" x2="640" y2="144"/><line x1="0" y1="216" x2="640" y2="216"/><line x1="0" y1="288" x2="640" y2="288"/></g>
+          <g class="t-ink t-disp" font-size="15">
+            <text x="0" y="34">Phase 1</text><text x="0" y="106">Phase 2</text><text x="0" y="178">Phase 3</text><text x="0" y="250">Phase 4</text><text x="0" y="322" class="t-acc t-disp">Phase 5</text>
+          </g>
+          <g font-size="11.5" class="t-mute">
+            <text x="0" y="54">Iowa</text><text x="0" y="126">Iowa</text><text x="0" y="198">Arizona</text><text x="0" y="270">Wisconsin</text><text x="0" y="342">"Stargate"</text>
+          </g>
+          <rect x="182" y="28" width="16" height="16" fill="var(--grey)"/>
+          <rect x="179" y="97" width="22" height="22" fill="var(--grey)"/>
+          <rect x="173" y="163" width="34" height="34" fill="var(--grey)"/>
+          <rect x="166" y="228" width="48" height="48" fill="var(--ink-3)"/>
+          <rect x="158" y="292" width="64" height="64" fill="var(--accent)"/>
+          <g font-size="12.5" class="t-ink">
+            <text x="250" y="32">10,000 Nvidia V100s</text>
+            <text x="250" y="104">Started with 18,000 A100s</text>
+            <text x="250" y="176">Hundreds of thousands of H100s</text>
+            <text x="250" y="248">Nvidia B100s</text>
+            <text x="250" y="320" class="t-acc">One single supercomputer</text>
+          </g>
+          <g font-size="11.5">
+            <text x="250" y="52">Trained GPT-3</text>
+            <text x="250" y="124">Trained GPT-4 during a drought</text>
+            <text x="250" y="196">Several billion dollars, in the desert</text>
+            <text x="250" y="268">Altman expected ~$10 billion</text>
+            <text x="250" y="340" class="t-acc">Estimated $100 billion to build</text>
+          </g>
+        </svg>
+      </div>
+      <p class="cap">Square sizes are illustrative, not to scale. Nobody at Microsoft or OpenAI knew whether Phase 5 was even technically possible. Altman pointed to fusion power from Helion, in which he had invested, as a future energy source.</p>
+      <p class="src">As reported in chs. 11–12</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="big num acc">169 L/s</span><p>Drinking water Google's planned Santiago data centre would draw, more than 1,000 times what the 88,000 residents of Cerrillos use in a year.</p></div>
+      <div class="stat"><span class="big num">~6%</span><p>Share of an Iowa water district's supply used by Microsoft's data centres in one month of GPT-4 training.</p></div>
+      <div class="stat"><span class="big num">1.1–1.7tn</span><p>Gallons of fresh water that AI demand could consume globally each year by 2027, per a UC Riverside estimate.</p></div>
+      <div class="stat"><span class="big num">$55bn+</span><p>Microsoft's data centre spending in fiscal 2024, nearly a quarter of its revenue.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">The Two Prophets</span></div>
+  <div class="body">
+    <div>
+      <h3>Altman wins over Washington while his board loses faith</h3>
+      <p class="idea">In public, Altman was the industry's responsible voice. Inside, the independent directors were starting to doubt him.</p>
+    </div>
+    <ul class="points">
+      <li>In May 2023 Altman testified before the US Senate and called for regulation. Senators praised him. By early June he had met at least 100 lawmakers. On the same day, a small group of Hollywood concept artists came to talk about AI taking their work, and some of their meetings were pushed back because of his hearing.</li>
+      <li>The policy framework he promoted centred on "frontier models": the biggest, most compute-heavy systems. A July 2023 white paper proposed a threshold of 10<sup>26</sup> operations, which its own coauthors did not agree on. The number appeared in a footnote without justification. It then showed up in President Biden's October 2023 executive order.</li>
+      <li>Critics such as Sara Hooker and Deborah Raji argued that compute is a poor measure of risk. They also said this framing helped closed labs and hurt open-source research, and drew attention away from the harms already happening.</li>
+      <li>Altman went on a world tour. In Hao's telling, he increasingly acted on his own, with executives unsure who was actually setting direction. At the end of 2023 <em>The New York Times</em> sued OpenAI and Microsoft for copyright infringement.</li>
+      <li>Sutskever's language became more and more messianic. He co-led a new Superalignment team. Staff compared the company to the Manhattan Project. Altman took a PR lesson from it.</li>
+      <li>The board shrank as Reid Hoffman, Shivon Zilis and Will Hurd left. That left six members: Altman, Brockman, Sutskever and three independents, Adam D'Angelo, Tasha McCauley and Helen Toner. The independents grew concerned. Altman had not told them that Microsoft released GPT-4 in India without the joint safety board's approval. He had tried to push D'Angelo off the board. And they found that Altman legally owned the OpenAI Startup Fund.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The two prophets</span>
+      <p>The title points to two men talking about the same technology in very different ways. Altman was the polished salesman of AGI's promise, who reassured lawmakers. Sutskever was the mystic who was more and more afraid of what they were building. That gap would matter in November.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">Deliverance</span></div>
+  <div class="body">
+    <div>
+      <h3>Annie Altman's story</h3>
+      <p class="idea">Hao uses the estrangement of Altman's sister to question the promise that AI will bring abundance to everyone.</p>
+    </div>
+    <ul class="points">
+      <li>In September 2023 a <em>New York</em> magazine profile mentioned Annie Altman for the first time in the mainstream press. It described her health problems, housing insecurity and turn to sex work.</li>
+      <li>Hao describes her as academically gifted and close to Sam in childhood. Her life came apart with chronic illness, mental health problems and the death of their father in 2018. She says her family did not give her the kind of financial support she needed. The family said they had supported her in various ways and worried about enabling harmful behaviour.</li>
+      <li>Annie has made allegations of childhood sexual abuse against Sam. He and the family have strongly denied them. Hao notes how hard such claims are to prove decades later, presents Annie's account and the denials side by side, and makes no finding. Annie filed a lawsuit in January 2025.</li>
+      <li>Hao reports that before the profile came out, Altman began telling people his sister had borderline personality disorder, and OpenAI's communications chief later raised the same point with Hao. Annie says she never received that diagnosis, and it does not appear in the therapy notes Hao reviewed.</li>
+      <li>Hao's broader point is that none of AI's advances made any difference to Annie's crisis. The promised abundance didn't reach the person closest to its main promoter.</li>
+    </ul>
+    <div class="story">
+      <span class="label">A note on balance</span>
+      <p>This is the book's most personal chapter. Hao relies on documents, therapist notes and interviews, and includes statements from Altman's mother and the family's public denials. This summary only reports what the book says. It makes no judgement on the allegations.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART IV ============ -->
+<div class="part" id="part4">
+  <span class="label partno">Part IV · Chapters 15–18</span>
+  <h2>The reckoning</h2>
+  <p class="lede">Two senior insiders take their concerns to the board. The board acts and is quickly overpowered. Afterwards, the people who raised alarms leave, and Altman's control is stronger than before.</p>
+</div>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">The Gambit</span></div>
+  <div class="body">
+    <div>
+      <h3>Murati and Sutskever speak up</h3>
+      <p class="idea">The case against Altman came from his own top executives, not from outside critics.</p>
+    </div>
+    <ul class="points">
+      <li>Mira Murati, the CTO, grew up in Albania during its upheavals and worked at Tesla and Leap Motion before OpenAI. She had become the person who smoothed over conflicts, including Altman's. She found herself repeatedly cleaning up after him: he told different teams different things, and avoided conflict by saying yes to everyone.</li>
+      <li>On 29 September 2023 she met Helen Toner for coffee. She mentioned that Altman was pushing to ship so fast that she worried about it. A few weeks later she was blunter. When Altman was anxious, she said, he made bad decisions. The board should make sure it didn't add another Altman ally.</li>
+      <li>Sutskever reached out to Toner in early October. He had lost faith that OpenAI was the right place to build AGI. He described the culture as chaotic and backstabbing. He felt Altman had handled a conflict between him and the researcher Jakub Pachocki by playing them off against each other. Each act seemed minor on its own, he said, but together they formed a pattern of deception.</li>
+      <li>On 25 October Altman called Toner about an academic paper she had co-written. The paper compared OpenAI's and Anthropic's release strategies, partly in Anthropic's favour, on pages 28–30 of a 65-page report. Altman worried it would look bad while regulators were scrutinising OpenAI. Soon after, Altman told Sutskever that McCauley thought Toner should leave the board. McCauley said she had never said that.</li>
+      <li>For Sutskever this was one more example of what he had been describing. He and Toner agreed that it was time for the three independent directors to talk.</li>
+    </ul>
+    <div class="story hot">
+      <span class="label">What the directors weighed</span>
+      <p>Hao reports a thought experiment the independent directors used. If OpenAI were an ordinary grocery-delivery startup and two top executives described its CEO this way, would the board act? They concluded it would, and that OpenAI, which claimed to be building the world's most powerful technology, deserved a higher standard, not a lower one.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Cloak-and-Dagger</span></div>
+  <div class="body">
+    <div>
+      <h3>Five days in November, and "The Blip"</h3>
+      <p class="idea">The board had a case but no plan for communicating it. Its silence let Altman's side set the story.</p>
+    </div>
+    <ul class="points">
+      <li>From 31 October the three independent directors met almost every day. Sutskever and Murati sent them screenshots and documents. The directors decided to leave Annie Altman's allegations out of it and focus on Altman's conduct as CEO. On 11 November they decided to remove him and make Murati interim CEO.</li>
+      <li>Within hours of the announcement the plan fell apart. The directors cited confidentiality and would say very little. Murati, unsure of her position, sided with the staff. Sutskever wavered. Emmett Shear, co-founder of Twitch, agreed to step in as interim CEO, but Microsoft had already backed Altman.</li>
+      <li>On the second day, the directors confronted Altman about having misrepresented McCauley's view to Sutskever. Hao reports that he was briefly caught off guard. Later, the story of Toner's paper took over media coverage. The directors felt this was overplayed and suspected Altman's camp of pushing it.</li>
+      <li>Musk tweeted an anonymous letter from supposed former employees. Hao got into its Tor email account through a source and found it was a confused operation. She could not determine who was behind it.</li>
+      <li>Reuters reported a breakthrough called Q*. Hao says it played no part in the board's decision. Sutskever had been developing the technique since 2021: let a model use more compute when answering, so it needs less new data.</li>
+      <li>Staff called the episode "The Blip". On 8 March 2024 a review by the law firm WilmerHale ended, and the new board expressed full confidence in Altman. Toner and McCauley responded that accountability matters most for companies building powerful technology.</li>
+    </ul>
+    <div class="fig">
+      <h4>How the board crisis unfolded</h4>
+      <div class="scroll-x">
+        <svg class="narrow" viewBox="0 0 640 700" role="img" aria-label="Vertical timeline. The case builds: 29 September 2023, Murati meets Toner; 4 October, Sutskever's first call with Toner; 25 October, Altman calls Toner about her paper; 31 October, independent directors start meeting almost daily; 11 November, the board decides to remove Altman. Five days: 17 November, Altman fired; 18 November, leadership deadline passes; 19 November, Shear named interim CEO and Microsoft offers Altman a lab; 20 November, staff letter, Sutskever signs and says he regrets his part; 21 November, Altman returns, Toner and McCauley step down. Aftermath: 8 March 2024, law firm review concludes and the board backs Altman.">
+          <line x1="122" y1="40" x2="122" y2="680" stroke="var(--rule)" stroke-width="2"/>
+          <text x="0" y="22" font-size="11" class="t-mute">THE CASE BUILDS</text>
+          <text x="0" y="314" font-size="11" class="t-acc">FIVE DAYS</text>
+          <text x="0" y="628" font-size="11" class="t-mute">AFTERMATH</text>
+          <g font-size="12" text-anchor="end" class="t-mute">
+            <text x="104" y="56">29 Sep 2023</text>
+            <text x="104" y="110">4 Oct</text>
+            <text x="104" y="164">25 Oct</text>
+            <text x="104" y="218">31 Oct</text>
+            <text x="104" y="272">11 Nov</text>
+            <text x="104" y="350" class="t-acc">17 Nov</text>
+            <text x="104" y="404">18 Nov</text>
+            <text x="104" y="458">19 Nov</text>
+            <text x="104" y="512">20 Nov</text>
+            <text x="104" y="566" class="t-acc">21 Nov</text>
+            <text x="104" y="664">8 Mar 2024</text>
+          </g>
+          <g fill="var(--ink-3)">
+            <circle cx="122" cy="52" r="5"/><circle cx="122" cy="106" r="5"/><circle cx="122" cy="160" r="5"/><circle cx="122" cy="214" r="5"/><circle cx="122" cy="268" r="6" fill="var(--ink)"/>
+            <circle cx="122" cy="400" r="5"/><circle cx="122" cy="454" r="5"/><circle cx="122" cy="508" r="5"/><circle cx="122" cy="660" r="5"/>
+          </g>
+          <circle cx="122" cy="346" r="7" fill="var(--accent)"/>
+          <circle cx="122" cy="562" r="7" fill="var(--accent)"/>
+          <g font-size="14" class="t-ink t-disp">
+            <text x="142" y="52">Murati meets Toner for coffee</text>
+            <text x="142" y="106">Sutskever's first call with Toner</text>
+            <text x="142" y="160">Altman calls Toner about her paper</text>
+            <text x="142" y="214">Independent directors meet near-daily</text>
+            <text x="142" y="268">Decision: remove Altman</text>
+            <text x="142" y="346" class="t-acc t-disp">Altman fired over a video call</text>
+            <text x="142" y="400">Leadership's 5 p.m. deadline passes</text>
+            <text x="142" y="454">Shear named interim CEO</text>
+            <text x="142" y="508">Staff letter threatens mass exit</text>
+            <text x="142" y="562" class="t-acc t-disp">Altman returns as CEO</text>
+            <text x="142" y="660">Law firm review concludes</text>
+          </g>
+          <g font-size="11.5">
+            <text x="142" y="71">raises worries about pace and management</text>
+            <text x="142" y="125">says the board should look closely at Altman</text>
+            <text x="142" y="179">then tells Sutskever McCauley wants Toner out</text>
+            <text x="142" y="233">collect documents from Sutskever and Murati</text>
+            <text x="142" y="287">Murati to be interim CEO</text>
+            <text x="142" y="365">"not consistently candid"; Brockman quits</text>
+            <text x="142" y="419">board refuses to resign</text>
+            <text x="142" y="473">Nadella says Altman will join Microsoft</text>
+            <text x="142" y="527">Sutskever signs it and says he regrets his part</text>
+            <text x="142" y="581">Toner and McCauley leave; Taylor, Summers join</text>
+            <text x="142" y="679">new board says it has full confidence in Altman</text>
+          </g>
+        </svg>
+      </div>
+      <p class="cap">The directors spent weeks building their case. It came apart in about 100 hours. Staff loyalty, the tender offer, Microsoft's backing and the board's silence all worked in Altman's favour.</p>
+      <p class="src">Dates as reported in the prologue and chs. 15–16</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">Reckoning</span></div>
+  <div class="body">
+    <div>
+      <h3>The "Omnicrisis" of May 2024</h3>
+      <p class="idea">Three scandals in one week showed staff a gap between what leaders said and what they had signed.</p>
+    </div>
+    <ul class="points">
+      <li>After The Blip, Sutskever never returned to the office, and the Safety camp lost influence. Altman's efforts to raise money for a new AI chip venture alarmed the remaining Doomers.</li>
+      <li>OpenAI raced to ship "Scallion", the voice-enabled GPT-4o, which it demonstrated on 13 May 2024. Afterwards Altman tweeted a single word: "her", a reference to the film in which a man falls in love with an AI assistant.</li>
+      <li>On 14 May, Sutskever's departure was announced, along with that of Jan Leike, co-head of the Superalignment team. Leike then posted publicly that safety had "taken a backseat to shiny products".</li>
+      <li>Kelsey Piper at <em>Vox</em> revealed that departing staff had to sign lifelong non-disparagement agreements or risk losing their vested equity. Daniel Kokotajlo had refused to sign and lost his. Altman said he hadn't known about this. Exit documents later showed that executives' signatures were on the relevant paperwork.</li>
+      <li>On 20 May Scarlett Johansson said Altman had asked her to voice ChatGPT, that she had declined, and that the "Sky" voice sounded strikingly like her. OpenAI took Sky down.</li>
+      <li>Staff named it the "Omnicrisis". At tense all-hands meetings, executives' accounts of who had known about the equity clause didn't match. Murati, Brockman and Pachocki went to Sutskever's house to ask him to return. The offer was withdrawn soon after.</li>
+    </ul>
+    <div class="fig">
+      <h4>One week in May 2024</h4>
+      <ol class="ladder">
+        <li><span class="yr">13 May</span><div><b>GPT-4o demo</b><span class="d">Altman tweets "her"</span></div></li>
+        <li><span class="yr">14 May</span><div><b>Sutskever and Leike depart</b><span class="d">Pachocki becomes chief scientist</span></div></li>
+        <li class="hot"><span class="yr">17 May</span><div><b>Leike's tweets and the first <em>Vox</em> equity story</b><span class="d">The non-disparagement clawback comes to light</span></div></li>
+        <li class="hot"><span class="yr">20 May</span><div><b>Scarlett Johansson's statement</b><span class="d">The Sky voice is withdrawn</span></div></li>
+        <li><span class="yr">22–23 May</span><div><b>All-hands meetings</b><span class="d">A second <em>Vox</em> story undercuts the leadership's account</span></div></li>
+      </ol>
+      <p class="src">As reported in ch. 17</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">A Formula for Empire</span></div>
+  <div class="body">
+    <div>
+      <h3>A mission vague enough to justify anything</h3>
+      <p class="idea">"Ensure AGI benefits all of humanity" has been used to justify nearly every turn OpenAI has taken.</p>
+    </div>
+    <ul class="points">
+      <li>Altman once named <em>The Mind of Napoleon</em> as the best book he'd read that year. Hao uses it as a parallel: Napoleon kept the French Revolution's motto but reinterpreted it to serve his own power.</li>
+      <li>She sees three ingredients in OpenAI's mission. It <strong>gathers talent</strong> around a grand goal, the way Altman once said great founders build something "closer to a religion". It <strong>gathers capital</strong> and pushes aside regulation and dissent in the name of progress and competition. And it is <strong>vague enough</strong> to be reinterpreted whenever needed. Two days before he was fired, Altman himself called AGI "a ridiculous and meaningless term".</li>
+      <li>Senior people kept leaving. John Schulman left in August 2024. On 25 September Murati announced her departure, along with Bob McGrew and Barret Zoph, two days after Altman's essay "The Intelligence Age" promised "unimaginable" prosperity. The next model, Orion, was struggling to justify its cost.</li>
+      <li>In October 2024 OpenAI raised $6.6 billion at a $157 billion valuation, the largest venture round in history. Investors could ask for their money back if it did not become a for-profit within two years. In December it announced plans to become a for-profit public benefit corporation.</li>
+      <li>In January 2025 Altman wrote that OpenAI was now "confident we know how to build AGI".</li>
+    </ul>
+    <div class="fig">
+      <h4>What "the mission" has meant, year by year</h4>
+      <ol class="ladder">
+        <li><span class="yr">2015</span><div><b>A nonprofit free of financial pressure</b><span class="d">Research to be shared openly</span></div></li>
+        <li><span class="yr">2016</span><div><b>Share the benefits, not necessarily the science</b><span class="d">Per Sutskever's email to the other founders</span></div></li>
+        <li><span class="yr">2018–19</span><div><b>A capped-profit to "marshal substantial resources"</b><span class="d">While avoiding a race without time for safety</span></div></li>
+        <li><span class="yr">2020</span><div><b>An API as "openness and benefit sharing"</b><span class="d">The model itself stays closed</span></div></li>
+        <li><span class="yr">2022</span><div><b>"Iterative deployment"</b><span class="d">Shipping as fast as possible is presented as the safe path</span></div></li>
+        <li class="hot"><span class="yr">2024</span><div><b>A for-profit public benefit corporation</b><span class="d">"We once again need to raise more capital than we'd imagined"</span></div></li>
+      </ol>
+      <p class="src">Hao's sequence in ch. 18, paraphrased; quoted phrases are OpenAI's</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue · How the Empire Falls</span>
+    <h2>Ask how AI shifts power</h2>
+    <p class="lede">Hao ends with people building AI differently, and with a question from the Stanford researcher Ria Kalluri: instead of asking whether AI is "good", ask whether it concentrates power or spreads it out.</p>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p><strong>Te Hiku Media</strong>, a Māori radio station in Aotearoa New Zealand, wanted speech recognition for te reo Māori, a language nearly wiped out under colonial rule. Instead of scraping the web, it asked the community. In ten days about 2,500 people recorded some 200,000 clips, giving about 310 hours of transcribed audio. That was enough for a model with 86 percent accuracy. The data stays under Māori stewardship and is used with consent. By comparison, OpenAI's Whisper was trained on 680,000 hours taken from the web.</p>
+      <p><strong>DAIR</strong>, the Distributed AI Research Institute founded by Timnit Gebru, works outside the industry. Through its Data Workers' Inquiry, data workers including Oskarina Fuentes and Mophat Okinyi document their own conditions. Okinyi now organises African tech workers. In Uruguay, Daniel Pena continues to question who data centres serve.</p>
+      <p>Hao says the empires hold power along three axes: <strong>knowledge</strong>, <strong>resources</strong> and <strong>influence</strong>. Each one feeds the others. Dismantling the empire means redistributing all three.</p>
+    </div>
+    <div class="fig">
+      <h4>Three axes of power</h4>
+      <div class="scroll-x">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Triangle diagram. Knowledge at the top, influence at bottom right, resources at bottom left. Arrows: controlling knowledge fuels influence, influence accumulates resources, and resources secure knowledge. Each reinforces the others.">
+        <defs><marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--accent)"/></marker></defs>
+        <g stroke="var(--accent)" stroke-width="2" fill="none" marker-end="url(#ah3)">
+          <line x1="392" y1="98" x2="492" y2="280"/>
+          <line x1="428" y1="322" x2="214" y2="322"/>
+          <line x1="140" y1="282" x2="246" y2="98"/>
+        </g>
+        <g fill="var(--card)" stroke="var(--ink)" stroke-width="1.5">
+          <rect x="220" y="24" width="200" height="72" rx="8"/>
+          <rect x="10" y="286" width="200" height="72" rx="8"/>
+          <rect x="430" y="286" width="200" height="72" rx="8"/>
+        </g>
+        <g text-anchor="middle">
+          <text x="320" y="54" font-size="17" class="t-ink t-disp">KNOWLEDGE</text>
+          <text x="320" y="80" font-size="13">talent, closed models</text>
+          <text x="110" y="316" font-size="16" class="t-ink t-disp">RESOURCES</text>
+          <text x="110" y="342" font-size="12.5">money, data, labour, land</text>
+          <text x="530" y="316" font-size="16" class="t-ink t-disp">INFLUENCE</text>
+          <text x="530" y="342" font-size="12.5">ideology, dazzling demos</text>
+        </g>
+        <text x="458" y="180" font-size="14" class="t-acc">fuels</text>
+        <text x="320" y="310" text-anchor="middle" font-size="14" class="t-acc">accumulates</text>
+        <text x="182" y="180" text-anchor="end" font-size="14" class="t-acc">secures</text>
+        <text x="320" y="198" text-anchor="middle" font-size="14" class="t-ink">each reinforces</text>
+        <text x="320" y="218" text-anchor="middle" font-size="14" class="t-ink">the others</text>
+      </svg>
+      </div>
+      <p class="cap">Controlling knowledge brings influence. Influence brings resources. Resources secure control of knowledge. Hao's remedy works on all three at once.</p>
+      <p class="src">Ch. "How the Empire Falls"</p>
+    </div>
+  </div>
+
+  <div class="figrow" style="margin-top:24px">
+    <div class="fig">
+      <h4>Two ways to build a speech model</h4>
+      <div class="bars">
+        <div class="bar"><div class="row"><span>OpenAI Whisper: audio taken from the web</span><b>680,000 h</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar"><div class="row"><span>Te Hiku: donated, consented, community-labelled</span><b>310 h</b></div><div class="track"><div class="fill acc" style="width:0.3%"></div></div></div>
+      </div>
+      <p class="cap">Te Hiku's set is about 0.05 percent the size, yet good enough for the first te reo Māori speech recogniser, at 86 percent accuracy. Small, task-specific models are possible.</p>
+      <p class="src">Figures as reported in the epilogue</p>
+    </div>
+    <div class="fig">
+      <h4>Redistributing each axis</h4>
+      <div class="compare">
+        <div><h5>Knowledge</h5><ul><li>Fund independent research and model audits</li><li>Support new approaches beyond LLMs</li><li>Require disclosure of training data</li></ul></div>
+        <div><h5>Resources</h5><ul><li>Disclose environmental costs</li><li>Stronger labour protections for data workers</li><li>Consent and pay for data and creative work</li></ul></div>
+        <div class="hot" style="grid-column:1 / -1"><h5>Influence</h5><ul><li>Broad public education about how AI works and who builds it, which in Weizenbaum's view is how the "magic crumbles away"</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Hao's book is reporting, not a manual. But it suggests clear habits for reading AI news, judging AI companies, and pushing for a different path.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Read the claims</h3>
+      <div class="tk"><b>Ask what "AGI" means here</b><span>The term has no agreed definition. When it's used to justify a decision, ask what specific benefit is promised, and by when.</span></div>
+      <div class="tk"><b>Treat "scaling laws" as choices</b><span>Like Moore's Law, they describe where money has gone, not a law of nature.</span></div>
+      <div class="tk"><b>Look for the evidence behind capability claims</b><span>Closed models can't be independently checked. Treat claims that can't be tested with caution.</span></div>
+      <div class="tk"><b>Notice the rival-empire argument</b><span>"If we don't, a worse actor will" has been used to justify speed, secrecy and lobbying.</span></div>
+    </div>
+    <div class="col">
+      <h3>Follow the costs</h3>
+      <div class="tk"><b>Ask who labelled the data</b><span>Behind every polished chatbot are low-paid workers, often in crisis-hit countries, doing RLHF and content filtering.</span></div>
+      <div class="tk"><b>Ask where the data centre is</b><span>And whose water, land and power it uses, especially in drought zones.</span></div>
+      <div class="tk"><b>Ask whose work trained it</b><span>Writers, artists and ordinary users' posts, mostly without consent or payment.</span></div>
+      <div class="tk"><b>Count governance, not promises</b><span>OpenAI's nonprofit board was meant to be a safeguard. It held for five days.</span></div>
+    </div>
+    <div class="col">
+      <h3>Shift the power</h3>
+      <div class="tk"><b>Ask Kalluri's question</b><span>Does this AI concentrate power or spread it out? That is more useful than asking whether it is "good".</span></div>
+      <div class="tk"><b>Back alternatives</b><span>Community-run, task-specific projects like Te Hiku, and independent research like DAIR.</span></div>
+      <div class="tk"><b>Push for transparency rules</b><span>Disclosure of training data, energy and water use, and labour conditions, so the costs can be seen.</span></div>
+      <div class="tk"><b>Learn how it works</b><span>Weizenbaum's lesson from ELIZA: once a system's workings are explained plainly, the illusion fades.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Karen Hao, <em>Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI</em> (Penguin Press, 2025). Events, figures and characterisations are as reported in the book, which draws on more than 300 interviews; OpenAI and Sam Altman declined to cooperate with it. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  /* --- Hero: resources drift from the edges into an oval --- */
+  var canvas = document.getElementById("flow");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var css = function (n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, h = 0, dpr = 1, parts = [];
+  var seed = 11;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; h = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.round(Math.min(140, w / 6));
+    parts = [];
+    seed = 11;
+    for (var i = 0; i < n; i++) parts.push({ y: rnd(), t: rnd(), s: 0.6 + rnd() * 0.8, hot: rnd() < 0.14 });
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, h);
+    var cx = w - Math.min(90, w * 0.14), cy = h / 2, rx = Math.min(70, w * 0.1), ry = h * 0.36;
+    var ink = css("--ink"), grey = css("--ink-3"), acc = css("--accent");
+    var k = reduce ? 0 : time * 0.00005;
+    parts.forEach(function (p) {
+      var u = (p.t + k * p.s) % 1;                 // progress 0 → 1 along the path
+      var e = u * u * (3 - 2 * u);
+      var x0 = 0, y0 = p.y * h;
+      var x = x0 + (cx - x0) * e;
+      var y = y0 + (cy - y0) * Math.pow(e, 1.6);
+      var r = 2.6 * (1 - 0.6 * e);
+      ctx.globalAlpha = 0.25 + 0.6 * (1 - Math.abs(0.5 - u) * 1.2);
+      ctx.fillStyle = p.hot ? acc : grey;
+      ctx.beginPath(); ctx.arc(x, y, Math.max(r, 0.8), 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+    ctx.lineWidth = 2.5; ctx.strokeStyle = ink;
+    ctx.beginPath(); ctx.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2); ctx.stroke();
+    ctx.fillStyle = ink;
+    ctx.font = "800 " + Math.round(ry * 0.42) + "px Archivo, Arial, sans-serif";
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText("AI", cx, cy + 1);
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { draw(performance.now()); });
+  start();
+})();
+</script>
+
+</body>
+</html>

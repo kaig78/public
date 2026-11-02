@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Life of the Beloved by Henri Nouwen – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from the cover's Van Gogh, Café Terrace at Night:
+   the night-blue sky for "taken", the lamp-yellow awning for "blessed", the warm
+   cobblestone ember for "broken" and the dark tree green for "given". */
+:root {
+  --paper: #f8f6ef;
+  --paper-2: #eeeadc;
+  --card: #fffdf7;
+  --ink: #151a2b;
+  --ink-2: #474d61;
+  --ink-3: #7a7f8e;
+  --rule: #dcd8c8;
+
+  --night: #1f3a8a;
+  --lamp: #e8b923;
+
+  /* the four movements */
+  --taken: #2a4596;
+  --blessed: #9a6c00;
+  --broken: #b14f1c;
+  --given: #2f7247;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0d1224;
+    --paper-2: #161d35;
+    --card: #19213b;
+    --ink: #f1eddf;
+    --ink-2: #bfc0c8;
+    --ink-3: #8a8fa2;
+    --rule: #2c3554;
+    --night: #8fa8f2;
+    --lamp: #f2c94c;
+    --taken: #93acf5;
+    --blessed: #f2c94c;
+    --broken: #f08a52;
+    --given: #7cc893;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0d1224;
+  --paper-2: #161d35;
+  --card: #19213b;
+  --ink: #f1eddf;
+  --ink-2: #bfc0c8;
+  --ink-3: #8a8fa2;
+  --rule: #2c3554;
+  --night: #8fa8f2;
+  --lamp: #f2c94c;
+  --taken: #93acf5;
+  --blessed: #f2c94c;
+  --broken: #f08a52;
+  --given: #7cc893;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--taken); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Movement colour helpers */
+.c-taken   { --c: var(--taken); }
+.c-blessed { --c: var(--blessed); }
+.c-broken  { --c: var(--broken); }
+.c-given   { --c: var(--given); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(54px, 10.5vw, 132px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.03em;
+  color: var(--taken);
+}
+.hero h1 .pre {
+  display: block;
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 700;
+  font-stretch: 100%;
+  letter-spacing: -.005em;
+  line-height: 1.1;
+  margin: 0 0 .35em .08em;
+  color: var(--ink-2);
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+  aspect-ratio: 720 / 1069;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 20, 50, .4), 0 8px 18px -10px rgba(10, 20, 50, .3);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.glowband { position: relative; margin-top: 28px; }
+.glowband canvas { display: block; width: 100%; height: 120px; border-radius: 6px; }
+.glowband .ends { display: flex; justify-content: space-between; gap: 12px; margin-top: 8px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--c, var(--ink));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part h2 em { font-style: normal; color: var(--c); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--c, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--c, var(--ink));
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-width: 0;
+}
+.fig svg.wide { max-width: 640px; margin-inline: auto; }
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-mute { fill: var(--ink-3); }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 36px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--c, var(--ink)); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 6px 12px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); color: var(--c, var(--ink)); }
+.chip.ghost { border-style: dashed; color: var(--ink-3); border-color: var(--ink-3); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* flipped readings */
+.flip { display: grid; gap: 10px; }
+.flip .q { display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr); gap: 10px; align-items: center; font-size: 16px; }
+.flip .q span:first-child { color: var(--ink-3); }
+.flip .q span:nth-child(2) { font-family: var(--mono); color: var(--broken); text-align: center; }
+.flip .q span:last-child { font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+.flip .hd span { font-family: var(--mono) !important; font-size: 11px !important; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3) !important; font-weight: 400 !important; }
+
+/* three steps */
+.steps3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.steps3 div { border-top: 3px solid var(--c, var(--ink)); padding-top: 10px; display: grid; gap: 4px; align-content: start; }
+.steps3 b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; }
+.steps3 span { font-size: 14.5px; color: var(--ink-2); line-height: 1.45; }
+
+/* gifts of the core members */
+.gifts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.gifts div { border-radius: 6px; padding: 14px; border: 1px solid color-mix(in srgb, var(--given) 35%, var(--rule)); background: color-mix(in srgb, var(--given) 7%, var(--card)); display: grid; gap: 4px; align-content: start; }
+.gifts b { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 20px; color: var(--given); }
+.gifts span { font-size: 14px; color: var(--ink-2); line-height: 1.35; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+  color: var(--c, var(--ink));
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 3px solid var(--c, var(--ink)); padding-top: 12px; color: var(--c, var(--ink)); }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.xlink { display: grid; gap: 8px; border-left: 3px solid var(--lamp); padding: 6px 0 6px 20px; }
+.xlink a { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 22px; line-height: 1.2; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro2, .epilogue, .part { grid-template-columns: 1fr; }
+  .map { grid-template-columns: 1fr; }
+  .toolkit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare, .steps3, .gifts, .toolkit { grid-template-columns: 1fr; }
+  .flip .q { grid-template-columns: 1fr; gap: 2px; }
+  .flip .q span:nth-child(2) { text-align: left; }
+  .flip .hd { display: none !important; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Henri J. M. Nouwen · Crossroad</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#being">Being</a>
+    <a href="#becoming">Becoming</a>
+    <a href="#living">Living</a>
+    <a href="#epilogue">Epilogue</a>
+    <a href="#toolkit">Practices</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span class="pre">Life of the</span>Beloved</h1>
+    <p class="sub">Spiritual living in a secular world</p>
+    <p class="dek">A Catholic priest writes a long letter to a secular Jewish friend in New York, trying to say one thing without church language: you are loved before you prove anything, and a whole life can grow from hearing it.</p>
+    <div class="byline label">
+      <span>1 friend</span><span>1 word</span><span>4 movements</span><span>written as letters</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" width="720" height="1069" alt="Cover of Life of the Beloved by Henri J. M. Nouwen: the author's name in dark serif capitals and the title in blue on white, above Van Gogh's Café Terrace at Night, a yellow-lit café awning under a starry night-blue sky">
+</div>
+
+<div class="glowband" aria-hidden="true">
+  <canvas id="voices"></canvas>
+  <div class="ends label"><span>The quiet voice</span><span>The louder voices</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>One word, written for one friend</h2>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p>The book starts with a bad interview. While Nouwen was teaching at Yale Divinity School, a bored young journalist named Fred Bratman came to profile him for the Connecticut section of the Sunday <em>New York Times</em>. Fred admitted he disliked the job and really wanted to write a novel. On the spot, Nouwen told him to quit, come to Yale for a year and write it, and promised to find the money. Fred came. The novel never got written, but the two became close friends.</p>
+      <p>Years later, walking down Columbus Avenue, Fred asked for something Nouwen had never managed: <em>“Why don't you write something about the spiritual life for me and my friends?”</em> He meant young, ambitious, secular New Yorkers who found Nouwen's earlier books good but not meant for them.</p>
+      <p>The answer is this book, written as a personal letter to Fred. Its core is one word, <strong>Beloved</strong>, which Nouwen takes from the voice heard at Jesus' baptism. He argues that it names the deepest truth about every person, religious or not. The rest of the book shows how that truth becomes real in ordinary life through four movements, borrowed from what he does with bread at the communion table every day: take, bless, break, give.</p>
+    </div>
+    <div class="fig">
+      <h4>The four movements of the Beloved</h4>
+      <svg viewBox="0 0 440 400" role="img" aria-label="A cycle of four circles around the word Beloved. Top: Taken, also called chosen, from the gesture take. Right: Blessed, from bless. Bottom: Broken, from break. Left: Given, from give. Arrows run clockwise from Taken to Blessed to Broken to Given and back to Taken.">
+        <defs>
+          <marker id="ar-cyc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--ink-3)"/></marker>
+        </defs>
+        <circle cx="220" cy="200" r="128" fill="none" style="stroke:var(--rule)" stroke-width="1.5" stroke-dasharray="3 5"/>
+        <!-- arcs between nodes, clockwise -->
+        <path d="M268 84 A128 128 0 0 1 336 152" fill="none" style="stroke:var(--ink-3)" stroke-width="1.6" marker-end="url(#ar-cyc)"/>
+        <path d="M336 248 A128 128 0 0 1 268 316" fill="none" style="stroke:var(--ink-3)" stroke-width="1.6" marker-end="url(#ar-cyc)"/>
+        <path d="M172 316 A128 128 0 0 1 104 248" fill="none" style="stroke:var(--ink-3)" stroke-width="1.6" marker-end="url(#ar-cyc)"/>
+        <path d="M104 152 A128 128 0 0 1 172 84" fill="none" style="stroke:var(--ink-3)" stroke-width="1.6" marker-end="url(#ar-cyc)"/>
+        <!-- centre -->
+        <circle cx="220" cy="200" r="50" style="fill:color-mix(in srgb, var(--lamp) 22%, transparent);stroke:var(--lamp)" stroke-width="2"/>
+        <text x="220" y="198" text-anchor="middle" font-size="17" style="font-family:var(--display);font-weight:800;fill:var(--ink)">Beloved</text>
+        <text x="220" y="218" text-anchor="middle" font-size="11.5" class="t-mute">core truth</text>
+        <!-- nodes -->
+        <g>
+          <circle cx="220" cy="72" r="44" style="fill:color-mix(in srgb, var(--taken) 14%, var(--card));stroke:var(--taken)" stroke-width="2.5"/>
+          <text x="220" y="70" text-anchor="middle" font-size="17" style="font-family:var(--display);font-weight:800;fill:var(--taken)">Taken</text>
+          <text x="220" y="89" text-anchor="middle" font-size="11.5">“chosen”</text>
+          <text x="220" y="14" text-anchor="middle" font-size="12" class="t-mute">take the bread</text>
+        </g>
+        <g>
+          <circle cx="348" cy="200" r="44" style="fill:color-mix(in srgb, var(--blessed) 14%, var(--card));stroke:var(--blessed)" stroke-width="2.5"/>
+          <text x="348" y="198" text-anchor="middle" font-size="17" style="font-family:var(--display);font-weight:800;fill:var(--blessed)">Blessed</text>
+          <text x="348" y="217" text-anchor="middle" font-size="11.5">good words</text>
+          <text x="404" y="262" text-anchor="end" font-size="12" class="t-mute">bless it</text>
+        </g>
+        <g>
+          <circle cx="220" cy="328" r="44" style="fill:color-mix(in srgb, var(--broken) 14%, var(--card));stroke:var(--broken)" stroke-width="2.5"/>
+          <text x="220" y="326" text-anchor="middle" font-size="17" style="font-family:var(--display);font-weight:800;fill:var(--broken)">Broken</text>
+          <text x="220" y="345" text-anchor="middle" font-size="11.5">uniquely</text>
+          <text x="220" y="394" text-anchor="middle" font-size="12" class="t-mute">break it</text>
+        </g>
+        <g>
+          <circle cx="92" cy="200" r="44" style="fill:color-mix(in srgb, var(--given) 14%, var(--card));stroke:var(--given)" stroke-width="2.5"/>
+          <text x="92" y="198" text-anchor="middle" font-size="17" style="font-family:var(--display);font-weight:800;fill:var(--given)">Given</text>
+          <text x="92" y="217" text-anchor="middle" font-size="11.5">for others</text>
+          <text x="36" y="262" font-size="12" class="t-mute">give it</text>
+        </g>
+      </svg>
+      <p class="cap">Nouwen says the four words sum up his life on three levels: as a priest, who takes, blesses, breaks and gives bread every day; as a Christian, called to become bread for the world; and as a human being, because all four are happening in every moment. Drawn as a loop for this page. Each movement ends by turning outward, which feeds the next.</p>
+    </div>
+  </div>
+
+  <div class="stats" style="margin-top:28px">
+    <div class="stat"><span class="big num">750</span><p>Words Fred was allowed for his newspaper profile. Too few, he said, to do any subject justice.</p></div>
+    <div class="stat"><span class="big num">1 year</span><p>Fred spent at Yale Divinity School, a Jew at a Christian seminary, trying to write his novel.</p></div>
+    <div class="stat"><span class="big num">10+ years</span><p>Of friendship between that interview and this book, through Fred's divorce and Nouwen's move to L'Arche.</p></div>
+    <div class="stat"><span class="big num">4</span><p>Words Nouwen calls the most important of his life: taken, blessed, broken, given.</p></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Opening</span>
+      <h3>The truth</h3>
+      <ol>
+        <li><span>P</span><a href="#idea"><b>A Friendship Begins</b>How a reluctant interview became a request</a></li>
+        <li><span>01</span><a href="#being"><b>Being the Beloved</b>The voice, and the trap of self-rejection</a></li>
+        <li><span>02</span><a href="#becoming"><b>Becoming the Beloved</b>Making the truth flesh in daily life</a></li>
+      </ol>
+    </div>
+    <div class="col c-taken">
+      <span class="label">The four movements</span>
+      <h3 style="color:var(--taken)">The process</h3>
+      <ol>
+        <li><span>I</span><a href="#taken"><b>Taken</b>Chosen, without anyone being rejected</a></li>
+        <li><span>II</span><a href="#blessed"><b>Blessed</b>Hearing good things said of you</a></li>
+        <li><span>III</span><a href="#broken"><b>Broken</b>Befriending the wound, putting it under the blessing</a></li>
+        <li><span>IV</span><a href="#given"><b>Given</b>Your life, and your death, as gift</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Closing</span>
+      <h3>The life</h3>
+      <ol>
+        <li><span>03</span><a href="#living"><b>Living as the Beloved</b>In the world, without belonging to it</a></li>
+        <li><span>E</span><a href="#epilogue"><b>A Friendship Deepens</b>Fred's verdict: it didn't reach him</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEING ============ -->
+<section id="being">
+  <div class="sec-head">
+    <span class="label">Being the Beloved</span>
+    <h2>The greatest trap is not success but self-rejection</h2>
+    <p class="lede">The quiet voice that calls you beloved is always speaking. The trouble is that other voices are louder, and they all say the same thing: you are worth nothing unless you prove otherwise.</p>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p>Nouwen's one message to Fred is the sentence from the baptism story: <em>“You are my Beloved, on you my favor rests.”</em> The best gift a friend can give, he says, is to hand that truth on, and you can only hand on what you have claimed for yourself.</p>
+      <p>The obstacle is <strong style="color:var(--broken)">self-rejection</strong>. Success, popularity and power are real temptations, but he thinks their pull comes from something underneath: once we believe we are unlovable, they look like solutions. When he is criticised or left out, his reflex is to conclude that he is a nobody, blaming not what he did but who he is.</p>
+      <p>Arrogance, he argues, is the same wound from the other side: a pedestal built so no one sees how little we think of ourselves. Inflated or deflated, we lose touch with the truth.</p>
+      <p>Plenty of people loved him well, he admits, and it never quite convinced him: would they still, if they saw everything? So he kept waiting for some job, trip or relationship to deliver the feeling, a hunt he says ends in burnout.</p>
+      <p>The alternative is to listen. He compares it to finding damp ground in a desert: once you touch it, you want to dig, or rather to clear away the dry sand that already covers a well.</p>
+    </div>
+    <div class="fig">
+      <h4>Two kinds of voice</h4>
+      <svg viewBox="0 0 440 380" role="img" aria-label="On the left, loud voices: you are no good, you are nobody, prove you are worth something, do something spectacular. They feed a box labelled self-rejection. Self-rejection splits into two forms: inflated, arrogance, and deflated, low self-esteem. Success, popularity and power look like solutions. On the right a single quiet voice, heard in silence and solitude, says you are my Beloved, and leads to a box labelled the core truth.">
+        <defs>
+          <marker id="ar-v" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--ink-3)"/></marker>
+          <marker id="ar-vl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--blessed)"/></marker>
+        </defs>
+        <text x="0" y="16" font-size="12" class="t-mute">LOUD, MANY</text>
+        <text x="440" y="16" text-anchor="end" font-size="12" class="t-mute">QUIET, ONE</text>
+        <!-- loud voices -->
+        <text x="0" y="48" font-size="17" style="font-family:var(--display);font-weight:800;fill:var(--ink-2)">You are no good</text>
+        <text x="6" y="76" font-size="14" style="font-family:var(--display);font-weight:700;fill:var(--ink-2)">You are nobody</text>
+        <text x="0" y="104" font-size="15" style="font-family:var(--display);font-weight:700;fill:var(--ink-2)">Prove you're worth it</text>
+        <text x="6" y="130" font-size="13" style="font-family:var(--display);font-weight:700;fill:var(--ink-3)">Do something spectacular</text>
+        <line x1="90" y1="142" x2="110" y2="180" style="stroke:var(--ink-3)" stroke-width="1.5" marker-end="url(#ar-v)"/>
+        <!-- self-rejection -->
+        <rect x="20" y="186" width="190" height="46" rx="6" style="fill:color-mix(in srgb, var(--broken) 14%, var(--card));stroke:var(--broken)" stroke-width="2"/>
+        <text x="115" y="215" text-anchor="middle" font-size="15" style="font-family:var(--display);font-weight:800;fill:var(--broken)">Self-rejection</text>
+        <line x1="70" y1="232" x2="58" y2="262" style="stroke:var(--ink-3)" stroke-width="1.5" marker-end="url(#ar-v)"/>
+        <line x1="160" y1="232" x2="172" y2="262" style="stroke:var(--ink-3)" stroke-width="1.5" marker-end="url(#ar-v)"/>
+        <text x="50" y="282" text-anchor="middle" font-size="12.5" class="t-ink">inflated:</text>
+        <text x="50" y="298" text-anchor="middle" font-size="12.5">arrogance</text>
+        <text x="180" y="282" text-anchor="middle" font-size="12.5" class="t-ink">deflated:</text>
+        <text x="180" y="298" text-anchor="middle" font-size="12.5">low self-esteem</text>
+        <rect x="10" y="318" width="210" height="44" rx="6" fill="none" style="stroke:var(--ink-3)" stroke-dasharray="4 4"/>
+        <text x="115" y="337" text-anchor="middle" font-size="11.5">success, popularity, power</text>
+        <text x="115" y="353" text-anchor="middle" font-size="11.5" class="t-mute">look like the cure</text>
+        <!-- divider -->
+        <line x1="240" y1="30" x2="240" y2="370" style="stroke:var(--rule)" stroke-width="1"/>
+        <!-- quiet voice -->
+        <circle cx="340" cy="78" r="30" style="fill:color-mix(in srgb, var(--lamp) 24%, transparent);stroke:var(--lamp)" stroke-width="2"/>
+        <circle cx="340" cy="78" r="5" style="fill:var(--blessed)"/>
+        <text x="340" y="134" text-anchor="middle" font-size="14" style="font-family:var(--display);font-weight:800;fill:var(--blessed)">“You are my Beloved”</text>
+        <text x="340" y="156" text-anchor="middle" font-size="11.5">heard in silence</text>
+        <text x="340" y="172" text-anchor="middle" font-size="11.5">and solitude</text>
+        <line x1="340" y1="182" x2="340" y2="230" style="stroke:var(--blessed)" stroke-width="1.6" marker-end="url(#ar-vl)"/>
+        <rect x="262" y="236" width="156" height="46" rx="6" style="fill:color-mix(in srgb, var(--lamp) 16%, var(--card));stroke:var(--blessed)" stroke-width="2"/>
+        <text x="340" y="265" text-anchor="middle" font-size="14.5" style="font-family:var(--display);font-weight:800;fill:var(--ink)">The core truth</text>
+        <text x="340" y="312" text-anchor="middle" font-size="11.5" class="t-mute">loved before parents,</text>
+        <text x="340" y="328" text-anchor="middle" font-size="11.5" class="t-mute">friends or partners</text>
+        <text x="340" y="344" text-anchor="middle" font-size="11.5" class="t-mute">loved or wounded us</text>
+      </svg>
+      <p class="cap">Schematic of the argument in “Being the Beloved”. The loud voices are paraphrased. Nouwen's point is that both arrogance and low self-esteem grow from the same root, and that worldly success is attractive mainly as a remedy for it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BECOMING ============ -->
+<div class="part c-taken" id="becoming">
+  <span class="label partno">Becoming the Beloved · Four movements</span>
+  <h2>From <em>being</em> to becoming</h2>
+  <p class="lede">Knowing you are beloved changes nothing while it stays a lovely idea. The work is to let it show up in how you eat, talk, work and love, among rent, phone calls and errands.</p>
+</div>
+
+<div class="prose" style="margin-top:28px">
+  <p class="muted">Our age can describe the psyche in detail; Nouwen wants the same precision for the movements of the spirit. Citing Augustine's restless heart, he argues we can only search for what we have already tasted. Becoming the Beloved means closing the gap between that memory and Tuesday afternoon.</p>
+</div>
+
+<article class="chapter c-taken" id="taken">
+  <div class="gutter"><span class="chno">I</span><span class="label">Taken</span></div>
+  <div class="body">
+    <div>
+      <h3>Chosen, without anyone left out</h3>
+      <p class="idea">God's choosing is compassionate, not competitive. Being chosen includes others instead of ranking you above them.</p>
+    </div>
+    <ul class="points">
+      <li>“Taken” sounds cold, so he swaps in a warmer word: <strong>chosen</strong>. Seen as unique and precious long before anyone praised or hurt you.</li>
+      <li>He knows the word is loaded for Fred, whose parents came to America in the shadow of pogroms back in the old country, and who knows that being called the chosen people can bring persecution as well as admiration. Nouwen felt something similar as a priest set apart, and joked that the “J. M.” in his name was his way of saying he was “just me”.</li>
+      <li>Every memory of being chosen in this world is tied to someone else not being chosen: the soccer team, the Boy Scout patrol, the awards. That is why the word makes us think of elites. He asks Fred not to give it up anyway, because losing touch with your chosenness opens the door to self-rejection.</li>
+      <li>The dark voices say you are one more mouth to feed. Many children grow up unsure they were wanted. The world, he notes, finds insecure people easier to use.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three disciplines for claiming chosenness</h4>
+      <div class="steps3 c-taken">
+        <div><b>1 · Unmask the world</b><span>When you feel hurt or rejected, tell yourself the feeling is strong but not true. The world's verdicts are manipulative.</span></div>
+        <div><b>2 · Find reminders</b><span>Seek people and places that keep telling you who you really are: synagogues, churches, support groups, family, friends, teachers.</span></div>
+        <div><b>3 · Celebrate it</b><span>Say thank you. Every good moment can also be read with suspicion, so gratitude is a decision, and it gets easier each time.</span></div>
+      </div>
+      <p class="cap">On gratitude he points to the core members at Daybreak, people with mental disabilities who have many reasons for bitterness (loneliness, rejection by family, needing help with everything) and mostly choose gratitude anyway.</p>
+    </div>
+    <div class="story c-taken">
+      <span class="label">The story · Helen</span>
+      <p>When Helen arrived at Daybreak she made only noises and no contact, and Nouwen kept his distance, half afraid of her. As the community trusted that she too had a gift, she began to smile and became a joy to everyone. He realised he could only see her goodness once he had claimed his own. Friendship with Fred went the same way: early rivalry faded as each grew sure of his own worth.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-blessed" id="blessed">
+  <div class="gutter"><span class="chno">II</span><span class="label">Blessed</span></div>
+  <div class="body">
+    <div>
+      <h3>A blessing creates what it speaks</h3>
+      <p class="idea">To bless is to say good things of someone, and to say yes to their belovedness beyond any tally of their virtues or faults.</p>
+    </div>
+    <ul class="points">
+      <li>Fred took him to a synagogue where a thirteen-year-old was having his bar mitzvah. What moved Nouwen most was the father telling his son, in front of the congregation, that whatever happened, success or failure, health or sickness, his parents would always love him.</li>
+      <li>The Latin <em>benedicere</em> means to speak well of. A blessing is more than praise. It goes beneath the split between admiration and condemnation and touches someone's original goodness.</li>
+      <li>The patriarchs and matriarchs, and Jesus at his baptism, heard such a blessing and held on to it. Our mood swings, he suggests, show we have stopped hearing ours.</li>
+      <li>Many people feel cursed instead. The curses are loud, but they are lies.</li>
+      <li>You live either under blessing or under curse; there is no middle ground. You choose where to live, moment by moment. And those who know they are blessed start blessing others without effort.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Two ways to claim the blessing</h4>
+        <div class="compare">
+          <div class="c-blessed">
+            <h5>Prayer</h5>
+            <ul>
+              <li>Less talking to God, more listening to the voice that speaks well of you</li>
+              <li>Half an hour a day, even if it feels like nothing happens</li>
+              <li>Repeat a memorised text slowly, as Eknath Easwaran taught; Nouwen used the prayer of St Francis</li>
+              <li>Return to the text when the mind wanders</li>
+            </ul>
+          </div>
+          <div class="c-blessed">
+            <h5>Presence</h5>
+            <ul>
+              <li>Notice the blessings already arriving, every day</li>
+              <li>Stop brushing compliments aside with “it's nothing”</li>
+              <li>Be willing to “waste” time with people</li>
+              <li>Receive from the poor, from trees and music, from words of love</li>
+            </ul>
+          </div>
+        </div>
+        <p class="cap">Prayer, he warns, sounds self-indulgent but is hard: the fear of hearing you are not good enough makes you fill the silence. Perhaps few people give real blessings, he adds, because so few are present enough to receive them.</p>
+      </div>
+      <div class="fig">
+        <h4>Adam</h4>
+        <p class="cap" style="font-size:16px">A Daybreak member who cannot speak, walk alone, eat without help or dress himself. Nouwen says he has never met anyone who spent real time with Adam and did not come away feeling blessed. The blessing comes from simple presence, which busy people find hardest of all.</p>
+      </div>
+    </div>
+    <div class="story c-blessed">
+      <span class="label">The story · Janet's real blessing</span>
+      <p>Before a prayer service, Janet, a member of the community, asked for a blessing. Nouwen traced a cross on her forehead; she protested that she wanted a real one. Later, with about thirty people on the floor, she came up and hugged him. He wrapped her in the sleeves of his robe and told her she was God's beloved daughter, naming her smile and kindness. Others followed, and finally John, a twenty-four-year-old assistant, who was moved to tears.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-broken" id="broken">
+  <div class="gutter"><span class="chno">III</span><span class="label">Broken</span></div>
+  <div class="body">
+    <div>
+      <h3>Befriend the wound, then put it under the blessing</h3>
+      <p class="idea">Your brokenness is as personal as your chosenness. What hurts most is not the pain itself but reading it as proof that you are worthless.</p>
+    </div>
+    <ul class="points">
+      <li>Nouwen and Fred talked about brokenness from the first meeting: his loneliness and fears, Fred's frustration with his job. Later came Fred's divorce and Nouwen's long depression.</li>
+      <li>Each person suffers in a way no one else does. He is more grateful to someone who admits he is alone in his pain than to someone who says others have it worse.</li>
+      <li>In his world the dominant suffering is the broken heart: broken relationships and feeling rejected or useless. At Daybreak the heaviest burden is not the disability but feeling of no value to anyone.</li>
+      <li>He sees the hunger for communion most painfully in sexuality, amid a fragmented, commercial culture. Writing at the time of AIDS, he calls it a telling symptom: young people risking their lives for intimacy, and friends forming generous communities around the dying.</li>
+      <li>He once depended completely on one person's affection, near to a self-destructive depression. It changed when he could read the dependency as a call to trust a love he could rely on without fear. Twelve-step groups, he says, do something similar.</li>
+    </ul>
+    <div class="fig">
+      <h4>The same blow, lived two ways</h4>
+      <svg class="wide" viewBox="0 0 480 300" role="img" aria-label="A loss, such as a death, job loss, failed exam or divorce, leads to two paths. Upper path, under the curse: the question why me becomes proof I always suspected I was worthless, which loops back to deepen self-rejection. Lower path, under the blessing: befriend the pain, step toward it with someone beside you, leading to pruning and deeper communion.">
+        <defs>
+          <marker id="ar-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--ink-3)"/></marker>
+          <marker id="ar-bk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--broken)"/></marker>
+          <marker id="ar-bl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--blessed)"/></marker>
+        </defs>
+        <!-- event -->
+        <rect x="0" y="118" width="120" height="64" rx="6" style="fill:var(--paper-2);stroke:var(--ink-3)" stroke-width="1.5"/>
+        <text x="60" y="145" text-anchor="middle" font-size="14" style="font-family:var(--display);font-weight:800;fill:var(--ink)">A loss</text>
+        <text x="60" y="164" text-anchor="middle" font-size="11" class="t-mute">death, divorce</text>
+        <path d="M120 140 C150 120, 150 70, 176 66" fill="none" style="stroke:var(--broken)" stroke-width="1.8" marker-end="url(#ar-bk)"/>
+        <path d="M120 160 C150 180, 150 230, 176 234" fill="none" style="stroke:var(--blessed)" stroke-width="1.8" marker-end="url(#ar-bl)"/>
+        <!-- curse -->
+        <text x="182" y="22" font-size="12" style="fill:var(--broken)">UNDER THE CURSE</text>
+        <rect x="182" y="42" width="128" height="48" rx="6" style="fill:color-mix(in srgb, var(--broken) 12%, var(--card));stroke:var(--broken)" stroke-width="1.5"/>
+        <text x="246" y="63" text-anchor="middle" font-size="13" class="t-ink">“Why me?”</text>
+        <text x="246" y="80" text-anchor="middle" font-size="11">no answer</text>
+        <line x1="310" y1="66" x2="340" y2="66" style="stroke:var(--broken)" stroke-width="1.6" marker-end="url(#ar-bk)"/>
+        <rect x="344" y="42" width="136" height="48" rx="6" style="fill:color-mix(in srgb, var(--broken) 12%, var(--card));stroke:var(--broken)" stroke-width="1.5"/>
+        <text x="412" y="63" text-anchor="middle" font-size="12.5" class="t-ink">proof I was</text>
+        <text x="412" y="80" text-anchor="middle" font-size="12.5" class="t-ink">always no good</text>
+        <path d="M412 90 C412 124, 246 124, 246 96" fill="none" style="stroke:var(--broken)" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#ar-bk)"/>
+        <text x="330" y="140" text-anchor="middle" font-size="11" class="t-mute">self-rejection deepens</text>
+        <!-- blessing -->
+        <text x="182" y="290" font-size="12" style="fill:var(--blessed)">UNDER THE BLESSING</text>
+        <rect x="182" y="210" width="128" height="56" rx="6" style="fill:color-mix(in srgb, var(--lamp) 14%, var(--card));stroke:var(--blessed)" stroke-width="1.5"/>
+        <text x="246" y="232" text-anchor="middle" font-size="13" class="t-ink">befriend it</text>
+        <text x="246" y="250" text-anchor="middle" font-size="11">step toward it,</text>
+        <text x="246" y="262" text-anchor="middle" font-size="11">with someone near</text>
+        <line x1="310" y1="238" x2="340" y2="238" style="stroke:var(--blessed)" stroke-width="1.6" marker-end="url(#ar-bl)"/>
+        <rect x="344" y="210" width="136" height="56" rx="6" style="fill:color-mix(in srgb, var(--lamp) 14%, var(--card));stroke:var(--blessed)" stroke-width="1.5"/>
+        <text x="412" y="234" text-anchor="middle" font-size="12.5" class="t-ink">pruning,</text>
+        <text x="412" y="252" text-anchor="middle" font-size="12.5" class="t-ink">deeper communion</text>
+        <text x="412" y="286" text-anchor="middle" font-size="11" class="t-mute">the pain may not shrink</text>
+      </svg>
+      <p class="cap">Schematic of Nouwen's two responses. He calls putting pain under the blessing the precondition for befriending it: you can only face a wound if it doesn't confirm a curse. Neither response makes the pain smaller, he stresses. It often makes the wound feel deeper.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>How the blessing re-reads a burden</h4>
+        <div class="flip">
+          <div class="q hd"><span>Under the curse</span><span></span><span>Under the blessing</span></div>
+          <div class="q"><span>intolerable</span><span>→</span><span>a challenge</span></div>
+          <div class="q"><span>reason for depression</span><span>→</span><span>purification</span></div>
+          <div class="q"><span>punishment</span><span>→</span><span>gentle pruning</span></div>
+          <div class="q"><span>rejection</span><span>→</span><span>a way to deeper communion</span></div>
+        </div>
+        <p class="cap">His comparison is a runner, who can feel pain and joy at once while nearing the finish. Joy and sorrow become two sides of one desire.</p>
+      </div>
+      <div class="fig">
+        <h4>The night Fred's marriage ended</h4>
+        <p class="cap" style="font-size:16px">Nouwen happened to be in town. Reassurance would have been useless, so he simply stayed, and urged Fred not to run from the pain but to stand in it. Years later Fred could say he had, and grown stronger.</p>
+      </div>
+    </div>
+    <div class="story c-broken">
+      <span class="label">The story · Bernstein's broken chalice</span>
+      <p>Two years before writing, Nouwen and Fred heard Leonard Bernstein conduct Tchaikovsky at Lincoln Center; it turned out to be their last chance. Bernstein had been his great music teacher since his teens. Near the end of Bernstein's <em>Mass</em>, written in memory of John F. Kennedy, a richly robed priest is lifted high by the crowd, falls, and his glass chalice shatters. Stripped to jeans and a T-shirt, he stares at the shards while children sing, and finally says it.</p>
+    </div>
+    <div>
+      <blockquote class="pull">“I never realized that broken glass could shine so brightly.”</blockquote>
+      <span class="label">The priest in Bernstein's Mass, as quoted by Nouwen</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-given" id="given">
+  <div class="gutter"><span class="chno">IV</span><span class="label">Given</span></div>
+  <div class="body">
+    <div>
+      <h3>Broken so as to be given</h3>
+      <p class="idea">The first three movements only make full sense in the fourth. We are chosen, blessed and broken for others, in life and in death.</p>
+    </div>
+    <ul class="points">
+      <li>Beneath the wish to be rewarded, Nouwen sees a plain desire to give, like a mother delighted by her baby's smile, or Nouwen himself spending hours in Dutch shops hunting for a birthday present for his father or mother.</li>
+      <li>He saw it at Fred's second wedding, to Robin, a lawyer for the poor and homeless, on a sunny May weekend with Jewish rituals led by Rabbi Helene Ferris. Fred had come through a long loneliness and knew the gift of himself would have to be renewed every day.</li>
+      <li>Brokenness and giving are linked. The years when he and Fred felt they had nothing to offer turned out to make them able to give more. That is no excuse to hurt anyone: only a fool, he says, breaks glass to make it shine.</li>
+      <li>A shared meal is the clearest picture: breaking and giving bread are one act, and at the table we are unarmed. Under the wish to eat together, he thinks, lies the wish to be food for each other.</li>
+    </ul>
+    <div class="fig">
+      <h4>Talents are what you can do. Gifts are who you are.</h4>
+      <div class="chips c-given">
+        <span class="chip ghost">fixing things</span><span class="chip ghost">good advice</span><span class="chip ghost">wise counsel</span><span class="chip ghost">healing</span>
+        <span class="chip">friendship</span><span class="chip">kindness</span><span class="chip">patience</span><span class="chip">joy</span><span class="chip">peace</span><span class="chip">forgiveness</span><span class="chip">gentleness</span><span class="chip">hope</span><span class="chip">trust</span>
+      </div>
+      <p class="cap">Dashed: talents, which few people have and which win prizes. Solid: gifts, which everyone has. The question shifts from what we can offer each other to who we can be for each other. The gift he says he can give most is his own joy, peace and sense of well-being.</p>
+      <div class="gifts">
+        <div><b>Bill</b><span>Hurt by a shattered family, he has a rare gift for faithful friendship.</span></div>
+        <div><b>Linda</b><span>Despite a speech handicap, she is the one guests remember for making them feel at home.</span></div>
+        <div><b>Adam</b><span>Unable to speak, walk or eat alone, he brings peace to everyone who cares for him.</span></div>
+      </div>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Giving yourself in death</h4>
+        <p class="cap" style="font-size:16px">If we are broken to be given, our final brokenness can be a final gift. Society hides death and barely leaves time to mourn. Nouwen insists we choose, every day, between clinging to life so that death is pure failure and letting go so that we can still be a source of hope.</p>
+        <p class="cap" style="font-size:16px">After death the wounds that limited someone's love fall away. Francis of Assisi died in 1226 and is, he says, still bearing fruit nearly eight centuries on.</p>
+      </div>
+      <div class="fig">
+        <h4>Two friends, two good deaths</h4>
+        <div class="steps3 c-given" style="grid-template-columns:1fr">
+          <div><b>Murray McDonnell</b><span>Died suddenly of heart failure. His last five years had been a preparation: more open with his wife Peggy and their nine children, at peace with old struggles. A year on, his family gathered with stories of the hope he had left.</span></div>
+          <div><b>Pauline Vanier</b><span>Died at ninety-three. Widow of a former governor-general of Canada, she joined her son Jean's community of the weak and became “Mammie” to many, including Nouwen during the year he lived in her house.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="story c-given">
+      <span class="label">The story · Elisha's loaves</span>
+      <p>A servant protests that Elisha's twenty barley loaves can't feed a hundred men. Elisha says to serve them anyway; everyone eats and there are leftovers. For Nouwen this is the spiritual life in miniature: small lives, once given, multiply far beyond what we can see, like a mustard seed or a stone dropped in a still pond.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ LIVING ============ -->
+<section id="living">
+  <div class="sec-head">
+    <span class="label">Living as the Beloved</span>
+    <h2>Stay in the city. Just don't serve it.</h2>
+    <p class="lede">Nouwen doesn't tell Fred to leave New York for a monastery or for L'Arche. Ambition, good food and good clothes, a concert at Lincoln Center: none of it is the enemy.</p>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p>The struggle is to live in the world without belonging to it. All the good things on offer are Fred's to enjoy, as long as he receives them as signs of his belovedness rather than as proof of his worth. The same truth will let him drop whatever starts to distract or enslave him.</p>
+      <p>Nouwen asks Fred to think of himself as <strong>sent</strong>: loved before the world began and sent into it for a short time. Then life stops being a long test you are bound to fail and becomes a string of chances to say yes. God not only tells us we are beloved, he writes, but asks whether we love in return, and every event, from praise and rejection to illness and dying, carries that question.</p>
+      <p>Seen this way, opposites lose their edge. He notes that “diabolic” literally means dividing; wherever division gives way to reconciliation, inside a person or between religions, he sees the Spirit at work.</p>
+      <p>Eternal life, then, is not a surprise at the end but the full showing of what we have lived all along. He fears death when he listens to the voices that say his little life is all he has, and not when he listens to the other one.</p>
+    </div>
+    <div class="fig">
+      <h4>What stops being opposite</h4>
+      <div class="flip">
+        <div class="q"><span>joy</span><span>~</span><span>pain</span></div>
+        <div class="q"><span>winning a prize</span><span>~</span><span>falling short</span></div>
+        <div class="q"><span>lonely</span><span>~</span><span>at home</span></div>
+        <div class="q"><span>living</span><span>~</span><span>dying</span></div>
+      </div>
+      <p class="cap">Each pair, he argues, offers the same chance to say yes to being beloved, so each is more alike than different. He backs this with a letter from novelist Julien Green to the philosopher Jacques Maritain, which suggests that at a high enough level joy and suffering are one phenomenon, as extreme cold burns.</p>
+      <div>
+        <blockquote class="pull c-taken">“The world is evil only when you become its slave.”</blockquote>
+        <span class="label">Nouwen, Living as the Beloved</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue · A Friendship Deepens</span>
+    <h2>The book failed its first reader</h2>
+    <p class="lede">The most unusual part of the book is that Nouwen prints his friend's verdict on it, and the verdict is no.</p>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>Fred came to Toronto to talk the manuscript over. A decade on, both men were steadier: Nouwen had found a home at L'Arche, Fred was happily married, expecting his first child, and writing. He had published two books for teenagers and was working on a novel in the early mornings.</p>
+      <p>But Fred was clear. He had shown the text to two friends and it hadn't touched them. It was, he said, still writing for the converted. Before talk of being beloved could mean anything, secular readers needed answers to more basic questions: who God is, who I am, why I'm here, how anyone comes to faith. Nouwen compares himself to a man so excited about sailing that he forgets his listeners have never seen water.</p>
+      <p>The deeper issue, he concedes, is whether anything still feels sacred at all. He won't try to prove God; he can only say what God is for him. Perhaps the gap must be bridged inside himself, since he too is more secular than he admits.</p>
+      <p>Then the irony arrived. Gordon Cosby and Diana Chambers of the Servant Leadership School in Washington, D.C., found it more helpful than his earlier books and built a course on it. Bart Gavigan of the South Park Community in England was just as enthusiastic. Fred hadn't got the book he needed, they told Nouwen, but he had made it possible for them to get theirs. Nouwen published it largely as it was.</p>
+    </div>
+    <div class="fig">
+      <h4>Who the book reached</h4>
+      <div class="compare">
+        <div class="c-broken">
+          <h5>Written for</h5>
+          <ul>
+            <li>Fred, a secular Jew in New York</li>
+            <li>His friends: young, ambitious, unchurched</li>
+            <li>Result: “good stuff, but not for me”</li>
+          </ul>
+        </div>
+        <div class="c-given">
+          <h5>Helped most</h5>
+          <ul>
+            <li>Searching Christians in Washington and England</li>
+            <li>A new course on the life of the Beloved</li>
+            <li>Result: urged him to change little</li>
+          </ul>
+        </div>
+      </div>
+      <p class="cap">Nouwen reads the irony as God using a secular friend to teach believers. The open question he leaves, where the sacred can be found again, is the one he admits the book doesn't answer.</p>
+      <div class="xlink">
+        <span class="label">Same author · Faith</span>
+        <a href="../prodigal-son/">The Return of the Prodigal Son →</a>
+        <p class="muted" style="font-size:16px">In that book the younger son, coming home from the far country, finally hears the voice that calls him beloved. <em>Life of the Beloved</em> picks up that voice and asks what living by it looks like on Columbus Avenue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Reflective practices</span>
+    <h2>Practices for each movement</h2>
+    <p class="lede">The book is a letter, not a manual, but each chapter names concrete disciplines. These are the ones Nouwen stresses, grouped by movement.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col c-taken">
+      <h3>Taken</h3>
+      <div class="tk"><b>Talk back to the hurt</b><span>When rejected, tell yourself the feeling is real but not the truth about you.</span></div>
+      <div class="tk"><b>Find your reminders</b><span>Keep company with people and communities who speak your worth back to you.</span></div>
+      <div class="tk"><b>Choose gratitude</b><span>Every good thing can be read cynically. Decide not to, and notice it gets easier.</span></div>
+      <div class="tk"><b>Look for others' chosenness</b><span>Being chosen should open your eyes to theirs, not lift you above them.</span></div>
+    </div>
+    <div class="col c-blessed">
+      <h3>Blessed</h3>
+      <div class="tk"><b>Listen for half an hour</b><span>Daily, in silence, for the voice that speaks well of you, even when nothing seems to happen.</span></div>
+      <div class="tk"><b>Use a text you know by heart</b><span>Repeat a psalm or prayer slowly, and come back to it when your mind drifts.</span></div>
+      <div class="tk"><b>Receive compliments</b><span>Stop waving off good words. Be present enough to take them in.</span></div>
+      <div class="tk"><b>Bless out loud</b><span>Say good things to and about people, with your arms as well as words.</span></div>
+    </div>
+    <div class="col c-broken">
+      <h3>Broken</h3>
+      <div class="tk"><b>Step toward the pain</b><span>Healing starts by moving closer to it, not away, ideally with someone beside you.</span></div>
+      <div class="tk"><b>Refuse the curse reading</b><span>When something goes wrong, catch the thought that it proves you are worthless.</span></div>
+      <div class="tk"><b>Don't compare suffering</b><span>Acknowledge that each person's pain is their own instead of ranking it.</span></div>
+      <div class="tk"><b>Name your dependencies</b><span>Admitting them openly, as twelve-step groups do, can turn them into hope.</span></div>
+    </div>
+    <div class="col c-given">
+      <h3>Given</h3>
+      <div class="tk"><b>Ask who, not what</b><span>Ask who you can be for someone, not only what you can do for them.</span></div>
+      <div class="tk"><b>Break bread</b><span>Share meals. They are the plainest form of giving yourself.</span></div>
+      <div class="tk"><b>Mourn properly</b><span>Take time when someone dies instead of carrying on as if nothing happened.</span></div>
+      <div class="tk"><b>Prepare your death as a gift</b><span>Practise letting go daily, so that what you leave is hope, not bitterness.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Henri J. M. Nouwen, <em>Life of the Beloved: Spiritual Living in a Secular World</em> (The Crossroad Publishing Company, New York; first published 1992). Notes are from the Crossroad ebook edition, © 2002, which adds a Guide for Reflection prepared by the publisher. Short quotations are from the book. Facts are as reported in the book. Diagrams are schematic and were drawn for this page. Cover image belongs to the publisher; cover art is Vincent van Gogh, <em>Café Terrace at Night</em>, 1888.</p>
+  <span class="label">Notes compiled Nov 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  function rgba(hex, a) {
+    var h = hex.replace("#", "");
+    if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+    var n = parseInt(h, 16);
+    return "rgba(" + (n >> 16 & 255) + "," + (n >> 8 & 255) + "," + (n & 255) + "," + a + ")";
+  }
+
+  /* --- Hero: a night street full of restless, flickering "voices" on the right;
+         on the left one steady lamp whose glow slowly widens --- */
+  var canvas = document.getElementById("voices");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  var N = 70, dots = [];
+  function seed() {
+    dots = [];
+    for (var i = 0; i < N; i++) {
+      dots.push({ x: 0.25 + Math.random() * 0.75, y: Math.random(), vx: (Math.random() - .5) * .0016, vy: (Math.random() - .5) * .004, r: 1 + Math.random() * 2.2, ph: Math.random() * 6.28 });
+    }
+  }
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(time) {
+    if (!w) return;
+    var dark = css("--paper").toLowerCase() === "#0d1224";
+    // night band
+    var bg = ctx.createLinearGradient(0, 0, 0, hgt);
+    bg.addColorStop(0, dark ? "#121a3a" : "#1f3a8a");
+    bg.addColorStop(1, dark ? "#0a0f22" : "#16295f");
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, w, hgt);
+
+    // restless voices
+    for (var i = 0; i < dots.length; i++) {
+      var d = dots[i];
+      if (!reduce) {
+        d.x += d.vx; d.y += d.vy + Math.sin(time / 300 + d.ph) * .002;
+        if (d.x < .25) { d.x = .25; d.vx *= -1; }
+        if (d.x > 1) { d.x = 1; d.vx *= -1; }
+        if (d.y < 0 || d.y > 1) { d.vy *= -1; d.y = Math.min(1, Math.max(0, d.y)); }
+      }
+      var flick = reduce ? .5 : .3 + .4 * Math.abs(Math.sin(time / 180 + d.ph * 3));
+      ctx.fillStyle = "rgba(200,208,232," + flick + ")";
+      ctx.beginPath(); ctx.arc(d.x * w, d.y * hgt, d.r, 0, Math.PI * 2); ctx.fill();
+    }
+
+    // the steady lamp
+    var lx = Math.max(40, w * 0.08), ly = hgt * 0.5;
+    var breathe = reduce ? 1 : 0.85 + 0.15 * Math.sin(time / 1600);
+    var R = (hgt * 0.9 + w * 0.12) * breathe;
+    var lamp = "#f2c94c";
+    var g = ctx.createRadialGradient(lx, ly, 0, lx, ly, R);
+    g.addColorStop(0, rgba(lamp, 0.85));
+    g.addColorStop(0.18, rgba(lamp, 0.35));
+    g.addColorStop(1, rgba(lamp, 0));
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, w, hgt);
+    ctx.fillStyle = "#fff4cc";
+    ctx.beginPath(); ctx.arc(lx, ly, 5, 0, Math.PI * 2); ctx.fill();
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  seed(); size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

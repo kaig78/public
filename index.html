@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Kai's Pages</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: dark canvas with slow colour fields; a grid of tiles, each with its own colour pair that glows under the cursor. */
+:root{
+  --bg:#0c0b10; --tile:#16151c; --ink:#f4f2f8; --muted:#a6a2b4; --line:rgba(255,255,255,.08);
+  --display:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;
+  --ui:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--ui);overflow-x:hidden;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* drifting colour fields behind everything */
+.aurora{position:fixed;inset:-20vmax;z-index:0;pointer-events:none;filter:blur(70px);opacity:.55}
+.aurora i{position:absolute;width:48vmax;height:48vmax;border-radius:50%;mix-blend-mode:screen;animation:drift 26s ease-in-out infinite alternate}
+.aurora i:nth-child(1){background:#ff3d7f;left:5%;top:0}
+.aurora i:nth-child(2){background:#3d6bff;right:0;top:15%;animation-duration:32s}
+.aurora i:nth-child(3){background:#00c2a8;left:30%;bottom:-5%;animation-duration:38s}
+@keyframes drift{to{transform:translate(8vmax,-6vmax) scale(1.15)}}
+
+main{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding-block:clamp(48px,9vh,96px) 64px}
+h1{font:700 clamp(2.8rem,9vw,5.2rem)/.95 var(--display);letter-spacing:-.03em;margin:0;
+  background:linear-gradient(100deg,#fff 10%,#ffb2d0 40%,#9fb6ff 70%,#7ff0dc 95%);-webkit-background-clip:text;background-clip:text;color:transparent;text-wrap:balance}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:44px}
+
+.tile{--c1:#fff;--c2:#888;--mx:50%;--my:50%;position:relative;display:flex;flex-direction:column;gap:8px;min-height:190px;
+  padding:22px 20px 18px;border-radius:20px;background:var(--tile);color:inherit;text-decoration:none;isolation:isolate;overflow:hidden;
+  border:1px solid var(--line);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+/* soft colour wash that is always there */
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(120% 90% at 100% 0%,color-mix(in srgb,var(--c1) 34%,transparent),transparent 60%),
+             radial-gradient(90% 80% at 0% 100%,color-mix(in srgb,var(--c2) 26%,transparent),transparent 60%)}
+/* spotlight that follows the cursor */
+.tile::after{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .35s;
+  background:radial-gradient(260px circle at var(--mx) var(--my),color-mix(in srgb,var(--c1) 55%,transparent),transparent 65%)}
+.tile:hover,.tile:focus-visible{transform:translateY(-6px);border-color:color-mix(in srgb,var(--c1) 70%,transparent);
+  box-shadow:0 18px 50px -12px color-mix(in srgb,var(--c1) 60%,transparent),0 0 0 1px color-mix(in srgb,var(--c2) 40%,transparent);outline:none}
+.tile:hover::after,.tile:focus-visible::after{opacity:1}
+
+.dot{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--c1),var(--c2));
+  box-shadow:0 6px 18px -4px color-mix(in srgb,var(--c1) 70%,transparent);transition:transform .35s}
+.tile:hover .dot{transform:rotate(-8deg) scale(1.08)}
+.tile h2{font:700 1.45rem/1.1 var(--display);letter-spacing:-.01em;margin:10px 0 0;overflow-wrap:break-word;min-width:0}
+.tile p{margin:0;color:var(--muted);font-size:.93rem}
+.lock{margin-top:auto;padding-top:10px;display:flex;align-items:center;gap:6px;font:600 .72rem/1 var(--ui);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lock svg{width:12px;height:12px}
+.tile:hover .lock{color:var(--ink)}
+
+/* colour pairs */
+.advent{--c1:#ff4d6d;--c2:#ffb347}
+.shelf{--c1:#2ee6b6;--c2:#b6f05a}
+.strengths{--c1:#8f6bff;--c2:#4da3ff}
+.worship{--c1:#ffb03a;--c2:#ff5fa2}
+.mixes{--c1:#ff3dd4;--c2:#22d3ee}
+.vibe{--c1:#ff7a45;--c2:#ff4fa0}
+.gym{--c1:#3ee07a;--c2:#18c6e0}
+.team{--c1:#5aa9ff;--c2:#7b5cff}
+.coaching{--c1:#ffcf3d;--c2:#ff7a3d}
+.weeks{--c1:#ff9a5a;--c2:#e8c27a}
+.crucial{--c1:#ff4d4d;--c2:#ffa63d}
+.influence{--c1:#1fd1b0;--c2:#ff4d5a}
+.gifts{--c1:#ff8fb8;--c2:#ffd36e}
+.regrets{--c1:#7fb7ff;--c2:#c9a7ff}
+.birkenbihl{--c1:#4dd0ff;--c2:#ffd84d}
+.logical{--c1:#7fd6ff;--c2:#ffad4d}
+.faulty{--c1:#ff3b3b;--c2:#9aa0ad}
+.triggered{--c1:#ff6b8a;--c2:#ffb86b}
+.goodthinking{--c1:#ffd23d;--c2:#3dd6ff}
+.fourthings{--c1:#ffb05a;--c2:#ff6f91}
+.prodigal{--c1:#e0a03a;--c2:#c2412d}
+.lessons{--c1:#ff5a3d;--c2:#4d8dff}
+.ceo{--c1:#f2c14e;--c2:#2f5bd3}
+.startself{--c1:#e2c9a0;--c2:#ff8a5c}
+.empire{--c1:#c9ccd6;--c2:#7b5cff}
+.grokking{--c1:#ff4d4d;--c2:#e6e6e6}
+.healmind{--c1:#4de0c2;--c2:#2f6bff}
+.chaos{--c1:#ff5a2d;--c2:#ffd23d}
+.alignment{--c1:#22c7e0;--c2:#ff4040}
+.supremacy{--c1:#39ff4a;--c2:#e8b84a}
+.platonic{--c1:#3fbf6b;--c2:#20b4dc}
+.agichron{--c1:#b9f03c;--c2:#4a7fe0}
+.paul{--c1:#d8452f;--c2:#e4c35f}
+.mentalmodels{--c1:#d3122f;--c2:#3d4852}
+.eurasian{--c1:#c9973a;--c2:#c4262e}
+.talkbook{--c1:#f5a623;--c2:#123c62}
+.lessons21{--c1:#cf3a20;--c2:#544e8c}
+.noisebook{--c1:#c9302b;--c2:#44464c}
+.breakneckbook{--c1:#46692a;--c2:#e0b90c}
+.mitchellbook{--c1:#e0c27a;--c2:#8c6714}
+.strategybook{--c1:#b8893c;--c2:#131011}
+.coldwarsbook{--c1:#960001;--c2:#f2df1a}
+.uncertaintybook{--c1:#4cc6c8;--c2:#f5c400}
+.partingbook{--c1:#2457b0;--c2:#10213f}
+.systemsbook{--c1:#d42a2d;--c2:#3a9636}
+.convobook{--c1:#e8302a;--c2:#9aa0a6}
+.chinaincbook{--c1:#ff5a36;--c2:#ffd23f}
+.brinkbook{--c1:#a87d2a;--c2:#161412}
+.statsbook{--c1:#ec5a24;--c2:#3f86e0}
+.debtbook{--c1:#10100f;--c2:#b49658}
+.toolsbook{--c1:#a9295a;--c2:#e61f2a}
+.belovedbook{--c1:#1f3a8a;--c2:#e8b923}
+.streetbook{--c1:#b9805c;--c2:#2e2e30}
+.josephbook{--c1:#2f2f33;--c2:#c8352c}
+
+/* book tiles lead with the cover; alt is empty because the title follows */
+.bookcover{display:block;width:min(100%,170px);aspect-ratio:2/3;object-fit:cover;align-self:center;border-radius:4px;
+  box-shadow:0 14px 28px -12px rgba(0,0,0,.7);transition:transform .25s ease}
+.tile:hover .bookcover{transform:translateY(-3px) rotate(-1deg)}
+
+/* section heading between tile groups */
+.section-title{font:700 clamp(1.6rem,4vw,2.2rem)/1.05 var(--display);letter-spacing:-.02em;margin:64px 0 0}
+.section-title + .grid{margin-top:20px}
+
+/* book topics */
+.topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.topics a{color:var(--muted);text-decoration:none;font:500 .85rem var(--ui);padding:6px 12px;border:1px solid var(--line);border-radius:999px}
+.topics a:hover{color:var(--ink);border-color:rgba(255,255,255,.25)}
+.topic-title{font:700 clamp(1.15rem,2.6vw,1.4rem)/1.1 var(--display);margin:44px 0 0;scroll-margin-top:16px}
+.topic-title span{color:var(--muted);font:500 .85rem var(--ui);margin-left:6px}
+.topic-title + .grid{margin-top:16px}
+
+footer{margin-top:56px;color:var(--muted);font-size:.85rem}
+@media (prefers-reduced-motion:reduce){.aurora i{animation:none}.tile,.dot,.bookcover{transition:none}.tile:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<main>
+  <h1>Kai's Pages</h1>
+
+  <div class="grid">
+    <a class="tile advent" href="advent/"><span class="dot"></span><h2>Honest Advent</h2><p>A short reading for each day from 1 to 24 December.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile shelf" href="next-shelf/"><span class="dot"></span><h2>Next Shelf</h2><p>New and upcoming books, picked each quarter.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile strengths" href="strengths/"><span class="dot"></span><h2>Strengths</h2><p>A reading plan and the challenges behind it.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile worship" href="worship-music/"><span class="dot"></span><h2>Music</h2><p>Live songs, one by one.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile mixes" href="mixes/"><span class="dot"></span><h2>Mixes</h2><p>DJ sets and radio mixes.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile gym" href="https://gym-calendar-tau.vercel.app/"><span class="dot"></span><h2>Gym Calendar</h2><p>Gym and food days, weight and body fat, week by week.</p><span class="lock"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M3 5V4a3 3 0 0 1 6 0v1h.5A1.5 1.5 0 0 1 11 6.5v4A1.5 1.5 0 0 1 9.5 12h-7A1.5 1.5 0 0 1 1 10.5v-4A1.5 1.5 0 0 1 2.5 5zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z"/></svg>Password</span></a>
+    <a class="tile team" href="https://kaig78.github.io/team-checkin/"><span class="dot"></span><h2>Team Check-in</h2><p>Mood, highlight and challenge for a team round, with a timer.</p><span class="lock">Open</span></a>
+  </div>
+
+  <h2 class="section-title">Book Summaries</h2>
+  <nav class="topics"><a href="#conversation">Conversation &amp; relationships</a><a href="#thinking">Thinking &amp; deciding</a><a href="#ai">AI &amp; technology</a><a href="#world">Geopolitics, China &amp; money</a><a href="#life">Life, meaning &amp; farewell</a><a href="#faith">Faith</a></nav>
+  
+  <h3 class="topic-title" id="conversation">Conversation &amp; relationships <span>9</span></h3>
+  <div class="grid">
+    <a class="tile book vibe" href="vibe/"><img class="bookcover" src="vibe/cover.jpg" alt="" loading="lazy"><h2>Vibe</h2><p>Adam Grant on how connection works and why some people click.</p><span class="lock">Open</span></a>
+    <a class="tile book talkbook" href="talk/"><img class="bookcover" src="talk/cover.jpg" alt="" loading="lazy"><h2>Talk</h2><p>Alison Wood Brooks on getting better at everyday conversation.</p><span class="lock">Open</span></a>
+    <a class="tile book convobook" href="intelligent-conversationalist/"><img class="bookcover" src="intelligent-conversationalist/cover.jpg" alt="" loading="lazy"><h2>The Intelligent Conversationalist</h2><p>Imogen Lloyd Webber on holding your own in any conversation.</p><span class="lock">Open</span></a>
+    <a class="tile book crucial" href="crucial-conversations/"><img class="bookcover" src="crucial-conversations/cover.jpg" alt="" loading="lazy"><h2>Crucial Conversations</h2><p>How to talk when stakes are high and emotions run strong.</p><span class="lock">Open</span></a>
+    <a class="tile book coaching" href="coaching-habit/"><img class="bookcover" src="coaching-habit/cover.jpg" alt="" loading="lazy"><h2>The Coaching Habit</h2><p>Seven questions that make you more coach, less advice-giver.</p><span class="lock">Open</span></a>
+    <a class="tile book influence" href="influence/"><img class="bookcover" src="influence/cover.jpg" alt="" loading="lazy"><h2>Influence</h2><p>Robert Cialdini's seven principles of persuasion.</p><span class="lock">Open</span></a>
+    <a class="tile book birkenbihl" href="kommunikationstraining/"><img class="bookcover" src="kommunikationstraining/cover.jpg" alt="" loading="lazy"><h2>Kommunikations&shy;training</h2><p>Vera F. Birkenbihl on listening, questions and staying calm under stress.</p><span class="lock">Open</span></a>
+    <a class="tile book triggered" href="getriggert/"><img class="bookcover" src="getriggert/cover.jpg" alt="" loading="lazy"><h2>Getriggert?</h2><p>Anouk Algermissen on regulating emotions and talking more calmly.</p><span class="lock">Open</span></a>
+    <a class="tile book platonic" href="platonic/"><img class="bookcover" src="platonic/cover.jpg" alt="" loading="lazy"><h2>Platonic</h2><p>Marisa G. Franco on the science of making and keeping friends.</p><span class="lock">Open</span></a>
+  </div>
+  
+  <h3 class="topic-title" id="thinking">Thinking &amp; deciding <span>9</span></h3>
+  <div class="grid">
+    <a class="tile book mentalmodels" href="great-mental-models/"><img class="bookcover" src="great-mental-models/cover.jpg" alt="" loading="lazy"><h2>The Great Mental Models</h2><p>Shane Parrish and Rhiannon Beaubien on borrowing nine ways to see a problem.</p><span class="lock">Open</span></a>
+    <a class="tile book noisebook" href="noise/"><img class="bookcover" src="noise/cover.jpg" alt="" loading="lazy"><h2>Noise</h2><p>Kahneman, Sibony and Sunstein on the scatter in human judgment, and how to cut it.</p><span class="lock">Open</span></a>
+    <a class="tile book systemsbook" href="thinking-in-systems/"><img class="bookcover" src="thinking-in-systems/cover.jpg" alt="" loading="lazy"><h2>Thinking in Systems</h2><p>Donella Meadows on why systems cause their own behaviour.</p><span class="lock">Open</span></a>
+    <a class="tile book strategybook" href="good-strategy/"><img class="bookcover" src="good-strategy/cover.jpg" alt="" loading="lazy"><h2>Good Strategy/Bad Strategy</h2><p>Richard Rumelt on why most “strategy” is goals in disguise.</p><span class="lock">Open</span></a>
+    <a class="tile book statsbook" href="art-of-statistics/"><img class="bookcover" src="art-of-statistics/cover.jpg" alt="" loading="lazy"><h2>The Art of Statistics</h2><p>David Spiegelhalter on learning from data, from jelly beans to the Higgs boson.</p><span class="lock">Open</span></a>
+    <a class="tile book uncertaintybook" href="art-of-uncertainty/"><img class="bookcover" src="art-of-uncertainty/cover.jpg" alt="" loading="lazy"><h2>The Art of Uncertainty</h2><p>David Spiegelhalter on living with chance, ignorance, risk and luck.</p><span class="lock">Open</span></a>
+    <a class="tile book goodthinking" href="good-thinking/"><img class="bookcover" src="good-thinking/cover.jpg" alt="" loading="lazy"><h2>Good Thinking</h2><p>David Robert Grimes on spotting bad arguments and thinking more clearly.</p><span class="lock">Open</span></a>
+    <a class="tile book logical" href="being-logical/"><img class="bookcover" src="being-logical/cover.jpg" alt="" loading="lazy"><h2>Being Logical</h2><p>D. Q. McInerny's short guide to clear thinking and sound arguments.</p><span class="lock">Open</span></a>
+    <a class="tile book faulty" href="attacking-faulty-reasoning/"><img class="bookcover" src="attacking-faulty-reasoning/cover.jpg" alt="" loading="lazy"><h2>Attacking Faulty Reasoning</h2><p>T. Edward Damer's five criteria of a good argument and the fallacies that break them.</p><span class="lock">Open</span></a>
+  </div>
+  
+  <h3 class="topic-title" id="ai">AI &amp; technology <span>7</span></h3>
+  <div class="grid">
+    <a class="tile book mitchellbook" href="ai-thinking-humans/"><img class="bookcover" src="ai-thinking-humans/cover.jpg" alt="" loading="lazy"><h2>Artificial Intelligence</h2><p>Melanie Mitchell on why AI is still nowhere near understanding.</p><span class="lock">Open</span></a>
+    <a class="tile book alignment" href="alignment-problem/"><img class="bookcover" src="alignment-problem/cover.jpg" alt="" loading="lazy"><h2>The Alignment Problem</h2><p>Brian Christian on teaching machines human values.</p><span class="lock">Open</span></a>
+    <a class="tile book empire" href="empire-of-ai/"><img class="bookcover" src="empire-of-ai/cover.jpg" alt="" loading="lazy"><h2>Empire of AI</h2><p>Karen Hao on OpenAI, Sam Altman and the hidden costs of the AI boom.</p><span class="lock">Open</span></a>
+    <a class="tile book supremacy" href="supremacy/"><img class="bookcover" src="supremacy/cover.jpg" alt="" loading="lazy"><h2>Supremacy</h2><p>Parmy Olson on Hassabis, Altman and the race to build AI.</p><span class="lock">Open</span></a>
+    <a class="tile book agichron" href="agi-chronicles/"><img class="bookcover" src="agi-chronicles/cover.jpg" alt="" loading="lazy"><h2>The AGI Chronicles</h2><p>Kevin Roose on the race between OpenAI, Anthropic and DeepMind.</p><span class="lock">Open</span></a>
+    <a class="tile book chaos" href="chaos-machine/"><img class="bookcover" src="chaos-machine/cover.jpg" alt="" loading="lazy"><h2>The Chaos Machine</h2><p>Max Fisher on how social media rewired our minds and our world.</p><span class="lock">Open</span></a>
+    <a class="tile book grokking" href="grokking-ml/"><img class="bookcover" src="grokking-ml/cover.jpg" alt="" loading="lazy"><h2>Grokking Machine Learning</h2><p>Luis Serrano explains the main machine learning models with pictures, not formulas.</p><span class="lock">Open</span></a>
+  </div>
+  
+  <h3 class="topic-title" id="world">Geopolitics, China &amp; money <span>8</span></h3>
+  <div class="grid">
+    <a class="tile book lessons21" href="21-lessons/"><img class="bookcover" src="21-lessons/cover.jpg" alt="" loading="lazy"><h2>21 Lessons for the 21st Century</h2><p>Yuval Noah Harari on what to pay attention to as the old stories collapse.</p><span class="lock">Open</span></a>
+    <a class="tile book eurasian" href="eurasian-century/"><img class="bookcover" src="eurasian-century/cover.jpg" alt="" loading="lazy"><h2>The Eurasian Century</h2><p>Hal Brands on the long fight to rule the world's largest landmass.</p><span class="lock">Open</span></a>
+    <a class="tile book coldwarsbook" href="new-cold-wars/"><img class="bookcover" src="new-cold-wars/cover.jpg" alt="" loading="lazy"><h2>New Cold Wars</h2><p>David E. Sanger on how America misread Moscow and Beijing and ended up in two cold wars at once.</p><span class="lock">Open</span></a>
+    <a class="tile book brinkbook" href="world-on-the-brink/"><img class="bookcover" src="world-on-the-brink/cover.jpg" alt="" loading="lazy"><h2>World on the Brink</h2><p>Dmitri Alperovitch on deterring China in Cold War II.</p><span class="lock">Open</span></a>
+    <a class="tile book breakneckbook" href="breakneck/"><img class="bookcover" src="breakneck/cover.jpg" alt="" loading="lazy"><h2>Breakneck</h2><p>Dan Wang on China's engineering state and America's lawyerly society.</p><span class="lock">Open</span></a>
+    <a class="tile book chinaincbook" href="china-incorporated/"><img class="bookcover" src="china-incorporated/cover.jpg" alt="" loading="lazy"><h2>China Incorporated</h2><p>Kerry Brown on living with a China that will not become the West.</p><span class="lock">Open</span></a>
+    <a class="tile book debtbook" href="fabulous-debt/"><img class="bookcover" src="fabulous-debt/cover.jpg" alt="" loading="lazy"><h2>A Fabulous Debt</h2><p>Robin Wigglesworth on how the tradable IOU built, and keeps shaking, the modern world.</p><span class="lock">Open</span></a>
+    <a class="tile book streetbook" href="streetwise/"><img class="bookcover" src="streetwise/cover.jpg" alt="" loading="lazy"><h2>Streetwise</h2><p>Lloyd Blankfein on rising from the Brooklyn projects to run Goldman Sachs through 2008.</p><span class="lock">Open</span></a>
+  </div>
+  
+  <h3 class="topic-title" id="life">Life, meaning &amp; farewell <span>8</span></h3>
+  <div class="grid">
+    <a class="tile book weeks" href="4000-weeks/"><img class="bookcover" src="4000-weeks/cover.jpg" alt="" loading="lazy"><h2>Four Thousand Weeks</h2><p>Oliver Burkeman on time, limits and choosing what matters.</p><span class="lock">Open</span></a>
+    <a class="tile book gifts" href="gifts-of-imperfection/"><img class="bookcover" src="gifts-of-imperfection/cover.jpg" alt="" loading="lazy"><h2>The Gifts of Imperfection</h2><p>Brené Brown's ten guideposts to wholehearted living.</p><span class="lock">Open</span></a>
+    <a class="tile book startself" href="start-with-yourself/"><img class="bookcover" src="start-with-yourself/cover.jpg" alt="" loading="lazy"><h2>Start With Yourself</h2><p>Emma Grede on building a career and a life from the inside out.</p><span class="lock">Open</span></a>
+    <a class="tile book lessons" href="30-lessons/"><img class="bookcover" src="30-lessons/cover.jpg" alt="" loading="lazy"><h2>30 Lessons for Living</h2><p>Karl Pillemer collects practical advice from over a thousand older Americans.</p><span class="lock">Open</span></a>
+    <a class="tile book regrets" href="top-five-regrets/"><img class="bookcover" src="top-five-regrets/cover.jpg" alt="" loading="lazy"><h2>The Top Five Regrets of the Dying</h2><p>What Bronnie Ware heard at the end of people's lives.</p><span class="lock">Open</span></a>
+    <a class="tile book fourthings" href="four-things/"><img class="bookcover" src="four-things/cover.jpg" alt="" loading="lazy"><h2>The Four Things That Matter Most</h2><p>Ira Byock on forgiveness, thanks and love before it is too late.</p><span class="lock">Open</span></a>
+    <a class="tile book partingbook" href="ahead-of-all-parting/"><img class="bookcover" src="ahead-of-all-parting/cover.jpg" alt="" loading="lazy"><h2>Ahead of All Parting</h2><p>Barry Michels on facing dementia with an open heart.</p><span class="lock">Open</span></a>
+    <a class="tile book toolsbook" href="the-tools/"><img class="bookcover" src="the-tools/cover.jpg" alt="" loading="lazy"><h2>The Tools</h2><p>Phil Stutz and Barry Michels on turning problems into higher forces.</p><span class="lock">Open</span></a>
+  </div>
+  
+  <h3 class="topic-title" id="faith">Faith <span>6</span></h3>
+  <div class="grid">
+    <a class="tile book paul" href="paul/"><img class="bookcover" src="paul/cover.jpg" alt="" loading="lazy"><h2>Paul</h2><p>N. T. Wright's biography of the apostle.</p><span class="lock">Open</span></a>
+    <a class="tile book prodigal" href="prodigal-son/"><img class="bookcover" src="prodigal-son/cover.jpg" alt="" loading="lazy"><h2>The Return of the Prodigal Son</h2><p>Henri Nouwen's reflection on Rembrandt's painting and coming home.</p><span class="lock">Open</span></a>
+    <a class="tile book belovedbook" href="life-of-the-beloved/"><img class="bookcover" src="life-of-the-beloved/cover.jpg" alt="" loading="lazy"><h2>Life of the Beloved</h2><p>Henri Nouwen on hearing yourself called beloved, and living from it in a secular city.</p><span class="lock">Open</span></a>
+    <a class="tile book josephbook" href="god-meant-it-for-good/"><img class="bookcover" src="god-meant-it-for-good/cover.jpg" alt="" loading="lazy"><h2>God Meant It for Good</h2><p>R. T. Kendall on Joseph's pit, prison and palace, and learning to forgive the brothers who sold him.</p><span class="lock">Open</span></a>
+    <a class="tile book healmind" href="heal-your-hurting-mind/"><img class="bookcover" src="heal-your-hurting-mind/cover.jpg" alt="" loading="lazy"><h2>Heal Your Hurting Mind</h2><p>Craig Groeschel on anxiety, depression and burnout, with biblical hope.</p><span class="lock">Open</span></a>
+    <a class="tile book ceo" href="god-is-my-ceo/"><img class="bookcover" src="god-is-my-ceo/cover.jpg" alt="" loading="lazy"><h2>God Is My CEO</h2><p>Larry Julian on running a business by faith in a bottom-line world.</p><span class="lock">Open</span></a>
+  </div>
+
+  <footer>kaig78.github.io/public</footer>
+</main>
+<script>
+// spotlight follows the pointer inside each tile
+document.querySelectorAll(".tile").forEach(t => t.addEventListener("pointermove", e => {
+  const r = t.getBoundingClientRect();
+  t.style.setProperty("--mx", (e.clientX - r.left) + "px");
+  t.style.setProperty("--my", (e.clientY - r.top) + "px");
+}));
+</script>
+</body>
+</html>

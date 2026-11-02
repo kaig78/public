@@ -1,0 +1,1243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Good Strategy/Bad Strategy by Richard Rumelt – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: white, near-black, ochre. The cover has no
+   second hue, so --red holds the cover's black (white in dark mode) and --cyan its ochre.
+   Ochre = the strategy, black = the thing it works against. */
+:root {
+  --paper: #fbfaf6;
+  --paper-2: #efece4;
+  --card: #ffffff;
+  --ink: #131011;
+  --ink-2: #4a4641;
+  --ink-3: #746e66;
+  --rule: #dcd7cc;
+
+  --cyan: #8a6420;
+  --cyan-2: #b8893c;
+  --red: #131011;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #100d0c;
+    --paper-2: #1b1714;
+    --card: #1f1a17;
+    --ink: #f4efe6;
+    --ink-2: #bdb5a8;
+    --ink-3: #8f877b;
+    --rule: #332c26;
+    --cyan: #dcae5e;
+    --cyan-2: #c79c50;
+    --red: #f4efe6;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #100d0c;
+  --paper-2: #1b1714;
+  --card: #1f1a17;
+  --ink: #f4efe6;
+  --ink-2: #bdb5a8;
+  --ink-3: #8f877b;
+  --rule: #332c26;
+  --cyan: #dcae5e;
+  --cyan-2: #c79c50;
+  --red: #f4efe6;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-cyan { --c: var(--cyan); }
+.c-red { --c: var(--red); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: clamp(22px, 3vw, 34px); letter-spacing: .08em; line-height: 1; text-transform: uppercase; color: var(--red); }
+.hero h1 {
+  font-size: clamp(54px, 11vw, 136px);
+  font-weight: 800;
+  font-stretch: 72%;
+  line-height: .86;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 10px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 780 / 1186;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(30, 20, 10, .35), 0 8px 18px -10px rgba(30, 20, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--red);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  font-stretch: 72%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .01em;
+  color: var(--red);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--cyan);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--red);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-cy { fill: var(--cyan); }
+.fig svg text.t-red { fill: var(--red); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-cy { stroke: var(--cyan); fill: none; }
+.s-cy2 { stroke: var(--cyan-2); fill: none; }
+.s-red { stroke: var(--red); fill: none; }
+.f-cy { fill: var(--cyan); }
+.f-cy2 { fill: var(--cyan-2); }
+.f-red { fill: var(--red); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-cyt { fill: color-mix(in srgb, var(--cyan) 14%, var(--card)); }
+.f-redt { fill: color-mix(in srgb, var(--red) 14%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--red); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; letter-spacing: .02em; color: var(--red); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--cyan); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* three kinds of learning */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--cyan); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--cyan); }
+.compare .bad h5 { color: var(--red); }
+
+/* equation strip */
+.eq { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: var(--paper-2); border-radius: 6px; padding: 14px 18px; margin: 0; white-space: pre-wrap; color: var(--ink); }
+.eq .k { color: var(--cyan); }
+.eq .r { color: var(--red); }
+.eq .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 760px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 150px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 800; font-stretch: 72%; text-transform: uppercase; color: var(--red); border-top: 2px solid var(--red); padding-top: 12px; letter-spacing: .02em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .map, .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+
+/* Page-specific */
+.hero h1 { font-size: clamp(46px, 8.6vw, 108px); }
+.hero h1 .inv { width: fit-content; background: var(--ink); color: var(--paper); padding: .1em .16em .06em; margin-top: .1em; transform: skewX(-8deg); transform-origin: left bottom; }
+.hero .kicker { color: var(--cyan); }
+.part h2 { font-size: clamp(44px, 7vw, 96px); }
+.kinds-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.f-gold { fill: var(--cyan-2); }
+.chapter .chno { color: var(--cyan-2); }
+.points li::before { background: var(--cyan-2); }
+.band canvas { height: 120px; }
+.fig svg .sm text { font-size: 11.5px; }
+@media (max-width: 900px) { .kinds-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .kinds-4 { grid-template-columns: minmax(0, 1fr); } .fig pre.eq, .eq { font-size: 12.5px; overflow-x: auto; white-space: pre; } }
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Richard P. Rumelt · Profile Books, 2011</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#good-bad">Good &amp; bad</a>
+    <a href="#power">Sources of power</a>
+    <a href="#thinking">Thinking</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">Richard Rumelt</p>
+    <h1><span>Good Strategy</span><span class="inv">Bad Strategy</span></h1>
+    <p class="sub">The difference and why it matters</p>
+    <p class="dek">A UCLA strategy professor argues that most of what organisations call strategy is goals, slogans and wish lists. Real strategy names the obstacle and focuses action on it.</p>
+    <div class="byline label">
+      <span>18 chapters</span><span>3 parts</span><span>~105,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Good Strategy/Bad Strategy by Richard Rumelt: a diagonal line splits the cover into a white upper-left half with 'Good Strategy' in black condensed capitals and a black lower-right half with 'Bad Strategy' in white; the author's name and subtitle are set in ochre">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="focus"></canvas>
+  <div class="ends label"><span>Scattered effort</span><span>One pivot point</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Introduction · Overwhelming obstacles</span>
+    <h2>A strategy is a way through a difficulty</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>At Trafalgar in 1805, Nelson was outnumbered. Instead of fighting in parallel lines, he drove two columns straight into the enemy line, betting that its formation would break and his more experienced captains would win the close fighting. The French and Spanish lost 22 ships. The British lost none.</p>
+      <p>Good strategy, Rumelt argues, usually looks this simple: find the one or two pivot points and concentrate on them. What often passes for strategy is ambition instead. Lehman Brothers' 2006 plan, for example, was to grow faster than rivals by taking deals they turned down. A web CEO once told him strategy is "never quitting until you win."</p>
+      <p>His definition is narrower: a coherent response to an important challenge. Executives who say they have an "execution problem" have usually confused strategy with setting goals. The actions are part of the strategy, not a detail for later.</p>
+      <p>The core idea is the <strong>kernel</strong>: a diagnosis, a guiding policy and coherent actions. Bad strategy is not just a missing kernel. It has its own logic, and it is spreading.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The opening numbers</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-cyan"><span class="big num">27 v 33</span><p>British ships against the combined French and Spanish fleet at Trafalgar.</p></div>
+        <div class="stat"><span class="big num">22 : 0</span><p>Ships lost. The enemy lost two-thirds of its fleet. Britain lost none.</p></div>
+        <div class="stat c-red"><span class="big num">3%</span><p>Lehman's equity cushion while its 2006 plan was to take on more risk than its rivals.</p></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I</span>
+      <h3>Good and bad strategy</h3>
+      <p class="q">What strategy is, and the counterfeit that crowds it out</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Good strategy is unexpected</b>Rivals rarely focus</a></li>
+        <li><span>02</span><a href="#ch2"><b>Discovering power</b>New ways of seeing strength</a></li>
+        <li><span>03</span><a href="#ch3"><b>Bad strategy</b>Its four hallmarks</a></li>
+        <li><span>04</span><a href="#ch4"><b>Why so much bad strategy?</b>Avoiding choice</a></li>
+        <li><span>05</span><a href="#ch5"><b>The kernel</b>Diagnosis, policy, action</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II</span>
+      <h3>Sources of power</h3>
+      <p class="q">Where a good strategy gets its force</p>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Using leverage</b>Anticipate, pivot, concentrate</a></li>
+        <li><span>07</span><a href="#ch7"><b>Proximate objectives</b>Problems people can solve</a></li>
+        <li><span>08</span><a href="#ch8"><b>Chain-link systems</b>The weakest link rules</a></li>
+        <li><span>09</span><a href="#ch9"><b>Using design</b>Parts fitted into a whole</a></li>
+        <li><span>10</span><a href="#ch10"><b>Focus</b>Crown Cork &amp; Seal's short runs</a></li>
+        <li><span>11</span><a href="#ch11"><b>Growth</b>An outcome, not a plan</a></li>
+        <li><span>12</span><a href="#ch12"><b>Using advantage</b>Making it worth more</a></li>
+        <li><span>13</span><a href="#ch13"><b>Using dynamics</b>Riding waves of change</a></li>
+        <li><span>14</span><a href="#ch14"><b>Inertia and entropy</b>Why organisations stall and decay</a></li>
+        <li><span>15</span><a href="#ch15"><b>Putting it together</b>Nvidia</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part III</span>
+      <h3>Thinking like a strategist</h3>
+      <p class="q">The habits of mind behind good strategy</p>
+      <ol>
+        <li><span>16</span><a href="#ch16"><b>The science of strategy</b>Strategy as hypothesis</a></li>
+        <li><span>17</span><a href="#ch17"><b>Using your head</b>Fighting your own myopia</a></li>
+        <li><span>18</span><a href="#ch18"><b>Keeping your head</b>Herds and the inside view</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="good-bad">
+  <span class="label partno">Part I · Chapters 1–5</span>
+  <h2>Good and bad strategy</h2>
+  <p class="lede">Rumelt says two sources of strength get overlooked: coherence, meaning policies that support each other, and new insight that changes what counts as strength. Bad strategy crowds both out, and chapter 5 gives its antidote.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Unexpected</span></div>
+  <div class="body">
+    <div>
+      <h3>Focus surprises people</h3>
+      <p class="idea">Most organisations spread their resources, so a rival that actually concentrates catches everyone off guard.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Apple, 1997.</strong> Apple was two months from bankruptcy. Jobs cut 15 desktop models to one and all portables to one laptop. He dropped printers and five of six national retailers, moved manufacturing to Taiwan and cut inventory by more than 80%. It was Business 101, and nobody expected it.</li>
+      <li><strong>Waiting for the window.</strong> Asked in 1998 how Apple could escape its niche of under 4% of the market, Jobs didn't name a target. Rumelt had interviewed 26 European electronics executives. Each could explain how their industry's leader had won, by being first through a new window of opportunity, but none was looking for the next one.</li>
+      <li><strong>Desert Storm.</strong> A direct attack on Kuwait was estimated to cost 2,000 dead and 8,000 wounded. Schwarzkopf instead secretly shifted 250,000 troops west for a "left hook", and the ground war lasted 100 hours. The move was the Army's textbook envelopment. The surprise was that a big organisation actually focused, overriding the air force, marines and coalition partners to do it.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"I am going to wait for the next big thing."</blockquote>
+      <span class="label">Steve Jobs to Rumelt, summer 1998</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Discovering power</span></div>
+  <div class="body">
+    <div>
+      <h3>Strength is often a matter of viewpoint</h3>
+      <p class="idea">The most powerful strategies come from seeing an advantage that others have overlooked.</p>
+    </div>
+    <ul class="points">
+      <li><strong>David and Goliath.</strong> A list of strengths and weaknesses made before the fight favours Goliath. The sling reveals a different asymmetry: force delivered precisely from a distance, against an unarmoured forehead.</li>
+      <li><strong>Wal-Mart's real unit.</strong> The accepted rule was that a discount store needed a town of at least 100,000 people. Walton didn't break the rule. He redefined the store. The basic unit became a network of about 150 stores around a distribution centre, with shared trucks, data and managers.</li>
+      <li><strong>Pieces you can't copy one at a time.</strong> Kmart also installed bar-code scanners. But its store managers chose their own vendors and prices, so the data couldn't drive an integrated logistics system. Kmart filed for bankruptcy in 2002.</li>
+      <li><strong>Competing with the Soviets.</strong> Andy Marshall and James Roche's 1976 paper proposed using US technology to impose disproportionate costs, for example with quieter submarines, instead of answering each Soviet threat. Rumelt believes it helped overstretch the USSR.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Bad strategy</span></div>
+  <div class="body">
+    <div>
+      <h3>Four ways to spot it</h3>
+      <p class="idea">Bad strategy uses fluff, avoids naming the problem, presents goals as strategy and sets objectives that miss the point or can't be met.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Fluff.</strong> A bank announced a strategy of "customer-centric intermediation", which in plain words means being a bank. In 2000 an Arthur Andersen unit praised Enron's bandwidth trading with a diagram of "evolving" markets. It skipped the fact that bandwidth had no spot price and near-zero marginal cost.</li>
+      <li><strong>Not facing the problem.</strong> International Harvester's 1979 plan promised more market share in every division. It never mentioned work rules, terrible labour relations or margins half its rivals'. Between 1979 and 1985 it lost more than $3 billion and closed 35 of its 42 plants.</li>
+      <li><strong>Goals presented as strategy.</strong> A graphics firm's "20/20 plan" called for 20% growth and 20% margins, against a history of about 12%. Its "key strategies" were wishes. Rumelt compares this faith in one more push to Passchendaele.</li>
+      <li><strong>Bad objectives.</strong> One city's plan had 47 strategies and 178 action items, and item 122 was to make a strategic plan. A Los Angeles schools plan sensibly focused on its 34 weakest schools, then asked for "transformational leadership" without asking why leadership had failed.</li>
+    </ul>
+    <div class="compare">
+      <div class="bad"><h5>Logan's "key strategies"</h5><ul><li>Be the graphics firm of choice</li><li>Grow revenue at least 20% a year</li><li>Keep margins at 20% or more</li><li>No obstacle named, no action implied</li></ul></div>
+      <div class="good"><h5>Chen Brothers' new objective</h5><ul><li>Diagnosis: Whole Foods was squeezing its specialty-shop customers</li><li>One cross-functional team</li><li>One target: make its most distinctive product a Whole Foods national account</li><li>Further objectives to be set once that's done</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Why so much</span></div>
+  <div class="body">
+    <div>
+      <h3>Choosing hurts, so people avoid it</h3>
+      <p class="idea">Bad strategy isn't a calculation error. It comes from avoiding the hard work of choosing, which templates and positive thinking make easy to skip.</p>
+    </div>
+    <ul class="points">
+      <li><strong>DEC, 1992.</strong> DEC's executives were split between "Boxes", "Solutions" and "Chips". Ken Olsen asked them for consensus and got a statement about being committed to quality and leadership in data processing. His successor chose Chips, five years too late. Compaq bought DEC in 1998.</li>
+      <li><strong>Saying no.</strong> In 1985 Gordon Moore told Andy Grove that a new CEO would take Intel out of memory chips. Even then the exit took more than a year. By 1992 Intel was the world's largest chipmaker.</li>
+      <li><strong>Charisma in a can.</strong> In the 1980s, charismatic leadership was recast as "transformational" leadership anyone could learn. It became a template of vision, mission, values and "strategies" that says nothing, as in NEC's lofty vision from a firm earning under 2% on equity.</li>
+      <li><strong>New Thought.</strong> Rumelt traces the belief that thinking about success produces it from 1880s writers to <em>The Secret</em> (2007). He wouldn't fly in a plane designed by people who never considered how it could fail.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three executives, three options, no stable majority</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 268" role="img" aria-label="Condorcet's paradox at DEC. Alec ranks Boxes, Chips, Solutions. Beverly ranks Solutions, Boxes, Chips. Craig ranks Chips, Solutions, Boxes. In pairwise votes Boxes beats Chips two to one, Solutions beats Boxes two to one, and Chips beats Solutions two to one, so the majority goes round in a circle.">
+          <defs>
+            <marker id="ah-c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" style="fill:var(--ink-2)"/></marker>
+          </defs>
+          <text x="20" y="22" class="hd">Each person's ranking</text>
+          <text x="113" y="48" text-anchor="middle" class="t-3" style="font-size:11px">1st</text>
+          <text x="179" y="48" text-anchor="middle" class="t-3" style="font-size:11px">2nd</text>
+          <text x="245" y="48" text-anchor="middle" class="t-3" style="font-size:11px">3rd</text>
+          <g id="d-prefs"></g>
+          <text x="20" y="196" class="t-3" style="font-size:11px">Rankings as given in the book (ch. 4)</text>
+          <path d="M288 30 V200" class="s-rule"/>
+          <text x="320" y="22" class="hd">Head-to-head votes</text>
+          <rect x="404" y="40" width="92" height="30" rx="4" class="f-cyt s-cy" stroke-width="1.2"/>
+          <text x="450" y="60" text-anchor="middle" class="t-ink">Boxes</text>
+          <rect x="316" y="168" width="104" height="30" rx="4" class="f-cyt s-cy" stroke-width="1.2"/>
+          <text x="368" y="188" text-anchor="middle" class="t-ink">Solutions</text>
+          <rect x="488" y="168" width="92" height="30" rx="4" class="f-cyt s-cy" stroke-width="1.2"/>
+          <text x="534" y="188" text-anchor="middle" class="t-ink">Chips</text>
+          <path d="M470 72 L522 164" class="s-2" stroke-width="1.5" marker-end="url(#ah-c)"/>
+          <text x="512" y="112" class="t-cy" style="font-size:12px">2–1</text>
+          <path d="M486 183 L424 183" class="s-2" stroke-width="1.5" marker-end="url(#ah-c)"/>
+          <text x="455" y="214" text-anchor="middle" class="t-cy" style="font-size:12px">2–1</text>
+          <path d="M378 164 L428 72" class="s-2" stroke-width="1.5" marker-end="url(#ah-c)"/>
+          <text x="376" y="112" text-anchor="end" class="t-cy" style="font-size:12px">2–1</text>
+          <text x="450" y="128" text-anchor="middle" class="t-3" style="font-size:11px">arrow = beats</text>
+          <path d="M20 232 H580" class="s-rule"/>
+          <text x="20" y="256" class="t-red">Forced consensus: a statement everyone could sign, and no strategy.</text>
+        </svg>
+      </div>
+      <p class="cap">Each option beats one rival and loses to the other, so any majority can be overturned. Rumelt uses Condorcet's paradox to show why demanding consensus from a divided group produces mush. Someone has to choose.</p>
+      <p class="src">Rankings from Rumelt's DEC example, ch. 4</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"Universal buy-in usually signals the absence of choice."</blockquote>
+      <span class="label">Rumelt, ch. 4</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">The kernel</span></div>
+  <div class="body">
+    <div>
+      <h3>Diagnosis, guiding policy, coherent action</h3>
+      <p class="idea">A strategy is an argument that runs from the facts to a diagnosis, then to a policy and to coordinated actions. If any of the three is missing, it fails.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Diagnosis.</strong> The question is "what's going on here?" A diagnosis is a judgment that simplifies the situation, and the best one points to something you can act on. In 1993 Lou Gerstner rejected the plan to break up IBM. He judged that IBM's problem was failing to use its integration, not having too much of it.</li>
+      <li><strong>Guiding policy.</strong> A guiding policy works like a guardrail: it rules out many moves without spelling out each step. Wells Fargo's vision is an ambition. Its cross-selling policy is a way of competing.</li>
+      <li><strong>Coherent action.</strong> Ford under Jacques Nasser bought Volvo and Jaguar for their brands, then put them on a shared platform to save cost. The two moves worked against each other. Coordination has a cost, because it cuts into specialisation, so impose it only where the gains are large.</li>
+    </ul>
+    <div class="fig">
+      <h4>The kernel, applied to a corner grocery</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 252" role="img" aria-label="Three linked boxes. Diagnosis: Stephanie's store is losing to a 24-hour supermarket, and most of her customers walk past daily. Guiding policy: serve busy professionals who have little time to cook. Coherent actions: a second checkout for the 5 p.m. rush, alley parking, prepared meals in place of student snacks, and no midnight opening.">
+          <defs>
+            <marker id="ah-k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" style="fill:var(--ink-2)"/></marker>
+          </defs>
+          <rect x="14" y="14" width="172" height="58" rx="6" class="f-card s-ink" stroke-width="1.5"/>
+          <text x="100" y="38" text-anchor="middle" class="hd">Diagnosis</text>
+          <text x="100" y="58" text-anchor="middle" class="t-3" style="font-size:11px">What's going on here?</text>
+          <rect x="214" y="14" width="172" height="58" rx="6" class="f-cyt s-cy" stroke-width="1.5"/>
+          <text x="300" y="38" text-anchor="middle" class="hd">Guiding policy</text>
+          <text x="300" y="58" text-anchor="middle" class="t-3" style="font-size:11px">the overall approach</text>
+          <rect x="414" y="14" width="172" height="58" rx="6" class="f-cy s-cy" stroke-width="1.5"/>
+          <text x="500" y="38" text-anchor="middle" class="hd" style="fill:var(--paper)">Coherent actions</text>
+          <text x="500" y="58" text-anchor="middle" style="font-size:11px;fill:var(--paper)">steps that reinforce</text>
+          <path d="M188 43 H210" class="s-2" stroke-width="1.5" marker-end="url(#ah-k)"/>
+          <path d="M388 43 H410" class="s-2" stroke-width="1.5" marker-end="url(#ah-k)"/>
+          <g class="sm">
+            <text x="18" y="100">Losing to a supermarket</text>
+            <text x="18" y="118">open 24/7 with lower</text>
+            <text x="18" y="136">prices. Most shoppers</text>
+            <text x="18" y="154">walk past daily:</text>
+            <text x="18" y="172">students, or</text>
+            <text x="18" y="190">professionals.</text>
+            <text x="218" y="100" class="t-cy">Serve the busy</text>
+            <text x="218" y="118" class="t-cy">professional with</text>
+            <text x="218" y="136" class="t-cy">little time to cook.</text>
+            <text x="218" y="164" class="t-3">Thousands of choices</text>
+            <text x="218" y="182" class="t-3">become one.</text>
+            <text x="418" y="100">· 2nd checkout (5 p.m.)</text>
+            <text x="418" y="118">· alley parking</text>
+            <text x="418" y="136">· prepared meals in</text>
+            <text x="418" y="154">  place of snacks</text>
+            <text x="418" y="172">· staff after work</text>
+            <text x="418" y="190">· no late-night hours</text>
+          </g>
+          <path d="M14 212 H586" class="s-rule"/>
+          <text x="14" y="236" class="t-ink" style="font-size:12px">No diagnosis: nothing to judge the policy against. No actions: just an intention.</text>
+        </svg>
+      </div>
+      <p class="cap">Stephanie, a friend of Rumelt's, faced a long list of separate questions about her corner grocery. Choosing one customer group turned them into decisions that reinforce each other. Nothing proves it was the best policy, but without one the decisions would pull against each other.</p>
+      <p class="src">Example from ch. 5</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="power">
+  <span class="label partno">Part II · Chapters 6–15</span>
+  <h2>Sources of power</h2>
+  <p class="lede">A good strategy makes effort go further. These ten chapters cover where that extra force comes from, and the inertia and decay that drain it. Chapter 15 pulls them together using Nvidia.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Leverage</span></div>
+  <div class="body">
+    <div>
+      <h3>Anticipate, find the pivot, concentrate</h3>
+      <p class="idea">Leverage comes from predicting what others will do, finding the point where a small push releases larger forces, and putting your effort there.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Anticipation.</strong> Toyota spent more than $1 billion on hybrids during the SUV boom, betting that rivals would license its system. At Shell, Pierre Wack saw the real oil risk as a price spike that lures you into investing just before a crash.</li>
+      <li><strong>Pivot points.</strong> Japanese shoppers tire of products fast. A 7-Eleven shows 50 soft drinks with 70% turnover a year. 7-Eleven Japan built quick-response teams to turn local taste data into new private-label products.</li>
+      <li><strong>Concentration.</strong> Below a certain level, effort does nothing. With about $65 million a year, Harold Williams at the Getty Trust chose not to bid up art prices. He aimed to change the study of art itself, a goal his budget could decisively affect.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Proximate objectives</span></div>
+  <div class="body">
+    <div>
+      <h3>Give people a problem they can solve</h3>
+      <p class="idea">A leader's job is to take on much of the ambiguity and give the organisation a target within reach.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The moon was proximate.</strong> Wernher von Braun advised that a crewed landing needed rockets about ten times more powerful than either side had. That would let America's larger resources decide the race. Kennedy made his speech a month later.</li>
+      <li><strong>Phyllis's moon.</strong> Nobody at JPL knew whether the lunar surface was powder, needle-like crystals or boulders. Phyllis Buwalda specified hard, grainy ground with gentle slopes and small boulders, much like the Southwestern desert. Engineers could build to that, and Surveyor landed.</li>
+      <li><strong>More uncertainty, closer objectives.</strong> A regional business school swapped its list of initiatives for one aim: better jobs for graduates, starting with ten target firms.</li>
+      <li><strong>Skills come in layers.</strong> A rescue pilot told Rumelt you learn to fly first, then to fly at night, then in formation. Organisations climb in the same order.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"The engineers can't work without a specification."</blockquote>
+      <span class="label">Phyllis Buwalda, JPL Future Mission Studies</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Chain links</span></div>
+  <div class="body">
+    <div>
+      <h3>When the weakest link sets the limit</h3>
+      <p class="idea">In a chain-linked system, improving one link adds cost and no value. The same logic that keeps such systems stuck also makes them very hard to copy when they work.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Getting stuck.</strong> When each link is managed separately, nobody gains from improving their own, so the system stalls. GM from 1980 to 2008 is Rumelt's example: a better transmission doesn't help while door panels rattle.</li>
+      <li><strong>Getting unstuck.</strong> Marco Tinelli's Lombardy machine company had poor quality, weak salespeople and high costs. He ran three campaigns in sequence, suspended the usual local measures, and took the short-term losses himself.</li>
+      <li><strong>Excellence.</strong> IKEA's policies are chain-linked: its own flat-pack designs, giant suburban stores, catalogues instead of salespeople, and its own logistics. Copying one piece adds cost, and Rumelt notes nobody has copied the whole in over fifty years.</li>
+    </ul>
+    <div class="fig">
+      <h4>Raise one link and the system doesn't move</h4>
+      <div class="scroll-x">
+        <svg id="d-chain" viewBox="0 0 600 250" role="img" aria-label="Illustrative bars. Left panel: quality is raised to full height but sales and cost stay low, so system output, set by the weakest link, stays low. Right panel: all three links are raised in turn and system output rises to the top. Below, a timeline of Marco Tinelli's three campaigns: twelve months on quality, then sales, then nine months on cost.">
+          <text x="20" y="22" class="hd">Fix one link</text>
+          <text x="330" y="22" class="hd">Fix every link, one at a time</text>
+          <text x="20" y="40" class="t-3" style="font-size:11px">output = weakest link</text>
+          <text x="330" y="40" class="t-3" style="font-size:11px">output = weakest link</text>
+          <text x="590" y="214" text-anchor="end" class="t-3" style="font-size:11px">Marco Tinelli's campaigns</text>
+          <rect x="26" y="222" width="220" height="18" rx="2" class="f-cy"/>
+          <text x="136" y="235" text-anchor="middle" style="font-size:11px;fill:var(--paper)">quality · 12 months</text>
+          <rect x="250" y="222" width="150" height="18" rx="2" class="f-cyt s-cy"/>
+          <text x="325" y="235" text-anchor="middle" style="font-size:11px">sales</text>
+          <rect x="404" y="222" width="166" height="18" rx="2" class="f-paper2 s-2"/>
+          <text x="487" y="235" text-anchor="middle" style="font-size:11px">cost · 9 months</text>
+        </svg>
+      </div>
+      <p class="cap">Bar heights are illustrative. The book doesn't say how long the sales campaign lasted. Tinelli scheduled cost last so that cost cutting would fit the machines rather than define them.</p>
+      <p class="src">Mechanism from ch. 8</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Design</span></div>
+  <div class="body">
+    <div>
+      <h3>Strategy is designed more than chosen</h3>
+      <p class="idea">Many strategies are designed rather than chosen from a menu. The fewer resources you have, the more tightly the parts must fit.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Cannae, 216 BC.</strong> Hannibal had about 55,000 troops against 85,000 or more Romans. He let his centre fall back while his cavalry circled behind them. The Romans were packed so tightly they couldn't fight, and at least 50,000 died. The battle was planned in advance and turned the enemy's own behaviour into the trap.</li>
+      <li><strong>Voyager on a weight budget.</strong> At JPL, Rumelt found that a 3,000-pound Jupiter probe could be bolted together from standard subsystems. A 1,200-pound version forced every subsystem to be traded off against the others.</li>
+      <li><strong>Learn from upstarts.</strong> Xerox's patents made strategy almost unnecessary, and that comfort bred laxity. Tightly designed attacks come from challengers like Canon. Paccar is a durable example: it designs around owner-drivers, makes only premium heavy trucks, and hasn't lost money since 1939.</li>
+    </ul>
+    <div class="fig">
+      <h4>Fewer resources demand tighter design</h4>
+      <div class="scroll-x">
+        <svg id="d-design" viewBox="0 0 600 262" role="img" aria-label="Illustrative chart. Horizontal axis: resources available. Vertical axis: how tightly actions must be integrated. Two falling curves, one for a high challenge and one for a low challenge. A 1,200-pound Voyager budget sits high on the curve and a 3,000-pound budget sits low. Upstarts are at the left with few resources and tight design; a patent-protected incumbent like Xerox is at the far right needing little design.">
+          <path d="M70 26 V214 H580" class="s-2" stroke-width="1.2"/>
+          <text x="58" y="34" text-anchor="end" class="t-3" style="font-size:11px">tight</text>
+          <text x="58" y="210" text-anchor="end" class="t-3" style="font-size:11px">loose</text>
+          <text x="20" y="124" class="t-3" style="font-size:11px" transform="rotate(-90 20 124)" text-anchor="middle">integration needed</text>
+          <text x="325" y="238" text-anchor="middle" class="t-3" style="font-size:11px">resources available →</text>
+          <g id="d-design-curves"></g>
+          <text x="590" y="256" text-anchor="end" class="t-3" style="font-size:10.5px">Curves illustrative; weights from ch. 9</text>
+        </svg>
+      </div>
+      <p class="cap">With fixed resources, a bigger challenge calls for tighter integration. With a fixed challenge, better resources reduce the need for it. Tight designs are also narrower and more fragile.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Focus</span></div>
+  <div class="body">
+    <div>
+      <h3>Working out a strategy from its policies</h3>
+      <p class="idea">To find a firm's real strategy, list the policies that differ from industry norms and ask what they have in common.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A bad industry.</strong> The big can makers were captive suppliers to giant buyers and earned 4–5% on assets. Crown was 50–60% more profitable and returned 19% a year to shareholders over 35 years.</li>
+      <li><strong>Follow the policies.</strong> The official explanation was hard-to-hold products like aerosols and soft drinks. Rumelt lists the policies that differ from the norm instead. Technical help targets small customers. Fast response targets rush orders. Small plants that never depend on one buyer keep spare lines ready.</li>
+      <li><strong>The common thread: short runs.</strong> Crown's cost per can is higher and its prices are higher still. Several customers per plant means no single buyer can squeeze it.</li>
+    </ul>
+    <div class="fig">
+      <h4>Captive supplier versus focused supplier</h4>
+      <div class="scroll-x">
+        <svg id="d-crown" viewBox="0 0 600 250" role="img" aria-label="Left: a large brewer such as Miller in the centre with two can makers on either side competing for its long runs, so the buyer holds the power. Right: one Crown plant in the centre surrounded by a ring of twelve smaller customers with short runs, rush orders and new products, so the supplier holds the power.">
+          <text x="20" y="22" class="hd">The majors: captive</text>
+          <rect x="102" y="90" width="96" height="44" rx="4" class="f-ink"/>
+          <text x="150" y="117" text-anchor="middle" style="fill:var(--paper);font-size:12px">big brewer</text>
+          <circle cx="44" cy="112" r="26" class="f-card s-ink" stroke-width="1.5"/>
+          <text x="44" y="116" text-anchor="middle" style="font-size:10.5px">can co.</text>
+          <circle cx="256" cy="112" r="26" class="f-card s-ink" stroke-width="1.5"/>
+          <text x="256" y="116" text-anchor="middle" style="font-size:10.5px">can co.</text>
+          <path d="M70 112 H100" class="s-2" stroke-width="2"/>
+          <path d="M200 112 H230" class="s-2" stroke-width="2"/>
+          <text x="20" y="182">long runs of standard cans</text>
+          <text x="20" y="200">buyer can switch or self-make</text>
+          <text x="20" y="226" class="t-red">4–5% return on assets</text>
+          <text x="330" y="22" class="hd">Crown: focused on short runs</text>
+          <circle cx="452" cy="112" r="30" class="f-cy"/>
+          <text x="452" y="116" text-anchor="middle" style="fill:var(--paper);font-size:11px">Crown</text>
+          <text x="330" y="226" class="t-cy">50–60% more profitable</text>
+        </svg>
+      </div>
+      <p class="cap">The majors avoid short runs because changing over a can line is expensive. Crown accepted that cost and gained bargaining power.</p>
+      <p class="src">Rumelt's classroom analysis of the Crown Cork &amp; Seal case, ch. 10</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Growth</span></div>
+  <div class="body">
+    <div>
+      <h3>Growth for its own sake</h3>
+      <p class="idea">Healthy growth is the reward for an advantage. Buying growth tends to destroy value.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Crown after Connelly.</strong> From 1989 William Avery made twenty acquisitions, making Crown the world's largest container maker. Its skill had been short runs, not cost cutting. Plastic-bottle growth hit its ceiling, prices fell, and the stock dropped from $55 to $5 between 1998 and 2001.</li>
+      <li><strong>Why leaders buy anyway.</strong> Buyers usually pay about a 25% premium plus fees, and advisers earn the fees. A banker pushing a Telecom Italia merger ended up arguing that more cash flow lets you do a bigger deal. The board said no.</li>
+    </ul>
+    <div class="fig">
+      <h4>Crown's shareholders before and after the growth push</h4>
+      <div class="bars">
+        <div class="bar c-cyan"><div class="row"><span>Crown, 1980–89 (revenue growth 3.1%/yr)</span><b>18.5%/yr</b></div><div class="track"><div class="fill" style="width:92.5%"></div></div></div>
+        <div class="bar" style="--c:var(--ink-3)"><div class="row"><span>S&amp;P 500, same years</span><b>8.6%/yr</b></div><div class="track"><div class="fill" style="width:43%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Crown, 1990–2006 (rapid growth)</span><b>2.4%/yr</b></div><div class="track"><div class="fill" style="width:12%"></div></div></div>
+        <div class="bar" style="--c:var(--ink-3)"><div class="row"><span>S&amp;P 500, same years</span><b>9%/yr</b></div><div class="track"><div class="fill" style="width:45%"></div></div></div>
+      </div>
+      <p class="cap">Annual return to shareholders. Return on capital fell from 15.3% to below 5%.</p>
+      <p class="src">Figures as reported in ch. 11</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Advantage</span></div>
+  <div class="body">
+    <div>
+      <h3>Owning an advantage doesn't make you richer</h3>
+      <p class="idea">Every advantage applies only in particular conditions. Wealth comes from increasing an advantage, not just from holding it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Don't wrestle the gorilla.</strong> A venture capitalist told a start-up with a clever new fabric to license it rather than build a clothing company: different game, different strengths. Rumelt argues the US is wrestling the gorilla in Afghanistan.</li>
+      <li><strong>The silver machine.</strong> Rumelt and Steven Lippman imagined a machine making $10 million of silver a year at zero cost. If you buy it for $100 million at 10% interest, you earn an ordinary return. Owning an advantage isn't enough. It becomes "interesting" only when you can increase its value.</li>
+      <li><strong>Interesting moves.</strong> Stewart Resnick paid to build demand for almonds and pistachios. The seven to ten years new trees need gave him time to build processing scale small growers can't match. He then repeated the playbook with POM pomegranate juice.</li>
+    </ul>
+    <div class="kinds kinds-4">
+      <div><span class="label">1 · Deepen</span><b>Widen value over cost</b><span>Gilbreth doubled bricklayers' output by restudying the work.</span></div>
+      <div><span class="label">2 · Broaden</span><b>Extend into new fields</b><span>DuPont went from explosives to nylon.</span></div>
+      <div><span class="label">3 · Create demand</span><b>More buyers for scarce resources</b><span>POM created a new juice category.</span></div>
+      <div><span class="label">4 · Isolate</span><b>Make copying harder</b><span>Stronger property rights, or a moving target like Windows.</span></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Dynamics</span></div>
+  <div class="body">
+    <div>
+      <h3>Riding waves of change</h3>
+      <p class="idea">Large outside shifts create new high ground. The gains go to people who understand the second-order effects, not just the obvious ones.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Seeing the swell.</strong> In 1996 a French CEO told Rumelt that Cisco's lead came from clever code written by a tiny team, not from scale. Behind it was the microprocessor. Software won because mistakes are cheap to fix, and once every component had its own chip the computer industry broke into separate horizontal layers.</li>
+      <li><strong>Cisco's waves.</strong> Cisco rode software, corporate networking, the vendor-neutral IP protocol and, from 1993, the public Internet. It took two-thirds of corporate networking while incumbents protected their own protocols.</li>
+      <li><strong>Guideposts.</strong> Watch for rising fixed costs, deregulation, forecasting biases and incumbent inertia. Sketch the <em>attractor state</em>, the most efficient shape the industry is moving towards.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">Inertia &amp; entropy</span></div>
+  <div class="body">
+    <div>
+      <h3>Stalled and decaying organisations</h3>
+      <p class="idea">Organisations resist change, and without maintenance they drift into disorder. Both open gaps that rivals can exploit.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Inertia of routine.</strong> After deregulation, Continental still "forecast" airfares with a cost-plus formula that only regulators had made true. Long-haul fares fell 27% in 1984–85.</li>
+      <li><strong>Inertia of culture.</strong> Bell Labs quoted three million dollars and two years for a simple demo, and Rumelt wrote it himself in three weeks. To change a culture: simplify, break up units, sort them, and replace the people who set each group's norms.</li>
+      <li><strong>Inertia by proxy.</strong> Phone companies held back DSL to protect their profitable T1 lines. When they finally responded in 2000, none of the upstart carriers survived.</li>
+      <li><strong>Entropy.</strong> Sloan gave each GM brand its own price band in 1921. By 2008 GM offered nine cars at $25,500 against Toyota's two.</li>
+    </ul>
+    <div class="fig">
+      <h4>Denton's hump chart: half the stores cancel out the other half</h4>
+      <div class="scroll-x">
+        <svg id="d-hump" viewBox="0 0 600 262" role="img" aria-label="Cumulative gain to operating for Denton's 28 garden-supply outlets, ranked best to worst. The cumulative total rises from 1.05 million dollars at outlet 1 to a peak of about 4.68 million at outlet 14, then falls as outlets 15 to 28, which all lose money, pull it back down to about 0.3 million for the whole chain."></svg>
+      </div>
+      <p class="cap">Rumelt ranked the 28 outlets by "gain to operating" and added them up one by one. The best outlet alone, at $1.05 million, beat the whole chain. After Denton's dropped five outlets and copied its best ones for two years, the figure rose from about $100,000 to over $5 million.</p>
+      <p class="src">Bar heights read from the book's chart, ch. 14</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Putting it together</span></div>
+  <div class="body">
+    <div>
+      <h3>Nvidia, from nowhere to the top</h3>
+      <p class="idea">Nvidia's rise used almost every source of power in the book: a wave of change, a clear policy, tightly designed actions and rivals that couldn't respond.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The wave.</strong> Online 3-D games like Quake made fast graphics a matter of life and death for players. Nvidia's first chip, the NV1, had flopped.</li>
+      <li><strong>Policy and actions.</strong> Nvidia focused on PC 3-D graphics using SGI's pipeline approach and Microsoft's DirectX, and set out to ship a new chip every six months. It made that possible with three staggered teams, heavy simulation and one unified driver for every chip.</li>
+      <li><strong>Rivals.</strong> 3dfx overreached and closed in 2000, and Intel's slower process couldn't keep up. SGI set a goal of 50% growth and went bankrupt in 2006. Rumelt calls Nvidia's decision not to buy ArtX, which revived ATI, a blunder.</li>
+    </ul>
+    <div class="fig">
+      <h4>Three overlapping teams, a new chip every six months</h4>
+      <div class="scroll-x">
+        <svg id="d-nv" viewBox="0 0 600 214" role="img" aria-label="Timeline over 54 months. Three Nvidia teams each run 18-month development cycles, offset by six months, so a new chip ships every six months. A rival on a single 18-month cycle ships only at months 18, 36 and 54."></svg>
+      </div>
+      <p class="cap">Against an eighteen-month rival, Nvidia would have the better chip about 83% of the time. From 1997 to 2001 its performance rose 157% a year on average.</p>
+      <p class="src">Cycle lengths and figures from ch. 15</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="thinking">
+  <span class="label partno">Part III · Chapters 16–18</span>
+  <h2>Thinking like a strategist</h2>
+  <p class="lede">Frameworks matter less than habits of mind: treating strategy as a testable bet, questioning your first idea, and checking your own assessment against the crowd's.</p>
+</div>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Science</span></div>
+  <div class="body">
+    <div>
+      <h3>A strategy is a hypothesis</h3>
+      <p class="idea">Strategy works at the edge of what is known, so treat it as an informed guess and running the business as the experiment that tests it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>No crank to wind.</strong> Deduction only repeats what is already known. Competition pushes you to the edge of knowledge, where the uncertainty is also the opportunity.</li>
+      <li><strong>Anomalies.</strong> In 1983 Howard Schultz noticed that Milan had 1,500 espresso bars. Expensive coffee was the mass market there, while Americans drank cheap coffee. That mismatch became a hypothesis.</li>
+      <li><strong>Testing and revising.</strong> His first bar copied Milan exactly. Customer response led him to add chairs, paper cups and nonfat milk. By 2001 Starbucks had 4,700 outlets. Owning every stage let it capture what it learned.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch17">
+  <div class="gutter"><span class="chno">17</span><span class="label">Using your head</span></div>
+  <div class="body">
+    <div>
+      <h3>The obstacle in every case: your own short sight</h3>
+      <p class="idea">Being strategic largely means being less short-sighted than your unreflective self, which takes deliberate tools.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Make a list.</strong> In a story Rumelt heard, Frederick Taylor told Andrew Carnegie to list the ten most important things he could do and start on number one. The value is in making the list: finding where important and actionable overlap.</li>
+      <li><strong>Quick closure.</strong> In a class on TiVo, almost every executive grabbed the first idea that came to mind and then defended it. A first answer feels like relief in a messy situation.</li>
+      <li><strong>Tools.</strong> The <em>kernel</em> turns a single insight into a full argument. <em>Problem-solution</em> works back from a policy to its obstacle. <em>Create-destroy</em> means attacking your own options. A <em>panel of experts</em> means imagining critiques from people you respect. Write your judgments down before you know the outcome so you can learn from them.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch18">
+  <div class="gutter"><span class="chno">18</span><span class="label">Keeping your head</span></div>
+  <div class="body">
+    <div>
+      <h3>Look past the crowd</h3>
+      <p class="idea">Do your own analysis of the fundamentals. Social herding and the belief that "this time is different" hide what simple analysis would show.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Global Crossing.</strong> Its first Atlantic cable cost about $1.5 million per unit of capacity, and it sold that capacity for $8 million. At one point the market valued the company at $38 billion. The industry was a pure commodity with sunk costs and huge planned capacity. The company went bankrupt in December 2001.</li>
+      <li><strong>2008's errors.</strong> Rumelt lists engineering overreach, the "smooth-sailing" fallacy, incentives that rewarded risk, social herding, and the <em>inside view</em>: believing your case is special. US household debt went from 60% of after-tax income in 1984 to 130% in 2007.</li>
+      <li><strong>The outside view.</strong> Twenty-one advanced economies had 28 severe house-price boom-bust cycles in fifty years, and the US had land-credit panics in 1819, 1837, 1873 and 1893. Rumelt argues that easy-credit ownership policies kept repeating the pattern.</li>
+    </ul>
+    <div class="fig">
+      <h4>What one unit of transatlantic capacity sold for</h4>
+      <div class="bars">
+        <div class="bar" style="--c:var(--ink-3)"><div class="row"><span>Latest phone-company consortium cable</span><b>$18–20m</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Global Crossing's asking price, 1998</span><b>$8m</b></div><div class="track"><div class="fill" style="width:40%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Market price, late 1999 (from $6.5m)</span><b>$2m</b></div><div class="track"><div class="fill" style="width:10%"></div></div></div>
+        <div class="bar" style="--c:var(--ink-2)"><div class="row"><span>Cost to build one on the first cable</span><b>~$1.5m</b></div><div class="track"><div class="fill" style="width:7.5%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Market price, early 2002</span><b>$325k</b></div><div class="track"><div class="fill" style="width:1.6%"></div></div></div>
+      </div>
+      <p class="cap">Price per STM-1 (2,016 voice circuits). An extra call cost almost nothing to carry, so competition drove prices towards cost.</p>
+      <p class="src">Figures as reported in ch. 18</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Rumelt offers no template to fill in. But his cases suggest habits that apply to a company, a school board or your own career.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Diagnose</h3>
+      <div class="tk"><b>Ask "what's going on here?"</b><span>Write down what matters most before deciding what to do.</span></div>
+      <div class="tk"><b>Name the obstacle, not the target</b><span>Underperformance is a result. The challenge is whatever causes it.</span></div>
+      <div class="tk"><b>Look for the anomaly</b><span>Facts that don't fit the accepted story are where new strategies start.</span></div>
+      <div class="tk"><b>Study the competition's inertia</b><span>Every big success involves rivals who couldn't respond.</span></div>
+      <div class="tk"><b>Take the outside view</b><span>Ask how similar cases turned out elsewhere.</span></div>
+    </div>
+    <div class="col">
+      <h3>Decide</h3>
+      <div class="tk"><b>Check for the four hallmarks</b><span>Fluff, an unnamed problem, goals presented as strategy, and objectives that miss or can't be met.</span></div>
+      <div class="tk"><b>Choose, and say no</b><span>If everyone agrees, probably nothing was chosen.</span></div>
+      <div class="tk"><b>Find the pivot point</b><span>Put effort where a small push releases larger forces.</span></div>
+      <div class="tk"><b>Prefer focus to compromise</b><span>Good strategies tend to commit fully to one approach rather than average between several.</span></div>
+      <div class="tk"><b>Treat growth as an outcome</b><span>Growth should follow from an advantage. Don't buy it and call that strategy.</span></div>
+    </div>
+    <div class="col">
+      <h3>Act</h3>
+      <div class="tk"><b>Make actions coherent</b><span>Each action should support the others.</span></div>
+      <div class="tk"><b>Set proximate objectives</b><span>Absorb the ambiguity yourself and hand people a problem they can solve.</span></div>
+      <div class="tk"><b>Fix chain links in sequence</b><span>Take on bottlenecks one at a time and absorb the cost.</span></div>
+      <div class="tk"><b>Weed the garden</b><span>Build a hump chart. Units that hide cross-subsidies are a sign of entropy.</span></div>
+      <div class="tk"><b>Write your judgments down</b><span>Commit before results arrive, then compare.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Richard P. Rumelt, <em>Good Strategy/Bad Strategy: The Difference and Why It Matters</em> (Profile Books, 2011). Figures are as reported in the book. The chain-link and design diagrams are illustrative. The hump chart is drawn from the book's chart. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function tx(parent, x, y, s, attrs) {
+    var a = attrs || {}; a.x = x; a.y = y;
+    var t = el("text", a, parent); t.textContent = s; return t;
+  }
+
+  /* --- Ch4: DEC preference rankings (from the book's table) --- */
+  var pr = document.getElementById("d-prefs");
+  if (pr) {
+    var people = [["Alec", ["Boxes", "Chips", "Solutions"]], ["Beverly", ["Solutions", "Boxes", "Chips"]], ["Craig", ["Chips", "Solutions", "Boxes"]]];
+    people.forEach(function (p, i) {
+      var y = 62 + i * 42;
+      tx(pr, 20, y + 20, p[0], { "class": "t-ink", style: "font-size:11.5px" });
+      p[1].forEach(function (opt, j) {
+        el("rect", { x: 82 + j * 66, y: y + 4, width: 62, height: 24, rx: 3, "class": j === 0 ? "f-cyt s-cy" : "f-paper2", "stroke-width": 1 }, pr);
+        tx(pr, 113 + j * 66, y + 20, opt, { "text-anchor": "middle", style: "font-size:10.5px", "class": j === 0 ? "t-ink" : "" });
+      });
+    });
+  }
+
+  /* --- Ch8: chain links (illustrative heights) --- */
+  var ch = document.getElementById("d-chain");
+  if (ch) {
+    var base = 176, names = ["quality", "sales", "cost"];
+    var panel = function (x0, hs, line) {
+      hs.forEach(function (h, j) {
+        var x = x0 + j * 84;
+        el("rect", { x: x, y: base - h, width: 62, height: h, rx: 3, "class": h >= 100 ? "f-cy" : "f-paper2 s-2", "stroke-width": 1 }, ch);
+        tx(ch, x + 31, base + 16, names[j], { "text-anchor": "middle", style: "font-size:12px" });
+      });
+      el("line", { x1: x0 - 6, x2: x0 + 238, y1: base - line, y2: base - line, "class": "s-red", "stroke-width": 2, "stroke-dasharray": "6 4" }, ch);
+      el("line", { x1: x0 - 6, x2: x0 + 238, y1: base, y2: base, "class": "s-2", "stroke-width": 1 }, ch);
+      tx(ch, x0 + 84, base - line - 6, "system output", { "class": "t-red", style: "font-size:11px" });
+    };
+    panel(26, [110, 34, 46], 34);
+    panel(336, [110, 110, 110], 110);
+  }
+
+  /* --- Ch9: resources vs integration (illustrative curves) --- */
+  var dc = document.getElementById("d-design-curves");
+  if (dc) {
+    var X = function (u) { return 80 + u * 490; }, Y = function (v) { return 210 - v * 176; };
+    var curve = function (k, cls, label, ly) {
+      var d = "";
+      for (var u = 0.04; u <= 1.0001; u += 0.02) {
+        var v = Math.min(1, k / (u + 0.12) - 0.08);
+        d += (d ? " L" : "M") + X(u).toFixed(1) + " " + Y(Math.max(0, v)).toFixed(1);
+      }
+      el("path", { d: d, "class": cls, "stroke-width": 2.2 }, dc);
+      tx(dc, 572, ly, label, { "text-anchor": "end", "class": cls === "s-cy" ? "t-cy" : "t-3", style: "font-size:11px" });
+    };
+    curve(0.3, "s-cy", "high challenge", 158);
+    curve(0.16, "s-3", "low challenge", 188);
+    /* Voyager points on the high-challenge curve */
+    var pts = [[0.2, "1,200 lb budget", "every part traded off"], [0.62, "3,000 lb budget", "bolt subsystems together"]];
+    pts.forEach(function (p) {
+      var v = 0.3 / (p[0] + 0.12) - 0.08, cx = X(p[0]), cy = Y(v);
+      el("circle", { cx: cx, cy: cy, r: 6, "class": "f-ink" }, dc);
+      var lx = cx + (p[0] < 0.5 ? 14 : -4), ly = cy - (p[0] < 0.5 ? 16 : 26);
+      tx(dc, lx, ly, p[1], { "class": "t-ink", style: "font-size:12px" });
+      tx(dc, lx, ly + 14, p[2], { "class": "t-3", style: "font-size:11px" });
+    });
+    tx(dc, X(0.02), 228, "upstarts", { "class": "t-cy", style: "font-size:11px" });
+    tx(dc, X(1), 228, "patent-protected incumbent", { "text-anchor": "end", "class": "t-3", style: "font-size:11px" });
+  }
+
+  /* --- Ch10: Crown's ring of short-run customers --- */
+  var cr = document.getElementById("d-crown");
+  if (cr) {
+    for (var c = 0; c < 12; c++) {
+      var a = (c / 12) * Math.PI * 2;
+      var cx = 452 + Math.cos(a) * 82, cy = 112 + Math.sin(a) * 70;
+      el("line", { x1: 452 + Math.cos(a) * 32, y1: 112 + Math.sin(a) * 32, x2: cx, y2: cy, "class": "s-cy", "stroke-width": 1 }, cr);
+      el("rect", { x: cx - 8, y: cy - 8, width: 16, height: 16, rx: 2, "class": "f-card s-ink", "stroke-width": 1.2 }, cr);
+    }
+    tx(cr, 330, 204, "small buyers, rush orders, new products", { style: "font-size:11px" });
+  }
+
+  /* --- Ch14: hump chart. Heights read from the book's chart. --- */
+  var hump = document.getElementById("d-hump");
+  if (hump) {
+    var v = [1.05, 1.68, 2.18, 2.65, 3.05, 3.3, 3.55, 3.8, 4.0, 4.15, 4.3, 4.45, 4.6, 4.68, 4.68, 4.55, 4.4, 4.3, 4.1, 3.9, 3.7, 3.5, 3.15, 2.75, 2.35, 1.9, 1.3, 0.32];
+    var y0 = 222, sc = 38;
+    [0, 1, 2, 3, 4, 5].forEach(function (t) {
+      el("line", { x1: 44, x2: 590, y1: y0 - t * sc, y2: y0 - t * sc, "class": "s-rule" }, hump);
+      tx(hump, 36, y0 - t * sc + 4, "$" + t + "m", { "text-anchor": "end", style: "font-size:11px" });
+    });
+    v.forEach(function (val, j) {
+      el("rect", { x: 50 + j * 19.2, y: y0 - val * sc, width: 13, height: val * sc, "class": j < 14 ? "f-cy" : "f-red" }, hump);
+      if (j === 0 || j === 13 || j === 27) tx(hump, 56.5 + j * 19.2, y0 + 15, String(j + 1), { "text-anchor": "middle", style: "font-size:11px" });
+    });
+    tx(hump, 318, 252, "outlets ranked best to worst · cumulative gain to operating", { "text-anchor": "middle", "class": "t-3", style: "font-size:11px" });
+    tx(hump, 56, 16, "outlets 1–14 add up to $4.68m", { "class": "t-cy", style: "font-size:11.5px" });
+    tx(hump, 588, 16, "15–28 take $4.4m back", { "text-anchor": "end", "class": "t-red", style: "font-size:11.5px" });
+  }
+
+  /* --- Ch15: release cadence --- */
+  var nv = document.getElementById("d-nv");
+  if (nv) {
+    var M = function (m) { return 92 + m * 8.6; }, rowY = [20, 50, 80];
+    ["Team 1", "Team 2", "Team 3"].forEach(function (n, r) {
+      tx(nv, 84, rowY[r] + 12, n, { "text-anchor": "end", style: "font-size:12px" });
+      for (var s = -18 + r * 6; s < 56; s += 18) {
+        var a0 = Math.max(0, s), a1 = Math.min(54, s + 18);
+        if (a1 <= a0) continue;
+        el("rect", { x: M(a0) + 1, y: rowY[r], width: M(a1) - M(a0) - 2, height: 16, rx: 2, "class": "f-cyt s-cy", "stroke-width": 1 }, nv);
+      }
+    });
+    tx(nv, 84, 128, "Nvidia ships", { "text-anchor": "end", "class": "t-cy", style: "font-size:11px" });
+    for (var m = 6; m <= 54; m += 6) {
+      el("line", { x1: M(m), x2: M(m), y1: 16, y2: 118, "class": "s-cy", "stroke-width": 1, "stroke-dasharray": "2 3" }, nv);
+      el("circle", { cx: M(m), cy: 124, r: 5, "class": "f-cy" }, nv);
+    }
+    tx(nv, 84, 166, "Rival", { "text-anchor": "end", style: "font-size:12px" });
+    [[0, 18], [18, 36], [36, 54]].forEach(function (b) {
+      el("rect", { x: M(b[0]) + 1, y: 154, width: M(b[1]) - M(b[0]) - 2, height: 16, rx: 2, "class": "f-paper2 s-ink", "stroke-width": 1 }, nv);
+      el("circle", { cx: M(b[1]), cy: 162, r: 5, "class": "f-red" }, nv);
+    });
+    [0, 18, 36, 54].forEach(function (mm) { tx(nv, M(mm), 196, mm + " mo", { "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }); });
+  }
+
+  /* --- Hero band: scattered effort converges on one pivot point --- */
+  var canvas = document.getElementById("focus");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, N = 15, lines = [], seed = 23;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  for (var q = 0; q < N; q++) lines.push({ y: rnd(), p1: rnd() * 6.28, p2: rnd() * 6.28, f1: 1 + rnd() * 2, f2: 3 + rnd() * 3, stray: q % 5 === 2 });
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t); }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var t = reduce ? 0 : time * 0.0004, gold = css("--cyan-2"), ink = css("--ink");
+    var px = w - 8, py = hgt / 2;
+    ctx.lineCap = "round";
+    lines.forEach(function (L) {
+      ctx.beginPath();
+      var endU = L.stray ? 0.4 : 1;
+      for (var x = 0; x <= w * endU; x += 3) {
+        var u = x / w, s = ease((u - 0.12) / 0.8);
+        var wob = (Math.sin(u * L.f1 * 6.28 + L.p1 + t) * 0.6 + Math.sin(u * L.f2 * 6.28 + L.p2 - t) * 0.4) * hgt * 0.16 * (1 - s);
+        var y = (L.y * (hgt - 16) + 8) * (1 - s) + py * s + wob;
+        y = Math.max(2, Math.min(hgt - 2, y));
+        if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = L.stray ? ink : gold;
+      ctx.globalAlpha = L.stray ? 0.45 : 0.85;
+      ctx.lineWidth = 1.4;
+      ctx.stroke();
+    });
+    ctx.globalAlpha = 1;
+    ctx.beginPath(); ctx.arc(px, py, 6, 0, Math.PI * 2); ctx.fillStyle = ink; ctx.fill();
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+
+</script>
+
+</body>
+</html>

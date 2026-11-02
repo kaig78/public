@@ -1,0 +1,1260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Artificial Intelligence by Melanie Mitchell – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: a wheat-coloured border around a white
+   panel, black serif capitals and thin double rules. Gold = what the machine does,
+   rust = where it breaks, ink = the human benchmark. */
+:root {
+  --paper: #f8f4ea;
+  --paper-2: #eee5cc;
+  --card: #fffdf7;
+  --ink: #1b1a17;
+  --ink-2: #4b4740;
+  --ink-3: #777064;
+  --rule: #ded3b6;
+
+  --gold: #8c6714;
+  --gold-2: #d4b066;
+  --sand: #e8d29e;
+  --rust: #a7422a;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #14120e;
+    --paper-2: #1f1c16;
+    --card: #23201a;
+    --ink: #f2ede1;
+    --ink-2: #c2b9a7;
+    --ink-3: #918877;
+    --rule: #39342a;
+    --gold: #e2bd66;
+    --gold-2: #b8954a;
+    --sand: #5e4f2b;
+    --rust: #e98063;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14120e;
+  --paper-2: #1f1c16;
+  --card: #23201a;
+  --ink: #f2ede1;
+  --ink-2: #c2b9a7;
+  --ink-3: #918877;
+  --rule: #39342a;
+  --gold: #e2bd66;
+  --gold-2: #b8954a;
+  --sand: #5e4f2b;
+  --rust: #e98063;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  overflow-x: hidden;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-gold { --c: var(--gold); }
+.c-rust { --c: var(--rust); }
+.c-ink { --c: var(--ink); }
+.c-sand { --c: var(--gold-2); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero (serif capitals, as on the cover) ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--mono); font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+.hero h1 {
+  font-family: var(--body);
+  font-size: clamp(44px, 8.4vw, 112px);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 14px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .rule2 { height: 5px; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); max-width: 420px; margin-top: 22px; }
+.hero .sub {
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: clamp(17px, 2vw, 23px);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-top: 18px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 42ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 720 / 1088;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(40, 30, 10, .35), 0 8px 18px -10px rgba(40, 30, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px double var(--gold);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-family: var(--body);
+  font-size: clamp(40px, 6.4vw, 88px);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: .98;
+  letter-spacing: .04em;
+  color: var(--ink);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; color: var(--gold); }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--gold);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--rust);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-gd { fill: var(--gold); }
+.fig svg text.t-rust { fill: var(--rust); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-gd { stroke: var(--gold); fill: none; }
+.s-gd2 { stroke: var(--gold-2); fill: none; }
+.s-rust { stroke: var(--rust); fill: none; }
+.f-gd { fill: var(--gold); }
+.f-gd2 { fill: var(--gold-2); }
+.f-rust { fill: var(--rust); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-gdt { fill: color-mix(in srgb, var(--gold) 14%, var(--card)); }
+.f-rustt { fill: color-mix(in srgb, var(--rust) 14%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+.legend i.tick { width: 2px; height: 13px; border-radius: 0; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+.mark { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--mc, var(--ink)); }
+.mark.chance { --mc: var(--ink-3); }
+.mark.human { --mc: var(--ink); }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 3px double var(--gold); padding-top: 14px; display: grid; gap: 12px; align-content: start; }
+.map h3 { font-family: var(--body); font-size: 22px; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; line-height: 1.1; color: var(--ink); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px; font-size: 15px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--gold); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 15px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* small grid of cells */
+.kinds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.kinds > div { background: var(--card); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.kinds b { font-family: var(--display); font-weight: 800; font-size: 18px; }
+.kinds span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.kinds .label { color: var(--gold); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--gold); }
+.compare .bad h5 { color: var(--rust); }
+
+/* equation strip */
+.eq { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: var(--paper-2); border-radius: 6px; padding: 14px 18px; margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--ink); }
+.eq .k { color: var(--gold); }
+.eq .r { color: var(--rust); }
+.eq .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--body);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -.005em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 720px; font-size: 15.5px; line-height: 1.42; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 750; font-size: 16px; width: 190px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.r { color: var(--ink-2); }
+table.tbl td.v { font-family: var(--display); font-weight: 750; color: var(--gold); white-space: nowrap; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-family: var(--body); font-size: 24px; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--ink); border-top: 3px double var(--gold); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .map { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .stats, .kinds, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+  .hero h1 { letter-spacing: .02em; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Melanie Mitchell · Farrar, Straus and Giroux, 2019</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#background">Background</a>
+    <a href="#seeing">Seeing</a>
+    <a href="#playing">Playing</a>
+    <a href="#language">Language</a>
+    <a href="#meaning">Meaning</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">Melanie Mitchell</p>
+    <h1><span>Artificial</span><span>Intelligence</span></h1>
+    <div class="rule2" aria-hidden="true"></div>
+    <p class="sub">A guide for thinking humans</p>
+    <p class="dek">A computer scientist who has worked in AI since the 1980s checks the hype against how the systems actually work. Her verdict: they are impressive, brittle, and far from understanding anything.</p>
+    <div class="byline label">
+      <span>16 chapters</span><span>5 parts</span><span>~85,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Artificial Intelligence: A Guide for Thinking Humans by Melanie Mitchell: black serif capitals on a white panel framed by a thin double rule and a wide wheat-coloured border, with the publisher's small three-fish emblem at the bottom">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="hype"></canvas>
+  <div class="ends label"><span>AI spring</span><span>AI winter</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Prologue · Terrified</span>
+    <h2>Either AI is almost here, or it has barely started</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>In May 2014 Mitchell went along with her old doctoral adviser, Douglas Hofstadter, to a meeting with about twenty Google AI researchers. Many of them had joined the field after reading his book <em>Gödel, Escher, Bach</em>. Hofstadter told them he was terrified, and not of killer robots.</p>
+      <p>His fear was that the things he valued most in people would turn out to be cheap to copy. Deep Blue had already broken his prediction about chess. Then David Cope's program EMI wrote a mazurka in Chopin's style, and at the Eastman School of Music, faculty listening to it next to a little-known Chopin piece picked EMI's as the real one.</p>
+      <p>The engineers didn't share his alarm; several expected human-level AI within thirty years. Mitchell thought it more than a century away, and the gap sent her to check. This book is the result: how today's systems work, what they achieve, and how far there is to go.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Key figures</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-gold"><span class="big num">1956</span><p>The Dartmouth summer workshop, a two-month study by ten researchers, where John McCarthy named the field.</p></div>
+        <div class="stat c-rust"><span class="big num">30 yrs</span><p>Several Google researchers' 2014 estimate for general human-level AI. Mitchell thought it would not come within a century.</p></div>
+        <div class="stat"><span class="big num">$20,000</span><p>Riding on Kapor versus Kurzweil: will a machine pass a strict Turing test by the end of 2029? Mitchell bets on Kapor (no).</p></div>
+        <div class="stat c-gold"><span class="big num">61%</span><p>Best reported score on about 250 Winograd schemas, where guessing gets 50% and an attentive human nearly 100%.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">The running theme</span>
+        <p>Marvin Minsky's paradox: things a four-year-old does without thinking, like seeing, talking and common sense, are harder for machines than chess or calculus.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I</span>
+      <h3>Background</h3>
+      <p class="q">Where the field came from</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Roots</b>Symbols versus neurons</a></li>
+        <li><span>02</span><a href="#ch2"><b>Neural networks</b>Hidden layers and back-propagation</a></li>
+        <li><span>03</span><a href="#ch3"><b>AI spring</b>Hype, Turing and the Singularity</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II</span>
+      <h3>Looking &amp; seeing</h3>
+      <p class="q">Computer vision and its limits</p>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>ConvNets</b>Built after the visual cortex</a></li>
+        <li><span>05</span><a href="#ch5"><b>ImageNet</b>The benchmark that started a gold rush</a></li>
+        <li><span>06</span><a href="#ch6"><b>What machines learn</b>Shortcuts, bias, fooling</a></li>
+        <li><span>07</span><a href="#ch7"><b>Trust and ethics</b>Faces, rules, trolleys</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part III</span>
+      <h3>Learning to play</h3>
+      <p class="q">Reinforcement learning</p>
+      <ol>
+        <li><span>08</span><a href="#ch8"><b>Rewards</b>Training a robo-dog</a></li>
+        <li><span>09</span><a href="#ch9"><b>Game on</b>Atari, checkers, chess, Go</a></li>
+        <li><span>10</span><a href="#ch10"><b>Beyond games</b>Why it doesn't transfer</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part IV</span>
+      <h3>Language</h3>
+      <p class="q">Machines that process words</p>
+      <ol>
+        <li><span>11</span><a href="#ch11"><b>Word vectors</b>Meaning as geometry</a></li>
+        <li><span>12</span><a href="#ch12"><b>Translation</b>Encoders and decoders</a></li>
+        <li><span>13</span><a href="#ch13"><b>Question answering</b>Watson, SQuAD, Winograd</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part V</span>
+      <h3>The barrier of meaning</h3>
+      <p class="q">What understanding needs</p>
+      <ol>
+        <li><span>14</span><a href="#ch14"><b>Understanding</b>Core knowledge and models</a></li>
+        <li><span>15</span><a href="#ch15"><b>Analogy</b>Cyc, Bongard, Copycat</a></li>
+        <li><span>16</span><a href="#ch16"><b>Questions</b>Her answers</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="background">
+  <span class="label partno">Part I · Chapters 1–3</span>
+  <h2>Background</h2>
+  <p class="lede">Two rival ideas of intelligence, hand-written rules or learning from examples, and a field that has swung between hype and disappointment from the start.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Roots</span></div>
+  <div class="body">
+    <div>
+      <h3>Rules versus neurons</h3>
+      <p class="idea">From the beginning AI split into two camps: programs that manipulate human-readable symbols, and brain-inspired networks that learn numbers from data.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Founding optimism.</strong> McCarthy, Minsky, Claude Shannon and Nathaniel Rochester organised the 1956 Dartmouth workshop. Herbert Simon soon predicted that within twenty years machines could do any work a person can. Minsky called "intelligence" a <em>suitcase word</em>, packed with too many meanings.</li>
+      <li><strong>Symbolic AI.</strong> Newell and Simon's General Problem Solver worked through puzzles like Missionaries and Cannibals using explicit states, operators and rules. The symbols mean nothing to the machine. Expert systems built this way ruled the field for three decades.</li>
+      <li><strong>Subsymbolic AI.</strong> Frank Rosenblatt's perceptron (late 1950s) adds up weighted inputs and fires if the total passes a threshold. It learns by nudging its weights after each mistake on labelled examples, which is supervised learning. A 1958 press event predicted it would one day walk, talk and be conscious.</li>
+      <li><strong>The first winter.</strong> Minsky and Papert's 1969 book <em>Perceptrons</em> proved the limits of single-layer networks and doubted multilayer ones. Funding dried up, and Rosenblatt died in 1971. Symbolic AI then overpromised too, and British and US reviews cut its money. Mitchell describes a recurring cycle of spring and winter, every five to ten years.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>A perceptron is a weighted vote against a threshold</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 250" role="img" aria-label="Diagram of a perceptron. Pixel intensities from a handwritten digit enter as inputs, each multiplied by a weight. The products are summed and compared with a threshold. If the sum reaches the threshold the output is 1, meaning 'this is an 8', otherwise 0. During training a wrong answer nudges each weight in proportion to its input.">
+          <text x="20" y="22" class="hd">Inputs (pixels)</text>
+          <g id="d-pix"></g>
+          <text x="20" y="200" class="t-3" style="font-size:11px">18 × 18 image = 324 inputs</text>
+          <g id="d-wires"></g>
+          <circle cx="380" cy="118" r="44" class="f-gdt s-gd" stroke-width="1.6"/>
+          <text x="380" y="114" text-anchor="middle" class="hd">Σ w·x</text>
+          <text x="380" y="134" text-anchor="middle" class="t-3" style="font-size:11px">weighted sum</text>
+          <path d="M426 118 H470" class="s-2" stroke-width="1.5"/><path d="M464 112 L471 118 L464 124" class="s-2" stroke-width="1.5"/>
+          <rect x="476" y="96" width="112" height="44" rx="6" class="f-card s-2" stroke-width="1.4"/>
+          <text x="532" y="123" text-anchor="middle" class="t-ink">≥ threshold?</text>
+          <text x="532" y="82" text-anchor="middle" class="t-gd" style="font-size:12px">1 = "8", 0 = not</text>
+          <path d="M532 142 V196 H380 V164" class="s-rust" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <path d="M374 172 L380 163 L386 172" class="s-rust" stroke-width="1.4"/>
+          <text x="392" y="216" class="t-rust" style="font-size:11px">wrong? nudge the weights</text>
+          <text x="20" y="240" class="t-ink">All its "knowledge" is a list of numbers, not rules anyone can read.</text>
+        </svg>
+      </div>
+      <p class="cap">Mitchell's example is an "8 detector". Weights start random, and each error moves them slightly, most for the inputs that contributed most.</p>
+      <p class="src">After ch. 1, figures 1–3</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Neural networks</span></div>
+  <div class="body">
+    <div>
+      <h3>Hidden layers come back</h3>
+      <p class="idea">Adding hidden units and a way to share out the blame for errors turned the "sterile" multilayer network into the basis of modern AI.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Hidden units.</strong> A multilayer network places units between input and output. Each produces a graded activation between 0 and 1 instead of firing or not. A network with more than one hidden layer is "deep", which describes its depth, not the depth of what it learns.</li>
+      <li><strong>Back-propagation.</strong> Developed by several groups around the late 1970s and early 1980s, it sends the error at the output backwards through the network to work out how much each weight should change.</li>
+      <li><strong>Each side's weakness.</strong> Expert systems like MYCIN (about 600 rules) explain themselves but break outside their domain, because experts rely on unwritten common sense. Networks are the reverse. Philosopher Andy Clark described them as "bad at logic, good at Frisbee."</li>
+    </ul>
+    <div class="fig">
+      <h4>Mitchell's own test: handwritten digits</h4>
+      <div class="bars">
+        <div class="bar c-sand"><div class="row"><span>Perceptron, 324 inputs, 10 outputs</span><b>~80%</b></div><div class="track"><div class="fill" style="width:80%"></div></div></div>
+        <div class="bar c-gold"><div class="row"><span>Two-layer network with 50 hidden units</span><b>94%</b></div><div class="track"><div class="fill" style="width:94%"></div></div></div>
+      </div>
+      <p class="cap">Both were trained on 60,000 examples and tested on 10,000 new ones. Mitchell admits she can't say what the network's roughly 16,700 weights learned that the perceptron missed.</p>
+      <p class="src">Source: ch. 2</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">AI spring</span></div>
+  <div class="body">
+    <div>
+      <h3>Spring fever, and the arguments over "thinking"</h3>
+      <p class="idea">Every AI system so far is narrow. Claims about general intelligence rest on contested tests and on extrapolating exponential curves.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The new spring.</strong> Google Translate, Siri and Alexa, Watson winning <em>Jeopardy!</em> in 2011, AlphaGo winning four of five games against a top Go player in 2016. For nearly every company, AI now meant deep learning. And once something works, McCarthy noted, people stop calling it AI.</li>
+      <li><strong>Narrow and general.</strong> AlphaGo can't play checkers. Google Translate can't tell whether a review it translates liked the film. John Searle (1980) argued that a computer only simulates a mind. Mitchell's mother puts the same intuition more simply.</li>
+      <li><strong>The Turing test.</strong> Turing predicted that by about 2000 a program would fool an average judge 30% of the time in five minutes. In 2014 the chatbot Eugene Goostman, posing as a thirteen-year-old Ukrainian boy, fooled 10 of 30 judges at the Royal Society. Experts dismissed it as a trick based on dodging questions.</li>
+      <li><strong>Kurzweil's Singularity.</strong> Building on I. J. Good's "intelligence explosion", Ray Kurzweil forecasts a Turing-test pass by 2029 and the Singularity in 2045, based on exponential trends like Moore's law. Critics reply that hardware has grown exponentially but software has not.</li>
+      <li><strong>The Long Bet.</strong> Mitchell Kapor's $20,000 wager says no machine will pass a strict version (three judges, two-hour interviews) by 2029, because most human knowledge is tacit and bodily.</li>
+    </ul>
+    <div class="fig">
+      <h4>The rice-on-the-chessboard fable</h4>
+      <div class="scroll-x">
+        <svg id="d-rice" viewBox="0 0 600 270" role="img" aria-label="Chart of grains of rice on chessboard squares 1 to 26, doubling each square. The curve looks flat until about square 16, which holds 65,536 grains, about a kilo, and then shoots up. By square 26 the request exceeded two tons, more than the kingdom's harvest."></svg>
+      </div>
+      <p class="cap">A sage asks for 2 grains on the first square, doubling each time. Kurzweil's supporters say AI sits on the flat part of such a curve. Mitchell asks whether it is on one at all.</p>
+      <p class="src">Grains computed as 2<sup>n</sup>; annotations as reported in ch. 3</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="seeing">
+  <span class="label partno">Part II · Chapters 4–7</span>
+  <h2>Looking &amp; seeing</h2>
+  <p class="lede">Vision is the clearest case of easy things being hard. Deep learning made a huge leap here, and its blind spots are easiest to see here too.</p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Who, what, when</span></div>
+  <div class="body">
+    <div>
+      <h3>A network built like the visual cortex</h3>
+      <p class="idea">A photo of a soldier greeted by her dog tells you a whole story at a glance. A computer has to start from millions of pixels.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Harder than it looked.</strong> A 1966 MIT summer project aimed to have a computer describe what a camera saw. Object recognition alone resisted decades of hand-crafted features.</li>
+      <li><strong>From cat brains to ConvNets.</strong> Hubel and Wiesel found layers in the visual cortex whose neurons respond to edges, then shapes, then objects. Fukushima's neocognitron (1970s) copied the idea, and Yann LeCun's convolutional networks (1980s) added back-propagation.</li>
+      <li><strong>Activation maps.</strong> Each layer holds several maps, one per feature. A unit computes a convolution of its small receptive field, and the same weights slide across the whole image. Higher layers combine lower maps into corners, then parts, then objects. A small ordinary network then outputs a confidence for each category.</li>
+      <li><strong>Learned, not built in.</strong> Real ConvNets learn every weight from labelled photos and still end up with a brain-like hierarchy. One difference: the cortex has about ten times as many feedback connections as feed-forward ones; ConvNets have none.</li>
+    </ul>
+    <div class="fig">
+      <h4>One convolution, by hand</h4>
+      <div class="scroll-x">
+        <svg id="d-conv" viewBox="0 0 600 236" role="img" aria-label="A 3 by 3 patch of pixel values from the edge of a light dog against dark grass: 200, 110, 70; 190, 90, 80; 220, 70, 50. It is multiplied element by element with a vertical-edge kernel of 1, 0, minus 1 in each row. The products sum to 410, a strong response. The same weights slide across every patch to build an activation map, and maps are stacked into layers that detect edges, then shapes, then objects, then a class confidence."></svg>
+      </div>
+      <p class="cap">The numbers are the book's worked example. A patch of plain grass gives about −10, close to zero. A ConvNet learns thousands of kernels like this one instead of being given them.</p>
+      <p class="src">After ch. 4, figures 10–12</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">ImageNet</span></div>
+  <div class="body">
+    <div>
+      <h3>Big data meets an old idea</h3>
+      <p class="idea">ConvNets barely changed in twenty years. Millions of labelled photos and fast GPUs made them win.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Building the dataset.</strong> Fei-Fei Li organised web images by WordNet nouns. Having students check them would have taken about ninety years. With Amazon Mechanical Turk workers, more than three million images were labelled in two years.</li>
+      <li><strong>The 2012 shock.</strong> The challenge had 1,000 categories and 1.2 million training images, scored by whether the right label is among the top five guesses. AlexNet, from Krizhevsky, Sutskever and Hinton, had eight layers and about sixty million weights and jumped to 85%. Google soon hired the team, and Facebook hired LeCun.</li>
+      <li><strong>Data snooping.</strong> In 2015 a Baidu team used at least 30 accounts to submit at least 200 times, against a limit of two a week, tuning to the hidden test set. Baidu was disqualified.</li>
+      <li><strong>"Better than humans"?</strong> The 5% human error rate came from one person, Andrej Karpathy, who trained on 500 images and got about 75 of 1,500 wrong. Machines miss small, filtered or drawn objects that people don't, and a top-five hit counts even if four wrong guesses rank above it.</li>
+    </ul>
+    <div class="fig">
+      <h4>ImageNet winners, top-5 accuracy</h4>
+      <div class="bars">
+        <div class="bar c-sand"><div class="row"><span>2010 · support vector machine</span><b>72%</b></div><div class="track"><div class="fill" style="width:72%"></div></div></div>
+        <div class="bar c-sand"><div class="row"><span>2011 · support vector machine</span><b>74%</b></div><div class="track"><div class="fill" style="width:74%"></div></div></div>
+        <div class="bar c-gold"><div class="row"><span>2012 · AlexNet, a ConvNet</span><b>85%</b></div><div class="track"><div class="fill" style="width:85%"></div></div></div>
+        <div class="bar c-gold"><div class="row"><span>2015 · Google, after Baidu's disqualified 95.42%</span><b>95.18%</b></div><div class="track"><div class="fill" style="width:95.18%"></div></div></div>
+        <div class="bar c-gold"><div class="row"><span>2017 · final competition</span><b>98%</b></div><div class="track"><div class="fill" style="width:98%"></div></div></div>
+        <div class="bar c-rust"><div class="row"><span>2017 · top-1 (first guess must be right)</span><b>~82%</b></div><div class="track"><div class="fill" style="width:82%"></div></div></div>
+      </div>
+      <p class="cap">Meanwhile NVIDIA, maker of the GPUs that train these networks, saw its share price rise more than 1,000% between 2012 and 2017.</p>
+      <p class="src">Source: ch. 5</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Machines that learn</span></div>
+  <div class="body">
+    <div>
+      <h3>What did my network actually learn?</h3>
+      <p class="idea">Deep networks learn whatever statistical cue gets the right answer, and that is often not the concept we meant to teach.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Not "on their own".</strong> People collect and label the data and tune the hyperparameters, a craft Demis Hassabis said only a few hundred people did really well.</li>
+      <li><strong>The long tail.</strong> Rare situations are individually unlikely but collectively certain. Tesla's Autopilot reportedly confused salt lines with lane markings, and a Google car hit a bus while steering around sandbags. LeCun likens unsupervised learning, which nobody yet does well, to the dark matter of AI.</li>
+      <li><strong>Shortcuts.</strong> A student of Mitchell's, Will Landecker, found his animal detector partly relied on blurry backgrounds. In 2015 Google Photos labelled two African Americans as "gorillas". One face dataset was 77.5% male and 83.5% white.</li>
+      <li><strong>Adversarial examples.</strong> Tiny pixel changes turned AlexNet's school bus into an ostrich, and evolved noise got over 99% confidence. Patterned glasses and stickers on stop signs work too. There's no general defence yet.</li>
+      <li><strong>Clever Hans.</strong> Like the horse that "counted" by reading its questioner's cues, a network may answer from surface cues. The root problem, Mitchell argues, is lack of understanding.</li>
+    </ul>
+    <div class="fig">
+      <h4>The long tail of driving</h4>
+      <div class="scroll-x">
+        <svg id="d-tail" viewBox="0 0 600 296" role="img" aria-label="Illustrative chart of situations a self-driving car might meet in a day, ranked by likelihood: red light and stop sign are very common, broken glass and blowing plastic bags less so, flooded roads and snow-covered lane markings rare, a snowman on a highway rarer still, and a long faint tail continues to the right. Training data covers the head; errors come from the tail."></svg>
+      </div>
+      <p class="cap">Likelihoods are illustrative, as in Mitchell's own figure. Each case in the tail is rare, but with enough cars on enough roads some car will meet one, and it won't have seen it in training.</p>
+      <p class="src">After ch. 6, figure 13</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Trust &amp; ethics</span></div>
+  <div class="body">
+    <div>
+      <h3>The great AI trade-off</h3>
+      <p class="idea">AI already brings real benefits. The open question is how much autonomy to give systems that are unpredictable, biased, hackable and opaque.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Divided experts.</strong> In a 2018 Pew canvass of nearly 1,000 technology experts, 63% expected AI to leave most people better off by 2030 and 37% did not. Andrew Ng calls AI the new electricity, but electricity was well understood before it was everywhere.</li>
+      <li><strong>Face recognition.</strong> It can find missing children, and it can track people and enforce bias. Microsoft's Brad Smith asked Congress to regulate it, and Google held back from offering general-purpose face recognition.</li>
+      <li><strong>Regulation.</strong> Mitchell favours a model like biomedicine's, with shared oversight, and thinks superintelligence gets too much attention and unreliability too little.</li>
+      <li><strong>Moral machines.</strong> Asimov's stories show how rules of robotics backfire. In surveys about self-driving cars, 76% said sacrificing one passenger to save ten pedestrians was the moral choice, but most wouldn't buy that car. Mitchell argues that moral reasoning requires common sense first.</li>
+    </ul>
+    <div class="fig">
+      <h4>ACLU test of Amazon's Rekognition on Congress</h4>
+      <div class="bars">
+        <div class="bar c-ink"><div class="row"><span>African Americans' share of Congress</span><b>~9%</b></div><div class="track"><div class="fill" style="width:9%"></div></div></div>
+        <div class="bar c-rust"><div class="row"><span>Their share of the false matches</span><b>21%</b></div><div class="track"><div class="fill" style="width:21%"></div></div></div>
+      </div>
+      <p class="cap">On default settings it wrongly matched 28 of 535 members of Congress to arrest photos.</p>
+      <p class="src">Source: ch. 7</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="playing">
+  <span class="label partno">Part III · Chapters 8–10</span>
+  <h2>Learning to play</h2>
+  <p class="lede">Reinforcement learning needs only occasional rewards. In games it produced superhuman players. Mitchell asks what they actually learned.</p>
+</div>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Rewards</span></div>
+  <div class="body">
+    <div>
+      <h3>Training Rosie the robo-dog</h3>
+      <p class="idea">Reward sometimes, never explain. The agent learns how much future reward each action in each state is worth.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Operant conditioning.</strong> Animal trainers reward what they like and ignore the rest; journalist Amy Sutherland used it on her husband. Reinforcement learning does this for software.</li>
+      <li><strong>The setup.</strong> Rosie is a hypothetical Aibo robot dog. Her state is how many steps she is from the ball, her actions are Forward, Backward and Kick, and she gets a reward of 10 only for kicking the ball.</li>
+      <li><strong>The Q-table.</strong> At first Rosie acts at random. When a kick finally pays off, only the last state and action are credited. On later episodes, value spreads back one step at a time, discounted as it goes. In Mitchell's simulation, Rosie learned the task from any start within about 300 episodes.</li>
+      <li><strong>The real world.</strong> Agents must balance exploring against exploiting. Real states are endless, so a network replaces the table, and training happens in simulations that transfer poorly to messy reality.</li>
+    </ul>
+    <div class="fig">
+      <h4>How credit flows back from the reward</h4>
+      <div class="scroll-x">
+        <svg id="d-q" viewBox="0 0 600 252" role="img" aria-label="Rosie's Q-learning. A row of positions from 5 steps away to 0 steps away from the ball. After episode 1, only Kick at 0 steps has value 10. After episode 2, Forward at 1 step gets 8. In later episodes value keeps spreading back, discounted at each step, so Forward at 2, 3 and 4 steps gets smaller values; these later numbers are illustrative."></svg>
+      </div>
+      <p class="cap">The values 10 and 8 are from the book. The values marked * and further left are illustrative and use the same 0.8 discount. Rosie never remembers her path, only the table.</p>
+      <p class="src">After ch. 8, figures 23–26</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Game on</span></div>
+  <div class="body">
+    <div>
+      <h3>From Breakout to AlphaGo</h3>
+      <p class="idea">Deep Q-learning replaced the table with a ConvNet. Combined with tree search and self-play, it conquered Go.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Atari.</strong> DeepMind's Deep Q-Network took four screen frames as input and estimated a value for each joystick move. It learned by temporal differences, which Richard Sutton calls "learning a guess from a guess". It beat a professional tester on more than half of 49 games, scored over ten times the tester's average at Breakout, and Google bought DeepMind for £440 million.</li>
+      <li><strong>Checkers and chess.</strong> Arthur Samuel, who coined "machine learning", wrote a 1950s checkers program that searched a few moves ahead, scored positions and improved by self-play. Deep Blue (1997) did the same with deeper search and special hardware, and almost no learning.</li>
+      <li><strong>Why Go was different.</strong> Chess offers about 35 moves per position, Go about 250, and nobody had written a good evaluation function for Go. As late as 1997 one enthusiast said a Go win might take a hundred years.</li>
+      <li><strong>Lee Sedol, 2016.</strong> Over 200 million people watched online. In game 2 AlphaGo made a move one commentator first took for a mistake and Fan Hui called beautiful. Lee won game 4 with a move AlphaGo seemed not to anticipate, but lost the match. AlphaGo Zero, using only the rules, later beat that version 100 games to 0.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Monte Carlo tree search, with a ConvNet's hunch</h4>
+        <svg id="d-mcts" viewBox="0 0 320 300" role="img" aria-label="A root position with three candidate moves. A ConvNet suggests which moves look promising. Three random roll-outs are played to the end: two from move 1, one win and one loss, and one from move 3, a loss. Move 1 scores 1 of 2, move 2 is untried, move 3 scores 0 of 1. The search results are then used to retrain the ConvNet."></svg>
+        <p class="cap">AlphaGo ran close to 2,000 roll-outs per turn and trained on about five million self-play games. Hunches guide the search; search results retrain the hunches.</p>
+      </div>
+      <div class="fig">
+        <h4>Moves available per position, on average</h4>
+        <div class="bars">
+          <div class="bar c-sand"><div class="row"><span>Checkers</span><b>6–7</b></div><div class="track"><div class="fill" style="width:2.8%"></div></div></div>
+          <div class="bar c-gold"><div class="row"><span>Chess</span><b>35</b></div><div class="track"><div class="fill" style="width:14%"></div></div></div>
+          <div class="bar c-rust"><div class="row"><span>Go</span><b>250</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        </div>
+        <p class="cap">Even checkers is too big to search fully. A typical game is about 50 moves deep, so checking every position at a trillion per second would take more than 10<sup>19</sup> years.</p>
+        <p class="src">Source: ch. 9</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Beyond games</span></div>
+  <div class="body">
+    <div>
+      <h3>The ultimate idiot savant</h3>
+      <p class="idea">Game-playing systems learn nothing they can take anywhere else, even to a slightly altered version of the same game.</p>
+    </div>
+    <ul class="points">
+      <li><strong>No transfer.</strong> AlphaZero trains a separate network from scratch for each game. Humans transfer skills automatically, to the point that transfer is simply what we mean by learning.</li>
+      <li><strong>Hidden guidance.</strong> DeepMind said AlphaGo Zero learned without human examples or guidance. Gary Marcus points out that its architecture, its tree search and its hyperparameters were all chosen by people.</li>
+      <li><strong>Less hard than it looked?</strong> In 2018 Uber AI Labs found that simply trying networks with random weights matched or beat deep Q-learning on 5 of 13 Atari games. A genetic algorithm beat it on 7.</li>
+      <li><strong>Brittle concepts.</strong> Moving Breakout's paddle a few pixels, or changing Pong's background colour, wrecked trained players. Marcus calls words like "wall" and "tunnel" overattributions. A kindergartner in the chess club learns to think. AlphaGo learns only Go.</li>
+      <li><strong>Real tasks.</strong> A dishwasher-loading robot faces unclear states, hidden pots, countless actions and a curious dog. Karpathy noted that nearly every assumption AlphaGo relies on fails there.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART IV ============ -->
+<div class="part" id="language">
+  <span class="label partno">Part IV · Chapters 11–13</span>
+  <h2>AI meets language</h2>
+  <p class="lede">A short restaurant story shows how much unstated knowledge reading needs. Deep learning handles the words impressively and the meaning hardly at all.</p>
+</div>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Word vectors</span></div>
+  <div class="body">
+    <div>
+      <h3>Words as points in space</h3>
+      <p class="idea">If a word's meaning is the company it keeps, meaning can be stored as coordinates. Bias gets stored the same way.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The restaurant test.</strong> A man orders a rare burger, gets it burnt, sarcastically says it's great and storms out without paying. Did he eat it? Answering takes knowledge of food, sarcasm, idioms and tipping that a four-year-old has and a machine doesn't.</li>
+      <li><strong>Speech recognition.</strong> Deep networks gave it the biggest single jump in 20 years after 2012. Still, Mitchell's phone turns "mousse" into "moose". She guesses 90–95% of human accuracy in quiet rooms, and the last 10% may need understanding.</li>
+      <li><strong>Recurrent networks.</strong> For sentiment, a network reads word by word, carrying its hidden state forward. Spotting single words fails, since "missing" can appear in praise.</li>
+      <li><strong>word2vec.</strong> Google (2013) trained a network on billions of neighbouring word pairs from Google News, with a vocabulary of about 700,000 words, and kept 300 learned weights per word as its vector. France ends up near Spain and Belgium, and country-to-capital distances line up.</li>
+    </ul>
+    <div class="fig">
+      <h4>Arithmetic on meaning</h4>
+      <pre class="eq"><span class="k">king − man + woman</span>         → queen
+<span class="k">dinner : evening :: breakfast</span> → morning
+<span class="c">fish : water :: bird</span>         → hydrant
+<span class="r">man : woman :: computer programmer</span> → homemaker
+<span class="r">man : genius :: woman</span>        → muse</pre>
+      <p class="cap">The analogies were good about as often as they were nonsensical. The sexist answers come from the training text, and such vectors feed nearly every language system.</p>
+      <p class="src">Examples as reported in ch. 11</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Translation</span></div>
+  <div class="body">
+    <div>
+      <h3>Translation without a mental model</h3>
+      <p class="idea">Neural translation is much better than what came before, but it is unreliable exactly where meaning depends on context.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Three eras.</strong> Hand-written rules came first, then statistical phrase tables in the 1990s, trained on Canadian parliamentary and UN texts. In 2016 Google switched to neural translation.</li>
+      <li><strong>Encoder and decoder.</strong> One recurrent network turns a sentence into a set of activations, and a second produces the translation from them word by word. LSTM units help them hold on to earlier words. Training uses more than thirty million human-translated sentence pairs.</li>
+      <li><strong>"Human parity"?</strong> The automatic score, BLEU, tends to overrate bad translations. Google's and Microsoft's human evaluations averaged ratings of isolated sentences taken from news and Wikipedia. Averages hide the terrible translations, and longer passages do worse.</li>
+      <li><strong>Captions.</strong> Google's Show and Tell paired an ImageNet ConvNet with a decoder trained on about 80,000 image–caption pairs. Microsoft's CaptionBot described the soldier-and-dog photo as "a man holding a dog", which misses both the soldier and the whole point of the photo.</li>
+    </ul>
+    <div class="fig">
+      <h4>The restaurant story, through Google Translate and back</h4>
+      <div class="tablecard" style="border:0">
+        <div class="scroll-x">
+          <table class="tbl" style="min-width:560px">
+            <thead><tr><th scope="col">Original</th><th scope="col">Came back as</th><th scope="col">What went wrong</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">cooked rare</th><td>cooked infrequent (French), cooked sparse (Italian), a rarely seen hamburger (Chinese)</td><td class="r">Wrong sense of an ambiguous word</td></tr>
+              <tr><th scope="row">the bill</th><td>the proposed legislation (French)</td><td class="r">Ignored the restaurant context</td></tr>
+              <tr><th scope="row">bent out of shape</th><td>distorted, bent, stooped over</td><td class="r">Idiom read literally</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="cap">Bilingual friends translated Google's output back into English. The outline survives; the anger and irritation don't.</p>
+      <p class="src">Source: ch. 12</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Ask me anything</span></div>
+  <div class="body">
+    <div>
+      <h3>Answering is not understanding</h3>
+      <p class="idea">Benchmarks for question answering keep being "beaten" by systems that match patterns. Tests built to need common sense show how much is missing.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Watson.</strong> In February 2011 it beat Ken Jennings and Brad Rutter at <em>Jeopardy!</em>. Some of its errors were very unhuman, like answering a "U.S. Cities" clue with Toronto. IBM later put the name on a range of unrelated services, and Mitchell suggests Watson may be AI's most notorious hype.</li>
+      <li><strong>SQuAD.</strong> Stanford's 2016 reading test has more than 100,000 questions whose answers appear word for word in a Wikipedia paragraph. In 2018 systems from Microsoft and Alibaba beat the measured human score of 87%. Mitchell calls the task answer extraction, not comprehension.</li>
+      <li><strong>Winograd schemas.</strong> A table won't fit through a doorway because <em>it</em> is too wide, or too narrow. Swap that one word and the pronoun points to the other object. The best system relied on phrase statistics, much like comparing counts of Google search results.</li>
+      <li><strong>Fooling language systems.</strong> Adding an irrelevant sentence about a "Jeff Dean" made a SQuAD system give that name as the answer. A doctored cake photo was captioned as a dog and a cat with a frisbee. Audio can be altered so that people hear music while a speech recognizer hears a command.</li>
+    </ul>
+    <div class="fig">
+      <h4>Same kind of machine, harder tests</h4>
+      <div class="legend"><span><i class="sq" style="--c:var(--gold)"></i>best reported system</span><span><i class="tick" style="--c:var(--ink-3)"></i>random guessing</span><span><i class="tick" style="--c:var(--ink)"></i>humans</span></div>
+      <div class="bars">
+        <div class="bar c-gold"><div class="row"><span>SQuAD answer extraction (2018 systems passed the human 87%)</span><b>&gt;87%</b></div><div class="track"><div class="fill" style="width:88%"></div><div class="mark human" style="left:87%"></div></div></div>
+        <div class="bar c-gold"><div class="row"><span>Allen Institute school science questions, four choices</span><b>~45%</b></div><div class="track"><div class="fill" style="width:45%"></div><div class="mark chance" style="left:25%"></div></div></div>
+        <div class="bar c-rust"><div class="row"><span>Winograd schemas, about 250 items</span><b>~61%</b></div><div class="track"><div class="fill" style="width:61%"></div><div class="mark chance" style="left:50%"></div><div class="mark human" style="left:calc(100% - 2px)"></div></div></div>
+      </div>
+      <p class="cap">SQuAD-trained networks, retrained on part of the 8,000 science questions, did no better than chance on new ones.</p>
+      <p class="src">Source: ch. 13</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART V ============ -->
+<div class="part" id="meaning">
+  <span class="label partno">Part V · Chapters 14–16</span>
+  <h2>The barrier of meaning</h2>
+  <p class="lede">Mitchell borrows a question from mathematician Gian-Carlo Rota: will AI ever break through the barrier of meaning? Her answer: not soon, because understanding rests on things nobody yet knows how to build.</p>
+</div>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">On understanding</span></div>
+  <div class="body">
+    <div>
+      <h3>What a driver knows at a glance</h3>
+      <p class="idea">Understanding is core knowledge and mental simulation, built from abstraction and analogy.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Core knowledge.</strong> Infants know that hidden objects persist and that pushes cause motion. This intuitive physics comes with intuitive biology and psychology. Together they let a driver instantly read a woman on her phone crossing with a stroller and a dog.</li>
+      <li><strong>Simulation.</strong> Mental models let us predict what happens next and imagine "what if I honk?". Lawrence Barsalou argues that understanding, even of a story you read, is a re-enactment of perception and action.</li>
+      <li><strong>Metaphors we live by.</strong> Lakoff and Johnson show that abstract ideas borrow physical ones: we spend time, feel down, give someone a warm welcome. In one experiment, people holding hot coffee rated a stranger as warmer, although such results are still debated.</li>
+      <li><strong>Abstraction and analogy.</strong> An imagined journal follows a child from recognising faces to arguing in court that a blogging platform is like a wall covered in graffiti. Hofstadter defines analogy as perceiving a common essence. Mitchell also speculates that consciousness may be models of our own models, which Hofstadter calls a <em>strange loop</em>.</li>
+    </ul>
+    <div class="kinds">
+      <div><span class="label">Intuitive physics</span><b>Objects</b><span>The man's hidden feet are still there. The stroller moves because she pushes it.</span></div>
+      <div><span class="label">Intuitive biology</span><b>Living things</b><span>The dog can move on its own, and it is sniffing something.</span></div>
+      <div><span class="label">Intuitive psychology</span><b>Minds</b><span>She expects cars to stop, and she'd be scared if yours didn't.</span></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Analogy</span></div>
+  <div class="body">
+    <div>
+      <h3>Teaching machines sameness</h3>
+      <p class="idea">Attempts to hand-code common sense, or to get networks to abstract, have so far barely got started.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Cyc.</strong> Since 1984 Douglas Lenat's team has hand-written logical facts, such as that objects age a year every year. In 2015 it had 15 million and Lenat guessed that was about 5% of what's needed. Mitchell doubts it can work: much common sense is unconscious, so nobody can write it down.</li>
+      <li><strong>Bongard problems.</strong> In 1967 Mikhail Bongard set 100 puzzles in which six boxes on each side share a concept you have to spot. People need only twelve examples. ConvNets trained on 20,000 examples per class of a simpler "same versus different" task scored only slightly above chance, while people scored nearly 100%.</li>
+      <li><strong>Copycat.</strong> Mitchell's thesis program with Hofstadter makes letter-string analogies through <em>conceptual slippage</em>, where one concept gives way to a related one. Her current program, Situate, tries to recognise situations such as walking a dog.</li>
+      <li><strong>Really far away.</strong> In a 2012 blog post Karpathy analysed a photo in which Obama secretly presses on a scale someone is standing on. Getting the joke needs physics, gaze, theory of mind, even social status. Mitchell finds the case that intelligence needs a body increasingly convincing.</li>
+    </ul>
+    <div class="fig">
+      <h4>Letter-string analogies: "do the same thing"</h4>
+      <pre class="eq"><span class="c">if abc → abd, then</span>
+pqrs     → <span class="k">pqrt</span>      <span class="c">rightmost letter → its successor</span>
+ppqqrrss → <span class="k">ppqqrrtt</span>  <span class="c">letter slips to letter group</span>
+xyz      → <span class="k">xya</span> or <span class="k">wyz</span> <span class="c">no successor of z: mirror the rule</span>
+ace      → <span class="r">acg</span>       <span class="c">needs "double successor", invented on the spot</span></pre>
+      <p class="cap">Copycat solved the first three kinds but not the last. Mitchell deliberately didn't hard-code such domain tricks: the goal was general analogy-making.</p>
+      <p class="src">After ch. 15</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">Questions</span></div>
+  <div class="body">
+    <div>
+      <h3>Questions, answers, speculations</h3>
+      <p class="idea">Following Hofstadter's ten questions in <em>GEB</em>, Mitchell ends with her own. The short version: the real danger is stupid machines we trust too much, not superintelligent ones.</p>
+    </div>
+    <div class="tablecard">
+      <div class="scroll-x">
+        <table class="tbl">
+          <thead><tr><th scope="col">Question</th><th scope="col">Short answer</th><th scope="col">Her reasoning</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Self-driving cars soon?</th><td class="v">Inside fences</td><td class="r">Level 3 exists, but drivers stop paying attention. Level 5 needs common sense for long-tail cases and protection from hacking. The likely compromise is geofenced, fully mapped areas.</td></tr>
+            <tr><th scope="row">Mass unemployment?</th><td class="v">Unknown</td><td class="r">Her guess is not soon. Easy things are still hard, and a 2016 report from the Council of Economic Advisers said specific predictions aren't possible.</td></tr>
+            <tr><th scope="row">Can computers be creative?</th><td class="v">In principle</td><td class="r">Creativity requires judging your own work. In Karl Sims's evolved art and in EMI, a person did the judging. Cope deleted EMI's database in 2005.</td></tr>
+            <tr><th scope="row">How far to general AI?</th><td class="v">Very far</td><td class="r">Mitchell suspects our supposed flaws, like bodies, emotions and biases, are part of what makes general intelligence possible.</td></tr>
+            <tr><th scope="row">How terrified should we be?</th><td class="v">Yes and no</td><td class="r">Not of superintelligence. Worry about brittleness, misuse, fake media and giving systems too much autonomy. Sendhil Mullainathan calls this <em>tail risk</em>.</td></tr>
+            <tr><th scope="row">What's still unsolved?</th><td class="v">Nearly everything</td><td class="r">Eric Horvitz joked that the 1955 Dartmouth proposal could be resubmitted for funding today.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Answers paraphrased from ch. 16</span></div>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"We are really, really far away."</blockquote>
+      <span class="label">Andrej Karpathy, quoted by Mitchell as her own view too</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Mitchell's guide comes down to a few habits for reading AI news, using AI tools, and thinking about your own mind.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Reading claims</h3>
+      <div class="tk"><b>Ask "on which benchmark?"</b><span>"Beats humans" usually means one dataset, a lenient metric, and sometimes one human.</span></div>
+      <div class="tk"><b>Check the human baseline</b><span>Who was tested, how, and on what? ImageNet's 5% came from one graduate student.</span></div>
+      <div class="tk"><b>Watch the verbs</b><span>"Reads", "understands", "learns on its own" often overstate what the system does.</span></div>
+    </div>
+    <div class="col">
+      <h3>Using systems</h3>
+      <div class="tk"><b>Plan for the long tail</b><span>Average performance says little about rare cases, which are where serious failures happen.</span></div>
+      <div class="tk"><b>Assume it can be fooled</b><span>Small changes people can't see can flip a network's answer. Defences are still piecemeal.</span></div>
+      <div class="tk"><b>Keep people involved where it matters</b><span>Partial autonomy fails when people stop paying attention, so design for how they'll actually behave.</span></div>
+    </div>
+    <div class="col">
+      <h3>Thinking about minds</h3>
+      <div class="tk"><b>Expect easy things to be hard</b><span>What a four-year-old does without effort is usually the hardest part for machines.</span></div>
+      <div class="tk"><b>Look for transfer</b><span>Real learning carries over to new situations. Checking whether a skill transfers is the best test of understanding.</span></div>
+      <div class="tk"><b>Don't anthropomorphise</b><span>We assume understanding on thin evidence, as the people who believed in Clever Hans did.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Melanie Mitchell, <em>Artificial Intelligence: A Guide for Thinking Humans</em> (Farrar, Straus and Giroux, 2019). Figures are as reported in the book. The long-tail chart and later Q-table values are illustrative, the rice curve is computed from the fable, and all diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent, text) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+
+  /* --- Ch1: perceptron inputs and wires --- */
+  var pix = document.getElementById("d-pix"), wires = document.getElementById("d-wires");
+  if (pix && wires) {
+    var on = [0,1,1,0, 1,0,0,1, 0,1,1,0, 1,0,0,1, 0,1,1,0]; /* a rough 8 */
+    for (var i = 0; i < 20; i++) {
+      var c = i % 4, r = Math.floor(i / 4);
+      el("rect", { x: 24 + c * 26, y: 40 + r * 28, width: 22, height: 24, rx: 2, "class": on[i] ? "f-ink" : "f-paper2" }, pix);
+    }
+    var ys = [52, 80, 108, 136, 164];
+    var w = ["0.6", "−0.2", "0.9", "0.1", "−0.7"];
+    ys.forEach(function (y, k) {
+      el("path", { d: "M134 " + y + " C 240 " + y + ", 280 118, 336 118", "class": k % 2 ? "s-3" : "s-gd", "stroke-width": k % 2 ? 1 : 1.8 }, wires);
+      el("text", { x: 150, y: y - 4, "class": k % 2 ? "t-3" : "t-gd", style: "font-size:11px" }, wires, "w=" + w[k]);
+    });
+  }
+
+  /* --- Ch3: rice chart, grains = 2^n --- */
+  var rice = document.getElementById("d-rice");
+  if (rice) {
+    var x0 = 60, x1 = 580, yb = 220, yt = 30, N = 26, max = Math.pow(2, N);
+    el("line", { x1: x0, y1: yb, x2: x1, y2: yb, "class": "s-2" }, rice);
+    el("line", { x1: x0, y1: yb, x2: x0, y2: yt, "class": "s-rule" }, rice);
+    el("text", { x: 20, y: 22, "class": "hd" }, rice, "Grains on each square");
+    var bw = (x1 - x0) / N;
+    for (var s = 1; s <= N; s++) {
+      var h = (yb - yt) * Math.pow(2, s) / max;
+      var hot = s >= 17;
+      el("rect", { x: x0 + (s - 1) * bw + 2, y: yb - Math.max(h, .8), width: bw - 4, height: Math.max(h, .8), "class": hot ? "f-rust" : "f-gd2" }, rice);
+      if (s === 1 || s % 5 === 0 || s === 16 || s === 26) el("text", { x: x0 + (s - .5) * bw, y: yb + 16, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, rice, String(s));
+    }
+    el("text", { x: x0 + N * bw / 2, y: yb + 36, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, rice, "chessboard square");
+    var x16 = x0 + 15.5 * bw;
+    el("path", { d: "M" + x16 + " " + (yb - 8) + " V 120", "class": "s-gd", "stroke-dasharray": "3 3" }, rice);
+    el("text", { x: x16 - 6, y: 108, "text-anchor": "end", "class": "t-gd" }, rice, "square 16: 65,536 grains");
+    el("text", { x: x16 - 6, y: 124, "text-anchor": "end", "class": "t-3", style: "font-size:11px" }, rice, "about a kilo, still invisible here");
+    el("text", { x: 525, y: 92, "text-anchor": "end", "class": "t-rust" }, rice, "square 26: over two tons,");
+    el("text", { x: 525, y: 108, "text-anchor": "end", "class": "t-rust" }, rice, "more than the harvest");
+    el("text", { x: x0 + 6, y: 46, "class": "t-3", style: "font-size:11px" }, rice, "linear scale; square 64 would be");
+    el("text", { x: x0 + 6, y: 60, "class": "t-3", style: "font-size:11px" }, rice, "over 30 trillion kilos");
+  }
+
+  /* --- Ch4: convolution --- */
+  var conv = document.getElementById("d-conv");
+  if (conv) {
+    var patch = [200, 110, 70, 190, 90, 80, 220, 70, 50], ker = [1, 0, -1, 1, 0, -1, 1, 0, -1];
+    el("text", { x: 20, y: 22, "class": "hd" }, conv, "Image patch");
+    el("text", { x: 196, y: 22, "class": "hd" }, conv, "Weights");
+    for (var j = 0; j < 9; j++) {
+      var cx = j % 3, cy = Math.floor(j / 3), v = patch[j];
+      var g = Math.round(70 + v * 0.72);
+      el("rect", { x: 20 + cx * 44, y: 34 + cy * 44, width: 42, height: 42, rx: 3, style: "fill:rgb(" + g + "," + g + "," + (g - 8) + ")" }, conv);
+      el("text", { x: 41 + cx * 44, y: 60 + cy * 44, "text-anchor": "middle", style: "font-size:12px;fill:" + (g > 140 ? "#1b1a17" : "#f2ede1") }, conv, String(v));
+      el("rect", { x: 196 + cx * 44, y: 34 + cy * 44, width: 42, height: 42, rx: 3, "class": ker[j] > 0 ? "f-gdt s-gd" : (ker[j] < 0 ? "f-rustt s-rust" : "f-card s-rule") }, conv);
+      el("text", { x: 217 + cx * 44, y: 60 + cy * 44, "text-anchor": "middle", "class": ker[j] > 0 ? "t-gd" : (ker[j] < 0 ? "t-rust" : "t-3") }, conv, ker[j] < 0 ? "−1" : String(ker[j]));
+    }
+    el("text", { x: 168, y: 104, "text-anchor": "middle", "class": "hd" }, conv, "×");
+    el("text", { x: 344, y: 104, "text-anchor": "middle", "class": "hd" }, conv, "=");
+    el("text", { x: 364, y: 112, "class": "big t-gd" }, conv, "410");
+    el("text", { x: 364, y: 132, "class": "t-3", style: "font-size:11px" }, conv, "strong vertical edge");
+    el("text", { x: 20, y: 184, "class": "t-3", style: "font-size:11px" }, conv, "light fur | dark grass");
+    var steps = ["edges", "shapes", "parts", "objects", "dog 90%"];
+    steps.forEach(function (t, k) {
+      var x = 20 + k * 116;
+      el("rect", { x: x, y: 196, width: 100, height: 30, rx: 5, "class": k === 4 ? "f-gdt s-gd" : "f-card s-2", "stroke-width": 1.2 }, conv);
+      el("text", { x: x + 50, y: 216, "text-anchor": "middle", "class": k === 4 ? "t-gd" : "t-ink", style: "font-size:12px" }, conv, t);
+      if (k < 4) el("path", { d: "M" + (x + 102) + " 211 H" + (x + 114), "class": "s-3", "stroke-width": 1.4 }, conv);
+    });
+    el("text", { x: 460, y: 186, "text-anchor": "end", "class": "t-3", style: "font-size:11px" }, conv, "illustrative layer stack →");
+  }
+
+  /* --- Ch6: long tail (illustrative) --- */
+  var tail = document.getElementById("d-tail");
+  if (tail) {
+    var items = [["red light", 1], ["stop sign", .82], ["broken glass", .42], ["plastic bag", .34], ["flooded road", .14], ["snow on lanes", .1], ["snowman on highway", .035]];
+    var base = 196, top = 34, bx = 70, step = 46;
+    el("text", { x: 20, y: 20, "class": "hd" }, tail, "Likelihood in a day's driving (illustrative)");
+    items.forEach(function (it, k) {
+      var hh = (base - top) * it[1], x = bx + k * step;
+      el("rect", { x: x, y: base - hh, width: 36, height: hh, rx: 2, "class": k < 2 ? "f-gd" : (k < 4 ? "f-gd2" : "f-rust") }, tail);
+      el("text", { x: x + 24, y: base + 14, "text-anchor": "end", "class": "t-3", style: "font-size:11px", transform: "rotate(-35 " + (x + 24) + " " + (base + 14) + ")" }, tail, it[0]);
+    });
+    for (var q = 0; q < 22; q++) {
+      var xx = bx + 7 * step + q * 9;
+      el("rect", { x: xx, y: base - 4, width: 6, height: 4, "class": "f-rust", opacity: Math.max(.12, .7 - q * .025) }, tail);
+    }
+    el("text", { x: bx + 7 * step - 6, y: base - 40, "class": "t-rust" }, tail, "the tail: countless");
+    el("text", { x: bx + 7 * step - 6, y: base - 24, "class": "t-rust" }, tail, "rare, unseen in training");
+    el("line", { x1: 16, y1: base, x2: 590, y2: base, "class": "s-2" }, tail);
+  }
+
+  /* --- Ch8: Q-learning --- */
+  var qq = document.getElementById("d-q");
+  if (qq) {
+    var px = function (d) { return 520 - d * 88; };
+    el("text", { x: 20, y: 22, "class": "hd" }, qq, "Steps from the ball");
+    for (var d = 0; d <= 5; d++) {
+      el("circle", { cx: px(d), cy: 48, r: 14, "class": "f-card s-2", "stroke-width": 1.2 }, qq);
+      el("text", { x: px(d), y: 52, "text-anchor": "middle", "class": "t-ink", style: "font-size:12px" }, qq, String(d));
+    }
+    el("circle", { cx: 566, cy: 48, r: 9, "class": "f-ink" }, qq);
+    el("text", { x: 566, y: 76, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, qq, "ball");
+    var rows = [
+      { y: 108, name: "after episode 1", vals: [[0, "Kick 10"]] },
+      { y: 160, name: "after episode 2", vals: [[0, "Kick 10"], [1, "Fwd 8"]] },
+      { y: 212, name: "later*", vals: [[0, "Kick 10"], [1, "Fwd 8"], [2, "Fwd 6.4"], [3, "Fwd 5.1"], [4, "Fwd 4.1"]] }
+    ];
+    rows.forEach(function (r, k) {
+      el("text", { x: 20, y: r.y + 4, "class": k === 2 ? "t-3" : "t-ink", style: "font-size:12px" }, qq, r.name);
+      r.vals.forEach(function (v) {
+        var x = px(v[0]);
+        el("rect", { x: x - 38, y: r.y - 14, width: 76, height: 26, rx: 4, "class": v[0] === 0 ? "f-gdt s-gd" : "f-card s-gd2", "stroke-width": 1.2, "stroke-dasharray": k === 2 && v[0] > 1 ? "3 3" : "0" }, qq);
+        el("text", { x: x, y: r.y + 4, "text-anchor": "middle", "class": v[0] === 0 ? "t-gd" : "t-ink", style: "font-size:12px" }, qq, v[1]);
+      });
+    });
+    el("path", { d: "M520 236 H180", "class": "s-rust", "stroke-width": 1.4 }, qq);
+    el("path", { d: "M188 230 L180 236 L188 242", "class": "s-rust", "stroke-width": 1.4 }, qq);
+    el("text", { x: 196, y: 250, "class": "t-rust", style: "font-size:11px" }, qq, "value flows backward, shrinking each step");
+  }
+
+  /* --- Ch9: MCTS --- */
+  var m = document.getElementById("d-mcts");
+  if (m) {
+    var root = [160, 40], kids = [[70, 110], [160, 110], [250, 110]];
+    el("circle", { cx: root[0], cy: root[1], r: 14, "class": "f-ink" }, m);
+    el("text", { x: root[0] + 20, y: root[1] - 12, "class": "t-3", style: "font-size:11px" }, m, "current position");
+    kids.forEach(function (k, i) {
+      el("line", { x1: root[0], y1: root[1] + 14, x2: k[0], y2: k[1] - 12, "class": "s-2", "stroke-width": 1.4 }, m);
+      el("circle", { cx: k[0], cy: k[1], r: 12, "class": i === 0 ? "f-gdt s-gd" : "f-card s-2", "stroke-width": 1.4 }, m);
+      el("text", { x: k[0], y: k[1] + 4, "text-anchor": "middle", "class": "t-ink", style: "font-size:11px" }, m, "m" + (i + 1));
+    });
+    var outs = [[44, "W", "f-gd"], [96, "L", "f-rust"], [250, "L", "f-rust"]];
+    var from = [kids[0], kids[0], kids[2]];
+    outs.forEach(function (o, i) {
+      var f = from[i], path = "M" + f[0] + " " + (f[1] + 12);
+      for (var s2 = 1; s2 <= 4; s2++) path += " L" + (o[0] + (s2 % 2 ? 8 : -8) * (i === 2 ? -1 : 1)) + " " + (f[1] + 12 + s2 * 22);
+      el("path", { d: path, "class": "s-3", "stroke-width": 1.2, "stroke-dasharray": "3 3" }, m);
+      el("rect", { x: o[0] - 11, y: 214, width: 22, height: 20, rx: 3, "class": o[2] }, m);
+      el("text", { x: o[0], y: 228, "text-anchor": "middle", style: "font-size:12px;fill:var(--card)" }, m, o[1]);
+    });
+    el("text", { x: 70, y: 256, "text-anchor": "middle", "class": "t-gd" }, m, "1 of 2");
+    el("text", { x: 160, y: 256, "text-anchor": "middle", "class": "t-3" }, m, "untried");
+    el("text", { x: 250, y: 256, "text-anchor": "middle", "class": "t-rust" }, m, "0 of 1");
+    el("text", { x: 160, y: 286, "text-anchor": "middle", "class": "t-ink", style: "font-size:12px" }, m, "random roll-outs to the end of the game");
+  }
+
+  /* --- Hero band: hype rises and crashes, again and again --- */
+  var canvas = document.getElementById("hype");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var W = 0, H = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = r.width; H = r.height;
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  /* one cycle: slow optimistic rise, sharp crash, long cold floor */
+  function cycle(u) {
+    u = u - Math.floor(u);
+    if (u < .55) { var a = u / .55; return .08 + .92 * a * a; }
+    if (u < .66) { var b = (u - .55) / .11; return 1 - b * b * (3 - 2 * b) * .92; }
+    return .08;
+  }
+  function draw(time) {
+    if (!W) return;
+    ctx.clearRect(0, 0, W, H);
+    var t = reduce ? 0 : time * 0.00004;
+    var period = Math.max(220, W / 3.2);
+    var gold = css("--gold"), rust = css("--rust"), rule = css("--rule");
+    ctx.strokeStyle = rule; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(0, H - 6.5); ctx.lineTo(W, H - 6.5); ctx.stroke();
+    ctx.lineWidth = 2; ctx.lineCap = "round"; ctx.lineJoin = "round";
+    var prev = null;
+    for (var x = 0; x <= W; x += 2) {
+      var u = x / period + t;
+      var v = cycle(u);
+      var y = H - 8 - v * (H - 22);
+      var phase = u - Math.floor(u);
+      var col = phase >= .55 && phase < .66 ? rust : (phase >= .66 ? css("--ink-3") : gold);
+      if (prev) {
+        ctx.strokeStyle = col;
+        ctx.beginPath(); ctx.moveTo(prev[0], prev[1]); ctx.lineTo(x, y); ctx.stroke();
+      }
+      prev = [x, y];
+    }
+    /* thin double rule, as on the cover */
+    ctx.strokeStyle = gold; ctx.globalAlpha = .5; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(0, .5); ctx.lineTo(W, .5); ctx.moveTo(0, 4.5); ctx.lineTo(W, 4.5); ctx.stroke();
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

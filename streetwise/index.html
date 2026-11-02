@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Streetwise by Lloyd Blankfein – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: charcoal portrait, white condensed type,
+   copper stock-chart lines. Copper = the trading floor / J. Aron, slate = old Goldman, red = losses. */
+:root {
+  --paper: #f3f1ee;
+  --paper-2: #e6e3de;
+  --card: #fbfaf8;
+  --ink: #1d1d1f;
+  --ink-2: #4a4845;
+  --ink-3: #75716c;
+  --rule: #d6d1ca;
+
+  --copper: #9a5832;
+  --slate: #4a5561;
+  --loss: #a5382b;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #17171a;
+    --paper-2: #222226;
+    --card: #26262a;
+    --ink: #f0eeeb;
+    --ink-2: #bdb8b1;
+    --ink-3: #8d8882;
+    --rule: #37373c;
+    --copper: #d89b71;
+    --slate: #9eabb8;
+    --loss: #ea7a66;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #17171a;
+  --paper-2: #222226;
+  --card: #26262a;
+  --ink: #f0eeeb;
+  --ink-2: #bdb8b1;
+  --ink-3: #8d8882;
+  --rule: #37373c;
+  --copper: #d89b71;
+  --slate: #9eabb8;
+  --loss: #ea7a66;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+.c-copper { --c: var(--copper); }
+.c-slate { --c: var(--slate); }
+.c-loss { --c: var(--loss); }
+.tint { background: color-mix(in srgb, var(--c) 10%, var(--card)); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(58px, 12.5vw, 170px);
+  font-weight: 700;
+  font-stretch: 68%;
+  text-transform: uppercase;
+  line-height: .86;
+  letter-spacing: .035em;
+  margin-left: -.03em;
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 80%;
+  font-weight: 600;
+  font-size: clamp(22px, 2.6vw, 32px);
+  line-height: 1.15;
+  margin-top: 18px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 720 / 1095;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(20, 18, 16, .4), 0 8px 18px -10px rgba(20, 18, 16, .3);
+  transform: rotate(1.4deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 120px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 800;
+  font-stretch: 80%;
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 800;
+  font-stretch: 68%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .01em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 62%;
+  font-size: 80px;
+  line-height: .8;
+  color: var(--copper);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 750;
+  font-stretch: 85%;
+  line-height: 1.05;
+  letter-spacing: -.01em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--copper);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--copper);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(16px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 21px; font-weight: 750; font-stretch: 85%; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; max-width: 560px; height: auto; display: block; overflow: visible; }
+.frame > .fig, .frame > .figrow { margin-top: 40px; }
+@media (min-width: 901px) { .frame > .fig, .frame > .figrow { margin-left: 210px; } }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-copper { fill: var(--copper); }
+.fig svg .t-slate { fill: var(--slate); }
+.fig svg .t-loss { fill: var(--loss); }
+.fig svg .t-b { font-family: var(--display); font-weight: 700; font-stretch: 85%; }
+.f-copper { fill: var(--copper); }
+.f-slate { fill: var(--slate); }
+.f-loss { fill: var(--loss); }
+.f-rule { fill: var(--rule); }
+.f-paper2 { fill: var(--paper-2); }
+.f-card { fill: var(--card); }
+.s-ink { stroke: var(--ink); }
+.s-ink3 { stroke: var(--ink-3); }
+.s-rule { stroke: var(--rule); }
+.s-copper { stroke: var(--copper); }
+.s-slate { stroke: var(--slate); }
+.s-loss { stroke: var(--loss); }
+
+/* Path stepper */
+.path { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; position: relative; }
+.path li { position: relative; padding: 30px 10px 0 0; display: grid; gap: 4px; align-content: start; }
+.path li::before { content: ""; position: absolute; left: 0; right: 0; top: 9px; height: 2px; background: var(--rule); }
+.path li::after { content: ""; position: absolute; left: 0; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--card); border: 3px solid var(--c, var(--ink-3)); }
+.path li.big::after { background: var(--c); }
+.path b { font-family: var(--display); font-weight: 750; font-stretch: 85%; font-size: 17px; line-height: 1.2; }
+.path .yr { font-family: var(--mono); font-size: 12px; color: var(--c, var(--ink-3)); }
+.path span:last-child { font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 800; font-stretch: 75%; font-size: 42px; line-height: 1; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 800; font-stretch: 75%; text-transform: uppercase; letter-spacing: .02em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 85%; display: block; font-size: 16px; }
+
+/* Merge diagram */
+.merge { display: grid; grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr); gap: 10px; align-items: stretch; }
+.merge .plus { align-self: center; }
+.merge .box { border-radius: 6px; padding: 14px; border: 1.5px solid var(--c); background: color-mix(in srgb, var(--c) 9%, var(--card)); display: grid; gap: 4px; }
+.merge .box b { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: 19px; color: var(--c); }
+.merge .box span { font-size: 14px; color: var(--ink-2); line-height: 1.35; }
+.merge .plus { font-family: var(--display); font-size: 28px; text-align: center; color: var(--ink-3); }
+.merge .out { grid-column: 1 / -1; border-radius: 6px; padding: 14px; background: var(--ink); color: var(--paper); display: grid; gap: 4px; }
+.merge .out b { font-family: var(--display); font-weight: 800; font-stretch: 80%; font-size: 20px; }
+.merge .out span { font-size: 14px; opacity: .85; }
+
+/* Bars (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Crisis timeline */
+.tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.tl li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.tl li:first-child { border-top: 0; }
+.tl .d { font-family: var(--mono); font-size: 12.5px; color: var(--c, var(--ink-3)); padding-top: 3px; }
+.tl b { font-family: var(--display); font-weight: 750; font-stretch: 85%; font-size: 17px; display: block; line-height: 1.25; }
+.tl span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+/* pull quote */
+.pull {
+  max-width: 28ch;
+  font-family: var(--display);
+  font-weight: 700;
+  font-stretch: 78%;
+  font-size: clamp(28px, 3.6vw, 42px);
+  line-height: 1.1;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 800; font-stretch: 75%; text-transform: uppercase; letter-spacing: .02em; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 85%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.xlink { margin-top: 28px; font-size: 16px; color: var(--ink-2); max-width: var(--measure); }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 220px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: 1fr; }
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 64px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+  .path { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 18px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map { grid-template-columns: 1fr; }
+  .path { grid-template-columns: 1fr; row-gap: 0; }
+  .path li { padding: 0 0 16px 30px; }
+  .path li::before { left: 7px; right: auto; top: 0; bottom: 0; width: 2px; height: auto; }
+  .path li::after { top: 3px; }
+  .tl li { grid-template-columns: 1fr; gap: 2px; }
+  .merge { grid-template-columns: 1fr; }
+  .merge .plus { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation: rise-cover .8s .1s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.4deg); } to { transform: rotate(1.4deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Lloyd Blankfein · Penguin Press, 2026</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#out">Getting out</a>
+    <a href="#aron">J. Aron</a>
+    <a href="#top">The top</a>
+    <a href="#crisis">2008</a>
+    <a href="#after">After</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1>Streetwise</h1>
+    <p class="sub">Getting to and through Goldman Sachs</p>
+    <p class="dek">The former Goldman CEO tells how a kid from the Brooklyn projects came in through the firm's least prestigious door, rose to run it, and steered it through 2008.</p>
+    <div class="byline label">
+      <span>28 chapters + epilogue</span><span>36 years at Goldman</span><span>12 as CEO</span><span>~130,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Streetwise by Lloyd Blankfein: a black-and-white close-up portrait of the author on a charcoal background, the title in tall white condensed capitals, with two copper stock-chart lines running across the image">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="tape"></canvas>
+  <div class="ends label"><span>1982 · gold salesman</span><span>2018 · retires as CEO</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Preface &amp; the big idea</span>
+    <h2>Street smarts got him in. Paranoia kept him there.</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Blankfein started the memoir after retiring at the end of 2018, put it in a drawer, and came back to it four years later. His reason: plenty of policymakers and economists have written about the 2008 crisis, but almost no one has described what it felt like from inside a bank.</p>
+      <p>The book has two halves. The first is an outsider's climb: public housing in East New York, Harvard on financial aid, an unhappy stretch as a tax lawyer, and a job selling gold at J. Aron, a commodities trader Goldman had just bought and soon regretted. The second is the view from the top: the partnership's fight over going public, the succession dramas, the crisis, and the years when Goldman became a public villain.</p>
+      <p>What ties it together is what he calls street smarts: <strong>seeing yourself objectively and reading other people with the same cold eye</strong>. In his telling, that habit made him a good salesman, a wary risk manager and a leader who expected the worst. He also brings a dry, self-mocking humour that he admits has sometimes cost him.</p>
+      <p>This is his account. On the contested episodes, the 2008 trades, the SEC's ABACUS case and 1MDB, the notes below report what he says and don't adjudicate it.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The arc in numbers</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-copper"><span class="big num">$130M</span><p>What Goldman paid for J. Aron in 1981. Its biggest purchase until 2000, and for a while one of its few black marks.</p></div>
+        <div class="stat c-copper"><span class="big num">40%</span><p>J. Aron's share of Goldman's profits by 1990, with only around 3% of the staff a year earlier.</p></div>
+        <div class="stat"><span class="big num">$168M</span><p>The value of his IPO shares at the close of trading on the first day, 4 May 1999.</p></div>
+        <div class="stat c-loss"><span class="big num">&lt;$50</span><p>Goldman's share price in November 2008, below the $53 IPO price. A year earlier it had traded in the mid-$200s.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">Lloydisms</span>
+        <p>When he left, colleagues compiled a list of his sayings. The book is full of them, mostly at his own expense: he hears faster than you talk; he finally got good at losing weight just as he got lymphoma; he doesn't promote friends, he befriends people who deserve promotion.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:32px">
+    <h4>The route: from the projects to the corner office</h4>
+    <ol class="path">
+      <li class="c-slate"><span class="yr">1957</span><b>Linden Houses, East New York</b><span>Moves in aged three. Dad sorts mail on the night shift.</span></li>
+      <li class="c-slate"><span class="yr">1971–78</span><b>Harvard, then Harvard Law</b><span>Arrives at 16 on full aid, washing dishes 15 hours a week.</span></li>
+      <li class="c-slate"><span class="yr">1978–82</span><b>Tax lawyer, Donovan, Leisure</b><span>Two years in LA on record-company tax refunds. Wins, and is bored.</span></li>
+      <li class="c-copper big"><span class="yr">1982</span><b>J. Aron gold desk</b><span>Joins as a salesman, taking a pay cut, with no idea Goldman owns the firm.</span></li>
+      <li class="c-copper"><span class="yr">1988–97</span><b>Partner, then FICC</b><span>Partner in 1988, co-head of J. Aron after 1994, co-head of FICC in 1997.</span></li>
+      <li class="c-copper big"><span class="yr">2004–18</span><b>President, then CEO</b><span>President and COO in 2004, chairman and CEO from June 2006 to 2018.</span></li>
+    </ol>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Chapters 1–4</span>
+      <h3>Getting out</h3>
+      <ol>
+        <li><span>1–2</span><a href="#ch1"><b>Advantages · Getting Out</b>The projects as a school</a></li>
+        <li><span>3–4</span><a href="#ch3"><b>Glimpses Beyond · Lawyer</b>The safe path he left</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 5–14</span>
+      <h3>The Aron years</h3>
+      <ol>
+        <li><span>5–6</span><a href="#ch5"><b>Gold Mettle · Gold Man</b>In through the back door</a></li>
+        <li><span>7–9</span><a href="#ch7"><b>Breaking Through · Innovation</b>Selling Goldman's name</a></li>
+        <li><span>10–11</span><a href="#ch10"><b>Partner · Paranoia</b>1988, and Maxwell</a></li>
+        <li><span>12–14</span><a href="#ch12"><b>1994 · Difficult · London</b>The first near-death</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 15–20</span>
+      <h3>The top</h3>
+      <ol>
+        <li><span>15</span><a href="#ch15"><b>To IPO or Not</b>Capital versus culture</a></li>
+        <li><span>16–18</span><a href="#ch16"><b>Unforeseen · Succession</b>Rivals fall away</a></li>
+        <li><span>19–20</span><a href="#ch19"><b>Merchant Bank · Partnership</b>His plan for the firm</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 21–28</span>
+      <h3>Crisis and after</h3>
+      <ol>
+        <li><span>21–23</span><a href="#ch21"><b>Storm · Don't Get Dead</b>2007–08 from inside</a></li>
+        <li><span>24–25</span><a href="#ch24"><b>How Did You Do It?</b>From hero to villain</a></li>
+        <li><span>26–27</span><a href="#ch26"><b>Illness · Goodbye</b>Cancer, then exit</a></li>
+        <li><span>28+</span><a href="#ch28"><b>Risk Is Risky · Epilogue</b>What he believes</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART 1 ============ -->
+<div class="part" id="out">
+  <span class="label partno">Chapters 1–4</span>
+  <h2>Getting out</h2>
+  <p class="lede">An outer-borough childhood, two Harvard degrees he says he survived rather than enjoyed, and a legal career that bored him into taking a gamble.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">1–2</span><span class="label">Advantages · Getting Out</span></div>
+  <div class="body">
+    <div>
+      <h3>The projects as a training ground</h3>
+      <p class="idea">He insists his "disadvantaged" childhood gave him advantages: hunger, resilience and a knack for reading people fast.</p>
+    </div>
+    <ul class="points">
+      <li>Five people in a two-bedroom flat at the Linden Houses: parents, his sister Jacky and a grandmother. His father worked nights at the post office for a 10% pay premium; his mother was a receptionist at a burglar-alarm company.</li>
+      <li>East New York changed fast. He gives the figures as 85% white in 1960 and 80% Black and Hispanic by 1966. His high school, Jefferson, ran on triple sessions and had lost its gym to a police station. He was mugged several times.</li>
+      <li>First businesses: reselling comics at half price, then baseball cards. At Yankee Stadium he sold hot dogs on a 13% commission, which on one sale came to about a nickel.</li>
+      <li>Harvard took him at 16 on a full aid package, with loans and dish-washing on top. He felt short, broke and lost; a sophomore slump followed, and he graduated in general studies with honours, along with, he notes, 93% of his class.</li>
+      <li>He is sharp about class. His Harvard verdict: whether it's right to <em>attend</em> depends on the student, but because of what it unlocks, it always pays to <em>have attended</em>.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">3–4</span><span class="label">Glimpses Beyond · Lawyer, Briefly</span></div>
+  <div class="body">
+    <div>
+      <h3>The safe path he walked away from</h3>
+      <p class="idea">Law trained him in precision and compromise, and showed him a comfortable life he didn't want.</p>
+    </div>
+    <ul class="points">
+      <li>Harvard Law at 20. He took tax courses for the money. Paul, Weiss hired him for tax, then tried to move him to corporate after hiring five people for four openings. He asked if he was fifth on a list of four, and walked.</li>
+      <li>At Donovan, Leisure he spent two years in Los Angeles reconstructing 1960s recording costs for record companies claiming an investment tax credit. They won large judgments, and the law was soon changed so the case mattered to no one.</li>
+      <li>He met his wife Laura through a colleague's Rolodex: no one answered until the letter J.</li>
+      <li>A partners' party in the suburbs settled it. Making partner at a law firm looked deadly to him, and he started taking headhunters' calls for anything but law.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART 2 ============ -->
+<div class="part" id="aron">
+  <span class="label partno">Chapters 5–14</span>
+  <h2>The Aron years</h2>
+  <p class="lede">The most interesting stretch of the book. A despised commodities subsidiary, full of streetwise traders, ends up driving Goldman's profits and in the end its culture.</p>
+</div>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">5–6</span><span class="label">Gold Mettle · From Gold Man to Goldman</span></div>
+  <div class="body">
+    <div>
+      <h3>In through the back door</h3>
+      <p class="idea">Goldman's HR screeners turned him down. J. Aron, which Goldman had just bought, let him in, and it was a business in decline.</p>
+    </div>
+    <ul class="points">
+      <li>Asked by the bullion partner Dennis Suskind whether he could work on the noisy trading floor, he replied: "Where I grew up, I went home to it every day." He started just before Thanksgiving 1982, on $60,000 while his law firm was moving to $65,000.</li>
+      <li>J. Aron began as a New Orleans coffee trader in 1898. Its profit engine was gold arbitrage: buying physical gold and selling futures against it, using gold borrowed cheaply from small central banks. Its bosses hated holding a position overnight.</li>
+      <li>It made $60 million on $100 million of capital in 1981, which is why Goldman paid $130 million. Then Volcker tamed inflation, metals went quiet, and profit fell to $30 million in 1982 and zero in 1983. About 100 of the 300 staff were laid off that autumn.</li>
+      <li>The culture gap was huge. Goldman was "paper" and Ivy League; Aron was "physical," CUNY and shouting. Goldman's business was 85% domestic, Aron's the reverse. On Goldman's prestige ladder he was at the bottom: a salesman, in commodities, in a trading division of a banking firm.</li>
+    </ul>
+  </div>
+</article>
+
+<div class="fig">
+  <h4>How Aron made money: the cash-and-carry trade</h4>
+  <svg viewBox="0 0 440 236" role="img" aria-label="Illustrative chart. In contango, the futures price for delivery later sits above today's spot price; buying spot and selling the future locks in the gap, which works like a loan at an interest rate. In backwardation, as with oil, the future sits below spot and the buyer of the future earns the discount if spot holds.">
+    <polygon points="40,125 300,55 300,125" class="f-copper" opacity=".14"/>
+    <line x1="40" y1="212" x2="300" y2="212" class="s-rule" stroke-width="1"/>
+    <text x="40" y="230" font-size="12">today</text>
+    <text x="300" y="230" font-size="12" text-anchor="end">delivery</text>
+    <line x1="40" y1="125" x2="300" y2="125" class="s-ink3" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="310" y="129" font-size="12" class="t-ink">spot today</text>
+    <line x1="40" y1="125" x2="300" y2="55" class="s-copper" stroke-width="3"/>
+    <circle cx="300" cy="55" r="6" class="f-copper"/>
+    <text x="310" y="52" font-size="12" class="t-copper">future in</text>
+    <text x="310" y="66" font-size="12" class="t-copper">contango</text>
+    <text x="292" y="104" font-size="12" text-anchor="end" class="t-copper">gap = a locked-in</text>
+    <text x="292" y="118" font-size="12" text-anchor="end" class="t-copper">rate for carrying</text>
+    <line x1="40" y1="125" x2="300" y2="182" class="s-slate" stroke-width="2.5" stroke-dasharray="7 4"/>
+    <circle cx="300" cy="182" r="5" class="f-slate"/>
+    <text x="310" y="180" font-size="12" class="t-slate">future in</text>
+    <text x="310" y="194" font-size="12" class="t-slate">backwardation</text>
+    <text x="310" y="208" font-size="12" class="t-slate">(e.g. oil)</text>
+    <circle cx="40" cy="125" r="5" class="f-card s-ink" stroke-width="2"/>
+  </svg>
+  <p class="cap"><strong>Buy now, sell forward, pocket the gap.</strong> When speculators push futures above spot, a firm that buys the physical metal and sells the future is in effect lending money at that rate. Aron did it with gold; Gary Cohn later did it with Soviet aluminium stacked in Rotterdam, piled so high that air traffic control asked for tarps to cut the glare. The same idea made the Goldman Sachs Commodity Index work: rolling futures captures that yield, so commodities could be pitched to long-term investors as an asset that earns something.</p>
+  <span class="src">Illustrative shape, not prices · drawn for this page</span>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">7–9</span><span class="label">Breaking Through · De-Vals · Innovation</span></div>
+  <div class="body">
+    <div>
+      <h3>Selling the Goldman name</h3>
+      <p class="idea">With no franchise of their own, the Aron outsiders borrowed Goldman's brand and invented products the old guard hadn't thought of.</p>
+    </div>
+    <ul class="points">
+      <li>His breakthrough came from a Saudi client, Al Rajhi, whose customers couldn't earn interest under Islamic law. He proposed they buy a stock basket and sell S&amp;P futures against it, leaving out banks and liquor firms. The first order was $100 million, at about 17% annualised with roughly 5% tracking risk. Bob Rubin put him in touch with the "real" Goldman.</li>
+      <li>Mark Winkelman, sent in by Rubin to fix Aron, turned it from riskless arbitrage into a principal risk-taker. He hired physicists and engineers as "strats," including Armen Avanessians, whose tools grew into SecDB. Blankfein credits SecDB as one reason Goldman got through 2008 without major losses.</li>
+      <li>Blankfein built a foreign-exchange sales force from nothing, poaching from the banks it would compete with. Forex profit was $10 million in 1984 and $20 million in 1985, and in 1986 a Euromoney poll ranked the team in the top twenty.</li>
+      <li>Products followed: "quanto" options that adjust to a foreign asset's value, hedges that vanish if a takeover fails, foreign-currency commercial paper (over $1 billion sold in the first weeks), and the GSCI. Old Goldman called the newcomers thuggish, and Rubin had to broker a signed truce.</li>
+    </ul>
+  </div>
+</article>
+
+<div class="figrow">
+  <div class="fig">
+    <h4>From write-off to engine</h4>
+    <svg viewBox="0 0 360 230" role="img" aria-label="Bar chart of J. Aron's annual profit: 60 million dollars in 1981, 30 million in 1982 and zero in 1983, against a reference line at 130 million, the price Goldman paid.">
+      <line x1="40" y1="190" x2="340" y2="190" class="s-ink3" stroke-width="1"/>
+      <line x1="40" y1="40" x2="340" y2="40" class="s-loss" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="340" y="32" font-size="11" text-anchor="end" class="t-loss">price Goldman paid: $130M</text>
+      <rect x="65" y="121" width="58" height="69" class="f-copper"/>
+      <rect x="155" y="155" width="58" height="35" class="f-copper" opacity=".75"/>
+      <rect x="245" y="188" width="58" height="2" class="f-copper"/>
+      <text x="94" y="114" font-size="12" text-anchor="middle" class="t-ink">$60M</text>
+      <text x="184" y="148" font-size="12" text-anchor="middle" class="t-ink">$30M</text>
+      <text x="274" y="181" font-size="12" text-anchor="middle" class="t-ink">$0</text>
+      <text x="94" y="208" font-size="11" text-anchor="middle">1981</text>
+      <text x="184" y="208" font-size="11" text-anchor="middle">1982</text>
+      <text x="274" y="208" font-size="11" text-anchor="middle">1983</text>
+      <text x="40" y="226" font-size="10.5">J. Aron annual profit</text>
+    </svg>
+    <p class="cap">Goldman bought at the top of the metals boom. By 1983, its first full year inside Goldman, Aron earned nothing.</p>
+  </div>
+  <div class="fig">
+    <h4>…then the cowboys drove the herd</h4>
+    <svg viewBox="0 0 360 230" role="img" aria-label="Horizontal bars: in 1989 J. Aron had about 3 percent of Goldman's staff but earned 30 percent of its profits; in 1990 it earned 40 percent; from 1991 to 1993 a third or more.">
+      <line x1="130" y1="20" x2="130" y2="190" class="s-ink3" stroke-width="1"/>
+      <text x="124" y="44" font-size="11" text-anchor="end">1989 staff</text>
+      <rect x="130" y="32" width="13" height="18" class="f-slate"/>
+      <text x="150" y="46" font-size="12" class="t-ink">~3%</text>
+      <text x="124" y="86" font-size="11" text-anchor="end">1989 profit</text>
+      <rect x="130" y="74" width="132" height="18" class="f-copper"/>
+      <text x="268" y="88" font-size="12" class="t-ink">30%</text>
+      <text x="124" y="128" font-size="11" text-anchor="end">1990 profit</text>
+      <rect x="130" y="116" width="176" height="18" class="f-copper"/>
+      <text x="312" y="130" font-size="12" class="t-ink">40%</text>
+      <text x="124" y="170" font-size="11" text-anchor="end">1991–93 profit</text>
+      <rect x="130" y="158" width="145" height="18" class="f-copper" opacity=".55"/>
+      <text x="281" y="172" font-size="12" class="t-ink">≥ ⅓</text>
+      <text x="20" y="210" font-size="10.5">share of Goldman total · bars scaled 0–50%</text>
+    </svg>
+    <p class="cap">In 1989 Goldman's profit was $750 million, 30% of it from Aron. In 1990 it was 40%. Elsewhere on Wall Street, he says, currencies and commodities supplied closer to 20%.</p>
+  </div>
+</div>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10–11</span><span class="label">Howdy, Partner! · Paranoia</span></div>
+  <div class="body">
+    <div>
+      <h3>Partner, and then a lesson in being used</h3>
+      <p class="idea">When your title is unclear, act as if you're in charge. When powerful people flatter you, assume they want something.</p>
+    </div>
+    <ul class="points">
+      <li>His promotion to run traders was withdrawn after complaints that a salesman shouldn't manage risk-takers. He didn't argue, just behaved as if he were in charge, and in time it became official without any memo.</li>
+      <li>In October 1988 John Weinberg phoned to make him partner, one of four from Aron in a class of about three dozen. His pay fell at first: a $200,000 draw against the $550,000 he had earned, plus an 8% return on a capital account that started near zero. Partners had unlimited liability.</li>
+      <li>Robert Maxwell rang him at home for currency views, and Blankfein was flattered. After Maxwell's death the fraud emerged. Some trades Blankfein had handled moved money from public companies to a private one. Goldman paid $254 million to the looted pension funds, billed to the partners of 1989–91.</li>
+      <li>His lesson: you only become worth manipulating once you have power, so cultivate a protective cynicism.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12–14</span><span class="label">1994 · Being Difficult · Lloyd of London</span></div>
+  <div class="body">
+    <div>
+      <h3>The first near-death</h3>
+      <p class="idea">He counts 1994 as in some ways worse than 2008, because Goldman was alone and the partnership began to run for the exits.</p>
+    </div>
+    <ul class="points">
+      <li>After the record of 1993 ($2.3 billion pretax), London prop traders had been urged to bet big. When Greenspan raised rates from 3% to 6% they doubled down. Losses ran at $100 million a month and then $200 million; London gave back $800 million. Blankfein lost about a quarter of his capital account.</li>
+      <li>CEO Steve Friedman quit. Partners rushed to "go limited," since retiring capped their liability, and every departure shrank the capital of those who stayed. Corzine took over with Paulson as number two, ordering partners: "Get into the boat or get out."</li>
+      <li>Afterwards the pendulum swung to timidity. To shame traders back into taking risk, Blankfein placed his own bet on the dollar rising against the yen, which went from 81 to 146 over the next few years.</li>
+      <li>In 1997 he named the merged division FICC. His 360-degree reviews kept saying he was cutting and didn't listen; Laura's line about tennis lessons, that you won't get good but you can get better, became his management motto. The London posting taught him how New York-centric the firm was.</li>
+    </ul>
+  </div>
+</article>
+
+<div class="figrow">
+  <div class="fig">
+    <h4>The 1994 lifeboats: partners who announced they were leaving</h4>
+    <svg id="exodus" viewBox="0 0 360 200" role="img" aria-label="A grid of 162 dots for Goldman's partners in late 1994. About 50 are hollow, for those who had announced their departure before the November 1994 deadline."></svg>
+    <p class="cap">By the partners' dinner in late November 1994, around 50 of 162 partners had announced they were leaving. In a partnership, says Blankfein, a gloomy outlook gives partners a reason to retire and lock in their capital. That reasoning later drove the case for an IPO.</p>
+    <span class="src">Counts as given in the book · position of dots arbitrary</span>
+  </div>
+  <div class="fig">
+    <h4>1997: the old fight ends in a merger</h4>
+    <div class="merge">
+      <div class="box c-copper"><b>J. Aron</b><span>Currencies, commodities · principal trading · 6 partners</span></div>
+      <div class="plus" aria-hidden="true">+</div>
+      <div class="box c-slate"><b>Fixed income</b><span>Bonds, swaps, mortgages · client franchise · 37 partners</span></div>
+      <div class="out"><b>FICC</b><span>Fixed Income, Currency and Commodities. Blankfein suggested the name and became one of three co-heads.</span></div>
+    </div>
+    <p class="cap">Some saw it as a hostile takeover by the smaller side. Goldman's swap desks had been converging for years: Aron had moved into client work, while fixed income had started trading as a principal.</p>
+  </div>
+</div>
+
+<!-- ============ PART 3 ============ -->
+<div class="part" id="top">
+  <span class="label partno">Chapters 15–20</span>
+  <h2>The top</h2>
+  <p class="lede">A 30-year argument about going public, a palace coup, the bubble and 9/11, and a series of rivals who, as he tells it, took themselves out of the race.</p>
+</div>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">To IPO or Not to IPO</span></div>
+  <div class="body">
+    <div>
+      <h3>Capital versus culture</h3>
+      <p class="idea">Everyone wanted to look reluctant about a deal that would make them very rich. In a secret survey, three to one were in favour.</p>
+    </div>
+    <ul class="points">
+      <li>The case against: the partnership culture, profits taxed only once, and no quarterly scrutiny. The case for: capital that could walk out of the door (as in 1994), unlimited liability (partners' shorthand: <em>Penn Central</em>, <em>Maxwell</em>), and no stock to pay staff or buy companies.</li>
+      <li>In January 1996 junior partners, with little built up in their accounts, killed Corzine's plan. Goldman became an LLC instead. What changed minds, he argues, was the end of Glass–Steagall: giant universal banks could lend to the companies Goldman advised, and Goldman's balance sheet was too small to keep up.</li>
+      <li>In June 1998 the town meeting sounded hostile but the secret survey came out three to one in favour. Then Russia defaulted and LTCM collapsed. Goldman put $300 million into the $3.5 billion rescue and pulled the IPO. Paulson then forced Corzine out.</li>
+      <li>The IPO was priced at $53 on 4 May 1999 and closed at just over $70. The average partner received $84 million in stock; he held 2,385,170 shares. Envy flared anyway: people who were already very lucky minded that others were luckier.</li>
+    </ul>
+  </div>
+</article>
+
+<div class="fig">
+  <h4>What going public did, by the book's numbers</h4>
+  <div class="stats">
+    <div class="stat"><span class="big num">3 : 1</span><p>Partners in favour in the confidential June 1998 survey, the opposite of how the room sounded.</p></div>
+    <div class="stat c-copper"><span class="big num">$53</span><p>Offer price on 4 May 1999. Shares closed the day at just over $70.</p></div>
+    <div class="stat"><span class="big num">~15%</span><p>The share sold to the public at first; current and former partners kept about 85%.</p></div>
+    <div class="stat c-copper"><span class="big num">4×+</span><p>Revenue grew from $8.5 billion in 1998 to $37.7 billion in 2006. Scale, he argues, changed the culture more than the listing did.</p></div>
+  </div>
+  <p class="cap">His verdict: without the IPO, Goldman might have disappeared in 2008 or shrunk to a boutique. The listing changed the firm less than globalization and growth did. Headcount went from 10,000 to 45,000.</p>
+</div>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16–18</span><span class="label">Unforeseen · Succession · Housebroken?</span></div>
+  <div class="body">
+    <div>
+      <h3>The rivals fall away</h3>
+      <p class="idea">The two Johns expected the job. In his account, impatience and absence cost them it; he was content as number two.</p>
+    </div>
+    <ul class="points">
+      <li>The bubble years: 32 internet IPOs in 1999, $100 million into Webvan, a $110 million share of the Spitzer settlement over analysts and IPO allocations, and the $6.5 billion purchase of Spear, Leeds &amp; Kellogg, which he opposed. Its remains sold for $30 million in 2014.</li>
+      <li>On 9/11 he climbed 29 floors back up 85 Broad to clear the building. He suspects the dust he breathed that day may have contributed to his lymphoma fourteen years later.</li>
+      <li>He says John Thornton was barely seen in the office after 9/11 and John Thain acted as if he was owed the job. Sent to fix the bloated equities division, Blankfein asked the staff what made sense and told them to do it. Thornton left in 2003, Thain soon afterwards for the NYSE, and Blankfein became president and COO in 2004.</li>
+      <li>When Paulson went to the Treasury in 2006, the board asked, in effect, whether this trader was "housebroken." Paulson insisted he get both the chairman and CEO titles. Steve Friedman had once asked Paulson who he would pick with his own money at stake; Paulson named Blankfein.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch19">
+  <div class="gutter"><span class="chno">19–20</span><span class="label">A Modern Merchant Bank · Partnership Culture</span></div>
+  <div class="body">
+    <div>
+      <h3>His plan for the firm</h3>
+      <p class="idea">Stop apologising for conflicts. Advise, finance and invest together, the way J. P. Morgan the man once did, and run a public company as if it were still a partnership.</p>
+    </div>
+    <ul class="points">
+      <li>Back then about 70% of revenue came from trading and investing and around 15% each from asset management and banking fees. Even so, he says, they usually chose to be the adviser, because that franchise fed everything else.</li>
+      <li>Refereeing all this meant training huge egos to step aside for one another now and then. One rule learned the hard way: you can't represent a seller and finance the buyer, because if prices fall the two interests split.</li>
+      <li>Partnership habits: share information widely, keep consulting, and remember that subordinates talk about you at home. The bottom 5% leave every year. He wants to be appreciated rather than liked.</li>
+      <li>Philanthropy with a business slant: GS Gives (nearly $3 billion to over 10,000 groups), 10,000 Women and 10,000 Small Businesses. He overruled the commitments committee to lead Tesla's 2010 IPO.</li>
+    </ul>
+  </div>
+</article>
+
+<div class="fig">
+  <h4>The "triple play": three roles he says reinforce each other</h4>
+  <svg viewBox="0 0 360 272" role="img" aria-label="Triangle diagram with Advise at the top, Finance at lower left and Invest at lower right. Arrows: advising wins lending; financing shows confidence; investing proves belief in the advice. The centre reads triple play: all three in one deal. A warning notes the conflict of representing a seller while financing the buyer.">
+    <polygon points="180,40 50,200 310,200" class="f-paper2 s-rule" stroke-width="1"/>
+    <line x1="180" y1="40" x2="50" y2="200" class="s-copper" stroke-width="2"/>
+    <line x1="50" y1="200" x2="310" y2="200" class="s-copper" stroke-width="2"/>
+    <line x1="310" y1="200" x2="180" y2="40" class="s-copper" stroke-width="2"/>
+    <circle cx="180" cy="40" r="26" class="f-slate"/>
+    <circle cx="50" cy="200" r="26" class="f-copper"/>
+    <circle cx="310" cy="200" r="26" class="f-copper"/>
+    <text x="180" y="44" font-size="11" text-anchor="middle" style="fill:var(--card)">ADVISE</text>
+    <text x="50" y="204" font-size="11" text-anchor="middle" style="fill:var(--card)">FINANCE</text>
+    <text x="310" y="204" font-size="11" text-anchor="middle" style="fill:var(--card)">INVEST</text>
+    <text x="96" y="110" font-size="10.5" text-anchor="end">advice wins</text>
+    <text x="96" y="124" font-size="10.5" text-anchor="end">the lending</text>
+    <text x="264" y="110" font-size="10.5">investing proves</text>
+    <text x="264" y="124" font-size="10.5">you believe it</text>
+    <text x="180" y="244" font-size="10.5" text-anchor="middle">financing shows confidence in the client</text>
+    <text x="180" y="146" font-size="12.5" text-anchor="middle" class="t-ink t-b">triple play</text>
+    <text x="180" y="162" font-size="10" text-anchor="middle">all three in one deal</text>
+    <text x="180" y="266" font-size="10" text-anchor="middle" class="t-loss">limit: never advise a seller and lend to its buyer</text>
+  </svg>
+  <p class="cap">Blankfein's model of a "modern merchant bank," drawn from his Chicago speech in 2006. The overlap creates conflicts, which he acknowledges. His answer is that any adviser paid only when a deal happens is conflicted anyway, and that the fix is to disclose and sometimes walk away.</p>
+  <span class="src">Concept diagram drawn for this page</span>
+</div>
+
+<!-- ============ PART 4 ============ -->
+<div class="part" id="crisis">
+  <span class="label partno">Chapters 21–25</span>
+  <h2>Crisis</h2>
+  <p class="lede">His account of 2007–10 comes in two acts: an existential crisis Goldman got through better than its rivals, and then a reputational one in which getting through became the charge against it.</p>
+</div>
+
+<article class="chapter" id="ch21">
+  <div class="gutter"><span class="chno">21–23</span><span class="label">Storm · Don't Get Dead · How to Survive</span></div>
+  <div class="body">
+    <div>
+      <h3>2007–08 from inside</h3>
+      <p class="idea">Survival comes before everything else in business. He says Goldman survived because it marked everything to market every day, and so saw the trouble early.</p>
+    </div>
+    <ul class="points">
+      <li>Checking the P&amp;Ls on his BlackBerry during a <em>Die Hard</em> sequel in summer 2007, he saw a Goldman quant fund down 6% in a day. Goldman put in $2 billion and brought in $1 billion from outside investors. The fund lost almost a third that week, then recovered; the new money earned about 20% annualised.</li>
+      <li>In December 2006 CFO David Viniar told the mortgage traders to get "close to home." By the end of January 2007 the firm was roughly neutral. Some desks were short and some long, and the net stayed within a couple of hundred million dollars of flat.</li>
+      <li>Goldman demanded collateral from AIG and bought protection against AIG itself for as little as nine basis points.</li>
+      <li>At the Lehman weekend he told Paulson and Geithner he would join a bad bank funded at $1 billion per bank, but argued against draining healthy banks to save an insolvent one. On 15 September Lehman failed after 158 years. Fuld, in his view, broke the first rule.</li>
+      <li>He was steadied by mantras like "no choice, no problem." He also leaned on voicemails to all staff and daily 4:15 board calls. Even a 15% chance of catastrophe, he writes, is the odds of Russian roulette.</li>
+    </ul>
+  </div>
+</article>
+
+<div class="figrow">
+  <div class="fig">
+    <h4>Five floors and rising water</h4>
+    <svg viewBox="0 0 360 290" role="img" aria-label="A five-storey building. Floors from bottom: Bear Stearns, Lehman Brothers, Merrill Lynch, Morgan Stanley, Goldman Sachs at the top. Water covers the bottom two floors. Notes give each firm's fate in 2008.">
+      <rect x="30" y="20" width="150" height="250" class="f-card s-ink" stroke-width="2"/>
+      <rect x="31" y="170" width="148" height="99" class="f-slate" opacity=".28"/>
+      <line x1="10" y1="170" x2="200" y2="170" class="s-slate" stroke-width="2" stroke-dasharray="6 4"/>
+      <line x1="30" y1="70" x2="180" y2="70" class="s-rule" stroke-width="1"/>
+      <line x1="30" y1="120" x2="180" y2="120" class="s-rule" stroke-width="1"/>
+      <line x1="30" y1="170" x2="180" y2="170" class="s-rule" stroke-width="1"/>
+      <line x1="30" y1="220" x2="180" y2="220" class="s-rule" stroke-width="1"/>
+      <text x="40" y="50" font-size="12" class="t-ink t-b">5 · Goldman</text>
+      <text x="40" y="100" font-size="12" class="t-ink t-b">4 · Morgan Stanley</text>
+      <text x="40" y="150" font-size="12" class="t-ink t-b">3 · Merrill Lynch</text>
+      <text x="40" y="200" font-size="12" class="t-ink t-b">2 · Lehman</text>
+      <text x="40" y="250" font-size="12" class="t-ink t-b">1 · Bear Stearns</text>
+      <text x="192" y="44" font-size="10">bank holding co.,</text>
+      <text x="192" y="57" font-size="10">Buffett money</text>
+      <text x="192" y="94" font-size="10">$9bn from</text>
+      <text x="192" y="107" font-size="10">Mitsubishi</text>
+      <text x="192" y="144" font-size="10">sold to Bank of</text>
+      <text x="192" y="157" font-size="10">America, 15 Sept</text>
+      <text x="192" y="194" font-size="10" class="t-loss">bankrupt, 15 Sept</text>
+      <text x="192" y="244" font-size="10" class="t-loss">sold to J.P. Morgan,</text>
+      <text x="192" y="257" font-size="10" class="t-loss">March</text>
+      <text x="10" y="284" font-size="10">waterline: mid-September 2008</text>
+    </svg>
+    <p class="cap">His image, drawn here: Goldman lived on the top floor, but the water was close enough to hear. Liquidity in its reserve, the "BONY box," fell from $120 billion to half that in a week.</p>
+  </div>
+  <div class="fig">
+    <h4>Close to home: why he says Goldman didn't "bet against" clients</h4>
+    <svg viewBox="0 0 360 250" role="img" aria-label="Illustrative diverging bars. Left panel, labelled what the hearing charts showed: a single large short bar. Right panel, labelled the whole book: a short desk, a long desk of almost equal size, and a small net position near zero.">
+      <line x1="180" y1="20" x2="180" y2="205" class="s-rule" stroke-width="1"/>
+      <line x1="20" y1="120" x2="160" y2="120" class="s-ink3" stroke-width="1"/>
+      <line x1="200" y1="120" x2="345" y2="120" class="s-ink3" stroke-width="1"/>
+      <text x="90" y="16" font-size="10.5" text-anchor="middle">shorts shown alone</text>
+      <text x="272" y="16" font-size="10.5" text-anchor="middle">the whole firm</text>
+      <rect x="65" y="120" width="50" height="80" class="f-loss"/>
+      <text x="90" y="216" font-size="10.5" text-anchor="middle" class="t-loss">short desk</text>
+      <rect x="208" y="120" width="38" height="78" class="f-loss" opacity=".8"/>
+      <rect x="254" y="44" width="38" height="76" class="f-copper"/>
+      <rect x="300" y="116" width="38" height="4" class="f-ink" style="fill:var(--ink)"/>
+      <text x="227" y="216" font-size="10.5" text-anchor="middle">short</text>
+      <text x="273" y="38" font-size="10.5" text-anchor="middle">long</text>
+      <text x="319" y="110" font-size="10.5" text-anchor="middle" class="t-ink">net</text>
+      <text x="180" y="242" font-size="10" text-anchor="middle">illustrative units · the book gives no desk sizes</text>
+    </svg>
+    <p class="cap">Senator Levin's charts showed Goldman's short positions on their own. Blankfein's answer, here and in the 2010 hearing, is that long desks offset them, so the firm as a whole was roughly flat. That is his defence; the subcommittee read the same record as dishonesty.</p>
+    <span class="src">Illustrative · mechanism as Blankfein describes it</span>
+  </div>
+</div>
+
+<div class="fig">
+  <h4>The crisis as he lived it</h4>
+  <ol class="tl">
+    <li class="c-slate"><span class="d">Dec 2006</span><div><b>"Close to home"</b><span>Viniar orders mortgage risk cut back towards neutral. Bernanke and Paulson still call subprime contained in 2007.</span></div></li>
+    <li class="c-copper"><span class="d">Aug 2007</span><div><b>Quant fund scare</b><span>$2 billion of Goldman's money plus $1 billion from outsiders stabilise a falling fund. BNP Paribas freezes funds on 9 August.</span></div></li>
+    <li class="c-copper"><span class="d">Dec 2007</span><div><b>A record year</b><span>$11.6 billion earned on $46 billion of revenue, while Merrill and Citi had announced write-downs of $7.9 billion and $11 billion.</span></div></li>
+    <li class="c-loss"><span class="d">Mar 2008</span><div><b>Bear Stearns</b><span>Leveraged 33 to one. A $13 billion Fed loan, then a sale to J.P. Morgan at $2 a share, later raised to $10.</span></div></li>
+    <li class="c-loss"><span class="d">12–15 Sep</span><div><b>The Lehman weekend</b><span>No buyer, no government money. Bankruptcy on Monday; a money-market fund "breaks the buck."</span></div></li>
+    <li class="c-loss"><span class="d">16–18 Sep</span><div><b>AIG rescued</b><span>An $85 billion credit line for 79.9% of the insurer. Goldman's BONY box falls from $120 billion to about $60 billion.</span></div></li>
+    <li class="c-slate"><span class="d">20–21 Sep</span><div><b>"Existential weekend"</b><span>Talks with Citi and Wachovia go nowhere. Goldman becomes a bank holding company, regulated by the Fed.</span></div></li>
+    <li class="c-copper"><span class="d">23 Sep</span><div><b>Buffett, in five hours</b><span>$5 billion of preferred stock at 10%, plus warrants at $115. Goldman then sells $5.75 billion of common stock at $123.</span></div></li>
+    <li class="c-slate"><span class="d">13 Oct</span><div><b>Held in a room at the Treasury</b><span>Nine banks must accept $125 billion between them. Goldman's share is $10 billion, which it says it didn't need. Repaid with interest by summer 2009.</span></div></li>
+    <li class="c-loss"><span class="d">Nov 2008</span><div><b>Below the IPO price</b><span>Stock under $50. Staff cut by 10%. No bonuses for the top executives.</span></div></li>
+  </ol>
+  <span class="src">Dates and figures as given in the book</span>
+</div>
+
+<article class="chapter" id="ch24">
+  <div class="gutter"><span class="chno">24–25</span><span class="label">How Did You Do It? · More Calamities</span></div>
+  <div class="body">
+    <div>
+      <h3>From "How did you do it?" to "How <em>did</em> you do it!"</h3>
+      <p class="idea">Within months the praise turned to anger. He thinks much of the anger was unfair, but concedes Goldman had made itself an easy target.</p>
+    </div>
+    <ul class="points">
+      <li>In 2009 he was FT Person of the Year. By July <em>Rolling Stone</em> had called Goldman a "vampire squid." Leaving an interview, he joked that he was "off doing God's work," and the line overshadowed everything else in the article.</li>
+      <li><strong>ABACUS.</strong> He describes Goldman as a market-maker between John Paulson, who wanted to short subprime, and professional buyers who wanted to go long. Goldman itself lost money on the deal. The SEC voted 3–2 to charge the firm. Goldman settled for $550 million without admitting or denying the claims, and acknowledged that its marketing materials had left out Paulson's role. Fabrice Tourre was found liable at trial in 2013.</li>
+      <li>Senator Levin sent his testimony to the Justice Department. He was questioned under oath several times before the inquiry was dropped in August 2012. A 2016 mortgage-securities settlement cost Goldman over $5 billion.</li>
+      <li>He sees things he got wrong: a firm with no consumer business had no relationship with the public. A business standards committee made 39 recommendations, summed up as moving from "Can we?" to "Should we?"</li>
+      <li><strong>1MDB.</strong> Goldman underwrote bonds in 2012–13 for a Malaysian fund that US investigators later found Jho Low used to siphon about $4.5 billion. A partner, Tim Leissner, pleaded guilty. Blankfein accepts that the firm was responsible for its corrupt employees, and says he didn't see the red flags investigators later identified.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART 5 ============ -->
+<div class="part" id="after">
+  <span class="label partno">Chapters 26–28 &amp; Epilogue</span>
+  <h2>After</h2>
+  <p class="lede">Cancer, the decision to leave, and a closing set of beliefs about risk, markets and America.</p>
+</div>
+
+<article class="chapter" id="ch26">
+  <div class="gutter"><span class="chno">26–27</span><span class="label">Notes on an Illness · Goodbye to All That</span></div>
+  <div class="body">
+    <div>
+      <h3>Cancer, then the exit</h3>
+      <p class="idea">Illness didn't change him, he says. What changed was the 80/20 split: once he disliked 80% of the job, it was time to go.</p>
+    </div>
+    <ul class="points">
+      <li>A cough he blamed on allergies turned out in 2015 to be an aggressive non-Hodgkin's lymphoma. He gives his odds as about 70% at best and closer to even at worst. Because his health was market-moving information he couldn't tell anyone, so he wrote the press release while the IV was going in. His doctor changed "treatable" to "curable."</li>
+      <li>Six three-week cycles of chemotherapy, Thanksgiving in a hospital conference room, and a grandson born in another wing of the same hospital. The cancer hasn't returned.</li>
+      <li>By 2018 he had been CEO for twelve years. He found himself turning the car round on the way to the airport. The board, with his support, picked the banker David Solomon over the trader Harvey Schwartz, partly because it was banking's turn to lead.</li>
+      <li>At the retired partners' dinner he apologised to everyone promoted two years late, underpaid or forgotten in the lift, then asked whether they were now even.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch28">
+  <div class="gutter"><span class="chno">28+</span><span class="label">Risk Is Risky · Life After Goldman</span></div>
+  <div class="body">
+    <div>
+      <h3>What he believes</h3>
+      <p class="idea">Risk management is contingency planning, not forecasting. Study history, because the crisis you're in always feels like the worst.</p>
+    </div>
+    <ul class="points">
+      <li>American strength is resilience: forgive people who fail, let the government restore confidence in a crisis, then step back. He thinks post-crisis rules overshot, and that trying to rule out the hundred-year storm costs the ninety-nine years in between.</li>
+      <li>He admits he got China wrong. Once he expected it to drift towards markets; after 2018 he sees state capitalism, which he expects to be too rigid to correct its mistakes.</li>
+      <li>He dislikes stakeholder capitalism and ESG mandates, and is wary of industrial policy. He defends tariffs mainly to offset differences in labour costs, and believes CEOs should speak out only on their area of expertise or their employees' welfare, as he did for marriage equality.</li>
+      <li>What worries him is the fat finger more than the hacker. In 2015 a buggy Goldman program started selling stocks at $1 a share, and in minutes the firm was down hundreds of millions.</li>
+      <li>In retirement he trades his own account every day, reads history and physics, and tweeted until he decided arguing with people who have subpoena power was stupid.</li>
+    </ul>
+    <blockquote class="pull">"It's not that anything can happen; it's that eventually everything will happen."</blockquote>
+    <span class="label">Blankfein, chapter 28 epigraph</span>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Lessons scattered through the book</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Blankfein doesn't write a how-to, but his maxims are practical and often funny. These are the most usable, in my words.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Rising</h3>
+      <div class="tk"><b>Act as if you're in charge</b><span>When your role is unclear, give instructions as advice. If people follow, it becomes real.</span></div>
+      <div class="tk"><b>Manage down, not up</b><span>Your reports decide how much you learn. Give them the credit and take the blame.</span></div>
+      <div class="tk"><b>Be suspicious of flattery</b><span>Power makes you worth manipulating. Maxwell taught him that.</span></div>
+      <div class="tk"><b>Aim to be appreciated, not liked</b><span>A soldier wants to be well led, not entertained.</span></div>
+    </div>
+    <div class="col">
+      <h3>Running things</h3>
+      <div class="tk"><b>Ask the front line, then say "do it"</b><span>The people closest to a broken process usually know the fix already.</span></div>
+      <div class="tk"><b>Read the daily P&amp;L like test wells</b><span>Call about any odd number. Merge P&amp;Ls to encourage risk; split them up to expose a weak unit.</span></div>
+      <div class="tk"><b>Don't confuse wrong with stupid</b><span>Judge decisions by what was knowable then. Everyone is wrong some of the time.</span></div>
+      <div class="tk"><b>You can't make people good, only better</b><span>Laura's tennis-lesson line, applied to staff and to himself.</span></div>
+    </div>
+    <div class="col">
+      <h3>In a crisis</h3>
+      <div class="tk"><b>Don't get dead</b><span>Remove the risks that could end you, whatever the cost. Losses can be recovered from.</span></div>
+      <div class="tk"><b>Mark to market, honestly</b><span>A trader who disputes a mark should sell some at that price and prove it.</span></div>
+      <div class="tk"><b>Plan contingencies, not forecasts</b><span>If you've planned for every turn, you react so fast you look prescient.</span></div>
+      <div class="tk"><b>Over-communicate, and keep 98% working</b><span>Only a small team fights the fire. Everyone else should serve clients as usual.</span></div>
+    </div>
+  </div>
+  <p class="xlink">For the longer story of the bond markets behind FICC and the mortgage securities at the centre of 2008, Robin Wigglesworth's history of debt is a good companion. <a href="../fabulous-debt/">Notes on <em>A Fabulous Debt</em> are here.</a></p>
+</section>
+
+<footer>
+  <p>A summary in my own words of Lloyd Blankfein, <em>Streetwise: Getting to and Through Goldman Sachs</em> (Penguin Press, 2026). Figures are as reported in the book, and contested episodes are given as the author's account. The cash-and-carry and "close to home" diagrams are illustrative; the bar charts use the book's numbers. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Nov 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+
+  /* --- 1994 exodus: 162 partners, ~50 announced departures --- */
+  var ex = document.getElementById("exodus");
+  if (ex) {
+    var cols = 18, gap = 19, r = 6.2, x0 = 18, y0 = 14;
+    var seed = 11;
+    function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+    var idx = [], left = {};
+    for (var i = 0; i < 162; i++) idx.push(i);
+    for (var j = idx.length - 1; j > 0; j--) { var k = Math.floor(rnd() * (j + 1)); var t = idx[j]; idx[j] = idx[k]; idx[k] = t; }
+    for (var m = 0; m < 50; m++) left[idx[m]] = true;
+    for (var n = 0; n < 162; n++) {
+      var cx = x0 + (n % cols) * gap, cy = y0 + Math.floor(n / cols) * gap;
+      if (left[n]) el("circle", { cx: cx, cy: cy, r: r - 1, fill: "none", "class": "s-copper", "stroke-width": 2 }, ex);
+      else el("circle", { cx: cx, cy: cy, r: r, "class": "f-slate" }, ex);
+    }
+    var ly = y0 + 9 * gap + 4;
+    el("circle", { cx: 22, cy: ly, r: 5, "class": "f-slate" }, ex);
+    var a = el("text", { x: 32, y: ly + 4, "font-size": 11 }, ex); a.textContent = "stayed (~112)";
+    el("circle", { cx: 160, cy: ly, r: 4.5, fill: "none", "class": "s-copper", "stroke-width": 2 }, ex);
+    var b = el("text", { x: 170, y: ly + 4, "font-size": 11 }, ex); b.textContent = "announced exit (~50)";
+  }
+
+  /* --- Hero band: copper ticker lines, as on the cover (decorative random walk) --- */
+  var canvas = document.getElementById("tape");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var w = 0, h = 0;
+  function css(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function size() {
+    var rc = canvas.getBoundingClientRect();
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = rc.width; h = rc.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function walk(s, n) {
+    var pts = [], v = 0, sd = s;
+    function r() { sd = (sd * 9301 + 49297) % 233280; return sd / 233280; }
+    for (var i = 0; i < n; i++) { v += (r() - 0.46) * 1.0; pts.push(v); }
+    var lo = Math.min.apply(null, pts), hi = Math.max.apply(null, pts);
+    return pts.map(function (p) { return (p - lo) / (hi - lo || 1); });
+  }
+  var A = walk(7, 420), B = walk(29, 420);
+  function draw(progress) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, h);
+    var col = css("--copper"), rule = css("--rule");
+    ctx.strokeStyle = rule; ctx.lineWidth = 1; ctx.globalAlpha = 1;
+    ctx.beginPath(); ctx.moveTo(0, h - .5); ctx.lineTo(w, h - .5); ctx.stroke();
+    [[A, 1, .95], [B, .78, .55]].forEach(function (set) {
+      var pts = set[0], n = Math.max(2, Math.floor(pts.length * progress));
+      ctx.beginPath();
+      for (var i = 0; i < n; i++) {
+        var x = (i / (pts.length - 1)) * w;
+        var y = h - 8 - pts[i] * (h - 18) * set[1];
+        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = col; ctx.globalAlpha = set[2]; ctx.lineWidth = 2; ctx.lineJoin = "round";
+      ctx.stroke();
+    });
+    ctx.globalAlpha = 1;
+  }
+  size(); draw(1);
+  window.addEventListener("resize", function () { size(); draw(1); });
+  new MutationObserver(function () { draw(1); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>
+</body>
+</html>

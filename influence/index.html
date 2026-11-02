@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Influence by Robert Cialdini – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Colours come from the cover's overlapping circles:
+   red = building the relationship, teal = removing doubt, black = prompting action. */
+:root {
+  --paper: #f6f5f3;
+  --paper-2: #ecebe7;
+  --card: #ffffff;
+  --ink: #16151a;
+  --ink-2: #4a4950;
+  --ink-3: #7a7880;
+  --rule: #d9d7d2;
+
+  /* the three goals of influence */
+  --rel: #dc3640;
+  --unc: #0e9a86;
+  --act: #1d1b22;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #111113;
+    --paper-2: #1a1a1d;
+    --card: #1e1e22;
+    --ink: #efedf1;
+    --ink-2: #b4b2ba;
+    --ink-3: #87858e;
+    --rule: #2f2e34;
+    --rel: #ff6a72;
+    --unc: #3fd3bc;
+    --act: #e4e1ea;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #111113;
+  --paper-2: #1a1a1d;
+  --card: #1e1e22;
+  --ink: #efedf1;
+  --ink-2: #b4b2ba;
+  --ink-3: #87858e;
+  --rule: #2f2e34;
+  --rel: #ff6a72;
+  --unc: #3fd3bc;
+  --act: #e4e1ea;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--unc); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Goal colour helpers */
+.c-rel { --c: var(--rel); }
+.c-unc { --c: var(--unc); }
+.c-act { --c: var(--act); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(56px, 14.5vw, 142px);
+  font-weight: 900;
+  font-stretch: 68%;
+  line-height: .82;
+  letter-spacing: -.02em;
+  margin-left: -.03em;
+  text-transform: uppercase;
+}
+.hero h1 span { color: var(--rel); }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 932;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(20, 16, 24, .35), 0 8px 18px -10px rgba(20, 16, 24, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 120px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--c, var(--ink));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part h2 em { font-style: normal; color: var(--c); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--c, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--c, var(--ink));
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink-3)); border-radius: 2px; }
+.axis { position: relative; height: 18px; margin-top: 2px; }
+.axis span { position: absolute; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.axis span:first-child { transform: none; }
+.barwrap { position: relative; display: grid; gap: 14px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 3px solid var(--c, var(--ink)); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+.frame-note { display: flex; gap: 10px 24px; flex-wrap: wrap; margin-top: 18px; }
+
+/* ---------- Principles table ---------- */
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+table.pr { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 1040px; font-size: 15px; line-height: 1.42; }
+table.pr th, table.pr td { text-align: left; vertical-align: top; padding: 14px 14px; border-bottom: 1px solid var(--rule); }
+table.pr thead th { border-bottom: 0; padding-bottom: 16px; }
+table.pr thead th.pr-h { border-top: 5px solid var(--c); background: color-mix(in srgb, var(--c) 9%, var(--card)); }
+table.pr thead .nm { font-family: var(--display); font-weight: 850; font-stretch: 105%; font-size: 19px; color: var(--c); letter-spacing: -.01em; display: block; line-height: 1.1; }
+table.pr thead .tag { font-family: var(--mono); font-size: 11.5px; color: var(--ink-2); font-weight: 400; display: block; margin-top: 6px; }
+table.pr tbody th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; width: 130px; padding-top: 17px; }
+table.pr tbody td { color: var(--ink); }
+table.pr tbody td.q { font-style: italic; }
+table.pr tbody tr:hover td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+table.pr .hl { font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 16px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); }
+.chip.sm { font-size: 14px; padding: 5px 11px; }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .say { font-style: italic; font-size: 17px; color: var(--ink); }
+
+/* steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; align-items: start; font-size: 15.5px; color: var(--ink-2); }
+.steps li::before { counter-increment: s; content: counter(s); font-family: var(--mono); font-size: 13px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--c, var(--ink)); color: var(--paper); }
+.steps li b { color: var(--ink); font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* defence box inside chapters */
+.defend { max-width: var(--measure); border-radius: 6px; padding: 16px 18px; background: color-mix(in srgb, var(--c, var(--ink)) 8%, var(--card)); border: 1px solid color-mix(in srgb, var(--c, var(--ink)) 35%, var(--rule)); display: grid; gap: 6px; }
+.defend p { font-size: 16px; }
+
+/* letter */
+.letter { font-family: var(--body); font-style: italic; font-size: 16px; line-height: 1.55; color: var(--ink-2); background: var(--paper-2); border-radius: 6px; padding: 18px 20px; display: grid; gap: 10px; }
+.letter s { text-decoration-color: var(--rel); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 3px solid var(--c, var(--ink)); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.tk .lab { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--c, var(--ink-3)); }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .two, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Robert B. Cialdini · HarperCollins, German ed. 2023</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#principles">Seven principles</a>
+    <a href="#relationship">Relationship</a>
+    <a href="#uncertainty">Uncertainty</a>
+    <a href="#action">Action</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1>Influ&shy;ence<span>.</span></h1>
+    <p class="sub">The psychology of persuasion, new and expanded edition</p>
+    <p class="dek">Cialdini spent three years undercover among salespeople, fundraisers and advertisers. He found thousands of tactics, and nearly all of them pull on just seven mental shortcuts.</p>
+    <div class="byline label">
+      <span>9 chapters</span><span>7 principles</span><span>3 goals</span><span>Read in German · ~630 pages, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of the German edition of Influence by Robert B. Cialdini: large overlapping teal and red circles, with black where they overlap">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="band"></canvas>
+  <div class="ends label"><span>One trigger</span><span>Click, whirr: an automatic yes</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>We say yes on autopilot, and mostly that's smart</h2>
+  </div>
+  <div class="two">
+    <div class="prose">
+      <p>Cialdini opens by calling himself a pushover. He bought magazines he never read and tickets to charity events he never went to. So he studied why people say yes, first in the lab and then by taking jobs as a trainee in sales, fundraising and advertising to learn the craft from the people who live by it.</p>
+      <p>His conclusion: we can't weigh every fact behind every decision, so we use <strong>shortcuts</strong>. A single cue (a price, a title, a favour, a crowd) stands in for the full picture, and we react automatically. He calls it <em>click, whirr</em>: the cue switches on a pre-recorded response, like a tape that starts playing.</p>
+      <p>The shortcuts usually work. That's why they exist. The danger is people who fake the cue. A professional persuader doesn't need force. Like a judo fighter, they use our own momentum against us, and we walk away believing we decided freely.</p>
+      <p>This new edition adds a seventh principle, <a href="#ch8">unity</a>, plus "E-boxes" on how each principle works online, and readers' reports from people who caught the principles at work in their own lives.</p>
+    </div>
+    <div class="fig">
+      <h4>The magic word is "because"</h4>
+      <div class="barwrap">
+        <div class="bar"><div class="row"><span>"May I use the copier?"</span><b>60%</b></div><div class="track"><div class="fill" style="width:60%"></div></div></div>
+        <div class="bar c-rel"><div class="row"><span>"…because I'm in a rush?"</span><b>94%</b></div><div class="track"><div class="fill" style="width:94%;background:var(--rel)"></div></div></div>
+        <div class="bar c-rel"><div class="row"><span>"…because I have to make some copies?"</span><b>93%</b></div><div class="track"><div class="fill" style="width:93%;background:var(--rel)"></div></div></div>
+      </div>
+      <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+      <p class="cap">Ellen Langer asked people waiting at a library copier to let her go first with five pages. A reason boosted compliance. An empty reason worked almost as well: the word <em>because</em> was the trigger, not the content after it.</p>
+      <p class="src">Source: Langer's copier study, ch. 1</p>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col c-rel">
+      <span class="label">Goal 1 · Build the relationship</span>
+      <h3>Relationship</h3>
+      <ol>
+        <li><span>02</span><a href="#ch2"><b>Reciprocation</b>Give first, and people feel they owe you</a></li>
+        <li><span>03</span><a href="#ch3"><b>Liking</b>We say yes to people we like</a></li>
+        <li><span>08</span><a href="#ch8"><b>Unity</b>We say yes to people who are "us"</a></li>
+      </ol>
+    </div>
+    <div class="col c-unc">
+      <span class="label">Goal 2 · Remove doubt</span>
+      <h3>Uncertainty</h3>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>Social proof</b>When unsure, copy others</a></li>
+        <li><span>05</span><a href="#ch5"><b>Authority</b>Defer to experts and their symbols</a></li>
+      </ol>
+    </div>
+    <div class="col c-act">
+      <span class="label">Goal 3 · Prompt action</span>
+      <h3>Action</h3>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Scarcity</b>What's rare, or slipping away, seems precious</a></li>
+        <li><span>07</span><a href="#ch7"><b>Commitment &amp; consistency</b>We stick with what we've said and done</a></li>
+      </ol>
+    </div>
+  </div>
+  <div class="frame-note label"><span><a href="#ch1">Ch. 1 · Weapons of influence</a> sets up the machinery</span><span><a href="#epilogue">Ch. 9 · The automated world</a> closes the book</span><span>Chapters are grouped here by goal, so unity (ch. 8) sits with the relationship principles</span></div>
+</section>
+
+<!-- ============ CHAPTER 1 ============ -->
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Weapons of Influence</span></div>
+  <div class="body">
+    <div>
+      <h3>Shortcuts make us efficient, and exploitable</h3>
+      <p class="idea">An automatic response to a reliable cue saves time and energy. It also means anyone who can fake the cue can trigger the response.</p>
+    </div>
+    <ul class="points">
+      <li>A mother turkey cares for her chicks only when they make a "cheep-cheep" sound. Give a stuffed polecat, her natural enemy, a tape recorder playing the sound, and she takes it under her wing. Switch it off and she attacks.</li>
+      <li>We have triggers too. A friend's jewellery shop couldn't sell a case of turquoise. Before a trip she left a note to sell it at half price. The assistant misread it as <em>double</em>, and the lot sold out. Buyers who knew nothing about turquoise used the rule <strong>expensive = good</strong>.</li>
+      <li>The same rule changes experience: people who paid full price for an "energy drink" solved more puzzles than those who got it at a discount. A painkiller described as costing $2.50 worked better than the same pill at 10 cents.</li>
+      <li>We think carefully only when we're both motivated and able. Rushed, tired, distracted, emotional or overloaded, we take the shortcut even when the stakes are high. Air crash investigators call the deadly version "captainitis": crews who see the captain's mistake and say nothing.</li>
+      <li>The <strong>contrast principle</strong> is a lever that's almost invisible. Clothing staff sell the suit before the sweater, because after $500 a $95 sweater feels cheap. Estate agents show a couple of overpriced "set-up" houses first.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Click, whirr</h4>
+        <svg viewBox="0 0 520 250" role="img" aria-label="A cue on the left leads to two paths. The upper dashed teal path, labelled controlled, weighs all the information and ends in a considered decision. The lower solid red path, labelled shortcut, uses one cue and ends quickly in an automatic yes. Underneath: we take the shortcut when rushed, tired, distracted or unsure.">
+          <rect x="6" y="96" width="104" height="54" rx="6" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/>
+          <text x="58" y="119" text-anchor="middle" font-size="13" style="fill:var(--ink)">A cue</text>
+          <text x="58" y="137" text-anchor="middle" font-size="10.5">price · title · favour</text>
+          <path d="M112 112 C 170 40, 250 40, 330 44" fill="none" stroke="var(--unc)" stroke-width="2.5" stroke-dasharray="6 6"/>
+          <g fill="var(--unc)"><circle cx="190" cy="56" r="4"/><circle cx="226" cy="48" r="4"/><circle cx="262" cy="45" r="4"/><circle cx="298" cy="44" r="4"/></g>
+          <text x="214" y="28" text-anchor="middle" font-size="11" style="fill:var(--unc)">CONTROLLED · weigh all the facts</text>
+          <rect x="334" y="22" width="180" height="44" rx="6" fill="color-mix(in srgb, var(--unc) 12%, var(--card))" stroke="var(--unc)" stroke-width="1.5"/>
+          <text x="424" y="49" text-anchor="middle" font-size="13" style="fill:var(--ink)">Considered decision</text>
+          <path d="M112 134 C 160 170, 200 176, 250 176" fill="none" stroke="var(--rel)" stroke-width="4"/>
+          <path d="M242 168 L254 176 L242 184" fill="none" stroke="var(--rel)" stroke-width="3"/>
+          <text x="164" y="204" text-anchor="middle" font-size="11" style="fill:var(--rel)">SHORTCUT · one cue</text>
+          <rect x="262" y="154" width="150" height="44" rx="6" fill="var(--rel)"/>
+          <text x="337" y="181" text-anchor="middle" font-size="13" style="fill:#fff">Automatic yes</text>
+          <text x="260" y="240" text-anchor="middle" font-size="11">We take the lower road when rushed, tired, distracted or unsure</text>
+        </svg>
+        <p class="cap">The shortcut is usually right, which is why we keep using it. The problem is that it can be triggered by a fake. Illustrative diagram, not data.</p>
+      </div>
+      <div class="fig">
+        <h4>The contrast principle: three buckets</h4>
+        <svg viewBox="0 0 480 240" role="img" aria-label="Three buckets: cold water on the left, lukewarm in the middle, hot on the right. After one hand has been in cold water and the other in hot, both go into the lukewarm bucket. The hand from the cold bucket feels it as hot, the hand from the hot bucket feels it as cold.">
+          <g stroke="var(--ink)" stroke-width="2">
+            <path d="M28 96 L46 196 H124 L142 96 Z" fill="color-mix(in srgb, var(--unc) 22%, var(--card))"/>
+            <path d="M170 96 L188 196 H292 L310 96 Z" fill="color-mix(in srgb, var(--ink-3) 18%, var(--card))"/>
+            <path d="M338 96 L356 196 H434 L452 96 Z" fill="color-mix(in srgb, var(--rel) 22%, var(--card))"/>
+          </g>
+          <text x="85" y="224" text-anchor="middle" font-size="12" style="fill:var(--unc)">COLD</text>
+          <text x="240" y="224" text-anchor="middle" font-size="12">LUKEWARM</text>
+          <text x="395" y="224" text-anchor="middle" font-size="12" style="fill:var(--rel)">HOT</text>
+          <g fill="none" stroke-width="2.5">
+            <path d="M85 80 C 120 20, 190 20, 214 84" stroke="var(--unc)"/>
+            <path d="M206 76 L214 88 L222 76" stroke="var(--unc)"/>
+            <path d="M395 80 C 360 20, 290 20, 266 84" stroke="var(--rel)"/>
+            <path d="M258 76 L266 88 L274 76" stroke="var(--rel)"/>
+          </g>
+          <text x="214" y="130" text-anchor="middle" font-size="11" style="fill:var(--rel)">feels hot</text>
+          <text x="266" y="160" text-anchor="middle" font-size="11" style="fill:var(--unc)">feels cold</text>
+          <text x="240" y="14" text-anchor="middle" font-size="11">same water, two verdicts</text>
+        </svg>
+        <p class="cap">Cialdini's classroom demo. What we saw just before changes what we see next, which is why people rate a cheeseburger as having 38% more calories after first estimating a salad.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story · a student's letter home</span>
+      <div class="letter">
+        <p>Dear Mom and Dad, please sit down before you read on. My skull fracture from jumping out of the burning dorm is healing nicely. The gas station attendant who called the fire brigade took me in, we're in love, I'm pregnant, and we both picked up an infection, so the wedding is delayed…</p>
+        <p>Now that you're up to date: there was no fire, no fracture, no boyfriend, no baby. <strong>I got a D in history and an F in chemistry</strong>, and I want you to see that in its proper perspective. Love, Sharon</p>
+      </div>
+      <p>Cialdini's note: Sharon may be weak in chemistry, but she gets an A in psychology.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PRINCIPLES AT A GLANCE ============ -->
+<section id="principles">
+  <div class="sec-head">
+    <span class="label">The core framework</span>
+    <h2>Seven principles, three jobs</h2>
+    <p class="lede">Each principle is a shortcut that usually leads to a good decision. Following Gregory Neidert's model, Cialdini sorts them by what a persuader needs at each stage: a good relationship, then less uncertainty, then a push to act.</p>
+  </div>
+
+  <div class="two">
+    <div class="fig">
+      <h4>Three overlapping goals</h4>
+      <svg viewBox="0 0 460 330" role="img" aria-label="Three overlapping circles in the style of the book cover. Red circle: relationship, containing reciprocation, liking and unity. Teal circle: uncertainty, containing social proof and authority. Dark circle: action, containing scarcity and consistency. An arrow underneath runs from relationship to uncertainty to action.">
+        <circle cx="150" cy="120" r="104" fill="color-mix(in srgb, var(--rel) 16%, transparent)" stroke="var(--rel)" stroke-width="2.5"/>
+        <circle cx="310" cy="120" r="104" fill="color-mix(in srgb, var(--unc) 16%, transparent)" stroke="var(--unc)" stroke-width="2.5"/>
+        <circle cx="230" cy="214" r="92" fill="color-mix(in srgb, var(--act) 10%, transparent)" stroke="var(--act)" stroke-width="2.5"/>
+        <text x="112" y="70" text-anchor="middle" font-size="12" style="fill:var(--rel);font-weight:500">RELATIONSHIP</text>
+        <text x="104" y="98" text-anchor="middle" font-size="12" style="fill:var(--ink)">Reciprocation</text>
+        <text x="104" y="118" text-anchor="middle" font-size="12" style="fill:var(--ink)">Liking</text>
+        <text x="104" y="138" text-anchor="middle" font-size="12" style="fill:var(--ink)">Unity</text>
+        <text x="350" y="70" text-anchor="middle" font-size="12" style="fill:var(--unc);font-weight:500">UNCERTAINTY</text>
+        <text x="356" y="104" text-anchor="middle" font-size="12" style="fill:var(--ink)">Social proof</text>
+        <text x="356" y="124" text-anchor="middle" font-size="12" style="fill:var(--ink)">Authority</text>
+        <text x="230" y="262" text-anchor="middle" font-size="12" style="fill:var(--act);font-weight:500">ACTION</text>
+        <text x="230" y="226" text-anchor="middle" font-size="12" style="fill:var(--ink)">Scarcity</text>
+        <text x="230" y="244" text-anchor="middle" font-size="12" style="fill:var(--ink)">Consistency</text>
+        <g stroke="var(--ink-3)" stroke-width="1.5" fill="none"><path d="M60 318 H400"/><path d="M392 312 L402 318 L392 324"/></g>
+        <text x="60" y="308" font-size="11">first: be liked</text>
+        <text x="230" y="308" text-anchor="middle" font-size="11">then: be believed</text>
+        <text x="400" y="308" text-anchor="end" font-size="11">then: be acted on</text>
+      </svg>
+      <p class="cap">A friend can prove that everyone and every doctor favours daily exercise and still not get you off the sofa. For that, they'd remind you of what you've said about your health (consistency) and what you'd lose without it (scarcity).</p>
+    </div>
+    <div class="prose">
+      <p>Every principle has the same shape. There's a <strong>rule of thumb</strong> that's right most of the time: return favours, trust experts, follow the crowd when you're lost. Because it's usually right, we apply it without thinking. And because we apply it without thinking, it can be <strong>counterfeited</strong>.</p>
+      <p>Cialdini is clear that using these principles isn't wrong in itself. A real expert who mentions her expertise, or a product that's genuinely popular, gives us honest information. The line is crossed when the cue is <em>manufactured</em>: fake reviews, a borrowed lab coat, a "limited offer" that never runs out.</p>
+      <p>So each chapter ends the same way: how the principle works, how it gets exploited, and how to defend yourself without becoming cynical about everyone who uses it honestly.</p>
+      <div class="chips" style="margin-top:6px">
+        <span class="chip c-rel">Reciprocation</span><span class="chip c-rel">Liking</span><span class="chip c-rel">Unity</span>
+        <span class="chip c-unc">Social proof</span><span class="chip c-unc">Authority</span>
+        <span class="chip c-act">Scarcity</span><span class="chip c-act">Consistency</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tablecard" style="margin-top:24px">
+    <div class="scroll-x">
+      <table class="pr">
+        <thead>
+          <tr>
+            <th scope="col"><span class="label">Compare</span></th>
+            <th scope="col" class="pr-h c-rel"><span class="nm">Reciprocation</span><span class="tag">ch. 2</span></th>
+            <th scope="col" class="pr-h c-rel"><span class="nm">Liking</span><span class="tag">ch. 3</span></th>
+            <th scope="col" class="pr-h c-rel"><span class="nm">Unity</span><span class="tag">ch. 8 · new</span></th>
+            <th scope="col" class="pr-h c-unc"><span class="nm">Social proof</span><span class="tag">ch. 4</span></th>
+            <th scope="col" class="pr-h c-unc"><span class="nm">Authority</span><span class="tag">ch. 5</span></th>
+            <th scope="col" class="pr-h c-act"><span class="nm">Scarcity</span><span class="tag">ch. 6</span></th>
+            <th scope="col" class="pr-h c-act"><span class="nm">Consistency</span><span class="tag">ch. 7</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">The shortcut</th><td class="hl">Repay what you were given</td><td class="hl">Say yes to people you like</td><td class="hl">Side with "us"</td><td class="hl">Do what others like me do</td><td class="hl">Follow the expert</td><td class="hl">Rare means valuable</td><td class="hl">Stay true to what I said and did</td></tr>
+          <tr><th scope="row">Why it's useful</th><td>Lets people give without fear of loss, which makes trade and trust possible</td><td>Friends rarely mean us harm</td><td>Our group's interests overlap with our own, even genetically</td><td>Usually the crowd knows something we don't</td><td>Experts usually know more</td><td>Hard-to-get things are usually better</td><td>Saves rethinking every decision; consistency is seen as a virtue</td></tr>
+          <tr><th scope="row">How pros use it</th><td>Free samples, gifts in the mail, a big request then a "concession"</td><td>Parties hosted by friends, compliments, invented similarities</td><td>"Family" language, shared roots, inviting your advice</td><td>"Most popular", testimonials, canned laughter, trends</td><td>Titles, uniforms, admitting a small flaw first</td><td>"Only 3 left", deadlines, exclusive information</td><td>A small first yes, written and public pledges, the low-ball</td></tr>
+          <tr><th scope="row">Strongest when</th><td>The gift is personal, significant and unexpected</td><td>Attractive, similar, flattering, familiar in a good way</td><td>Shared kin, place or shared action</td><td>We're unsure, many act, and they're similar to us</td><td>The expert is also seen as trustworthy</td><td>Newly scarce, and others compete for it</td><td>Active, public, effortful, freely chosen</td></tr>
+          <tr><th scope="row">Signature study</th><td>A stranger who'd bought you a Coke sold you clearly more raffle tickets</td><td>Joe Girard's monthly "I like you" cards to 13,000 customers</td><td>Students' parents returned 97% of surveys for one extra exam point</td><td>"Many people steal" signs nearly tripled theft</td><td>65% of Milgram's subjects went to 450 V</td><td>Exclusive news of a beef shortage: 6× the orders</td><td>A small sign first: 76% then took a huge one, vs 17%</td></tr>
+          <tr><th scope="row">Your defence</th><td class="q">Accept in good faith; if it was a trick, redefine it as one and owe nothing</td><td class="q">If you like them surprisingly much, separate the seller from the deal</td><td class="q">Ask whether the "we" is real, and don't let it excuse wrongdoing</td><td class="q">Watch for faked evidence; the crowd isn't your only guide</td><td class="q">Ask: is this person truly an expert? How honest will they be with me?</td><td class="q">Notice the rush of arousal, calm down, ask what it's really worth to you</td><td class="q">Listen to your gut and your heart: would I choose this again knowing what I know now?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Colour = the goal each principle serves</span></div>
+  </div>
+</section>
+
+<!-- ============ PART: RELATIONSHIP ============ -->
+<div class="part c-rel" id="relationship">
+  <span class="label partno">Goal 1 · Chapters 2, 3 and 8</span>
+  <h2>Build the <em>relationship</em></h2>
+  <p class="lede">People listen to a message more favourably when they feel positive about the sender. Three principles create that feeling: owing someone, liking them, and feeling that they're one of us.</p>
+</div>
+
+<article class="chapter c-rel" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Reciprocation</span></div>
+  <div class="body">
+    <div>
+      <h3>Give first, and people feel they owe you</h3>
+      <p class="idea">Every human culture teaches us to repay what others give us. The rule is so strong that it works even for gifts we never asked for.</p>
+    </div>
+    <ul class="points">
+      <li>The rule is the glue of society: because the receiver is obliged to repay, the giver can give without losing out. In 1985 famine-struck Ethiopia sent $5,000 to Mexico City's earthquake victims, because Mexico had helped Ethiopia when Italy invaded in 1935.</li>
+      <li>It overrides liking. In Dennis Regan's study, an assistant who bought a participant an unasked-for Coke sold him clearly more raffle tickets, whether or not the participant liked him.</li>
+      <li>It works for <strong>uninvited</strong> favours, so we don't even get to choose whom we owe. A veterans' charity's appeal letter worked 18% of the time; with free address labels inside, 35%.</li>
+      <li>It produces <strong>unequal</strong> trades. To shake off the feeling of being in debt we agree to more than we got. Regan's Coke cost 10 cents and brought in 50 cents: a 500% return.</li>
+      <li>Gifts work best when they're <strong>personal, meaningful and unexpected</strong>. A single sweet with the bill raised tips by 3.3%; two sweets per guest raised them by 14%. Restaurants that gave kids a balloon at the door saw families spend 25% more.</li>
+      <li>Concessions count as gifts too. In <strong>rejection-then-retreat</strong> (door-in-the-face), you ask for something big, accept a no, then retreat to what you wanted all along. The other side feels they must concede in return.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>A boy scout, two chocolate bars, and an experiment</h4>
+        <ol class="steps c-rel">
+          <li><span><b>Big ask.</b> Volunteer as a counsellor for juvenile offenders, two hours a week for two years? Nearly everyone said no.</span></li>
+          <li><span><b>Retreat.</b> "Then could you chaperone a group of them to the zoo for an afternoon?"</span></li>
+          <li><span><b>Return the concession.</b> Saying yes feels like meeting them halfway.</span></li>
+        </ol>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>Zoo trip asked on its own</span><b>17%</b></div><div class="track"><div class="fill" style="width:17%"></div></div></div>
+          <div class="bar"><div class="row"><span>Zoo trip asked after the big request</span><b>50%</b></div><div class="track"><div class="fill" style="width:50%;background:var(--rel)"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+        <p class="cap">Cialdini ran the study after a scout talked him out of a $5 circus ticket and into two $1 chocolate bars he didn't even like. People who say yes this way also feel more responsible for the deal and more satisfied with it, so they're more likely to follow through. Blood donors recruited this way were far more willing to donate again (84% vs 43%).</p>
+        <p class="src">Source: Cialdini's zoo-chaperone experiment, ch. 2</p>
+      </div>
+      <div class="fig">
+        <h4>Gifts in the mail</h4>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>Plain appeal letter</span><b>18%</b></div><div class="track"><div class="fill" style="width:18%"></div></div></div>
+          <div class="bar"><div class="row"><span>Same letter + free address labels</span><b>35%</b></div><div class="track"><div class="fill" style="width:35%;background:var(--rel)"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+        <p class="cap">Share of people who donated to a US veterans' organisation.</p>
+        <div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="stat"><span class="big num" style="color:var(--rel)">+42%</span><p>more frequent purchases from shoppers who'd been given a small gift</p></div>
+          <div class="stat"><span class="big num" style="color:var(--rel)">100%</span><p>of scientists who backed certain drugs had received trips, grants or contracts from the makers (vs 37% of critics)</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story · Watergate</span>
+      <p>How did Nixon's re-election committee approve the absurd, risky Watergate break-in? G. Gordon Liddy's first proposal cost $1 million and included a surveillance plane, kidnappings and a yacht with call girls. It was rejected. A week later a trimmed plan at $500,000 was rejected too. The third, at $250,000, "only" bugged the Democrats' offices, and after two retreats it felt like a concession that had to be returned. When the burglars were caught, Jeb Magruder asked: how could we have been so stupid?</p>
+    </div>
+    <div class="defend">
+      <span class="label">How to say no</span>
+      <p>Don't refuse every offer: that makes you cold and costs you real favours. Accept gifts and concessions in good faith. But if one turns out to be a sales device, mentally <strong>redefine it as a trick</strong>. The rule says to repay favours, not tricks, so you owe nothing.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-rel" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Liking</span></div>
+  <div class="body">
+    <div>
+      <h3>We say yes to people we like</h3>
+      <p class="idea">No surprise there. The surprise is how many small, manageable things make us like someone.</p>
+    </div>
+    <ul class="points">
+      <li>The Tupperware party is a masterclass: games and prizes (reciprocity), guests describing what they already own (commitment), and above all the request coming from a <strong>friend</strong>, not a stranger. A Tupperware party starts somewhere every 1.8 seconds. 92% of consumers trust recommendations from people they know.</li>
+      <li><strong>Physical attractiveness</strong> creates a halo: we assume good-looking people are also more talented, kind and intelligent. 73% of voters denied looks had any influence on them.</li>
+      <li><strong>Similarity</strong> works from the age of nine months. In a study of 421 million potential matches on a dating site, it was the single biggest factor. Salespeople fake it: camping gear in your boot, "Oh, I love getting out of town too."</li>
+      <li><strong>Compliments</strong> work even when we know they're flattery. Most powerful: genuine ones said behind your back, or ones you want to live up to.</li>
+      <li><strong>Contact and cooperation.</strong> Familiarity helps only in pleasant settings. In the Robbers Cave summer camp, contact between rival groups made things worse; shared problems (a broken water supply, a film they could only afford together) made them friends. The jigsaw classroom, where each pupil holds one piece of the lesson, builds friendships across ethnic lines.</li>
+      <li><strong>Association.</strong> We link people with the news they bring. Persian messengers who brought victory were feasted; those who brought defeat were killed. TV weather presenters still get hate mail for rain. Fans say "<em>we</em> won" but "<em>they</em> lost".</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Five ways to be liked</h4>
+        <div class="chips">
+          <span class="chip c-rel">Attractiveness</span><span class="chip c-rel">Similarity</span><span class="chip c-rel">Compliments</span><span class="chip c-rel">Contact &amp; cooperation</span><span class="chip c-rel">Association</span>
+        </div>
+        <p class="cap">Each one is a real reason to like someone. Each one can also be staged: a well-cut suit, a mirrored hobby, a quick flattering line, a staged "good cop", a celebrity in the ad.</p>
+      </div>
+      <div class="fig">
+        <h4>The world's greatest car salesman</h4>
+        <div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="stat"><span class="big num" style="color:var(--rel)">13,000</span><p>former customers got a greeting card from Joe Girard every month</p></div>
+          <div class="stat"><span class="big num" style="color:var(--rel)">3 words</span><p>inside, every time: "I like you." Plus his name.</p></div>
+        </div>
+        <p class="cap">A printed card sent to thousands of people shouldn't work. It did: Girard sold Chevrolets at a record rate, mainly to returning customers and their friends. We're suckers for flattery even when it's obviously mass-produced.</p>
+      </div>
+    </div>
+    <div class="defend">
+      <span class="label">How to say no</span>
+      <p>Don't try to spot every tactic; there are too many. Watch for the <strong>result</strong> instead: if you find yourself liking a salesperson more than you'd expect in this short time, step back. Separate the person from the offer and judge the deal on its own merits. You'd want the car even if he were rude to you?</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-rel" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Unity · new</span></div>
+  <div class="body">
+    <div>
+      <h3>We say yes to people who are "us"</h3>
+      <p class="idea">Liking is "they're like us". Unity goes deeper: "they <em>are</em> us". A shared identity makes another person's interests feel like our own.</p>
+    </div>
+    <ul class="points">
+      <li>The "we" is a shared self, defined by tribe-like categories: family, ethnicity, home region, nation, religion, politics. We favour in-group members, take their preferences as guides, and these tendencies evolved because they helped the group, and us, survive.</li>
+      <li>Car seller Ali Reda beat Joe Girard's record in Dearborn, Michigan, the largest Arab-American community in the US, where he's a well-known member. International referees favour players from their own country about 10% more often.</li>
+      <li><strong>Being together: kinship.</strong> Cialdini offered students one extra exam point if a parent filled in a long questionnaire. Response rates for adults are usually below 20%. 159 of 163 parents (97%) sent it back.</li>
+      <li><strong>Being together: place.</strong> Home, neighbourhood and region create a family-like feeling. Children raised in homes open to many kinds of guests grow up more willing to help strangers.</li>
+      <li><strong>Acting together.</strong> Moving, singing or suffering in sync makes people feel like one. Music is the scalable version: 87% of 1,513 TV ads studied used it.</li>
+      <li><strong>Co-creation.</strong> Ask for <em>advice</em>, not opinions or expectations. Advice puts people in your shoes and blends their identity with yours. Managers who thought they'd helped shape an ad campaign rated it 50% higher than colleagues who hadn't.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Tapping in time</h4>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>Tapped out of sync with a partner</span><b>18%</b></div><div class="track"><div class="fill" style="width:18%"></div></div></div>
+          <div class="bar"><div class="row"><span>Tapped in sync with a partner</span><b>49%</b></div><div class="track"><div class="fill" style="width:49%;background:var(--rel)"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+        <p class="cap">Share of participants who stayed afterwards to help their partner with a tedious task. In another study, groups that had marched in step were 50% more cooperative.</p>
+        <p class="src">Source: synchrony studies, ch. 8</p>
+      </div>
+      <div class="fig">
+        <h4>Ask for advice, not opinions</h4>
+        <div class="compare">
+          <div><h5>"What's your opinion?"</h5><p class="say">"What do you think of our new restaurant?"</p><ul><li>Puts you in the critic's seat</li><li>Keeps a distance between you and them</li></ul></div>
+          <div><h5 style="color:var(--rel)">"What's your advice?"</h5><p class="say">"What advice would you give us?"</p><ul><li>Puts you in their shoes</li><li>Makes you a co-creator, and co-creators get attached</li></ul></div>
+        </div>
+        <p class="cap">"We admire the wisdom of those who come to us for advice," as Benjamin Franklin put it.</p>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story · Chiune Sugihara</span>
+      <p>In 1940 the Japanese consul in Lithuania, a mid-ranking diplomat who loved parties and gambling, defied his superiors and wrote thousands of visas for Jewish refugees, then lost his post for it. Cialdini points to his childhood: his parents ran their home like an inn, cooking for, housing and washing the clothes of travellers of all kinds, many too poor to pay. Sugihara learned to draw the line of "family" very wide.</p>
+    </div>
+    <div class="defend">
+      <span class="label">The dark side, and the defence</span>
+      <p>"We" can excuse wrongdoing. Companies whose codes of conduct said "we" instead of "employees" had more misconduct, and in experiments people given the "we" version lied and cheated more, expecting to be watched less and forgiven more. Unions protecting cheats and churches covering for abusers follow the same loyalty. Ask whether the shared identity is real, and whether it's being used to wave something through.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART: UNCERTAINTY ============ -->
+<div class="part c-unc" id="uncertainty">
+  <span class="label partno">Goal 2 · Chapters 4 and 5</span>
+  <h2>Remove <em>doubt</em></h2>
+  <p class="lede">A good relationship isn't enough. Before we say yes we want evidence that it's a sensible choice, ideally from people like us or from someone who knows better.</p>
+</div>
+
+<article class="chapter c-unc" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Social Proof</span></div>
+  <div class="body">
+    <div>
+      <h3>When unsure, we copy others</h3>
+      <p class="idea">We decide what's correct by looking at what people around us do. Pointing out that something is popular makes it more popular.</p>
+    </div>
+    <ul class="points">
+      <li>It works almost everywhere. A menu label saying "most popular" lifted a dish's sales by 13–20%. "Our most popular is the McFlurry" lifted McFlurry sales by 55%. Dutch teens told that most peers ate fruit ate 35% more. Louisville, Kentucky told ticket recipients that most people pay within two weeks, and payments rose by 130%.</li>
+      <li>Three conditions make it strongest. <strong>Uncertainty</strong>: in a clear emergency people help; in an ambiguous one they look at each other and do nothing. <strong>The many</strong>: if four people stare at an empty patch of sky, 80% of passers-by look up. Crowds signal that something is valid, doable and socially accepted. <strong>Similarity</strong>: we copy people like us.</li>
+      <li>The bystander effect: the 1964 Kitty Genovese case (later disputed in its details) made the image of 38 neighbours who did nothing famous. If you need help, don't call out to the crowd: pick one person. "You, in the blue jacket, call an ambulance."</li>
+      <li>Similarity has a dark edge. David Phillips found that after a widely reported suicide, suicides and fatal "accidents" rise among people similar to the victim. In Jonestown, Jim Jones moved his followers to the Guyanese jungle, where the only people like them were each other, before more than 900 died.</li>
+      <li>If you're not popular yet, point to the <strong>trend</strong>: "more and more people are…" works as future social proof.</li>
+      <li>Watch for counterfeits: canned laughter, staged queues, bought reviews. 98% of online shoppers say authentic reviews are their biggest influence, which is exactly why they get faked.</li>
+    </ul>
+    <div class="fig">
+      <h4>The sign that encouraged theft</h4>
+      <div class="barwrap">
+        <div class="bar"><div class="row"><span>"Many visitors take wood" + a picture of three thieves</span><b>7.92%</b></div><div class="track"><div class="fill" style="width:79.2%;background:var(--rel)"></div></div></div>
+        <div class="bar"><div class="row"><span>No sign (baseline)</span><b>2.95%</b></div><div class="track"><div class="fill" style="width:29.5%"></div></div></div>
+        <div class="bar"><div class="row"><span>"Please don't take wood" + a picture of one lone thief</span><b>1.67%</b></div><div class="track"><div class="fill" style="width:16.7%;background:var(--unc)"></div></div></div>
+      </div>
+      <div class="axis"><span style="left:0%">0%</span><span style="left:50%">5%</span><span style="left:100%;transform:translateX(-100%)">10%</span></div>
+      <p class="cap">Share of visitors to Arizona's Petrified Forest National Park who stole fossilised wood. The park's entrance sign lamented that 14 tons a year disappeared "a piece at a time", which told visitors that taking a piece is normal. Telling people how many do the wrong thing is a common and costly mistake in public campaigns.</p>
+      <p class="src">Source: Cialdini's Petrified Forest experiment, ch. 4</p>
+    </div>
+    <div class="story">
+      <span class="label">The story · a phobia cure</span>
+      <p>Children terrified of dogs watched a boy happily playing with a dog for 20 minutes a day. After four days, 67% were willing to climb into a playpen with a dog and pet it while everyone else left the room. Watching films of several different kids with several dogs worked even better. Social proof isn't only a trap; it's also a therapy.</p>
+    </div>
+    <div class="defend">
+      <span class="label">How to say no</span>
+      <p>Stay alert to <strong>fake evidence</strong> of what similar people are doing: staged testimonials, laugh tracks, inflated numbers. And look up now and then: the crowd may be watching you while you watch them, so nobody actually knows. The behaviour of similar others shouldn't be your only basis for a decision.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-unc" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Authority</span></div>
+  <div class="body">
+    <div>
+      <h3>We defer to authority, and to its costumes</h3>
+      <p class="idea">Obeying real experts is usually wise, so we learn to do it without thinking. Then the mere symbols of authority are enough.</p>
+    </div>
+    <ul class="points">
+      <li>In Stanley Milgram's experiment, ordinary adults were told to shock a "learner" for every wrong answer. Despite his screams, 65% went all the way to 450 V because a researcher in a lab coat told them to continue. Experts had predicted 1–2%. Women did the same. When the learner asked to stop, they continued; when the <em>researcher</em> said stop, 100% stopped.</li>
+      <li>Hospitals show the risk. A doctor prescribed ear drops for a patient's painful right ear and wrote "place in R ear". The nurse read "Rear" and put them in the patient's anus. Neither questioned it. In another study, 95% of nurses were ready to give an unknown drug at double the maximum dose on a phone instruction from a "doctor" they'd never met.</li>
+      <li>Three symbols work on us. <strong>Titles</strong>: the same man introduced to Australian students as a student, then as a lecturer, up to professor, "grew" about 1.5 cm in their estimates with each step. <strong>Clothes</strong>: a man in a security uniform got nearly all passers-by to give a stranger coins for a parking meter; in plain clothes, fewer than half. <strong>Trappings</strong>: when a luxury car didn't move at a green light, half the drivers behind waited without honking. Behind an old economy car almost everyone honked, some more than once.</li>
+      <li>Expert authority beats positional authority, because nobody resents advice from someone who knows more. Most persuasive of all is a <strong>credible</strong> authority: expert <em>and</em> trustworthy.</li>
+      <li>The trust trick: admit a small weakness first. "Avis: We're number two. We try harder." The honesty makes the strengths that follow more believable.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>How far people went</h4>
+        <svg viewBox="0 0 520 210" role="img" aria-label="A voltage scale from 15 to 450 volts with zones labelled slight shock, moderate, strong, intense, danger: severe, and XXX. A marker near 15 to 30 volts says experts predicted only 1 to 2 percent would go to the end. A filled marker at 450 volts says 65 percent actually went all the way.">
+          <defs>
+            <linearGradient id="volt" x1="0" x2="1">
+              <stop offset="0" stop-color="var(--unc)"/>
+              <stop offset="1" stop-color="var(--rel)"/>
+            </linearGradient>
+          </defs>
+          <rect x="20" y="90" width="480" height="18" rx="3" fill="url(#volt)"/>
+          <g font-size="10">
+            <text x="20" y="126">15 V</text>
+            <text x="500" y="126" text-anchor="end">450 V</text>
+            <text x="60" y="80" text-anchor="middle">slight</text>
+            <text x="140" y="80" text-anchor="middle">moderate</text>
+            <text x="220" y="80" text-anchor="middle">strong</text>
+            <text x="300" y="80" text-anchor="middle">intense</text>
+            <text x="390" y="80" text-anchor="middle">danger: severe</text>
+            <text x="476" y="80" text-anchor="middle">XXX</text>
+          </g>
+          <g stroke="var(--rule)" stroke-width="1">
+            <line x1="100" y1="88" x2="100" y2="110"/><line x1="180" y1="88" x2="180" y2="110"/><line x1="260" y1="88" x2="260" y2="110"/><line x1="340" y1="88" x2="340" y2="110"/><line x1="450" y1="88" x2="450" y2="110"/>
+          </g>
+          <path d="M498 112 L498 150" stroke="var(--rel)" stroke-width="2"/>
+          <circle cx="498" cy="99" r="9" fill="var(--rel)" stroke="var(--card)" stroke-width="2"/>
+          <text x="498" y="170" text-anchor="end" font-size="13" style="fill:var(--rel)">65% went all the way</text>
+          <text x="498" y="188" text-anchor="end" font-size="11">actual result</text>
+          <path d="M498 30 L498 88" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <text x="488" y="30" text-anchor="end" font-size="13" style="fill:var(--ink)">experts predicted 1–2%</text>
+          <text x="488" y="46" text-anchor="end" font-size="11">would get this far</text>
+        </svg>
+        <p class="cap">Milgram's subjects weren't sadists. They sweated, trembled and begged to stop, and still obeyed. Cialdini's reading: deference to legitimate authority is trained into us from childhood because it usually pays.</p>
+        <p class="src">Source: Milgram's obedience studies, ch. 5</p>
+      </div>
+      <div class="fig">
+        <h4>A title adds centimetres</h4>
+        <svg viewBox="0 0 480 250" role="img" aria-label="Five identical figures introduced with rising status: student, demonstrator, lecturer, senior lecturer, professor. Each one is drawn slightly taller, about 1.5 centimetres per step, so the professor appears about 6 centimetres taller than the student.">
+          <line x1="10" y1="210" x2="470" y2="210" stroke="var(--rule)" stroke-width="1.5"/>
+          <g fill="color-mix(in srgb, var(--unc) 30%, var(--card))" stroke="var(--unc)" stroke-width="2">
+            <circle cx="56" cy="98" r="14"/><rect x="38" y="116" width="36" height="94" rx="12"/>
+            <circle cx="148" cy="92" r="14"/><rect x="130" y="110" width="36" height="100" rx="12"/>
+            <circle cx="240" cy="86" r="14"/><rect x="222" y="104" width="36" height="106" rx="12"/>
+            <circle cx="332" cy="80" r="14"/><rect x="314" y="98" width="36" height="112" rx="12"/>
+          </g>
+          <g fill="var(--unc)" stroke="var(--unc)" stroke-width="2">
+            <circle cx="424" cy="74" r="14"/><rect x="406" y="92" width="36" height="118" rx="12"/>
+          </g>
+          <line x1="30" y1="84" x2="450" y2="60" stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="4 4"/>
+          <g font-size="10.5" text-anchor="middle">
+            <text x="56" y="230">student</text>
+            <text x="148" y="230">demonstrator</text>
+            <text x="240" y="230">lecturer</text>
+            <text x="332" y="230">sr. lecturer</text>
+            <text x="424" y="230" style="fill:var(--unc)">professor</text>
+          </g>
+          <text x="424" y="44" text-anchor="middle" font-size="12" style="fill:var(--ink)">+6 cm</text>
+          <text x="240" y="40" text-anchor="middle" font-size="11">same man, same height</text>
+        </svg>
+        <p class="cap">Students estimated the height of the same visitor. Each step up in his announced status added about 1.5 cm. People also underestimate how much a uniform sways them: asked to predict, they guessed 63% would obey a uniformed man. In the real study, 92% did.</p>
+      </div>
+    </div>
+    <div class="defend">
+      <span class="label">How to say no</span>
+      <p>Ask two questions. <strong>Is this authority truly an expert</strong> on this topic? That moves your attention from symbols (a title, a coat, a car) to substance. <strong>How truthful can I expect this expert to be here?</strong> What do they gain from my yes? And be wary of the small confession that comes right before the big claim.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART: ACTION ============ -->
+<div class="part c-act" id="action">
+  <span class="label partno">Goal 3 · Chapters 6 and 7</span>
+  <h2>Prompt <em>action</em></h2>
+  <p class="lede">Even when we like someone and believe them, we may never get round to it. Two principles turn agreement into action: the fear of missing out, and the wish to stay true to ourselves.</p>
+</div>
+
+<article class="chapter c-act" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Scarcity</span></div>
+  <div class="body">
+    <div>
+      <h3>What's rare, or slipping away, seems precious</h3>
+      <p class="idea">The idea of losing something motivates us more than the idea of gaining something of the same value.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Loss aversion</strong> sits at the heart of Daniel Kahneman's prospect theory. British energy customers were 45% more likely to switch supplier to avoid a loss than to save the same amount. Team members were 82% more likely to cheat to avoid losing status than to gain it.</li>
+      <li>Persuaders use <strong>limited numbers</strong> ("only a few left") and <strong>deadlines</strong> ("we have to delete the files within 24 hours"). A salesman's favourite: "Sorry, I sold that one to another couple 20 minutes ago."</li>
+      <li>Scarcity works for two reasons. Things that are hard to get usually are better, so availability is a quick proxy for quality. And losing access means losing a freedom. <strong>Reactance</strong> makes us want what we're denied. Toddlers went straight for a toy behind a high barrier and ignored the one behind a low one. Parental opposition can deepen teenage love (the Romeo and Juliet effect).</li>
+      <li>It applies to <strong>information</strong>. Banned information becomes more wanted and more believed, before we even know what it says. Exclusive information persuades more than the same information shared widely.</li>
+      <li>Telling people they're free to refuse ("but you're free to say no") roughly doubled the success of requests: the opposite of scarcity, removing the threat to freedom.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The cookie jar test</h4>
+        <svg viewBox="0 0 480 250" role="img" aria-label="Two identical jars. The left jar holds ten cookies and is labelled less desirable. The right jar holds two cookies and is labelled rated more desirable and more expensive. Below: even better if the jar just went from ten to two, best if others took them.">
+          <g fill="none" stroke="var(--ink)" stroke-width="2">
+            <path d="M50 60 h120 v12 h-6 v120 a14 14 0 0 1 -14 14 h-80 a14 14 0 0 1 -14 -14 v-120 h-6 z"/>
+            <path d="M290 60 h120 v12 h-6 v120 a14 14 0 0 1 -14 14 h-80 a14 14 0 0 1 -14 -14 v-120 h-6 z"/>
+          </g>
+          <g fill="color-mix(in srgb, var(--ink-3) 40%, var(--card))" stroke="var(--ink-3)" stroke-width="1.2">
+            <circle cx="82" cy="186" r="13"/><circle cx="110" cy="186" r="13"/><circle cx="138" cy="186" r="13"/>
+            <circle cx="96" cy="162" r="13"/><circle cx="124" cy="162" r="13"/><circle cx="82" cy="138" r="13"/><circle cx="110" cy="138" r="13"/><circle cx="138" cy="138" r="13"/>
+            <circle cx="96" cy="114" r="13"/><circle cx="124" cy="114" r="13"/>
+          </g>
+          <g fill="color-mix(in srgb, var(--act) 75%, var(--card))" stroke="var(--act)" stroke-width="1.2">
+            <circle cx="336" cy="186" r="13"/><circle cx="364" cy="186" r="13"/>
+          </g>
+          <text x="110" y="234" text-anchor="middle" font-size="12">10 cookies</text>
+          <text x="350" y="234" text-anchor="middle" font-size="12" style="fill:var(--ink)">2 cookies: rated better,</text>
+          <text x="350" y="250" text-anchor="middle" font-size="12" style="fill:var(--ink)">"worth more"</text>
+          <text x="110" y="40" text-anchor="middle" font-size="11">same cookie</text>
+          <text x="350" y="40" text-anchor="middle" font-size="11">same cookie</text>
+        </svg>
+        <div class="chips"><span class="chip sm c-act">Scarce: better</span><span class="chip sm c-act">Newly scarce (10 → 2): better still</span><span class="chip sm c-act">Scarce because others wanted them: best</span></div>
+        <p class="cap">The scarce cookie didn't taste better. People just rated it as more desirable and more expensive. That's the defence in a nutshell: ask whether you want to <em>own</em> it or to <em>use</em> it.</p>
+      </div>
+      <div class="fig">
+        <h4>Exclusive news of a beef shortage</h4>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>Standard sales call</span><b>1×</b></div><div class="track"><div class="fill" style="width:16.7%"></div></div></div>
+          <div class="bar"><div class="row"><span>+ "imports may run short"</span><b>2×</b></div><div class="track"><div class="fill" style="width:33.3%;background:color-mix(in srgb, var(--act) 60%, var(--paper-2))"></div></div></div>
+          <div class="bar"><div class="row"><span>+ "and this comes from our exclusive sources"</span><b>6×</b></div><div class="track"><div class="fill" style="width:100%;background:var(--act)"></div></div></div>
+        </div>
+        <p class="cap">Orders placed by supermarket buyers, from an experiment run by one of Cialdini's students who owned a beef-importing business. Scarce goods doubled orders; scarce <em>information</em> about scarce goods sextupled them.</p>
+        <p class="src">Source: beef importer experiment, ch. 6</p>
+      </div>
+    </div>
+    <div class="fig">
+      <h4>Same deal, framed as a loss</h4>
+      <div class="compare">
+        <div><h5>The divorce lawyer's old line</h5><p class="say">"All you have to do is agree to this proposal, and then we'll have an agreement."</p><ul><li>Nothing has been gained yet</li><li>Signing feels like giving something up</li></ul></div>
+        <div><h5 style="color:var(--rel)">Cialdini's suggestion</h5><p class="say">"We have an agreement. You'd lose it if you don't accept this proposal."</p><ul><li>The deal is something they already own</li><li>Refusing means losing it</li></ul></div>
+      </div>
+      <p class="cap">His friend Sandy, a divorce lawyer, used the new wording at deadlocked final sessions. Months later she told him it had worked every single time. He doubts 100%, but the principle is sound.</p>
+    </div>
+    <div class="story">
+      <span class="label">The story · New Coke</span>
+      <p>In 1985 Coca-Cola replaced its classic formula with a sweeter "New Coke" that had won blind taste tests. The backlash was enormous. One retiree founded the Old Cola Drinkers of America. Within three months the original was back. Cialdini suspects the company's own research had shown it: people who knew they'd lose the old formula wanted it far more. Nobody was looking with a detective's eye for scarcity.</p>
+    </div>
+    <div class="defend">
+      <span class="label">How to say no</span>
+      <p>Scarcity is hard to resist by thinking, because it attacks thinking: it raises our pulse and narrows our attention. So use the arousal itself as the signal. When you feel the rush ("Only today!"), stop, calm down, and ask <strong>why you want it and what it's really worth to you</strong>.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-act" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Commitment &amp; Consistency</span></div>
+  <div class="body">
+    <div>
+      <h3>Once we take a stand, we defend it</h3>
+      <p class="idea">The key is the first commitment. After it, we're far more willing to agree to anything that fits it.</p>
+    </div>
+    <ul class="points">
+      <li>Bettors at a racetrack are more confident their horse will win right after placing the bet than right before. Nothing about the horse has changed.</li>
+      <li>We value consistency for three reasons: society treats it as a virtue, it makes us look reliable, and it saves effort. Once we've decided, we don't have to think again.</li>
+      <li>The <strong>foot in the door</strong>: a small first yes changes how we see ourselves ("I'm someone who supports good causes"), so we agree to the bigger request. People who first predicted whether they'd volunteer for a cancer charity were 700% more likely to say yes when called.</li>
+      <li>Commitments stick best when they're <strong>active, public, effortful and freely chosen</strong>. Amway has salespeople write their goals down. A diet app's users who shared their calories with friends lost 50% more weight. A restaurant cut no-shows from 30% to 10% by changing "Please call if you change your plans" to "<em>Will</em> you please call…?" and waiting for a yes.</li>
+      <li>In Korean War camps, Chinese captors got American prisoners to write mildly pro-communist essays for tiny rewards like rice or cigarettes. Because the rewards were small, the prisoners couldn't blame them, and many came to see themselves as collaborators.</li>
+      <li>Harsh initiation rites survive because effort creates commitment: the stronger the shocks women endured to join a group, the more interesting and intelligent the group seemed to them. Fraternities refuse "help week" community service for the same reason: it would let members credit an outside reason.</li>
+      <li>Commitments grow their own legs: we invent new reasons to support a choice, so it survives even after the original reason disappears. That's how the <strong>low-ball</strong> works: a car dealer offers a great price, you commit, then the price "turns out" to be higher, and you still buy.</li>
+    </ul>
+    <div class="figrow">
+      <div class="fig">
+        <h4>The foot in the door</h4>
+        <svg viewBox="0 0 520 230" role="img" aria-label="Left: a house with a tiny sign reading be a safe driver in the window. Arrow: two weeks later. Right: the same house with a large, ugly billboard reading drive carefully on the front lawn. 76 percent of those who took the small sign agreed to the billboard, compared with 17 percent asked directly.">
+          <g stroke="var(--ink)" stroke-width="2" fill="var(--card)">
+            <path d="M20 120 L90 66 L160 120 V190 H20 Z"/>
+            <rect x="74" y="146" width="32" height="44"/>
+            <path d="M300 120 L370 66 L440 120 V190 H300 Z"/>
+            <rect x="354" y="146" width="32" height="44"/>
+          </g>
+          <rect x="36" y="130" width="26" height="14" fill="var(--act)"/>
+          <text x="49" y="140" text-anchor="middle" font-size="5.5" style="fill:var(--paper)">SAFE</text>
+          <g>
+            <rect x="420" y="128" width="96" height="46" fill="var(--act)"/>
+            <line x1="446" y1="174" x2="446" y2="196" stroke="var(--act)" stroke-width="4"/>
+            <line x1="490" y1="174" x2="490" y2="196" stroke="var(--act)" stroke-width="4"/>
+            <text x="468" y="148" text-anchor="middle" font-size="11" style="fill:var(--paper);font-weight:500">DRIVE</text>
+            <text x="468" y="164" text-anchor="middle" font-size="11" style="fill:var(--paper);font-weight:500">CAREFULLY</text>
+          </g>
+          <line x1="10" y1="196" x2="516" y2="196" stroke="var(--rule)" stroke-width="1.5"/>
+          <g stroke="var(--ink-3)" stroke-width="1.5" fill="none"><path d="M180 130 H280"/><path d="M272 124 L282 130 L272 136"/></g>
+          <text x="230" y="120" text-anchor="middle" font-size="11">two weeks later</text>
+          <text x="90" y="218" text-anchor="middle" font-size="11">3-inch window sign</text>
+          <text x="400" y="218" text-anchor="middle" font-size="11">big lawn billboard</text>
+        </svg>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>Asked for the billboard directly</span><b>17%</b></div><div class="track"><div class="fill" style="width:17%"></div></div></div>
+          <div class="bar"><div class="row"><span>Asked after accepting the small sign</span><b>76%</b></div><div class="track"><div class="fill" style="width:76%;background:var(--act)"></div></div></div>
+        </div>
+        <div class="axis"><span style="left:0%">0%</span><span style="left:50%">50%</span><span style="left:100%;transform:translateX(-100%)">100%</span></div>
+        <p class="src">Source: Freedman and Fraser, ch. 7</p>
+      </div>
+      <div class="fig">
+        <h4>What makes a commitment stick</h4>
+        <ol class="steps c-act">
+          <li><span><b>Active.</b> Write it, say it, do it. Volunteers who actively signed up made up 74% of those who actually showed up.</span></li>
+          <li><span><b>Public.</b> We want others to see us as consistent, so a stand taken in front of others is hard to drop.</span></li>
+          <li><span><b>Effortful.</b> The more it cost to get in, the more we value being in.</span></li>
+          <li><span><b>Freely chosen.</b> Only commitments we own change our self-image. Boys warned off a robot toy with a severe threat played with it six weeks later (77%); boys told only that it was "not good" mostly left it alone: just 1 in 3 who played chose the robot.</span></li>
+        </ol>
+        <div class="barwrap">
+          <div class="bar"><div class="row"><span>Restaurant no-shows: "Please call if…"</span><b>30%</b></div><div class="track"><div class="fill" style="width:30%"></div></div></div>
+          <div class="bar"><div class="row"><span>"Will you please call if…?" (pause for a yes)</span><b>10%</b></div><div class="track"><div class="fill" style="width:10%;background:var(--act)"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="story">
+      <span class="label">The story · the toy race track</span>
+      <p>One January Cialdini found himself buying his son another expensive toy. A former toy-industry colleague explained the trick: before Christmas, makers advertise a must-have toy, kids beg, parents promise. Then the shops are undersupplied, so parents buy something else of equal value. In January the ads return, and parents who promised buy the original too. Cabbage Patch Kids and Furbies played the same way.</p>
+    </div>
+    <div class="defend">
+      <span class="label">How to say no</span>
+      <p>Listen to two signals. Your <strong>stomach</strong> knots when you're being pushed into something you don't want just to stay consistent. Then say so: agreeing would be foolish consistency, and you'd rather not. Your <strong>heart</strong> helps when you're unsure the first decision was right. Ask: "Knowing what I know now, if I could go back, would I make the same choice?" Trust the first feeling that answers. Be extra careful if you live in an individualist culture or are over 50: these tactics work best on you.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Chapter 9 · Epilogue</span>
+    <h2>Primitive reflexes in an automated age</h2>
+  </div>
+  <div class="epilogue">
+    <div class="prose">
+      <p>John Stuart Mill, who died in 1873, is said to have been the last person who knew everything there was to know. Today most of our information is less than 15 years old, and our phones out-compute old universities. We call it the information age, Cialdini notes, never the knowledge age.</p>
+      <p>The paradox: the large brain that made us the dominant species has built a world so fast and complex that we must handle it the way animals do, by responding to single cues. In a rush, stressed, unsure or tired, we'll lean on the seven shortcuts more, not less.</p>
+      <p>That's not a problem in itself. The shortcuts are reliable, and persuaders who point to <em>real</em> popularity, <em>real</em> expertise or <em>real</em> scarcity are doing us a favour. The abuse is fabricating the cue. Because we need our shortcuts to keep working, Cialdini argues we should fight counterfeiters with every legitimate means: refuse their products, call out their tricks.</p>
+    </div>
+    <div class="fig">
+      <h4>Honest cue or counterfeit?</h4>
+      <div class="compare">
+        <div class="c-unc"><h5 style="color:var(--unc)">Honest use</h5><ul><li>Pointing out that a product genuinely sells well</li><li>A qualified expert mentioning her training</li><li>Telling buyers stock really is limited</li><li>A sincere, specific compliment</li><li>An unconditional gift</li></ul></div>
+        <div class="c-rel"><h5 style="color:var(--rel)">Counterfeit</h5><ul><li>Bought reviews, canned laughter, staged queues</li><li>An actor in a lab coat</li><li>A "last chance" that comes back every week</li><li>Invented hobbies to mirror yours</li><li>A "gift" designed to make you owe</li></ul></div>
+      </div>
+      <p class="cap">The test isn't whether a principle is used. It's whether the cue reflects the truth.</p>
+    </div>
+  </div>
+  <div class="fig" style="background:transparent;border-style:dashed;margin-top:28px">
+    <blockquote class="pull">"Every day, in every way, I'm getting more and more stressed."</blockquote>
+    <span class="label">Cialdini's twist on Émile Coué's self-help mantra, the epigraph to chapter 9</span>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the "How to say no" sections</span>
+    <h2>The toolkit</h2>
+    <p class="lede">For every principle, a way to spot it and a way to say no, plus how to use it honestly yourself. The defences don't ask you to distrust everyone; only to notice when a shortcut has been faked.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col c-rel">
+      <h3>Relationship</h3>
+      <div class="tk"><span class="lab">Reciprocation</span><b>Redefine the trick</b><span>Take the free sample in good faith. If it turns out to be bait, call it bait, and you owe nothing.</span></div>
+      <div class="tk"><span class="lab">Liking</span><b>Separate seller and deal</b><span>Liking someone surprisingly fast is the signal. Ask whether you'd buy it from a stranger.</span></div>
+      <div class="tk"><span class="lab">Unity</span><b>Check the "we"</b><span>Is the shared identity real, and is it being used to excuse something you'd never accept from an outsider?</span></div>
+      <div class="tk"><span class="lab">Use it well</span><b>Give first, personally</b><span>Make gifts meaningful, unexpected and tailored. Ask colleagues and customers for advice, not opinions.</span></div>
+    </div>
+    <div class="col c-unc">
+      <h3>Uncertainty</h3>
+      <div class="tk"><span class="lab">Social proof</span><b>Look for fake evidence</b><span>Staged testimonials, laugh tracks, bought reviews. And remember everyone else may be just as unsure as you.</span></div>
+      <div class="tk"><span class="lab">Authority</span><b>Ask the two questions</b><span>Is this person really an expert on this? How honest are they likely to be with me here?</span></div>
+      <div class="tk"><span class="lab">In an emergency</span><b>Pick one person</b><span>"You, in the blue jacket, call an ambulance." It ends everyone's uncertainty at once.</span></div>
+      <div class="tk"><span class="lab">Use it well</span><b>Say what most people do right</b><span>Never advertise how many people do the wrong thing. Mention a small weakness before your strength.</span></div>
+    </div>
+    <div class="col c-act">
+      <h3>Action</h3>
+      <div class="tk"><span class="lab">Scarcity</span><b>Treat the rush as a warning</b><span>When "only today" makes your pulse rise, pause, calm down and ask what it's worth to you.</span></div>
+      <div class="tk"><span class="lab">Consistency</span><b>Trust your stomach and heart</b><span>Knowing what you know now, would you make the same choice again? If not, say "that would be foolish consistency."</span></div>
+      <div class="tk"><span class="lab">Low-ball</span><b>Check if the reason still holds</b><span>If the deal that made you say yes has changed, your yes can change too.</span></div>
+      <div class="tk"><span class="lab">Use it well</span><b>Get an active, voluntary yes</b><span>"Will you…?" and a pause beats "Please do…". Frame what's at stake as something people already have to lose.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Robert B. Cialdini, <em>Influence: Wie man (andere) überzeugt. Nützliche Erkenntnisse der Psychologie</em>, translated by Jürgen Neubauer (HarperCollins Germany, 2023), the German edition of the expanded and updated <em>Influence</em> (Harper Business, 2021). Figures are as reported in the book. Diagrams were drawn for this page, and charts are drawn to the book's numbers. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero band: a row of cover-style circles. Neighbours overlap and their
+     intersections turn dark, like the cover. Overlaps tighten from left to right:
+     loose and separate cues on the left, locked into an automatic yes on the right. --- */
+  var canvas = document.getElementById("band");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t); }
+  function circles(time) {
+    var r = hgt * 0.36, mid = hgt / 2;
+    var n = Math.max(6, Math.round(w / (r * 1.7)));
+    var out = [];
+    for (var i = 0; i < n; i++) {
+      var u = n === 1 ? 0 : i / (n - 1);
+      var s = ease((u - 0.15) / 0.7);            // 0 = loose, 1 = locked in
+      var bob = reduce ? 0 : Math.sin(time * 0.0012 + i * 0.9) * hgt * 0.16 * (1 - s);
+      out.push({ x: r + u * (w - 2 * r), y: mid + bob, r: r * (0.78 + 0.22 * s), red: i % 2 === 0 });
+    }
+    return out;
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var cs = circles(time);
+    var red = css("--rel"), teal = css("--unc"), lens = css("--act");
+    cs.forEach(function (c) {
+      ctx.beginPath(); ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+      ctx.fillStyle = c.red ? red : teal; ctx.globalAlpha = 0.92; ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+    for (var i = 0; i < cs.length - 1; i++) {
+      var a = cs[i], b = cs[i + 1];
+      if (Math.hypot(a.x - b.x, a.y - b.y) >= a.r + b.r) continue;
+      ctx.save();
+      ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.clip();
+      ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+      ctx.fillStyle = lens; ctx.fill();
+      ctx.restore();
+    }
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  if (window.matchMedia) {
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq.addEventListener) mq.addEventListener("change", function () { draw(performance.now()); });
+  }
+  start();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Thinking in Systems by Donella H. Meadows – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. The palette is the cover's rainbow Slinky on white paper:
+   red/orange = reinforcing loops (growth, runaway), teal/green = balancing loops (goal-seeking). */
+:root {
+  --paper: #fbfaf6;
+  --paper-2: #f0eee7;
+  --card: #ffffff;
+  --ink: #17161a;
+  --ink-2: #4a4850;
+  --ink-3: #77747f;
+  --rule: #dedbd2;
+
+  /* the spectrum of the spring */
+  --red: #d42a2d;
+  --orange: #e2700b;
+  --yellow: #b98d00;
+  --green: #3a9636;
+  --teal: #1b87ad;
+
+  --rein: var(--red);
+  --bal: var(--teal);
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #121214;
+    --paper-2: #1b1b1f;
+    --card: #1f1f24;
+    --ink: #f0eee9;
+    --ink-2: #b8b5be;
+    --ink-3: #8a8792;
+    --rule: #303036;
+    --red: #ff6b5e;
+    --orange: #ff9f43;
+    --yellow: #f0c93a;
+    --green: #6fcf5f;
+    --teal: #4fc3e8;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #121214;
+  --paper-2: #1b1b1f;
+  --card: #1f1f24;
+  --ink: #f0eee9;
+  --ink-2: #b8b5be;
+  --ink-3: #8a8792;
+  --rule: #303036;
+  --red: #ff6b5e;
+  --orange: #ff9f43;
+  --yellow: #f0c93a;
+  --green: #6fcf5f;
+  --teal: #4fc3e8;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  overflow-x: hidden;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Spectrum colour helpers */
+.c-red    { --c: var(--red); }
+.c-orange { --c: var(--orange); }
+.c-yellow { --c: var(--yellow); }
+.c-green  { --c: var(--green); }
+.c-teal   { --c: var(--teal); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(46px, 10vw, 128px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 800;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(20, 16, 40, .35), 0 8px 18px -10px rgba(20, 16, 40, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.waveband { position: relative; margin-top: 28px; }
+.waveband canvas { display: block; width: 100%; height: 120px; }
+.waveband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(40px, 7vw, 92px);
+  font-weight: 900;
+  font-stretch: 118%;
+  line-height: .92;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(16px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.chart { width: 100%; min-height: 240px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.wl-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* Segmented control for charts */
+.seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.seg button {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: .02em;
+  padding: 7px 12px; border-radius: 999px; cursor: pointer;
+  background: transparent; color: var(--ink-2);
+  border: 1.5px solid var(--rule);
+}
+.seg button[aria-pressed="true"] { border-color: var(--c, var(--ink)); color: var(--ink); background: color-mix(in srgb, var(--c, var(--ink)) 12%, var(--card)); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 18px; height: 3px; border-radius: 2px; background: var(--c); display: inline-block; }
+
+/* Event / behaviour / structure layers */
+.layers { display: grid; gap: 6px; }
+.layer { border-radius: 6px; padding: 14px 16px; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 4px 16px; align-items: baseline; }
+.layer b { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 18px; }
+.layer span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.layer.l1 { background: var(--paper-2); }
+.layer.l2 { background: color-mix(in srgb, var(--teal) 14%, var(--card)); margin-inline: 10px; }
+.layer.l3 { background: color-mix(in srgb, var(--teal) 28%, var(--card)); margin-inline: 20px; }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* Trap cards */
+.traps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; }
+.trap { border: 1px solid var(--rule); border-top: 4px solid var(--c); border-radius: 6px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; background: var(--card); }
+.trap .hd { display: flex; align-items: center; gap: 10px; }
+.trap .hd b { font-family: var(--display); font-weight: 800; font-stretch: 104%; font-size: 17px; line-height: 1.2; }
+.loopbadge { flex: none; width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--c); color: var(--c); font-family: var(--mono); font-size: 12px; font-weight: 500; display: grid; place-items: center; }
+.trap p { font-size: 14.5px; line-height: 1.45; color: var(--ink-2); }
+.trap p.out { color: var(--ink); }
+.trap p.out::before { content: "Way out · "; font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--c); }
+
+/* Leverage ladder */
+.ladder { display: grid; gap: 6px; }
+.rung { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: center; }
+.rung .n { font-family: var(--display); font-weight: 900; font-stretch: 70%; font-size: 26px; line-height: 1; text-align: right; color: var(--c); font-variant-numeric: tabular-nums; }
+.rung .bar { position: relative; border-radius: 4px; padding: 8px 12px; background: color-mix(in srgb, var(--c) 13%, var(--card)); border-left: 4px solid var(--c); display: grid; gap: 2px; }
+.rung .bar b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16px; line-height: 1.25; }
+.rung .bar span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+.ladder .grp { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding: 10px 0 2px 46px; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .wl-intro, .epilogue, .part { grid-template-columns: 1fr; }
+  .map, .toolkit { grid-template-columns: 1fr; }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare { grid-template-columns: 1fr; }
+  .layer { grid-template-columns: 1fr; }
+  .layer.l2 { margin-inline: 6px; }
+  .layer.l3 { margin-inline: 12px; }
+  .ladder .grp { padding-left: 0; }
+  .rung { grid-template-columns: 26px minmax(0, 1fr); gap: 8px; }
+  .rung .n { font-size: 22px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Donella H. Meadows · Chelsea Green, 2008</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#structure">Structure</a>
+    <a href="#us">Systems and us</a>
+    <a href="#change">Change</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1><span>Thinking</span><span>in Systems</span></h1>
+    <p class="sub">A Primer</p>
+    <p class="dek">Donella Meadows argues that most stubborn problems aren't caused by villains or bad luck. They come from the way the system is put together, so that's where the fix has to go.</p>
+    <div class="byline label">
+      <span>7 chapters</span><span>3 parts</span><span>8 traps</span><span>12 leverage points</span><span>~58,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Thinking in Systems by Donella H. Meadows: a rainbow-coloured Slinky arching across a white background">
+</div>
+
+<div class="waveband" aria-hidden="true">
+  <canvas id="wave"></canvas>
+  <div class="ends label"><span>Hand lets go</span><span>Spring does the rest</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>The system causes its own behaviour</h2>
+  </div>
+  <div class="wl-intro">
+    <div class="prose">
+      <p>Meadows opens her teaching with a Slinky. She holds it between two hands, pulls the lower hand away, and the spring bounces. Ask what made it bounce and students say the hand. Then she does the same with the Slinky's box, and nothing happens. The bounce was in the spring all along. The hand only released it.</p>
+      <p>That's the book's main claim. A <strong>system</strong> is a set of parts connected so that together they produce their own pattern of behaviour over time. Outside events can trigger that pattern, but the same push applied to a different system gives a different result. Recessions, lost market share, oil shocks and addiction keep coming back because the structures that produce them stay in place.</p>
+      <p>Meadows doesn't think this replaces ordinary analysis. She calls it another lens, like a microscope or a telescope, and it shows things the others miss. To use it you need a small vocabulary: <strong>stocks</strong>, <strong>flows</strong>, and the <strong>feedback loops</strong> that connect them.</p>
+      <p>She finished a draft in 1993. When she died in 2001 it was still unpublished. Diana Wright of the Sustainability Institute edited it and published it in 2008, keeping most of Meadows's early-1990s examples.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The book in numbers</span>
+      <div class="stats" style="border:0;border-radius:0;background:var(--rule)">
+        <div class="stat"><span class="big num" style="color:var(--teal)">B</span><p>Balancing loops pull a stock toward a goal. They create stability, and they also resist change.</p></div>
+        <div class="stat"><span class="big num" style="color:var(--red)">R</span><p>Reinforcing loops feed on themselves, producing exponential growth or runaway collapse.</p></div>
+        <div class="stat"><span class="big num">70</span><p>Doubling time is roughly 70 divided by the growth rate in percent: 10 years at 7%, 14 years at 5%.</p></div>
+        <div class="stat"><span class="big num">1972</span><p>Meadows was lead author of <em>The Limits to Growth</em>. She wrote this primer just after its 20-year update, <em>Beyond the Limits</em>.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--orange)">
+        <span class="label">The parable: the blind men and the elephant</span>
+        <p>In the Sufi tale, each blind man feels one part of the elephant: an ear, the trunk, a leg. Each is sure he knows what an elephant is, and each is wrong. Meadows uses it to make her first point. Knowing the parts of a system won't tell you how the whole behaves.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part One</span>
+      <h3>System structure and behaviour</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>The Basics</b>Stocks, flows and the two kinds of loop</a></li>
+        <li><span>02</span><a href="#ch2"><b>A Brief Visit to the Systems Zoo</b>Nine simple models and what they do</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part Two</span>
+      <h3>Systems and us</h3>
+      <ol>
+        <li><span>03</span><a href="#ch3"><b>Why Systems Work So Well</b>Resilience, self-organisation, hierarchy</a></li>
+        <li><span>04</span><a href="#ch4"><b>Why Systems Surprise Us</b>The blind spots in our mental models</a></li>
+        <li><span>05</span><a href="#ch5"><b>System Traps . . . and Opportunities</b>Eight archetypes and their exits</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part Three</span>
+      <h3>Creating change</h3>
+      <ol>
+        <li><span>06</span><a href="#ch6"><b>Leverage Points</b>Twelve places to intervene, weakest first</a></li>
+        <li><span>07</span><a href="#ch7"><b>Living in a World of Systems</b>Fifteen habits for dancing with systems</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART ONE ============ -->
+<div class="part" id="structure">
+  <span class="label partno">Part One · Chapters 1–2</span>
+  <h2>Structure and behaviour</h2>
+  <p class="lede">First Meadows takes a system apart into its pieces. Then she puts the pieces back together as feedback loops and runs simple models, so you can see which shapes of behaviour each structure produces.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">The Basics</span></div>
+  <div class="body">
+    <div>
+      <h3>Elements, interconnections, purpose</h3>
+      <p class="idea">The parts are the easiest thing to see and usually matter least. The rules connecting them matter more, and the purpose matters most.</p>
+    </div>
+    <ul class="points">
+      <li>A system has three ingredients: <strong>elements</strong>, <strong>interconnections</strong>, and a <strong>function or purpose</strong>. Sand scattered on a road isn't a system, because adding or removing some changes nothing. Add or remove players on a football team and the team stops working.</li>
+      <li>Change the parts one at a time and see what happens. Swap every player and it's still a football team. Change the rules to basketball and it becomes a different game. Keep the players and the rules but make the goal losing instead of winning, and the system changes completely.</li>
+      <li>You learn a system's purpose by watching what it does, not what it says it wants. A government that claims to care about the environment but spends almost nothing on it doesn't have environmental protection as its purpose.</li>
+      <li>A <strong>stock</strong> is anything that accumulates: water in a tub, wood in a forest, money, self-confidence. <strong>Flows</strong> fill it or drain it. A stock is the memory of all the flows that have passed through it.</li>
+      <li>The bathtub rules: if inflows are greater than outflows, the stock rises. If outflows are greater, it falls. If they're equal, the stock stays level even though water keeps moving through it. People tend to watch inflows and forget outflows, but using less oil does the same job as finding a new oil field.</li>
+      <li>Stocks change slowly, even when flows change suddenly. That makes them buffers and sources of momentum. It's also why populations, forests and polluted groundwater can't be turned around quickly. Stocks also decouple inflows from outflows, which is why reservoirs, bank accounts and inventories exist at all.</li>
+      <li>A <strong>feedback loop</strong> forms when the level of a stock changes the flows into or out of it. When behaviour persists over time, look for a loop.</li>
+    </ul>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Balancing loop: a cup of coffee</h4>
+        <svg viewBox="0 0 320 250" role="img" aria-label="Stock and flow diagram. A stock called coffee temperature drains through a cooling flow to a cloud. An information arrow from the stock to the cooling valve is marked B. Below, curves starting hot and cold both bend toward room temperature.">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-2)"/></marker>
+            <marker id="ahb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--teal)"/></marker>
+            <marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--red)"/></marker>
+          </defs>
+          <rect x="20" y="40" width="112" height="56" rx="3" fill="color-mix(in srgb, var(--teal) 14%, var(--card))" stroke="var(--ink)" stroke-width="1.5"/>
+          <text x="76" y="64" text-anchor="middle" font-size="11.5" style="fill:var(--ink)">coffee</text>
+          <text x="76" y="80" text-anchor="middle" font-size="11.5" style="fill:var(--ink)">temperature</text>
+          <line x1="132" y1="68" x2="262" y2="68" stroke="var(--ink-2)" stroke-width="6" stroke-opacity=".35"/>
+          <line x1="132" y1="68" x2="258" y2="68" stroke="var(--ink-2)" stroke-width="1.5" marker-end="url(#ah)"/>
+          <path d="M196 60 l-8 -10 h16 z M196 60 v-14" fill="var(--ink-2)" stroke="var(--ink-2)" stroke-width="1.5"/>
+          <text x="196" y="88" text-anchor="middle" font-size="11">cooling</text>
+          <path d="M268 68 c-6 -10 6 -18 14 -12 c4 -8 18 -6 18 4 c8 0 10 12 2 14 c0 8 -14 10 -18 4 c-8 4 -18 -2 -16 -10 z" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.2"/>
+          <path d="M76 40 C 80 6, 190 6, 196 40" fill="none" stroke="var(--teal)" stroke-width="1.6" marker-end="url(#ahb)"/>
+          <circle cx="136" cy="22" r="11" fill="var(--card)" stroke="var(--teal)" stroke-width="1.6"/>
+          <text x="136" y="26" text-anchor="middle" font-size="11" style="fill:var(--teal);font-weight:500">B</text>
+          <text x="210" y="40" font-size="10">gap to room</text>
+          <!-- behaviour -->
+          <line x1="30" y1="232" x2="300" y2="232" stroke="var(--rule)"/>
+          <line x1="30" y1="130" x2="30" y2="232" stroke="var(--rule)"/>
+          <line x1="30" y1="196" x2="300" y2="196" stroke="var(--ink-3)" stroke-dasharray="3 4"/>
+          <text x="300" y="190" text-anchor="end" font-size="10">room temperature</text>
+          <path id="cool-hot" fill="none" stroke="var(--teal)" stroke-width="2.4"/>
+          <path id="cool-cold" fill="none" stroke="var(--teal)" stroke-width="2.4" stroke-opacity=".55"/>
+          <text x="30" y="247" font-size="10">time →</text>
+        </svg>
+        <p class="cap">The bigger the gap between the coffee and the room, the faster it cools. Hot coffee and iced coffee both head for room temperature, quickly at first and then more slowly.</p>
+        <p class="src">Structure after the book's Figures 10–11 · curve shape illustrative</p>
+      </div>
+      <div class="fig">
+        <h4>Reinforcing loop: money in the bank</h4>
+        <svg viewBox="0 0 320 250" role="img" aria-label="Stock and flow diagram. Interest flows from a cloud into a stock called money in the bank. An information arrow from the stock back to the interest valve is marked R. Below, an exponential curve rises ever faster.">
+          <path d="M20 68 c-6 -10 6 -18 14 -12 c4 -8 18 -6 18 4 c8 0 10 12 2 14 c0 8 -14 10 -18 4 c-8 4 -18 -2 -16 -10 z" fill="var(--paper-2)" stroke="var(--ink-3)" stroke-width="1.2"/>
+          <line x1="58" y1="68" x2="188" y2="68" stroke="var(--ink-2)" stroke-width="6" stroke-opacity=".35"/>
+          <line x1="58" y1="68" x2="184" y2="68" stroke="var(--ink-2)" stroke-width="1.5" marker-end="url(#ah)"/>
+          <path d="M120 60 l-8 -10 h16 z M120 60 v-14" fill="var(--ink-2)" stroke="var(--ink-2)" stroke-width="1.5"/>
+          <text x="120" y="88" text-anchor="middle" font-size="11">interest</text>
+          <rect x="188" y="40" width="112" height="56" rx="3" fill="color-mix(in srgb, var(--red) 12%, var(--card))" stroke="var(--ink)" stroke-width="1.5"/>
+          <text x="244" y="64" text-anchor="middle" font-size="11.5" style="fill:var(--ink)">money</text>
+          <text x="244" y="80" text-anchor="middle" font-size="11.5" style="fill:var(--ink)">in the bank</text>
+          <path d="M244 40 C 240 6, 126 6, 120 40" fill="none" stroke="var(--red)" stroke-width="1.6" marker-end="url(#ahr)"/>
+          <circle cx="182" cy="22" r="11" fill="var(--card)" stroke="var(--red)" stroke-width="1.6"/>
+          <text x="182" y="26" text-anchor="middle" font-size="11" style="fill:var(--red);font-weight:500">R</text>
+          <text x="40" y="16" font-size="10">interest rate</text>
+          <line x1="30" y1="232" x2="300" y2="232" stroke="var(--rule)"/>
+          <line x1="30" y1="130" x2="30" y2="232" stroke="var(--rule)"/>
+          <path id="grow-hi" fill="none" stroke="var(--red)" stroke-width="2.4"/>
+          <path id="grow-lo" fill="none" stroke="var(--orange)" stroke-width="2.4" stroke-opacity=".7"/>
+          <text x="300" y="138" text-anchor="end" font-size="10">higher rate</text>
+          <text x="300" y="206" text-anchor="end" font-size="10">lower rate</text>
+          <text x="30" y="247" font-size="10">time →</text>
+        </svg>
+        <p class="cap">The more money there is, the more interest it earns, and the interest adds to the money. At low rates it looks like a straight line for a while, but it keeps speeding up. The same loop drives population, capital and epidemics.</p>
+        <p class="src">Structure after the book's Figures 12–13 · curve shape illustrative</p>
+      </div>
+    </div>
+
+    <div class="story">
+      <span class="label">The habit it builds</span>
+      <p>Meadows warns that once you start seeing feedback, you see it everywhere. When the news says the Federal Reserve moved the economy, you start asking how the economy moved the Fed. When someone says population growth causes poverty, you ask whether poverty causes population growth.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">The Systems Zoo</span></div>
+  <div class="body">
+    <div>
+      <h3>A few structures, a few behaviours</h3>
+      <p class="idea">Systems that look nothing alike behave alike when their feedback structures match. A population and an industrial economy are the same kind of animal.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Thermostat, two balancing loops.</strong> The furnace pulls the room toward the setting while heat leaks out toward the outdoor temperature. The room levels off slightly below 18°C, because the leak never stops. The general rule: a goal has to allow for whatever is draining the stock. Paying off a credit card means covering new charges and interest as well as the balance.</li>
+      <li>Feedback only affects the future. A flow can't respond directly to another flow. It responds to a stock, and always with some delay. Meadows says many economic models go wrong by assuming instant responses.</li>
+      <li><strong>Population, one reinforcing and one balancing loop.</strong> In 2007 there were 6.6 billion people, with about 21 births and 9 deaths per 1,000 people a year. If those rates held, the population would more than double within a child's first 60 years. Which loop dominates decides whether the stock grows, shrinks or levels off. When loop strengths change over time, the behaviour changes too. Systems thinkers call this <em>shifting dominance</em>.</li>
+      <li>Three questions to ask of any model's scenario: Are the driving factors likely to unfold this way? Would the system really respond like this? And what drives the driving factors? Models explore "what if". They don't predict.</li>
+      <li><strong>Capital</strong> has the same structure as population. Investment plays the role of births and depreciation the role of deaths. With output equal to a third of capital and 20% of output invested, capital that lasts 15 years only just keeps up with wear. Capital that lasts longer grows. Again, you can grow a stock by slowing what drains it.</li>
+      <li><strong>Inventory, with delays.</strong> A car dealer aims to keep ten days of sales on the lot. She averages sales over 5 days before reacting, closes a third of any gap with each order, and waits 5 days for deliveries. When demand rises 10% for good, the inventory starts to oscillate. These aren't her mistakes. Her information arrives late and her actions take time to have an effect.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Acting faster makes it worse</h4>
+      <div class="seg" id="inv-seg" role="group" aria-label="Highlight a dealer policy">
+        <button type="button" class="c-orange" data-k="base" aria-pressed="true">Base: react over 3 days</button>
+        <button type="button" class="c-red" data-k="fast" aria-pressed="false">React over 2 days</button>
+        <button type="button" class="c-teal" data-k="slow" aria-pressed="false">React over 6 days</button>
+      </div>
+      <div id="inv-chart" class="chart" role="img" aria-label="Line chart of cars on the dealer's lot over 100 days. All runs start at 200 cars. After a 10 percent rise in demand on day 25, the base policy oscillates. Reacting over 2 days produces much larger swings. Reacting over 6 days settles smoothly at the new level of about 220 cars."></div>
+      <div class="legend">
+        <span class="c-orange"><i></i>react over 3 days</span>
+        <span class="c-red"><i></i>over 2 days</span>
+        <span class="c-teal"><i></i>over 6 days</span>
+        <span style="--c:var(--ink-3)"><i style="height:0;border-top:2px dashed var(--ink-3);background:none"></i>demand +10% (day 25)</span>
+      </div>
+      <p class="cap">Cars on the lot over 100 days. Shortening how long the dealer averages sales (from 5 days to 2) barely helps. Reacting faster makes the swings much worse. Reacting more slowly damps them. Meadows calls this "high leverage, wrong direction": the fixer finds the right lever and pulls it the wrong way.</p>
+      <p class="src">Re-run for this page from the book's appendix equations (Figures 32, 35, 36): 200 cars, 10 days' cover, 5-day perception, 5-day delivery</p>
+    </div>
+
+    <ul class="points">
+      <li>Join many such dealers, factories and suppliers together, each reacting with its own delays, and add reinforcing loops through jobs and share prices. Meadows argues that this, not presidents, is the main cause of business cycles.</li>
+      <li><strong>Capital drawing on a nonrenewable resource.</strong> An oil company starts with enough oil for 200 years at its initial rate and reinvests profits so its capital grows 5% a year. Extraction peaks after about 40 years and then collapses, because the remaining oil gets harder to reach. Doubling or quadrupling the oil field moves the peak only about 14 years each time.</li>
+      <li>If the price rises as oil gets scarce, capital grows higher before it falls, and the remaining oil runs out faster at the end. Cheaper extraction technology has the same effect. The real choice, Meadows says, is between getting very rich fast and getting less rich for longer.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>A bigger oil field buys surprisingly little time</h4>
+      <div id="oil-chart" class="chart" role="img" aria-label="Line chart of yearly oil extraction over 100 years for an initial resource of 1,000, 2,000 and 4,000 units. Each run grows exponentially, peaks and collapses. The peaks fall at roughly year 41, 54 and 68."></div>
+      <div class="legend">
+        <span class="c-orange"><i></i>resource 1×</span>
+        <span class="c-red"><i></i>2×</span>
+        <span class="c-yellow"><i></i>4×</span>
+      </div>
+      <p class="cap">Extraction per year when the starting resource is 1×, 2× or 4× the original. Each doubling moves the peak back only about one doubling time of the capital, and the larger runs fall faster afterwards.</p>
+      <p class="src">Re-run for this page from the appendix equations (Figure 39). The yield curve is read off the book's graph, so the heights are illustrative. The book's own figures: peak near 40 years, about 14 years gained per doubling</p>
+    </div>
+
+    <ul class="points">
+      <li><strong>Capital drawing on a renewable resource</strong>, such as a fishery. Fish breed fastest at middling densities and slowest when crowded or scarce. With modest fishing technology the fleet levels off at a harvest it can sustain. A little more efficiency, such as sonar, produces oscillations. A lot more lets boats keep fishing at very low fish densities, and both the fish and the industry collapse.</li>
+      <li>Nonrenewable resources are limited by the size of the stock. Renewable resources are limited by the rate of regrowth. Harvest faster than the resource regrows, push it below its threshold, and it becomes, in practice, nonrenewable. New England's logging industry is on its third cycle of growth, overcutting, collapse and regrowth.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART TWO ============ -->
+<div class="part" id="us">
+  <span class="label partno">Part Two · Chapters 3–5</span>
+  <h2>Systems and us</h2>
+  <p class="lede">Why well-built systems hold up so well, why they keep surprising the people inside them, and the recurring structures that turn sensible decisions into outcomes nobody wanted.</p>
+</div>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Why Systems Work So Well</span></div>
+  <div class="body">
+    <div>
+      <h3>Resilience, self-organisation, hierarchy</h3>
+      <p class="idea">These three properties let systems last. They're hard to see, so they're often traded away for short-term productivity or stability.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Resilience</strong> is the ability to recover after a shock. It comes from many balancing loops working through different mechanisms, at different speeds, and backing each other up. Loops that can rebuild other loops add a further layer, and loops that can learn and evolve add another.</li>
+      <li>Resilience isn't the same as stability. A resilient system can swing a lot, and a perfectly steady one can be brittle. Meadows pictures resilience as a plateau with soft walls. As resilience is lost, the plateau shrinks until one familiar move sends the system over the edge.</li>
+      <li>Examples of resilience traded away: growth hormone that raises a cow's milk yield but leaves the cow less healthy, just-in-time supply chains that cut costs but break when fuel or traffic is disrupted, and single-species European forests that turned out to be vulnerable to air pollution.</li>
+      <li><strong>Self-organisation</strong> is a system's ability to make its own structure more complex. Very simple rules can produce enormous complexity, as the Koch snowflake and DNA show. Self-organisation needs freedom and some disorder, which is why power structures, schools and economic policy often hold it back.</li>
+      <li><strong>Hierarchy</strong> is systems nested inside systems. Links are dense within each subsystem and sparser between them, so no level is overwhelmed with information. Hierarchies grow from the bottom up, and Meadows says the upper levels exist to serve the lower ones.</li>
+      <li>Hierarchies fail in two directions. In <em>suboptimisation</em>, a part pursues its own goal at the expense of the whole, like a cancer cell or a student who cheats. Under <em>too much central control</em>, the top stops the parts from looking after themselves.</li>
+    </ul>
+    <div class="compare">
+      <div>
+        <span class="label">The fable · Tempus</span>
+        <h5>Builds each watch in one go</h5>
+        <ul>
+          <li>About 1,000 parts per watch</li>
+          <li>Every phone call that interrupts him makes a half-built watch fall apart</li>
+          <li>The more customers call, the fewer watches he finishes, and he grows poorer</li>
+        </ul>
+      </div>
+      <div>
+        <span class="label">The fable · Hora</span>
+        <h5>Builds stable sub-assemblies</h5>
+        <ul>
+          <li>Units of about 10 parts, then 10 units to an assembly, then 10 assemblies to a watch</li>
+          <li>An interruption costs him only one small unit</li>
+          <li>He prospers. Meadows's point, paraphrasing Herbert Simon, is that complex forms can only evolve through stable intermediate forms, and those forms are hierarchical</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Why Systems Surprise Us</span></div>
+  <div class="body">
+    <div>
+      <h3>Our models are good, but never good enough</h3>
+      <p class="idea">Everything we think we know is a model. Models fit the world well enough to get by, and badly enough to keep surprising us.</p>
+    </div>
+    <div class="fig">
+      <h4>Three levels of seeing</h4>
+      <div class="layers">
+        <div class="layer l1"><b>Events</b><span>A team wins, a river floods, the Dow hits 10,000. Gripping, but explaining one event with another tells you almost nothing about tomorrow.</span></div>
+        <div class="layer l2"><b>Behaviour</b><span>Patterns over time: a winning streak, floods and droughts both getting worse. Most economic analysis stops here, linking flows to other flows statistically.</span></div>
+        <div class="layer l3"><b>Structure</b><span>The stocks, flows and loops that produce the behaviour. Only this level tells you how to change it.</span></div>
+      </div>
+      <p class="cap">Statistical models that link one flow to another work until the structure changes: someone opens a window, the insulation is improved, the oil runs out. They're decent at short-term forecasts and of little use for improving the system.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Nonlinearities.</strong> Effects aren't proportional to causes. Traffic speed holds up until density reaches a tipping point. Soil erosion barely hurts yields until the topsoil is thinner than the root zone. Nonlinearities change which loop dominates, and that can flip a system into a completely different mode.</li>
+      <li><strong>Boundaries that don't exist.</strong> The clouds at the edges of a diagram stand for stocks we've chosen to ignore. Draw the boundary too tight and you get surprises, like the new highway that attracts housing until it's as jammed as before. Draw it too wide and the analysis gets buried in detail. The right boundary depends on the question you're asking.</li>
+      <li><strong>Layers of limits.</strong> Liebig's law of the minimum says the scarcest input sets the limit, and adding more of anything else won't help. As a system grows, it changes which input is scarcest. Meadows argues that limits to growth are certain. The only choice is whether a system sets them itself or has them imposed.</li>
+      <li><strong>Delays everywhere.</strong> Livestock and crop cycles run about 4 years for pigs, 7 for cows and 11 for cocoa. A new car takes 3 to 8 years to design, sells for about 5, and stays on the road 10 to 15. Jay Forrester's advice: ask everyone how long a delay will be, make your best guess, then multiply by three.</li>
+      <li><strong>Bounded rationality</strong>, Herbert Simon's term. People make sensible decisions with the partial, delayed information they can see from where they stand. Put anyone in a fisherman's position, with a mortgage on the boat and no count of the fish, and they'll overfish too. Replacing the person rarely helps. Redesigning the information and incentives does.</li>
+    </ul>
+    <div class="figrow">
+      <div class="story" style="border-color:var(--green)">
+        <span class="label">Interlude: spruce budworm</span>
+        <p>Budworms have killed fir and spruce in cycles for at least 400 years, which kept fir from crowding out other trees. Spraying began in the 1950s and killed the budworm's predators as well. It kept fir dense and left the forest on the brink of an outbreak all the time. By 1980, New Brunswick was spending $12.5 million a year on spraying, and the insect was still killing trees across as much as 20 million hectares a year.</p>
+      </div>
+      <div class="story" style="border-color:var(--teal)">
+        <span class="label">Interlude: Dutch electric meters</span>
+        <p>In a Dutch suburb of identical houses, some had their electricity meter in the basement and some in the front hall. During the 1970s energy crisis, the front-hall homes turned out to use about a third less electricity. The residents could see the wheel turning as they walked past. The houses were the same. What differed was the feedback.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">System Traps . . . and Opportunities</span></div>
+  <div class="body">
+    <div>
+      <h3>Eight structures behind familiar failures</h3>
+      <p class="idea">Systems thinkers call these structures archetypes. Blaming people, firing them or pulling policy levers harder won't fix them. Changing the structure will, so each trap is also an opportunity.</p>
+    </div>
+    <div class="traps">
+      <div class="trap c-teal"><div class="hd"><span class="loopbadge">B</span><b>Policy resistance</b></div><p>Several actors pull one stock toward different goals. Any push meets an equal counter-push. Romania banned abortion in 1967; the birth rate tripled, then fell back as illegal abortions tripled maternal deaths.</p><p class="out">Let go, bring all the actors in, and look for a bigger goal they can share. Sweden's 1930s policy aimed at every child being wanted and cared for.</p></div>
+      <div class="trap c-red"><div class="hd"><span class="loopbadge">R</span><b>Tragedy of the commons</b></div><p>Each user gains fully from using a shared, erodable resource and bears only a small share of the damage. Feedback from the resource to the user is weak or comes too late. Garrett Hardin described it in 1968.</p><p class="out">Educate, privatise, or regulate through "mutual coercion, mutually agreed upon" (Hardin's phrase): traffic lights, parking meters, garbage fees.</p></div>
+      <div class="trap c-orange"><div class="hd"><span class="loopbadge">R</span><b>Drift to low performance</b></div><p>The goal follows perceived performance, and bad news is believed more readily than good. Each disappointment lowers the bar a little, like the boiled frog. Meadows's own example is a jogging programme that faded away.</p><p class="out">Keep standards absolute, or set them from the best past results instead of the worst.</p></div>
+      <div class="trap c-red"><div class="hd"><span class="loopbadge">R</span><b>Escalation</b></div><p>Each side sets its goal a little above where it sees the other: arms races, price wars, smear campaigns, ever-louder advertising. It grows exponentially and ends when someone breaks down.</p><p class="out">Stay out of it. If you're already in, disarm unilaterally or negotiate new balancing loops.</p></div>
+      <div class="trap c-red"><div class="hd"><span class="loopbadge">R</span><b>Success to the successful</b></div><p>Winners get the means to win again: Monopoly, a Christmas-lights contest whose $100 prize kept going to the same family, competitive exclusion in ecology. The trap sorts people into permanent winners and losers.</p><p class="out">Diversify, cap any one winner's share, level the playing field, and give rewards that don't tilt the next round.</p></div>
+      <div class="trap c-orange"><div class="hd"><span class="loopbadge">R</span><b>Shifting the burden (addiction)</b></div><p>An intervention relieves the symptom, and the system's own ability to cope withers away. Then more intervention is needed. Pesticides, subsidies, fixed oil prices.</p><p class="out">Avoid it in the first place. As an intervenor, strengthen the system's own ability and then step back. As a dependant, rebuild that ability now.</p></div>
+      <div class="trap c-yellow"><div class="hd"><span class="loopbadge">±</span><b>Rule beating</b></div><p>Obeying the letter of a rule and defeating its purpose. Vermont's Act 250 led to lots of just over ten acres. Europe's feed-grain limits brought in cassava from Asia instead.</p><p class="out">Read rule beating as feedback. Design rules so people's creativity goes into meeting their purpose.</p></div>
+      <div class="trap c-yellow"><div class="hd"><span class="loopbadge">±</span><b>Seeking the wrong goal</b></div><p>The system delivers exactly what it is measured on. Counting IUD insertions in India led doctors to fit them without patients' consent. Meadows argues GNP counts effort and throughput, not welfare.</p><p class="out">Choose indicators that reflect real welfare, and don't confuse effort with results.</p></div>
+    </div>
+    <p class="src" style="font-family:var(--mono);font-size:11.5px;color:var(--ink-3)">R = the trap is driven by a reinforcing loop · B = balancing loops locked against each other · ± = a goal or rule set badly. Grouping drawn for this page.</p>
+    <div class="story">
+      <span class="label">Interlude: sailboat design</span>
+      <p>Racing rules were written to keep competitors evenly matched. Designers then built boats to win under those rules. Today's racing yachts are extremely fast and nearly unseaworthy, so finely tuned to the current rules that any change would make them useless. Meadows uses them as an example of a system optimised so hard that it has lost all resilience.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART THREE ============ -->
+<div class="part" id="change">
+  <span class="label partno">Part Three · Chapters 6–7</span>
+  <h2>Creating change</h2>
+  <p class="lede">Where a small push makes a big difference, and what sort of person you have to be to work with systems you can't control.</p>
+</div>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Leverage Points</span></div>
+  <div class="body">
+    <div>
+      <h3>Twelve places to intervene</h3>
+      <p class="idea">People inside a system often sense where the leverage is. They often push it the wrong way.</p>
+    </div>
+    <ul class="points">
+      <li>Jay Forrester's world model found that growth itself was a key leverage point. Leaders treat growth as the answer to almost every problem. Meadows says they are pushing hard in the wrong direction. His 1969 urban study likewise pointed to less subsidised low-income housing, not more.</li>
+      <li>Meadows drafted the list during a meeting on global trade, frustrated, and offers it with humility. She calls the order loose, and every item has exceptions. Read it from the bottom (weakest) to the top (strongest).</li>
+    </ul>
+    <div class="fig">
+      <h4>The leverage ladder</h4>
+      <div class="ladder">
+        <div class="grp">Physical: numbers, sizes, plumbing, timing</div>
+        <div class="rung" style="--c:var(--teal)"><span class="n">12</span><div class="bar"><b>Numbers: constants and parameters</b><span>Taxes, subsidies, standards, the minimum wage. Meadows guesses 99% of attention goes here, and it rarely changes behaviour.</span></div></div>
+        <div class="rung" style="--c:color-mix(in srgb, var(--teal) 80%, var(--green))"><span class="n">11</span><div class="bar"><b>Buffers</b><span>How big stabilising stocks are compared with their flows. A lake floods less than a river. Buffers are hard to change, and very large ones make a system sluggish.</span></div></div>
+        <div class="rung" style="--c:color-mix(in srgb, var(--teal) 50%, var(--green))"><span class="n">10</span><div class="bar"><b>Stock-and-flow structure</b><span>The physical plumbing, like Hungary's roads all running through Budapest. The leverage is in getting the design right in the first place.</span></div></div>
+        <div class="rung" style="--c:var(--green)"><span class="n">9</span><div class="bar"><b>Delays</b><span>How long a delay is compared with how fast the system changes. Very powerful, but often fixed, so it's usually easier to slow the system down.</span></div></div>
+        <div class="grp">Information and control</div>
+        <div class="rung" style="--c:color-mix(in srgb, var(--green) 55%, var(--yellow))"><span class="n">8</span><div class="bar"><b>Balancing feedback loops</b><span>How strong they are compared with what they have to correct. Includes truthful prices, open information and democratic accountability.</span></div></div>
+        <div class="rung" style="--c:var(--yellow)"><span class="n">7</span><div class="bar"><b>Reinforcing feedback loops</b><span>Slowing the gain of a growth loop usually beats strengthening the brakes.</span></div></div>
+        <div class="rung" style="--c:color-mix(in srgb, var(--yellow) 50%, var(--orange))"><span class="n">6</span><div class="bar"><b>Information flows</b><span>Who sees what. The Dutch meter adds a loop that wasn't there before. Fisheries need information on fish numbers, not fish prices.</span></div></div>
+        <div class="rung" style="--c:var(--orange)"><span class="n">5</span><div class="bar"><b>Rules</b><span>Incentives, punishments, constraints. Power over the rules is real power.</span></div></div>
+        <div class="grp">Design and intent</div>
+        <div class="rung" style="--c:color-mix(in srgb, var(--orange) 55%, var(--red))"><span class="n">4</span><div class="bar"><b>Self-organisation</b><span>The power to add, change or evolve structure. Diversity of genes, cultures and ideas is the raw material.</span></div></div>
+        <div class="rung" style="--c:var(--red)"><span class="n">3</span><div class="bar"><b>Goals</b><span>The purpose of the whole system. Everything lower on the list bends to serve it.</span></div></div>
+        <div class="rung" style="--c:color-mix(in srgb, var(--red) 80%, var(--ink))"><span class="n">2</span><div class="bar"><b>Paradigms</b><span>The shared, unstated assumptions that goals, rules and structures grow out of. In one person, a paradigm can shift in an instant.</span></div></div>
+        <div class="rung" style="--c:color-mix(in srgb, var(--red) 55%, var(--ink))"><span class="n">1</span><div class="bar"><b>Transcending paradigms</b><span>Seeing that no paradigm is "true", and staying flexible enough to pick the one that serves the purpose.</span></div></div>
+      </div>
+      <p class="cap">The higher the leverage point, the harder the system resists changing it. Colours run from the cool, balancing end of the spectrum to the hot end, matching the cover's spring.</p>
+      <p class="src">Source: Thinking in Systems, ch. 6; the three groups are drawn for this page</p>
+    </div>
+    <ul class="points">
+      <li>Parameters matter when they push the system into a range where something higher on the list kicks in, such as interest rates or birth rates that set the gain of a reinforcing loop. That's rarer than people think.</li>
+      <li>Missing feedback is one of the most common reasons systems fail. Meadows proposes making feedback compelling: put a town's water intake downstream of its own outflow pipe, or require politicians who declare war to serve at the front.</li>
+      <li>Changing the players is low leverage, except at the very top. One leader who sets a new goal can turn millions of people in a new direction.</li>
+      <li>Paradigms change the way Thomas Kuhn describes. Keep pointing out the old view's failures, speak confidently from the new one, put its supporters in visible places, and spend your time on the open-minded middle.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Living in a World of Systems</span></div>
+  <div class="body">
+    <div>
+      <h3>You can't control it. You can learn to move with it</h3>
+      <p class="idea">Meadows and her MIT colleagues expected systems thinking to deliver prediction and control. It didn't. What it offered instead turned out to be worth more.</p>
+    </div>
+    <div class="epilogue">
+      <div class="prose">
+        <p>Meadows admits that the modellers didn't follow their own advice. They lectured on addiction and couldn't give up coffee. They understood eroding goals and still let their jogging slide. Knowing how to fix a system turned out to be a long way from fixing it.</p>
+        <p>Self-organising, nonlinear feedback systems are inherently unpredictable, she concludes. The future can't be forecast precisely, but it can be imagined and designed for. The final chapter is a list of practices her colleagues picked up, some knowingly and some not. Most of them are in the toolkit below.</p>
+        <p>Two examples stand out. When the Toxic Release Inventory made companies' emissions public from 1988, reported emissions fell 40% within two years, with no fines involved. And the 1987 Montreal Protocol built in monitoring and review, so in 1990 the phase-out could be sped up when the ozone damage proved worse than expected.</p>
+      </div>
+      <div>
+        <p class="pull">"We can't control systems or figure them out. But we can dance with them!"</p>
+        <span class="label">Donella Meadows, ch. 7</span>
+        <div class="story" style="margin-top:28px;border-color:var(--orange)">
+          <span class="label">The last trap</span>
+          <p>Meadows ends by applying drift to low performance to morality. When bad behaviour is treated as normal and goodness as an exception, expectations fall. Her remedy is the same as for any eroding goal: don't weigh bad news more heavily than good, and keep the standard absolute.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">From the book's guidelines and trap exits</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Meadows ends with 15 habits for living in a world of systems. Most of them are here, together with a few lessons from earlier chapters, grouped by when you'd reach for them.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Before you act</h3>
+      <div class="tk"><b>Get the beat of the system</b><span>Watch first. Collect its history and graph real data over time. Memories are poor at timing, and people often frame the problem as the lack of their favourite solution.</span></div>
+      <div class="tk"><b>Expose your mental models</b><span>Write them down, as diagrams, lists or equations. Keep several explanations open until the evidence rules some out.</span></div>
+      <div class="tk"><b>Ask what drives the drivers</b><span>For any forecast: would the system really respond this way, and what sets the inputs?</span></div>
+      <div class="tk"><b>Redraw the boundary for each question</b><span>Look beyond the clouds. Where does the waste go, and where do the inputs come from?</span></div>
+      <div class="tk"><b>Defy the disciplines</b><span>Follow the system across fields. Learn from economists and chemists without being limited by their lenses.</span></div>
+    </div>
+    <div class="col">
+      <h3>When you intervene</h3>
+      <div class="tk"><b>Honour, respect and distribute information</b><span>Don't distort, delay or withhold it. Putting the meter in the hallway often beats passing a new law.</span></div>
+      <div class="tk"><b>Make feedback policies for feedback systems</b><span>Policies that adjust with the state of the system, like Carter's proposed import-linked fuel tax, and that include ways to learn and revise.</span></div>
+      <div class="tk"><b>Locate responsibility in the system</b><span>Design things so decision makers feel the results, the way a pilot rides at the front of the plane.</span></div>
+      <div class="tk"><b>Listen to the wisdom of the system</b><span>Strengthen what already works, often at the bottom of the hierarchy, before charging in with outside fixes.</span></div>
+      <div class="tk"><b>Slow the loops before you strengthen the brakes</b><span>Reducing the gain on a growth loop usually beats adding more correction.</span></div>
+    </div>
+    <div class="col">
+      <h3>As a way of being</h3>
+      <div class="tk"><b>Pay attention to what's important, not just what's measurable</b><span>Be a quality detector. Leaving something out because it's hard to quantify gives you a worse model.</span></div>
+      <div class="tk"><b>Use language with care</b><span>Keep words concrete and truthful, and learn words like resilience, carrying capacity and feedback.</span></div>
+      <div class="tk"><b>Go for the good of the whole</b><span>Don't optimise one part while ignoring the whole system.</span></div>
+      <div class="tk"><b>Stay humble, stay a learner</b><span>Take small steps, keep monitoring, and admit errors openly.</span></div>
+      <div class="tk"><b>Expand time horizons and the boundary of caring</b><span>Watch both the next step and the far horizon. In an interconnected system, the parts can't succeed if the whole fails.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Donella H. Meadows, <em>Thinking in Systems: A Primer</em>, edited by Diana Wright (Chelsea Green Publishing, 2008). Figures are as reported in the book. Diagrams were drawn for this page; the two charts are re-runs of the model equations in the book's appendix and are illustrative where a curve had to be read off a graph. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+
+  /* --- Small behaviour-over-time curves in the loop diagrams (illustrative shapes) --- */
+  function pathFrom(fn, x0, x1, y0, y1) {
+    var d = "";
+    for (var i = 0; i <= 60; i++) {
+      var u = i / 60, v = fn(u);
+      d += (i ? "L" : "M") + (x0 + (x1 - x0) * u).toFixed(1) + " " + (y1 - (y1 - y0) * v).toFixed(1);
+    }
+    return d;
+  }
+  var set = function (id, d) { var n = document.getElementById(id); if (n) n.setAttribute("d", d); };
+  // room temperature sits at v = 0.35 of the 130..232 box
+  set("cool-hot", pathFrom(function (u) { return 0.35 + 0.6 * Math.exp(-4 * u); }, 30, 300, 130, 232));
+  set("cool-cold", pathFrom(function (u) { return 0.35 - 0.3 * Math.exp(-4 * u); }, 30, 300, 130, 232));
+  set("grow-hi", pathFrom(function (u) { return 0.08 + 0.84 * (Math.exp(2.6 * u) - 1) / (Math.exp(2.6) - 1); }, 30, 300, 130, 232));
+  set("grow-lo", pathFrom(function (u) { return 0.08 + 0.18 * (Math.exp(1.2 * u) - 1) / (Math.exp(1.2) - 1); }, 30, 300, 130, 232));
+
+  /* --- Model re-runs from the book's appendix equations --- */
+  // Business inventory (Figures 29–36)
+  function inventory(perception, response, delivery) {
+    var inv = 200, perceived = 20, orders = [], out = [];
+    for (var t = 0; t <= 100; t++) {
+      var demand = t > 25 ? 22 : 20;
+      var sales = Math.min(inv, demand);
+      perceived += (sales - perceived) / perception;     // sales smoothed over the perception delay
+      var desired = perceived * 10;                       // ten days' coverage
+      var o = Math.max(perceived + (desired - inv) / response, 0);
+      orders[t] = o;
+      var deliveries = t <= 5 ? 20 : orders[t - delivery];
+      out.push(inv);
+      inv = inv + deliveries - sales;
+    }
+    return out;
+  }
+  // Nonrenewable resource with capital (Figures 37–41); yield curve read off the book's graph
+  var Y = [[0, 0], [100, .2], [200, .42], [300, .62], [400, .76], [500, .85], [600, .92], [750, .98], [1000, 1]];
+  function interp(x, pts) {
+    if (x <= pts[0][0]) return pts[0][1];
+    for (var i = 1; i < pts.length; i++) {
+      if (x <= pts[i][0]) { var a = pts[i - 1], b = pts[i]; return a[1] + (b[1] - a[1]) * (x - a[0]) / (b[0] - a[0]); }
+    }
+    return pts[pts.length - 1][1];
+  }
+  function oil(R0) {
+    var R = R0, cap = 5, out = [];
+    for (var t = 0; t <= 100; t++) {
+      var y = interp(R * 1000 / R0, Y);
+      var e = Math.min(cap * y, R);
+      var profit = 3 * e - cap * 0.1;
+      var inv = Math.max(Math.min(profit, cap * 0.1), 0);
+      out.push(e);
+      R -= e;
+      cap += inv - cap / 20;
+    }
+    return out;
+  }
+
+  var INV = { base: inventory(5, 3, 5), fast: inventory(5, 2, 5), slow: inventory(5, 6, 5) };
+  var OIL = [oil(1000), oil(2000), oil(4000)];
+  var invFocus = "base";
+
+  function lineChart(host, cfg) {
+    host.innerHTML = "";
+    var W = Math.max(280, Math.round(host.clientWidth || 600));
+    var H = W < 480 ? 230 : 290;
+    var m = { l: 40, r: 12, t: 12, b: 30 };
+    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, width: W, height: H }, host);
+    var x = function (v) { return m.l + (W - m.l - m.r) * (v - cfg.x0) / (cfg.x1 - cfg.x0); };
+    var y = function (v) { return H - m.b - (H - m.t - m.b) * (v - cfg.y0) / (cfg.y1 - cfg.y0); };
+    cfg.yt.forEach(function (v) {
+      el("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: "var(--rule)", "stroke-width": 1 }, svg);
+      var t = el("text", { x: m.l - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11 }, svg); t.textContent = v;
+    });
+    var xt = W < 480 ? [cfg.x0, (cfg.x0 + cfg.x1) / 2, cfg.x1] : cfg.xt;
+    xt.forEach(function (v, i) {
+      var last = i === xt.length - 1;
+      var t = el("text", { x: x(v), y: H - 10, "text-anchor": last ? "end" : (i === 0 ? "start" : "middle"), "font-size": 11 }, svg);
+      t.textContent = last ? v + " " + cfg.xlab : v;
+    });
+    if (cfg.marker != null) {
+      el("line", { x1: x(cfg.marker), x2: x(cfg.marker), y1: m.t, y2: H - m.b, stroke: "var(--ink-3)", "stroke-dasharray": "3 4" }, svg);
+    }
+    var yl = el("text", { x: m.l + 4, y: m.t + 2, "font-size": 11 }, svg); yl.textContent = cfg.ylab;
+    var pk = 0;
+    cfg.series.forEach(function (s) {
+      var d = s.data.map(function (v, i) { return (i ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1); }).join("");
+      el("path", { d: d, fill: "none", stroke: s.color, "stroke-width": s.focus ? 2.8 : 1.6, "stroke-opacity": s.focus ? 1 : .35, "stroke-linejoin": "round" }, svg);
+      if (s.peak) {
+        var mx = 0, mi = 0; s.data.forEach(function (v, i) { if (v > mx) { mx = v; mi = i; } });
+        el("line", { x1: x(mi), x2: x(mi), y1: y(mx), y2: H - m.b, stroke: s.color, "stroke-dasharray": "2 3", "stroke-width": 1.2 }, svg);
+        el("circle", { cx: x(mi), cy: y(mx), r: 4, fill: s.color }, svg);
+        var t = el("text", { x: x(mi) + 4, y: H - m.b - 5 - (pk++) * 14, "font-size": 11, style: "fill:" + s.color }, svg);
+        t.textContent = "yr " + mi;
+      }
+    });
+  }
+
+  function drawCharts() {
+    var ih = document.getElementById("inv-chart");
+    if (ih) lineChart(ih, {
+      x0: 0, x1: 100, y0: 100, y1: 450, xt: [0, 25, 50, 75, 100], yt: [100, 200, 300, 400],
+      xlab: "days", ylab: "cars on the lot", marker: 25,
+      series: [
+        { data: INV.slow, color: "var(--teal)", focus: invFocus === "slow" },
+        { data: INV.fast, color: "var(--red)", focus: invFocus === "fast" },
+        { data: INV.base, color: "var(--orange)", focus: invFocus === "base" }
+      ].sort(function (a, b) { return a.focus - b.focus; })
+    });
+    var oh = document.getElementById("oil-chart");
+    if (oh) lineChart(oh, {
+      x0: 0, x1: 100, y0: 0, y1: 110, xt: [0, 20, 40, 60, 80, 100], yt: [0, 25, 50, 75, 100],
+      xlab: "years", ylab: "extraction per year",
+      series: [
+        { data: OIL[0], color: "var(--orange)", focus: true, peak: true },
+        { data: OIL[1], color: "var(--red)", focus: true, peak: true },
+        { data: OIL[2], color: "var(--yellow)", focus: true, peak: true }
+      ]
+    });
+  }
+  var seg = document.getElementById("inv-seg");
+  if (seg) seg.addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    invFocus = b.getAttribute("data-k");
+    seg.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+    drawCharts();
+  });
+  drawCharts();
+  var rt = 0;
+  window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(drawCharts, 120); });
+
+  /* --- Hero: a rainbow spring that drops and settles, like the Slinky --- */
+  var canvas = document.getElementById("wave");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  var hues = ["--red", "--orange", "--yellow", "--green", "--teal"];
+  function mix(a, b, t) {
+    var pa = parseInt(a.slice(1), 16), pb = parseInt(b.slice(1), 16);
+    var r = Math.round(((pa >> 16) & 255) * (1 - t) + ((pb >> 16) & 255) * t);
+    var g = Math.round(((pa >> 8) & 255) * (1 - t) + ((pb >> 8) & 255) * t);
+    var bl = Math.round((pa & 255) * (1 - t) + (pb & 255) * t);
+    return "rgb(" + r + "," + g + "," + bl + ")";
+  }
+  function colourAt(u, cols) {
+    var p = u * (cols.length - 1), i = Math.min(Math.floor(p), cols.length - 2);
+    return mix(cols[i], cols[i + 1], p - i);
+  }
+  var t0 = null;
+  function draw(time) {
+    if (!w) return;
+    if (t0 === null) t0 = time;
+    var cols = hues.map(css);
+    if (cols.some(function (c) { return c.charAt(0) !== "#"; })) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var n = Math.max(18, Math.round(w / 22));
+    var mid = hgt / 2;
+    var el = reduce ? 9 : ((time - t0) / 1000) % 14;     // seconds since release, loops every 14 s
+    var damp = Math.exp(-el * 0.35);
+    ctx.lineWidth = 2.4;
+    for (var k = 0; k < n; k++) {
+      var u = k / (n - 1);
+      // standing wave along the coil, released at t = 0 and decaying: behaviour from structure
+      var disp = Math.sin(Math.PI * u) * Math.cos(el * 3.2) * damp * hgt * 0.22;
+      var cx = 16 + u * (w - 32);
+      var ry = hgt * 0.3, rx = Math.max(5, (w / n) * 0.9);
+      ctx.beginPath();
+      ctx.ellipse(cx, mid + disp, rx, ry, 0, 0, Math.PI * 2);
+      ctx.strokeStyle = colourAt(u, cols);
+      ctx.globalAlpha = 0.9;
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); drawCharts(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+</body>
+</html>

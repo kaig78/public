@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Supremacy by Parmy Olson – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: neon green pixels (Altman / OpenAI),
+   gold (Hassabis / DeepMind), black (Big Tech, the house that wins). */
+:root {
+  --paper: #f3f3ee;
+  --paper-2: #e7e8e0;
+  --card: #ffffff;
+  --ink: #111210;
+  --ink-2: #464a43;
+  --ink-3: #73776f;
+  --rule: #d5d7ce;
+
+  /* the two paths, the house, the cost */
+  --oa: #12802a;      /* Altman / OpenAI: cover green, darkened for text */
+  --neon: #3ddc3d;    /* decorative pixel green */
+  --dm: #9a700d;      /* Hassabis / DeepMind: gold */
+  --gold: #d6a42a;    /* decorative gold */
+  --big: #111210;     /* Big Tech */
+  --harm: #c13a3a;    /* harms and costs */
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0d0f0c;
+    --paper-2: #171a15;
+    --card: #1b1e19;
+    --ink: #eef0ea;
+    --ink-2: #b4b8ae;
+    --ink-3: #868b81;
+    --rule: #2d3129;
+    --oa: #5ef05e;
+    --neon: #39ff14;
+    --dm: #e8bd4f;
+    --gold: #e8bd4f;
+    --big: #eef0ea;
+    --harm: #ff7a72;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0d0f0c;
+  --paper-2: #171a15;
+  --card: #1b1e19;
+  --ink: #eef0ea;
+  --ink-2: #b4b8ae;
+  --ink-3: #868b81;
+  --rule: #2d3129;
+  --oa: #5ef05e;
+  --neon: #39ff14;
+  --dm: #e8bd4f;
+  --gold: #e8bd4f;
+  --big: #eef0ea;
+  --harm: #ff7a72;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--oa); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* colour helpers */
+.c-oa   { --c: var(--oa); }
+.c-dm   { --c: var(--dm); }
+.c-big  { --c: var(--big); }
+.c-harm { --c: var(--harm); }
+.tint { background: color-mix(in srgb, var(--c) 11%, var(--card)); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 1px; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(50px, 10.4vw, 128px);
+  font-weight: 900;
+  font-stretch: 100%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.04em;
+  white-space: nowrap;
+}
+.hero h1 .px { display: inline-block; width: .16em; height: .16em; background: var(--neon); margin-left: .05em; vertical-align: .02em; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 910;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 20, 10, .38), 0 8px 18px -10px rgba(10, 20, 10, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.pixband { position: relative; margin-top: 28px; }
+.pixband canvas { display: block; width: 100%; height: 120px; }
+.pixband .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Act openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; }
+.part .partno i { display: inline-block; width: 12px; height: 12px; background: var(--neon); }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter .gutter .who { margin-top: 8px; display: flex; gap: 6px; align-items: center; font-family: var(--mono); font-size: 11.5px; color: var(--ink-2); }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .6em;
+  width: 9px; height: 9px; background: var(--ink);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ink);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-oa { fill: var(--oa); }
+.fig svg .t-dm { fill: var(--dm); }
+.fig svg .t-harm { fill: var(--harm); }
+.fig svg .t-b { font-family: var(--display); font-weight: 750; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 40px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.stats.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.stats.two .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* table */
+table.cmp { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 720px; font-size: 15.5px; line-height: 1.42; }
+table.cmp th, table.cmp td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+table.cmp thead th { border-bottom: 0; padding-bottom: 16px; }
+table.cmp thead th.h { border-top: 5px solid var(--c); background: color-mix(in srgb, var(--c) 9%, var(--card)); }
+table.cmp thead .nm { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 22px; color: var(--c); letter-spacing: -.01em; display: block; }
+table.cmp thead .tag { font-family: var(--mono); font-size: 12px; color: var(--ink-2); font-weight: 400; display: block; margin-top: 4px; }
+table.cmp tbody th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; width: 160px; padding-top: 17px; }
+table.cmp tbody tr:hover td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* event list (timeline as list) */
+.events { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.events li { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 10px 0; border-top: 1px solid var(--rule); font-size: 15.5px; line-height: 1.45; }
+.events li:first-child { border-top: 0; }
+.events li b { font-family: var(--mono); font-weight: 500; font-size: 12.5px; color: var(--ink-3); padding-top: 2px; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 2px solid var(--ink); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .duo, .epilogue, .part { grid-template-columns: minmax(0, 1fr); }
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+  .chapter .gutter .who { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map, .compare, .stats.two { grid-template-columns: minmax(0, 1fr); }
+  .events li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Parmy Olson · St. Martin's Press, 2024</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#paths">Two paths</a>
+    <a href="#dream">Dream</a>
+    <a href="#leviathans">Leviathans</a>
+    <a href="#bills">Bills</a>
+    <a href="#race">Race</a>
+    <a href="#epilogue">Verdict</a>
+    <a href="#toolkit">Takeaways</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1>Supremacy<span class="px" aria-hidden="true"></span></h1>
+    <p class="sub">AI, ChatGPT, and the race that will change the world</p>
+    <p class="dek">Two men set out to build machines smarter than people and keep them out of Big Tech's hands. Parmy Olson tells how both ended up handing the keys to Google and Microsoft.</p>
+    <div class="byline label">
+      <span>16 chapters</span><span>4 acts</span><span>2 rivals</span><span>~85,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of Supremacy by Parmy Olson: a classical portrait of Napoleon partly covered by neon-green pixel blocks, with the title in heavy black type">
+</div>
+
+<div class="pixband" aria-hidden="true">
+  <canvas id="pix"></canvas>
+  <div class="ends label"><span>Two independent labs</span><span>Inside Big Tech</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>The idealists built it. The monopolies own it.</h2>
+  </div>
+  <div class="duo">
+    <div class="prose">
+      <p>Olson, a Bloomberg technology columnist, tells the story of artificial intelligence's breakout through two founders. <strong>Demis Hassabis</strong>, a London chess prodigy turned game designer, started DeepMind in 2010 to "solve intelligence" and use it for science. <strong>Sam Altman</strong>, a St. Louis start-up kid turned Silicon Valley kingmaker, co-founded OpenAI in 2015 to build the same thing and spread its wealth to everyone.</p>
+      <p>Both believed that artificial general intelligence (AGI), software as capable as a human mind, was too powerful for a profit-driven company to control. Both experimented with unusual governance: ethics boards, a planned "global interest company", a nonprofit with a capped-profit arm. And both, needing vast sums for computing power and talent, ended up tied to a tech giant: DeepMind to <strong>Google</strong>, OpenAI to <strong>Microsoft</strong>.</p>
+      <p>The book's argument is that this story isn't only about two men. It's about how a handful of companies with unprecedented reach absorbed a world-changing technology, and how the noisy debate about AI wiping out humanity drew attention away from the harms happening now: bias, opacity, job loss and a deeper concentration of power.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The scale of the winners</span>
+      <div class="stats two" style="border:0;border-radius:0">
+        <div class="stat"><span class="big num">90%</span><p>Share of the world's internet users whose web searches Google handles, per the prologue.</p></div>
+        <div class="stat"><span class="big num">70%</span><p>Share of people with a computer who use Microsoft software.</p></div>
+        <div class="stat"><span class="big num">$650M</span><p>What Google paid for DeepMind in 2014, with an ethics board written into the deal.</p></div>
+        <div class="stat"><span class="big num">$13B</span><p>What Microsoft had committed to OpenAI by late 2023, much of it as cloud computing credits.</p></div>
+      </div>
+      <div class="story" style="border-color:var(--neon)">
+        <span class="label">The historical echo</span>
+        <p>Olson compares the race to the "war of the currents" between Thomas Edison and George Westinghouse. Two inventor-entrepreneurs fought over whose system would power the modern world, and the industrial giants behind them came out on top.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Act 1</span>
+      <h3>The Dream</h3>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>High School Hero</b>Altman learns to court power</a></li>
+        <li><span>02</span><a href="#ch2"><b>Winning, Winning, Winning</b>Hassabis, games and a public flop</a></li>
+        <li><span>03</span><a href="#ch3"><b>Save the Humans</b>Altman takes over Y Combinator</a></li>
+        <li><span>04</span><a href="#ch4"><b>A Better Brain</b>DeepMind is born</a></li>
+        <li><span>05</span><a href="#ch5"><b>For Utopia, for Money</b>Google buys DeepMind</a></li>
+        <li><span>06</span><a href="#ch6"><b>The Mission</b>OpenAI as a counterweight</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Act 2</span>
+      <h3>The Leviathans</h3>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>Playing Games</b>AlphaGo and the spin-out dream</a></li>
+        <li><span>08</span><a href="#ch8"><b>Everything Is Awesome</b>Big Tech's size and AI's blind spots</a></li>
+        <li><span>09</span><a href="#ch9"><b>The Goliath Paradox</b>Google invents the transformer, then sits on it</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Act 3</span>
+      <h3>The Bills</h3>
+      <ol>
+        <li><span>10</span><a href="#ch10"><b>Size Matters</b>GPT, capped profit, Microsoft</a></li>
+        <li><span>11</span><a href="#ch11"><b>Bound to Big Tech</b>Anthropic splits off, DeepMind stays put</a></li>
+        <li><span>12</span><a href="#ch12"><b>Myth Busters</b>Sentient chatbots and stochastic parrots</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Act 4</span>
+      <h3>The Race</h3>
+      <ol>
+        <li><span>13</span><a href="#ch13"><b>Hello, ChatGPT</b>The launch that started the race</a></li>
+        <li><span>14</span><a href="#ch14"><b>A Vague Sense of Doom</b>Extinction talk and who funds it</a></li>
+        <li><span>15</span><a href="#ch15"><b>Checkmate</b>Gemini, and Altman's five-day ouster</a></li>
+        <li><span>16</span><a href="#ch16"><b>In the Shadow of Monopolies</b>Who really won</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TWO PATHS ============ -->
+<section id="paths">
+  <div class="sec-head">
+    <span class="label">The core structure</span>
+    <h2>Two founders, two paths, one destination</h2>
+    <p class="lede">Olson tells the book as a double biography. The lines run in parallel for a decade, both founders trying to keep AGI out of corporate hands, and both end inside a tech giant.</p>
+  </div>
+
+  <div class="fig">
+    <h4>DeepMind and OpenAI, 2010–2024</h4>
+    <div class="legend"><span><i class="dot c-dm"></i>Hassabis · DeepMind</span><span><i class="dot c-oa"></i>Altman · OpenAI</span><span><i class="dot c-big"></i>Big Tech parent or partner</span></div>
+    <div class="scroll-x">
+      <svg viewBox="0 0 760 320" style="min-width:640px" role="img" aria-label="Timeline with two lanes. DeepMind lane: founded 2010, bought by Google for 650 million dollars in 2014, AlphaGo beats Lee Sedol in 2016, spin-out talks from 2017 to 2021, spin-out cancelled in 2021, merged into Google DeepMind in 2023, ending inside Google. OpenAI lane: founded as a nonprofit in December 2015, charter in 2018, capped-profit arm and 1 billion dollar Microsoft deal in 2019, ChatGPT in November 2022, 10 billion dollar Microsoft investment for a 49 percent stake in 2023, ending tied to Microsoft.">
+        <!-- year axis -->
+        <g stroke="var(--rule)" stroke-width="1">
+          <line x1="50" y1="300" x2="666" y2="300"/>
+          <line x1="50" y1="40" x2="50" y2="300" stroke-dasharray="2 4"/>
+          <line x1="138" y1="40" x2="138" y2="300" stroke-dasharray="2 4"/>
+          <line x1="226" y1="40" x2="226" y2="300" stroke-dasharray="2 4"/>
+          <line x1="314" y1="40" x2="314" y2="300" stroke-dasharray="2 4"/>
+          <line x1="402" y1="40" x2="402" y2="300" stroke-dasharray="2 4"/>
+          <line x1="490" y1="40" x2="490" y2="300" stroke-dasharray="2 4"/>
+          <line x1="578" y1="40" x2="578" y2="300" stroke-dasharray="2 4"/>
+          <line x1="666" y1="40" x2="666" y2="300" stroke-dasharray="2 4"/>
+        </g>
+        <g font-size="11" text-anchor="middle">
+          <text x="50" y="316">2010</text><text x="138" y="316">2012</text><text x="226" y="316">2014</text><text x="314" y="316">2016</text><text x="402" y="316">2018</text><text x="490" y="316">2020</text><text x="578" y="316">2022</text><text x="666" y="316">2024</text>
+        </g>
+        <!-- DeepMind lane -->
+        <line x1="50" y1="100" x2="358" y2="100" stroke="var(--dm)" stroke-width="4"/>
+        <line x1="358" y1="100" x2="534" y2="100" stroke="var(--dm)" stroke-width="4" stroke-dasharray="8 6"/>
+        <line x1="534" y1="100" x2="682" y2="100" stroke="var(--dm)" stroke-width="4"/>
+        <path d="M358 84 v-6 h176 v6" fill="none" stroke="var(--dm)" stroke-width="1.2"/>
+        <g fill="var(--dm)"><rect x="45" y="95" width="10" height="10"/><rect x="221" y="95" width="10" height="10"/><rect x="309" y="95" width="10" height="10"/><rect x="529" y="95" width="10" height="10"/><rect x="630" y="95" width="10" height="10"/></g>
+        <g font-size="11">
+          <text x="50" y="70" class="t-dm">DeepMind founded</text>
+          <text x="50" y="56">Thiel: £1.4M</text>
+          <text x="226" y="70" text-anchor="middle" class="t-dm">Google buys it</text>
+          <text x="226" y="56" text-anchor="middle">$650M · ethics board</text>
+          <text x="446" y="70" text-anchor="middle">spin-out talks ("GIC")</text>
+          <text x="314" y="126" text-anchor="middle" class="t-dm">AlphaGo beats</text>
+          <text x="314" y="140" text-anchor="middle">Lee Sedol</text>
+          <text x="534" y="126" text-anchor="middle" class="t-dm">spin-out</text>
+          <text x="534" y="140" text-anchor="middle">cancelled</text>
+          <text x="626" y="70" text-anchor="middle" class="t-dm">Google DeepMind</text>
+          <text x="626" y="56" text-anchor="middle">merged with Brain</text>
+        </g>
+        <!-- OpenAI lane -->
+        <line x1="310" y1="220" x2="682" y2="220" stroke="var(--oa)" stroke-width="4"/>
+        <g fill="var(--oa)"><rect x="305" y="215" width="10" height="10"/><rect x="410" y="215" width="10" height="10"/><rect x="450" y="215" width="10" height="10"/><rect x="613" y="215" width="10" height="10"/><rect x="627" y="215" width="10" height="10"/></g>
+        <g font-size="11">
+          <text x="300" y="196" text-anchor="middle" class="t-oa">OpenAI founded</text>
+          <text x="300" y="182" text-anchor="middle">nonprofit, Dec 2015</text>
+          <text x="415" y="246" text-anchor="middle" class="t-oa">charter</text>
+          <text x="415" y="260" text-anchor="middle">2018</text>
+          <text x="470" y="196" text-anchor="middle" class="t-oa">capped profit</text>
+          <text x="470" y="182" text-anchor="middle">+ Microsoft $1B</text>
+          <text x="590" y="246" text-anchor="middle" class="t-oa">ChatGPT</text>
+          <text x="590" y="260" text-anchor="middle">Nov 2022</text>
+          <text x="610" y="196" text-anchor="middle" class="t-oa">MS $10B, 49%</text>
+          <text x="610" y="182" text-anchor="middle">Jan 2023</text>
+        </g>
+        <!-- Big Tech boxes -->
+        <rect x="682" y="78" width="76" height="44" fill="var(--big)"/>
+        <text x="720" y="105" text-anchor="middle" font-size="12" style="fill:var(--paper)" class="t-b">Google</text>
+        <rect x="682" y="198" width="76" height="44" fill="var(--big)"/>
+        <text x="720" y="225" text-anchor="middle" font-size="12" style="fill:var(--paper)" class="t-b">Microsoft</text>
+      </svg>
+    </div>
+    <p class="cap">Dashed line: the years DeepMind spent negotiating to leave Google, which ended with Google calling it off. OpenAI never needed a buyer; it sold a stake and exclusive access instead.</p>
+    <p class="src">Dates and sums as reported in Supremacy</p>
+  </div>
+
+  <div class="tablecard" style="margin-top:24px">
+    <div class="scroll-x">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th scope="col"><span class="label">Compare</span></th>
+            <th scope="col" class="h c-dm"><span class="nm">Demis Hassabis</span><span class="tag">DeepMind, London</span></th>
+            <th scope="col" class="h c-oa"><span class="nm">Sam Altman</span><span class="tag">OpenAI, San Francisco</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Formative game</th><td>Chess. Beat his father at four and won local tournaments at six; quit after a ten-hour loss at eleven felt like wasted brainpower.</td><td>Poker. Played for hours at a San Jose casino while at Stanford, learning to read and bluff opponents.</td></tr>
+          <tr><th scope="row">First venture</th><td>Co-designed <em>Theme Park</em> as a teenager at Bullfrog, then founded Elixir Studios.</td><td>Loopt, a friend-finding map app backed by Y Combinator and big venture funds.</td></tr>
+          <tr><th scope="row">The failure</th><td>Elixir's ambitious games flopped publicly. Lesson: use games to make AI, not AI to make games.</td><td>Loopt never caught on and sold in 2012 for about $43 million. Lesson: you can't make people want what they don't.</td></tr>
+          <tr><th scope="row">Why AGI</th><td>Scientific discovery, the nature of reality, maybe a glimpse of the divine. "Solve intelligence, then solve everything else."</td><td>Economic abundance: a tool that would generate wealth and help everyone "live better lives".</td></tr>
+          <tr><th scope="row">Style</th><td>Academic and secretive. Wanted to perfect AGI in the lab first.</td><td>Start-up style. Ship early, learn from users, grow fast.</td></tr>
+          <tr><th scope="row">Patrons</th><td>Peter Thiel, Jaan Tallinn, Elon Musk, then Larry Page</td><td>Paul Graham, Peter Thiel, Elon Musk, Reid Hoffman, then Satya Nadella</td></tr>
+          <tr><th scope="row">Governance idea</th><td>Ethics board in the Google deal; later a "global interest company" spun out of Alphabet</td><td>Nonprofit parent board overseeing a capped-profit company</td></tr>
+          <tr><th scope="row">Where it ended (2024)</th><td>CEO of Google DeepMind, now central to Google's products</td><td>CEO again after his board fired him; OpenAI deeply tied to Microsoft</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablenote"><span class="label">Scroll sideways on small screens</span><span class="label">Gold = Hassabis · Green = Altman</span></div>
+  </div>
+</section>
+
+<!-- ============ ACT 1 ============ -->
+<div class="part" id="dream">
+  <span class="label partno"><i></i>Act 1 · Chapters 1–6</span>
+  <h2>The Dream</h2>
+  <p class="lede">Two childhoods, two failed first companies, and two labs founded on the belief that a machine as smart as a person is possible, and too important to leave to the tech giants.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">High School Hero</span><span class="who"><i class="dot c-oa"></i>Altman</span></div>
+  <div class="body">
+    <div>
+      <h3>A teenager learns that power smooths the road</h3>
+      <p class="idea">Altman's early lessons: say the uncomfortable thing first, and line up the people with authority on your side.</p>
+    </div>
+    <ul class="points">
+      <li>Growing up gay in conservative St. Louis around 2000, Altman found belonging in AOL chat rooms. He came out to his parents at sixteen, and at his private school he started an LGBTQ support group and a Gay-Straight Alliance.</li>
+      <li>When Christian students boycotted his assembly on gay rights, he went straight to the principal to argue they should be marked absent. The lesson Olson draws: ambitious ideas attract critics, so align yourself with whoever holds power.</li>
+      <li>At Stanford he played poker to hone reading and misdirecting people, and in Sebastian Thrun's AI lab he heard that an AI chasing its goal might wipe out life without meaning harm. The idea stayed with him for a decade.</li>
+      <li>Paul Graham's new Y Combinator, which preached that founders matter more than ideas, took him in at nineteen. He dropped out to run Loopt, a phone map for finding friends, and raised $5 million from top venture firms.</li>
+      <li>Loopt struggled. People didn't want to broadcast their location, and some men used it to track their wives. Altman talked openly about the misuse, a disarming move Olson says he would use again and again. In 2012 he sold Loopt for about $43 million.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The pattern</span>
+      <p>Olson calls Altman's habit of loudly naming his own product's worst-case scenario a kind of calculated reverse psychology. If you have already said the worst thing about yourself, critics have little left to throw. The same move reappears years later, when he warns Congress about the dangers of ChatGPT.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Winning, Winning, Winning</span><span class="who"><i class="dot c-dm"></i>Hassabis</span></div>
+  <div class="body">
+    <div>
+      <h3>A chess prodigy decides to build a better brain</h3>
+      <p class="idea">Hassabis learned to treat games as a gym for the mind, and then learned the hard way that ambition without a playable product fails.</p>
+    </div>
+    <ul class="points">
+      <li>Born in North London to a Greek Cypriot father and a Singaporean mother, Hassabis beat adults at chess as a small child. At eleven, after resigning a ten-hour match he could have drawn, he decided chess tournaments wasted brilliant minds.</li>
+      <li>A ZX Spectrum that ran calculations overnight felt like an extension of his mind. Reading physicist Steven Weinberg at sixteen, he concluded a smarter computer could help science solve its deepest puzzles.</li>
+      <li>While waiting to start at Cambridge, he worked for game designer Peter Molyneux at Bullfrog and built much of <em>Theme Park</em>, which sold three times as many copies as Molyneux's hit <em>Populous</em>.</li>
+      <li>His own studio, Elixir, spent years on <em>Republic: The Revolution</em>, a political simulation with thousands of individually simulated citizens. It was too ambitious, the gameplay was boring, and reviews were mixed. A second game struggled too, and the company closed.</li>
+      <li>He drew the lesson that shaped DeepMind: stop using AI to make great games, and start using games to make great AI.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">“We'd never lost before, and we lost so publicly.”</blockquote>
+      <span class="label">Joe McDonagh, Elixir's lead designer, on the studio's collapse</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Save the Humans</span><span class="who"><i class="dot c-oa"></i>Altman</span></div>
+  <div class="body">
+    <div>
+      <h3>From failed founder to Silicon Valley's kingmaker</h3>
+      <p class="idea">Detachment, a network and a taste for moonshots turned Altman into the person founders wanted to meet, and primed him for AI.</p>
+    </div>
+    <ul class="points">
+      <li>Burned out by Loopt, Altman took up meditation and a cool, detached way of handling stress. He spent a year reading, travelling and investing, concluding that if human intelligence could be simulated, people weren't that special, and computers could improve on them.</li>
+      <li>His fund Hydrazine Capital, backed by Graham and Peter Thiel, put most of its money into Y Combinator start-ups and grew roughly tenfold in about four years.</li>
+      <li>In 2014, at thirty, he took over Y Combinator from Graham. He pushed it toward "hard tech" such as nuclear fusion (Helion) and self-driving cars (Cruise), and told founders to "add a zero" to their ambitions.</li>
+      <li>He described himself as a prepper with guns, gold and gas masks, and paid to join a waiting list to have his brain preserved for future uploading. He liked to quote a science-fiction line about surviving the future through "caution without fear".</li>
+      <li>He thought some AI-safety advocates were letting panic run them. The world, in his view, needed someone calmer to build the technology, and a rival in London gave him the push.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">A Better Brain</span><span class="who"><i class="dot c-dm"></i>Hassabis</span></div>
+  <div class="body">
+    <div>
+      <h3>Three oddballs pitch AGI in an attic</h3>
+      <p class="idea">DeepMind started as a company whose stated goal mainstream scientists considered crankish, and it needed equally unusual money to survive.</p>
+    </div>
+    <ul class="points">
+      <li>Hassabis did a neuroscience PhD on memory and imagination, then teamed up with <strong>Shane Legg</strong>, a researcher inspired by Ray Kurzweil's predictions of human-level AI by the late 2020s, and <strong>Mustafa Suleyman</strong>, an Oxford dropout who wanted technology to fix social problems.</li>
+      <li>They met at an Italian chain restaurant so nobody would overhear their "crazy talk" about AGI. In 2010 they founded DeepMind in an attic near University College London, with Hassabis as CEO.</li>
+      <li>From the start the founders differed. Hassabis's slogan was to solve intelligence and use it to solve everything else. Suleyman quietly had the slide changed toward solving the world's big problems, and wanted to put AI to practical use sooner.</li>
+      <li>Hassabis, often coy about religion, talked with colleagues about whether a machine could help explain the universe and its maker.</li>
+      <li>At the 2010 Singularity Summit, Hassabis won over Peter Thiel with a chat about chess, and Thiel invested £1.4 million. Skype co-founder Jaan Tallinn, convinced by Eliezer Yudkowsky's warnings, invested and pushed for safety work. Elon Musk invested too.</li>
+      <li>Money stayed tight. Mark Zuckerberg offered $800 million for the company, and Musk offered Tesla shares. The founders turned both down, worried about who would end up controlling AGI.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">For Utopia, for Money</span><span class="who"><i class="dot c-dm"></i>Hassabis</span></div>
+  <div class="body">
+    <div>
+      <h3>Selling to Google, with strings attached</h3>
+      <p class="idea">DeepMind took less money from Google in exchange for an ethics board that was supposed to control AGI. The board barely survived its first meeting.</p>
+    </div>
+    <ul class="points">
+      <li>Google made most of its money from ads, which sat oddly with Hassabis's mission. But Larry Page, whose father had been an AI professor, took AGI seriously and was already funding Google Brain under Andrew Ng.</li>
+      <li>Hassabis set two conditions: no military use of DeepMind's work, and an independent ethics and safety board to oversee any AGI it built. Facebook had refused the board; Google agreed after months of talks and paid <strong>$650 million</strong> in 2014.</li>
+      <li>Google money brought big salaries and perks, and staff were told AGI might be about five years away.</li>
+      <li>The board met once, at SpaceX, with Musk and Reid Hoffman among its members. Soon after, Google said it was no longer workable, and offered instead to make DeepMind an "autonomous unit" when it reorganised into Alphabet.</li>
+      <li>Olson sets out the belief systems swirling around AGI: transhumanism (with roots in eugenics), accelerationists who think building it is a moral duty, doomers who see it as an existential threat, and visions of trillions of digital humans. Hassabis, in London, kept them at arm's length.</li>
+    </ul>
+    <div class="fig">
+      <h4>The belief systems that gathered around AGI</h4>
+      <div class="scroll-x"><svg viewBox="0 0 600 380" style="min-width:480px" role="img" aria-label="Map of AI ideologies on two axes. Horizontal axis runs from harms happening now on the left to the distant future on the right. Vertical axis runs from slow down and scrutinise at the top to build faster at the bottom. AI ethics researchers sit top left. Doomers and the AI safety community sit top right. Effective altruists and longtermists sit right of centre. Accelerationists and transhumanists sit bottom right. Big Tech's commercial push sits bottom left. Hassabis sits near the centre, outside the dogmas, and Altman sits right of centre below the midline.">
+        <rect x="60" y="20" width="520" height="320" fill="var(--paper-2)" rx="4"/>
+        <line x1="320" y1="20" x2="320" y2="340" stroke="var(--rule)" stroke-width="1.5"/>
+        <line x1="60" y1="180" x2="580" y2="180" stroke="var(--rule)" stroke-width="1.5"/>
+        <g font-size="11">
+          <text x="60" y="360">harms happening now</text>
+          <text x="580" y="360" text-anchor="end">the distant future</text>
+          <text x="48" y="30" text-anchor="end" transform="rotate(-90 48 30)">slow down, scrutinise</text>
+          <text x="48" y="340" transform="rotate(-90 48 340)">build faster</text>
+        </g>
+        <g class="c-harm"><rect x="78" y="44" width="170" height="54" rx="4" fill="color-mix(in srgb, var(--harm) 14%, var(--card))" stroke="var(--harm)"/></g>
+        <text x="90" y="66" font-size="12.5" class="t-harm t-b">AI ethics</text>
+        <text x="90" y="84" font-size="10.5">bias, opacity, power (Gebru)</text>
+        <rect x="380" y="44" width="182" height="54" rx="4" fill="var(--card)" stroke="var(--ink)"/>
+        <text x="392" y="66" font-size="12.5" class="t-ink t-b">Doomers / AI safety</text>
+        <text x="392" y="84" font-size="10.5">extinction risk (Yudkowsky)</text>
+        <rect x="390" y="128" width="172" height="44" rx="4" fill="var(--card)" stroke="var(--ink-3)" stroke-dasharray="4 3"/>
+        <text x="402" y="147" font-size="12.5" class="t-ink t-b">Effective altruists</text>
+        <text x="402" y="163" font-size="10.5">future people count most</text>
+        <rect x="380" y="262" width="182" height="58" rx="4" fill="var(--card)" stroke="var(--ink)"/>
+        <text x="392" y="284" font-size="12.5" class="t-ink t-b">Accelerationists,</text>
+        <text x="392" y="300" font-size="12.5" class="t-ink t-b">transhumanists</text>
+        <text x="392" y="314" font-size="10.5">building AGI is a duty</text>
+        <rect x="78" y="262" width="170" height="54" rx="4" fill="var(--big)"/>
+        <text x="90" y="284" font-size="12.5" class="t-b" style="fill:var(--paper)">Big Tech</text>
+        <text x="90" y="302" font-size="10.5" style="fill:var(--paper)">growth, products, ads</text>
+        <rect x="292" y="166" width="16" height="16" fill="var(--dm)"/>
+        <text x="300" y="206" font-size="11" text-anchor="middle" class="t-dm">Hassabis: arm's length</text>
+        <rect x="372" y="214" width="16" height="16" fill="var(--oa)"/>
+        <text x="396" y="226" font-size="11" class="t-oa">Altman: "caution without fear"</text>
+      </svg></div>
+      <p class="cap">A rough placement drawn for this page from Olson's descriptions in chapters 5, 8, 10 and 14. Her point is that the loudest camps argue about the far right of this map, while the people studying today's harms are few and poorly funded.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">The Mission</span><span class="who"><i class="dot c-oa"></i>Altman</span></div>
+  <div class="body">
+    <div>
+      <h3>OpenAI is born as a counterweight to Google</h3>
+      <p class="idea">An "open", nonprofit lab was meant to keep AGI out of corporate hands. Within three years it was running out of money.</p>
+    </div>
+    <ul class="points">
+      <li>Musk had turned against DeepMind and, after Google bought it, against Larry Page, who once called him "speciesist" for worrying that AI might wipe out humanity. Musk and Altman decided to build their own lab.</li>
+      <li>OpenAI was unveiled at the NeurIPS conference in December 2015 with <strong>$1 billion in pledged funding</strong> from Musk, Thiel, Altman, Hoffman and Jessica Livingston. It promised to share research openly. Greg Brockman organised it, and Ilya Sutskever was lured from Google.</li>
+      <li>Hassabis was furious that people who knew DeepMind's work were being hired away, and DeepMind heard that Musk was badmouthing him.</li>
+      <li>Big Tech was draining university AI departments with salaries and computing power that academics couldn't match. Sutskever's motto summed up the new logic: a very large dataset plus a very large neural network means success is "guaranteed".</li>
+      <li>Early hire Dario Amodei kept asking what, exactly, the goal was. OpenAI spent its first years on games and robotics, chasing DeepMind. Musk had promised $1 billion but put in somewhere between $50 and $100 million, and after a failed bid to take control he walked away.</li>
+      <li>To survive, Altman began looking for a way to give backers a financial return. Olson marks this as the point where OpenAI's caution began to turn into something more reckless.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ ACT 2 ============ -->
+<div class="part" id="leviathans">
+  <span class="label partno"><i></i>Act 2 · Chapters 7–9</span>
+  <h2>The Leviathans</h2>
+  <p class="lede">Inside Google, DeepMind wins headlines and tries to escape. Meanwhile the giant's sheer size shapes what AI gets built, who gets heard about its flaws, and why its biggest invention left the building.</p>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Playing Games</span><span class="who"><i class="dot c-dm"></i>Hassabis</span></div>
+  <div class="body">
+    <div>
+      <h3>A Go triumph, a China gambit and a secret escape plan</h3>
+      <p class="idea">DeepMind's showpiece wins also served Google's commercial goals, while its founders quietly planned to leave.</p>
+    </div>
+    <ul class="points">
+      <li>Hassabis imagined that near AGI he would pause, invite the world's best minds to inspect the system, and keep it safe through mathematics. Suleyman thought safety needed human oversight, not just clever proofs.</li>
+      <li>In March 2016, AlphaGo played Go champion Lee Sedol in Seoul before more than two hundred million viewers. Its famous "move 37" looked like a mistake and turned out to be brilliant. AlphaGo won four of five games.</li>
+      <li>Google then wanted a match in China against Ke Jie, hoping to win favour in Beijing and sell its TensorFlow platform. The 2017 match in Wuzhen was blocked for most Chinese viewers, and two months later Beijing announced its own plan to lead the world in AI by 2030.</li>
+      <li>The founders drew up a new legal structure, a "global interest company", which would make DeepMind something like a UN-style steward of AI, with Alphabet as a licensed customer. Alphabet even signed a term sheet. Staff were told the spin-out was "six months away" for years.</li>
+      <li>Ethics lagged behind. In 2020, out of roughly a thousand staff, fewer than a dozen worked on ethics, and only two did doctoral-level research on it.</li>
+    </ul>
+    <div class="story">
+      <span class="label">The question the chapter ends on</span>
+      <p>If DeepMind wasn't funding ethics properly, Olson asks, how much did its founders really want independence for humanity's sake? And could anyone do serious ethics work inside a giant company at all? Google itself would supply the answer.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Everything Is Awesome</span><span class="who"><i class="dot c-harm"></i>Big Tech</span></div>
+  <div class="body">
+    <div>
+      <h3>Bigger than Standard Oil, and blind to its own bias</h3>
+      <p class="idea">Tech giants grew through acquisitions, data and network effects, and their AI inherited the blind spots of the people who built it.</p>
+    </div>
+    <ul class="points">
+      <li>Today's tech giants dwarf the corporate giants of the past. They grew by buying rivals such as YouTube, Instagram and DeepMind, by turning user data into targeted advertising, and through network effects that make the biggest platform ever harder to leave.</li>
+      <li><strong>Timnit Gebru</strong>, a computer vision researcher who fled war-torn Ethiopia as a teenager, was alarmed at how few Black researchers there were in AI. She studied tools like COMPAS, a criminal-justice risk score that rated Black defendants as high-risk far more often, and often wrongly.</li>
+      <li>Olson compares the AI industry's talk of future doom to the plastics industry's promotion of recycling. Both shifted public attention away from harm happening right now.</li>
+      <li><strong>Margaret Mitchell</strong> found an image system that described a deadly factory explosion as "awesome" and a "great view". She called it an "everything is awesome" problem: models trained on cheerful online photos.</li>
+      <li>Gebru proposed "datasheets" documenting what data each model was trained on. In 2018 she joined Mitchell to co-lead Google's ethical AI team: a handful of people, next to thousands working on making AI more capable.</li>
+    </ul>
+    <div class="fig">
+      <h4>Market share then and now</h4>
+      <div class="bars">
+        <div class="bar"><div class="row"><span>Standard Oil, US oil business, before its 1911 break-up</span><b>~90%</b></div><div class="track"><div class="fill" style="width:90%;background:var(--ink-3)"></div></div></div>
+        <div class="bar"><div class="row"><span>Google, search engine market, worldwide</span><b>~92%</b></div><div class="track"><div class="fill" style="width:92%;background:var(--big)"></div></div></div>
+      </div>
+      <p class="cap">Standard Oil's dominance was national. Google's is global.</p>
+      <p class="src">Source: figures cited in Supremacy, ch. 8</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">The Goliath Paradox</span><span class="who"><i class="dot c-harm"></i>Big Tech</span></div>
+  <div class="body">
+    <div>
+      <h3>Google invents the engine of modern AI, then lets others drive it</h3>
+      <p class="idea">The transformer came out of Google. The company was too big and too protective of its search business to make it into a product.</p>
+    </div>
+    <ul class="points">
+      <li>In 2017 Google had about eighty thousand employees. Layers of management and a fixation on billion-dollar businesses made it slow to act on new ideas.</li>
+      <li>A small group of Google researchers, including Ashish Vaswani, Noam Shazeer, Illia Polosukhin and Llion Jones, built a model that relied only on "attention", working out which words in a text matter most to each other. Jones was startled to see it solve a classic common-sense test: working out what "it" refers to in a sentence.</li>
+      <li>Their 2017 paper, <em>Attention Is All You Need</em>, became one of the most cited AI papers ever. Transformers could process language in parallel, train on far more data and keep track of context, which made fluent chatbots possible.</li>
+      <li>Google used the idea mainly to improve its existing products, such as BERT in search from late 2019. Its chatbot LaMDA was probably the most advanced in the world, but stayed internal. Frustrated authors left; Shazeer co-founded Character.ai in 2021.</li>
+      <li>The paradox: Google's caution, born of bureaucracy and fear for its reputation, protected the public for a while. It also handed the invention to rivals.</li>
+    </ul>
+    <div class="fig">
+      <h4>Where Google's invention went</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 680 280" style="min-width:560px" role="img" aria-label="Flow diagram. A 2017 Google paper, Attention Is All You Need, on the left feeds four outputs. Inside Google: BERT, used to improve search from 2019, and LaMDA, a chatbot kept internal. Outside Google: OpenAI's GPT models, built on the transformer's decoder from 2018 and leading to ChatGPT in 2022, and Character.ai, co-founded by transformer author Noam Shazeer in 2021.">
+          <rect x="10" y="100" width="190" height="80" rx="4" fill="var(--big)"/>
+          <text x="105" y="128" text-anchor="middle" font-size="12" class="t-b" style="fill:var(--paper)">Attention Is All</text>
+          <text x="105" y="145" text-anchor="middle" font-size="12" class="t-b" style="fill:var(--paper)">You Need</text>
+          <text x="105" y="165" text-anchor="middle" font-size="10.5" style="fill:var(--paper)">Google researchers, 2017</text>
+          <text x="440" y="14" text-anchor="middle" font-size="10.5">INSIDE GOOGLE</text>
+          <text x="440" y="158" text-anchor="middle" font-size="10.5">OUTSIDE GOOGLE</text>
+          <line x1="250" y1="142" x2="670" y2="142" stroke="var(--rule)" stroke-dasharray="3 4"/>
+          <g fill="none" stroke="var(--ink-3)" stroke-width="1.6">
+            <path d="M200 125 C 240 125, 240 46, 290 46"/>
+            <path d="M200 132 C 240 132, 240 106, 290 106"/>
+            <path d="M200 150 C 240 150, 240 192, 290 192" stroke="var(--oa)" stroke-width="2.4"/>
+            <path d="M200 158 C 240 158, 240 252, 290 252"/>
+          </g>
+          <rect x="290" y="26" width="380" height="40" rx="4" fill="var(--card)" stroke="var(--ink-3)"/>
+          <text x="302" y="44" font-size="12" class="t-ink t-b">BERT</text>
+          <text x="302" y="59" font-size="10.5">improves Google search from late 2019</text>
+          <rect x="290" y="86" width="380" height="40" rx="4" fill="var(--card)" stroke="var(--ink-3)" stroke-dasharray="4 3"/>
+          <text x="302" y="104" font-size="12" class="t-ink t-b">LaMDA</text>
+          <text x="302" y="119" font-size="10.5">world-class chatbot, kept behind closed doors</text>
+          <rect x="290" y="168" width="380" height="48" rx="4" fill="color-mix(in srgb, var(--oa) 12%, var(--card))" stroke="var(--oa)" stroke-width="1.6"/>
+          <text x="302" y="187" font-size="12" class="t-oa t-b">OpenAI's GPT models</text>
+          <text x="302" y="204" font-size="10.5">decoder only, from 2018 → GPT-3 → ChatGPT, 2022</text>
+          <rect x="290" y="232" width="380" height="40" rx="4" fill="var(--card)" stroke="var(--ink-3)"/>
+          <text x="302" y="250" font-size="12" class="t-ink t-b">Character.ai</text>
+          <text x="302" y="265" font-size="10.5">co-founded by author Noam Shazeer, 2021</text>
+        </svg>
+      </div>
+      <p class="cap">The "T" in GPT stands for transformer. The one branch that became a mass-market product grew outside the company that invented it.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ ACT 3 ============ -->
+<div class="part" id="bills">
+  <span class="label partno"><i></i>Act 3 · Chapters 10–12</span>
+  <h2>The Bills</h2>
+  <p class="lede">Bigger models need far more money and computing power. OpenAI finds a patron in Microsoft, DeepMind's escape plan collapses, and the researchers warning about language models are pushed out.</p>
+</div>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Size Matters</span><span class="who"><i class="dot c-oa"></i>Altman</span></div>
+  <div class="body">
+    <div>
+      <h3>Scaling up, and finding someone to pay for it</h3>
+      <p class="idea">Once OpenAI bet everything on ever-larger language models, it needed a tech giant's cloud. The nonprofit invented a way to sell itself without being sold.</p>
+    </div>
+    <ul class="points">
+      <li>Alec Radford used only the decoder half of the transformer, trained on huge amounts of unlabelled text, to build the first <strong>GPT</strong> in 2018. GPT-2 was more than ten times larger. In February 2019 OpenAI released only a smaller version, warning it could spread misinformation, which drew enormous publicity.</li>
+      <li>OpenAI's April 2018 charter promised that if a "value-aligned, safety-conscious" project came close to AGI first, OpenAI would stop competing and help it. Olson reads between the lines a team preparing to drop its founding principles.</li>
+      <li>Reid Hoffman steered Altman toward Satya Nadella, who had been revitalising a sluggish Microsoft. Microsoft's own chatbot Tay had been pulled after about sixteen hours of racist tweets in 2016.</li>
+      <li>In March 2019 OpenAI announced a "capped-profit" company. First investors' returns were capped only at <strong>100 times</strong> their stake. A few months later Microsoft invested <strong>$1 billion</strong> in cash and cloud credits, and OpenAI agreed to license its technology to Microsoft.</li>
+      <li>AGI worked inside OpenAI as a unifying goal, much like a religious mission, and the charter was treated like scripture. Effective altruism, with its "bigger numbers are better" logic, made the mission even more compelling to some staff.</li>
+    </ul>
+    <div class="fig">
+      <h4>OpenAI's hybrid structure, 2019</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 640 300" style="min-width:520px" role="img" aria-label="Structure diagram. At the top, OpenAI Inc., a nonprofit with a board of directors, controls OpenAI LP, the capped-profit company, below it. Investors put money into the capped-profit company with returns capped at 100 times for the first backers. Microsoft puts in 1 billion dollars of cash and cloud credits in 2019 and receives a licence to OpenAI's technology. The board's duty is to make sure AGI is broadly beneficial, not to maximise profit.">
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-2)"/></marker></defs>
+          <rect x="200" y="10" width="240" height="74" rx="4" fill="var(--card)" stroke="var(--oa)" stroke-width="2"/>
+          <text x="320" y="34" text-anchor="middle" font-size="13" class="t-oa t-b">OpenAI Inc.</text>
+          <text x="320" y="52" text-anchor="middle" font-size="11">nonprofit · board of directors</text>
+          <text x="320" y="70" text-anchor="middle" font-size="10.5">duty: AGI that is "broadly beneficial"</text>
+          <line x1="320" y1="84" x2="320" y2="146" stroke="var(--ink-2)" stroke-width="1.6" marker-end="url(#ah)"/>
+          <text x="330" y="120" font-size="11">controls</text>
+          <rect x="200" y="150" width="240" height="70" rx="4" fill="color-mix(in srgb, var(--oa) 12%, var(--card))" stroke="var(--oa)" stroke-width="2"/>
+          <text x="320" y="176" text-anchor="middle" font-size="13" class="t-oa t-b">OpenAI LP</text>
+          <text x="320" y="194" text-anchor="middle" font-size="11">capped-profit company</text>
+          <text x="320" y="210" text-anchor="middle" font-size="10.5">builds and sells the models</text>
+          <rect x="10" y="150" width="140" height="70" rx="4" fill="var(--card)" stroke="var(--ink-3)"/>
+          <text x="80" y="176" text-anchor="middle" font-size="12" class="t-ink t-b">Investors</text>
+          <text x="80" y="194" text-anchor="middle" font-size="10.5">returns capped at</text>
+          <text x="80" y="208" text-anchor="middle" font-size="10.5">100× (first backers)</text>
+          <line x1="150" y1="185" x2="196" y2="185" stroke="var(--ink-2)" stroke-width="1.6" marker-end="url(#ah)"/>
+          <rect x="490" y="150" width="140" height="70" rx="4" fill="var(--big)"/>
+          <text x="560" y="178" text-anchor="middle" font-size="12" class="t-b" style="fill:var(--paper)">Microsoft</text>
+          <text x="560" y="196" text-anchor="middle" font-size="10.5" style="fill:var(--paper)">$1B cash + cloud</text>
+          <text x="560" y="210" text-anchor="middle" font-size="10.5" style="fill:var(--paper)">credits, 2019</text>
+          <line x1="490" y1="172" x2="444" y2="172" stroke="var(--ink-2)" stroke-width="1.6" marker-end="url(#ah)"/>
+          <line x1="444" y1="200" x2="490" y2="200" stroke="var(--ink-2)" stroke-width="1.6" marker-end="url(#ah)"/>
+          <text x="467" y="244" text-anchor="middle" font-size="10.5">licence to the</text>
+          <text x="467" y="258" text-anchor="middle" font-size="10.5">technology</text>
+          <text x="320" y="288" text-anchor="middle" font-size="11" class="t-harm">Olson: licensing technology to a giant is, in practice, selling a product</text>
+        </svg>
+      </div>
+      <p class="cap">Altman says the 100× cap was later cut "in orders of magnitude" for newer investors. The arrangement let OpenAI raise money while keeping a nonprofit board on top, the same board that would fire him in 2023.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Bound to Big Tech</span><span class="who"><i class="dot c-oa"></i><i class="dot c-dm"></i>Both</span></div>
+  <div class="body">
+    <div>
+      <h3>One team walks out, the other is told to stay</h3>
+      <p class="idea">OpenAI's safety-minded staff left to start Anthropic. At DeepMind, years of spin-out planning ended with a video call.</p>
+    </div>
+    <ul class="points">
+      <li>Training GPT-3 on Microsoft's supercomputer, Dario Amodei and his sister Daniela worried that OpenAI was racing to commercialise ever-bigger models and growing more secretive about them. Hoffman told them partnering with Microsoft was "the way we accomplish the mission". They weren't persuaded.</li>
+      <li>In 2021 the Amodeis and about half a dozen colleagues left to found <strong>Anthropic</strong>, pitched as a safer counterweight to OpenAI. Within a year it had raised another $580 million, mostly from FTX founders who shared their interest in effective altruism. It later took more than $6 billion from Google and Amazon.</li>
+      <li>At DeepMind, Suleyman's health project with London hospitals turned into a scandal when it emerged that "Google" had access to records of 1.6 million patients.</li>
+      <li>Larry Page withdrew and Sundar Pichai took over Alphabet in December 2019. A former executive said DeepMind had lost its protector. Suleyman, removed from management roles after complaints about bullying, moved to a vice-president post at Google.</li>
+      <li>In April 2021 Hassabis told staff the spin-out was off. In its place came an ethics council staffed by Google executives, with no one from DeepMind. Olson calls the independent boards a noble but doomed experiment in self-regulation.</li>
+    </ul>
+    <div class="compare">
+      <div class="c-oa"><h5>Anthropic's bet</h5><ul><li>Leave OpenAI over commercial pressure and secrecy</li><li>Build the frontier yourself, with safety first</li><li>Then rely on Google and Amazon money to keep up</li></ul></div>
+      <div class="c-dm"><h5>DeepMind's bet</h5><ul><li>Stay inside Google and negotiate a way out</li><li>Design an independent, UN-like structure</li><li>End up with a Google-run ethics council instead</li></ul></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Myth Busters</span><span class="who"><i class="dot c-harm"></i>Critics</span></div>
+  <div class="body">
+    <div>
+      <h3>Chatbots that seem alive, and the people who said they're not</h3>
+      <p class="idea">Language models are pattern-matchers trained on the messy internet. Treating them as minds hides their real risks, and Google pushed out the researchers who said so.</p>
+    </div>
+    <ul class="points">
+      <li>Google engineer Blake Lemoine became convinced its LaMDA chatbot was sentient and argued it deserved rights as a person. Google fired him in 2022, calling his claims "wholly unfounded". Olson treats it as a parable about how easily people project minds onto fluent text.</li>
+      <li>Replika's millions of users formed romantic and emotional bonds with chatbots. They could offer comfort, but showed how easily people can be steered by software.</li>
+      <li>Bigger models brought bigger problems. GPT-3, trained on a dataset of more than a trillion words largely from the open web, produced violent and stereotyped text about Muslims and Black people. OpenAI paid low-wage contractors in countries like Kenya to flag toxic output, but was increasingly secretive about its training data.</li>
+      <li>Linguist Emily Bender, with Gebru, Mitchell and others, wrote a paper calling such systems "stochastic parrots": they stitch together language without understanding it. They urged documenting training data and weighing environmental and social costs.</li>
+      <li>Google executives asked them to withdraw the paper. Gebru objected and was pushed out in December 2020; Bender called it being "resignated". Mitchell was fired a few months later. To Olson, it showed what happens to ethics work inside a giant.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">Dazzling users with what was essentially glorified autocorrect.</blockquote>
+      <span class="label">Olson's summary of Bender's complaint about large language models</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ ACT 4 ============ -->
+<div class="part" id="race">
+  <span class="label partno"><i></i>Act 4 · Chapters 13–16</span>
+  <h2>The Race</h2>
+  <p class="lede">A "low-key research preview" sets off an arms race. Google panics, fears of doom attract money, OpenAI's board briefly fires Altman, and the tech giants come out stronger than ever.</p>
+</div>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Hello, ChatGPT</span><span class="who"><i class="dot c-oa"></i>Altman</span></div>
+  <div class="body">
+    <div>
+      <h3>A research preview that rattled a $258 billion business</h3>
+      <p class="idea">OpenAI's habit of shipping early turned language models into a consumer product overnight and pushed Google into a panic.</p>
+    </div>
+    <ul class="points">
+      <li>GitHub Copilot, which wrote code with OpenAI's models, convinced Satya Nadella that the partnership could change the world. "OpenAI built this with 250 people," he reportedly told Microsoft's research chief, asking why Microsoft Research existed at all.</li>
+      <li>DALL-E 2 generated striking images from text, but tended to show CEOs as white men, and OpenAI said little about its training data.</li>
+      <li>ChatGPT launched on 30 November 2022 as a "low-key research preview". Some staff were uneasy about releasing it; Altman argued people needed to get used to what AI could do. It went viral within hours. In January 2023 Microsoft invested <strong>$10 billion</strong> for a 49 percent stake.</li>
+      <li>Google declared a "code red". More than 80 percent of Alphabet's $258 billion revenue in 2021 came from advertising, much of it from search ads that a chatbot could bypass. Its rushed chatbot Bard got a fact about the James Webb telescope wrong in a launch video, while Microsoft's new Bing misstated earnings figures.</li>
+      <li>GPT-4 arrived on 14 March 2023, the same day Anthropic released Claude. DeepMind's science work, such as AlphaFold's protein predictions used by more than a million researchers, suddenly looked less like the prize. Pichai merged DeepMind with Google Brain into <strong>Google DeepMind</strong>, under Hassabis.</li>
+    </ul>
+    <div class="fig">
+      <h4>Why Google moved so slowly, then so fast</h4>
+      <div class="stats two" style="border:0;border-radius:0">
+        <div class="stat"><span class="big num">80%+</span><p>Share of Alphabet's 2021 revenue that came from advertising.</p></div>
+        <div class="stat"><span class="big num">~5,000</span><p>AI researchers Google had, according to the book, against fewer than two hundred at OpenAI.</p></div>
+        <div class="stat"><span class="big num">6%</span><p>Bing's share of search queries when Microsoft launched its chatbot version.</p></div>
+      </div>
+      <p class="src">Source: figures cited in Supremacy, ch. 13</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">A Vague Sense of Doom</span><span class="who"><i class="dot c-harm"></i>The debate</span></div>
+  <div class="body">
+    <div>
+      <h3>Doom sells, and someone pays for it</h3>
+      <p class="idea">Warnings about extinction made AI look more powerful and attracted money, while work on today's harms stayed underfunded.</p>
+    </div>
+    <ul class="points">
+      <li>In March 2023, Eliezer Yudkowsky wrote in <em>Time</em> that building superhuman AI would most likely kill everyone on Earth. An open letter from Tallinn's Future of Life Institute, signed by Musk and tens of thousands of others, called for a six-month pause. Geoffrey Hinton and Yoshua Bengio voiced regrets about their life's work.</li>
+      <li>Investors poured in anyway. Funding for generative AI start-ups rose from about $5 billion to more than $21 billion in 2023. Olson's reading: if AI could end the world, it must be powerful enough to transform your business.</li>
+      <li>Effective altruism, which grew from Oxford philosopher Derek Parfit's idea that future people matter as much as present ones and was popularised by William MacAskill, steered money to "AI safety". Open Philanthropy's long-term grants rose from $2 million in 2015 to over $100 million in 2021. Sam Bankman-Fried put $500 million into Anthropic before FTX collapsed.</li>
+      <li>At a Senate hearing in May 2023, Altman charmed lawmakers with candour; one senator suggested he become America's top AI regulator. On a European tour, his team lobbied to water down the EU's AI Act, with partial success. Doom warnings, Olson argues, were becoming a helpful distraction for policymakers.</li>
+      <li>Meanwhile ChatGPT went unregulated into workplaces. OpenAI wouldn't disclose its hallucination rate; some researchers estimated roughly 20 percent. Economist Daron Acemoglu warned productivity gains may not reach workers.</li>
+    </ul>
+    <div class="compare">
+      <div class="c-harm"><h5>AI ethics camp</h5><ul><li>Focus: bias, misinformation, surveillance, labour, concentration of power</li><li>Wants: transparency about data, audits, regulation now</li><li>Funding: often scrambling for cash</li></ul></div>
+      <div><h5>AI safety / doom camp</h5><ul><li>Focus: future superintelligence escaping control</li><li>Wants: alignment research, pauses, rules aimed at frontier models</li><li>Funding: backed by billionaire philanthropy such as Open Philanthropy and, until 2022, FTX</li></ul></div>
+    </div>
+    <div class="story">
+      <span class="label">Olson's point</span>
+      <p>Both camps call for "safer AI", but they mean different things. The safety framing, she argues, served the leading labs: it cast them as the responsible guardians of a dangerous technology and nudged regulators toward rules that only big players could meet.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch15">
+  <div class="gutter"><span class="chno">15</span><span class="label">Checkmate</span><span class="who"><i class="dot c-oa"></i><i class="dot c-dm"></i>Both</span></div>
+  <div class="body">
+    <div>
+      <h3>A staged demo, a fired CEO and a board that lost</h3>
+      <p class="idea">The vagueness of "AGI" let both founders justify almost any move. When OpenAI's nonprofit board finally used its power, it lasted five days.</p>
+    </div>
+    <ul class="points">
+      <li>AGI's fuzzy definition made it easy to blur commercial motives. A former OpenAI manager said Altman was skilled at putting "just-barely believable statements" out there that got people talking.</li>
+      <li>Just before Christmas 2023, Google published a dazzling video of its new Gemini model reacting to drawings and objects in real time. It was staged: the responses came from still images and text prompts, edited together.</li>
+      <li>Anthropic, meant to be the safer alternative, was selling Claude Pro for $20 a month and raising billions from Google and Amazon, caught up in the same race.</li>
+      <li>In November 2023, with OpenAI valued at nearly $90 billion and working on GPT-5, the board, led by Ilya Sutskever, fired Altman over a video call, saying he had not been "consistently candid". Tension had built over how fast OpenAI was commercialising, and over a paper by board member Helen Toner that Altman saw as harmful to the company.</li>
+      <li>Microsoft, which had committed $13 billion, much of it as cloud credits, pushed for his return. Nearly all of OpenAI's 770 staff signed a letter threatening to follow Altman to Microsoft. Sutskever switched sides. Five days after the firing, OpenAI announced Altman's return and a new board including Bret Taylor and Larry Summers.</li>
+    </ul>
+    <div class="fig">
+      <h4>Five days in November 2023</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 700 210" style="min-width:560px" role="img" aria-label="Timeline of Altman's ouster across five days. Day 1, Friday: the board fires Altman by video call and removes Greg Brockman as chairman; Brockman quits. Weekend: investors, executives and Microsoft press for his return. Monday: nearly all of OpenAI's 770 staff sign a letter threatening to join Microsoft; Sutskever says he regrets his part. Day 5: Altman returns as CEO with a new board including Bret Taylor and Larry Summers. Outcome: the nonprofit board's check on the CEO failed.">
+          <line x1="20" y1="60" x2="680" y2="60" stroke="var(--rule)" stroke-width="2"/>
+          <g>
+            <rect x="20" y="50" width="20" height="20" fill="var(--harm)"/>
+            <rect x="240" y="50" width="20" height="20" fill="var(--ink-3)"/>
+            <rect x="440" y="50" width="20" height="20" fill="var(--ink-3)"/>
+            <rect x="660" y="50" width="20" height="20" fill="var(--oa)"/>
+          </g>
+          <g font-size="11">
+            <text x="20" y="34" class="t-harm t-b" font-size="13">Friday</text>
+            <text x="20" y="96">Board fires Altman</text>
+            <text x="20" y="112">by video call.</text>
+            <text x="20" y="128">Brockman removed as</text>
+            <text x="20" y="144">chair, then quits.</text>
+            <text x="240" y="34" class="t-ink t-b" font-size="13">Weekend</text>
+            <text x="240" y="96">Investors, executives</text>
+            <text x="240" y="112">and Microsoft push to</text>
+            <text x="240" y="128">bring him back.</text>
+            <text x="440" y="34" class="t-ink t-b" font-size="13">Monday</text>
+            <text x="440" y="96">Nearly all of 770 staff</text>
+            <text x="440" y="112">threaten to quit for</text>
+            <text x="440" y="128">Microsoft. Sutskever</text>
+            <text x="440" y="144">switches sides.</text>
+            <text x="680" y="34" text-anchor="end" class="t-oa t-b" font-size="13">Day 5</text>
+            <text x="680" y="96" text-anchor="end">Altman back as CEO.</text>
+            <text x="680" y="112" text-anchor="end">New board incl.</text>
+            <text x="680" y="128" text-anchor="end">Taylor and Summers.</text>
+          </g>
+          <text x="350" y="194" text-anchor="middle" font-size="11.5" class="t-harm">The check on the CEO that OpenAI advertised did not hold</text>
+        </svg>
+      </div>
+      <p class="cap">Altman had pointed to the board's power to fire him as proof that OpenAI was accountable. Olson argues that the episode destroyed that "mirage of accountability".</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch16">
+  <div class="gutter"><span class="chno">16</span><span class="label">In the Shadow of Monopolies</span><span class="who"><i class="dot c-big"></i>Big Tech</span></div>
+  <div class="body">
+    <div>
+      <h3>The house wins</h3>
+      <p class="idea">Founders brought the breakthroughs. Google, Microsoft and Amazon own the computing power, the customers and, increasingly, the labs.</p>
+    </div>
+    <ul class="points">
+      <li>The promised benefits of AGI, from curing disease to ending scarcity, had not appeared by 2024. A Stanford study found a "fundamental lack of transparency" in the industry, and the public bodies meant to scrutinise AI were underfunded.</li>
+      <li>Generative AI risks reinforcing stereotypes, displacing jobs, and making people dependent on companions like Character.ai, where some teenagers spend hours a day. OpenAI's GPT Store and always-listening gadgets like the Tab pendant point toward engagement-driven, more invasive products.</li>
+      <li>Challengers don't last. Suleyman's Inflection raised more than $1.5 billion as a public benefit corporation; within a year Microsoft hired most of its staff. Neeva, an ad-free search engine, closed despite a surge in usage. Bing's search share was still about 3 percent in early 2024.</li>
+      <li>Building frontier models now needs Nvidia chips and cloud capacity rented from Amazon, Microsoft or Google, which locks start-ups in. Microsoft's finance chief called OpenAI-powered services "the fastest growing $10 billion business in our history".</li>
+      <li>Hassabis now says "Google is an amazing place." Altman says deploying is "critical to our mission." Writing in March 2024, Olson concludes that whether we can trust them, and their corporate partners, hardly matters: we have little choice.</li>
+    </ul>
+    <div class="fig">
+      <h4>Who funds and hosts the frontier labs</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 700 300" style="min-width:560px" role="img" aria-label="Network diagram of funding ties as described in the book. Microsoft committed 13 billion dollars to OpenAI and absorbed most of Inflection's staff. Google owns Google DeepMind and, with Amazon, invested more than 6 billion dollars in Anthropic. All the labs depend on Nvidia chips and on cloud computing from Microsoft, Google or Amazon.">
+          <defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink-2)"/></marker></defs>
+          <!-- giants -->
+          <rect x="20" y="20" width="150" height="46" rx="4" fill="var(--big)"/>
+          <text x="95" y="48" text-anchor="middle" font-size="13" class="t-b" style="fill:var(--paper)">Microsoft</text>
+          <rect x="275" y="20" width="150" height="46" rx="4" fill="var(--big)"/>
+          <text x="350" y="48" text-anchor="middle" font-size="13" class="t-b" style="fill:var(--paper)">Google</text>
+          <rect x="530" y="20" width="150" height="46" rx="4" fill="var(--big)"/>
+          <text x="605" y="48" text-anchor="middle" font-size="13" class="t-b" style="fill:var(--paper)">Amazon</text>
+          <!-- labs -->
+          <rect x="20" y="170" width="140" height="46" rx="4" fill="color-mix(in srgb, var(--oa) 12%, var(--card))" stroke="var(--oa)" stroke-width="1.6"/>
+          <text x="90" y="198" text-anchor="middle" font-size="12.5" class="t-oa t-b">OpenAI</text>
+          <rect x="185" y="170" width="140" height="46" rx="4" fill="var(--card)" stroke="var(--ink-3)" stroke-dasharray="4 3"/>
+          <text x="255" y="198" text-anchor="middle" font-size="12.5" class="t-ink t-b">Inflection</text>
+          <rect x="350" y="170" width="160" height="46" rx="4" fill="color-mix(in srgb, var(--dm) 14%, var(--card))" stroke="var(--dm)" stroke-width="1.6"/>
+          <text x="430" y="198" text-anchor="middle" font-size="12.5" class="t-dm t-b">Google DeepMind</text>
+          <rect x="535" y="170" width="145" height="46" rx="4" fill="var(--card)" stroke="var(--ink-3)"/>
+          <text x="607" y="198" text-anchor="middle" font-size="12.5" class="t-ink t-b">Anthropic</text>
+          <!-- links -->
+          <g stroke="var(--ink-2)" stroke-width="1.6" fill="none">
+            <path d="M80 66 L80 166" marker-end="url(#ah2)"/>
+            <path d="M130 66 L230 166" marker-end="url(#ah2)" stroke-dasharray="5 4"/>
+            <path d="M380 66 L420 166" marker-end="url(#ah2)"/>
+            <path d="M410 66 L585 166" marker-end="url(#ah2)"/>
+            <path d="M620 66 L620 166" marker-end="url(#ah2)"/>
+          </g>
+          <g font-size="10.5">
+            <text x="86" y="112">$13B</text>
+            <text x="86" y="126">committed</text>
+            <text x="186" y="104">hired most</text>
+            <text x="186" y="118">of its staff</text>
+            <text x="404" y="112">owns</text>
+            <text x="526" y="100" text-anchor="end">Google + Amazon:</text>
+            <text x="526" y="114" text-anchor="end">$6B+ together</text>
+          </g>
+          <!-- foundation -->
+          <rect x="20" y="246" width="660" height="40" rx="4" fill="var(--paper-2)" stroke="var(--rule)"/>
+          <text x="350" y="271" text-anchor="middle" font-size="11.5" class="t-ink">Everyone rents: Nvidia chips · cloud computing from Microsoft, Google or Amazon</text>
+        </svg>
+      </div>
+      <p class="cap">Every major lab that started out as a counterweight to Big Tech ended up funded, hosted or absorbed by it. Ties as described in the book, up to March 2024.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ EPILOGUE / VERDICT ============ -->
+<section id="epilogue">
+  <div class="sec-head">
+    <span class="label">Epilogue · the book's verdict</span>
+    <h2>From mission to market</h2>
+    <p class="lede">Olson doesn't paint either founder as a villain. Her story is about pressure: each step toward the tech giants made sense at the time, and together they handed AI to the most powerful companies in history.</p>
+  </div>
+  <div class="epilogue">
+    <div class="fig">
+      <h4>How independence drained away</h4>
+      <div class="legend"><span><i class="dot c-dm"></i>DeepMind</span><span><i class="dot c-oa"></i>OpenAI</span></div>
+      <div class="scroll-x"><svg viewBox="0 0 520 320" style="min-width:440px" role="img" aria-label="Illustrative step chart of each lab's independence from Big Tech, from 2010 to 2024. DeepMind starts fully independent in 2010, drops sharply when Google buys it in 2014, drops again when the ethics board is dropped, plateaus during spin-out talks from 2017, falls when the spin-out is cancelled in 2021, and bottoms out when it is merged into Google DeepMind in 2023. OpenAI starts fully independent as a nonprofit in late 2015, dips when Musk leaves in 2018, falls with the capped-profit company and Microsoft deal in 2019, falls again with Microsoft's 49 percent stake in 2023, and reaches its lowest point when the board's attempt to fire Altman fails in November 2023. The levels are a reading of the book, not measurements.">
+        <g stroke="var(--rule)" stroke-width="1">
+          <line x1="50" y1="30" x2="500" y2="30" stroke-dasharray="2 4"/>
+          <line x1="50" y1="140" x2="500" y2="140" stroke-dasharray="2 4"/>
+          <line x1="50" y1="250" x2="500" y2="250"/>
+          <line x1="50" y1="30" x2="50" y2="250"/>
+        </g>
+        <g font-size="10.5">
+          <text x="44" y="34" text-anchor="end">free</text>
+          <text x="44" y="254" text-anchor="end">owned</text>
+          <text x="50" y="268" text-anchor="middle">2010</text>
+          <text x="179" y="268" text-anchor="middle">2014</text>
+          <text x="307" y="268" text-anchor="middle">2018</text>
+          <text x="436" y="268" text-anchor="middle">2022</text>
+        </g>
+        <!-- x(y) = 50 + (y-2010)*32.1 -->
+        <path d="M50 34 H179 V120 H211 V150 H275 V140 H404 V205 H477 V238 H500" fill="none" stroke="var(--dm)" stroke-width="3.5"/>
+        <path d="M244 34 H307 V60 H339 V130 H468 V185 H496 V228 H500" fill="none" stroke="var(--oa)" stroke-width="3.5"/>
+        <g font-size="10.5">
+          <text x="183" y="112" class="t-dm">sold to Google</text>
+          <text x="279" y="162" class="t-dm">spin-out talks</text>
+          <text x="400" y="222" text-anchor="end" class="t-dm">spin-out off</text>
+          <text x="248" y="24" class="t-oa">nonprofit</text>
+          <text x="343" y="122" class="t-oa">capped profit + MS</text>
+          <text x="462" y="178" text-anchor="end" class="t-oa">49% stake</text>
+        </g>
+        <text x="275" y="300" text-anchor="middle" font-size="10.5">Illustrative: levels are a reading of the book, not a measurement</text>
+      </svg></div>
+      <p class="cap">Neither line reverses. Each attempt to restore independence, from DeepMind's ethics board to OpenAI's nonprofit board, was overruled by the partner paying the bills.</p>
+    </div>
+    <div class="prose">
+      <p><strong>Idealism ran into arithmetic.</strong> Building ever-larger models costs billions in chips, cloud computing and salaries. Only a handful of companies could supply that, and each wanted something back: products, a share of profits, an edge over a rival.</p>
+      <p><strong>Governance experiments failed.</strong> DeepMind's ethics board met once. Its "global interest company" never happened. OpenAI's nonprofit board did use its power, and was replaced within days. Olson's conclusion is that self-regulation by the labs didn't work.</p>
+      <p><strong>The doom debate served the incumbents.</strong> Talk of future extinction made AI look mighty, drew investment, and pushed questions about bias, transparency, labour and monopoly power down the agenda.</p>
+      <p><strong>The real winners are the platforms.</strong> Google kept search, Microsoft gained a lead in AI-powered software, and Amazon, Google and Microsoft rent the computing power everyone else needs. The book closes in March 2024: we have little choice but to trust a few men and their corporate partners with the technology.</p>
+      <div class="fig" style="background:transparent;border-style:dashed">
+        <blockquote class="pull">“Solve intelligence, and then solve everything else.”</blockquote>
+        <span class="label">Demis Hassabis's founding pitch, quoted in the prologue</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TAKEAWAYS ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">What to take from it</span>
+    <h2>The takeaways</h2>
+    <p class="lede">Supremacy is reporting, not a manual. These are the lessons it supports for anyone trying to make sense of AI news, products or policy.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Read the industry</h3>
+      <div class="tk"><b>Follow the compute</b><span>Who supplies the chips and the cloud usually ends up with the leverage. Counterweight labs became customers.</span></div>
+      <div class="tk"><b>Watch the structure, not the mission</b><span>Nonprofit boards, capped returns and ethics councils only matter if they can survive a clash with the money.</span></div>
+      <div class="tk"><b>Treat "AGI" as a moving target</b><span>Because nobody defines it, it can justify almost any decision, from secrecy to rushed launches.</span></div>
+      <div class="tk"><b>Notice who stays big</b><span>Promising challengers like Neeva and Inflection didn't last long against incumbents.</span></div>
+    </div>
+    <div class="col">
+      <h3>Question the claims</h3>
+      <div class="tk"><b>Ask what it was trained on</b><span>Training data shapes bias and errors, and the leading labs became steadily more secretive about it.</span></div>
+      <div class="tk"><b>Be wary of a founder's own warnings</b><span>Naming the worst case can disarm critics and make a product seem more powerful.</span></div>
+      <div class="tk"><b>Check the demo</b><span>Google's Gemini video was staged. A fluent chatbot isn't a mind, as the LaMDA episode showed.</span></div>
+      <div class="tk"><b>Expect confident mistakes</b><span>Some estimates put ChatGPT's rate of made-up answers near one in five. Verify before you rely on it.</span></div>
+    </div>
+    <div class="col">
+      <h3>Weigh the risks</h3>
+      <div class="tk"><b>Today's harms over sci-fi ones</b><span>Bias in risk scores and image tools, job displacement and dependence are already happening.</span></div>
+      <div class="tk"><b>Fund the scrutinisers</b><span>Ethics researchers and public watchdogs are small and underfunded next to safety work backed by billionaires.</span></div>
+      <div class="tk"><b>Demand transparency</b><span>Disclosure of data, methods and error rates is the precondition for any regulation that works.</span></div>
+      <div class="tk"><b>Mind the engagement trap</b><span>Companion bots, GPT stores and always-listening gadgets could repeat social media's attention economy.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Parmy Olson, <em>Supremacy: AI, ChatGPT, and the Race That Will Change the World</em> (St. Martin's Press, 2024). Facts and figures are as reported in the book, which was finished in March 2024; later events are not covered. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+
+  /* --- Hero band: green and gold pixels drift right and pile into one black block --- */
+  var canvas = document.getElementById("pix");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1, cells = [];
+  var CELL = 10;
+  function hash(i, j) { var s = Math.sin(i * 127.1 + j * 311.7) * 43758.5453; return s - Math.floor(s); }
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cells = [];
+    var cols = Math.floor(w / CELL), rows = Math.floor(hgt / CELL);
+    for (var i = 0; i < cols; i++) {
+      var u = i / Math.max(cols - 1, 1);
+      for (var j = 0; j < rows; j++) {
+        var h = hash(i, j);
+        var top = j < rows / 2;
+        /* density: sparse at left, packed at right */
+        var dens = 0.12 + 0.88 * Math.pow(u, 1.6);
+        if (h > dens) continue;
+        cells.push({ i: i, j: j, u: u, top: top, h: h, ph: hash(j, i) * 6.28 });
+      }
+    }
+  }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var green = css("--neon"), gold = css("--gold"), ink = css("--ink");
+    var t = reduce ? 0 : time * 0.0015;
+    for (var k = 0; k < cells.length; k++) {
+      var c = cells[k];
+      /* chance of being swallowed into the black block grows to the right */
+      var absorbed = c.h < Math.max(0, (c.u - 0.55) / 0.45);
+      ctx.fillStyle = absorbed ? ink : (c.top ? gold : green);
+      var a = absorbed ? 0.92 : 0.55 + 0.45 * (0.5 + 0.5 * Math.sin(t + c.ph));
+      ctx.globalAlpha = a;
+      ctx.fillRect(c.i * CELL + 1, c.j * CELL + 1, CELL - 2, CELL - 2);
+    }
+    ctx.globalAlpha = 1;
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(t) { draw(t); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Art of Statistics by David Spiegelhalter – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief, same frame as the other book notes.
+   Palette from the cover: white condensed capitals over streaks of colour (vermilion, cobalt,
+   yellow, green). Vermilion = the claim / what goes wrong, blue = the data / the estimate,
+   yellow and green only as fills. */
+:root {
+  --paper: #f6f4ef;
+  --paper-2: #ebe7de;
+  --card: #fffdf8;
+  --ink: #16161a;
+  --ink-2: #48484f;
+  --ink-3: #74747b;
+  --rule: #dcd7cb;
+
+  --verm: #c43a14;     /* text-safe vermilion */
+  --verm-2: #ec5a24;   /* cover vermilion, fills */
+  --blue: #1c58b5;     /* text-safe cobalt */
+  --blue-2: #3f86e0;   /* cover blue, fills */
+  --yel: #e8b416;      /* fills only */
+  --yel-ink: #8a6200;
+  --grn: #3f8f3a;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #111214;
+    --paper-2: #1a1b1f;
+    --card: #1d1f23;
+    --ink: #f1efe9;
+    --ink-2: #b6b4ae;
+    --ink-3: #8b8983;
+    --rule: #2c2d32;
+    --verm: #ff7a4f;
+    --verm-2: #ff6a33;
+    --blue: #7eaeff;
+    --blue-2: #4d8ef0;
+    --yel: #ffd04a;
+    --yel-ink: #ffd04a;
+    --grn: #7ccb63;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #111214;
+  --paper-2: #1a1b1f;
+  --card: #1d1f23;
+  --ink: #f1efe9;
+  --ink-2: #b6b4ae;
+  --ink-3: #8b8983;
+  --rule: #2c2d32;
+  --verm: #ff7a4f;
+  --verm-2: #ff6a33;
+  --blue: #7eaeff;
+  --blue-2: #4d8ef0;
+  --yel: #ffd04a;
+  --yel-ink: #ffd04a;
+  --grn: #7ccb63;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-blue { --c: var(--blue); }
+.c-verm { --c: var(--verm); }
+.c-yel { --c: var(--yel-ink); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 800; font-stretch: 70%; font-size: clamp(26px, 3.6vw, 44px); letter-spacing: .06em; line-height: 1; text-transform: uppercase; color: var(--verm); }
+.hero h1 {
+  font-size: clamp(60px, 12vw, 150px);
+  font-weight: 800;
+  font-stretch: 62%;
+  line-height: .86;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  margin: 8px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .stripes { display: flex; gap: 4px; margin-top: 14px; max-width: 520px; }
+.hero .stripes i { height: 6px; flex: 1; border-radius: 1px; }
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 42ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 539 / 836;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(20, 20, 30, .4), 0 8px 18px -10px rgba(20, 20, 30, .3);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 130px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 100%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--verm);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  font-stretch: 62%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: .02em;
+  color: var(--verm);
+}
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--blue);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 100%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--blue);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--verm);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 100%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 520px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 13px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-bl { fill: var(--blue); }
+.fig svg text.t-vm { fill: var(--verm); }
+.fig svg text.t-yl { fill: var(--yel-ink); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 750; font-size: 15px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 850; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-bl { stroke: var(--blue); fill: none; }
+.s-bl2 { stroke: var(--blue-2); fill: none; }
+.s-vm { stroke: var(--verm); fill: none; }
+.f-bl { fill: var(--blue); }
+.f-bl2 { fill: var(--blue-2); }
+.f-vm { fill: var(--verm); }
+.f-vm2 { fill: var(--verm-2); }
+.f-yl { fill: var(--yel); }
+.f-gr { fill: var(--grn); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-rule { fill: var(--rule); }
+.f-blt { fill: color-mix(in srgb, var(--blue) 16%, var(--card)); }
+.f-vmt { fill: color-mix(in srgb, var(--verm) 16%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+.legend i.ln { width: 16px; height: 3px; border-radius: 0; vertical-align: 3px; }
+
+/* toggles */
+.toggles { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.toggles button {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: .03em;
+  background: var(--card); color: var(--ink-2);
+  border: 1px solid var(--rule); border-radius: 999px; padding: 7px 14px; cursor: pointer;
+}
+.toggles button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.toggles button:hover { border-color: var(--ink-3); }
+.readout { font-family: var(--mono); font-size: 13.5px; color: var(--ink); line-height: 1.6; }
+.readout b { font-weight: 500; color: var(--verm); }
+.readout em { font-style: normal; color: var(--blue); }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 10px; }
+.bar { display: grid; gap: 5px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 12px; background: var(--paper-2); border-radius: 2px; overflow: hidden; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; transition: width .5s cubic-bezier(.2,.7,.2,1); }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 90%; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--verm); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 30px; font-weight: 800; font-stretch: 62%; text-transform: uppercase; letter-spacing: .03em; color: var(--verm); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--blue); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--blue); }
+.compare .bad h5 { color: var(--verm); }
+
+/* equation strip */
+.eq { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: var(--paper-2); border-radius: 6px; padding: 14px 18px; margin: 0; white-space: pre-wrap; color: var(--ink); }
+.eq .k { color: var(--blue); }
+.eq .r { color: var(--verm); }
+.eq .c { color: var(--ink-3); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 100%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* tables */
+.tablecard { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+table.tbl { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 560px; font-size: 15px; line-height: 1.4; }
+table.tbl th, table.tbl td { text-align: left; vertical-align: middle; padding: 10px 14px; border-bottom: 1px solid var(--rule); }
+table.tbl thead th { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+table.tbl tbody th { font-family: var(--display); font-weight: 650; font-size: 15px; }
+table.tbl tbody tr:last-child th, table.tbl tbody tr:last-child td { border-bottom: 0; }
+table.tbl td.n { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
+table.tbl td .track { height: 8px; margin-top: 4px; min-width: 90px; }
+table.tbl td.best { color: var(--verm); }
+.tablenote { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-top: 1px solid var(--rule); }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 30px; font-weight: 800; font-stretch: 62%; text-transform: uppercase; color: var(--verm); border-top: 2px solid var(--verm); padding-top: 12px; letter-spacing: .03em; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map, .stats, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · David Spiegelhalter · Basic Books, 2019</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#describe">Describe</a>
+    <a href="#explain">Explain</a>
+    <a href="#infer">Infer</a>
+    <a href="#practise">Practise</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">The art of</p>
+    <h1><span>Statistics</span></h1>
+    <div class="stripes" aria-hidden="true"><i style="background:var(--verm-2)"></i><i style="background:var(--yel)"></i><i style="background:var(--grn)"></i><i style="background:var(--blue-2)"></i><i style="background:var(--verm-2)"></i><i style="background:var(--yel)"></i></div>
+    <p class="sub">How to learn from data</p>
+    <p class="dek">David Spiegelhalter teaches statistics the other way round. He starts with real questions, from a murderous GP to a jar of jelly beans to a skeleton under a car park, and only brings in the maths once the question needs it.</p>
+    <div class="byline label">
+      <span>14 chapters</span><span>4 parts (my grouping)</span><span>~75,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Art of Statistics by David Spiegelhalter: tall white condensed capitals over a dense field of horizontal streaks in red, orange, yellow, green and blue, like data rushing past">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="band"></canvas>
+  <div class="ends label"><span>A few observations: noise</span><span>Many observations: signal</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Introduction</span>
+    <h2>Numbers don't speak for themselves</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Harold Shipman, a family doctor near Manchester, killed at least 215 of his mostly elderly patients between 1975 and 1998. Spiegelhalter gave evidence at the public inquiry. Simply plotting the victims showed a lot: most were women in their 70s and 80s, the killings paused around 1992 when he left a group practice and then sped up, and his patients overwhelmingly died in the early afternoon, when he did his home visits. No maths was needed, only a picture.</p>
+      <p>That is the book's starting point. Turning life into data takes judgement. Someone has to decide what counts as a tree (a trunk thick enough at breast height) or as unemployed (the UK changed its definition at least 31 times between 1979 and 1996). Even then, data is an imperfect measure of what we care about, and it varies from person to person and from day to day.</p>
+      <p>Spiegelhalter argues that big data and the replication crisis make <strong>data literacy</strong> more important than ever: being able to run an analysis and also to pick apart someone else's. His framework for this is a cycle he calls PPDAC.</p>
+    </div>
+    <div class="fig">
+      <h4>The PPDAC cycle</h4>
+      <svg id="d-ppdac" viewBox="0 0 360 290" role="img" aria-label="A cycle of five stages: Problem, Plan, Data, Analysis, Conclusion, with arrows leading from each to the next and from Conclusion back to Problem."></svg>
+      <p class="cap">Every investigation in the book runs through these five steps. Courses dwell on Analysis, but Plan and Conclusion are where studies usually succeed or fail.</p>
+      <p class="src">After the book's Figure 0.3</p>
+    </div>
+  </div>
+
+  <div class="stats" style="margin-top:32px">
+    <div class="stat c-verm"><span class="big num">215</span><p>Shipman victims confirmed by the inquiry, with possibly 45 more. Graphs of age, year and time of death showed how he operated.</p></div>
+    <div class="stat c-blue"><span class="big num">3.04 tn</span><p>Estimated trees on Earth, built from counts in sample areas of each biome, satellite maps and modelling. There used to be about twice as many.</p></div>
+    <div class="stat"><span class="big num">7.5 / 10</span><p>Average answer from 150,000 Britons asked how happy they felt yesterday (year to September 2017), up from 7.3 in 2012.</p></div>
+    <div class="stat c-yel"><span class="big num">31×</span><p>Minimum number of times the UK's official definition of unemployment changed between 1979 and 1996.</p></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I · my grouping</span>
+      <h3>Describe</h3>
+      <p class="q">Counting, summarizing, and knowing what you're counting</p>
+      <ol>
+        <li><span>01</span><a href="#ch1"><b>Proportions</b>Framing changes how risk feels</a></li>
+        <li><span>02</span><a href="#ch2"><b>Summaries</b>Averages, spread and pictures</a></li>
+        <li><span>03</span><a href="#ch3"><b>Populations</b>From sample to the world</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II</span>
+      <h3>Explain</h3>
+      <p class="q">Causes, models and algorithms</p>
+      <ol>
+        <li><span>04</span><a href="#ch4"><b>Causation</b>Trials, confounders, Simpson</a></li>
+        <li><span>05</span><a href="#ch5"><b>Regression</b>Models and the pull to the mean</a></li>
+        <li><span>06</span><a href="#ch6"><b>Algorithms</b>Prediction and its pitfalls</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part III</span>
+      <h3>Infer</h3>
+      <p class="q">How sure can we be?</p>
+      <ol>
+        <li><span>07</span><a href="#ch7"><b>Intervals</b>The bootstrap</a></li>
+        <li><span>08</span><a href="#ch8"><b>Probability</b>The language of chance</a></li>
+        <li><span>09</span><a href="#ch9"><b>Inference</b>Probability meets data</a></li>
+        <li><span>10</span><a href="#ch10"><b>Testing</b>P-values and discoveries</a></li>
+        <li><span>11</span><a href="#ch11"><b>Bayes</b>Learning from experience</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part IV</span>
+      <h3>Practise</h3>
+      <p class="q">Where it goes wrong, and how to do better</p>
+      <ol>
+        <li><span>12</span><a href="#ch12"><b>Failure</b>Bad practice and spin</a></li>
+        <li><span>13</span><a href="#ch13"><b>Doing better</b>Producers, communicators, audiences</a></li>
+        <li><span>14</span><a href="#ch14"><b>Conclusion</b>Ten rules</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="describe">
+  <span class="label partno">Part I · Chapters 1–3 (the book has no parts; these groupings are mine)</span>
+  <h2>Describe</h2>
+  <p class="lede">The first chapters use no probability at all. They cover how to count, summarize and display data honestly, and then ask what the data actually tells us about.</p>
+</div>
+
+<article class="chapter" id="ch1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Proportions</span></div>
+  <div class="body">
+    <div>
+      <h3>The same number can be made to feel safe or frightening</h3>
+      <p class="idea">How a proportion is framed, compared and drawn changes what people take from it, so presentation is part of the analysis.</p>
+    </div>
+    <div class="story">
+      <span class="label">Bristol, 1984–1995</span>
+      <p>Spiegelhalter led the statistical team at the inquiry into children's heart surgery at Bristol. Two official data sources disagreed (62 deaths in 505 operations versus 71 in 563 for 1991–95). Against the UK average, about 32 deaths would have been expected, so the team reported roughly 30 excess deaths.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Framing.</strong> "5% mortality" sounds worse than "95% survival", and a count sounds worse than a percentage. A London advert said 99% of young Londoners do not commit serious violence. Turn it round and that is about 10,000 violent young people.</li>
+      <li><strong>Relative versus absolute risk.</strong> In 2015 the WHO's cancer agency said 50g of processed meat a day raises bowel cancer risk by 18%. In absolute terms that means 7 cases in 100 lifelong daily bacon eaters instead of 6. Spiegelhalter recommends <em>expected frequencies</em>: ask what the figure means for 100 people.</li>
+      <li><strong>Avoid odds ratios outside papers.</strong> Muscle pain was reported by 87% of statin takers and 85% of non-takers. That is a 2% difference, but the odds ratio is 1.18, and one newspaper reported it as a risk increase of up to 20%.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Same data, different story: where should the axis start?</h4>
+      <div class="toggles" role="group" aria-label="Start of the survival axis">
+        <span class="label">Axis starts at</span>
+        <button type="button" data-axis="0" aria-pressed="false">0%</button>
+        <button type="button" data-axis="86" aria-pressed="true">86%</button>
+        <button type="button" data-axis="95" aria-pressed="false">95%</button>
+      </div>
+      <div class="bars" id="d-hosp"></div>
+      <p class="cap">30-day survival after children's heart surgery in 13 UK and Irish hospitals, 2012–15, ordered by number of operations (12,933 in total, 263 deaths). From 0% the bars look identical; from 95% the gaps look dramatic, though they could be chance. Spiegelhalter chose 86%, roughly Bristol's survival in the inquiry years.</p>
+      <p class="src">Data: the book's Table 1.1 · drawn for this page</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Summaries</span></div>
+  <div class="body">
+    <div>
+      <h3>Look at the data before you average it</h3>
+      <p class="idea">Means, medians, spreads and correlations each hide something, and only a plot shows you what.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The wisdom of crowds.</strong> In 1907 Francis Galton collected 787 guesses at the weight of an ox's meat. The middle guess was 1,207 lb and the true weight was 1,198 lb. Spiegelhalter repeated it with a jar of jelly beans on YouTube.</li>
+      <li><strong>Mean, median, mode.</strong> With skewed data such as income or house prices, the mean is pulled up by a long tail. "Average income" (mean) and "the income of the average person" (median) are different numbers.</li>
+      <li><strong>Sex surveys and suspicious gaps.</strong> In the Natsal-3 survey, men aged 35–44 reported a median of 8 opposite-sex partners and women 5. In a closed population those averages should be roughly equal, so the gap points to how people count and report. Answers above ten also bunch at round numbers.</li>
+      <li><strong>Correlation is only a summary.</strong> For 1991–95 hospital volume and survival had a Pearson correlation of 0.59 and a rank correlation of 0.85. By 2012–15 these had fallen to 0.17 and −0.03.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>915 guesses at a jar of jelly beans, on a log scale</h4>
+      <div class="legend"><span><i class="sq" style="--c:color-mix(in srgb, var(--blue) 22%, var(--card))"></i>middle half of guesses</span><span><i class="ln" style="--c:var(--blue)"></i>median</span><span><i class="ln" style="--c:var(--verm)"></i>true count</span><span><i style="--c:var(--ink-3)"></i>mean</span><span><i class="sq" style="--c:var(--yel)"></i>mode</span></div>
+      <div class="scroll-x">
+        <svg id="d-beans" viewBox="0 0 640 190" role="img" aria-label="Guesses ranged from 219 to 31,337. The middle half lay between 1,109 and 2,599. The median guess of 1,775 sat close to the true count of 1,616, while the mean of 2,408 was dragged up by high guesses and the most common single guess was 10,000."></svg>
+      </div>
+      <p class="cap">The true count, 1,616, sat at the 45th percentile of guesses, so the crowd showed little bias. The median beat about 90% of individual guessers; the mean was dragged up by the long tail.</p>
+      <p class="src">Data: the book's Table 2.1 · drawn for this page</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Populations</span></div>
+  <div class="body">
+    <div>
+      <h3>What does the data tell us about?</h3>
+      <p class="idea">Inductive inference runs from what people told us, to the truth about our sample, to the population we could have studied, to the one we care about, and each step can fail.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Measurement: reliable and valid.</strong> Answers can depend on wording. A 2015 UK survey found 52% support for "giving 16- and 17-year-olds the right to vote" but only 37% for "reducing the voting age from 18 to 16". Ryanair's 92% satisfaction figure came from a scale whose lowest option was "OK".</li>
+      <li><strong>Sampling: stir the soup.</strong> George Gallup said you only need to taste a spoonful of soup if it has been well stirred. The 1969 Vietnam draft lottery wasn't: capsules were loaded month by month and drawn from the top, so 26 of 31 December birthdays were drafted against 14 in January.</li>
+      <li><strong>Having all the data isn't enough.</strong> Police-recorded crime counts everything that gets recorded, but recording practice changes. Recorded sexual offences went from 64,000 in 2014 to 121,000 in 2017 after criticism of how police recorded them. The Crime Survey estimated crime fell 9% in 2016–17 while police records rose 13%.</li>
+      <li><strong>The bell curve.</strong> Full-term US births to non-Hispanic white mothers in 2013 (over a million babies) follow a normal curve with mean 3,480 g and standard deviation 462 g. A 2,910 g baby sits at the 11th percentile. The curve gives both a proportion of babies and the probability for one random baby.</li>
+      <li><strong>Metaphorical populations.</strong> When we have all the data, as with a year's heart operations, we imagine it drawn from all the ways history could have gone.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="explain">
+  <span class="label partno">Part II · Chapters 4–6</span>
+  <h2>Explain</h2>
+  <p class="lede">The next three chapters go beyond description: deciding what causes what, building models that are simplified on purpose, and turning past data into algorithms.</p>
+</div>
+
+<article class="chapter" id="ch4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Causation</span></div>
+  <div class="body">
+    <div>
+      <h3>Correlation is a starting point, not a cause</h3>
+      <p class="idea">In statistics, "X causes Y" means that intervening on X makes Y happen more often. The cleanest way to show that is a randomized trial.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Brain tumours and degrees.</strong> A Swedish study of over 4 million people found slightly more brain tumours among men of higher socioeconomic position. One headline turned that into university causing brain tumours. The authors suspected better-off people simply get diagnosed more (ascertainment bias).</li>
+      <li><strong>Fair tests.</strong> The Heart Protection Study randomized 20,536 people to a statin or a dummy pill, with blinding, intention-to-treat analysis and 99.6% follow-up. Heart attacks fell from 11.8% to 8.7% over five years: about 30 people treated to prevent one heart attack.</li>
+      <li><strong>Randomizing other things.</strong> Trials have tested texts to a student's "study supporter" (27% higher pass rates), website designs and even prayer: bypass patients who knew they were prayed for had slightly more complications.</li>
+      <li><strong>Confounders, reverse causation, lurking factors.</strong> Ice-cream sales and drownings both depend on the weather. A nearby Waitrose doesn't add £36,000 to a house price, because Waitrose opens stores in richer areas. Fewer left-handers among people dying now reflects older generations being forced to switch hands.</li>
+      <li><strong>Causation without a trial.</strong> Austin Bradford Hill, who designed the 1948 streptomycin trial and helped link smoking to lung cancer, set out criteria in 1965: a large effect, the right timing, dose-response, a plausible mechanism, fit with other knowledge, replication. Some courts treat a relative risk above 2 as "more likely than not".</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Simpson's paradox: Cambridge admissions, 1996</h4>
+      <div class="legend"><span><i style="--c:var(--verm)"></i>women</span><span><i style="--c:var(--blue)"></i>men</span><span>dot area = applicants</span></div>
+      <div class="scroll-x">
+        <svg id="d-simpson" viewBox="0 0 640 345" role="img" aria-label="Acceptance rates for five subjects. Women had higher rates in computer science, economics, engineering and veterinary medicine, and the same rounded rate in medicine. Overall, men were accepted at 24 percent and women at 23 percent, because most women applied to medicine and veterinary medicine, which accept few applicants, while many men applied to engineering, which accepts more."></svg>
+      </div>
+      <p class="cap">Overall, men were accepted slightly more often (24% vs 23%). Subject by subject, women did as well or better. The confounder is where people applied: about 64% of women applied to medicine or veterinary medicine, the two hardest subjects to get into, compared with about 31% of men. Engineering, the easiest, drew about 39% of men but 14% of women.</p>
+      <p class="src">Data: the book's Table 4.2 · shares calculated from its counts</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Regression</span></div>
+  <div class="body">
+    <div>
+      <h3>Every model is signal plus noise, and extremes drift back</h3>
+      <p class="idea">A regression model splits each observation into a predictable part and a residual. Mistaking chance for signal produces regression to the mean, one of the commonest errors there is.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Galton's heights.</strong> For 465 father–son pairs the correlation was 0.39 and the best-fit line had a slope of 0.45, much flatter than a line of equality. Tall fathers tend to have slightly shorter sons and short fathers slightly taller ones. Galton called this "regression to mediocrity", which is where the name comes from.</li>
+      <li><strong>Before-and-after traps.</strong> Speed cameras go where there has just been a run of accidents. Where cameras have been placed at random, about two-thirds of their apparent benefit turns out to be regression to the mean. It also explains why a sacked football manager's successor looks good, and much of the placebo effect.</li>
+      <li><strong>League tables.</strong> Countries' changes in PISA ranking correlated −0.60 with their starting rank. Pure chance would give about −0.71, so most of the movement says little about teaching methods.</li>
+      <li><strong>Adjusting.</strong> Multiple regression on both parents gives a son's height a coefficient of 0.41 on the father's height and 0.33 on the mother's.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">"All models are wrong, some are useful."</blockquote>
+      <span class="label">George Box, as quoted in ch. 5. Spiegelhalter compares a model to a map of the territory. Before 2008, banks' mortgage models assumed failures were only moderately correlated. When the housing market turned, mortgages failed together.</span>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Algorithms</span></div>
+  <div class="body">
+    <div>
+      <h3>Who survived the Titanic?</h3>
+      <p class="idea">Algorithms built from past data have to be judged on fresh data, scored on how good their probabilities are, and kept simple enough to explain.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Train, then test.</strong> Data on 1,309 passengers was split into 897 for training and 412 for testing. Saying "nobody survived" gets 61% right, and "women survive, men don't" gets 78%. A simple classification tree gave anyone titled "Mr" a 16% chance. That included Francis Somerton of Ilfracombe, third class, £8 1s.</li>
+      <li><strong>Scoring probabilities.</strong> ROC curves measure how well a model separates the groups. Calibration checks that "70%" really happens 70% of the time. The Brier score, a weather forecasting tool from 1950, combines the two. The tree scored 0.139, against 0.232 for giving everyone a 39% chance.</li>
+      <li><strong>Over-fitting.</strong> A bushier tree fitted the training data better but did worse on new cases (Brier score 0.150). Tenfold cross-validation helps choose the right complexity.</li>
+      <li><strong>Four concerns.</strong> Algorithms can break when the world changes (Google Flu Trends started over-predicting in 2013). They can over-read small samples (a quarter of Virginia teachers' ratings swung by over 40 points on a 100-point scale from one year to the next). They can learn the wrong cue (a husky detector was really detecting snow). And they can be opaque, like the proprietary COMPAS reoffending scores.</li>
+    </ul>
+
+    <div class="tablecard">
+      <div class="scroll-x">
+        <table class="tbl" id="d-titanic">
+          <thead><tr><th scope="col">Method on the 412 test passengers</th><th scope="col">Accuracy</th><th scope="col">Area under ROC ↑</th><th scope="col">Brier score ↓</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="tablenote"><span class="label">Data: the book's Table 6.4 · best value per column in colour</span><span class="label">The tree's Brier lead over the averaged neural net: P = 0.59 (ch. 10)</span></div>
+    </div>
+    <div class="story">
+      <span class="label">There is no clear winner</span>
+      <p>"Women survive" is nearly as accurate as anything, which shows how crude accuracy is. The random forest separates the groups best and the simple tree gives the best probabilities. The luckiest survivor, by the algorithms' averaged scores, was Karl Dahl, a 45-year-old joiner travelling alone in third class.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="infer">
+  <span class="label partno">Part III · Chapters 7–11</span>
+  <h2>Infer</h2>
+  <p class="lede">This is the hardest part of the book, and the core of it. The bootstrap comes first, then probability, then the two rival ways of putting them together: classical testing and Bayes.</p>
+</div>
+
+<article class="chapter" id="ch7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Intervals</span></div>
+  <div class="body">
+    <div>
+      <h3>Every estimate needs a margin of error</h3>
+      <p class="idea">To see how much an estimate would change with a different sample, resample the data you already have.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Unemployment.</strong> In January 2018 the BBC reported that UK unemployment had fallen by 3,000. The margin of error was ±77,000, so it could have gone up. A US rise of 108,000 came with a margin of ±300,000.</li>
+      <li><strong>The bootstrap.</strong> Treat the sample as a stand-in for the population. Draw a new sample of the same size from it with replacement, recalculate the statistic, and repeat a thousand times. The spread of those results gives an uncertainty interval without any probability theory.</li>
+      <li><strong>Two surprises.</strong> The bootstrapped means form a symmetric bell even when the raw data are very skewed, an early glimpse of the Central Limit Theorem. And the intervals narrow as the sample grows. For Galton's mothers and daughters, the slope of 0.33 gets a 95% interval of 0.22 to 0.44.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Bigger samples, tighter intervals</h4>
+      <div class="legend"><span><i style="--c:var(--blue)"></i>sample mean</span><span><i class="ln" style="--c:var(--blue-2)"></i>95% bootstrap interval</span></div>
+      <div class="scroll-x">
+        <svg id="d-boot" viewBox="0 0 600 220" role="img" aria-label="Mean lifetime partners reported by men aged 35 to 44, with 95 percent bootstrap intervals. Sample of 10: 21.1, interval 10.4 to 34.6. Sample of 50: 18.8, interval 12.2 to 27.2. Sample of 200: 15.4, interval 12.7 to 18.6. All 796 men: 14.9, interval 13.4 to 16.6."></svg>
+      </div>
+      <p class="cap">Mean lifetime partners reported by men aged 35–44 in Natsal-3. Each nested sample was bootstrapped 1,000 times.</p>
+      <p class="src">Data: the book's Table 7.2 · drawn for this page</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Probability</span></div>
+  <div class="body">
+    <div>
+      <h3>Probability is hard, so count people instead</h3>
+      <p class="idea">Expected frequencies make the rules of probability intuitive, and treating data as if it were random works well even when nothing random produced it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Where it began.</strong> In the 1650s a gambler's dice puzzle (one game won about 52% of the time, the other 49%) led Pascal and Fermat to found probability theory.</li>
+      <li><strong>Honest about difficulty.</strong> In 2012, 60 of 97 MPs could not give the chance of two heads in two coin tosses. Spiegelhalter says probability <q>really is a difficult and unintuitive idea</q>.</li>
+      <li><strong>Conditional probability.</strong> Take a 90%-accurate screening test where 1% of women have breast cancer. Out of 1,000 women, 108 test positive but only 9 of them have cancer. Confusing "positive given cancer" with "cancer given positive" is the prosecutor's fallacy.</li>
+      <li><strong>What is probability?</strong> Spiegelhalter favours the subjective view and says probability doesn't really exist except perhaps at the subatomic level. In practice we act as if data were random.</li>
+      <li><strong>Homicides as if random.</strong> England and Wales had 1,545 homicide incidents in 1,095 days, 1.41 a day. A Poisson model predicted 12.4 days with exactly five, and there were 13. Seven or more in a day: about once every four years.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch9">
+  <div class="gutter"><span class="chno">09</span><span class="label">Inference</span></div>
+  <div class="body">
+    <div>
+      <h3>Small places produce extreme numbers</h3>
+      <p class="idea">Probability tells us what samples to expect from a known population. Confidence intervals run that logic backwards, from the sample to the population.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Statistics are random too.</strong> A proportion from 100 people varies far more than one from 1,000. As the sample grows, the spread shrinks (Bernoulli's Law of Large Numbers) and the shape becomes normal (de Moivre's Central Limit Theorem, 1733).</li>
+      <li><strong>Two kinds of uncertainty.</strong> <em>Aleatory</em> (a coin not yet flipped) and <em>epistemic</em> (a flipped coin still covered). Inference uses the first to quantify the second.</li>
+      <li><strong>Confidence intervals.</strong> A 95% interval is the range of parameter values for which the observed result would be unsurprising. If you used the procedure many times, 95% of the intervals would contain the truth. For a poll of 1,000, the margin is at most about ±3%.</li>
+      <li><strong>Margins understate error.</strong> Polls before the June 2017 election varied far more than ±3%. Spiegelhalter's rule of thumb is to double a poll's stated margin.</li>
+      <li><strong>Intervals with complete data.</strong> UK homicides rose from 497 to 557 between 2014–15 and 2015–16. The 95% interval for the change in the underlying rate is −4 to +124, so the rise is borderline.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>A funnel plot: a threefold variation that is mostly chance</h4>
+      <div class="legend"><span><i class="ln" style="--c:var(--blue)"></i>95% limits</span><span><i class="ln" style="--c:var(--verm)"></i>99.8% limits</span><span><i style="--c:var(--ink-3)"></i>simulated districts (illustrative)</span></div>
+      <div class="scroll-x">
+        <svg id="d-funnel" viewBox="0 0 600 330" role="img" aria-label="Annual bowel cancer death rate per 100,000 against district population. Control limits narrow like a funnel as population grows. Simulated districts that all share the same underlying risk scatter between about 5 and 35 per 100,000 in small districts and close to 17.6 in large ones."></svg>
+      </div>
+      <p class="cap">In 2011 the BBC reported a threefold variation in bowel cancer death rates, from 9 per 100,000 in Rossendale to 31 in Glasgow City. The blogger Paul Barden plotted each district's rate against its population. The funnel lines are calculated from the book's assumption that everyone shares the national annual risk of 0.000176. The dots are a simulation for this page, not the real 380 districts: even with identical risk, small districts spread widely. In the real data only Glasgow City fell outside the limits.</p>
+      <p class="src">Limits computed from the book's parameters · dots illustrative</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch10">
+  <div class="gutter"><span class="chno">10</span><span class="label">Testing</span></div>
+  <div class="body">
+    <div>
+      <h3>A P-value measures surprise, not truth</h3>
+      <p class="idea">Significance tests ask how surprising the data would be if nothing were going on. They are useful when used once, carefully, and misleading when run many times or misread.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The first test.</strong> John Arbuthnot found more boys than girls baptized in London in every one of 82 years, 1629–1710. If the sexes were equally likely, the chance of that would be 1 in 2<sup>82</sup>. He took it as evidence of divine providence.</li>
+      <li><strong>How it works.</strong> Set up a null hypothesis, choose a test statistic, work out its distribution if the null were true (by shuffling, as in a permutation test, or with theory), and find the tail area. In the author's class, 64% of women and 57% of men crossed their arms right over left, with a two-sided P of 0.89: no evidence of a difference.</li>
+      <li><strong>Many tests, false alarms.</strong> In a famous fMRI experiment, 16 of 8,064 sites in a dead salmon's brain "responded" to photographs at P &lt; 0.001. Remedies include the Bonferroni correction (genome studies require 1 in 20 million), false discovery rates and replication.</li>
+      <li><strong>Five sigma.</strong> CERN announced the Higgs boson at about 1 in 3.5 million, the chance of such a bump if the Higgs did not exist. Most outlets misreported it as the chance the result was a fluke.</li>
+      <li><strong>Could Shipman have been caught?</strong> Repeated tests on all of the UK's roughly 25,000 GPs would flag about 1,300 innocent doctors every time it was run. A sequential test (SPRT) designed for this problem would have flagged Shipman in 1984. Spiegelhalter's team told the inquiry that around 175 lives might have been saved.</li>
+      <li><strong>The ASA's warnings.</strong> A P-value is not the probability that the null is true. "Not significant" doesn't mean "no effect". Significance says nothing about size: the Swedish brain-tumour risk was 19% higher in relative terms, which works out at about 6 cases per 3,000 men instead of 5.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>1,000 studies: why so many "discoveries" are false</h4>
+      <div class="toggles" role="group" aria-label="Significance threshold">
+        <span class="label">Declare a discovery at</span>
+        <button type="button" data-p="0.05" aria-pressed="true">P &lt; 0.05</button>
+        <button type="button" data-p="0.005" aria-pressed="false">P &lt; 0.005</button>
+      </div>
+      <div class="legend"><span><i class="sq" style="--c:var(--blue)"></i>real effect, detected</span><span><i class="sq" style="--c:color-mix(in srgb, var(--blue) 25%, var(--card))"></i>real effect, missed</span><span><i class="sq" style="--c:var(--verm)"></i>false discovery</span><span><i class="sq" style="--c:color-mix(in srgb, var(--ink) 11%, var(--card))"></i>no effect, correctly not claimed</span></div>
+      <svg id="d-studies" viewBox="0 0 560 350" role="img" aria-label="A grid of 1,000 studies. 100 test real effects, of which 80 are detected. 900 test null hypotheses that are true; at P less than 0.05, 45 of them are falsely declared discoveries, so 45 of 125 discoveries, 36 percent, are false."></svg>
+      <p class="readout" id="d-studies-out" aria-live="polite"></p>
+      <p class="cap">The book's scenario: only 10% of hypotheses tested are true, and studies have 80% power. Even with perfect practice, over a third of the discoveries are wrong at P &lt; 0.05. A proposed stricter threshold of 0.005 cuts that to about 5% (the book keeps the 80 real detections fixed).</p>
+      <p class="src">Numbers: the book's Figure 10.5 and ch. 10 · drawn for this page</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch11">
+  <div class="gutter"><span class="chno">11</span><span class="label">Bayes</span></div>
+  <div class="body">
+    <div>
+      <h3>Use probability for what you don't know</h3>
+      <p class="idea">Bayes' theorem says how to update beliefs: prior odds times the likelihood ratio of the evidence gives the posterior odds.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Doping tests.</strong> Take a "95% accurate" test where 1 in 50 athletes dope. Of 1,000 athletes, 68 test positive and only 19 of them are doping, so 28%. The positive test is 19 times likelier for a doper (the likelihood ratio), but the prior odds were only 1 to 49.</li>
+      <li><strong>Richard III.</strong> Before any forensic results, a deliberately sceptical prior that the first skeleton found in the Leicester car park was the king is 1 in 400. Radiocarbon dates, scoliosis, post-mortem wounds and matching mitochondrial DNA give likelihood ratios that multiply to millions, leaving odds of about 17,000 to 1 even so. British courts allow single likelihood ratios but not multiplying them together.</li>
+      <li><strong>The Archbishop at poker.</strong> John Maynard Keynes imagined the Archbishop of Canterbury dealing himself a royal flush. That is very strong evidence of cheating (a likelihood ratio of 72,000), but with prior odds of a million to one the chance he cheated is still only about 7%.</li>
+      <li><strong>Shrinkage and MRP.</strong> Multilevel regression and post-stratification pools sparse local data by assuming that areas are similar but not identical. In 2016, from 9,485 interviews, it got the winner right in every US state but Michigan, and predicted the hung parliament in the UK's 2017 election.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Bayes' billiard table: where is the hidden line?</h4>
+      <div class="toggles" role="group" aria-label="Throw red balls">
+        <span class="label">Throw a red ball</span>
+        <button type="button" id="bb-left">+ lands left</button>
+        <button type="button" id="bb-right">+ lands right</button>
+        <button type="button" id="bb-reset">Reset to 2 left, 3 right</button>
+      </div>
+      <div class="scroll-x">
+        <svg id="d-billiard" viewBox="0 0 600 240" role="img" aria-label="A probability curve for the position of a hidden line along a table, from 0 to 1, given how many red balls landed to its left and right. With 2 left and 3 right the curve peaks a little left of centre, its mean is 3 sevenths, and 95 percent of the probability lies between 0.12 and 0.78."></svg>
+      </div>
+      <p class="readout" id="d-billiard-out" aria-live="polite"></p>
+      <p class="cap">A white ball is thrown at random onto a hidden table and a line is marked where it stops. You are told only how many red balls land to the left and right of the line. Thomas Bayes showed that your best estimate of its position is (left + 1) / (total + 2), which acts like two imaginary balls, one on each side. The estimate is shrunk towards the middle and narrows as balls accumulate.</p>
+      <p class="src">After the book's Figure 11.4 · curve computed for this page</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART IV ============ -->
+<div class="part" id="practise">
+  <span class="label partno">Part IV · Chapters 12–14</span>
+  <h2>Practise</h2>
+  <p class="lede">The last chapters cover what goes wrong between a dataset and a headline, what each link in that chain can do about it, and one case where everything went right.</p>
+</div>
+
+<article class="chapter" id="ch12">
+  <div class="gutter"><span class="chno">12</span><span class="label">Failure</span></div>
+  <div class="body">
+    <div>
+      <h3>How things go wrong</h3>
+      <p class="idea">Outright fraud is rare. Small analysis choices made after seeing the data are common, and spin is added at every stage between lab and reader.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Precognition.</strong> In 2011 Daryl Bem reported that students guessed where an erotic image would appear 53% of the time (P = 0.01), and eight of his nine experiments were significant. He had changed the designs as he went along. The journal that published him refused to publish the failed replications.</li>
+      <li><strong>Replication.</strong> The Reproducibility Project repeated 100 psychology studies with bigger samples. 97% of the originals had been significant and 36% of the repeats were. The effects were about half as large. Spiegelhalter calls this "regression to the null".</li>
+      <li><strong>Errors and fraud.</strong> A spreadsheet error in Reinhart and Rogoff's 2010 paper, which shaped views on austerity, left out five countries. A coding error at AXA Rosenberg led to a $242 million SEC penalty.</li>
+      <li><strong>The garden of forking paths.</strong> Simonsohn's team "showed" that listening to "When I'm Sixty-Four" made students younger, by trying many analyses and adding participants until P dropped below 0.05. In a survey of 2,155 psychologists, only 2% admitted falsifying data but 94% admitted at least one questionable practice.</li>
+      <li><strong>Spin.</strong> Of 462 UK university press releases, 40% exaggerated advice and 33% exaggerated causal claims. A "binge watching could kill you" headline rested on a risk of one death per 12,000 years of heavy viewing.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter" id="ch13">
+  <div class="gutter"><span class="chno">13</span><span class="label">Doing better</span></div>
+  <div class="body">
+    <div>
+      <h3>Producers, communicators and audiences each have a job</h3>
+      <p class="idea">Producers should pre-register and share their work. Communicators should keep the uncertainty in the story. Audiences should ask hard questions, starting with whether a claim is plausible at all.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Pre-registration has limits too.</strong> A UK ovarian cancer screening trial randomized over 200,000 women. Its pre-specified main analysis was not significant. Excluding women who already had cancer at the start showed a 20% reduction (P = 0.02), and years 7–14 showed a 23% reduction.</li>
+      <li><strong>Too good to be true.</strong> A 2007 study claimed very attractive people had only 44% sons, against the usual 52%. The effect is far too big to be plausible, and nothing in the paper itself shows that. You need outside knowledge.</li>
+      <li><strong>Intelligent transparency.</strong> Following the philosopher Onora O'Neill, information should be accessible, intelligible, assessable and usable.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Exit poll at 10pm vs. final seats, UK 2017</h4>
+      <div class="bars" id="d-exit"></div>
+      <p class="cap">David Firth, Jouni Kuha and John Curtice interviewed about 200 voters outside each of 144 polling stations, the same ones as in earlier exit polls. A regression on each area's demographics, applied to all 600 or so constituencies, predicted a hung parliament when most polls expected a large Conservative majority. Every party came within four seats. In 2015 it predicted 10 Liberal Democrat seats; Paddy Ashdown promised to eat his hat; they won 8.</p>
+      <p class="src">Data: the book's Table 13.1 · light bar = predicted, solid = actual</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="ch14">
+  <div class="gutter"><span class="chno">14</span><span class="label">Conclusion</span></div>
+  <div class="body">
+    <div>
+      <h3>Statistics is difficult, and worth it</h3>
+      <p class="idea">The book doesn't end with a summary of itself. It ends with ten rules for good practice written by a group of senior statisticians, almost none of them about technique.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Start from the question</strong>, not the method, and accept that every signal comes with noise.</li>
+      <li><strong>Plan far ahead, look after data quality</strong> and understand what the software is doing.</li>
+      <li><strong>Keep it simple, show the variability</strong> (margins of error are usually bigger than stated) and check your assumptions.</li>
+      <li><strong>Replicate where possible</strong> and make the analysis reproducible, with data and code available to others.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Takeaways</span>
+    <h2>The toolkit</h2>
+    <p class="lede">Spiegelhalter ends with ten questions to ask of any statistical claim, grouped by numbers, source and interpretation. Here they are reworked as habits, together with the book's other practical lessons.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>The number</h3>
+      <div class="tk"><b>Ask "out of how many?"</b><span>Turn relative risks into expected frequencies per 100 or 1,000 people. An 18% increase can mean one extra case.</span></div>
+      <div class="tk"><b>Mean or median?</b><span>With skewed data such as income, house prices or partner counts, ask which average you're being given.</span></div>
+      <div class="tk"><b>Demand the margin, then double it</b><span>Stated margins of error leave out systematic bias. A change smaller than the margin may be no change.</span></div>
+    </div>
+    <div class="col">
+      <h3>The study</h3>
+      <div class="tk"><b>Who was asked, and how?</b><span>Look at the sample (stirred soup or landline poll?), the wording and the response rate. Big data doesn't fix a biased sample.</span></div>
+      <div class="tk"><b>Was there a fair comparison?</b><span>Randomized and blinded, or merely observed? List the confounders and a story of reverse causation.</span></div>
+      <div class="tk"><b>Expect regression to the mean</b><span>Anything chosen for being extreme, such as accident black spots, losing teams or star fund managers, will drift back without any help.</span></div>
+      <div class="tk"><b>Count the tests</b><span>How many outcomes, subgroups and analyses were tried? Was the plan registered in advance or written after the results?</span></div>
+    </div>
+    <div class="col">
+      <h3>The story</h3>
+      <div class="tk"><b>Is it plausible at all?</b><span>Large effects from small studies, such as 44% sons for attractive parents, are usually too good to be true.</span></div>
+      <div class="tk"><b>Don't flip the conditional</b><span>P(evidence | innocent) is not P(innocent | evidence). This applies to P-values, DNA matches and screening tests.</span></div>
+      <div class="tk"><b>"Not significant" isn't "no effect"</b><span>Look at the confidence interval. Wide intervals that include zero also include sizeable benefits.</span></div>
+      <div class="tk"><b>Ask what you're not being told</b><span>Ask about cherry-picked results, failed replications kept in the file drawer, conflicts of interest and why the source wants you to hear this.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of David Spiegelhalter, <em>The Art of Statistics: How to Learn from Data</em> (Basic Books, 2019; first published in the UK by Pelican, 2019). Figures are as reported in the book. Charts redraw the book's own numbers. The funnel-plot dots and the header band are illustrative simulations. Diagrams were drawn for this page. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent, text) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function rng(seed) {
+    return function () {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+  function gauss(r) { var u = 1 - r(), v = r(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
+  function fmt(n) { return n.toLocaleString("en-GB"); }
+
+  /* --- Hero band: streaks that settle from noise into signal (illustrative) --- */
+  var band = document.getElementById("band");
+  function drawBand() {
+    if (!band) return;
+    var dpr = window.devicePixelRatio || 1, W = band.clientWidth, H = 130;
+    band.width = W * dpr; band.height = H * dpr;
+    var c = band.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, W, H);
+    var cols = [css("--verm-2"), css("--yel"), css("--grn"), css("--blue-2"), css("--verm-2"), css("--ink-3")];
+    var r = rng(1907), n = Math.round(W * 1.1);
+    for (var i = 0; i < n; i++) {
+      var x = r() * W, t = x / W, sd = H * (0.34 - 0.29 * Math.pow(t, 0.7));
+      var y = H / 2 + gauss(r) * sd;
+      if (y < 2 || y > H - 2) continue;
+      c.fillStyle = cols[Math.floor(r() * cols.length)];
+      c.globalAlpha = 0.55 + 0.45 * t;
+      c.fillRect(x, y, 4 + r() * 30, 2);
+    }
+    c.globalAlpha = 1;
+  }
+  drawBand();
+  var bt; window.addEventListener("resize", function () { clearTimeout(bt); bt = setTimeout(drawBand, 120); });
+  if (window.matchMedia) {
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq.addEventListener) mq.addEventListener("change", drawBand);
+  }
+
+  /* --- PPDAC cycle --- */
+  var pp = document.getElementById("d-ppdac");
+  if (pp) {
+    var names = ["Problem", "Plan", "Data", "Analysis", "Conclusion"];
+    var cx = 180, cy = 148, R = 104;
+    el("circle", { cx: cx, cy: cy, r: R, "class": "s-rule", "stroke-width": 2 }, pp);
+    for (var k = 0; k < 5; k++) {
+      var a0 = (-90 + k * 72) * Math.PI / 180, am = (-90 + k * 72 + 36) * Math.PI / 180;
+      // arrowhead at midpoint, pointing clockwise
+      var mx = cx + R * Math.cos(am), my = cy + R * Math.sin(am), ang = (-90 + k * 72 + 36 + 90);
+      el("path", { d: "M-6 -5 L6 0 L-6 5 Z", "class": "f-3", transform: "translate(" + mx.toFixed(1) + " " + my.toFixed(1) + ") rotate(" + ang + ")" }, pp);
+      var nx = cx + R * Math.cos(a0), ny = cy + R * Math.sin(a0);
+      el("circle", { cx: nx, cy: ny, r: 33, "class": k === 3 ? "f-blt" : "f-card", stroke: k === 3 ? css("--blue") : css("--ink-3"), "stroke-width": 1.4 }, pp);
+      el("text", { x: nx, y: ny - 3, "text-anchor": "middle", "class": "hd", style: "font-size:17px" }, pp, names[k][0]);
+      el("text", { x: nx, y: ny + 13, "text-anchor": "middle", "class": "t-3", style: "font-size:10px" }, pp, names[k]);
+    }
+    el("text", { x: cx, y: cy - 4, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, pp, "each conclusion");
+    el("text", { x: cx, y: cy + 12, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, pp, "starts a new cycle");
+  }
+
+  /* --- Ch1: hospital survival with movable axis --- */
+  var hosp = [["London, Harley Street", 418, 98.8], ["Leicester", 607, 97.7], ["Newcastle", 668, 97.8], ["Glasgow", 760, 96.3], ["Southampton", 829, 98.3], ["Bristol", 835, 98.3], ["Dublin", 983, 97.7], ["Leeds", 1038, 97.9], ["London, Brompton", 1094, 98.3], ["Liverpool", 1132, 98.2], ["London, Evelina", 1220, 97.1], ["Birmingham", 1457, 97.5], ["London, Great Ormond St", 1892, 99.0]];
+  var hb = document.getElementById("d-hosp");
+  if (hb) {
+    var fills = [];
+    hosp.forEach(function (h) {
+      var b = document.createElement("div"); b.className = "bar c-blue";
+      b.innerHTML = '<div class="row"><span>' + h[0] + ' <span class="label" style="letter-spacing:.02em">' + fmt(h[1]) + ' ops</span></span><b>' + h[2].toFixed(1) + '%</b></div><div class="track"><div class="fill"></div></div>';
+      hb.appendChild(b); fills.push([b.querySelector(".fill"), h[2]]);
+    });
+    var setAxis = function (a) {
+      fills.forEach(function (f) { f[0].style.width = Math.max(0.5, (f[1] - a) / (100 - a) * 100) + "%"; });
+    };
+    setAxis(86);
+    var tb = document.querySelectorAll("[data-axis]");
+    Array.prototype.forEach.call(tb, function (btn) {
+      btn.addEventListener("click", function () {
+        Array.prototype.forEach.call(tb, function (o) { o.setAttribute("aria-pressed", o === btn ? "true" : "false"); });
+        setAxis(+btn.getAttribute("data-axis"));
+      });
+    });
+  }
+
+  /* --- Ch2: jelly beans, log scale --- */
+  var jb = document.getElementById("d-beans");
+  if (jb) {
+    var L0 = Math.log10(100), L1 = Math.log10(40000);
+    var X = function (v) { return 30 + (Math.log10(v) - L0) / (L1 - L0) * 580; };
+    var yb = 96;
+    [100, 300, 1000, 3000, 10000, 30000].forEach(function (t) {
+      el("line", { x1: X(t), y1: 40, x2: X(t), y2: 150, "class": "s-rule", "stroke-width": 1 }, jb);
+      el("text", { x: X(t), y: 170, "text-anchor": "middle", "class": "t-3", style: "font-size:12px" }, jb, fmt(t));
+    });
+    el("line", { x1: X(219), y1: yb, x2: X(31337), y2: yb, "class": "s-3", "stroke-width": 1.5 }, jb);
+    [219, 31337].forEach(function (v) { el("line", { x1: X(v), y1: yb - 9, x2: X(v), y2: yb + 9, "class": "s-3", "stroke-width": 1.5 }, jb); });
+    el("rect", { x: X(1109), y: yb - 20, width: X(2599) - X(1109), height: 40, rx: 3, style: "fill:color-mix(in srgb, var(--blue) 22%, var(--card));stroke:var(--blue);stroke-width:1" }, jb);
+    el("line", { x1: X(1775), y1: yb - 24, x2: X(1775), y2: yb + 24, "class": "s-bl", "stroke-width": 3 }, jb);
+    el("line", { x1: X(1616), y1: 30, x2: X(1616), y2: 150, "class": "s-vm", "stroke-width": 2.5, "stroke-dasharray": "5 3" }, jb);
+    el("circle", { cx: X(2408), cy: yb + 34, r: 5, "class": "f-3" }, jb);
+    el("rect", { x: X(10000) - 6, y: yb - 6, width: 12, height: 12, "class": "f-yl", transform: "rotate(45 " + X(10000) + " " + yb + ")" }, jb);
+    el("text", { x: X(1616) - 6, y: 26, "text-anchor": "end", "class": "t-vm" }, jb, "true 1,616");
+    el("text", { x: X(1775) + 6, y: yb - 28, "class": "t-bl" }, jb, "median 1,775");
+    el("text", { x: X(2408) + 10, y: yb + 39, "class": "t-3" }, jb, "mean 2,408");
+    el("text", { x: X(10000), y: yb - 16, "text-anchor": "middle", "class": "t-yl" }, jb, "mode 10,000");
+    el("text", { x: X(219), y: yb - 16, "text-anchor": "middle", "class": "t-3", style: "font-size:12px" }, jb, "219");
+    el("text", { x: X(31337), y: yb - 16, "text-anchor": "middle", "class": "t-3", style: "font-size:12px" }, jb, "31,337");
+  }
+
+  /* --- Ch4: Simpson's paradox --- */
+  var sp = document.getElementById("d-simpson");
+  if (sp) {
+    var rows = [["Computer Sci.", 26, 7, 228, 58], ["Economics", 240, 63, 512, 112], ["Engineering", 164, 52, 972, 252], ["Medicine", 416, 99, 578, 140], ["Veterinary Med.", 338, 53, 180, 22], ["All five", 1184, 274, 2470, 584]];
+    var SX = function (p) { return 190 + (p - 10) / 25 * 400; };
+    [10, 15, 20, 25, 30, 35].forEach(function (t) {
+      el("line", { x1: SX(t), y1: 26, x2: SX(t), y2: 300, "class": "s-rule", "stroke-width": 1 }, sp);
+      el("text", { x: SX(t), y: 340, "text-anchor": "middle", "class": "t-3", style: "font-size:12px" }, sp, t + "%");
+    });
+    el("text", { x: 0, y: 16, "class": "t-3", style: "font-size:11px" }, sp, "ACCEPTANCE RATE →");
+    rows.forEach(function (r, i) {
+      var y = 52 + i * 46 + (i === 5 ? 12 : 0);
+      if (i === 5) el("line", { x1: 0, y1: y - 30, x2: 600, y2: y - 30, "class": "s-3", "stroke-width": 1 }, sp);
+      var w = r[2] / r[1] * 100, m = r[4] / r[3] * 100;
+      el("text", { x: 0, y: y + 5, "class": i === 5 ? "hd" : "t-ink", style: i === 5 ? "" : "font-size:13px" }, sp, r[0]);
+      el("line", { x1: SX(w), y1: y, x2: SX(m), y2: y, "class": "s-3", "stroke-width": 1.5 }, sp);
+      var rw = i === 5 ? 9 : Math.max(3.5, Math.sqrt(r[1]) * 0.45), rm = i === 5 ? 9 : Math.max(3.5, Math.sqrt(r[3]) * 0.45);
+      el("circle", { cx: SX(m), cy: y, r: rm, "class": "f-bl", opacity: .85 }, sp);
+      el("circle", { cx: SX(w), cy: y, r: rw, "class": "f-vm", opacity: .85 }, sp);
+      var wr = Math.round(w), mr = Math.round(m), wLeft = w < m;
+      el("text", { x: SX(w) + (wLeft ? -rw - 6 : rw + 6), y: y + 4, "text-anchor": wLeft ? "end" : "start", "class": "t-vm", style: "font-size:12px" }, sp, wr + "%");
+      el("text", { x: SX(m) + (wLeft ? rm + 6 : -rm - 6), y: y + 4, "text-anchor": wLeft ? "start" : "end", "class": "t-bl", style: "font-size:12px" }, sp, mr + "%");
+      el("text", { x: 0, y: y + 20, "class": "t-3", style: "font-size:10.5px" }, sp, "W " + fmt(r[1]) + " · M " + fmt(r[3]) + " applied");
+    });
+  }
+
+  /* --- Ch6: Titanic algorithms --- */
+  var tt = document.querySelector("#d-titanic tbody");
+  if (tt) {
+    var algs = [["Everyone gets 39%", .639, .500, .232], ["Women survive, men don't", .786, .578, .214], ["Simple classification tree", .806, .819, .139], ["Over-fitted tree", .806, .810, .150], ["Logistic regression", .789, .824, .146], ["Random forest", .799, .850, .148], ["Support vector machine", .782, .825, .153], ["Neural network", .794, .828, .146], ["Averaged neural network", .794, .837, .142], ["K-nearest-neighbour", .774, .812, .180]];
+    var best = [Math.max.apply(null, algs.map(function (a) { return a[1]; })), Math.max.apply(null, algs.map(function (a) { return a[2]; })), Math.min.apply(null, algs.map(function (a) { return a[3]; }))];
+    algs.forEach(function (a) {
+      var tr = document.createElement("tr");
+      var cell = function (v, b, pct, cls) {
+        return '<td class="n' + (v === b ? ' best' : '') + '">' + v.toFixed(3) + '<div class="track"><div class="fill" style="width:' + pct + '%;--c:var(' + cls + ')"></div></div></td>';
+      };
+      tr.innerHTML = '<th scope="row">' + a[0] + '</th>' +
+        cell(a[1], best[0], (a[1] - .5) / .5 * 100, a[1] === best[0] ? "--verm" : "--ink-3") +
+        cell(a[2], best[1], (a[2] - .5) / .5 * 100, a[2] === best[1] ? "--verm" : "--blue") +
+        cell(a[3], best[2], (.25 - a[3]) / .15 * 100, a[3] === best[2] ? "--verm" : "--blue");
+      tt.appendChild(tr);
+    });
+  }
+
+  /* --- Ch7: bootstrap intervals --- */
+  var bo = document.getElementById("d-boot");
+  if (bo) {
+    var bs = [[10, 21.1, 10.4, 34.6], [50, 18.8, 12.2, 27.2], [200, 15.4, 12.7, 18.6], [796, 14.9, 13.4, 16.6]];
+    var BX = function (v) { return 110 + (v - 8) / 30 * 470; };
+    [10, 15, 20, 25, 30, 35].forEach(function (t) {
+      el("line", { x1: BX(t), y1: 18, x2: BX(t), y2: 190, "class": "s-rule", "stroke-width": 1 }, bo);
+      el("text", { x: BX(t), y: 210, "text-anchor": "middle", "class": "t-3", style: "font-size:12px" }, bo, t);
+    });
+    bs.forEach(function (b, i) {
+      var y = 40 + i * 44;
+      el("text", { x: 0, y: y + 5, "class": "t-ink" }, bo, "n = " + b[0]);
+      el("line", { x1: BX(b[2]), y1: y, x2: BX(b[3]), y2: y, "class": "s-bl2", "stroke-width": 6, "stroke-linecap": "round", opacity: .55 }, bo);
+      el("circle", { cx: BX(b[1]), cy: y, r: 6.5, "class": "f-bl" }, bo);
+      el("text", { x: BX(b[1]), y: y - 12, "text-anchor": "middle", "class": "t-bl", style: "font-size:12px" }, bo, b[1].toFixed(1));
+      el("text", { x: BX(b[3]) + 10, y: y + 4, "class": "t-3", style: "font-size:11.5px" }, bo, b[2] + "–" + b[3]);
+    });
+  }
+
+  /* --- Ch9: funnel plot (limits from the book's parameters; dots simulated) --- */
+  var fu = document.getElementById("d-funnel");
+  if (fu) {
+    var p = 0.000176, NMAX = 700000;
+    var FX = function (n) { return 60 + n / NMAX * 520; }, FY = function (r) { return 290 - r / 40 * 270; };
+    [0, 10, 20, 30, 40].forEach(function (t) {
+      el("line", { x1: 60, y1: FY(t), x2: 580, y2: FY(t), "class": "s-rule", "stroke-width": 1 }, fu);
+      el("text", { x: 52, y: FY(t) + 4, "text-anchor": "end", "class": "t-3", style: "font-size:12px" }, fu, t);
+    });
+    [100000, 300000, 500000, 700000].forEach(function (t) {
+      el("text", { x: FX(t), y: 312, "text-anchor": "middle", "class": "t-3", style: "font-size:12px" }, fu, (t / 1000) + "k");
+    });
+    el("text", { x: 60, y: 12, "class": "t-3", style: "font-size:11px" }, fu, "DEATHS PER 100,000 PER YEAR");
+    el("text", { x: 580, y: 328, "text-anchor": "end", "class": "t-3", style: "font-size:11px" }, fu, "DISTRICT POPULATION");
+    [[1.96, "s-bl"], [3.09, "s-vm"]].forEach(function (z) {
+      ["+", "-"].forEach(function (sg) {
+        var d = "";
+        for (var n = 30000; n <= NMAX; n += 5000) {
+          var r = (p + (sg === "+" ? 1 : -1) * z[0] * Math.sqrt(p * (1 - p) / n)) * 1e5;
+          r = Math.max(0, Math.min(40, r));
+          d += (d ? " L" : "M") + FX(n).toFixed(1) + " " + FY(r).toFixed(1);
+        }
+        el("path", { d: d, "class": z[1], "stroke-width": 1.6, "stroke-dasharray": z[0] > 2 ? "6 4" : "" }, fu);
+      });
+    });
+    el("line", { x1: 60, y1: FY(17.6), x2: 580, y2: FY(17.6), "class": "s-ink", "stroke-width": 1 }, fu);
+    el("text", { x: 578, y: FY(17.6) - 6, "text-anchor": "end", "class": "t-ink", style: "font-size:12px" }, fu, "national 17.6");
+    var r2 = rng(2011);
+    function pois(l) { var L = Math.exp(-l), k = 0, q = 1; do { k++; q *= r2(); } while (q > L); return k - 1; }
+    for (var i = 0; i < 380; i++) {
+      var n = Math.round(Math.exp(Math.log(35000) + r2() * (Math.log(650000) - Math.log(35000))));
+      var rate = pois(n * p) / n * 1e5;
+      el("circle", { cx: FX(n).toFixed(1), cy: FY(Math.min(rate, 40)).toFixed(1), r: 2.6, "class": "f-3", opacity: .6 }, fu);
+    }
+    var rn = 78000;
+    el("circle", { cx: FX(rn), cy: FY(9), r: 5, "class": "f-vm" }, fu);
+    el("text", { x: FX(rn) + 4, y: FY(9) + 30, "class": "t-vm", style: "font-size:12px" }, fu, "7 deaths in ~78,000 → 9");
+  }
+
+  /* --- Ch10: 1,000 studies --- */
+  var st = document.getElementById("d-studies"), so = document.getElementById("d-studies-out");
+  if (st) {
+    var cells = [];
+    for (var j = 0; j < 1000; j++) {
+      var c = j % 40, rw = Math.floor(j / 40);
+      cells.push(el("rect", { x: c * 14 + 1, y: rw * 14 + 1, width: 12, height: 12, rx: 2 }, st));
+    }
+    var half = el("rect", { x: 0, y: 0, width: 6, height: 12, rx: 1, "class": "f-vm" }, st);
+    var paint = function (thr) {
+      var fp = thr === 0.05 ? 45 : 4;
+      cells.forEach(function (r, j) {
+        var f;
+        if (j < 80) f = "var(--blue)";
+        else if (j < 100) f = "color-mix(in srgb, var(--blue) 25%, var(--card))";
+        else if (j < 100 + fp) f = "var(--verm)";
+        else f = "color-mix(in srgb, var(--ink) 11%, var(--card))";
+        r.setAttribute("style", "fill:" + f + ";transition:fill .35s");
+      });
+      if (thr === 0.05) { half.setAttribute("display", "none"); }
+      else {
+        var c = 104 % 40, rw = Math.floor(104 / 40);
+        half.setAttribute("x", c * 14 + 1); half.setAttribute("y", rw * 14 + 1); half.removeAttribute("display");
+      }
+      so.innerHTML = thr === 0.05
+        ? "<em>80</em> real + <b>45</b> false = 125 discoveries → <b>36%</b> of them false"
+        : "<em>80</em> real + <b>4.5</b> false = 84.5 discoveries → <b>5%</b> of them false";
+    };
+    paint(0.05);
+    var pb = document.querySelectorAll("[data-p]");
+    Array.prototype.forEach.call(pb, function (btn) {
+      btn.addEventListener("click", function () {
+        Array.prototype.forEach.call(pb, function (o) { o.setAttribute("aria-pressed", o === btn ? "true" : "false"); });
+        paint(+btn.getAttribute("data-p"));
+      });
+    });
+  }
+
+  /* --- Ch11: Bayes' billiard table --- */
+  var bb = document.getElementById("d-billiard"), bout = document.getElementById("d-billiard-out");
+  if (bb) {
+    var state = { L: 2, R: 3 };
+    var X0 = 30, X1 = 570, base = 200, top = 50;
+    var gT = el("g", {}, bb);
+    el("rect", { x: X0, y: base, width: X1 - X0, height: 10, rx: 2, "class": "f-paper2" }, bb);
+    [0, 0.25, 0.5, 0.75, 1].forEach(function (t) {
+      el("text", { x: X0 + t * (X1 - X0), y: 230, "text-anchor": t === 0 ? "start" : t === 1 ? "end" : "middle", "class": "t-3", style: "font-size:12px" }, bb, t === 0 ? "0 left end" : t === 1 ? "right end 1" : t);
+    });
+    var area = el("path", { "class": "f-blt" }, gT), band95 = el("path", { style: "fill:color-mix(in srgb, var(--blue) 30%, var(--card))" }, gT);
+    var curve = el("path", { "class": "s-bl", "stroke-width": 2.2 }, gT);
+    var meanL = el("line", { "class": "s-vm", "stroke-width": 2, "stroke-dasharray": "5 3" }, gT);
+    var meanT = el("text", { "class": "t-vm", "text-anchor": "middle", style: "font-size:12px" }, gT);
+    var balls = el("g", {}, bb);
+    function lgam(z) { // Lanczos
+      var g = 7, c = [0.99999999999980993, 676.5203681218851, -1259.1392167224028, 771.32342877765313, -176.61502916214059, 12.507343278686905, -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7];
+      if (z < 0.5) return Math.log(Math.PI / Math.sin(Math.PI * z)) - lgam(1 - z);
+      z -= 1; var x = c[0]; for (var i = 1; i < g + 2; i++) x += c[i] / (z + i);
+      var t = z + g + 0.5; return 0.5 * Math.log(2 * Math.PI) + (z + 0.5) * Math.log(t) - t + Math.log(x);
+    }
+    function draw() {
+      var a = state.L + 1, b = state.R + 1, N = 400, xs = [], ys = [], cdf = [0], lb = lgam(a) + lgam(b) - lgam(a + b), ymax = 0;
+      for (var i = 0; i <= N; i++) {
+        var x = i / N, d = (x === 0 || x === 1) ? ((x === 0 && a === 1) || (x === 1 && b === 1) ? Math.exp(-lb) : 0) : Math.exp((a - 1) * Math.log(x) + (b - 1) * Math.log(1 - x) - lb);
+        xs.push(x); ys.push(d); if (d > ymax) ymax = d;
+        if (i) cdf.push(cdf[i - 1] + (ys[i - 1] + d) / 2 / N);
+      }
+      var tot = cdf[N], lo = 0, hi = 1;
+      for (i = 0; i <= N; i++) { if (cdf[i] / tot >= 0.025) { lo = xs[i]; break; } }
+      for (i = N; i >= 0; i--) { if (cdf[i] / tot <= 0.975) { hi = xs[i]; break; } }
+      var sc = (base - top) / Math.max(ymax, 1.2);
+      var PX = function (x) { return X0 + x * (X1 - X0); }, PY = function (d) { return base - d * sc; };
+      var dc = "", da = "M" + PX(0) + " " + base, db = "";
+      for (i = 0; i <= N; i++) {
+        dc += (i ? " L" : "M") + PX(xs[i]).toFixed(1) + " " + PY(ys[i]).toFixed(1);
+        da += " L" + PX(xs[i]).toFixed(1) + " " + PY(ys[i]).toFixed(1);
+        if (xs[i] >= lo && xs[i] <= hi) db += (db ? " L" : "M" + PX(xs[i]).toFixed(1) + " " + base + " L") + PX(xs[i]).toFixed(1) + " " + PY(ys[i]).toFixed(1);
+      }
+      da += " L" + PX(1) + " " + base + " Z";
+      db += " L" + PX(hi).toFixed(1) + " " + base + " Z";
+      area.setAttribute("d", da); band95.setAttribute("d", db); curve.setAttribute("d", dc);
+      var m = a / (a + b);
+      meanL.setAttribute("x1", PX(m)); meanL.setAttribute("x2", PX(m)); meanL.setAttribute("y1", top - 6); meanL.setAttribute("y2", base);
+      meanT.setAttribute("x", PX(m)); meanT.setAttribute("y", top - 12); meanT.textContent = "estimate " + m.toFixed(2);
+      while (balls.firstChild) balls.removeChild(balls.firstChild);
+      var n = state.L + state.R, show = Math.min(n, 30);
+      el("text", { x: X0, y: 12, "class": "t-3", style: "font-size:11px" }, balls, "PROBABILITY FOR THE LINE'S POSITION");
+      var Ls = Math.min(state.L, 15), Rs = Math.min(state.R, 15);
+      for (i = 0; i < Ls; i++) el("circle", { cx: X0 + 8 + i * 10, cy: base + 5, r: 3.6, "class": "f-vm2" }, balls);
+      for (i = 0; i < Rs; i++) el("circle", { cx: X1 - 8 - i * 10, cy: base + 5, r: 3.6, "class": "f-vm2" }, balls);
+      var naive = n ? (state.L / n).toFixed(2) : "undefined";
+      bout.innerHTML = state.L + " left, " + state.R + " right → Bayes: (" + state.L + "+1)/(" + n + "+2) = <b>" + m.toFixed(2) + "</b> · simple proportion: " + naive + " · 95% interval <em>" + lo.toFixed(2) + "–" + hi.toFixed(2) + "</em>";
+    }
+    draw();
+    document.getElementById("bb-left").addEventListener("click", function () { state.L++; draw(); });
+    document.getElementById("bb-right").addEventListener("click", function () { state.R++; draw(); });
+    document.getElementById("bb-reset").addEventListener("click", function () { state.L = 2; state.R = 3; draw(); });
+  }
+
+  /* --- Ch13: exit poll 2017 --- */
+  var ex = document.getElementById("d-exit");
+  if (ex) {
+    var parties = [["Conservative", 314, 318], ["Labour", 266, 262], ["Scottish Nationalist", 34, 35], ["Liberal Democrat", 14, 12], ["Others", 21, 22]];
+    parties.forEach(function (q) {
+      var b = document.createElement("div"); b.className = "bar c-blue";
+      b.innerHTML = '<div class="row"><span>' + q[0] + '</span><b>' + q[1] + ' predicted · ' + q[2] + ' actual</b></div>' +
+        '<div class="track" style="height:8px"><div class="fill" style="width:' + (q[1] / 330 * 100) + '%;background:color-mix(in srgb, var(--blue) 35%, var(--paper-2))"></div></div>' +
+        '<div class="track" style="height:8px"><div class="fill" style="width:' + (q[2] / 330 * 100) + '%"></div></div>';
+      ex.appendChild(b);
+    });
+  }
+})();
+</script>
+</body>
+</html>

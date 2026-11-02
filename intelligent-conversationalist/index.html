@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Intelligent Conversationalist by Imogen Lloyd Webber – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief. One centred frame (~1180px), prose held to ~64ch,
+   figures break wider. Palette from the cover: off-white paper, graphite engraving,
+   tracked grey slab-serif title, red subtitle held in big grey parentheses.
+   --cyan holds the graphite/slate accent and --red the cover red, so class names stay
+   shared with the other pages. Red = the heated topic and the pivot, slate = the facts. */
+:root {
+  --paper: #fbfaf4;
+  --paper-2: #efede4;
+  --card: #fffffb;
+  --ink: #2a2a28;
+  --ink-2: #545451;
+  --ink-3: #777773;
+  --rule: #dedbd0;
+
+  --cyan: #4c5762;
+  --cyan-2: #8d939a;
+  --red: #d42520;
+
+  --display: "Zilla Slab", "Rockwell", Georgia, serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #151514;
+    --paper-2: #1e1e1c;
+    --card: #222220;
+    --ink: #efeee8;
+    --ink-2: #bdbcb5;
+    --ink-3: #92918b;
+    --rule: #33332f;
+    --cyan: #a9b5c2;
+    --cyan-2: #7c8690;
+    --red: #ff5d52;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #151514;
+  --paper-2: #1e1e1c;
+  --card: #222220;
+  --ink: #efeee8;
+  --ink-2: #bdbcb5;
+  --ink-3: #92918b;
+  --rule: #33332f;
+  --cyan: #a9b5c2;
+  --cyan-2: #7c8690;
+  --red: #ff5d52;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  overflow-wrap: break-word;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.c-cyan { --c: var(--cyan); }
+.c-red { --c: var(--red); }
+.c-ink { --c: var(--ink); }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero .kicker { font-family: var(--display); font-weight: 500; font-size: clamp(22px, 2.6vw, 32px); letter-spacing: .12em; line-height: 1; color: var(--ink-2); }
+.hero h1 {
+  font-size: clamp(31px, 6.1vw, 78px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: .035em;
+  color: var(--ink-2);
+  margin: 12px 0 0 -.03em;
+}
+.hero h1 span { display: block; }
+.hero .sub {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(19px, 2vw, 24px);
+  line-height: 1.35;
+  margin-top: 24px;
+  color: var(--red);
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px;
+  max-width: 34ch;
+}
+.paren { font-family: var(--body); font-weight: 400; font-size: 2.9em; line-height: .8; color: var(--cyan-2); }
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 42ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 600 / 900;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(30, 30, 25, .35), 0 8px 18px -10px rgba(30, 30, 25, .25);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+.band { position: relative; margin-top: 28px; }
+.band canvas { display: block; width: 100%; height: 120px; }
+.band .ends { display: flex; justify-content: space-between; gap: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(32px, 4.8vw, 56px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -.005em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--red);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(42px, 7vw, 96px);
+  font-weight: 500;
+  line-height: .95;
+  letter-spacing: .03em;
+  color: var(--ink-2);
+}
+.part h2 em { font-style: normal; color: var(--red); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 88px;
+  line-height: .8;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -.005em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--red);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--red);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-size: 21px; font-weight: 600; letter-spacing: 0; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 72ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig .scroll-x svg { min-width: 540px; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); font-size: 12px; }
+.fig svg text.t-ink { fill: var(--ink); }
+.fig svg text.t-cy { fill: var(--cyan); }
+.fig svg text.t-red { fill: var(--red); }
+.fig svg text.t-3 { fill: var(--ink-3); }
+.fig svg text.hd { font-family: var(--display); font-weight: 600; font-size: 16px; fill: var(--ink); }
+.fig svg text.big { font-family: var(--display); font-weight: 700; font-size: 26px; }
+.s-ink { stroke: var(--ink); fill: none; }
+.s-2 { stroke: var(--ink-2); fill: none; }
+.s-3 { stroke: var(--ink-3); fill: none; }
+.s-rule { stroke: var(--rule); fill: none; }
+.s-cy { stroke: var(--cyan); fill: none; }
+.s-cy2 { stroke: var(--cyan-2); fill: none; }
+.s-red { stroke: var(--red); fill: none; }
+.f-cy { fill: var(--cyan); }
+.f-cy2 { fill: var(--cyan-2); }
+.f-red { fill: var(--red); }
+.f-ink { fill: var(--ink); }
+.f-3 { fill: var(--ink-3); }
+.f-card { fill: var(--card); }
+.f-paper2 { fill: var(--paper-2); }
+.f-cyt { fill: color-mix(in srgb, var(--cyan) 13%, var(--card)); }
+.f-redt { fill: color-mix(in srgb, var(--red) 12%, var(--card)); }
+.f-none { fill: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+.legend i.sq { border-radius: 2px; }
+
+/* Bar charts (HTML) */
+.bars { display: grid; gap: 14px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 14px; background: var(--paper-2); border-radius: 2px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink)); border-radius: 2px; }
+.fill.range { background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--c) 55%, transparent) 0 3px, transparent 3px 6px); }
+
+/* Stat strip: two columns, an odd last cell spans the row */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 700; font-size: 40px; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--c, var(--ink)); }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--red); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 600; letter-spacing: .02em; color: var(--ink); }
+.map .q { font-size: 15px; color: var(--ink-2); font-style: italic; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--red); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 600; display: block; font-size: 17px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* argument / crisp fact / pivot kit */
+.kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; max-width: 860px; }
+.kit > div { background: var(--card); padding: 16px 18px; display: grid; gap: 6px; align-content: start; }
+.kit .label { color: var(--cyan); }
+.kit > div:last-child .label { color: var(--red); }
+.kit span:last-child { font-size: 15.5px; line-height: 1.45; color: var(--ink-2); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 19px; font-weight: 600; margin: 0; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+.compare .good h5 { color: var(--cyan); }
+.compare .bad h5 { color: var(--red); }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.15;
+  margin: 0;
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 28px; font-weight: 600; letter-spacing: .02em; color: var(--ink); border-top: 2px solid var(--red); padding-top: 12px; }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 600; font-size: 17.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro, .part { grid-template-columns: minmax(0, 1fr); }
+  .toolkit { grid-template-columns: minmax(0, 1fr); }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .chapter .body { grid-template-columns: minmax(0, 1fr); }
+  .chapter .chno { font-size: 68px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .map, .stats, .kit, .compare { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 16px; }
+  .stat .big { font-size: 32px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Imogen Lloyd Webber · St. Martin’s Griffin, 2016</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#words">Words &amp; money</a>
+    <a href="#faith">Faith &amp; history</a>
+    <a href="#power">Power &amp; place</a>
+    <a href="#life">Body &amp; culture</a>
+    <a href="#toolkit">Toolkit</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <p class="kicker">The</p>
+    <h1><span>Intelligent</span><span>Conversationalist</span></h1>
+    <p class="sub"><span class="paren" aria-hidden="true">(</span><span>31 cheat sheets for talking to anyone about anything, anytime</span><span class="paren" aria-hidden="true">)</span></p>
+    <p class="dek">A British cable-news pundit packs eight school subjects into crib notes for dinner parties. Each one ends with three moves: a line to argue, a fact to prove it and a question that gets you out.</p>
+    <div class="byline label">
+      <span>8 subjects</span><span>31 cheat sheets</span><span>~79,000 words, condensed</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" alt="Cover of The Intelligent Conversationalist by Imogen Lloyd Webber: on an off-white background, an engraved woman and man in business suits face each other mid-conversation under a grey slab-serif title, with the red subtitle set between large grey parentheses">
+</div>
+
+<div class="band" aria-hidden="true">
+  <canvas id="talk"></canvas>
+  <div class="ends label"><span>Heated topic</span><span>Safe ground</span></div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">Introduction</span>
+    <h2>Never knowingly short of an opinion, and always ready to leave</h2>
+  </div>
+  <div class="intro">
+    <div class="prose">
+      <p>Imogen Lloyd Webber studied history at Cambridge and from 2009 made hundreds of appearances on American cable news, often as the only woman on a panel of men. Before writing she asked more than a hundred people, aged eighteen to eighty, what they didn’t know. Even the most polished admitted gaps, usually quietly and usually after a drink.</p>
+      <p>Her answer borrows the format of the student’s crib sheet. Eight school subjects (English, money, religion, history, politics, geography, “biology” as sex and gender, and culture) are split into 31 sheets. Most have the same sections: a background briefing, why it matters now, talking points and red flags.</p>
+      <p>The book is meant to be dipped into before an occasion, not read straight through. A dinner with a banker calls for the money sheets. A job interview with a Brit calls for the slang list. The tone is deliberately cheeky, and she says plainly where her own views take over, above all in the sections on sex and gender.</p>
+      <p>The useful part is the method. She learned it on live TV, where Sean Hannity once switched topics on her as he introduced her and her research was suddenly useless. Every sheet ends with a <strong>social survival strategy</strong> in three steps. She calls the last one the most important: when a conversation goes wrong, change it.</p>
+    </div>
+    <div class="fig">
+      <span class="label">The book in numbers</span>
+      <div class="stats" style="border:0;border-radius:0">
+        <div class="stat c-red"><span class="big num">31</span><p>Cheat sheets across eight subjects, each closing with an argument, a crisp fact and a pivot.</p></div>
+        <div class="stat c-cyan"><span class="big num">100+</span><p>People she questioned about the gaps in their knowledge before writing.</p></div>
+        <div class="stat"><span class="big num">62%</span><p>Adults in one study who admitted lying about reading the classics to seem cleverer.</p></div>
+        <div class="stat c-red"><span class="big num">2</span><p>Times she says she has gone completely blank on air. The book is built to stop that happening to you.</p></div>
+      </div>
+      <div class="story">
+        <span class="label">Her on-air stall</span>
+        <p>Every TV regular has a filler phrase for thinking time. Hers is to agree “on some levels”, which buys a few seconds to steer towards ground she knows. The two fillers she says never to use are “like” and “you know”.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fig" style="margin-top:32px">
+    <h4>The social survival strategy: from heated topic to safe ground</h4>
+    <div class="scroll-x">
+      <svg viewBox="0 0 600 284" role="img" aria-label="Flow diagram in five steps. A heated topic, such as a banker going on about the markets, leads to step one, the argument, a line that is hard to dispute, such as Galbraith's view that economic forecasts are no better than astrology. Step two, the crisp fact, is a surprising, checkable nugget, such as the monuments on euro banknotes being invented. Step three, the pivot, is a question everyone can answer, such as asking for a favourite European city. That leads to safe ground, such as travel stories. A temperature line above the boxes falls from hot red to cool grey.">
+        <defs>
+          <linearGradient id="g-temp" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" style="stop-color:var(--red)"/><stop offset=".55" style="stop-color:var(--red);stop-opacity:.55"/><stop offset="1" style="stop-color:var(--cyan-2)"/>
+          </linearGradient>
+        </defs>
+        <text x="2" y="16" class="t-3" style="font-size:11px">temperature of the conversation</text>
+        <path d="M52 34 C 120 34, 150 44, 176 54 S 260 70, 300 72 S 400 84, 424 88 S 520 92, 548 92" stroke="url(#g-temp)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <circle cx="52" cy="34" r="5" class="f-red"/>
+        <circle cx="548" cy="92" r="5" class="f-cy2"/>
+        <g id="flow-boxes"></g>
+        <text x="2" y="206" class="t-3" style="font-size:11px">worked example from the money sheets</text>
+        <path d="M2 214 H598" class="s-rule"/>
+        <g id="flow-eg"></g>
+      </svg>
+    </div>
+    <p class="cap">The argument should be close to impossible to disagree with. The crisp fact (her Cambridge professor’s term) shows you know something. The pivot is a question about travel, TV, food or a drink, so everyone can answer it. A stall comes first if you need one: repeat the question, call it a good point, or hand it to someone else.</p>
+    <p class="src">Structure from the introduction; example from Subject Two’s summary and Sheet 7</p>
+  </div>
+
+  <div class="figrow" style="margin-top:20px">
+    <div class="fig">
+      <h4>Where the 31 pivots lead</h4>
+      <div class="bars">
+        <div class="bar c-red"><div class="row"><span>Screen, stage and celebrity</span><b>8</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Travel and places</span><b>6</b></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Food and drink</span><b>6</b></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Personal quirks (shoes, dentist, bucket list)</span><b>6</b></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+        <div class="bar c-ink"><div class="row"><span>Gadgets and news habits</span><b>2</b></div><div class="track"><div class="fill" style="width:25%"></div></div></div>
+        <div class="bar c-ink"><div class="row"><span>A closing line, then change subject</span><b>2</b></div><div class="track"><div class="fill" style="width:25%"></div></div></div>
+        <div class="bar c-ink"><div class="row"><span>Sport</span><b>1</b></div><div class="track"><div class="fill" style="width:12.5%"></div></div></div>
+      </div>
+      <p class="cap">My own count of the pivot at the end of every sheet. The categories are mine, not the book’s. Almost none of them lead to another opinion. They move the talk to things people can have a view on without risking a fight.</p>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed;align-content:center">
+      <blockquote class="pull">“If you don’t like a conversation, the intelligent thing to do is change it.”</blockquote>
+      <span class="label">Imogen Lloyd Webber, introduction</span>
+    </div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col">
+      <span class="label">Part I · Sheets 1–8</span>
+      <h3>Words &amp; Money</h3>
+      <p class="q">The basics, then the subject people skip at school</p>
+      <ol>
+        <li><span>01</span><a href="#s1"><b>English language</b>Spelling, grammar, Brit-speak, debate</a></li>
+        <li><span>02</span><a href="#s2"><b>Maths &amp; economics</b>Money, economists, 2008, three dreamers</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part II · Sheets 9–17</span>
+      <h3>Faith &amp; History</h3>
+      <p class="q">Eggshells, then the long view</p>
+      <ol>
+        <li><span>03</span><a href="#s3"><b>Religion</b>Five faiths, holidays, bad excuses</a></li>
+        <li><span>04</span><a href="#s4"><b>History</b>America, kings, world wars, Middle East</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part III · Sheets 18–23</span>
+      <h3>Power &amp; Place</h3>
+      <p class="q">How Washington works, and where everything is</p>
+      <ol>
+        <li><span>05</span><a href="#s5"><b>Politics</b>Constitution, law, scandals, elections</a></li>
+        <li><span>06</span><a href="#s6"><b>Geography</b>Two maps and a nuclear club</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Part IV · Sheets 24–31</span>
+      <h3>Body &amp; Culture</h3>
+      <p class="q">Where she drops impartiality, then the fun part</p>
+      <ol>
+        <li><span>07</span><a href="#s7"><b>Sex &amp; gender</b>Life and death, feminism, LGBTQ</a></li>
+        <li><span>08</span><a href="#s8"><b>Culture</b>Authors to awards season</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="words">
+  <span class="label partno">Part I · Subjects 1–2 · Sheets 1–8</span>
+  <h2>Words <em>&amp;</em> Money</h2>
+  <p class="lede">Lloyd Webber’s view is that a misspelt word loses you the argument before you have made it. Money comes next because it underpins everything else, and because most people skipped it at school.</p>
+</div>
+
+<article class="chapter" id="s1">
+  <div class="gutter"><span class="chno">01</span><span class="label">Sheets 1–4</span></div>
+  <div class="body">
+    <div>
+      <h3>Spell it right or lose the room</h3>
+      <p class="idea">On social media every typo is broadcast. If you misspell a word, readers stop listening to your point.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The prime minister’s wife.</strong> The book was prompted when the then British prime minister’s wife misspelt “definitely” on Twitter. The spelling sheet pairs words people confuse (affect and effect, lose and loose, stationary and stationery) with a memorable, often rude, sentence for each. She says the only real excuse is dyslexia, which affects 10 to 15 percent of Americans.</li>
+      <li><strong>Grammar without the lecture.</strong> Apostrophes either shorten words or show ownership, never both by accident. “Which” is never used for people. For who versus whom, answer the question yourself: if the answer is “him”, use whom. Split infinitives are the one point still open to debate, and nobody objected to them until the 1800s.</li>
+      <li><strong>Separated by a common language.</strong> She blames Noah Webster for some of the gap. The real hazard isn’t spelling but words that mean something else in Britain. “Pants” are underwear and “bill” can mean the police. Most dangerous is “quite”, which to a Brit means “not very”. She says people have been fired for misreading it. “Skint” and “gutted” are fine for Americans to borrow.</li>
+      <li><strong>Debate kit.</strong> An A-to-Z of impressive words (borborygmus is a rumbling stomach; qoph and xenon win at Scrabble), then lines for every stage of an argument: for buying time, for when you are sinking and for leaving with your reputation intact.</li>
+    </ul>
+    <div class="kit">
+      <div><span class="label">Argument</span><span>If you misspell “argument”, you have lost it.</span></div>
+      <div><span class="label">Crisp fact</span><span>A spelling nugget, such as chord versus cord, takes the sting out of a row.</span></div>
+      <div><span class="label">Pivot</span><span>Ask for everyone’s funniest autocorrect story. Blaming technology is a relief.</span></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="s2">
+  <div class="gutter"><span class="chno">02</span><span class="label">Sheets 5–8</span></div>
+  <div class="body">
+    <div>
+      <h3>The emperor’s new money</h3>
+      <p class="idea">Since 1971 a dollar has been worth whatever we collectively agree it is worth. Only fear of inflation keeps that agreement honest.</p>
+    </div>
+    <ul class="points">
+      <li><strong>From barter to belief.</strong> Barter gave way to gold coins and then to paper notes backed by gold. China’s Song Dynasty used paper money early. By the early twentieth century nearly every country was on the gold standard. Roosevelt loosened the dollar’s ties to gold during the Depression. At Bretton Woods in 1944, 44 Allied nations pegged their currencies to the dollar. In 1971 Nixon ended dollar-to-gold conversion, because foreigners with dollars were draining US gold reserves.</li>
+      <li><strong>Why deflation is scarier.</strong> If a car will cost a third as much next year, nobody buys one this year. Spending dries up and the economy falls into a spiral. Bitcoin, started in 2009 under the name Satoshi Nakamoto, offers a capped supply, but no government backs it. Only 8 percent of the world’s currency exists as physical cash.</li>
+      <li><strong>Economists versus astrologers.</strong> A quick tour runs from Aristotle and Aquinas’s “just price” through Adam Smith (1776) and Marx to Keynes and the Chicago school. “Capitalism” was a word made popular by its critics, mainly Marx. Her default line on any forecast comes from John Kenneth Galbraith: “The only function of economic forecasting is to make astrology look respectable.”</li>
+      <li><strong>2008 had two causes.</strong> The first was the US housing bubble, which peaked in 2006 and was full of mispriced subprime loans. The second was government. Glass-Steagall had separated gamblers’ banks from savers’ banks in 1933 and was repealed in 1999. The shadow banking system grew without capital rules. TARP, a $700 billion bailout, became law on October 3, 2008. She argues the euro was a hasty marriage: monetary union without political union, so eurozone members could not print money to rescue themselves.</li>
+      <li><strong>Three American dreamers.</strong> Warren Buffett invests only in what he understands and still lives in the house he bought in 1958 for $31,500. Bernie Madoff’s Ponzi scheme left almost $65 billion missing from client accounts and got him 150 years, after at least six failed official investigations. Oprah, whose birth certificate says Orpah, turned hardship into a media empire and put “aha moment” in the dictionary.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>What a unit of money could be swapped for</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 236" role="img" aria-label="Five stages of money from left to right. Barter: goods swapped for goods. Commodity money: a gold coin is its own value. Representative money from the seventeenth century: a paper note can be exchanged for gold. Bretton Woods from 1944: other currencies are fixed to the dollar, and the dollar is linked to gold. Fiat money from 1971: the note's link to gold is cut, and it is worth something only because the government declares it legal tender.">
+          <g id="money"></g>
+        </svg>
+      </div>
+      <p class="cap">The link between a note and anything physical got longer over time, and in 1971 it was cut. In her words, everyone agrees to act as if we are fully clothed. Even under Bretton Woods only foreign governments, not ordinary holders, could convert dollars into gold.</p>
+      <p class="src">Source: Sheet 5, History of Money</p>
+    </div>
+
+    <div class="figrow">
+      <div class="fig">
+        <h4>Canada versus the US</h4>
+        <div class="stats" style="border:0;border-radius:0">
+          <div class="stat c-cyan"><span class="big num">0</span><p>Systemic banking crises in Canada since 1840.</p></div>
+          <div class="stat c-red"><span class="big num">12</span><p>US systemic banking crises over the same period.</p></div>
+        </div>
+        <p class="cap">Canada was the only G7 country to get through 2008 without bailing out its banks. She credits simple regulation built around capital requirements and a distrust of shadow banking.</p>
+      </div>
+      <div class="fig">
+        <h4>Tax history to keep handy</h4>
+        <div class="bars">
+          <div class="bar c-red"><div class="row"><span>Top US income tax rate in 1918, to pay for WWI</span><b>77%</b></div><div class="track"><div class="fill" style="width:77%"></div></div></div>
+          <div class="bar c-cyan"><div class="row"><span>Top rate after the 2001 Bush tax cut</span><b>35%</b></div><div class="track"><div class="fill" style="width:35%"></div></div></div>
+        </div>
+        <p class="cap">Her argument is that America paid for both world wars with taxes, then fought two wars after 2001 without doing so. In 1990 Thatcher’s poll tax brought riots in March and her resignation in November.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="faith">
+  <span class="label partno">Part II · Subjects 3–4 · Sheets 9–17</span>
+  <h2>Faith <em>&amp;</em> History</h2>
+  <p class="lede">Religion is where conversations most easily go wrong. History is where she spent her degree. In both, her advice is to know where people’s grievances come from before you start talking.</p>
+</div>
+
+<article class="chapter" id="s3">
+  <div class="gutter"><span class="chno">03</span><span class="label">Sheets 9–11</span></div>
+  <div class="body">
+    <div>
+      <h3>More alike than they admit</h3>
+      <p class="idea">The big religions share ancestors, calendars and contradictions. Most of the damage comes from not knowing the others.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Two families.</strong> Judaism, Christianity and Islam all trace back to Abraham. Hinduism, Buddhism and Sikhism are Dharmic and focus on refining consciousness. The world has roughly 4,200 religions and about 1.1 billion people who follow none. She admits that until 2013 she didn’t know Jesus is a prophet in Islam. He is mentioned five times as often as Muhammad in the Qur’an.</li>
+      <li><strong>The grid.</strong> For each faith, a table covers followers, beliefs, scriptures, diet, rules on sex and marriage, the afterlife and a celebrity follower. It is drawn as a chart below.</li>
+      <li><strong>Moving holidays.</strong> All the main faiths use lunar calendars to some degree, so their dates shift. Easter is the first Sunday after the first full moon following March 21. Islamic law has only two festivals, the two Eids. The Jewish day starts at sunset, so festivals begin the evening before. Find out which day is someone’s sabbath before sending them a pushy email.</li>
+      <li><strong>Christmas is half pagan.</strong> Mistletoe, the date and much of the rest came from older festivals. Pope Julius I fixed December 25 in the fourth century. The Puritans cancelled Christmas in 1644. Since those Puritans helped found America, she says the “war on Christmas” is the oldest American tradition there is.</li>
+      <li><strong>No excuse.</strong> She borrows The West Wing’s answer to people who quote Leviticus against gay people: scripture also endorses selling daughters and executing sabbath-breakers. Every faith has produced violence, including Buddhist monks in Sri Lanka and the Hindu who killed Gandhi. Most scholars, she reports, say jihad means struggle, usually inner struggle, and that its laws forbid killing non-combatants.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Followers by faith, as given in the book’s grid</h4>
+      <div class="bars">
+        <div class="bar c-cyan"><div class="row"><span>Christianity · about a third of the world</span><b>2.1 bn</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Islam · about 23%</span><b>1.6 bn</b></div><div class="track"><div class="fill" style="width:76.2%"></div></div></div>
+        <div class="bar c-cyan"><div class="row"><span>Hinduism · about 14%, 950 million in India</span><b>1 bn</b></div><div class="track"><div class="fill" style="width:47.6%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Buddhism · estimates vary widely</span><b>376 m–1.7 bn</b></div><div class="track"><div class="fill range" style="width:81%"></div><div class="fill" style="width:17.9%"></div></div></div>
+        <div class="bar c-ink"><div class="row"><span>Judaism · about 0.22%, roughly 6 m in the US and 6 m in Israel</span><b>14 m</b></div><div class="track"><div class="fill" style="width:.7%;min-width:2px"></div></div></div>
+      </div>
+      <p class="cap">Bars are scaled to 2.1 billion. The hatched bar shows the range the book gives for Buddhism, since estimates differ that much. Judaism is the smallest of the five by far, but it is the oldest of the Abrahamic faiths, at over 3,500 years.</p>
+      <p class="src">Source: Sheet 9 reference grid</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="s4">
+  <div class="gutter"><span class="chno">04</span><span class="label">Sheets 12–17</span></div>
+  <div class="body">
+    <div>
+      <h3>Blame the British, and remember the spies</h3>
+      <p class="idea">History is written by the winners. Commentary on current affairs also misses most of what the intelligence services know.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The secret world.</strong> Her Cambridge teacher, Christopher Andrew, changed how she sees international affairs. Perspectives on World War II shifted in the 1970s once the Bletchley Park code-breaking was revealed. In 1983 a NATO exercise, Able Archer, was misread in Moscow as a possible first strike. Intelligence from the British double agent Oleg Gordievsky helped persuade Reagan to tone down his rhetoric. Her stock line: all we can hope is that leaders get good intelligence and listen to it.</li>
+      <li><strong>American beginnings, for immigrants.</strong> She writes this sheet for people who were never taught it, as one of about a million legal immigrants who arrive each year. Roanoke’s 116 settlers vanished between 1587 and 1590. Jamestown came in 1607. The Mayflower sailed in 1620 with 102 people, under a third of them Pilgrims. Boston’s Tea Party in 1773 dumped 342 chests of tea. The slave population grew from almost 700,000 in 1790 to almost 4 million by 1860. She sees America’s history as a series of civil-rights struggles. Henry Hudson sailed up his river on September 11, 1609.</li>
+      <li><strong>Grids of rulers.</strong> There have been 44 US administrations but 43 presidents, because Grover Cleveland served twice. England has had 40 monarchs since 1066, fewer than America’s presidents. A children’s rhyme lists them all. She also notes that Britain tried a republic in the seventeenth century and ended up offering its leader the crown.</li>
+      <li><strong>Empire by another name.</strong> She traces America’s outward push from Hawaii and the 1898 war with Spain to Vietnam, where more than 3 million people died, over 55,000 of them American. She argues that after the Cold War, foreign policy tried to change what happens inside other countries, which is far harder. She is openly critical of Obama-era armed drones, which she argues set a precedent other states will copy.</li>
+      <li><strong>Two world wars and a cold one.</strong> In World War I, armies planned for victory using national birth rates, and Britain lost 58,000 men on the first day of the Somme. World War II killed an estimated 45 to 60 million people, about 85 percent of them on the Allied side, including some 27 million Soviets. She argues nobody won the Cold War, and lists its nine tensest moments, from the Berlin blockade to Able Archer.</li>
+      <li><strong>The Middle East.</strong> Her key point is that Saudi Arabia is Sunni and Iran is Shia, and the likely outcome is two rival spheres of influence. The borders drawn after World War I ignored religion and ethnicity, which she blames on Britain. She covers the 1953 CIA-backed coup in Iran, the 444-day hostage crisis and an Israel–Palestine timeline from the 1947 partition plan to 2015.</li>
+    </ul>
+    <div class="kit">
+      <div><span class="label">Argument</span><span>The post-1918 Middle East borders made no religious or ethnic sense. The British will agree.</span></div>
+      <div><span class="label">Crisp fact</span><span>In World War I the German army dropped leaflets telling Black American soldiers a German victory would mean less racism.</span></div>
+      <div><span class="label">Pivot</span><span>Berlin was entirely surrounded by East Germany. Have you been?</span></div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART III ============ -->
+<div class="part" id="power">
+  <span class="label partno">Part III · Subjects 5–6 · Sheets 18–23</span>
+  <h2>Power <em>&amp;</em> Place</h2>
+  <p class="lede">An outsider’s admiring guide to how American government works, and a short lesson for anyone who confuses Austria with Australia.</p>
+</div>
+
+<article class="chapter" id="s5">
+  <div class="gutter"><span class="chno">05</span><span class="label">Sheets 18–21</span></div>
+  <div class="body">
+    <div>
+      <h3>Built to make change hard</h3>
+      <p class="idea">The Constitution forces compromise at every step. That causes gridlock, and it also keeps extremists out.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The oldest and shortest.</strong> Written in 1787 and in use since 1789, the US Constitution is the longest-serving written national constitution in the world. It has seven articles, the first three setting out Congress, the presidency and the courts. It has been amended 27 times, with 26 amendments in force, because the Twenty-first repealed Prohibition. The Twenty-seventh, on congressional pay, took 203 years to pass.</li>
+      <li><strong>Guns as a British idea.</strong> She points out that the right to bear arms can be traced to the English Bill of Rights of 1689. Britain then tightened gun laws from 1824 onward. She contrasts Britain’s roughly 150 gun deaths a year with America’s more than 30,000. She reports an estimated 300 million guns in the US.</li>
+      <li><strong>Law-making vocabulary.</strong> Bills get marked up, tabled, reported out and enrolled. The record filibuster is Strom Thurmond’s 24 hours and 18 minutes against the 1957 Civil Rights Act. The word comes from the Dutch for pirate. FDR vetoed 635 bills. She is sharply critical of the secret surveillance court FISC, which hears only the government’s side.</li>
+      <li><strong>Scandals.</strong> She runs through anti-gay Republicans caught with men, Democrats caught with women, and corruption from Grant’s presidency to Watergate and Iran-Contra. The lesson is always that the cover-up is worse than the crime.</li>
+      <li><strong>Elections.</strong> To win the White House you need 270 of 538 Electoral College votes. Florida in 2000 came down to 537 votes. In 2012 Ohio saw 219,414 political ads and 51 Romney visits. That year Democrats won 1.4 million more House votes but Republicans won the House 234 to 201. She treats America as a 51/49 country where about 40 percent of voters call themselves independents.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>How a bill becomes law, and how a veto is beaten</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 300" role="img" aria-label="Flow chart. A member introduces a bill. It goes to committee, which can kill it by tabling. If reported out, it goes to a floor vote needing a simple majority, 218 of 435 in the House and 51 of 100 in the Senate, though 60 senators are needed to end a filibuster. Both houses must pass identical text, often through a conference committee. The president then has ten days: signing makes it law; doing nothing also makes it law; a veto sends it back, where two-thirds of both houses can override. A side panel shows amendments: proposed by two-thirds of both houses of Congress or two-thirds of the states, ratified by three-quarters of the states.">
+          <g id="bill"></g>
+        </svg>
+      </div>
+      <p class="cap">Each step is a chance for the bill to die. Since 1980 neither party has held 60 Senate seats, so the threat of a filibuster shapes most bills. The 113th Congress (2013–15) passed 296 laws. Truman’s “Do Nothing” Congress passed 906. She adds that what matters is the quality of the laws, not the count.</p>
+      <p class="src">Source: Sheets 18 and 19</p>
+    </div>
+    <div class="kit">
+      <div><span class="label">Argument</span><span>Even the framers knew they weren’t perfect. That’s why Article V allows amendments.</span></div>
+      <div><span class="label">Crisp fact</span><span>The last time Republicans won the presidency without a Bush or a Nixon on the ticket was 1928.</span></div>
+      <div><span class="label">Pivot</span><span>Suggest putting the Twenty-first Amendment to use and getting another drink.</span></div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="s6">
+  <div class="gutter"><span class="chno">06</span><span class="label">Sheets 22–23</span></div>
+  <div class="body">
+    <div>
+      <h3>Two maps are all you need</h3>
+      <p class="idea">Americans have a reputation for weak geography. A short list of common mix-ups fixes most of it.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The myths.</strong> The claim that only 10 percent of Americans hold passports is out of date. Recent figures, she says, put it nearer a third. Only about 3.5 percent travel overseas in a given year, and Canada and Mexico don’t count. Britain is England, Scotland and Wales. The United Kingdom adds Northern Ireland. Turkey’s capital is Ankara.</li>
+      <li><strong>Her top-ten mix-ups.</strong> Brunei is in Southeast Asia, not the Middle East, and has almost no public debt. Oman is a country and Amman is a city. Austria has no kangaroos. Oakland is not Auckland. Bern, not Geneva or Zurich, is Switzerland’s capital, and Ottawa, not Toronto, is Canada’s. Paraguay is landlocked and Uruguay is not. Slovenia and Slovakia get confused so often that their embassy staff meet monthly to swap misdirected mail.</li>
+      <li><strong>Climate.</strong> She treats this as settled: in 2013, 900 scientists reviewed 9,000 studies and put the chance that climate change is man-made at 95 percent. She adds a cost argument. Hurricane Sandy alone cost $50 billion, so cutting emissions would be cheaper than paying for disasters.</li>
+      <li><strong>The nuclear club.</strong> Every permanent member of the UN Security Council has the bomb, and the US is the only country to have used one in war. She argues that after Gaddafi gave up his programme in 2003 and fell eight years later, dictators concluded nuclear weapons are their only real guarantee of survival.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>Who has the bomb, by the book’s three tiers</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 270" role="img" aria-label="Three nested rings. The inner ring, officially nuclear: USA, Russia, UK, France and China, the five permanent Security Council members. The middle ring, access through NATO: Belgium, Germany, Netherlands, Italy and Turkey. The dashed outer ring, unofficially nuclear: India, Pakistan, North Korea and Israel. A note says North Korea, India, Israel, Pakistan and South Sudan have never joined the Non-Proliferation Treaty.">
+          <circle cx="135" cy="135" r="126" class="s-3" stroke-width="1.5" stroke-dasharray="5 5"/>
+          <circle cx="135" cy="135" r="88" class="f-cyt s-cy" stroke-width="1.5"/>
+          <circle cx="135" cy="135" r="48" class="f-redt s-red" stroke-width="2"/>
+          <text x="135" y="132" text-anchor="middle" class="hd" style="font-size:22px;fill:var(--red)">5</text>
+          <text x="135" y="150" text-anchor="middle" class="t-red" style="font-size:11px">official</text>
+          <text x="135" y="72" text-anchor="middle" class="t-cy" style="font-size:11px">+5 via NATO</text>
+          <text x="135" y="28" text-anchor="middle" class="t-3" style="font-size:11px">+4 unofficial</text>
+          <g id="nuke-dots"></g>
+          <text x="300" y="34" class="hd">Officially armed</text>
+          <text x="300" y="54" class="t-red">USA · Russia · UK · France · China</text>
+          <text x="300" y="72" class="t-3" style="font-size:11px">the Security Council’s permanent five</text>
+          <text x="300" y="110" class="hd">Can use NATO weapons</text>
+          <text x="300" y="130" class="t-cy">Belgium · Germany · Netherlands</text>
+          <text x="300" y="148" class="t-cy">Italy · Turkey</text>
+          <text x="300" y="186" class="hd">Unofficially armed</text>
+          <text x="300" y="206">India · Pakistan · North Korea · Israel</text>
+          <text x="300" y="224" class="t-3" style="font-size:11px">Israel never confirms it</text>
+          <text x="300" y="256" class="t-3" style="font-size:11px">Never joined the 1970 NPT: N. Korea, India,</text>
+          <text x="300" y="270" class="t-3" style="font-size:11px">Israel, Pakistan, South Sudan</text>
+        </svg>
+      </div>
+      <p class="cap">Fourteen countries in three tiers. Iran signed the Non-Proliferation Treaty, but disputes over its status led to the 2015 negotiations. The book reminds readers that enriching uranium is not in itself illegal.</p>
+      <p class="src">Source: Sheet 23, Map Two</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ PART IV ============ -->
+<div class="part" id="life">
+  <span class="label partno">Part IV · Subjects 7–8 · Sheets 24–31</span>
+  <h2>Body <em>&amp;</em> Culture</h2>
+  <p class="lede">She warns readers that she gives up any pretence of impartiality here, describing herself as a European-born feminist who works on Broadway. Then she ends with the arts and awards season, which she knows best.</p>
+</div>
+
+<article class="chapter" id="s7">
+  <div class="gutter"><span class="chno">07</span><span class="label">Sheets 24–26</span></div>
+  <div class="body">
+    <div>
+      <h3>The personal is political</h3>
+      <p class="idea">Views on feminism or gay marriage often change when a daughter is underpaid or a son comes out.</p>
+    </div>
+    <ul class="points">
+      <li><strong>A detour for the uncomfortable.</strong> Readers who expect to disagree get a set of neutral nuggets and permission to skip ahead. Phones carry ten times more bacteria than most toilet seats. Distilled alcohol was first made by Muslim chemists. Until 2011 Russia classed beer as a soft drink.</li>
+      <li><strong>Contraception and abortion.</strong> Some 99 percent of American women aged 15 to 44 who have had sex have used contraception. The pill was approved in the US on May 9, 1960. She stresses that the morning-after pill prevents pregnancy and does not end one. Roe v. Wade (1973) was decided 7 to 2. In a 1972 Gallup poll, Republicans were more likely than Democrats to say abortion was a matter for doctor and patient. She says polls consistently put three-fifths of Americans somewhere between pro-life and pro-choice.</li>
+      <li><strong>Death.</strong> As of May 2013, 140 countries had abolished the death penalty in law or practice. In 2014 the US ranked fifth for executions, after China, Iran, Saudi Arabia and Iraq. By 2015 it was the only country in the western hemisphere still carrying them out.</li>
+      <li><strong>Feminism’s waves.</strong> The Oxford English Dictionary’s 1895 definition is simply equality. The first wave won the vote, and the second, sparked by Betty Friedan, won a string of laws from 1963 to 1978. The Equal Rights Amendment fell three states short of ratification. Marital rape was not illegal in every US state until 1993.</li>
+      <li><strong>LGBTQ rights.</strong> The word “homosexuality” was coined in 1869. The American Psychiatric Association stopped calling it an illness in 1973. Then came Stonewall in 1969, Gilbert Baker’s eight-colour flag in 1978, Don’t Ask Don’t Tell, DOMA and Proposition 8. In 1980, 11 percent of Americans backed same-sex marriage. By June 2015 most did, and the Supreme Court made it a constitutional right. As of 2015, 66 countries still made homosexuality a crime.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>When women got the vote</h4>
+      <div class="scroll-x">
+        <svg viewBox="0 0 600 168" role="img" aria-label="Timeline from 1880 to 2020. New Zealand 1893, first. United States 1920. Iran 1963. Switzerland 1971, highlighted. Saudi Arabia 2011, granting partial suffrage for the 2015 elections.">
+          <g id="vote"></g>
+        </svg>
+      </div>
+      <p class="cap">Her favourite fact for this subject is Switzerland in 1971, eight years after Iran. She notes it offends no one because it is simply true. Saudi Arabia granted partial suffrage in 2011, effective from 2015. Brunei has no elections for anyone.</p>
+      <p class="src">Source: Biology summary and Sheet 25</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter" id="s8">
+  <div class="gutter"><span class="chno">08</span><span class="label">Sheets 27–31</span></div>
+  <div class="body">
+    <div>
+      <h3>There are no facts, only interpretations</h3>
+      <p class="idea">The arts are the safest place to disagree, and awards season gives everyone something to talk about.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Grids of the greats.</strong> Authors from Homer to the moderns, artists from Giotto on, composers from Machaut on. Each entry has what it is famous for, a quirk and a talking point. Cervantes spent five years as a slave. Leonardo never handed over the Mona Lisa. El Greco waited about 250 years to be appreciated. The British Airways tune is Delibes’s “Flower Duet”.</li>
+      <li><strong>Theater’s long run.</strong> Greek drama used only three actors, and their masks helped carry their voices. England’s first theater, the Red Lion, opened in 1567. The Puritans closed the theaters in 1642, and women were allowed on stage after 1660. Shakespeare, she reports, used about 17,000 words and coined about 1,700 of them. One of them was her first name, Imogen.</li>
+      <li><strong>Broadway and the West End.</strong> Broadway has about 40 theaters seating more than 500 and draws around 13 million people a year. The West End sells about as many tickets. The Golden Age ran from Oklahoma! (1943) to Hair (1968). The Mousetrap has run in London since 1952. Sondheim and her father, Andrew Lloyd Webber, share a birthday, March 22. A show is ON Broadway but IN the West End.</li>
+      <li><strong>Awards season.</strong> The People’s Choice Awards, the Globes, the guild awards, the BAFTAs and the Oscars run in order, followed by the Tonys, Grammys and Emmys. The Oscar statuette is 13.5 inches tall. Since 1950, winners can’t sell one without first offering it back to the Academy for a dollar. After a Grammy win, weekly sales jumped 714 percent for the Dixie Chicks in 2007.</li>
+    </ul>
+
+    <div class="fig">
+      <h4>How many people pick the winners</h4>
+      <div class="bars">
+        <div class="bar c-cyan"><div class="row"><span>Primetime Emmys · Television Academy members</span><b>16,000+</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="bar c-red"><div class="row"><span>Oscars · Academy members (94% white, 77% male, average age 63)</span><b>~6,000</b></div><div class="track"><div class="fill" style="width:37.5%"></div></div></div>
+        <div class="bar c-ink"><div class="row"><span>Tonys · drawn from the Broadway community</span><b>~900</b></div><div class="track"><div class="fill" style="width:5.6%"></div></div></div>
+        <div class="bar c-ink"><div class="row"><span>Golden Globes · Hollywood Foreign Press Association</span><b>&lt;100</b></div><div class="track"><div class="fill" style="width:.6%;min-width:2px"></div></div></div>
+      </div>
+      <p class="cap">Scaled to 16,000. The Globes’ small voting body explains why it has so much influence, and why she treats it with suspicion. The Emmys, with the biggest electorate, are in her view the most democratic.</p>
+      <p class="src">Source: Sheet 31, Awards Season Conversation</p>
+    </div>
+    <div class="kit">
+      <div><span class="label">Argument</span><span>Everyone in showbusiness secretly wants the EGOT: an Emmy, Grammy, Oscar and Tony.</span></div>
+      <div><span class="label">Crisp fact</span><span>George Bernard Shaw is the only person to have won both an Oscar and the Nobel Prize in Literature.</span></div>
+      <div><span class="label">Pivot</span><span>Who would you thank in your Oscar speech? Everyone has rehearsed one.</span></div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Conclusion &amp; toolkit</span>
+    <h2>Generalists are specialists at changing the subject</h2>
+    <p class="lede">She ends by admitting the sheets are only an overview, then argues that the overview is what you need to see how stories fit together. Her parting quotation is from Desmond Tutu: “Don’t raise your voice, improve your argument.”</p>
+  </div>
+  <div class="toolkit">
+    <div class="col">
+      <h3>Hold the floor</h3>
+      <div class="tk"><b>Have a stalling move ready</b><span>Repeat the question, call it interesting, or hand it to someone else. Agreeing “on some levels” buys a few seconds.</span></div>
+      <div class="tk"><b>Drop the fillers</b><span>“Like” and “you know” tell people you are lazy or out of your depth.</span></div>
+      <div class="tk"><b>Proofread before you post</b><span>One misspelling and nobody hears your point. Check before you press send.</span></div>
+      <div class="tk"><b>Keep an outsider’s maxim</b><span>A safe line nobody can argue with, like Galbraith on forecasters or Wilson on a week in politics, steadies the room.</span></div>
+      <div class="tk"><b>Know the slang trap</b><span>“Quite good” is faint praise to a Brit. Check what a word means to the person you’re talking to.</span></div>
+    </div>
+    <div class="col">
+      <h3>Land a fact</h3>
+      <div class="tk"><b>One crisp fact beats a lecture</b><span>Choose something surprising, true and short enough to remember after a drink.</span></div>
+      <div class="tk"><b>Remember the secret world</b><span>Pundits rarely know what the intelligence services know. Saying so is smarter than claiming certainty about foreign policy.</span></div>
+      <div class="tk"><b>Separate the myths</b><span>Bretton Woods isn’t the Marshall Plan, Austria isn’t Australia, and the morning-after pill isn’t an abortion pill.</span></div>
+      <div class="tk"><b>Respect the calendar</b><span>Know which day is someone’s sabbath and whether it is Ramadan before you offer lunch or chase a reply.</span></div>
+      <div class="tk"><b>Admit what you don’t know</b><span>On terrorism or the Middle East, if you aren’t an expert, ask one questions rather than lecture.</span></div>
+    </div>
+    <div class="col">
+      <h3>Pivot out</h3>
+      <div class="tk"><b>Ask what anyone can answer</b><span>Favourite city, best bridge, guilty-pleasure TV, Oscar speech. Nobody can be wrong about these.</span></div>
+      <div class="tk"><b>Travel is the universal exit</b><span>Six of the 31 pivots go to places. Everyone has somewhere they loved or want to see.</span></div>
+      <div class="tk"><b>Offer a drink or food</b><span>The oldest distraction still works: the bar, the canapés, or a spot by the kitchen.</span></div>
+      <div class="tk"><b>Let yourself be the joke</b><span>Blame autocorrect, mock your own sense of direction, admit an addiction to old sitcoms. It takes the heat out.</span></div>
+      <div class="tk"><b>Close with a line, then switch</b><span>On politics, saying “wake me up after election day” lets everyone relax and move on.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>A summary in my own words of Imogen Lloyd Webber, <em>The Intelligent Conversationalist: 31 Cheat Sheets That Will Show You How to Talk to Anyone About Anything, Anytime</em> (St. Martin’s Griffin, 2016). Figures are as reported in the book. The pivot categories are my own grouping. Diagrams were drawn for this page, and charts are drawn to the book’s numbers. Cover image belongs to the publisher.</p>
+  <span class="label">Notes compiled Oct 2026</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent, txt) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (txt != null) n.textContent = txt;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function lines(g, x, y, arr, attrs, lh) {
+    arr.forEach(function (t, i) {
+      var a = { x: x, y: y + i * (lh || 15) };
+      for (var k in attrs) a[k] = attrs[k];
+      el("text", a, g, t);
+    });
+  }
+  function arrow(g, x1, y1, x2, y2, cls) {
+    el("path", { d: "M" + x1 + " " + y1 + " L" + x2 + " " + y2, "class": cls || "s-2", "stroke-width": 1.5 }, g);
+    var ang = Math.atan2(y2 - y1, x2 - x1), s = 6;
+    var p1 = [x2 - s * Math.cos(ang - .5), y2 - s * Math.sin(ang - .5)], p2 = [x2 - s * Math.cos(ang + .5), y2 - s * Math.sin(ang + .5)];
+    el("path", { d: "M" + p1[0] + " " + p1[1] + " L" + x2 + " " + y2 + " L" + p2[0] + " " + p2[1], "class": cls || "s-2", "stroke-width": 1.5 }, g);
+  }
+
+  /* --- Intro: survival-strategy flow --- */
+  var fb = document.getElementById("flow-boxes"), fe = document.getElementById("flow-eg");
+  if (fb) {
+    var steps = [
+      { t: "Heated topic", s: "tempers rise", f: "f-redt", st: "s-red", tc: "t-red", eg: ["A banker on", "the markets"] },
+      { t: "1 Argument", s: "hard to argue", f: "f-cyt", st: "s-cy", tc: "t-cy", eg: ["Forecasts are", "astrology", "(Galbraith)"] },
+      { t: "2 Crisp fact", s: "short and true", f: "f-cyt", st: "s-cy", tc: "t-cy", eg: ["Euro notes show", "invented", "monuments"] },
+      { t: "3 Pivot", s: "easy to answer", f: "f-redt", st: "s-red", tc: "t-red", eg: ["Favourite", "European city?"] },
+      { t: "Safe ground", s: "talk flows", f: "f-paper2", st: "s-3", tc: "t-3", eg: ["Travel", "stories"] }
+    ];
+    steps.forEach(function (st, i) {
+      var x = 2 + i * 124;
+      el("rect", { x: x, y: 112, width: 100, height: 62, rx: 6, "class": st.f + " " + st.st, "stroke-width": 1.5 }, fb);
+      el("text", { x: x + 50, y: 138, "text-anchor": "middle", "class": "hd", style: "font-size:14.5px" }, fb, st.t);
+      el("text", { x: x + 50, y: 158, "text-anchor": "middle", "class": st.tc, style: "font-size:10px" }, fb, st.s);
+      if (i < steps.length - 1) arrow(fb, x + 103, 143, x + 121, 143);
+      lines(fe, x + 50, 238, st.eg, { "text-anchor": "middle", style: "font-size:11px", "class": i === 0 || i === 4 ? "t-3" : "t-ink" }, 14);
+    });
+  }
+
+  /* --- Ch2: money stages --- */
+  var mg = document.getElementById("money");
+  if (mg) {
+    var stg = [
+      { era: "ancient", name: "Barter", kind: "barter", note: ["goods for", "goods"] },
+      { era: "coins", name: "Commodity", kind: "coin", note: ["the gold coin", "is the value"] },
+      { era: "17th c. on", name: "Representative", kind: "rep", note: ["note swaps", "for gold"] },
+      { era: "1944", name: "Bretton Woods", kind: "bw", note: ["currency → $", "$ → gold"] },
+      { era: "1971", name: "Fiat", kind: "fiat", note: ["legal tender", "by decree"] }
+    ];
+    stg.forEach(function (s, i) {
+      var x = 2 + i * 120, cx = x + 58;
+      el("text", { x: cx, y: 18, "text-anchor": "middle", "class": "t-3", style: "font-size:11px" }, mg, s.era);
+      el("text", { x: cx, y: 40, "text-anchor": "middle", "class": "hd", style: "font-size:15px" }, mg, s.name);
+      el("rect", { x: x + 4, y: 56, width: 108, height: 104, rx: 6, "class": s.kind === "fiat" ? "f-redt s-red" : "f-card s-rule", "stroke-width": 1.2 }, mg);
+      if (s.kind === "barter") {
+        el("circle", { cx: cx - 22, cy: 108, r: 13, "class": "f-cy2" }, mg);
+        el("rect", { x: cx + 9, y: 95, width: 26, height: 26, rx: 3, "class": "f-cy" }, mg);
+        el("path", { d: "M" + (cx - 6) + " 102 h12 M" + (cx + 2) + " 98 l4 4 l-4 4 M" + (cx + 6) + " 114 h-12 M" + (cx - 2) + " 110 l-4 4 l4 4", "class": "s-2", "stroke-width": 1.4 }, mg);
+      } else if (s.kind === "coin") {
+        for (var k = 0; k < 4; k++) el("ellipse", { cx: cx, cy: 128 - k * 9, rx: 24, ry: 7, "class": "f-cy s-card", style: "stroke:var(--card)", "stroke-width": 1.5 }, mg);
+      } else {
+        var nx = x + 14, ny = 76;
+        el("rect", { x: nx, y: ny, width: 40, height: 24, rx: 2, "class": "f-paper2 s-2", "stroke-width": 1.2 }, mg);
+        el("text", { x: nx + 20, y: ny + 16, "text-anchor": "middle", "class": "t-ink", style: "font-size:11px" }, mg, s.kind === "bw" ? "£ ¥ ₣" : "note");
+        if (s.kind === "bw") {
+          el("rect", { x: nx + 50, y: ny, width: 40, height: 24, rx: 2, "class": "f-paper2 s-cy", "stroke-width": 1.2 }, mg);
+          el("text", { x: nx + 70, y: ny + 16, "text-anchor": "middle", "class": "t-cy", style: "font-size:12px" }, mg, "$");
+          arrow(mg, nx + 41, ny + 12, nx + 49, ny + 12, "s-2");
+          arrow(mg, nx + 70, ny + 26, nx + 70, ny + 44, "s-2");
+          el("rect", { x: nx + 52, y: ny + 46, width: 36, height: 22, rx: 2, "class": "f-cy" }, mg);
+        } else {
+          var gx = nx + 52;
+          if (s.kind === "fiat") {
+            el("path", { d: "M" + (nx + 42) + " " + (ny + 12) + " H" + (gx - 2), "class": "s-red", "stroke-width": 1.5, "stroke-dasharray": "3 3" }, mg);
+            el("path", { d: "M" + (nx + 44) + " " + (ny + 4) + " l8 16 M" + (nx + 52) + " " + (ny + 4) + " l-8 16", "class": "s-red", "stroke-width": 2 }, mg);
+            el("rect", { x: gx, y: ny + 34, width: 36, height: 22, rx: 2, "class": "f-none s-3", "stroke-width": 1.2, "stroke-dasharray": "3 3" }, mg);
+            el("text", { x: gx + 18, y: ny + 70, "text-anchor": "middle", "class": "t-red", style: "font-size:10px" }, mg, "no gold");
+          } else {
+            arrow(mg, nx + 41, ny + 12, gx + 6, ny + 36, "s-2");
+            el("rect", { x: gx, y: ny + 38, width: 36, height: 22, rx: 2, "class": "f-cy" }, mg);
+          }
+        }
+      }
+      lines(mg, cx, 186, s.note, { "text-anchor": "middle", style: "font-size:11px", "class": s.kind === "fiat" ? "t-red" : "t-ink" }, 15);
+      if (i < stg.length - 1) arrow(mg, x + 114, 108, x + 122, 108, "s-3");
+    });
+    el("rect", { x: 300, y: 222, width: 10, height: 10, rx: 2, "class": "f-cy" }, mg);
+    el("text", { x: 316, y: 231, "class": "t-3", style: "font-size:11px" }, mg, "gold, the real backing");
+  }
+
+  /* --- Ch5: bill to law --- */
+  var bg = document.getElementById("bill");
+  if (bg) {
+    function box(x, y, w, h, title, sub, cls, tcls) {
+      el("rect", { x: x, y: y, width: w, height: h, rx: 6, "class": cls, "stroke-width": 1.4 }, bg);
+      el("text", { x: x + w / 2, y: y + 20, "text-anchor": "middle", "class": "hd", style: "font-size:14px" }, bg, title);
+      lines(bg, x + w / 2, y + 37, sub, { "text-anchor": "middle", style: "font-size:10.5px", "class": tcls || "" }, 13);
+    }
+    box(2, 12, 112, 64, "Introduce", ["any member", "sponsors a bill"], "f-card s-2");
+    box(134, 12, 112, 64, "Committee", ["hearings and", "markup"], "f-card s-2");
+    box(266, 12, 152, 64, "Floor vote", ["House 218 of 435", "Senate 51 of 100"], "f-cyt s-cy", "t-cy");
+    box(438, 12, 160, 64, "Both houses agree", ["identical text, often", "via conference"], "f-card s-2");
+    arrow(bg, 116, 44, 131, 44); arrow(bg, 248, 44, 263, 44); arrow(bg, 420, 44, 435, 44);
+    el("text", { x: 190, y: 96, "text-anchor": "middle", "class": "t-red", style: "font-size:10.5px" }, bg, "tabled = dies");
+    el("text", { x: 342, y: 96, "text-anchor": "middle", "class": "t-red", style: "font-size:10.5px" }, bg, "60 senators to end a filibuster");
+    arrow(bg, 518, 78, 518, 112);
+    box(438, 114, 160, 52, "President", ["10 days to act"], "f-redt s-red", "t-red");
+    /* outcomes */
+    arrow(bg, 438, 140, 400, 140);
+    box(296, 116, 102, 48, "Sign", ["law"], "f-cyt s-cy", "t-cy");
+    arrow(bg, 518, 168, 518, 196);
+    box(438, 198, 160, 48, "Veto", ["back to Congress"], "f-card s-red", "t-red");
+    arrow(bg, 438, 222, 400, 222);
+    box(268, 198, 130, 48, "Override", ["⅔ of both houses"], "f-cyt s-cy", "t-cy");
+    el("text", { x: 438, y: 268, "class": "t-3", style: "font-size:10.5px" }, bg, "neither sign nor veto:");
+    el("text", { x: 438, y: 282, "class": "t-3", style: "font-size:10.5px" }, bg, "it becomes law anyway");
+    /* amendments panel */
+    el("rect", { x: 2, y: 116, width: 240, height: 178, rx: 6, "class": "f-paper2" }, bg);
+    el("text", { x: 16, y: 140, "class": "hd", style: "font-size:14px" }, bg, "Amending the Constitution");
+    el("text", { x: 16, y: 166 }, bg, "Propose:");
+    el("text", { x: 16, y: 182, "class": "t-ink", style: "font-size:11px" }, bg, "⅔ of both houses, or ⅔ of states");
+    el("text", { x: 16, y: 208 }, bg, "Ratify:");
+    el("text", { x: 16, y: 224, "class": "t-ink", style: "font-size:11px" }, bg, "¾ of the states");
+    el("text", { x: 16, y: 252, "class": "big t-red" }, bg, "27");
+    el("text", { x: 56, y: 246, "class": "t-3", style: "font-size:10.5px" }, bg, "amendments since 1787,");
+    el("text", { x: 56, y: 260, "class": "t-3", style: "font-size:10.5px" }, bg, "26 in force");
+    el("text", { x: 16, y: 282, "class": "t-3", style: "font-size:10.5px" }, bg, "the 27th took 203 years");
+  }
+
+  /* --- Ch6: dots on the nuclear rings --- */
+  var nd = document.getElementById("nuke-dots");
+  if (nd) {
+    function ring(n, r, cls, off, dash) {
+      for (var i = 0; i < n; i++) {
+        var a = off + i * 2 * Math.PI / n;
+        el("circle", { cx: 135 + r * Math.cos(a), cy: 135 + r * Math.sin(a), r: 6, "class": cls, "stroke-width": 1.5, "stroke-dasharray": dash || "" }, nd);
+      }
+    }
+    ring(5, 68, "f-cy", .3);
+    ring(4, 107, "f-card s-3", .785, "2 2");
+  }
+
+  /* --- Ch7: suffrage timeline --- */
+  var vg = document.getElementById("vote");
+  if (vg) {
+    var x0 = 30, x1 = 580, y0 = 1880, y1 = 2020, ax = 92;
+    function X(y) { return x0 + (y - y0) / (y1 - y0) * (x1 - x0); }
+    el("path", { d: "M" + x0 + " " + ax + " H" + x1, "class": "s-2", "stroke-width": 1.5 }, vg);
+    for (var yr = 1880; yr <= 2020; yr += 20) {
+      el("path", { d: "M" + X(yr) + " " + (ax - 4) + " V" + (ax + 4), "class": "s-3" }, vg);
+      el("text", { x: X(yr), y: ax + 20, "text-anchor": "middle", "class": "t-3", style: "font-size:10.5px" }, vg, yr);
+    }
+    var evs = [
+      { y: 1893, c: "New Zealand", n: "the first", up: true },
+      { y: 1920, c: "United States", n: "19th Amendment", up: false },
+      { y: 1963, c: "Iran", n: "", up: true },
+      { y: 1971, c: "Switzerland", n: "eight years after Iran", up: false, hot: true },
+      { y: 2011, c: "Saudi Arabia", n: "partial, for 2015", up: true }
+    ];
+    evs.forEach(function (e) {
+      var x = X(e.y), ty = e.up ? 30 : 140;
+      el("path", { d: "M" + x + " " + ax + " V" + (e.up ? 44 : 126), "class": e.hot ? "s-red" : "s-3", "stroke-width": 1.2 }, vg);
+      el("circle", { cx: x, cy: ax, r: e.hot ? 7 : 5.5, "class": e.hot ? "f-red" : "f-cy" }, vg);
+      var anchor = e.y > 2000 ? "end" : (e.y < 1900 ? "start" : "middle");
+      var tx = e.y > 2000 ? x + 6 : (e.y < 1900 ? x - 6 : x);
+      el("text", { x: tx, y: ty - 12, "text-anchor": anchor, "class": "hd", style: "font-size:14px" + (e.hot ? ";fill:var(--red)" : "") }, vg, e.c + " " + e.y);
+      if (e.n) el("text", { x: tx, y: ty + 4, "text-anchor": anchor, "class": e.hot ? "t-red" : "t-3", style: "font-size:10.5px" }, vg, e.n);
+    });
+  }
+
+  /* --- Hero band: a jagged red thread (the row) calms into a smooth line (the pivot) --- */
+  var canvas = document.getElementById("talk");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var w = 0, hgt = 0, dpr = 1;
+  function size() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; hgt = r.height;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(hgt * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function ease(t) { return t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t); }
+  function draw(time) {
+    if (!w) return;
+    ctx.clearRect(0, 0, w, hgt);
+    var t = reduce ? 0 : time * 0.0006;
+    var grey = css("--cyan-2"), red = css("--red"), ink3 = css("--ink-3");
+    /* engraving hatch: fine horizontal lines, like the cover's etched suits */
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = grey;
+    for (var y = 8; y < hgt - 4; y += 7) {
+      ctx.globalAlpha = 0.22;
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      for (var x = 0; x <= w; x += 12) ctx.lineTo(x, y + Math.sin(x * 0.02 + y) * 0.8);
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+    /* 31 sheet ticks along the bottom */
+    for (var i = 0; i < 31; i++) {
+      var sx = 8 + i * (w - 16) / 30;
+      ctx.fillStyle = ink3;
+      ctx.globalAlpha = 0.55;
+      ctx.fillRect(sx - 0.75, hgt - 12, 1.5, 8);
+    }
+    ctx.globalAlpha = 1;
+    /* the thread */
+    var mid = hgt * 0.45;
+    ctx.beginPath();
+    for (var x2 = 0; x2 <= w; x2 += 2) {
+      var u = x2 / w, calm = ease((u - 0.3) / 0.45);
+      var jag = (Math.sin(x2 * 0.21 + t * 9) * 0.6 + Math.sin(x2 * 0.53 - t * 13) * 0.4) * hgt * 0.32 * (1 - calm);
+      var swell = Math.sin(u * 7 + t) * hgt * 0.06 * calm;
+      var yy = mid + jag + swell + calm * hgt * 0.08;
+      if (x2 === 0) ctx.moveTo(x2, yy); else ctx.lineTo(x2, yy);
+    }
+    var grad = ctx.createLinearGradient(0, 0, w, 0);
+    grad.addColorStop(0, red); grad.addColorStop(0.55, red); grad.addColorStop(1, grey);
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = 2;
+    ctx.lineJoin = "round";
+    ctx.stroke();
+    /* the pivot point */
+    var px = w * 0.52;
+    ctx.beginPath(); ctx.arc(px, mid + hgt * 0.04, 5, 0, Math.PI * 2); ctx.fillStyle = red; ctx.fill();
+  }
+  var running = false, visible = true, raf = 0;
+  function loop(tm) { draw(tm); if (running) raf = requestAnimationFrame(loop); }
+  function start() { if (reduce || running || !visible) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  size(); draw(0);
+  window.addEventListener("resize", function () { size(); draw(performance.now()); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+  }
+  document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+  new MutationObserver(function () { draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  start();
+})();
+</script>
+
+</body>
+</html>
