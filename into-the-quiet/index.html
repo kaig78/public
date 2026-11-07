@@ -1,0 +1,1479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Into the Quiet by John Mark Comer – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a long-form reading brief that moves like the book, from noise to quiet.
+   One centred frame (~1160px), prose held to ~64ch, figures break wider.
+   Palette lifted from Moretto's "Christ in the Wilderness": desert-sky paper,
+   the teal mantle, the vermilion robe (used sparingly), the ochre rock. */
+:root {
+  --paper: #eceeea;
+  --paper-2: #e1e5e0;
+  --card: #f7f8f5;
+  --ink: #1b2322;
+  --ink-2: #4a5553;
+  --ink-3: #79837f;
+  --rule: #cfd5cf;
+
+  --robe: #b9412c;
+  --mantle: #2c6874;
+  --ochre: #9c7436;
+
+  --display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 64ch;
+  --frame: 1160px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f1514;
+    --paper-2: #18201f;
+    --card: #161e1d;
+    --ink: #e5ebe8;
+    --ink-2: #aeb9b5;
+    --ink-3: #7f8b87;
+    --rule: #2a3533;
+    --robe: #ef7d64;
+    --mantle: #72b6c2;
+    --ochre: #d6ac6a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f1514;
+  --paper-2: #18201f;
+  --card: #161e1d;
+  --ink: #e5ebe8;
+  --ink-2: #aeb9b5;
+  --ink-3: #7f8b87;
+  --rule: #2a3533;
+  --robe: #ef7d64;
+  --mantle: #72b6c2;
+  --ochre: #d6ac6a;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.62;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 72px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--mantle); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; font-weight: 500; }
+p { margin: 0; }
+strong { font-weight: 600; }
+em { font-style: italic; }
+.label {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.muted { color: var(--ink-2); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px 20px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  padding-block: clamp(36px, 6vw, 80px) 12px;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(64px, 11vw, 148px);
+  line-height: .86;
+  letter-spacing: -.02em;
+}
+.hero h1 span { display: block; font-style: normal; font-weight: 500; }
+.hero .sub {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(17px, 1.7vw, 20px);
+  margin-top: 26px;
+  color: var(--ink-2);
+}
+.hero .sub b { color: var(--robe); font-weight: 600; }
+.hero .dek {
+  font-size: clamp(19px, 1.9vw, 22px);
+  line-height: 1.5;
+  margin-top: 18px;
+  max-width: 40ch;
+}
+.hero .byline { margin-top: 24px; display: flex; gap: 8px 20px; flex-wrap: wrap; }
+.roundel {
+  justify-self: center;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: var(--paper-2);
+  box-shadow: 0 0 0 1px var(--rule);
+}
+.roundel img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cover-chip { display: flex; gap: 14px; align-items: center; margin-top: 28px; }
+.cover-chip img { width: 54px; height: auto; border-radius: 2px; box-shadow: 0 6px 14px -8px rgba(10, 20, 20, .5); }
+.cover-chip p { font-size: 14px; color: var(--ink-2); line-height: 1.45; max-width: 34ch; }
+
+/* The jar */
+.jar { margin-top: 36px; display: grid; gap: 10px; }
+.jar canvas { display: block; width: 100%; height: 120px; border-radius: 4px; background: var(--card); box-shadow: inset 0 0 0 1px var(--rule); }
+.jar .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.jar p { font-size: 15px; color: var(--ink-2); max-width: 70ch; }
+.btn {
+  font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .04em;
+  background: transparent; color: var(--ink); border: 1px solid var(--ink-3); border-radius: 999px;
+  padding: 7px 14px; cursor: pointer;
+}
+.btn:hover { border-color: var(--ink); }
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 12px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-family: var(--display);
+  font-size: clamp(38px, 5.4vw, 64px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 54ch; }
+
+/* Movement openers */
+.move {
+  margin-top: clamp(72px, 10vw, 132px);
+  padding-top: 28px;
+  border-top: 1px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px 48px;
+  align-items: end;
+}
+.move .tag { grid-column: 1 / -1; display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; }
+.move h2 {
+  font-family: var(--display);
+  font-size: clamp(46px, 7.6vw, 104px);
+  font-weight: 400;
+  line-height: .92;
+  letter-spacing: -.02em;
+}
+.move h2 i { font-style: italic; }
+.move .lede { font-size: 20px; line-height: 1.55; color: var(--ink-2); }
+
+/* Content blocks */
+.block {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 18px 44px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.block > .side { display: grid; gap: 8px; align-content: start; }
+.block .side .k {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.1;
+  color: var(--ink-2);
+}
+.block h3 {
+  font-family: var(--display);
+  font-size: clamp(30px, 3.6vw, 42px);
+  font-weight: 500;
+  line-height: 1.06;
+}
+.block .idea { font-size: 21px; line-height: 1.5; margin-top: 12px; max-width: 50ch; font-style: italic; color: var(--ink-2); }
+.block .main { display: grid; gap: 28px; min-width: 0; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 3px; top: .74em;
+  width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--ink-3);
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--ochre);
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* Quotes */
+.pull {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 1.12;
+  max-width: 28ch;
+  margin: 0;
+}
+.pull.i { font-style: italic; font-weight: 400; }
+.cite { display: block; margin-top: 12px; }
+.quote-band {
+  padding-block: clamp(40px, 6vw, 72px);
+  display: grid; gap: 4px; justify-items: center; text-align: center;
+}
+.quote-band .pull { max-width: 22ch; font-size: clamp(34px, 5vw, 60px); font-style: italic; font-weight: 400; }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+.fig h4 { font-family: var(--sans); font-size: 17px; font-weight: 600; line-height: 1.3; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--sans); font-size: 12px; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+
+/* Bars */
+.bars { display: grid; gap: 13px; }
+.bar { display: grid; gap: 6px; }
+.bar .row { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; line-height: 1.3; }
+.bar .row b { font-family: var(--sans); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track { position: relative; height: 12px; background: var(--paper-2); border-radius: 6px; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ink-2)); border-radius: 6px; }
+.bar.hot .row span { font-weight: 600; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 500; font-size: 48px; line-height: 1; font-variant-numeric: lining-nums tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* Book map */
+.map { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--ink); }
+.map a { text-decoration: none; padding: 14px 12px 16px 0; display: grid; gap: 6px; align-content: start; border-right: 1px solid var(--rule); padding-left: 12px; }
+.map a:first-child { padding-left: 0; }
+.map a:last-child { border-right: 0; }
+.map a:hover b { text-decoration: underline; }
+.map .n { font-family: var(--sans); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.map b { font-family: var(--display); font-size: 22px; font-weight: 600; line-height: 1.1; }
+.map span:last-child { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+.map a.mid b { font-style: italic; font-weight: 500; }
+.map-arc { display: block; width: 100%; height: 46px; margin-bottom: 4px; }
+.map-arc path { fill: none; stroke: var(--mantle); stroke-width: 1.5; }
+.map-arc circle { fill: var(--mantle); }
+
+/* Compare (two columns) */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 20px; display: grid; gap: 10px; align-content: start; }
+.compare h5 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0; display: flex; gap: 8px; align-items: center; }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 7px; font-size: 15.5px; color: var(--ink-2); }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--c); display: inline-block; flex: none; }
+
+/* Not / is */
+.nots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.not { border: 1px dashed var(--ink-3); border-radius: 6px; padding: 16px; display: grid; gap: 6px; align-content: start; }
+.not b { font-family: var(--sans); font-weight: 600; font-size: 16px; text-decoration: line-through; text-decoration-color: var(--robe); text-decoration-thickness: 1.5px; }
+.not span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.is { margin-top: 12px; border-radius: 6px; padding: 20px; background: color-mix(in srgb, var(--mantle) 12%, var(--card)); border: 1px solid color-mix(in srgb, var(--mantle) 35%, var(--rule)); display: grid; gap: 8px; }
+.is p.def { font-family: var(--display); font-size: clamp(24px, 2.8vw, 32px); line-height: 1.2; font-weight: 500; }
+
+/* Three-part: silence/stillness */
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.trio > div { display: grid; gap: 8px; align-content: start; border-top: 2px solid var(--c, var(--ink)); padding-top: 12px; }
+.trio b { font-family: var(--display); font-size: 26px; font-weight: 600; line-height: 1.1; }
+.trio p { font-size: 15.5px; color: var(--ink-2); line-height: 1.5; }
+
+/* Encounters */
+.enc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.enc a { text-decoration: none; border-radius: 6px; padding: 18px; background: var(--card); border: 1px solid var(--rule); display: grid; gap: 6px; align-content: start; }
+.enc a:hover { border-color: var(--ink-3); }
+.enc .label { color: var(--c); }
+.enc b { font-family: var(--display); font-size: 25px; font-weight: 600; line-height: 1.1; }
+.enc span:last-child { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+/* Spectrum */
+.spectrum { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+.spectrum > div { padding: 14px; display: grid; gap: 6px; align-content: start; background: color-mix(in srgb, var(--c) 14%, var(--card)); }
+.spectrum > div:first-child { border-radius: 6px 0 0 6px; }
+.spectrum > div:last-child { border-radius: 0 6px 6px 0; }
+.spectrum b { font-family: var(--sans); font-weight: 600; font-size: 15px; color: var(--c); }
+.spectrum span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+.spectrum i { font-style: normal; font-family: var(--sans); font-size: 12.5px; color: var(--ink); border-top: 1px solid color-mix(in srgb, var(--c) 40%, transparent); padding-top: 6px; margin-top: 2px; }
+
+/* Feelings chips */
+.feel { display: flex; flex-wrap: wrap; gap: 8px; }
+.feel span { font-family: var(--sans); font-weight: 500; font-size: 15px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--ink-3); }
+
+/* Avoidance cards */
+.avoid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.avoid > div { border-radius: 6px; padding: 16px; background: var(--paper-2); display: grid; gap: 6px; align-content: start; }
+.avoid b { font-family: var(--display); font-size: 26px; font-weight: 600; line-height: 1; }
+.avoid .q { font-style: italic; font-size: 15px; }
+.avoid .cost { font-size: 14.5px; color: var(--ink-2); line-height: 1.45; }
+
+/* Gethsemane */
+.geth { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--card); }
+.geth > div { padding: clamp(18px, 2.6vw, 28px); display: grid; gap: 10px; align-content: start; border-right: 1px solid var(--rule); position: relative; }
+.geth > div:last-child { border-right: 0; background: color-mix(in srgb, var(--mantle) 10%, var(--card)); }
+.geth .step { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--mantle); }
+.geth b { font-family: var(--display); font-size: clamp(30px, 3.4vw, 40px); font-weight: 500; line-height: 1; }
+.geth .jw { font-style: italic; font-size: 17px; line-height: 1.45; }
+.geth .you { font-size: 15px; color: var(--ink-2); line-height: 1.5; }
+
+/* Face or fight */
+.ff { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.ff > div { padding: clamp(18px, 2.6vw, 26px); display: grid; gap: 12px; align-content: start; background: var(--card); }
+.ff > div + div { border-left: 1px solid var(--rule); }
+.ff h5 { margin: 0; font-family: var(--display); font-size: clamp(30px, 3.6vw, 44px); font-weight: 500; line-height: 1; color: var(--c); }
+.ff dl { margin: 0; display: grid; gap: 10px; }
+.ff dt { font-family: var(--sans); font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3); }
+.ff dd { margin: 2px 0 0; font-size: 15.5px; line-height: 1.45; }
+
+/* Voices */
+.voices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.voice { border-radius: 6px; padding: 16px; display: grid; gap: 8px; align-content: start; border: 1px solid var(--rule); background: var(--card); }
+.voice b { font-family: var(--sans); font-weight: 600; font-size: 15px; display: flex; gap: 8px; align-items: center; }
+.voice q { font-style: italic; font-size: 15px; color: var(--ink-2); line-height: 1.45; quotes: "“" "”"; }
+.voice .how { font-family: var(--sans); font-size: 12.5px; color: var(--ink); border-top: 1px solid var(--rule); padding-top: 8px; }
+
+/* Ladder (distraction responses) */
+.ladder { display: grid; gap: 0; counter-reset: rung; }
+.rung { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 6px 22px; padding: 16px 0; border-top: 1px solid var(--rule); }
+.rung:first-child { border-top: 0; padding-top: 0; }
+.rung .lvl { font-family: var(--sans); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--c, var(--ink-3)); padding-top: 4px; }
+.rung b { font-family: var(--display); font-size: 24px; font-weight: 600; line-height: 1.15; display: block; }
+.rung p { font-size: 15.5px; color: var(--ink-2); line-height: 1.5; margin-top: 4px; }
+.rung .eg { font-family: var(--sans); font-size: 13.5px; color: var(--ink); margin-top: 8px; }
+
+/* Dialogue */
+.dialog { display: grid; gap: 10px; max-width: 58ch; }
+.dialog p { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px; font-size: 17px; }
+.dialog p span:first-child { font-family: var(--sans); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-top: 5px; }
+.dialog p.mt span:last-child { font-style: italic; }
+
+/* Whispers */
+.whispers { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+.whispers span { font-family: var(--display); font-style: italic; font-size: 21px; padding: 4px 14px; border-radius: 999px; background: color-mix(in srgb, var(--mantle) 11%, var(--card)); color: var(--ink); }
+
+/* Painting */
+.painting { margin: 0; display: grid; gap: 12px; }
+.painting img { width: 100%; height: auto; display: block; border-radius: 4px; }
+.painting figcaption { display: flex; justify-content: space-between; gap: 8px 20px; flex-wrap: wrap; }
+.painting figcaption p { font-size: 15px; color: var(--ink-2); max-width: 70ch; }
+
+/* Rhythm */
+.rhythm { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); }
+.rhythm > div { padding: 22px 20px 22px 0; display: grid; gap: 6px; align-content: start; }
+.rhythm > div + div { padding-left: 20px; border-left: 1px solid var(--rule); }
+.rhythm .big { font-family: var(--display); font-size: clamp(36px, 4.6vw, 56px); font-weight: 500; line-height: 1; }
+.rhythm p { font-size: 15px; color: var(--ink-2); }
+
+/* Toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.tool { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 14px; padding: 18px 0; border-top: 1px solid var(--rule); }
+.tool .no { font-family: var(--display); font-size: 30px; line-height: 1; color: var(--mantle); font-variant-numeric: lining-nums; }
+.tool b { font-family: var(--sans); font-weight: 600; font-size: 17px; line-height: 1.3; display: block; }
+.tool p { font-size: 15.5px; color: var(--ink-2); line-height: 1.5; margin-top: 4px; }
+.tool .try { font-family: var(--sans); font-size: 13px; color: var(--ink); margin-top: 8px; }
+.tool .try::before { content: "Start small: "; color: var(--mantle); font-weight: 600; }
+
+/* Prayers */
+.prayers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.prayer { background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--c, var(--mantle)); border-radius: 6px; padding: clamp(20px, 3vw, 30px); display: grid; gap: 12px; align-content: start; min-width: 0; }
+.prayer.wide { grid-column: 1 / -1; }
+.prayer .when { display: flex; justify-content: space-between; gap: 6px 14px; flex-wrap: wrap; }
+.prayer h4 { font-family: var(--display); font-size: clamp(26px, 2.8vw, 32px); font-weight: 600; line-height: 1.1; }
+.prayer .words { font-family: var(--display); font-style: italic; font-size: clamp(21px, 2.2vw, 25px); line-height: 1.38; display: grid; gap: 4px; }
+.prayer .words.lines { gap: 2px; }
+.prayer .words .gap { height: 10px; }
+.prayer .words .blank { display: inline-block; min-width: 4.5em; border-bottom: 1px solid var(--ink-3); }
+.prayer .rubric { font-family: var(--sans); font-size: 13.5px; color: var(--ink-2); line-height: 1.5; }
+.prayer .rubric b { color: var(--c, var(--mantle)); font-weight: 600; }
+.prayer .note { font-size: 15px; color: var(--ink-2); line-height: 1.5; border-top: 1px solid var(--rule); padding-top: 12px; }
+.prayer .steps { display: grid; gap: 14px; }
+.prayer .steps > div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 4px 16px; align-items: baseline; }
+.prayer .steps .rubric { text-transform: uppercase; letter-spacing: .08em; font-size: 12px; }
+.prompts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 28px; }
+@media (max-width: 760px) {
+  .prayers, .prompts { grid-template-columns: 1fr; }
+  .prayer .steps > div { grid-template-columns: 1fr; }
+}
+
+/* Rule */
+.rule-card {
+  margin-top: 28px;
+  border-radius: 6px;
+  padding: clamp(24px, 5vw, 56px);
+  background: var(--ink);
+  color: var(--paper);
+  display: grid;
+  gap: 18px;
+}
+.rule-card .label { color: color-mix(in srgb, var(--paper) 65%, var(--ink)); }
+.rule-card ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; max-width: 60ch; }
+.rule-card li { font-family: var(--display); font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; }
+.rule-card li:nth-child(n+5) { font-size: clamp(18px, 2vw, 22px); font-family: var(--body); line-height: 1.5; color: color-mix(in srgb, var(--paper) 82%, var(--ink)); }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .map { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .map a { border-bottom: 1px solid var(--rule); }
+  .map a:nth-child(4n+1) { padding-left: 0; }
+  .map a:nth-child(4n) { border-right: 0; }
+  .map-arc { display: none; }
+  .voices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .roundel { max-width: 240px; justify-self: start; order: -1; }
+  .move { grid-template-columns: 1fr; }
+  .block { grid-template-columns: 1fr; gap: 14px; }
+  .block > .side { grid-template-columns: auto 1fr; align-items: baseline; gap: 12px; }
+  .nots, .trio, .enc, .avoid, .geth, .rhythm { grid-template-columns: 1fr; }
+  .geth > div { border-right: 0; border-bottom: 1px solid var(--rule); }
+  .geth > div:last-child { border-bottom: 0; }
+  .rhythm > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .toolkit { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .map a, .map a:nth-child(4n+1) { padding-left: 12px; }
+  .map a:nth-child(odd) { padding-left: 0; }
+  .map a:nth-child(4n) { border-right: 1px solid var(--rule); }
+  .map a:nth-child(even) { border-right: 0; }
+  .compare, .ff, .voices { grid-template-columns: 1fr; }
+  .ff > div + div { border-left: 0; border-top: 1px solid var(--rule); }
+  .spectrum { grid-template-columns: 1fr; }
+  .spectrum > div:first-child { border-radius: 6px 6px 0 0; }
+  .spectrum > div:last-child { border-radius: 0 0 6px 6px; }
+  .rung { grid-template-columns: 1fr; }
+  .dialog p { grid-template-columns: 1fr; gap: 2px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .roundel { animation: settle 1.1s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .1s; }
+  .hero .dek { animation-delay: .2s; }
+  .hero .byline { animation-delay: .28s; }
+  .roundel { animation-delay: .05s; }
+  @keyframes settle { from { transform: translateY(-10px); } }
+}
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · John Mark Comer · WaterBrook, 2026</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#eremos">The eremos</a>
+    <a href="#ourselves">Ourselves</a>
+    <a href="#enemy">Our enemy</a>
+    <a href="#god">Our God</a>
+    <a href="#practice">A quiet life</a>
+    <a href="#prayers">Prayers</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div>
+    <h1>Into the <span>quiet</span></h1>
+    <p class="sub">Following Jesus in a world of <b>noise</b></p>
+    <p class="dek">Comer's case that solitude, silence and stillness are as essential to following Jesus as community is, and that the noise of modern life is as dangerous to the soul as hurry.</p>
+    <div class="byline label">
+      <span>7 movements</span><span>3 encounters</span><span>10 practices</span><span>~56,000 words, condensed</span>
+    </div>
+    <div class="cover-chip">
+      <img src="cover.jpg" alt="Cover of Into the Quiet: a circular crop of a painting of Christ, chin on hand, in a red robe, on a pale stone background">
+      <p>The cover and the roundel here both crop Moretto da Brescia's <em>Christ in the Wilderness</em>, which Comer discusses near the end of the book.</p>
+    </div>
+  </div>
+  <div class="roundel"><img src="roundel.jpg"alt="Detail of Moretto da Brescia's Christ in the Wilderness: Christ seated on a rock, chin resting on his hand, in a red robe and blue mantle"></div>
+</div>
+
+<div class="jar">
+  <canvas id="jar" aria-label="Animation of sediment settling in a jar of creek water until the water above is clear" role="img"></canvas>
+  <div class="row">
+    <p>Comer once shook a jar of muddy Oregon creek water at the start of a sermon and set it on the pulpit. Forty minutes later the silt lay on the bottom and the water above was clear. That, he says, is what happens in the quiet if you stay long enough.</p>
+    <button class="btn" id="shake" type="button">Shake the jar</button>
+  </div>
+</div>
+
+<!-- ============ THE IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>The greatest threat to faith may be distraction, not secularism</h2>
+  </div>
+  <div class="figrow">
+    <div class="prose">
+      <p>Comer wrote <em>The Ruthless Elimination of Hurry</em> about the speed of modern life. This book is its companion, about the noise. Cities are loud, culture is loud, churches are loud, and even our prayer is crowded with books, apps and earbuds. We are the first generation in history for whom it is normal to banish quiet completely.</p>
+      <p>His answer is an old one. Jesus "often withdrew to lonely places and prayed." The Greek word for those places is <strong>eremos</strong>: the wilderness, the deserted place, the quiet place. Jesus lived a rhythm of <strong>retreat and return</strong>, and Comer argues that solitude and community are the two legs every apprentice of Jesus walks on.</p>
+      <p>Going into the quiet isn't a spa day. Following Henri Nouwen, Comer calls it the place of "the great encounter", and he maps three of them: with <a href="#ourselves">ourselves</a>, with <a href="#enemy">our enemy</a>, and finally with <a href="#god">our God</a>. The book ends with <a href="#practice">ten practical ways</a> to build a quieter life.</p>
+    </div>
+    <div class="fig">
+      <span class="label">Where it starts</span>
+      <div class="story" style="border-color:var(--robe)">
+        <span class="label">Twenty-one days in Puget Sound</span>
+        <p>After stepping down from twenty years as a pastor, Comer spent three weeks alone in a cabin. No phone, no books, no alcohol, no exercise, one coffee a day. His only human contact was ninety minutes of depth therapy at 5:50 a.m. with a long-haired psychologist he nicknamed Gandalf.</p>
+        <p>An introvert who had taught on solitude for years, he expected it to be easy. By day three he was more depressed than he had been in years. He realised his "solitude" had always come with props: books, a laptop, projects, the occasional bottle of wine.</p>
+        <p>He asked why books were banned. The answer stayed with him: <em>"The desert teaches by taking away."</em></p>
+      </div>
+      <p class="cap">It was "one of the most painful, harrowing, terrifying things I have ever done." It was also the turning point of his life, and the reason for the book.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:56px">
+    <svg class="map-arc" viewBox="0 0 700 46" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M50 6 C 150 6, 200 40, 350 40 C 500 40, 550 6, 650 6"/>
+      <circle cx="50" cy="6" r="3"/><circle cx="350" cy="40" r="3"/><circle cx="650" cy="6" r="3"/>
+    </svg>
+    <nav class="map" aria-label="Book map">
+      <a href="#begin"><span class="n">Beginning</span><b>A world of noise</b><span>The cabin, and the problem</span></a>
+      <a href="#eremos"><span class="n">One</span><b>The eremos</b><span>Why Jesus withdrew, and what solitude is</span></a>
+      <a href="#ourselves"><span class="n">Two</span><b>Ourselves</b><span>Facing what comes up</span></a>
+      <a href="#gethsemane" class="mid"><span class="n">Intermission</span><b>The Gethsemane prayer</b><span>Put the book down</span></a>
+      <a href="#enemy"><span class="n">Three</span><b>Our enemy</b><span>The battle for the mind</span></a>
+      <a href="#god"><span class="n">Four</span><b>Our God</b><span>Listening, and union</span></a>
+      <a href="#practice"><span class="n">End</span><b>A quiet life</b><span>Ten ways to de-noise</span></a>
+    </nav>
+    <p class="cap muted" style="font-size:15px;margin-top:14px;max-width:70ch">The book follows the shape it describes: down into the hard encounters, then back up. Comer calls it the U shape of solitude.</p>
+  </div>
+</section>
+
+<!-- ============ ONE: THE EREMOS ============ -->
+<div class="move" id="eremos">
+  <div class="tag"><span class="label">Beginning &amp; One</span><span class="label" id="begin">A world of noise · The eremos</span></div>
+  <h2>Jesus often <i>withdrew</i></h2>
+  <p class="lede">Noise is doing measurable harm to our bodies and quiet harm to our souls. Jesus lived by a different rhythm, and Comer argues every follower needs it, introvert or not.</p>
+</div>
+
+<article class="block">
+  <div class="side"><span class="label">The problem</span><span class="k">Noise is stress</span></div>
+  <div class="main">
+    <div>
+      <h3>We live in a world of noise</h3>
+      <p class="idea">Our bodies evolved for quiet soundscapes. Our brains still hear a freeway as a predator.</p>
+    </div>
+    <ul class="points">
+      <li>Mathias Basner, who has studied noise for twenty-five years, puts it plainly: "Noise is stress." Loud sound triggers the amygdala and cortisol before the mind can name it. A commute home can feel like fighting off sabre-toothed tigers the whole way.</li>
+      <li>Noise has been tied to hypertension, heart disease, stroke, anxiety, depression and dementia. Comer expects we'll one day look back on city noise the way we look at lead paint.</li>
+      <li>The deeper problem is that it's now possible to never be alone. The moment we are, we reach for the phone. In Korea, stressed workers pay to spend 24 hours in a mock prison cell just to be away from their devices. "The real prison is where we return to," said one.</li>
+      <li>Much of what we call "God's silence" or "the dark night of the soul" may simply be overloaded brains. Comer asks whether the wreckage of Western Christianity was caused in part by the sheer noise of modern life.</li>
+    </ul>
+    <div class="fig">
+      <span class="label">What the research says</span>
+      <div class="stats">
+        <div class="stat"><span class="big">2nd</span><p>Noise pollution's rank among environmental health threats, per the WHO, behind only air pollution.</p></div>
+        <div class="stat"><span class="big">+28%</span><p>Rise in anxiety prescriptions for every 10-decibel increase in neighbourhood noise.</p></div>
+        <div class="stat"><span class="big">1M</span><p>Healthy life-years lost every year in Europe to noise, by WHO estimate.</p></div>
+        <div class="stat"><span class="big">12</span><p>Truly quiet places left in the entire United States, according to one acoustic ecologist.</p></div>
+      </div>
+      <p class="src">Studies cited in Into the Quiet, ch. 1. One estimate has Parisians living three fewer years than they would in the countryside, from noise alone.</p>
+    </div>
+    <div>
+      <blockquote class="pull i">“We will make the whole universe a noise in the end.”</blockquote>
+      <span class="label cite">The demon Screwtape in C. S. Lewis's The Screwtape Letters, who hates heaven's two sounds: music and silence</span>
+    </div>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">The tradition</span><span class="k">The power of silence</span></div>
+  <div class="main">
+    <div>
+      <h3>The Desert Fathers and Mothers</h3>
+      <p class="idea">Thousands fled the crumbling Roman world to pray in the deserts of Egypt, Syria and Judaea. Their sayings still map our inner lives.</p>
+    </div>
+    <ul class="points">
+      <li>In the third century, a young Egyptian aristocrat named Antony heard Matthew 19:21 read in church ("sell your possessions… then come, follow me"), gave everything away and went into the desert. Athanasius's <em>Life of Antony</em> swept the Mediterranean.</li>
+      <li>They came from everywhere: Arsenius had tutored an emperor's sons, Abba Moses had been a slave and a robber, and Syncletica and Theodora were women in a man's world. They lived in mud-brick "cells", wove baskets so they could pray while working, and mostly sat in silence.</li>
+      <li>Their conviction, in Mother Teresa's later words: "God is the friend of silence." Abba Ammonas wrote that "it is by silence that the saints grew."</li>
+    </ul>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">The pattern</span><span class="k">Retreat and return</span></div>
+  <div class="main">
+    <div>
+      <h3>The busier Jesus got, the more he slipped away</h3>
+      <p class="idea">Most people pull back from quiet as demands rise. Jesus did the opposite.</p>
+    </div>
+    <div class="fig">
+      <h4>Every time the Gospels show Jesus going to the eremos</h4>
+      <div class="bars" style="gap:10px">
+        <div class="bar"><div class="row"><span>After his baptism: forty days in the wilderness</span><b>Matt 4</b></div></div>
+        <div class="bar"><div class="row"><span>After his first day preaching: up before dawn to a solitary place</span><b>Mark 1</b></div></div>
+        <div class="bar"><div class="row"><span>Before choosing the twelve: all night on a mountain</span><b>Luke 6</b></div></div>
+        <div class="bar"><div class="row"><span>After feeding the five thousand: dismissed the crowds and prayed alone</span><b>Matt 14</b></div></div>
+        <div class="bar"><div class="row"><span>After John the Baptist's death: by boat to a solitary place</span><b>Matt 14</b></div></div>
+        <div class="bar"><div class="row"><span>When the crowds tried to make him king: withdrew to a mountain</span><b>John 6</b></div></div>
+        <div class="bar"><div class="row"><span>With disciples too busy to eat: "Come with me by yourselves to a quiet place"</span><b>Mark 6</b></div></div>
+      </div>
+      <p class="cap">But he was no hermit. His longest retreat lasted forty days; most were hours. Each time he came back to his community "to love and serve the world."</p>
+    </div>
+    <div class="compare">
+      <div>
+        <h5><span class="dot" style="--c:var(--ochre)"></span>Take away community</h5>
+        <ul><li>No church, no table, no friends or mentors</li><li>What's left: a lone, lonely Christian dying out "like a brand plucked from the fire"</li></ul>
+      </div>
+      <div>
+        <h5><span class="dot" style="--c:var(--mantle)"></span>Take away quiet</h5>
+        <ul><li>No silent prayer, no time in nature, no long listening</li><li>What's left: "a semi-normal Christian in the digital age. Hollow, distracted, and frayed."</li></ul>
+      </div>
+    </div>
+    <p class="muted" style="max-width:var(--measure);font-size:17px">Comer lists the objections he expects (I'm an extrovert, I'm not a monk, I have toddlers, isn't this privilege?) and answers with one line: Jesus often withdrew. And he was Jesus. People were tearing open roofs to reach him.</p>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">Definitions</span><span class="k">Alone with God</span></div>
+  <div class="main">
+    <div>
+      <h3>What solitude is, and what it isn't</h3>
+    </div>
+    <div>
+      <div class="nots">
+        <div class="not"><b>Loneliness</b><span>A felt absence. Richard Foster: "Loneliness is inner emptiness. Solitude is inner fulfillment."</span></div>
+        <div class="not"><b>Isolation</b><span>A move away from people out of fear or shame. Solitude moves toward God and, in time, toward others.</span></div>
+        <div class="not"><b>Aloneness</b><span>Being by yourself while texting, streaming or reading other people. "Alone together," in Sherry Turkle's phrase.</span></div>
+      </div>
+      <div class="is">
+        <span class="label">Comer's definition</span>
+        <p class="def">Solitude is intentional time in the quiet to be with ourselves and God.</p>
+        <p class="muted" style="font-size:15.5px">Only two inputs: God, and your heart laid open before God. Abba Hor told a disciple, "Take care that you never bring into this cell the words of another." And when solitude is separated from aloneness, studies find introverts want it no more than extroverts do. It's hard for everyone.</p>
+      </div>
+    </div>
+    <div class="trio">
+      <div style="--c:var(--ink)"><span class="label">Solitude</span><b>No people</b><p>Withdrawing from every other input so the faculties that perceive God can sharpen. Saint Jerome: "never less alone than when alone."</p></div>
+      <div style="--c:var(--mantle)"><span class="label">Silence</span><b>No noise</b><p>Exterior silence is the easy part: no TV, earbuds or traffic. Interior silence means calming the "psychic entropy" of your own thoughts. One study found two hours of silence a day grew new cells in the hippocampus.</p></div>
+      <div style="--c:var(--ochre)"><span class="label">Stillness</span><b>No striving</b><p>Kallistos Ware: "an attitude of listening to God and of an openness to God." A surrendered will, like the clear water above the silt. Monks on the Mediterranean said, "Dolphins only surface in calm waters."</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">Why it matters</span><span class="k">Intimacy doesn't scale</span></div>
+  <div class="main">
+    <div>
+      <h3>Go into your room and close the door</h3>
+      <p class="idea">Jesus's first advice on prayer wasn't what to pray. It was where.</p>
+    </div>
+    <div class="story">
+      <span class="label">The anniversary</span>
+      <p>For their 25th anniversary Comer took his wife to San Sebastián, alone. If a couple were never alone, or only ever alone in front of screens, they could be friends but never lovers. The more intimate the relationship, the more time alone it needs. God is no different.</p>
+    </div>
+    <div class="compare">
+      <div>
+        <h5><span class="dot" style="--c:var(--mantle)"></span>When I go into the quiet…</h5>
+        <ul>
+          <li>My body unwinds; my jaw softens; I breathe slower</li>
+          <li>I'm forced to look honestly at my heart, under God's compassionate gaze</li>
+          <li>The sharp emotions ease and love, joy and peace come up</li>
+          <li>I hear the "still small voice" and remember who I am, and who I'm not</li>
+          <li>Approval and criticism lose their hook. If only for a moment, I'm free</li>
+        </ul>
+      </div>
+      <div>
+        <h5><span class="dot" style="--c:var(--robe)"></span>When I don't…</h5>
+        <ul>
+          <li>I feel distant from God; "in Christ" becomes a doctrine, not an experience</li>
+          <li>I let whoever is noisiest set the agenda: a headline, a boss, my inbox</li>
+          <li>I get reactive, run on low-grade anxiety and anger, snap at my family</li>
+          <li>I get so tired that I drift from engagement to escapism: chips, phone, wine</li>
+          <li>Old temptations and lies return "with a suspicious power"</li>
+        </ul>
+      </div>
+    </div>
+    <ul class="points">
+      <li>The eremos is a <strong>place</strong>, but also a <strong>practice</strong> and a <strong>posture</strong>. It can be a park at sunrise, a backyard fire, or the hour after the kids are in bed. Saint Jerome: "Find in the busy city the desert of the monks."</li>
+      <li>Dallas Willard called solitude and silence "the most radical of the disciplines." Comer asks whether that makes them the most neglected.</li>
+      <li>Nothing in the New Testament commands you to switch off your phone and wait on God. Jesus just does it and says, "Come, follow me." You're invited, not commanded.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">The great need of our time is for Desert Fathers and Mothers in the city.</blockquote>
+      <span class="label">Comer's thesis: people who regularly retreat into solitude, are transformed, and then return</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TWO: OURSELVES ============ -->
+<div class="move" id="ourselves">
+  <div class="tag"><span class="label">Two</span><span class="label">The encounter with ourselves</span></div>
+  <h2>When we stop, <i>we feel</i></h2>
+  <p class="lede">Expect a day spa and you'll be surprised. The first thing the quiet usually hands you is everything you've been too busy to feel.</p>
+</div>
+
+<article class="block">
+  <div class="side"><span class="label">The surprise</span><span class="k">−20 decibels</span></div>
+  <div class="main">
+    <div>
+      <h3>Most people find silence deafening</h3>
+      <p class="idea">In the quietest room on earth, what you hear is yourself.</p>
+    </div>
+    <div class="fig">
+      <h4>How loud is quiet?</h4>
+      <div class="bars">
+        <div class="bar"><div class="row"><span>Rock concert</span><b>120 dB</b></div><div class="track"><div class="fill" style="width:100%;--c:var(--robe)"></div></div></div>
+        <div class="bar"><div class="row"><span>Friendly conversation</span><b>60 dB</b></div><div class="track"><div class="fill" style="width:57.14%;--c:var(--ochre)"></div></div></div>
+        <div class="bar"><div class="row"><span>Quiet library</span><b>40 dB</b></div><div class="track"><div class="fill" style="width:42.86%"></div></div></div>
+        <div class="bar"><div class="row"><span>A whisper in that library</span><b>30 dB</b></div><div class="track"><div class="fill" style="width:35.71%"></div></div></div>
+        <div class="bar"><div class="row"><span>Quietest natural place on earth</span><b>~20 dB</b></div><div class="track"><div class="fill" style="width:28.57%;--c:var(--mantle)"></div></div></div>
+        <div class="bar hot"><div class="row"><span>Microsoft's anechoic chamber, Redmond</span><b>−20 dB</b></div><div class="track" style="box-shadow:inset 0 0 0 1.5px var(--mantle)"></div></div>
+      </div>
+      <p class="cap">Bars start at −20 dB, so the chamber's bar is empty. Inside, Comer could hear his organs shift and his eyelids blink. Its designer says "most people find the absence of sound deafening." Some leave within minutes; in long sessions people can start to hallucinate.</p>
+      <p class="src">Figures as given in Into the Quiet, ch. 2</p>
+    </div>
+    <ul class="points">
+      <li>Wellness culture sells us saunas, sleep rings and supplements to offset modern stress. Comer has a sauna and a cold plunge and loves them, but no subscription makes a finite, flawed person whole.</li>
+      <li>So we bring the wellness mindset to solitude and expect instant peace. Sometimes it comes. More often there's a <strong>U shape</strong>: you go down before you come back up.</li>
+      <li>Nouwen: "Solitude is not a private therapeutic place. Rather, it is the place of conversion… the furnace of transformation."</li>
+    </ul>
+    <div class="fig">
+      <h4>The U shape of solitude</h4>
+      <svg viewBox="0 0 640 210" role="img" aria-label="A U-shaped curve. It starts high at Enter the quiet, falls to a low point labelled the unloading, where exhaustion, fear, shame, sadness and anger surface, and rises again on the right to love, joy and peace, ending slightly higher than it started.">
+        <line x1="20" y1="180" x2="620" y2="180" style="stroke:var(--rule);stroke-width:1"/>
+        <path d="M40 40 C 150 40, 190 160, 320 160 C 450 160, 490 28, 600 28" style="fill:none;stroke:var(--mantle);stroke-width:2.5"/>
+        <circle cx="40" cy="40" r="5" style="fill:var(--ink)"/>
+        <circle cx="320" cy="160" r="5" style="fill:var(--robe)"/>
+        <circle cx="600" cy="28" r="5" style="fill:var(--mantle)"/>
+        <text x="40" y="22" style="fill:var(--ink);font-family:var(--sans);font-size:14px;font-weight:600">Enter the quiet</text>
+        <text x="320" y="200" text-anchor="middle" style="fill:var(--ink-2);font-family:var(--sans);font-size:13px">The unloading: what's buried comes up</text>
+        <text x="600" y="58" text-anchor="end" style="fill:var(--ink);font-family:var(--sans);font-size:14px;font-weight:600">Love, joy, peace</text>
+      </svg>
+      <p class="cap">Thomas Keating called the low point "the unloading of the unconscious." Without outside stimulation the brain shifts into its default mode network and turns to the inner world, especially the painful parts.</p>
+    </div>
+    <div>
+      <span class="label">The road map: three encounters in the eremos</span>
+      <div class="enc" style="margin-top:12px">
+        <a href="#ourselves" style="--c:var(--ochre)"><span class="label">Encounter 1</span><b>With ourselves</b><span>All we feel, all we are, and the true state of our souls.</span></a>
+        <a href="#enemy" style="--c:var(--robe)"><span class="label">Encounter 2</span><b>With our enemy</b><span>Unseen forces, within and without, that torment the mind and must be overcome.</span></a>
+        <a href="#god" style="--c:var(--mantle)"><span class="label">Encounter 3</span><b>With our God</b><span>The voice of love we crave, and also fear.</span></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">What comes up</span><span class="k">Five feelings</span></div>
+  <div class="main">
+    <div>
+      <h3>The most common things we feel in the quiet</h3>
+    </div>
+    <div class="feel" aria-label="The five feelings">
+      <span>Exhaustion</span><span>Fear</span><span>Shame</span><span>Sadness</span><span>Anger</span>
+    </div>
+    <ul class="points">
+      <li><strong>Exhaustion.</strong> Comer calls it The Crash. After his triumph on Mount Carmel, Elijah went into the wilderness, asked to die, and slept. Then he ate, and slept again. Rest matters because tired people are rarely loving people. "Napping is a spiritual discipline too."</li>
+      <li><strong>Fear.</strong> Often it feels like "worrying in God's general direction." Nietzsche said we "drug ourselves with sociability" because we fear what will be whispered in our ear. Many people aren't afraid of solitude so much as of feeling their fears.</li>
+      <li><strong>Shame.</strong> Before the Fall, Adam and Eve "were both naked, and they felt no shame." Shame is the fear that if people knew who we really are, they'd reject us. In the desert there are no filters and no fig leaves. That is also the only way shame can be healed: by love.</li>
+      <li><strong>Sadness.</strong> On retreat in Big Sur, Comer found himself grieving a lost friendship he thought he'd finished grieving. "The grief was real, and it wasn't a distraction from my retreat; it was my retreat." Gabor Maté: "Grief is the antidote to trauma."</li>
+      <li><strong>Anger.</strong> Nouwen described his mind in prayer as "monkeys in a banana tree", and the first monkey was anger: "I give long, hostile speeches to my enemies." Unlike sadness, rehearsed anger works itself further in, not out.</li>
+    </ul>
+    <div class="fig">
+      <h4>Where are you on the exhaustion spectrum?</h4>
+      <div class="spectrum">
+        <div style="--c:var(--mantle)"><b>Good tired</b><span>You gave your week away well. Delight comes easily: a sunset, a meal, a laugh.</span><i>Rest keeps you healthy</i></div>
+        <div style="--c:var(--ochre)"><b>Unhealthy tired</b><span>Grinding through, little margin. Sabbath becomes a recovery day. Joy stays just out of reach.</span><i>Rest gets you back to healthy</i></div>
+        <div style="--c:var(--robe)"><b>Dangerous tired</b><span>Lost touch with your soul. Easy prey for temptation. Snapping, withdrawing, numbing.</span><i>Rest exposes the need for real change</i></div>
+      </div>
+      <p class="src">Ruth Haley Barton's spectrum, as summarised in ch. 2</p>
+    </div>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">Why we avoid it</span><span class="k">Anything but this</span></div>
+  <div class="main">
+    <div>
+      <h3>We will do almost anything not to feel our pain</h3>
+      <p class="idea">The pain is already in you, and it's leaking onto the people you love. It comes up in the quiet because it's asking to be healed.</p>
+    </div>
+    <div class="fig">
+      <h4>Fifteen minutes alone with your thoughts, or an electric shock?</h4>
+      <div class="bars">
+        <div class="bar"><div class="row"><span>Men who chose to shock themselves</span><b>~67%</b></div><div class="track"><div class="fill" style="width:67%;--c:var(--robe)"></div></div></div>
+        <div class="bar"><div class="row"><span>Women who chose to shock themselves</span><b>~25%</b></div><div class="track"><div class="fill" style="width:25%;--c:var(--ochre)"></div></div></div>
+      </div>
+      <p class="cap">In a University of Virginia study, participants sat in a bare room with no phone. Many preferred a painful shock to staying with their own thoughts.</p>
+      <p class="src">Study cited in ch. 2</p>
+    </div>
+    <div class="avoid">
+      <div><span class="label">Strategy 1</span><b>Denial</b><span class="q">"I'm fine, all good, thanks."</span><span class="cost">Common in churches, where it's called "believing God." Psychologist John Welwood named it spiritual bypassing: skipping the cross to get to the resurrection. It works short term. Ignored deep pain grows.</span></div>
+      <div><span class="label">Strategy 2</span><b>Detachment</b><span class="q">"Hurt: off."</span><span class="cost">You seal the pain in a box. But the faculty that feels grief is the same one that feels joy and wonder. Cut one off and you lose both, and with them the empathy intimacy needs.</span></div>
+      <div><span class="label">Strategy 3</span><b>Drugs</b><span class="q">Literal or figurative.</span><span class="cost">Alcohol, work, sex, food, shopping, even church. Mostly the phone, our generation's flask in the back pocket. "All addiction is an attempt to avoid pain."</span></div>
+    </div>
+    <div class="story">
+      <span class="label">Big Sur</span>
+      <p>At the monastery's silent adoration, twenty minutes in, Comer heard tapping. The new monk leading the session, a former doctor, was playing on his phone. Whether it's cocaine or Candy Crush, it's a diversion from our pain and from God, not a path through it.</p>
+    </div>
+    <ul class="points">
+      <li>Brother Ignatius, prior of the Big Sur community, on what retreatants face: "You have to feel." Things you haven't resolved come up and have to be worked through. He called that process beautiful.</li>
+      <li>Keating called it "the divine therapy": the Spirit evacuating "the undigested psychological material of a lifetime." Like surgery, it gets worse before it gets better.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ INTERMISSION ============ -->
+<section id="gethsemane">
+  <div class="sec-head">
+    <span class="label">Two, continued · and the Intermission</span>
+    <h2>The Gethsemane prayer</h2>
+    <p class="lede">The one time the Gospels let us watch Jesus in the eremos, he "began to be sorrowful and troubled." He didn't deny, detach or drug. He went to the place of pain on purpose and prayed in three movements.</p>
+  </div>
+  <div class="geth">
+    <div>
+      <span class="step">1 · Feelings</span>
+      <b>Give God your feelings</b>
+      <p class="jw">"My soul is overwhelmed with sorrow to the point of death."</p>
+      <p class="you">No filter, no polish. Pete Greig: "Pray what you've got." Two-thirds of the Psalms are lament, which isn't complaining but complaining <em>to God</em>. Even the violent imprecatory psalms are there because those feelings are in us. John Ortberg: "Prayer isn't a place to be good; it's a place to be honest."</p>
+    </div>
+    <div>
+      <span class="step">2 · Desires</span>
+      <b>Give God your desires</b>
+      <p class="jw">"My Father, if it is possible, may this cup be taken from me."</p>
+      <p class="you">Desire drives every feeling. Augustine defined sin as disordered desire. Offer them all, even the ones you know are wrong: "God, I want to lust right now… Have mercy." Comer admits much of his prayer comes down to "Lord Jesus Christ, have mercy."</p>
+    </div>
+    <div>
+      <span class="step">3 · Trust</span>
+      <b>Give God your trust</b>
+      <p class="jw">"Yet not as I will, but as you will."</p>
+      <p class="you">Surrender: we stop trying to engineer a pain-free outcome. Comer's go-to is the Welcoming Prayer: <em>"I let go of my desire for security, affection, and control, and embrace this moment as it is."</em></p>
+    </div>
+  </div>
+  <div class="figrow" style="margin-top:20px">
+    <div class="fig">
+      <span class="label">While you pray</span>
+      <ul class="points">
+        <li>Let feelings come like a wave you don't fight. Rilke: "No feeling is final."</li>
+        <li>Name them, as specifically as you can. Therapists call it affect labelling. Naming shows you that you are not your feelings.</li>
+        <li>Martin Laird: our feelings are the weather over a mountain. "We are not the weather. We are the mountain."</li>
+        <li>Self-awareness alone can still leave a person narcissistic. The point is to name your feelings <em>to God</em>.</li>
+      </ul>
+    </div>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <span class="label">The Intermission, in full</span>
+      <p style="font-size:17px">Comer stops the book here. Put it down. Find a quiet place. Leave the phone behind and bring nothing but yourself. Come as you are, let whatever is down there come up, and pray through Gethsemane.</p>
+      <p style="font-family:var(--display);font-size:28px;font-style:italic;line-height:1.2">Go, now, into the quiet.</p>
+    </div>
+  </div>
+</section>
+
+<article class="block">
+  <div class="side"><span class="label">The way through</span><span class="k">Toward the pain</span></div>
+  <div class="main">
+    <div>
+      <h3>We heal by moving toward our pain</h3>
+      <p class="idea">"Our brokenness is the geography of God's arrival." (Jay Stringer)</p>
+    </div>
+    <div class="story">
+      <span class="label">The campfire</span>
+      <p>At his son Jude's sixteenth birthday, around a fire at 8,000 feet, Comer asked each boy for his deepest fear. Jude said, "Being alone in the quiet. That's why I'm always listening to music." Comer admits he sometimes feels it too, even as the man writing the book on solitude.</p>
+    </div>
+    <ul class="points">
+      <li>In story after story, Jesus goes to people in their pain: Mary Magdalene, Bartimaeus, Martha and Mary, the woman bleeding for twelve years, Peter after his denial, even Judas.</li>
+      <li>A few weeks after Comer's grief in Big Sur, the friend he'd lost called. While praying early one morning, God had reframed what happened between them. The insight that began their reconciliation came in the quiet, not in therapy or a sermon.</li>
+      <li>Every hurt carries an invitation: to face reality, to stop distracting yourself, to open up to community, to surrender, to trust the Shepherd's path.</li>
+      <li>It takes time. Parker Palmer likened the soul to a wild animal: you won't find it by crashing through the brush. You sit on a rock and wait until it appears.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ THREE: OUR ENEMY ============ -->
+<div class="move" id="enemy">
+  <div class="tag"><span class="label">Three</span><span class="label">The encounter with our enemy</span></div>
+  <h2>Here be <i>dragons</i></h2>
+  <p class="lede">The desert monks didn't go into the wilderness for rest. They went to fight. Comer argues that's closer to how we actually experience solitude than any self-care model.</p>
+</div>
+
+<article class="block">
+  <div class="side"><span class="label">The paradigm</span><span class="k">Not to flee, but to fight</span></div>
+  <div class="main">
+    <div>
+      <h3>Jesus was led into the wilderness to be tempted</h3>
+      <p class="idea">Facing the devil was the purpose of the trip, not a detour from it.</p>
+    </div>
+    <div class="story">
+      <span class="label">Skellig Michael</span>
+      <p>Comer and Jude visited the jagged island off south-west Ireland where sixth-century Celtic monks built beehive huts at the edge of the known world (later a Star Wars set). They named it after the archangel who fights Satan in Revelation. For seven centuries they prayed there "not to find inner peace… but to make war on hell."</p>
+    </div>
+    <ul class="points">
+      <li>When Constantine legalised Christianity, safety brought compromise. Church posts were bought and sold. The desert became the refuge of those who wanted to follow Jesus rather than be good Romans.</li>
+      <li>Their model for solitude wasn't Sabbath rest but spiritual war. Matthew 4: Jesus was led by the Spirit into the <em>eremos</em> "to be tempted by the devil." They followed him there "not to escape but to engage."</li>
+      <li>Antony moved into an abandoned Roman fort. Visitors heard him shouting, "Away from me, you demons!"</li>
+    </ul>
+    <div class="fig">
+      <h4>The three enemies of the soul</h4>
+      <div class="trio">
+        <div style="--c:var(--ochre)"><span class="label">The world</span><b>A culture's lies</b><p>The values and norms of a society that defines good and evil for itself. In the quiet you notice how much you've accepted because "everybody's doing it."</p></div>
+        <div style="--c:var(--ink-2)"><span class="label">The flesh</span><b>Warped appetites</b><p>Primal drives for sex and survival, bent by sin. In solitude they don't vanish. They move to the foreground.</p></div>
+        <div style="--c:var(--robe)"><span class="label">The devil</span><b>Hostile voices</b><p>Real spiritual beings, Comer argues, not a metaphor. Voices that say <em>You are worthless. It's hopeless. God isn't real. If anyone finds out, it's over.</em></p></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">The battle</span><span class="k">320 speeches a day</span></div>
+  <div class="main">
+    <div>
+      <h3>Chatter, and the voices behind it</h3>
+      <p class="idea">"It is the most freeing thing in the world when you discover that not every thought that goes through your head is yours." (John Eldredge)</p>
+    </div>
+    <ul class="points">
+      <li>Psychologist Ethan Kross calls it <strong>chatter</strong>: looping negative thought. He estimates we listen to the equivalent of 320 State of the Union addresses of self-talk every day.</li>
+      <li>Phil Stutz, the therapist from the documentary <em>Stutz</em>, calls the voice that fights your growth "Part X" and describes it as an "inner demon." His two tasks: name it, then defeat it.</li>
+      <li>The desert tradition adds that there isn't one voice in your head but several, and they aren't all friendly. Comer asks: what if secularism is the superstition of our day?</li>
+    </ul>
+    <div class="voices">
+      <div class="voice"><b><span class="dot" style="--c:var(--mantle)"></span>God</b><q>Slow down. Be gentle with yourself.</q><span class="how">Welcome it</span></div>
+      <div class="voice"><b><span class="dot" style="--c:var(--ochre)"></span>The world</b><q>You'd be happier with the new car. Remember what your uncle said at Christmas?</q><span class="how">Notice it and turn back</span></div>
+      <div class="voice"><b><span class="dot" style="--c:var(--ink-2)"></span>The flesh</b><q>What if I get fired? What if it's cancer?</q><span class="how">Notice it and turn back</span></div>
+      <div class="voice"><b><span class="dot" style="--c:var(--robe)"></span>The devil</b><q>Did God really say…? You're doomed to this forever.</q><span class="how">Refuse it entry</span></div>
+    </div>
+    <div class="ff">
+      <div style="--c:var(--ochre)">
+        <h5>Face it</h5>
+        <dl>
+          <div><dt>When</dt><dd>Thoughts and feelings of pain rising from your own heart</dd></div>
+          <div><dt>Posture</dt><dd>Hospitality. Give it a voice and set it before God.</dd></div>
+          <div><dt>From ch. 2</dt><dd>The Gethsemane prayer</dd></div>
+        </dl>
+      </div>
+      <div style="--c:var(--robe)">
+        <h5>Fight it</h5>
+        <dl>
+          <div><dt>When</dt><dd>Thoughts that come from outside: the world, the flesh, the devil</dd></div>
+          <div><dt>Posture</dt><dd>War. Silence it and shut it out, calmly, the way Jesus stood his ground.</dd></div>
+          <div><dt>From ch. 3</dt><dd>Watchfulness and "talking back"</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="muted" style="max-width:var(--measure);font-size:17px">The hard part is telling them apart. Evagrius told young monks to question every thought at the door: <em>"Are you on our side or the side of our foes?"</em> His test: "If it is one of ours, it will fill you with tranquility."</p>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">The method</span><span class="k">Change the channel</span></div>
+  <div class="main">
+    <div>
+      <h3>How Jesus fought: he didn't debate</h3>
+      <p class="idea">The devil lied; Jesus quoted Scripture. The devil lied again; Jesus quoted Scripture again. Eventually the devil left.</p>
+    </div>
+    <ul class="points">
+      <li>The desert monks called mindfulness <strong>watchfulness</strong>. Saint Romuald: "Watch your thoughts like a good fisherman watching for fish."</li>
+      <li>Evagrius wrote <em>Talking Back: A Monastic Handbook for Combating Demons</em> ("the best subtitle of all time"). His insight: Jesus redirected his attention rather than arguing.</li>
+      <li>A 2021 Harvard study by Kathryn Devaney found long-term meditators gain "suppressive control" over the ruminative default mode network. The chatter can be quieted. Historian Jamie Kreiner notes that meditation has deep Christian monastic roots that the popular origin story tends to leave out.</li>
+    </ul>
+    <div class="fig">
+      <h4>Four responses when your mind wanders in prayer</h4>
+      <div class="ladder">
+        <div class="rung" style="--c:var(--mantle)"><span class="lvl">Ordinary wandering</span><div><b>Gently come back</b><p>Shopping lists and jacket choices are just a brain being a brain. Don't scold yourself. Keating: if your mind wanders a thousand times, that's a thousand chances to return to God.</p></div></div>
+        <div class="rung" style="--c:var(--ochre)"><span class="lvl">Chatter · 1</span><div><b>Pray the psalms</b><p>Pray them, don't just read them. Better still, memorise a few and follow the words back to God. Romuald: "The path you must follow is in the Psalms. Never leave it."</p></div></div>
+        <div class="rung" style="--c:var(--ochre)"><span class="lvl">Chatter · 2</span><div><b>Fight lies with truth</b><p>Evagrius's "talking back." When a lie keeps returning, ask for a verse that answers it, write it down, and quote it as often as needed.</p><p class="eg">"It's all going to fall apart." → "It is written…"</p></div></div>
+        <div class="rung" style="--c:var(--robe)"><span class="lvl">Chatter · 3</span><div><b>Turn thoughts into prayers</b><p>A judo move: use the thought's own force. Worried about your kids? Pray for your kids. The enemy tends to attack where you're vulnerable or where you're called, the same places God speaks into.</p></div></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">The secret</span><span class="k">Stay</span></div>
+  <div class="main">
+    <div>
+      <h3>"Stay in your cell and it will teach you everything"</h3>
+      <p class="idea">Abba Moses the Black, a former criminal who became one of the gentlest leaders of the fourth-century church.</p>
+    </div>
+    <ul class="points">
+      <li>Pascal, centuries before the iPhone: "All the unhappiness of men arises from one single fact, that they cannot stay quietly in their own chamber." Diversion works like a credit card. The bill comes later, with interest.</li>
+      <li>Try to go on retreat and things go wrong: a leaking dishwasher, a flat tyre, an angry client. Coincidence, demons or self-sabotage, Comer isn't sure. The resistance is real either way. Silicon Valley and hell both want you in the noise.</li>
+      <li>Most people abandon the cell before it does its work. Nouwen: stay "until all my seductive visitors get tired of pounding on my door."</li>
+      <li>Comer asked Gandalf why 21 days. Because Jesus, Moses and Elijah had forty, and "forty days" is Hebrew for "an awfully long time." Solitude can't be rushed.</li>
+      <li>Irish monks called it <strong>green martyrdom</strong>: dying to ordinary life for the sake of prayer, with a resurrection on the other side.</li>
+    </ul>
+    <div class="fig" style="background:transparent;border-style:dashed">
+      <blockquote class="pull">Before he appeared to the world, he disappeared from the world.</blockquote>
+      <span class="label cite">Luke 4:14: Jesus "returned to Galilee in the power of the Spirit." It's the first time Luke uses the word power of Jesus.</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ FOUR: OUR GOD ============ -->
+<div class="move" id="god">
+  <div class="tag"><span class="label">Four</span><span class="label">The encounter with our God</span></div>
+  <h2>Silence is God's <i>first language</i></h2>
+  <p class="lede">We meet ourselves and our enemy in the quiet whether we want to or not. But what we came for is God: to hear his voice, and to rest in his love.</p>
+</div>
+
+<article class="block">
+  <div class="side"><span class="label">The aim</span><span class="k">Wasting time on God</span></div>
+  <div class="main">
+    <div>
+      <h3>To be with him, before anything else</h3>
+      <p class="idea">Not the calm nervous system or the clear vision. Those come second. The point is love.</p>
+    </div>
+    <div class="story">
+      <span class="label">St. Michael's Abbey</span>
+      <p>A day alone in a Norbertine chapel so quiet that every click of his pen echoed. The first hours were all "monkeys in a banana tree": deadlines, a house move. Then the waters calmed. No fireworks, no visions. He drove home at peace, clearer about who he is and what's next, and aware of how loved he is.</p>
+    </div>
+    <ul class="points">
+      <li>He tries to do this monthly, though, borrowing Tish Harrison Warren's joke about praying daily, "which means about four days a week."</li>
+      <li>Nouwen defined solitude as "wasting time on God." Lettie Cowman: "no large growth in holiness was ever gained by one who did not take time to be often, and long, alone with God."</li>
+      <li>Hosea 2:14, God speaking of Israel: "I will lead her into the wilderness and speak tenderly to her."</li>
+    </ul>
+    <div class="fig">
+      <span class="label">Comer's morning, sitting cross-legged on the floor facing Topanga Canyon</span>
+      <ol class="points" style="counter-reset:m">
+        <li>Breathe, and become aware of the Father, Son and Spirit loving him</li>
+        <li>Name the day's gratitudes</li>
+        <li>Pray a psalm, read Scripture, ask for help with the day</li>
+        <li>Journal or read the lectionary if there's time</li>
+        <li>Mostly: listen</li>
+      </ol>
+      <p class="cap">Sitting on the floor is deliberate. Like Mary, who "sat at the Lord's feet listening," it's a way of praying with the body.</p>
+    </div>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">Listening</span><span class="k">Shema</span></div>
+  <div class="main">
+    <div>
+      <h3>The God of silence is not silent</h3>
+      <p class="idea">Dallas Willard: Jesus offers "a conversational relationship with God."</p>
+    </div>
+    <div class="trio">
+      <div style="--c:var(--mantle)"><span class="label">Key 1</span><b>A quiet place</b><p>Away from noise, including the noise of your phone.</p></div>
+      <div style="--c:var(--mantle)"><span class="label">Key 2</span><b>A quiet time</b><p>When you're settled and present. For Comer, mornings.</p></div>
+      <div style="--c:var(--mantle)"><span class="label">Key 3</span><b>A quiet heart</b><p>Let distractions come and go, and wait in surrender.</p></div>
+    </div>
+    <p class="src" style="font-family:var(--sans);font-size:12px;color:var(--ink-3)">Shorthand from Dr. Aila Tasse of Kenya, quoted in ch. 4</p>
+    <ul class="points">
+      <li>God's voice often arrives as a new thought from deep within. The Spirit lives in us, so God has direct access to our consciousness. Many people hear him regularly without realising it.</li>
+      <li>We listen through <strong>Scripture</strong> (lectio divina: read slowly until a phrase lifts off the page), through <strong>circumstances</strong> ("God comes to us disguised as our life," Paula D'Arcy), through the <strong>desires</strong> of our heart, and through <strong>thoughts</strong> he places in our minds.</li>
+      <li>The caveats matter: not every thought is from God, and discernment happens in community.</li>
+    </ul>
+    <div class="fig">
+      <h4>What a "little pull on the line" can sound like</h4>
+      <div class="whispers">
+        <span>Slow down…</span><span>Be gentle with yourself…</span><span>Forgive her…</span><span>What if you…</span><span>Say no to that, it's not from me…</span><span>Remember…</span><span>It's time to…</span><span>Do you trust me?</span>
+      </div>
+      <p class="cap">How Comer recognises it: from outside his own brain yet deep within. Warm, almost never angry or afraid, profoundly gentle. It usually nudges him toward a small act of love and lifts his heart "like a buoy, pulling me up for air." Elijah heard it not in the wind, earthquake or fire, but in "the sound of gentle silence."</p>
+    </div>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">Beyond words</span><span class="k">Union</span></div>
+  <div class="main">
+    <div>
+      <h3>Don't try to make something happen</h3>
+      <p class="idea">"It's really important to not try to make something happen in solitude but just to offer it to God." (John Ortberg)</p>
+    </div>
+    <ul class="points">
+      <li>Sometimes not much happens. That's fine. What comes out of solitude matters less than <em>who</em> comes out. Hold off on judging a retreat as good or bad.</li>
+      <li>If you hear nothing, something may be blocking your ears: sin, shame, exhaustion, a fried attention span, a wound. Or God may truly be silent for now.</li>
+      <li>Underneath the fear of pain and of demons is a fear of God himself. Bonhoeffer: we are afraid "that he may disturb us and discover who we really are." Jesus's answer, again and again: "Do not be afraid."</li>
+    </ul>
+    <div class="fig">
+      <span class="label">Dan Rather interviews Mother Teresa for 60 Minutes</span>
+      <div class="dialog">
+        <p><span>Rather</span><span>When you pray to God, what do you say?</span></p>
+        <p class="mt"><span>Mother Teresa</span><span>I don't say anything; I listen.</span></p>
+        <p><span>Rather</span><span>Okay then, what does he say to you?</span></p>
+        <p class="mt"><span>Mother Teresa</span><span>He doesn't say anything; he listens. And if you don't understand that, I can't explain it to you.</span></p>
+      </div>
+      <p class="cap">Beneath listening is <strong>beholding</strong>: looking at God looking at you in love. When his wife stops talking mid-sentence while they cook, Comer looks up into her face. When you can't hear a word from God, look up.</p>
+    </div>
+    <ul class="points">
+      <li>Christians have many names for this: union with God, Julian of Norwich's "oneing", the Orthodox theosis, the Reformed "union with Christ", the evangelical "communion with God."</li>
+      <li>Contemplation, in Gregory the Great's words, is "the knowledge of God that is impregnated with love." Theophan the Recluse: "To pray is to descend with the mind into the heart, and there to stand before the face of the Lord."</li>
+      <li>Behind the door to what we most fear is what we most desire: God, saying over and over, "I love you."</li>
+    </ul>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">The turn</span><span class="k">For the world</span></div>
+  <div class="main">
+    <div>
+      <h3>We retreat from the world, for the world</h3>
+      <p class="idea">The same Spirit who calls you away will send you back.</p>
+    </div>
+    <div class="story">
+      <span class="label">The Jesus Abbey, South Korea</span>
+      <p>Comer took his oldest son to Yesu-won, a Protestant monastery in the Taebaek mountains with celibates and families side by side. They sat on the floor for three hours of prayer a day, all in Korean, for a week. Liz Torrey, who leads it, explained their noon hour: "We never pray for ourselves; we always pray for the world." Comer realised how often his own retreats had been only for himself.</p>
+    </div>
+    <ul class="points">
+      <li>The opposite of contemplation isn't action. It's <strong>reaction</strong>: a ping-pong life run by whoever is noisiest.</li>
+      <li>The desert's gift is perspective. On <strong>yourself</strong>: "Solomon's paradox" is that we see others more clearly than ourselves. On <strong>others</strong>: Merton, "We do not go into the desert to escape people but to learn how to find them." On <strong>the world</strong>: Pico Iyer, distance lets you "see it whole."</li>
+      <li>Richard Foster: solitude gives us "power not to win the rat race but to ignore the rat race altogether."</li>
+      <li>The warning is <strong>quietism</strong>, the seventeenth-century movement the Catholic church judged a heresy: prayer cut off from love and service. Retreat without return. The cure: we come away, and then we come back.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="block">
+  <div class="side"><span class="label">The fruit</span><span class="k">Lit from within</span></div>
+  <div class="main">
+    <figure class="painting">
+      <img src="painting.jpg" alt="Moretto da Brescia, Christ in the Wilderness: Christ sits on a rock at right, chin on hand, among animals including a stag, a fox, a boar and a lion, with a winged basilisk at his feet and angels in the sky" loading="lazy">
+      <figcaption>
+        <span class="label">Moretto da Brescia, Christ in the Wilderness, c. 1515–20 · The Met, New York</span>
+        <p>Printed inside the book's front cover. Comer points out the basilisk, the mythical "king of serpents", lying under Christ's feet (Genesis 3, "he will crush your head"). Christ sits perfectly calm, chin on hand, among the wild beasts.</p>
+      </figcaption>
+    </figure>
+    <div>
+      <h3>Do I have to?</h3>
+      <p class="idea">Wrong question. Ask how.</p>
+    </div>
+    <ul class="points">
+      <li>Asking whether you need quiet to be a Christian is like asking whether you need community. To get into heaven, perhaps not. To be an apprentice of Jesus, yes. "Following Jesus without going into the eremos would be like apprenticing under a master painter but refusing to get paint on your hands."</li>
+      <li>There's no quota. Susanna Wesley had nineteen children in a small house. When she pulled her apron over her head, the children knew not to interrupt. They called it "the tent of meeting."</li>
+      <li>Dallas Willard prayed for hours each morning in a converted garage. His old couch still holds the impression.</li>
+      <li>People who spend long years in quiet often radiate light. In old icons, saints aren't lit from an angle but from within. Comer notices how many of the oldest, godliest people he knows have bright, piercing eyes.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ END: A QUIET LIFE ============ -->
+<div class="move" id="practice">
+  <div class="tag"><span class="label">End</span><span class="label">A quiet life</span></div>
+  <h2>Make it your <i>ambition</i></h2>
+  <p class="lede">"Make it your ambition to lead a quiet life" (1 Thessalonians 4:11). In a world this loud, quiet won't just happen. It takes planning, practices, sacrifice and other people.</p>
+</div>
+
+<section style="padding-top:clamp(40px,6vw,64px)">
+  <div class="figrow">
+    <div class="prose">
+      <p>Comer wrote the last chapter at the New Camaldoli Hermitage in Big Sur, where he'd also started the book. Even on the drive up, his mind kept inventing reasons to turn back. He arrived, fell asleep by 8:30, and woke to a sunrise "and to joy."</p>
+      <p>He names two risks at the end of a book like this. One is turning a simple practice into a technique or another religious chore. The more dangerous one is closing the book inspired and doing nothing. Willpower and good intentions rarely change much. Practices do: "The practices are how we do what we can do so the Spirit of Jesus can do in us, by grace, what we currently cannot do."</p>
+    </div>
+    <div class="fig">
+      <span class="label">The rhythm in Comer's own Rule of Life</span>
+      <div class="rhythm">
+        <div><span class="big">1 hour</span><p>a day in solitude</p></div>
+        <div><span class="big">1 day</span><p>a month alone with God</p></div>
+        <div><span class="big">1 retreat</span><p>a longer one, every year</p></div>
+      </div>
+      <p class="cap">Shared with a few close friends. He stresses the word <em>aim</em>. It rarely works out that neatly.</p>
+    </div>
+  </div>
+
+  <div class="sec-head" style="margin-top:56px">
+    <span class="label">The toolkit</span>
+    <h2>Ten ways to de-noise your life</h2>
+    <p class="lede">His advice: pick one, or two at most. Aim for a life 10 percent quieter, then build. Political scientist Aaron Wildavsky called this radical incrementalism.</p>
+  </div>
+  <div class="toolkit">
+    <div class="tool"><span class="no">1</span><div><b>Begin your day with a quiet time</b><p>Bonhoeffer: "God should have the first word." The Comers lock their phones in a safe at night and keep the early house hushed. His wife prefers late nights by the firepit instead. Any time works if it's protected.</p><p class="try">Phone out of the bedroom; ten minutes before you check it</p></div></div>
+    <div class="tool"><span class="no">2</span><div><b>Turn the volume down, literally</b><p>John Cassian: how you are outside prayer shapes how you are inside it. Merton: "Christians should have quiet homes." Comer rarely listens to podcasts or music now and drives in silence.</p><p class="try">One commute a week with nothing playing</p></div></div>
+    <div class="tool"><span class="no">3</span><div><b>Keep the Sabbath</b><p>A whole day of unhurried, undisturbed time. The Comers start with a feast with friends, then spend long hours each alone in a corner of the house.</p><p class="try">One phone-free afternoon this weekend</p></div></div>
+    <div class="tool"><span class="no">4</span><div><b>Go on retreat</b><p>Thirty minutes a day flies by; it can take that long just to quiet the chatter. The deeper work takes longer. Lately he solo-camps on public land outside the city: 24 hours, free.</p><p class="try">Put one day alone with God on the calendar</p></div></div>
+    <div class="tool"><span class="no">5</span><div><b>Build a poustinia</b><p>Russian for "desert": a small, bare prayer hut that a church opens to anyone who needs quiet. Silence is becoming a luxury good, so share it. The Comers bought an 11 × 13 ft micro cabin for their church.</p><p class="try">Claim one corner of your home for prayer only</p></div></div>
+    <div class="tool"><span class="no">6</span><div><b>Get out in nature</b><p>Jesus prayed in deserts, gardens and on mountains. A Stanford study found a 90-minute walk in a park reduced rumination where a walk along a highway didn't. In 2018 Scotland began prescribing nature for anxiety and depression.</p><p class="try">Tea outside tomorrow morning, no phone</p></div></div>
+    <div class="tool"><span class="no">7</span><div><b>Walk with God</b><p>Gen Z has rediscovered it as "silent walking." Comer suspects walking helps us process emotional pain. He ends workdays walking the dog for thirty minutes, praying the Examen.</p><p class="try">A short daily walk without earbuds</p></div></div>
+    <div class="tool"><span class="no">8</span><div><b>Embrace digital asceticism</b><p>Francis and Dominic answered a wealthy church with the vow of poverty. Our version: no alerts, a digital Sabbath, a dumbphone, no TV. "No version of robust discipleship in the digital age" goes without it.</p><p class="try">Turn off every non-human notification</p></div></div>
+    <div class="tool"><span class="no">9</span><div><b>Learn to meditate</b><p>The mind can't switch off, so give it something to think on: Scripture, creation, the gifts of ordinary life. Our brains lean negative by roughly 4:1. "Where attention goes, neural firing flows" (Daniel Siegel).</p><p class="try">Sit with one psalm for ten minutes</p></div></div>
+    <div class="tool"><span class="no">10</span><div><b>Talk less</b><p>James: "quick to listen, slow to speak." The Quakers practise simplicity of speech. Salvator Rosa painted himself holding a sign: "Be silent unless what you have to say is better than silence."</p><p class="try">In your next conversation, let a pause sit</p></div></div>
+  </div>
+</section>
+
+<article class="block">
+  <div class="side"><span class="label">The last word</span><span class="k">Together</span></div>
+  <div class="main">
+    <div>
+      <h3>A book on solitude that ends with community</h3>
+      <p class="idea">The noise is too loud to fight alone.</p>
+    </div>
+    <div>
+      <blockquote class="pull i">“Let him who cannot be alone beware of community. Let him who is not in community beware of being alone.”</blockquote>
+      <span class="label cite">Dietrich Bonhoeffer, to his seminary community at Finkenwalde</span>
+    </div>
+    <ul class="points">
+      <li>On Nyepi, Bali's new year, the whole island goes silent for 24 hours: shops shut, the airport closes, the power goes off. Comer can't imagine that in the West.</li>
+      <li>Cardinal Robert Sarah calls Western culture "a dictatorship of noise" and warns that "a noisy Church would become vain, unfaithful, and dangerous."</li>
+      <li>In 1988 and 1989, quiet Christians with candles and prayer helped bring down communist regimes: the Candle Demonstration in Bratislava, the peace prayers at Leipzig's St. Nicholas Church. "The only thing [the government wasn't] prepared for was candles and prayers," said Pastor Christian Führer.</li>
+      <li>Comer's hope is churches for "noise refugees": communities that keep the Sabbath, gather to quiet the mind before God, and send people back into the city as desert mothers and fathers.</li>
+    </ul>
+    <div class="story">
+      <span class="label">Driving home</span>
+      <p>He knows he'll fail. An hour south of Big Sur his phone will reconnect and the anxious messages will flood in. He'll overwork, get grumpy, scroll too long. But he will carry the eremos with him as a memory in his body, and come back. "And I will awake, again, to the mercy and the great quiet of God."</p>
+    </div>
+  </div>
+</article>
+
+<section id="prayers">
+  <div class="sec-head">
+    <span class="label">To pray</span>
+    <h2>The prayers in the book</h2>
+    <p class="lede">Every prayer Comer offers, quotes or teaches, gathered in one place and ordered roughly the way you'd use them on a retreat: arriving, facing what comes up, fighting distraction, listening, and giving thanks.</p>
+  </div>
+  <div class="prayers">
+
+    <div class="prayer" style="--c:var(--mantle)">
+      <div class="when"><span class="label">Before you begin</span><span class="label">Pete Greig · ch. 1</span></div>
+      <h4>The invocation</h4>
+      <div class="words"><p>As I enter prayer now, I pause to be still; to breathe slowly, to re-center my scattered senses upon the presence of God.</p></div>
+      <p class="note">The opening line of the daily prayer app the Comer family listens to every morning on the school run.</p>
+    </div>
+
+    <div class="prayer" style="--c:var(--mantle)">
+      <div class="when"><span class="label">On arrival</span><span class="label">Big Sur · End</span></div>
+      <h4>I'm here</h4>
+      <div class="words"><p>I'm here, God.</p><p>I surrender…</p></div>
+      <p class="note">What Comer prays on the deck of his hermitage at sunrise, after reading Romuald's Brief Rule. Add the psalmist's line if it helps: "I have calmed and quieted my soul."</p>
+    </div>
+
+    <div class="prayer wide" style="--c:var(--robe)">
+      <div class="when"><span class="label">When pain comes up</span><span class="label">Matthew 26 · ch. 2 &amp; Intermission</span></div>
+      <h4>The Gethsemane prayer</h4>
+      <div class="steps">
+        <div><span class="rubric"><b>1 · Feelings</b></span><div class="words"><p>My soul is overwhelmed with sorrow to the point of death.</p></div></div>
+        <div><span class="rubric"><b>2 · Desires</b></span><div class="words"><p>My Father, if it is possible, may this cup be taken from me.</p></div></div>
+        <div><span class="rubric"><b>3 · Trust</b></span><div class="words"><p>Yet not as I will, but as you will.</p></div></div>
+      </div>
+      <p class="note">Jesus's own words, used as a template. Find a quiet place, leave the phone, let whatever is in you come up, then pray it in this order in your own words: tell God how you feel, tell him what you want, and hand him the outcome.</p>
+    </div>
+
+    <div class="prayer" style="--c:var(--robe)">
+      <div class="when"><span class="label">Offering a desire</span><span class="label">ch. 2</span></div>
+      <h4>Here I am</h4>
+      <div class="words"><p>God, here I am.</p><p>I want <span class="blank"></span>.</p><p>I give this desire to you.</p></div>
+      <p class="note">For any desire: good or heinous, one you want fulfilled or taken away, one you know is God's will or have no idea about. No filter.</p>
+    </div>
+
+    <div class="prayer" style="--c:var(--robe)">
+      <div class="when"><span class="label">In temptation</span><span class="label">ch. 2</span></div>
+      <h4>Have mercy</h4>
+      <div class="words"><p>God, I want to lust right now…</p><p>I want to defend myself right now…</p><p>I want to bad-mouth this person right now…</p><div class="gap"></div><p>Lord Jesus Christ, have mercy.</p></div>
+      <p class="note">Name the desire honestly in the moment, then pray the old refrain. Comer says "you would not believe how much of my prayer life" comes down to that last line.</p>
+    </div>
+
+    <div class="prayer wide" style="--c:var(--ochre)">
+      <div class="when"><span class="label">For afflictive emotions</span><span class="label">Mary Mrozowski, after Thomas Keating · ch. 2</span></div>
+      <h4>The Welcoming Prayer</h4>
+      <p class="rubric"><b>First,</b> pray slowly through your body from top to bottom. Notice wherever you feel pain or tension, and breathe it out to God.</p>
+      <div class="words"><p>I let go of my desire for security, affection, and control, and embrace this moment as it is.</p></div>
+      <p class="note">Comer's go-to prayer. In the words of Jesus, it's simply "Your will be done."</p>
+    </div>
+
+    <div class="prayer" style="--c:var(--ochre)">
+      <div class="when"><span class="label">When worry loops</span><span class="label">ch. 3</span></div>
+      <h4>Turn the thought into a prayer</h4>
+      <div class="words"><p>God, I set before you <span class="blank"></span>…</p></div>
+      <p class="rubric"><b>Then lean on</b> 1 Peter 5:7: "Cast all your cares on God, for he cares for you."</p>
+      <p class="note">The judo move: use the worry's own momentum. Anxious about your kids? Stop and pray for your kids, and invite God into that very place.</p>
+    </div>
+
+    <div class="prayer" style="--c:var(--ochre)">
+      <div class="when"><span class="label">When a lie keeps returning</span><span class="label">Evagrius · ch. 3</span></div>
+      <h4>Talking back</h4>
+      <div class="words"><p>It is written…</p></div>
+      <p class="rubric"><b>Before you need it,</b> ask the Spirit for a verse that answers your recurring lie ("God isn't real," "It's all going to fall apart"). Write it down, memorise it if you can, and quote it as often as the thought comes back.</p>
+      <p class="note">Jesus's method in the wilderness: no debate, just Scripture.</p>
+    </div>
+
+    <div class="prayer" style="--c:var(--mantle)">
+      <div class="when"><span class="label">Listening to your life</span><span class="label">ch. 4</span></div>
+      <h4>Where are you?</h4>
+      <div class="words lines"><p>God, where are you in my life?</p><p>How are you coming to me through this experience?</p><p>What are you saying?</p><p>Where are your invitations?</p><p>How do you want me to respond?</p><p>I'm listening…</p></div>
+      <p class="note">"God comes to us disguised as our life." For hard circumstances as well as good ones.</p>
+    </div>
+
+    <div class="prayer" style="--c:var(--mantle)">
+      <div class="when"><span class="label">Listening to your desires</span><span class="label">ch. 4</span></div>
+      <h4>Sentences to finish</h4>
+      <div class="words lines prompts" style="font-size:19px"><p>I want to…</p><p>I don't want to…</p><p>I yearn for…</p><p>I feel a prompting to…</p><p>I sense God, deep within me, desiring to…</p><p>I'm made to…</p><p>I'm not made to…</p><p>God's call on my life is to…</p><p>It's time for this season to come to an end…</p><p>I need to step out and risk…</p></div>
+      <p class="note">"It is God who works in you to will and to act." Sit with each, in silence or in a journal, and notice which one carries weight.</p>
+    </div>
+
+    <div class="prayer" style="--c:var(--ink-2)">
+      <div class="when"><span class="label">A prayer-poem</span><span class="label">Walter Rauschenbusch · epigraph, ch. 1</span></div>
+      <h4>The Little Gate to God</h4>
+      <div class="words lines"><p>The world of men is made of jangling noises.</p><p>With God is a great silence.</p><p>But that silence is a melody</p><p>Sweet as the contentment of love,</p><p>Thrilling as a touch of flame.</p><p>When I enter into God,</p><p>All life has a meaning….</p><p>My fever is gone</p><p>In the great quiet of God.</p></div>
+    </div>
+
+    <div class="prayer" style="--c:var(--ink-2)">
+      <div class="when"><span class="label">To close</span><span class="label">The Gloria · Gratitude</span></div>
+      <h4>Glory be</h4>
+      <div class="words lines"><p>Glory be to the Father,</p><p>and to the Son,</p><p>and to the Holy Spirit,</p><p>as it was in the beginning,</p><p>is now, and ever shall be,</p><p>world without end.</p><p>Amen.</p></div>
+      <p class="note">How Comer ends the book's acknowledgements, after Paul's question: "What do we have that we did not receive?"</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="rule-card">
+  <span class="label">Romuald's Brief Rule · A.D. 1006 · printed at the close of the book</span>
+  <ol>
+    <li>Sit in your cell as in paradise.</li>
+    <li>Put the whole world behind you and forget it.</li>
+    <li>Watch your thoughts like a good fisherman watching for fish.</li>
+    <li>The path you must follow is in the Psalms. Never leave it.</li>
+    <li>And if your mind wanders as you read, do not give up; hurry back and apply your mind to the words once more.</li>
+    <li>Realize above all that you are in God's presence.</li>
+    <li>Empty yourself completely and sit waiting, content with the grace of God, like the chick who tastes nothing and eats nothing but what his mother brings him.</li>
+  </ol>
+</div>
+
+<footer>
+  <p>Notes on <em>Into the Quiet: Following Jesus in a World of Noise</em> by John Mark Comer (WaterBrook / Penguin Random House). Statistics and quotations are as the book reports them. Painting: Moretto da Brescia, <em>Christ in the Wilderness</em>, The Metropolitan Museum of Art.</p>
+  <span class="label">Book notes</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var canvas = document.getElementById('jar');
+  var btn = document.getElementById('shake');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var N = 520, parts = [], W = 0, H = 0, dpr = 1, raf = 0, t0 = 0, colors = {};
+  var cols = 140, heights = [];
+
+  function readColors() {
+    var cs = getComputedStyle(document.documentElement);
+    colors.silt = cs.getPropertyValue('--ochre').trim() || '#9c7436';
+    colors.dark = cs.getPropertyValue('--ink-2').trim() || '#4a5553';
+    colors.water = cs.getPropertyValue('--mantle').trim() || '#2c6874';
+  }
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var r = canvas.getBoundingClientRect();
+    W = Math.max(1, r.width); H = Math.max(1, r.height);
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function seed() {
+    parts = [];
+    heights = new Array(cols).fill(0);
+    for (var i = 0; i < N; i++) {
+      parts.push({
+        x: Math.random(), y: Math.random() * 0.92,
+        vx: (Math.random() - .5) * .006, vy: (Math.random() - .3) * .004,
+        r: .8 + Math.random() * 1.8, dark: Math.random() < .35,
+        drag: .55 + Math.random() * .9, done: false
+      });
+    }
+  }
+  function settleAll() {
+    heights = new Array(cols).fill(0);
+    parts.forEach(function (p) { land(p); });
+  }
+  function land(p) {
+    var c = Math.min(cols - 1, Math.max(0, Math.floor(p.x * cols)));
+    heights[c] += p.r * 0.55;
+    p.done = true;
+    p.restY = 1 - (heights[c] + 2) / H;
+  }
+  function draw(time) {
+    ctx.clearRect(0, 0, W, H);
+    var elapsed = (time - t0) / 1000;
+    var clarity = Math.min(1, elapsed / 7);
+    ctx.fillStyle = colors.silt;
+    ctx.globalAlpha = .1 * (1 - clarity);
+    ctx.fillRect(0, 0, W, H);
+    ctx.globalAlpha = 1;
+    var floor = 1 - 3 / H;
+    var active = 0;
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      if (!p.done) {
+        active++;
+        var calm = Math.min(1, elapsed / 3);
+        p.vx *= .985; p.vx += (Math.random() - .5) * .0007 * (1 - calm);
+        p.vy += .00009 * p.drag * (0.4 + calm);
+        p.vy *= .992;
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) { p.x = 0; p.vx *= -1; }
+        if (p.x > 1) { p.x = 1; p.vx *= -1; }
+        var c = Math.min(cols - 1, Math.max(0, Math.floor(p.x * cols)));
+        var top = 1 - (heights[c] + 2) / H;
+        if (p.y >= Math.min(floor, top)) land(p);
+      }
+      var y = p.done ? p.restY : p.y;
+      ctx.beginPath();
+      ctx.fillStyle = p.dark ? colors.dark : colors.silt;
+      ctx.globalAlpha = p.done ? .85 : .6;
+      ctx.arc(p.x * W, y * H, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = .5 * clarity;
+    ctx.strokeStyle = colors.water;
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(0, 8.5); ctx.lineTo(W, 8.5); ctx.stroke();
+    ctx.globalAlpha = 1;
+    if (active > 0 && elapsed < 30) raf = requestAnimationFrame(draw);
+  }
+  function still() {
+    cancelAnimationFrame(raf);
+    seed(); settleAll(); t0 = performance.now() - 8000; draw(performance.now());
+  }
+  function shake() {
+    cancelAnimationFrame(raf);
+    seed(); t0 = performance.now(); raf = requestAnimationFrame(draw);
+  }
+  readColors(); size();
+  if (reduce) still(); else shake();
+  btn.addEventListener('click', function () { if (reduce) still(); else shake(); });
+  var rt;
+  window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { size(); still(); }, 150); });
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    var onTheme = function () { readColors(); still(); };
+    if (mq.addEventListener) mq.addEventListener('change', onTheme);
+  }
+  new MutationObserver(function () { readColors(); still(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+})();
+</script>
+
+</body>
+</html>
