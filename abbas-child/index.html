@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Abba's Child by Brennan Manning – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --paper: #f7f2ea;
+  --paper-2: #ede4d6;
+  --card: #fffbf5;
+  --ink: #2a1a12;
+  --ink-2: #5a473b;
+  --ink-3: #8a7768;
+  --rule: #e0d4c3;
+  --accent: #8a3a12;
+  --accent2: #c9a170;
+  --p1: #7a3414;
+  --p2: #a8741e;
+  --p3: #5c6b7a;
+  --p4: #a33a2a;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+  --paper: #1a120d;
+  --paper-2: #251a13;
+  --card: #2a1e16;
+  --ink: #f4ebe0;
+  --ink-2: #cdbba9;
+  --ink-3: #98846f;
+  --rule: #3e2e23;
+  --accent: #e49a6c;
+  --accent2: #e3c08c;
+  --p1: #ec9d72;
+  --p2: #e9bf6c;
+  --p3: #a9bccd;
+  --p4: #f08f7f;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #1a120d;
+  --paper-2: #251a13;
+  --card: #2a1e16;
+  --ink: #f4ebe0;
+  --ink-2: #cdbba9;
+  --ink-3: #98846f;
+  --rule: #3e2e23;
+  --accent: #e49a6c;
+  --accent2: #e3c08c;
+  --p1: #ec9d72;
+  --p2: #e9bf6c;
+  --p3: #a9bccd;
+  --p4: #f08f7f;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--p1); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Movement colour helpers */
+.c-p1   { --c: var(--p1); }
+.c-p2 { --c: var(--p2); }
+.c-p3  { --c: var(--p3); }
+.c-p4   { --c: var(--p4); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(54px, 10.5vw, 132px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.03em;
+  color: var(--p1);
+}
+.hero h1 .pre {
+  display: block;
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 700;
+  font-stretch: 100%;
+  letter-spacing: -.005em;
+  line-height: 1.1;
+  margin: 0 0 .35em .08em;
+  color: var(--ink-2);
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+  aspect-ratio: 720 / 1069;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 20, 50, .4), 0 8px 18px -10px rgba(10, 20, 50, .3);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--c, var(--ink));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part h2 em { font-style: normal; color: var(--c); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--c, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--c, var(--ink));
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-width: 0;
+}
+.fig svg.wide { max-width: 640px; margin-inline: auto; }
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-mute { fill: var(--ink-3); }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 36px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--c, var(--ink)); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 6px 12px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); color: var(--c, var(--ink)); }
+.chip.ghost { border-style: dashed; color: var(--ink-3); border-color: var(--ink-3); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* flipped readings */
+.flip { display: grid; gap: 10px; }
+.flip .q { display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr); gap: 10px; align-items: center; font-size: 16px; }
+.flip .q span:first-child { color: var(--ink-3); }
+.flip .q span:nth-child(2) { font-family: var(--mono); color: var(--p3); text-align: center; }
+.flip .q span:last-child { font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+.flip .hd span { font-family: var(--mono) !important; font-size: 11px !important; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3) !important; font-weight: 400 !important; }
+
+/* three steps */
+.steps3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.steps3 div { border-top: 3px solid var(--c, var(--ink)); padding-top: 10px; display: grid; gap: 4px; align-content: start; }
+.steps3 b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; }
+.steps3 span { font-size: 14.5px; color: var(--ink-2); line-height: 1.45; }
+
+/* gifts of the core members */
+.gifts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.gifts div { border-radius: 6px; padding: 14px; border: 1px solid color-mix(in srgb, var(--p4) 35%, var(--rule)); background: color-mix(in srgb, var(--p4) 7%, var(--card)); display: grid; gap: 4px; align-content: start; }
+.gifts b { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 20px; color: var(--p4); }
+.gifts span { font-size: 14px; color: var(--ink-2); line-height: 1.35; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+  color: var(--c, var(--ink));
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 3px solid var(--c, var(--ink)); padding-top: 12px; color: var(--c, var(--ink)); }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.xlink { display: grid; gap: 8px; border-left: 3px solid var(--accent2); padding: 6px 0 6px 20px; }
+.xlink a { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 22px; line-height: 1.2; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro2, .epilogue, .part { grid-template-columns: 1fr; }
+  .map { grid-template-columns: 1fr; }
+  .toolkit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare, .steps3, .gifts, .toolkit { grid-template-columns: 1fr; }
+  .flip .q { grid-template-columns: 1fr; gap: 2px; }
+  .flip .q span:nth-child(2) { text-align: left; }
+  .flip .hd { display: none !important; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+
+.hero h1 { color: var(--p1); }
+.verse { font-family: var(--mono); font-size: 12.5px; letter-spacing: .04em; color: var(--c, var(--ink-3)); display:block; margin-top:8px; }
+.qa { display:grid; gap:12px; max-width: var(--measure); }
+.qa div { background: var(--card); border:1px solid var(--rule); border-left:3px solid var(--c, var(--ink)); border-radius:6px; padding:14px 16px; display:grid; gap:4px; }
+.qa b { font-family: var(--display); font-weight:750; font-size:16.5px; }
+.qa span { font-size:15.5px; color: var(--ink-2); line-height:1.5; }
+.chapter .chno.sm { font-size: 64px; white-space: nowrap; }
+@media (max-width:900px){ .chapter .chno.sm { font-size: 52px; } }
+.timeline { display:grid; gap:0; max-width: 760px; }
+.timeline div { display:grid; grid-template-columns: 120px minmax(0,1fr); gap: 16px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.timeline b { font-family: var(--display); font-weight: 800; color: var(--c, var(--ink)); }
+.timeline span { font-size: 16px; color: var(--ink-2); }
+@media (max-width:560px){ .timeline div { grid-template-columns: 1fr; gap: 2px; } }
+
+</style>
+</head>
+<body>
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Brennan Manning · NavPress</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#hiding">Hiding</a>
+    <a href="#impostor">The impostor</a>
+    <a href="#beloved">Beloved</a>
+    <a href="#living">Living it</a>
+    <a href="#toolkit">Practice</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1><span class="pre">Abba's</span>Child</h1>
+    <p class="sub">The cry of the heart for intimate belonging</p>
+    <p class="dek">An ex-Franciscan priest and recovering alcoholic on the false self we build to be liked, and the slow way home to who we really are: a child held by a Father who calls himself Abba.</p>
+    <div class="byline label">
+      <span>9 chapters</span><span>1 impostor</span><span>1 true self</span><span>20 days in a cabin</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" width="600" height="900" alt="Cover of Abba's Child by Brennan Manning: a child's hand resting in an adult's hand on a warm brown background">
+</div>
+
+<!-- ============ IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>Everyone carries an impostor</h2>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p>Manning was, in his own words, ambushed by Jesus in a small chapel in Pennsylvania in 1956. Nearly forty years later he writes about the seasons since: fire and boredom, faithfulness and betrayal, and the way the first passion can quietly drain out of a life.</p>
+      <p>His diagnosis is a split inside every person. The <strong style="color:var(--p1)">impostor</strong>, or false self, is the polished version we present so that everyone admires us and nobody really knows us. The <strong style="color:var(--p2)">true self</strong> is Abba's child: loved as we are, not as we should be.</p>
+      <p>The impostor isn't evil so much as frightened. It was born to protect us from pain. Manning's own appeared when he was eight, after a trauma that shut down his feelings for decades. The cure isn't to beat the impostor up, but to bring him, again and again, into the presence of Jesus, where he slowly shrinks.</p>
+      <p>The book mixes psychology (codependency, the inner child) with the Gospels and a wide circle of voices: Merton, Nouwen, Buechner, Julian of Norwich, Flannery O'Connor and Woody Allen.</p>
+    </div>
+    <div class="fig">
+      <h4>Two selves</h4>
+      <svg viewBox="0 0 440 380" role="img" aria-label="On the left the impostor, driven by fear of rejection: wants approval, performance, a glittering image, cannot say no. On the right the true self, Abba's child: loved as I am, unselfconscious, honest feelings, free to say no. Between them the presence of Jesus, where the impostor shrinks.">
+        <text x="0" y="16" font-size="12" class="t-mute">THE IMPOSTOR</text>
+        <text x="440" y="16" text-anchor="end" font-size="12" class="t-mute">ABBA'S CHILD</text>
+        <circle cx="90" cy="110" r="70" style="fill:color-mix(in srgb, var(--p1) 14%, var(--card));stroke:var(--p1)" stroke-width="2"/>
+        <text x="90" y="104" text-anchor="middle" font-size="16" style="font-family:var(--display);font-weight:800;fill:var(--p1)">false self</text>
+        <text x="90" y="124" text-anchor="middle" font-size="11.5">driven by fear</text>
+        <circle cx="350" cy="110" r="70" style="fill:color-mix(in srgb, var(--p2) 14%, var(--card));stroke:var(--p2)" stroke-width="2"/>
+        <text x="350" y="104" text-anchor="middle" font-size="16" style="font-family:var(--display);font-weight:800;fill:var(--p2)">true self</text>
+        <text x="350" y="124" text-anchor="middle" font-size="11.5">held by love</text>
+        <g font-size="12">
+          <text x="0" y="214" class="t-ink">needs approval</text>
+          <text x="0" y="236">performs, perfects</text>
+          <text x="0" y="258">edits feelings</text>
+          <text x="0" y="280">can't say no</text>
+          <text x="0" y="302">compares, judges</text>
+          <text x="440" y="214" text-anchor="end" class="t-ink">already approved</text>
+          <text x="440" y="236" text-anchor="end">lives by grace</text>
+          <text x="440" y="258" text-anchor="end">honest about feelings</text>
+          <text x="440" y="280" text-anchor="end">free to say no</text>
+          <text x="440" y="302" text-anchor="end">compassionate</text>
+        </g>
+        <rect x="160" y="196" width="120" height="70" rx="8" style="fill:color-mix(in srgb, var(--accent2) 20%, var(--card));stroke:var(--accent2)" stroke-width="1.6"/>
+        <text x="220" y="224" text-anchor="middle" font-size="12.5" style="font-family:var(--display);font-weight:800;fill:var(--ink)">the presence</text>
+        <text x="220" y="242" text-anchor="middle" font-size="12.5" style="font-family:var(--display);font-weight:800;fill:var(--ink)">of Jesus</text>
+        <path d="M150 150 C170 170, 175 180, 180 192" fill="none" style="stroke:var(--p1)" stroke-width="1.6" stroke-dasharray="4 4"/>
+        <path d="M262 192 C268 178, 278 166, 292 152" fill="none" style="stroke:var(--p2)" stroke-width="1.6"/>
+        <path d="M286 152 L296 148 L292 158z" style="fill:var(--p2)"/>
+        <text x="220" y="292" text-anchor="middle" font-size="11" class="t-mute">the impostor isn't beaten,</text>
+        <text x="220" y="308" text-anchor="middle" font-size="11" class="t-mute">he is brought along</text>
+        <text x="220" y="324" text-anchor="middle" font-size="11" class="t-mute">and slowly shrinks</text>
+      </svg>
+      <p class="cap">Manning's own summary of the false self: a compulsion to present a perfect image so that everybody admires us and nobody knows us. The true self is defined by one thing only: being loved by God.</p>
+    </div>
+  </div>
+
+  <div class="stats" style="margin-top:28px">
+    <div class="stat"><span class="big num">1956</span><p>The day in a chapel in Loretto, Pennsylvania, when Manning says Jesus "ambushed" him.</p></div>
+    <div class="stat"><span class="big num">8</span><p>His age when the impostor was born, after a trauma that shut down his feelings.</p></div>
+    <div class="stat"><span class="big num">20 days</span><p>Alone in a Colorado cabin in 1992, with therapy, silence and no media, where he felt again for the first time in decades.</p></div>
+    <div class="stat"><span class="big num">1 word</span><p><em>Abba</em>: the intimate word for "father" that Jesus used for God, unheard of in any religion before.</p></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col c-p1">
+      <span class="label">Chapters 1–2</span>
+      <h3 style="color:var(--p1)">The false self</h3>
+      <ol>
+        <li><span>01</span><a href="#hiding"><b>Come Out of Hiding</b>Why we take cover from God</a></li>
+        <li><span>02</span><a href="#impostor"><b>The Impostor</b>The people-pleaser in all of us</a></li>
+      </ol>
+    </div>
+    <div class="col c-p2">
+      <span class="label">Chapters 3–5</span>
+      <h3 style="color:var(--p2)">The true self</h3>
+      <ol>
+        <li><span>03</span><a href="#beloved"><b>The Beloved</b>Define yourself by love</a></li>
+        <li><span>04</span><a href="#abba"><b>Abba's Child</b>The intimacy Jesus shares</a></li>
+        <li><span>05</span><a href="#pharisee"><b>The Pharisee and the Child</b>Religion that shrinks life</a></li>
+      </ol>
+    </div>
+    <div class="col c-p4">
+      <span class="label">Chapters 6–9</span>
+      <h3 style="color:var(--p4)">Living from it</h3>
+      <ol>
+        <li><span>06</span><a href="#living"><b>Present Risenness</b>He is here, now</a></li>
+        <li><span>07</span><a href="#passion"><b>The Recovery of Passion</b>The treasure in the field</a></li>
+        <li><span>08</span><a href="#fortitude"><b>Fortitude and Fantasy</b>Free from what people think</a></li>
+        <li><span>09</span><a href="#heartbeat"><b>The Rabbi's Heartbeat</b>Held against his heart</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HIDING ============ -->
+<div class="part c-p1" id="hiding">
+  <span class="label partno">Part one · Chapters 1–2</span>
+  <h2>Come out of <em>hiding</em></h2>
+  <p class="lede">Since Adam and Eve, we hide whenever we don't like what we see in ourselves. Manning's first call is simply to stop: to let God see us as we are, because he already does.</p>
+</div>
+
+<article class="chapter c-p1">
+  <div class="gutter"><span class="chno">1</span><span class="label">Come Out of Hiding</span></div>
+  <div class="body">
+    <div>
+      <h3>A faith that rises and falls with performance</h3>
+      <p class="idea">If God's love seems to depend on how well we did today, we will hide on the bad days. That's the opposite of what he wants.</p>
+    </div>
+    <div class="story c-p1">
+      <span class="label">The story · Ruller's turkey</span>
+      <p>In a Flannery O'Connor short story, a lonely boy named Ruller catches a wounded turkey. Suddenly he feels chosen and generous: he thanks God, prays for a beggar to give his only dime to, and feels like a future preacher. Then some country boys take the turkey from him, and his warm feeling about God collapses. Manning sees himself in it: our sense of God swings with what we can show for ourselves.</p>
+    </div>
+    <ul class="points">
+      <li>God is the father who runs toward the limping prodigal. He grieves when shame and self-hatred freeze us. Yet the moment we lose our nerve, we take cover.</li>
+      <li>Self-acceptance isn't vanity. Manning quotes Carl Jung: what if the least of the brothers whom I must love turns out to be me? Most of us are far harder on ourselves than on anyone else.</li>
+      <li>Self-hatred tends to turn destructive. Judas couldn't face his shadow; Peter could. Peter made friends with the impostor inside him; Judas raged against his.</li>
+      <li>Julian of Norwich: God doesn't want his servants to despair because they fall often. The goal is to be reconciled to "the poor shell of me", as the curate writes at the end of Bernanos' <em>Diary of a Country Priest</em>.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-p1" id="impostor">
+  <div class="gutter"><span class="chno">2</span><span class="label">The Impostor</span></div>
+  <div class="body">
+    <div>
+      <h3>The people-pleaser who wears a thousand masks</h3>
+      <p class="idea">The false self lives in fear of disapproval. It's the most-discussed chapter of the book, and Manning says the impostor keeps returning in new disguises.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Zelig.</strong> In Woody Allen's film, Leonard Zelig changes personality to fit every room: rabbi with the rabbis, psychiatrist with the psychiatrists, Yankee at spring training. Famous for being nobody. Manning finds much of Zelig in himself.</li>
+      <li><strong>Fear underneath.</strong> Manning was proud of always being punctual. In the cabin's silence he discovered it came from fear of being scolded, echoes of childhood authority.</li>
+      <li><strong>Can't say no.</strong> Impostors overcommit to people, projects and causes, not from conviction but from fear of disappointing expectations.</li>
+      <li><strong>Codependent by nature.</strong> To be accepted, the false self hides feelings, so emotional honesty becomes impossible. Life becomes a roller coaster of elation and depression depending on others' reactions.</li>
+      <li><strong>Even in ministry.</strong> A sketch of a celebrity athlete-evangelist moving a crowd to tears, while his eyes show the words no longer live in him. Success can quietly replace intimacy with God.</li>
+    </ul>
+    <div class="fig">
+      <h4>How the impostor was born</h4>
+      <div class="timeline c-p1">
+        <div><b>Age 8</b><span>A trauma. The inner voice says: don't be your real self, nobody likes you as you are. Invent someone admirable.</span></div>
+        <div><b>Childhood</b><span>He becomes the good boy: polite, top grades, a scholarship, and constant fear of abandonment.</span></div>
+        <div><b>Adulthood</b><span>Perfect performance earns approval; feelings stay switched off.</span></div>
+        <div><b>1992</b><span>Twenty days in a Colorado cabin, therapy each morning, silence all day. He realises he hasn't felt anything since he was eight.</span></div>
+      </div>
+    </div>
+    <div class="story c-p1">
+      <span class="label">The letter</span>
+      <p>The chapter ends with a letter Manning writes to his impostor. Not an attack, but a friendly note: you protected me once, now come with me into Jesus' presence. There you'll need less applause, because you'll discover he is enough. He gives the impostor a pet name, a little nickname for someone who is shrinking.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ BELOVED ============ -->
+<div class="part c-p2" id="beloved">
+  <span class="label partno">Part two · Chapters 3–5</span>
+  <h2>Define yourself as <em>beloved</em></h2>
+  <p class="lede">Manning's core sentence, paraphrased: let being loved by God be your whole identity. Every other identity is an illusion.</p>
+</div>
+
+<article class="chapter c-p2">
+  <div class="gutter"><span class="chno">3</span><span class="label">The Beloved</span></div>
+  <div class="body">
+    <div>
+      <h3>Holiness looks ordinary</h3>
+      <p class="idea">The true self is unselfconscious: absorbed in life, breathing God the way a fish swims in water.</p>
+    </div>
+    <ul class="points">
+      <li>A travel writer watches a student unpack an elaborate Bible-reading kit at breakfast: stand, clips, coloured pens, wet wipes. It's comic, but Manning reads it kindly: spirituality isn't a compartment of life but a way of living all of it.</li>
+      <li>Thomas Merton came to think the highest spiritual development is to become "ordinary", fully human without the distortions of greed or ambition.</li>
+      <li>John Eagan, a high-school teacher in Milwaukee for thirty years, never wrote a book or became famous. His journal, published after his death, shows a flawed man who learned that his sins couldn't keep him from God. The introduction's point: our false humility is often the main obstacle.</li>
+      <li>Joyless Christianity repels people. Buechner: the good news that we are loved is better than we ever dared hope.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-p2" id="abba">
+  <div class="gutter"><span class="chno">4</span><span class="label">Abba's Child</span></div>
+  <div class="body">
+    <div>
+      <h3>The name that scandalised Israel</h3>
+      <p class="idea">Jesus called God <em>Abba</em>, the intimate word a child uses for a father. And he doesn't keep that intimacy to himself.</p>
+    </div>
+    <ul class="points">
+      <li>Jesus grew up praying the Shema three times a day, surrounded by God's absolute otherness. Yet he addressed God with a word no prophet had dared. The scholar Joachim Jeremias called it the great novelty of the gospel.</li>
+      <li>Romans 8: we didn't receive a spirit of slavery that falls back into fear, but the Spirit of adoption that cries "Abba". And 1 John 3:1: see what love the Father has given us, that we should be called children of God.</li>
+      <li>After a parish renewal week in Florida, an 83-year-old woman wrote to him: last week she was terrified of dying; now she was homesick for her Abba's house.</li>
+      <li>The Abba experience makes us tender toward others. In New Orleans, Manning and a friend were kind to a young woman collecting for the Unification Church. She cried: in eight days, they were the first Christians who had been kind to her. One woman had hit her with a Bible.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-p3" id="pharisee">
+  <div class="gutter"><span class="chno">5</span><span class="label">The Pharisee and the Child</span></div>
+  <div class="body">
+    <div>
+      <h3>The pharisee is the impostor in religious clothes</h3>
+      <p class="idea">If the pharisee is the religious face of the false self, the inner child is the religious face of the true self.</p>
+    </div>
+    <div class="fig">
+      <h4>Two religious faces</h4>
+      <div class="compare">
+        <div class="c-p3"><h5>The pharisee</h5><ul><li>Bible as a manual of directions</li><li>Edits feelings, gives stock responses</li><li>Measures others, condemns them</li><li>"Nothing to repent of today"</li><li>Religion that narrows life</li></ul></div>
+        <div class="c-p2"><h5>The child</h5><ul><li>Bible as a love story</li><li>Aware of feelings, says them</li><li>Open, playful, full of wonder</li><li>Knows they are loved anyway</li><li>Faith that widens life</li></ul></div>
+      </div>
+      <p class="cap">Manning walks through the meaning of the Sabbath (a memorial of creation and covenant, a day of honest stock-taking) to show how Jesus' opponents turned a gift into a rulebook.</p>
+    </div>
+    <ul class="points">
+      <li>At a prayer meeting, a man in his sixties thanked God that he had nothing to repent of that day. His wife groaned. He meant he hadn't committed any big sin; his blind spots were invisible to him.</li>
+      <li>Don't deny the pharisee within. Befriend him, talk with him and ask why he looks outside the kingdom for peace.</li>
+      <li>A child secure in love achieves things as an overflow, not to earn acceptance. That's the difference between the two faces.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ LIVING ============ -->
+<div class="part c-p4" id="living">
+  <span class="label partno">Part three · Chapters 6–9</span>
+  <h2>Living from <em>love</em></h2>
+  <p class="lede">The last chapters turn the identity into a life: awareness that Christ is here, passion recovered, courage against what people think, and rest against his heart.</p>
+</div>
+
+<article class="chapter c-p4">
+  <div class="gutter"><span class="chno">6</span><span class="label">Present Risenness</span></div>
+  <div class="body">
+    <div>
+      <h3>"He is"</h3>
+      <p class="idea">The most radical demand of faith, for Manning, is saying yes to the fact that the risen Jesus is present right now.</p>
+    </div>
+    <ul class="points">
+      <li>A reporter asked G. K. Chesterton, a new Christian, what he would do if the risen Christ stood behind him at this moment. Chesterton answered: he is.</li>
+      <li>If Jesus didn't rise, the Sermon on the Mount is a fine ethic. If he did, it's a portrait of our future. The gospel's power comes from the resurrection.</li>
+      <li>After almost fifty years, Manning knows faith is lived more in the valley than on the mountain, and is never doubt-free.</li>
+      <li>His own "agnosticism" isn't denying God. It's unbelief growing like lichen from inattention. How we spend time and money shows how aware we are.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-p4" id="passion">
+  <div class="gutter"><span class="chno">7</span><span class="label">The Recovery of Passion</span></div>
+  <div class="body">
+    <div>
+      <h3>Passion means being moved</h3>
+      <p class="idea">Passion literally means "to be affected by". The capacity to be moved by something is the soul's energy.</p>
+    </div>
+    <div class="story c-p4">
+      <span class="label">The parable, retold</span>
+      <p>Manning retells Matthew 13:44 as a scene: a day labourer's plough hits a buried pot full of coins and jewels. He hides it, sells his hut and sheep, borrows from everyone, and buys the field while his family despairs and neighbours say he has had too much sun. He is unruffled, even joyful, because he knows what he found.</p>
+    </div>
+    <ul class="points">
+      <li>Recovering passion starts with re-valuing the treasure, continues by letting Jesus hold us against his heart, and ends in a change we may not even notice.</li>
+      <li>Jesus is the same yesterday, today and forever: the way he treated Peter, John and Mary Magdalene is how he treats us. For those who, like Peter, have denied him three times, it's a word of liberation.</li>
+      <li>Apart from Christ, the impostor's virtues are "brilliant vices".</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-p4" id="fortitude">
+  <div class="gutter"><span class="chno">8</span><span class="label">Fortitude and Fantasy</span></div>
+  <div class="body">
+    <div>
+      <h3>The tyranny of other people's opinions</h3>
+      <p class="idea">Manning names his dominant adult sin as the refusal to live from his true self because he feared rejection.</p>
+    </div>
+    <ul class="points">
+      <li>Anthony de Mello describes how we fill our emptiness with people, who then control us by approval and disapproval. John 5:44: how can you believe when you look to each other for approval?</li>
+      <li>He still believes in Jesus and loves him, but peer pressure has set limits to his faith, and sometimes he loves his "glittering image" more.</li>
+      <li>The opinions we fear most often come from people we don't even respect. The result is mediocrity: so much good left undone.</li>
+      <li>Fortitude is the courage to live from the beloved self. Fantasy is the life we imagine instead. A teacher in Tokyo advised never to banish the thought of death; Manning adds: never banish the awareness that Christ is risen and present.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-p4" id="heartbeat">
+  <div class="gutter"><span class="chno">9</span><span class="label">The Rabbi's Heartbeat</span></div>
+  <div class="body">
+    <div>
+      <h3>Let him hold you against his heart</h3>
+      <p class="idea">John at the Last Supper leaned against Jesus and heard his heartbeat. That is knowing someone, not just knowing about him.</p>
+    </div>
+    <ul class="points">
+      <li>God is love, Jesus is God: if he stopped loving, he'd stop being God. Manning quotes a chorus of writers who agree that God's love is unconditional, and that a God who swings between kindness and fury is a caricature.</li>
+      <li>Some hear "God loves you as you are, not as you should be" and call it dangerous. Manning answers that it's the only love that can change anyone.</li>
+      <li>He tells the folk tale of Mordecai, a boy who won't go to the synagogue until a great rabbi simply holds him against his heart. Then he learns.</li>
+      <li>The book ends in worship: from John leaning on Jesus' chest to John falling down before the Lamb in Revelation. Tenderness leads into awe.</li>
+    </ul>
+    <div>
+      <blockquote class="pull">Learning who he is, you find out who you are.</blockquote>
+      <span class="label">Manning's closing thought, paraphrased</span>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Practice</span>
+    <h2>Bringing the impostor home</h2>
+    <p class="lede">Manning offers no system, but the book keeps returning to a few practices. Here they are, gathered.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col c-p1">
+      <h3>Notice him</h3>
+      <div class="tk"><b>Spot the mask</b><span>Where do you change to fit the room? Where do you say yes from fear?</span></div>
+      <div class="tk"><b>Name the fear</b><span>Behind punctuality, perfection or busyness, ask what disapproval you're avoiding.</span></div>
+      <div class="tk"><b>Write him a letter</b><span>Thank your false self for protecting you, and invite him along.</span></div>
+    </div>
+    <div class="col c-p2">
+      <h3>Receive love</h3>
+      <div class="tk"><b>Say "Abba"</b><span>Pray with the child's word for father, plainly, as Jesus did.</span></div>
+      <div class="tk"><b>Silence and solitude</b><span>Like the cabin: time without media, where buried feelings can surface.</span></div>
+      <div class="tk"><b>Stop the flagellation</b><span>Beating up the false self is just the impostor in another form.</span></div>
+    </div>
+    <div class="col c-p3">
+      <h3>Watch the pharisee</h3>
+      <div class="tk"><b>Read the Bible as a love story</b><span>Not a manual of directions.</span></div>
+      <div class="tk"><b>Be honest about feelings</b><span>The child feels and says it; the pharisee edits.</span></div>
+      <div class="tk"><b>Kindness first</b><span>Every encounter gives life or drains it; there's no neutral exchange.</span></div>
+    </div>
+    <div class="col c-p4">
+      <h3>Stay aware</h3>
+      <div class="tk"><b>"He is"</b><span>Remind yourself during the day that the risen Christ is present.</span></div>
+      <div class="tk"><b>Count the treasure</b><span>Passion comes back when you re-value what you found.</span></div>
+      <div class="tk"><b>Listen for the heartbeat</b><span>Let him hold you silently, like John at the table.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Book notes on <em>Abba's Child: The Cry of the Heart for Intimate Belonging</em> by Brennan Manning (NavPress, expanded edition). Summary and diagrams in my own words.</p>
+  <p><a href="../">kaig78.github.io/public</a></p>
+</footer>
+
+</div>
+</body>
+</html>

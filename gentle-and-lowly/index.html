@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Gentle and Lowly by Dane Ortlund – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --paper: #f5f3ee;
+  --paper-2: #e9e6dc;
+  --card: #fdfcf8;
+  --ink: #1f2219;
+  --ink-2: #4a4d40;
+  --ink-3: #7c7e70;
+  --rule: #d9d6c9;
+  --accent: #4f6146;
+  --accent2: #b9a77a;
+  --p1: #46613f;
+  --p2: #3d6680;
+  --p3: #9a6a2c;
+  --p4: #9b4a55;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --measure: 64ch;
+  --frame: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+  --paper: #141611;
+  --paper-2: #1d2019;
+  --card: #20241c;
+  --ink: #efeee6;
+  --ink-2: #c2c3b6;
+  --ink-3: #8f9283;
+  --rule: #33382b;
+  --accent: #9fbf91;
+  --accent2: #d8c690;
+  --p1: #9cc58f;
+  --p2: #8fbcdb;
+  --p3: #e0b06e;
+  --p4: #e797a2;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #141611;
+  --paper-2: #1d2019;
+  --card: #20241c;
+  --ink: #efeee6;
+  --ink-2: #c2c3b6;
+  --ink-3: #8f9283;
+  --rule: #33382b;
+  --accent: #9fbf91;
+  --accent2: #d8c690;
+  --p1: #9cc58f;
+  --p2: #8fbcdb;
+  --p3: #e0b06e;
+  --p4: #e797a2;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.frame { max-width: var(--frame); margin-inline: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--p1); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.prose { max-width: var(--measure); display: grid; gap: 1em; }
+.prose p { color: var(--ink); }
+.muted { color: var(--ink-2); }
+strong { font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Movement colour helpers */
+.c-p1   { --c: var(--p1); }
+.c-p2 { --c: var(--p2); }
+.c-p3  { --c: var(--p3); }
+.c-p4   { --c: var(--p4); }
+.dot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: var(--c); vertical-align: .05em; }
+
+/* ---------- Masthead ---------- */
+.mast {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { text-decoration: none; }
+.mast nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+  padding-block: clamp(32px, 6vw, 72px) 8px;
+}
+.hero h1 {
+  font-size: clamp(54px, 10.5vw, 132px);
+  font-weight: 900;
+  font-stretch: 112%;
+  line-height: .86;
+  letter-spacing: -.035em;
+  margin-left: -.03em;
+  color: var(--p1);
+}
+.hero h1 .pre {
+  display: block;
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 700;
+  font-stretch: 100%;
+  letter-spacing: -.005em;
+  line-height: 1.1;
+  margin: 0 0 .35em .08em;
+  color: var(--ink-2);
+}
+.hero .sub {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  margin-top: 22px;
+}
+.hero .dek {
+  font-style: italic;
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 38ch;
+}
+.hero .byline { margin-top: 22px; display: flex; gap: 10px 20px; flex-wrap: wrap; }
+.cover {
+  justify-self: end;
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+  aspect-ratio: 720 / 1069;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -18px rgba(10, 20, 50, .4), 0 8px 18px -10px rgba(10, 20, 50, .3);
+  transform: rotate(1.6deg);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+
+/* ---------- Sections ---------- */
+section { padding-top: clamp(56px, 8vw, 104px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 28px; }
+.sec-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 850;
+  font-stretch: 112%;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.sec-head .lede { font-size: 21px; line-height: 1.5; color: var(--ink-2); max-width: 52ch; }
+
+/* Part openers */
+.part {
+  margin-top: clamp(64px, 9vw, 120px);
+  padding-top: 26px;
+  border-top: 3px solid var(--c, var(--ink));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+.part h2 {
+  font-size: clamp(44px, 7.5vw, 96px);
+  font-weight: 900;
+  font-stretch: 125%;
+  line-height: .9;
+  letter-spacing: -.03em;
+}
+.part h2 em { font-style: normal; color: var(--c); }
+.part .lede { font-size: 20px; line-height: 1.5; color: var(--ink-2); }
+.part .partno { grid-column: 1 / -1; }
+
+/* Chapter blocks */
+.chapter {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px 40px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+.chapter > .gutter { position: relative; }
+.chapter .chno {
+  font-family: var(--display);
+  font-weight: 900;
+  font-stretch: 62%;
+  font-size: 92px;
+  line-height: .8;
+  color: var(--c, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+.chapter .gutter .label { margin-top: 12px; display: block; }
+.chapter h3 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  font-stretch: 108%;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+}
+.chapter .idea {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-top: 12px;
+  max-width: 46ch;
+  font-style: italic;
+}
+.chapter .body { display: grid; gap: 28px; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
+.points li { padding-left: 26px; position: relative; }
+.points li::before {
+  content: ""; position: absolute; left: 2px; top: .72em;
+  width: 12px; height: 2px; background: var(--c, var(--ink));
+}
+.story {
+  max-width: var(--measure);
+  border-left: 2px solid var(--c, var(--ink));
+  padding: 2px 0 2px 20px;
+  display: grid; gap: 6px;
+}
+.story p { font-size: 17px; color: var(--ink-2); }
+
+/* ---------- Figures ---------- */
+.fig {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-width: 0;
+}
+.fig svg.wide { max-width: 640px; margin-inline: auto; }
+.fig h4 { font-size: 20px; font-weight: 750; font-stretch: 104%; letter-spacing: -.005em; line-height: 1.2; }
+.fig .cap { font-size: 15px; color: var(--ink-2); line-height: 1.5; max-width: 70ch; }
+.fig .src { font-family: var(--mono); font-size: 11.5px; letter-spacing: .03em; color: var(--ink-3); }
+.figrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.fig svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fig svg text { font-family: var(--mono); fill: var(--ink-2); }
+.fig svg .t-ink { fill: var(--ink); }
+.fig svg .t-mute { fill: var(--ink-3); }
+
+/* Stat strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--card); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.stat .big { font-family: var(--display); font-weight: 850; font-stretch: 100%; font-size: 36px; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+/* ---------- Book map ---------- */
+.map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.map .col { border-top: 2px solid var(--c, var(--ink)); padding-top: 14px; display: grid; gap: 14px; align-content: start; }
+.map h3 { font-size: 26px; font-weight: 850; font-stretch: 115%; letter-spacing: -.01em; }
+.map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.map li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px; font-size: 16px; line-height: 1.4; }
+.map li a { text-decoration: none; }
+.map li a:hover b { text-decoration: underline; }
+.map li span:first-child { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.map li b { font-family: var(--display); font-weight: 700; font-stretch: 100%; display: block; font-size: 16px; }
+
+.intro2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--display); font-weight: 700; font-stretch: 100%; font-size: 15px; padding: 6px 12px; border-radius: 999px; border: 1.5px solid var(--c, var(--ink)); color: var(--c, var(--ink)); }
+.chip.ghost { border-style: dashed; color: var(--ink-3); border-color: var(--ink-3); }
+
+/* two-column compare */
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--rule); border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.compare > div { background: var(--card); padding: 18px; display: grid; gap: 8px; align-content: start; }
+.compare h5 { font-family: var(--display); font-size: 18px; font-weight: 800; font-stretch: 105%; margin: 0; color: var(--c, var(--ink)); }
+.compare ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; color: var(--ink-2); }
+
+/* flipped readings */
+.flip { display: grid; gap: 10px; }
+.flip .q { display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr); gap: 10px; align-items: center; font-size: 16px; }
+.flip .q span:first-child { color: var(--ink-3); }
+.flip .q span:nth-child(2) { font-family: var(--mono); color: var(--p3); text-align: center; }
+.flip .q span:last-child { font-family: var(--display); font-weight: 700; font-stretch: 100%; }
+.flip .hd span { font-family: var(--mono) !important; font-size: 11px !important; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3) !important; font-weight: 400 !important; }
+
+/* three steps */
+.steps3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.steps3 div { border-top: 3px solid var(--c, var(--ink)); padding-top: 10px; display: grid; gap: 4px; align-content: start; }
+.steps3 b { font-family: var(--display); font-weight: 850; font-stretch: 108%; font-size: 19px; }
+.steps3 span { font-size: 14.5px; color: var(--ink-2); line-height: 1.45; }
+
+/* gifts of the core members */
+.gifts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.gifts div { border-radius: 6px; padding: 14px; border: 1px solid color-mix(in srgb, var(--p4) 35%, var(--rule)); background: color-mix(in srgb, var(--p4) 7%, var(--card)); display: grid; gap: 4px; align-content: start; }
+.gifts b { font-family: var(--display); font-weight: 850; font-stretch: 110%; font-size: 20px; color: var(--p4); }
+.gifts span { font-size: 14px; color: var(--ink-2); line-height: 1.35; }
+
+/* pull quote */
+.pull {
+  max-width: 30ch;
+  font-family: var(--display);
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: clamp(26px, 3.3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  margin: 0;
+  color: var(--c, var(--ink));
+}
+.pull + .label { margin-top: 10px; display: block; }
+
+/* toolkit */
+.toolkit { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.toolkit .col { display: grid; gap: 12px; align-content: start; }
+.toolkit h3 { font-size: 24px; font-weight: 850; font-stretch: 115%; border-top: 3px solid var(--c, var(--ink)); padding-top: 12px; color: var(--c, var(--ink)); }
+.tk { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.tk b { font-family: var(--display); font-weight: 750; font-stretch: 100%; font-size: 16.5px; line-height: 1.25; }
+.tk span { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+
+.epilogue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.xlink { display: grid; gap: 8px; border-left: 3px solid var(--accent2); padding: 6px 0 6px 20px; }
+.xlink a { font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 22px; line-height: 1.2; }
+
+footer { margin-top: 96px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cover { justify-self: start; max-width: 230px; order: -1; transform: rotate(-1.2deg); }
+  .intro2, .epilogue, .part { grid-template-columns: 1fr; }
+  .map { grid-template-columns: 1fr; }
+  .toolkit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter { grid-template-columns: 1fr; gap: 14px; }
+  .chapter .chno { font-size: 72px; }
+  .chapter .gutter { display: flex; align-items: flex-end; gap: 16px; }
+  .chapter .gutter .label { margin: 0 0 6px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .compare, .steps3, .gifts, .toolkit { grid-template-columns: 1fr; }
+  .flip .q { grid-template-columns: 1fr; gap: 2px; }
+  .flip .q span:nth-child(2) { text-align: left; }
+  .flip .hd { display: none !important; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .sub, .hero .dek, .hero .byline, .cover { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .sub { animation-delay: .08s; }
+  .hero .dek { animation-delay: .16s; }
+  .hero .byline { animation-delay: .22s; }
+  .cover { animation-delay: .1s; }
+  @keyframes rise { from { transform: translateY(14px); } }
+  .cover { animation-name: rise-cover; }
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(1.6deg); } to { transform: rotate(1.6deg); } }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  @keyframes rise-cover { from { transform: translateY(18px) rotate(-1.2deg); } to { transform: rotate(-1.2deg); } }
+}
+
+.hero h1 { color: var(--p1); }
+.verse { font-family: var(--mono); font-size: 12.5px; letter-spacing: .04em; color: var(--c, var(--ink-3)); display:block; margin-top:8px; }
+.qa { display:grid; gap:12px; max-width: var(--measure); }
+.qa div { background: var(--card); border:1px solid var(--rule); border-left:3px solid var(--c, var(--ink)); border-radius:6px; padding:14px 16px; display:grid; gap:4px; }
+.qa b { font-family: var(--display); font-weight:750; font-size:16.5px; }
+.qa span { font-size:15.5px; color: var(--ink-2); line-height:1.5; }
+.chapter .chno.sm { font-size: 64px; white-space: nowrap; }
+@media (max-width:900px){ .chapter .chno.sm { font-size: 52px; } }
+.timeline { display:grid; gap:0; max-width: 760px; }
+.timeline div { display:grid; grid-template-columns: 120px minmax(0,1fr); gap: 16px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.timeline b { font-family: var(--display); font-weight: 800; color: var(--c, var(--ink)); }
+.timeline span { font-size: 16px; color: var(--ink-2); }
+@media (max-width:560px){ .timeline div { grid-template-columns: 1fr; gap: 2px; } }
+
+</style>
+</head>
+<body>
+<div class="frame">
+
+<header class="mast">
+  <span class="label">Book notes · Dane Ortlund · Crossway</span>
+  <nav class="label" aria-label="Sections">
+    <a href="#idea">The idea</a>
+    <a href="#now">Christ now</a>
+    <a href="#trinity">Father &amp; Spirit</a>
+    <a href="#old">Old Testament</a>
+    <a href="#end">To the end</a>
+    <a href="#toolkit">Practice</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1><span class="pre">Gentle and</span>Lowly</h1>
+    <p class="sub">The heart of Christ for sinners and sufferers</p>
+    <p class="dek">Not what Jesus did for you, but how he feels about you, especially on the days you have failed again. Ortlund's answer, built from the Bible and the Puritans: more tenderly than you dare to think.</p>
+    <div class="byline label">
+      <span>23 short chapters</span><span>1 verse at the centre</span><span>Puritan guides</span><span>for normal Christians</span>
+    </div>
+  </div>
+  <img class="cover" src="cover.jpg" width="586" height="900" alt="Cover of Gentle and Lowly by Dane Ortlund: the title in thin white capitals over a misty green landscape with a shepherd and sheep">
+</div>
+
+<!-- ============ IDEA ============ -->
+<section id="idea">
+  <div class="sec-head">
+    <span class="label">The big idea</span>
+    <h2>The one time Jesus describes his own heart</h2>
+  </div>
+  <div class="intro2">
+    <div class="prose">
+      <p>Across eighty-nine chapters of the four Gospels, Ortlund points out, there is only one place where Jesus tells us what his heart is like. He doesn't say austere, demanding or even joyful. He says <em>gentle and lowly</em>, in the invitation to the weary in Matthew 11:28–30.</p>
+      <p>The book is written for people running on fumes: Christians who know God loves them in general but suspect he is tired of them in particular. Who fear they have disappointed him beyond repair, or who read their pain as proof that he is stingy.</p>
+      <p>Ortlund's claim is that our natural picture of God is too small and too cold. We project our own impatience onto him. The Bible keeps surprising us the other way. Christ's tenderness is not a mood that comes and goes, but who he <strong>is</strong>, what flows out of him most freely when he meets sinners and sufferers.</p>
+      <p>He leans on old guides: Thomas Goodwin, John Owen, Richard Sibbes, John Bunyan and Jonathan Edwards. The Puritans would take a single verse and wring it dry for hundreds of pages, and that's the method here: one text per chapter, slowly.</p>
+    </div>
+    <div class="fig">
+      <h4>What we expect, and what he says</h4>
+      <svg viewBox="0 0 440 360" role="img" aria-label="Left column, what we expect Jesus to say about his heart: austere and demanding, exalted and dignified, disappointed in you, patient but running out. All crossed out. Right column, what he actually says in Matthew 11:29: gentle and lowly in heart, which leads to rest for your souls.">
+        <text x="0" y="16" font-size="12" class="t-mute">WHAT WE EXPECT</text>
+        <text x="440" y="16" text-anchor="end" font-size="12" class="t-mute">MATTHEW 11:29</text>
+        <g font-size="15">
+          <text x="0" y="60" style="font-family:var(--display);font-weight:700;fill:var(--ink-3)"><tspan style="fill:var(--p4)">✕ </tspan>austere and demanding</text>
+          <text x="0" y="102" style="font-family:var(--display);font-weight:700;fill:var(--ink-3)"><tspan style="fill:var(--p4)">✕ </tspan>exalted and dignified</text>
+          <text x="0" y="144" style="font-family:var(--display);font-weight:700;fill:var(--ink-3)"><tspan style="fill:var(--p4)">✕ </tspan>disappointed in me</text>
+          <text x="0" y="186" style="font-family:var(--display);font-weight:700;fill:var(--ink-3)"><tspan style="fill:var(--p4)">✕ </tspan>patient, but wearing thin</text>
+        </g>
+        <line x1="220" y1="30" x2="220" y2="340" style="stroke:var(--rule)"/>
+        <rect x="246" y="60" width="194" height="110" rx="8" style="fill:color-mix(in srgb, var(--p1) 14%, var(--card));stroke:var(--p1)" stroke-width="2"/>
+        <text x="343" y="104" text-anchor="middle" font-size="22" style="font-family:var(--display);font-weight:850;fill:var(--p1)">gentle</text>
+        <text x="343" y="122" text-anchor="middle" font-size="12" class="t-mute">and</text>
+        <text x="343" y="148" text-anchor="middle" font-size="22" style="font-family:var(--display);font-weight:850;fill:var(--p1)">lowly</text>
+        <line x1="343" y1="172" x2="343" y2="226" style="stroke:var(--p1)" stroke-width="1.6"/>
+        <path d="M337 220 L343 230 L349 220z" style="fill:var(--p1)"/>
+        <text x="343" y="256" text-anchor="middle" font-size="15" style="font-family:var(--display);font-weight:800;fill:var(--ink)">rest for your souls</text>
+        <text x="343" y="280" text-anchor="middle" font-size="11.5">an easy yoke,</text>
+        <text x="343" y="296" text-anchor="middle" font-size="11.5">a light burden</text>
+        <text x="110" y="250" text-anchor="middle" font-size="11.5" class="t-mute">our projection:</text>
+        <text x="110" y="266" text-anchor="middle" font-size="11.5" class="t-mute">a God like us,</text>
+        <text x="110" y="282" text-anchor="middle" font-size="11.5" class="t-mute">only bigger</text>
+      </svg>
+      <p class="cap">"Gentle" means meek, not harsh or easily exasperated. "Lowly" means accessible, the word for someone humble and low to the ground. In the Bible, Ortlund stresses, the heart is not the emotions alone but the motivational centre of a person: what gets you up in the morning.</p>
+    </div>
+  </div>
+
+  <div class="stats" style="margin-top:28px">
+    <div class="stat"><span class="big num">1</span><p>Place in the Gospels where Jesus describes his own heart.</p></div>
+    <div class="stat"><span class="big num">1651</span><p>Year Thomas Goodwin published <em>The Heart of Christ in Heaven Towards Sinners on Earth</em>, the book behind this one.</p></div>
+    <div class="stat"><span class="big num">1</span><p>Thing God is ever called rich in: mercy (Ephesians 2:4).</p></div>
+    <div class="stat"><span class="big num">2</span><p>Steps in the Christian life, by the epilogue: go to Jesus; see step one.</p></div>
+  </div>
+
+  <div class="map" style="margin-top:48px">
+    <div class="col c-p1">
+      <span class="label">Chapters 1–12</span>
+      <h3 style="color:var(--p1)">Christ, then and now</h3>
+      <ol>
+        <li><span>01</span><a href="#now"><b>His Very Heart</b>Gentle and lowly</a></li>
+        <li><span>02</span><a href="#now"><b>His Heart in Action</b>Compassion from the gut</a></li>
+        <li><span>03</span><a href="#now"><b>The Happiness of Christ</b>Mercy makes him glad</a></li>
+        <li><span>04</span><a href="#priest"><b>Able to Sympathize</b>Hebrews 4:15</a></li>
+        <li><span>05</span><a href="#priest"><b>He Can Deal Gently</b>Hebrews 5:2</a></li>
+        <li><span>06</span><a href="#priest"><b>I Will Never Cast Out</b>John 6:37, with Bunyan</a></li>
+        <li><span>07</span><a href="#priest"><b>What Our Sins Evoke</b>Hosea 11:8</a></li>
+        <li><span>08</span><a href="#priest"><b>To the Uttermost</b>His intercession now</a></li>
+        <li><span>09</span><a href="#priest"><b>An Advocate</b>He steps to your side</a></li>
+        <li><span>10</span><a href="#friend"><b>The Beauty of His Heart</b>Edwards to the children</a></li>
+        <li><span>11</span><a href="#friend"><b>The Emotional Life of Christ</b>Tears and anger</a></li>
+        <li><span>12</span><a href="#friend"><b>A Tender Friend</b>Friend of sinners</a></li>
+      </ol>
+    </div>
+    <div class="col">
+      <span class="label">Chapters 13–18</span>
+      <h3>The whole of God</h3>
+      <ol>
+        <li><span>13</span><a href="#trinity"><b>Why the Spirit?</b>From doctrine to felt reality</a></li>
+        <li><span>14</span><a href="#trinity"><b>Father of Mercies</b>No different from the Son</a></li>
+        <li><span>15</span><a href="#old"><b>Natural and Strange Work</b>Lamentations 3:33</a></li>
+        <li><span>16</span><a href="#old"><b>The Lord, the Lord</b>Exodus 34:6–7</a></li>
+        <li><span>17</span><a href="#old"><b>His Ways Are Not Our Ways</b>Isaiah 55</a></li>
+        <li><span>18</span><a href="#old"><b>Yearning Bowels</b>Jeremiah 31:20</a></li>
+      </ol>
+    </div>
+    <div class="col c-p4">
+      <span class="label">Chapters 19–23</span>
+      <h3 style="color:var(--p4)">To the end</h3>
+      <ol>
+        <li><span>19</span><a href="#end"><b>Rich in Mercy</b>Ephesians 2:4</a></li>
+        <li><span>20</span><a href="#end"><b>Law-ish Hearts, Lavish Heart</b>Living from, not for</a></li>
+        <li><span>21</span><a href="#end"><b>He Loved Us Then</b>And he will now</a></li>
+        <li><span>22</span><a href="#end"><b>To the End</b>John 13:1</a></li>
+        <li><span>23</span><a href="#end"><b>Buried in His Heart</b>Forever, Ephesians 2:7</a></li>
+        <li><span>E</span><a href="#toolkit"><b>Epilogue</b>What now? Go to him</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHRIST NOW ============ -->
+<div class="part c-p1" id="now">
+  <span class="label partno">Part one · Chapters 1–12</span>
+  <h2>His heart <em>then</em>, his heart now</h2>
+  <p class="lede">What Jesus claimed about himself, he proved on the road. And because he is still human in heaven, the Gospels are not a memory of how he once was. They are a window onto how he is toward you today.</p>
+</div>
+
+<article class="chapter c-p1">
+  <div class="gutter"><span class="chno sm">1–3</span><span class="label">The Gospels</span></div>
+  <div class="body">
+    <div>
+      <h3>Compassion is his reflex</h3>
+      <p class="idea">He doesn't have to work himself up to mercy. It tumbles out of him before people even finish asking.</p>
+    </div>
+    <ul class="points">
+      <li>When a leper says "if you will", Jesus touches him at once. The word for "will" means desire: the leper was asking what Jesus most wants, and the answer was to heal him.</li>
+      <li>When friends lower a paralysed man, Jesus speaks comfort before anyone asks for anything. When he sees the crowds harassed and helpless, pity ignites, and he teaches, heals and feeds them.</li>
+      <li>The Gospel word for compassion literally means guts or bowels: what rises from someone's innermost core. And both times Jesus weeps, it is for others, never for himself.</li>
+      <li>The surprise of chapter 3: mercy makes Christ <em>happy</em>. Following Goodwin, his joy grows when people come to him for fresh forgiveness. A doctor who travelled into the jungle to cure a disease is not annoyed when the sick finally come to him. It's the reason he came.</li>
+    </ul>
+    <div class="story c-p1">
+      <span class="label">The image</span>
+      <p>The "lowly" Jesus isn't a pushover. He drives out money-changers and confronts hypocrites. The point is where his heart goes most naturally. Harshness is the exception that takes provocation; tenderness is what flows when nobody pushes.</p>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-p1" id="priest">
+  <div class="gutter"><span class="chno sm">4–9</span><span class="label">Hebrews, John, Hosea</span></div>
+  <div class="body">
+    <div>
+      <h3>A priest who feels with you, and still speaks for you</h3>
+      <p class="idea">The Jesus in heaven is not more distant than the one in Galilee. He is your priest, your intercessor and your advocate, and all three are about his heart.</p>
+    </div>
+    <div class="fig">
+      <h4>Three things Christ does for you now</h4>
+      <div class="steps3 c-p1">
+        <div><b>Sympathizes</b><span>Hebrews 4:15. He was tempted in every way, so he doesn't lecture from a distance. His heart is bound up with yours in your weakness.</span></div>
+        <div><b>Intercedes</b><span>Hebrews 7:25. Justification is what he did back then. Intercession is what he is doing now: always living to plead for you, so his saving outpaces your sinning.</span></div>
+        <div><b>Advocates</b><span>1 John 2:1. An intercessor stands between two parties; an advocate steps over to your side. Don't defend yourself. Bring the sin to the one already defending you.</span></div>
+      </div>
+    </div>
+    <ul class="points">
+      <li><strong>Gentle with the wayward (Hebrews 5:2).</strong> Old Testament priests were sinners themselves, some notoriously so. Jesus knows weakness from the inside but never turned inward in self-pity, so he can deal gently with the ignorant and the stubborn. Look inside yourself and you can only expect harshness; look at him and you can only expect gentleness.</li>
+      <li><strong>"I will never cast out" (John 6:37).</strong> John Bunyan, poor and uneducated, wrote a whole book on this verse. Ortlund walks through it word by word: all, not most; the Father gives, not haggles; whoever comes will never be thrown out. His heart is not a rental where you can be evicted, but your permanent home.</li>
+      <li><strong>What our sins evoke (Hosea 11:8).</strong> Ortlund doesn't soften God's wrath. But for those in Christ, sin draws out his tenderness rather than pushing it away. Where sin increased, grace abounded all the more.</li>
+    </ul>
+    <div class="fig">
+      <h4>Where your sin sends him</h4>
+      <div class="compare">
+        <div class="c-p4"><h5>What we assume</h5><ul><li>Each failure uses up some patience</li><li>He loves me, but with raised eyebrows</li><li>I need to clean up before coming back</li><li>Heaven is cooler than earth was</li></ul></div>
+        <div class="c-p1"><h5>What the texts say</h5><ul><li>He is drawn toward the weak and wayward</li><li>Mercy is what makes him glad</li><li>Come as you are; he never casts out</li><li>He is the same heart, now interceding</li></ul></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="chapter c-p1" id="friend">
+  <div class="gutter"><span class="chno sm">10–12</span><span class="label">Beauty, emotion, friendship</span></div>
+  <div class="body">
+    <div>
+      <h3>A heart worth loving, a friend worth having</h3>
+      <p class="idea">His tenderness is not just doctrinally true but beautiful, fully human and personal.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Beauty.</strong> In 1740 Jonathan Edwards preached a short sermon to the children of his church, ages one to fourteen. His first reason for loving Jesus above everything: no love is as great as the love in Christ's heart. Edwards stresses that this heart is lovely, and humans are pulled toward beauty.</li>
+      <li><strong>Emotion.</strong> Jesus didn't stop being human when he ascended; he still is and always will be. So his tears at Lazarus' tomb and his anger at death show who he is now. With B. B. Warfield, Ortlund says Jesus was the most truly human person who ever lived, and his anger is on your side, against everything that hurts you.</li>
+      <li><strong>Friendship.</strong> His enemies called him a friend of tax collectors and sinners as an insult. For anyone who knows they are a sinner, it's the best news there is. Sinners enjoyed being around him, and he enjoyed being with them. Ortlund also notes how thin friendship has become, especially between men.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ TRINITY + OT ============ -->
+<div class="part c-p2" id="trinity">
+  <span class="label partno">Part two · Chapters 13–18</span>
+  <h2>Not a gentle Son and a <em>stern</em> Father</h2>
+  <p class="lede">A common hidden belief: Jesus is kind, but the Father is the one you have to watch out for. Ortlund takes this apart, first through the Spirit and the Father, then through the Old Testament.</p>
+</div>
+
+<article class="chapter c-p2">
+  <div class="gutter"><span class="chno sm">13–14</span><span class="label">Spirit and Father</span></div>
+  <div class="body">
+    <div>
+      <h3>The Spirit makes it felt; the Father shares it</h3>
+      <p class="idea">Christ in the flesh shows what is in the heart of all three persons of God.</p>
+    </div>
+    <ul class="points">
+      <li><strong>The Spirit's role, added to the familiar list.</strong> He regenerates, convicts, gifts, leads and intercedes. Ortlund adds: he makes us actually <em>feel</em> Christ's heart. Being told your father loves you is one thing. Being swept up in his arms is another. The Spirit moves us from the postcard to the beach, and he does it again and again whenever we drift.</li>
+      <li><strong>The Father of mercies (2 Corinthians 1:3).</strong> At the cross, the Father's justice had to be satisfied. But that's a legal reality, not a difference of heart. Subjectively, the Father wanted our rescue as much as the Son did. He is the spring of mercy, as naturally as a father fathers.</li>
+      <li>Ortlund quotes Tozer: what comes into our minds when we think about God is the most important thing about us. This book is an attempt to correct that picture.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="chapter c-p3" id="old">
+  <div class="gutter"><span class="chno sm">15–18</span><span class="label">The Old Testament</span></div>
+  <div class="body">
+    <div>
+      <h3>Jesus adds sharpness, not new content</h3>
+      <p class="idea">The gentle and lowly Christ is where the Old Testament was heading all along. He is the flesh-and-blood version of what God had been saying for centuries.</p>
+    </div>
+    <div class="figrow">
+      <div class="fig">
+        <h4>Exodus 34: the shape of God's character</h4>
+        <svg viewBox="0 0 420 210" role="img" aria-label="Bar comparison from Exodus 34:6-7. Steadfast love is kept for thousands of generations, shown as a long bar. Iniquity is visited to the third and fourth generation, shown as a very short bar.">
+          <text x="0" y="22" font-size="12" class="t-mute">HOW FAR IT REACHES</text>
+          <text x="0" y="62" font-size="13" class="t-ink">steadfast love</text>
+          <rect x="0" y="72" width="420" height="26" rx="4" style="fill:var(--p1)"/>
+          <text x="410" y="90" text-anchor="end" font-size="12.5" style="fill:var(--card)">to thousands</text>
+          <text x="0" y="136" font-size="13" class="t-ink">consequences of sin</text>
+          <rect x="0" y="146" width="16" height="26" rx="4" style="fill:var(--p4)"/>
+          <text x="24" y="164" font-size="12.5">to the third and fourth generation</text>
+          <text x="0" y="200" font-size="11" class="t-mute">schematic, not to scale: 4 vs. "thousands"</text>
+        </svg>
+        <p class="cap">When Moses asks to see God's glory, God doesn't show size or thunder. He proclaims his name: merciful, gracious, slow to anger, abounding in steadfast love. The prophets quote this "credo" again and again.</p>
+      </div>
+      <div class="fig">
+        <h4>His natural work and his strange work</h4>
+        <div class="compare">
+          <div class="c-p1"><h5>Natural</h5><ul><li>Mercy, compassion, pardon</li><li>Flows from his heart</li><li>What he delights in</li></ul></div>
+          <div class="c-p3"><h5>Strange</h5><ul><li>Judgment, affliction</li><li>Real and just</li><li>"Not from his heart" (Lam 3:33)</li></ul></div>
+        </div>
+        <p class="cap">Lamentations has five carefully built poems; the middle chapter is three times as long, and its literary centre is 3:33: God does not afflict from his heart. Goodwin and Isaiah 28 call judgment God's "strange work".</p>
+      </div>
+    </div>
+    <ul class="points">
+      <li><strong>Isaiah 55.</strong> "My ways are not your ways" is usually quoted with a shrug about mysterious providence. In context it means something else: God pardons abundantly, far beyond how we would forgive. The surprise is his compassion.</li>
+      <li><strong>Jeremiah 31:20.</strong> After twenty-nine chapters of indictment, God calls Israel his dear son, his darling child, and says his heart yearns for him. The old translation says his "bowels are troubled". Even when he speaks against his people, he remembers them.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ============ TO THE END ============ -->
+<div class="part c-p4" id="end">
+  <span class="label partno">Part three · Chapters 19–23</span>
+  <h2>Loved then, loved <em>now</em>, loved forever</h2>
+  <p class="lede">The last chapters deal with the fear that God forgave the old sins but is quietly running out of patience with the new ones.</p>
+</div>
+
+<article class="chapter c-p4">
+  <div class="gutter"><span class="chno sm">19–23</span><span class="label">Ephesians, Galatians, Romans, John</span></div>
+  <div class="body">
+    <div>
+      <h3>Live from his heart, not for it</h3>
+      <p class="idea">The battle of the Christian life is to replace an orphan mindset with the settled fact of adoption, every morning.</p>
+    </div>
+    <ul class="points">
+      <li><strong>Rich in mercy.</strong> Ephesians 2: we were dead, God made us alive, and in between stands the reason: God is rich in mercy. The Christian life is a lifelong shedding of tepid thoughts about his goodness.</li>
+      <li><strong>Law-ish hearts.</strong> A twelve-year-old in a loving family starts forging birth certificates and scrubbing the kitchen to secure his place. His father would say: calm down, you're already ours. That is how we often relate to God.</li>
+      <li><strong>He loved us then, he'll love us now (Romans 5).</strong> If he loved us when we were his enemies, he won't love us less now that we're his children. Many believers secretly picture a flustered, disappointed love. That's projection again.</li>
+      <li><strong>To the end (John 13:1).</strong> We love until we're betrayed. Jesus knew the betrayal was coming and walked over the cliff of the cross anyway, without holding anything back.</li>
+      <li><strong>Forever (Ephesians 2:7).</strong> In the coming ages God will show the riches of his kindness. His heart for us is not a passing phase but our eternal home.</li>
+    </ul>
+    <div class="fig">
+      <h4>Two ways to live the Christian life</h4>
+      <div class="flip">
+        <div class="q hd"><span>Living for his heart</span><span></span><span>Living from his heart</span></div>
+        <div class="q"><span>earning the smile of God</span><span>→</span><span>starting from it</span></div>
+        <div class="q"><span>orphan, trying to stay</span><span>→</span><span>child, already home</span></div>
+        <div class="q"><span>sin as an eviction risk</span><span>→</span><span>sin as a reason to run to him</span></div>
+        <div class="q"><span>"how could I, again?"</span><span>→</span><span>"he is glad I came back"</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ TOOLKIT ============ -->
+<section id="toolkit">
+  <div class="sec-head">
+    <span class="label">Epilogue · What now?</span>
+    <h2>Don't apply it. Bask in it.</h2>
+    <p class="lede">Ortlund says asking "how do I apply this?" almost misses the point, like someone from a cold country winning a holiday in the sun and asking how to apply the beach. There's only one thing to do: come to him. Here are ways to keep doing that.</p>
+  </div>
+  <div class="toolkit">
+    <div class="col c-p1">
+      <h3>When you fail</h3>
+      <div class="tk"><b>Go straight to him</b><span>Don't wait until you feel cleaned up. Your failure is the occasion, not the obstacle.</span></div>
+      <div class="tk"><b>Picture the advocate</b><span>He's already on your side of the courtroom. Raise no defence; bring the sin to him.</span></div>
+      <div class="tk"><b>Watch for projection</b><span>Ask: is this God's impatience, or mine painted on him?</span></div>
+    </div>
+    <div class="col c-p2">
+      <h3>When you suffer</h3>
+      <div class="tk"><b>He feels it with you</b><span>Hebrews 4:15: no pep talk from heaven, but a friend who can't keep his distance.</span></div>
+      <div class="tk"><b>Read the tears</b><span>John 11 at Lazarus' tomb: he weeps with you and is angry at what hurts you.</span></div>
+      <div class="tk"><b>Ask the Spirit</b><span>Pray to feel, not just know, his heart for you.</span></div>
+    </div>
+    <div class="col c-p3">
+      <h3>Verses to carry</h3>
+      <div class="tk"><b>Matthew 11:28–30</b><span>The centre of the book: come, learn, rest.</span></div>
+      <div class="tk"><b>John 6:37</b><span>Whoever comes will never be cast out.</span></div>
+      <div class="tk"><b>Exodus 34:6</b><span>Merciful, gracious, slow to anger.</span></div>
+      <div class="tk"><b>Lamentations 3:33</b><span>He does not afflict from his heart.</span></div>
+    </div>
+    <div class="col c-p4">
+      <h3>Every morning</h3>
+      <div class="tk"><b>From, not for</b><span>Start the day from his smile instead of working toward it.</span></div>
+      <div class="tk"><b>Your darkest place</b><span>Where you feel most defeated is exactly where he lives with you.</span></div>
+      <div class="tk"><b>Go to Jesus</b><span>Step two: see step one.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Book notes on <em>Gentle and Lowly: The Heart of Christ for Sinners and Sufferers</em> by Dane C. Ortlund (Crossway, 2020). Summary and diagrams in my own words.</p>
+  <p><a href="../">kaig78.github.io/public</a></p>
+</footer>
+
+</div>
+</body>
+</html>
