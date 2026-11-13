@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Life You've Always Wanted by John Ortberg – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400..500&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a walk down the cover's boardwalk. One reading column (~64ch); each practice is a
+   "plank" on a trail that runs down the left edge, numbered in the book's own chapter order.
+   Palette from the cover: lake teal, forest green, weathered boardwalk wood, mist. */
+:root {
+  --paper: #f5f7f3;
+  --paper-2: #e9eee6;
+  --card: #fcfdfb;
+  --ink: #18231d;
+  --ink-2: #44514a;
+  --ink-3: #75817a;
+  --rule: #d5ddd3;
+  --lake: #1f7f7b;
+  --forest: #2f5a3a;
+  --wood: #8a6240;
+  --wood-soft: #e8dccd;
+
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --ui: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 64ch;
+  --frame: 1100px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111613; --paper-2: #18201b; --card: #172019; --ink: #e6ede7; --ink-2: #b8c4bb; --ink-3: #85928a;
+    --rule: #2a362e; --lake: #4fb7b0; --forest: #7fb38a; --wood: #c99a6e; --wood-soft: #2c241c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111613; --paper-2: #18201b; --card: #172019; --ink: #e6ede7; --ink-2: #b8c4bb; --ink-3: #85928a;
+  --rule: #2a362e; --lake: #4fb7b0; --forest: #7fb38a; --wood: #c99a6e; --wood-soft: #2c241c;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--paper); color: var(--ink);
+  font: 400 1.1rem/1.65 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--lake); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible + span { outline: 2px solid var(--lake); outline-offset: 3px; }
+.frame { max-width: var(--frame); margin: 0 auto; }
+
+.home { display: inline-block; margin-top: 22px; font: 500 .8rem/1 var(--ui); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); text-decoration: none; }
+.home:hover { color: var(--ink); }
+
+/* masthead */
+.mast { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: clamp(24px, 5vw, 60px); align-items: end; padding-block: 34px 38px; border-bottom: 1px solid var(--rule); }
+.kicker { font: 600 .74rem/1 var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--lake); }
+.mast h1 { margin: 14px 0 0; font: 600 clamp(2.4rem, 6.5vw, 4.4rem)/1 var(--display); letter-spacing: -.01em; text-wrap: balance; font-variation-settings: "opsz" 144; }
+.mast .sub { margin: 10px 0 0; font: italic 400 1.3rem/1.35 var(--body); color: var(--forest); }
+.mast .dek { margin: 22px 0 0; max-width: 54ch; font-size: 1.16rem; color: var(--ink-2); text-wrap: pretty; }
+.meta { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 6px 20px; font: 400 .82rem/1.45 var(--ui); color: var(--ink-3); }
+.meta b { font-weight: 600; color: var(--ink-2); }
+.mast img { display: block; width: 100%; height: auto; aspect-ratio: 741/1129; border-radius: 3px; box-shadow: 0 22px 40px -22px rgba(10, 40, 30, .55); }
+
+.contents { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 20px; border-bottom: 1px solid var(--rule); }
+.contents a { font: 500 .8rem/1 var(--ui); text-decoration: none; color: var(--ink-2); padding: 8px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); }
+.contents a:hover { border-color: var(--lake); color: var(--lake); }
+
+/* prose */
+.prose { max-width: var(--measure); }
+.prose p { margin: 0 0 1.05em; text-wrap: pretty; }
+.prose ul, .prose ol { margin: 0 0 1.1em; padding-left: 1.25em; }
+.prose li { margin-bottom: .45em; }
+.prose li::marker { color: var(--wood); }
+section { padding-block: 52px 6px; scroll-margin-top: 12px; }
+.eyebrow { display: block; font: 600 .74rem/1 var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--wood); margin-bottom: 12px; }
+h2 { margin: 0 0 18px; font: 600 clamp(1.7rem, 3.6vw, 2.4rem)/1.1 var(--display); text-wrap: balance; }
+h3 { margin: 1.9em 0 .5em; font: 600 1.25rem/1.25 var(--display); text-wrap: balance; color: var(--forest); }
+.lede { font-size: 1.2rem; color: var(--ink-2); }
+
+.pull { margin: 30px 0; padding: 2px 0 2px 22px; border-left: 3px solid var(--lake); max-width: 58ch; font: italic 500 clamp(1.25rem, 2.6vw, 1.55rem)/1.38 var(--display); text-wrap: balance; }
+.pull cite { display: block; margin-top: 10px; font: 500 .76rem/1.3 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-style: normal; }
+
+/* definition cards */
+.defs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; margin: 22px 0 30px; }
+.def { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px; min-width: 0; }
+.def b { display: block; font: 600 .74rem/1 var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--lake); margin-bottom: 8px; }
+.def p { margin: 0; font-size: 1rem; line-height: 1.5; }
+
+/* the trail of practices */
+.trail { position: relative; margin-top: 10px; }
+.plank { position: relative; padding: 46px 0 6px 64px; scroll-margin-top: 12px; }
+.trail::before { content: ""; position: absolute; left: 21px; top: 60px; bottom: 30px; width: 2px; background: repeating-linear-gradient(to bottom, var(--wood) 0 14px, transparent 14px 20px); opacity: .55; }
+.plank .no { position: absolute; left: 0; top: 44px; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--wood-soft); color: var(--wood); border: 2px solid var(--wood); font: 600 1.05rem/1 var(--display); }
+.plank h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 4px; }
+.plank .tag { margin: 0 0 18px; font: italic 400 1.08rem/1.4 var(--body); color: var(--ink-3); }
+
+/* try this */
+.try { margin: 18px 0 26px; max-width: var(--measure); background: var(--paper-2); border-radius: 10px; padding: 16px 20px 6px; }
+.try > b { display: block; font: 600 .74rem/1 var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--forest); margin-bottom: 10px; }
+.try ul, .try ol { margin: 0 0 12px; padding-left: 1.2em; }
+.try li { margin-bottom: .4em; font-size: 1.01rem; line-height: 1.5; }
+
+/* hurry survey */
+.survey { margin: 18px 0 28px; max-width: var(--measure); border: 1px solid var(--rule); border-radius: 10px; background: var(--card); overflow: hidden; }
+.survey .head { padding: 14px 18px; border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.survey .head b { font: 600 1rem/1.3 var(--display); }
+.survey .score { font: 600 .9rem/1 var(--ui); color: var(--lake); font-variant-numeric: tabular-nums; }
+.survey label { display: flex; gap: 12px; align-items: flex-start; padding: 10px 18px; border-bottom: 1px solid var(--rule); cursor: pointer; font-size: .98rem; line-height: 1.45; }
+.survey label:last-of-type { border-bottom: 0; }
+.survey input { margin-top: 4px; accent-color: var(--lake); width: 17px; height: 17px; flex: none; }
+.survey .verdict { padding: 12px 18px; background: var(--paper-2); font-size: .95rem; color: var(--ink-2); }
+
+/* day review + retreat schedule */
+.steps-list { counter-reset: s; list-style: none; padding: 0; margin: 18px 0 26px; max-width: var(--measure); }
+.steps-list li { counter-increment: s; position: relative; padding: 0 0 12px 40px; font-size: 1.02rem; }
+.steps-list li::before { content: counter(s); position: absolute; left: 0; top: 2px; width: 26px; height: 26px; border-radius: 50%; background: var(--lake); color: var(--paper); font: 600 .8rem/26px var(--ui); text-align: center; }
+.schedule { margin: 18px 0 28px; max-width: 560px; border-top: 1px solid var(--rule); }
+.schedule div { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--rule); font-size: 1rem; }
+.schedule span { font: 500 .88rem/1.6 var(--ui); color: var(--wood); font-variant-numeric: tabular-nums; }
+
+/* abstinence vs engagement */
+.diag { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 22px 0 30px; max-width: 760px; }
+.diag div { border-radius: 10px; padding: 16px 18px; background: var(--card); border: 1px solid var(--rule); min-width: 0; }
+.diag h4 { margin: 0 0 6px; font: 600 1.05rem/1.25 var(--display); }
+.diag .arrow { font: 600 .76rem/1.3 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--lake); margin: 8px 0 6px; }
+.diag p { margin: 0; font-size: .98rem; line-height: 1.5; color: var(--ink-2); }
+
+/* confession ladder */
+.climb { list-style: none; padding: 0; margin: 20px 0 28px; max-width: 700px; display: grid; gap: 6px; }
+.climb li { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 14px; padding: 12px 16px; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; font-size: .99rem; line-height: 1.45; }
+.climb li b { font: 600 1rem/1.3 var(--display); color: var(--forest); }
+.climb li:last-child { border-color: var(--lake); }
+
+footer { margin-top: 70px; padding-block: 24px 46px; border-top: 1px solid var(--rule); font: 400 .84rem/1.6 var(--ui); color: var(--ink-3); }
+footer p { margin: 0 0 6px; max-width: 80ch; }
+
+@media (max-width: 760px) {
+  .mast { grid-template-columns: minmax(0, 1fr); }
+  .mast figure { order: -1; max-width: 160px; }
+  .diag { grid-template-columns: minmax(0, 1fr); }
+  .plank { padding-left: 54px; }
+  .climb li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  body { font-size: 1.04rem; }
+}
+figure { margin: 0; }
+</style>
+</head>
+<body>
+<div class="frame">
+<a class="home" href="../">← Kai's Pages</a>
+
+<header class="mast">
+  <div>
+    <span class="kicker">John Ortberg</span>
+    <h1>The Life You've Always Wanted</h1>
+    <p class="sub">Spiritual disciplines for ordinary people</p>
+    <p class="dek">Ortberg's book on how ordinary people actually change. Change comes from training rather than trying harder: you arrange your days around a few practices, and those practices make room for God to form you into the person you were meant to be. It works through ten of those practices, from celebration to suffering, with stories, jokes and exercises.</p>
+    <div class="meta">
+      <span><b>Zondervan</b>, 1997; expanded edition 2002</span>
+      <span>13 chapters + study guide by Kevin G. Harney</span>
+      <span>Ortberg's private working title: <i>Dallas for Dummies</i></span>
+    </div>
+  </div>
+  <figure><img src="cover.jpg" alt="Cover: a wooden boardwalk running along a turquoise lake into a green forest" width="741" height="1129"></figure>
+</header>
+
+<nav class="contents" aria-label="Sections">
+  <a href="#hope">The hope</a>
+  <a href="#pseudo">Fake change</a>
+  <a href="#training">Training vs. trying</a>
+  <a href="#celebration">Celebration</a>
+  <a href="#slowing">Slowing</a>
+  <a href="#prayer">Prayer</a>
+  <a href="#servanthood">Servanthood</a>
+  <a href="#confession">Confession</a>
+  <a href="#guidance">Guidance</a>
+  <a href="#secrecy">Secrecy</a>
+  <a href="#scripture">Scripture</a>
+  <a href="#rule">Rule of life</a>
+  <a href="#suffering">Suffering</a>
+</nav>
+
+<section id="hope">
+  <span class="eyebrow">Chapter 1 · “We shall morph indeed”</span>
+  <h2>I yam what I yam</h2>
+  <div class="prose">
+    <p class="lede">The book opens with an honest confession: "I am disappointed with myself." Some of it is trivial: Ortberg can't do home repairs and has no financial wizardry. Some is neurotic, like caring what strangers think. Some of it runs deep. At night he looks in on his sleeping children and thinks of the father he wanted to be, then remembers how the day really went. He yelled at his daughter for spilling cherry punch, "simply because I'm big and she's little and I can get away with it." He still loves God so little and sins so much, and he can't pray for long before drifting into revenge or grandiose fantasies.</p>
+    <p>Popeye's "I yam what I yam" sums up the human condition: honest, but resigned, with no expectation of change. Ortberg reads the word <em>dis-appointment</em> literally. We are missing the life we were appointed by God to live, and we have dis-appointed God by putting ourselves in his place. But that is not all we are. At the burning bush, Moses said he was a slow-tongued nobody. God answered, in effect, "You are what you are, but you are not yet what you will be. I will be with you." Then he gave his own name: "I am what I am." Moses' whole calling turned on his willingness to "turn aside" and pay attention.</p>
+    <p>The book's key word is the Greek <em>morphoo</em>, the inward formation of a person's essential nature, used for an embryo growing in the womb. Paul uses it ("until Christ is formed in you"), and two relatives of it: <em>summorphizo</em>, being conformed to Christ's image, and <em>metamorphoo</em>, being transformed by the renewing of the mind. At one church Ortberg started a little liturgy. He would say "It's morphing time," a line borrowed from the Power Rangers, and the congregation would answer "We shall morph indeed." When morphing happens, he says, "I don't just do the things Jesus would have done; I find myself wanting to do them."</p>
+    <p>Spiritual life is not one slice of life next to finances and work. "God is not interested in your 'spiritual life.' God is just interested in your life." The goal is to live as Jesus would in our place: to see, think and feel what he would through our own temperament and history.</p>
+  </div>
+  <blockquote class="pull">“There are no ordinary people. You have never talked to a mere mortal.”<cite>C. S. Lewis, quoted in chapter 1</cite></blockquote>
+  <div class="prose">
+    <p>The proof that this can happen is Mabel. Tom Schmidt met her in a grim state-run convalescent hospital. She was 89, blind, nearly deaf, and her face was half eaten by cancer. She had been bedridden there, alone, for 25 years. When he gave her a flower for Mother's Day, she asked if she could give it to someone else, and then held it out to a patient: "Here, this is from Jesus." She could recite whole passages of Scripture and hymns from memory. When he asked what she thought about all day, she said: "I think about my Jesus... He's been awfully good to me in my life, you know... I'm one of those kind who's mostly satisfied." For anyone willing to turn aside, Ortberg says, her hospital bed became a burning bush.</p>
+  </div>
+</section>
+
+<section id="pseudo">
+  <span class="eyebrow">Chapter 2 · Surprised by change</span>
+  <h2>The man who never changed</h2>
+  <div class="prose">
+    <p class="lede">"Hank" went to church his whole life and stayed sour. His native tongue was complaint, and he ran "a ministry of cranial downsizing." When a deacon asked if he was happy, he said "Yeah" without smiling. "Well, tell your face." When he was told to stop complaining to visitors about the loud music, he called OSHA, and a federal agent turned up to measure the decibels. Hank's children didn't know him. His son never told him how he met his wife, because it was at a dance.</p>
+    <p>The worst part, Ortberg says, was that nobody was surprised. The church expected Hank to hold the right beliefs, attend, give, pray and avoid certain sins. Nobody expected him to become more loving and joyful each year. "We would have been surprised if it did!" C. S. Lewis's line applies: we are "far too easily pleased," like a child who keeps making mud pies because he can't imagine a holiday at the sea.</p>
+    <p>When real change doesn't happen, we settle for <strong>pseudo-transformation</strong>. "If we cannot be transformed, we will settle for being informed or conformed." Groups use boundary markers: highly visible, fairly superficial practices that tell insiders from outsiders, like the hippie's VW van or the yuppie's Rolex. In the first century these were circumcision, food laws and the Sabbath. In Ortberg's church, the pastor could be consumed with pride and keep his job, but if he smoked one Camel after the service, he'd be gone by the evening service. His Christian college still banned jazz on campus while punk was fine, and it locked the tennis courts on Sundays but left the volleyball court open. Jesus ignored the boundaries and pointed to the centre: love God, love people. That is why tax collectors and prostitutes were entering the kingdom ahead of the religious. "The 'righteous' were more damaged by their righteousness than the sinners were by their sin."</p>
+  </div>
+  <h3>Five warning signs of pseudo-transformation</h3>
+  <div class="prose">
+    <ol>
+      <li><strong>Am I spiritually inauthentic?</strong> Preoccupied with <em>appearing</em> spiritual, working harder at seeming loving than at loving. The Sunday-school boy knew what was expected: "I guess the answer is Jesus, but it sure sounds like a squirrel to me."</li>
+      <li><strong>Am I becoming judgmental, exclusive or proud?</strong> He catches himself rating everyone in a new small group like an Olympic judge. That is one reason God sometimes hides our growth from us.</li>
+      <li><strong>Am I becoming more approachable, or less?</strong> The rabbis' holiness pushed people away. Jesus' holiness drew them in.</li>
+      <li><strong>Am I growing weary?</strong> Boundary-marker religion is "both intimidating and unchallenging at the same time" (Steven Mosley).</li>
+      <li><strong>Am I measuring my spiritual life superficially?</strong> He used to judge himself by quiet times and journal entries, and once thought of keeping two journals so one could say "See other journal." The real question is whether I am growing in love for God and people.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="training">
+  <span class="eyebrow">Chapter 3 · The truth about spiritual disciplines</span>
+  <h2>Training, not trying</h2>
+  <div class="prose">
+    <p class="lede">Imagine the US Olympic Committee knocks on your door: out of 200 million people, the computer has picked you to run the marathon. You may be gripped by the dream, but you still can't run a marathon by trying really hard. You can only get there by arranging your life around training. Ortberg calls this "the single most helpful principle I know regarding spiritual transformation," and credits Dallas Willard's <em>The Spirit of the Disciplines</em>.</p>
+    <p>After a sermon on patience he would wake up on Monday determined to be patient with a three-year-old, and he would fail. Practising scales for years is the <em>easy</em> way to play Bach. Walking onto a concert stage without practice is the hard way. Paul told Timothy to "train yourself in godliness." Athletes at the Isthmian Games in Corinth had to complete ten months of strict training or be disqualified.</p>
+  </div>
+  <div class="defs">
+    <div class="def"><b>Discipline</b><p>Any activity I can do by direct effort that will help me do what I cannot now do by direct effort.</p></div>
+    <div class="def"><b>Spiritual discipline</b><p>Any activity that can help me gain power to live life as Jesus taught and modeled it.</p></div>
+    <div class="def"><b>A disciplined person</b><p>Someone who can do the right thing at the right time in the right way with the right spirit. Not a rigid, chart-making, gold-star-loving early riser.</p></div>
+  </div>
+  <div class="prose">
+    <p>Disciplines are <strong>not a barometer</strong> of spirituality. They are to life what calisthenics are to a game: nobody gets bonus points for free throws in practice. If a practice makes you less loving, drop it. They are <strong>not necessarily unpleasant</strong>: if you train for a pie-eating contest, you eat pie, and if you train for joy, some practices will be delightful. And they are <strong>not a way to earn God's favour</strong>. They are means of grace, and they exist for our sake.</p>
+    <p>Frog and Toad show why willpower fails. They can't stop eating cookies. Frog boxes them, ties the box and puts it in a tree, and finally throws them to the birds. "Now we have no more cookies," says Toad. "Yes, but we have lots and lots of willpower." "You may keep it all. I'm going home to bake a cake." Alcoholics Anonymous is built on the same insight: admit willpower isn't enough, then arrange your life around practices that do what willpower can't.</p>
+    <p>To pick the right practices, work backward. What does life in the kingdom look like? What stands in the way? What practice, experience or relationship would help with that? Ortberg once spent a day trying to love well and found he was too tired. So, "as unspiritual as it sounds," one of his disciplines became more sleep. Elijah got two long naps before meeting God on Horeb, and the disciples fell asleep in Gethsemane. "For some of you, perhaps the single most spiritual thing you could do right now is to put this book down and take a nap."</p>
+  </div>
+  <h3>Four marks of wise training</h3>
+  <div class="prose">
+    <ul>
+      <li><strong>It respects the freedom of the Spirit.</strong> A motorboat runs on its own engine. A sailboat depends on the wind. We can raise the sails, but we can't make the wind blow. When something in a devotional book stopped him, Ortberg pushed on to finish by year's end, which was "motorboating instead of sailing." A woman on a silent retreat bumped into his friend and said nothing, not even "excuse me." Silence is for becoming like Jesus, not for setting records.</li>
+      <li><strong>It respects your temperament.</strong> Spontaneous people can respond quickly. Lincoln was famously disorganised; he had a file labelled "If you can't find it anywhere else, try looking here." Some people are formed through nature, some through music or images.</li>
+      <li><strong>It fits your season.</strong> A young mother can't have long quiet times. But caring for two small children, offered with gratitude and prayer, can itself be a school of transformation.</li>
+      <li><strong>It expects troughs and peaks.</strong> Consolation and desolation take turns. Lewis's Screwtape says God withdraws the felt supports, and that a person grows more in the troughs than at the peaks. After an intense prayer group ended, Ortberg needed a time of rest before the hunger came back.</li>
+    </ul>
+    <p>And it starts with a decision. Nobody drifts into a life of training. A former Mr. Missouri contestant said of physique models: "That look is what they do for a living. It's 24 hours a day, 7 days a week." (When an actor kept losing his shirt in a movie, Ortberg's wife Nancy looked at the screen, looked at him, and said: "You know, I'm just not attracted to well-built men.")</p>
+  </div>
+  <div class="diag">
+    <div><h4>Sins of commission</h4><p>Doing what I shouldn't: boasting, overeating, gossip.</p><div class="arrow">→ disciplines of abstinence</div><p>Fasting, solitude, silence, secrecy: strengthen the <em>not-doing</em> muscles.</p></div>
+    <div><h4>Sins of omission</h4><p>Not doing what I should: failing to love, encourage, serve, rejoice.</p><div class="arrow">→ disciplines of engagement</div><p>Worship, study, fellowship, giving, celebration: strengthen the <em>doing</em> muscles.</p></div>
+  </div>
+</section>
+
+<div class="trail">
+
+<div class="plank" id="celebration">
+  <span class="no" aria-hidden="true">4</span>
+  <span class="eyebrow">The practice of celebration</span>
+  <h2>A “Dee Dah Day”</h2>
+  <p class="tag">Joy is the serious business of heaven. (C. S. Lewis)</p>
+  <div class="prose">
+    <p>After a bath, his daughter Mallory ran in circles singing "dee dah day, dee dah day." Ortberg told her to hurry. She asked "Why?" and he had no answer. He had nowhere to be. So he did the dance with her ("pretty good for a man my age"). He realised he divides his minutes into "living" and "waiting to live," and that boredom is, in Walker Percy's phrase, "the self stuffed with the self."</p>
+    <p>"God is the happiest being in the universe" (Willard). Chesterton imagines God saying "Do it again" to the sun each morning, because "our Father is younger than we." Ortberg rewrites Genesis as if God worked like us: "It'll have to do," a flat earth that looks like Idaho, and "Thank Me, it's Friday." Jesus said "that my joy may be in you." The problem isn't that we're too happy for God's taste, but that we're not happy enough. Joylessness may be the sin the church tolerates most. "Televangelists don't get canceled for displaying too much of it."</p>
+    <p>Joy is strength ("the joy of the Lord is your strength," Nehemiah). Willard argues that an unsatisfying life makes sin look good, which gives Ortberg a key line: <strong>we must arrange life so that sin no longer looks good to us.</strong> Celebration is the opposite of hedonism. Hedonism needs more and more for less and less; celebration lets you enjoy today something you wouldn't even have noticed yesterday. When his friend Chuck ("Chemo-Man") was told his cancer was back, and the next morning learned the lab had switched his results, he couldn't stop hugging his kids. Every tick of the clock is a gift.</p>
+    <p>Joy is a learned skill, and you are responsible for your own. It's often strongest near suffering. Bonhoeffer in Flossenbürg "spread an atmosphere of happiness... and profound gratitude for the mere fact that he was alive." Joy in this world is always "in spite of": Barth's "defiant nevertheless." In Robert Fulghum's story, a bride threw up on the wedding party in the middle of the ceremony, and ten years later the mother of the bride threw a party to rewatch the tapes. In spite of the mess, the bride got the groom.</p>
+  </div>
+  <div class="try"><b>Try this</b><ul>
+    <li><strong>Begin now.</strong> "This is the day the Lord has made." Not when you graduate, marry, have kids or the kids leave home.</li>
+    <li><strong>Find a joy mentor</strong> and spend real time with joy-carriers. Limit time with joy-destroyers, like the neighbour whose only comment on a dog that walked on water was "Your dog can't swim, can he?"</li>
+    <li><strong>Set aside one Dee Dah Day a week</strong>: food you love, music that moves you, a sport, beautiful things, and thank God for each one.</li>
+    <li><strong>Unplug for a week.</strong> Families offered $500 to give up TV for a month mostly said no; the ones who tried it found life better and then went back. The Amish have markedly lower depression rates.</li>
+    <li><strong>Read events through the Resurrection.</strong> Between what happens and how we react lies our interpretation.</li>
+  </ul></div>
+</div>
+
+<div class="plank" id="slowing">
+  <span class="no" aria-hidden="true">5</span>
+  <span class="eyebrow">The practice of “slowing”</span>
+  <h2>An unhurried life</h2>
+  <p class="tag">People nowadays take time far more seriously than eternity. (Thomas Kelly)</p>
+  <div class="prose">
+    <p>Newly in Chicago, Ortberg phoned his wisest mentor and asked what he needed to be spiritually healthy. After a long pause: "You must ruthlessly eliminate hurry from your life." Ortberg wrote it down and asked what else. Another pause: "There is nothing else." Jung: "Hurry is not <em>of</em> the devil; hurry <em>is</em> the devil." The danger isn't that we will renounce our faith but that we will be so rushed that we settle for a mediocre version of it, skimming our lives instead of living them.</p>
+    <p>In the 1960s, experts told Congress that technology would soon give people too much free time. Instead we buy anything that promises speed: two-in-one shampoo, Domino's ("We don't sell pizza, we sell delivery"), an emergency room that guarantees you'll be seen within 20 minutes. We have become the Red Queen, running to stay in place. Hurry sickness shows up as speeding up daily activities, multitasking, clutter, superficiality and, most seriously, <strong>an inability to love</strong>. "Love and hurry are fundamentally incompatible." Lincoln, with only a few books, "read less and thought more than any man in his sphere." We have "traded wisdom for information" and "want to microwave maturity." Sunset fatigue means the people we've promised most to get our leftovers. Jesus was often busy, but never hurried. "Hurry is not just a disordered schedule. Hurry is a disordered heart."</p>
+  </div>
+  <form class="survey" id="hurry" aria-label="Hurry sickness check" onsubmit="return false">
+    <div class="head"><b>Hurry check, from the book's study guide</b><span class="score" id="hurry-score">0 of 11</span></div>
+    <label><input type="checkbox" id="h1"><span>I live with a daily sense that there isn't enough time.</span></label>
+    <label><input type="checkbox" id="h2"><span>I talk faster because there's so much to say.</span></label>
+    <label><input type="checkbox" id="h3"><span>I nod a lot to keep a slow talker moving along.</span></label>
+    <label><input type="checkbox" id="h4"><span>I finish slow talkers' sentences, at least in my head.</span></label>
+    <label><input type="checkbox" id="h5"><span>I drive faster than is safe, even when I'm not late.</span></label>
+    <label><input type="checkbox" id="h6"><span>At a red light I pick the lane behind the car that looks fastest.</span></label>
+    <label><input type="checkbox" id="h7"><span>I pick the quickest checkout line, and it bothers me if I chose wrong.</span></label>
+    <label><input type="checkbox" id="h8"><span>I regularly do more than one thing at a time.</span></label>
+    <label><input type="checkbox" id="h9"><span>I have a pile of things I'll read "some day."</span></label>
+    <label><input type="checkbox" id="h10"><span>My life runs on schedules, organisers and to-do lists.</span></label>
+    <label><input type="checkbox" id="h11"><span>I find it hard to say no when asked to add one more thing.</span></label>
+    <div class="verdict" id="hurry-verdict">Tick what's true. Nothing is stored or sent anywhere.</div>
+  </form>
+  <div class="try"><b>Practices of slowing</b><ul>
+    <li>For a month, drive in the slow lane and pray for each driver who passes you. Put your horn under a vow of silence.</li>
+    <li>For a week, chew every bite fifteen times.</li>
+    <li>In the grocery store, choose the longest line and let one person go ahead.</li>
+    <li>Go a day without a watch. (Research finds no link between Type-A hurry and productivity.)</li>
+  </ul></div>
+  <div class="prose">
+    <p><strong>Solitude</strong> is "the furnace of transformation." Jesus began and ended his ministry in it. It is the one place where we are free from the forces of society that otherwise shape us: the boiling frog, and the mice that need a dose of amphetamine twenty times smaller to die when they are in a group. ("In groups they go off like popcorn.") At its heart solitude means <em>not</em> doing something. One man brought books, tapes, CDs and a VCR to his first retreat. "In solitude I get rid of my scaffolding" (Nouwen). Ortberg's first attempt was mostly wandering, between "anger fantasies" and success fantasies "that would make Narcissus blush." Brother Lawrence consoled him: "I realized I would always be a failure at prayer; and I've gotten along much better ever since."</p>
+  </div>
+  <h3>Reviewing the day with God</h3>
+  <ol class="steps-list">
+    <li>Be still for a moment and quiet your mind.</li>
+    <li>Acknowledge that Jesus is present. Invite him to teach you.</li>
+    <li>Go back to when you woke up and watch the day like a video.</li>
+    <li>Go scene by scene; talk to God about what brings gratitude or regret, and pray for the people in it.</li>
+    <li>End with thanks for his mercy, and ask him to refresh you as you sleep.</li>
+  </ol>
+  <h3>A day of extended solitude</h3>
+  <div class="schedule" role="list">
+    <div role="listitem"><span>The night before</span>Ask God to bless the day. What do you need from him: healing, conviction, compassion, mission?</div>
+    <div role="listitem"><span>8:00–9:00</span>Prepare heart and mind; walk; stay silent from waking.</div>
+    <div role="listitem"><span>9:00–11:00</span>Read and meditate on Scripture; stop where God seems to speak.</div>
+    <div role="listitem"><span>11:00–12:00</span>Write your responses and talk to God about them.</div>
+    <div role="listitem"><span>12:00–1:00</span>Lunch and a walk, reflecting on the morning.</div>
+    <div role="listitem"><span>1:00–2:00</span>Take a nap.</div>
+    <div role="listitem"><span>2:00–3:00</span>Set goals that come out of the day.</div>
+    <div role="listitem"><span>3:00–4:00</span>Write them down, perhaps as a letter to God. Prepare to re-enter.</div>
+  </div>
+  <div class="prose"><p>Ortberg aims for a day alone each month and a couple of retreat days a year. Francis de Sales says a clock must be wound twice a day and taken apart once a year for cleaning, and so must the heart.</p></div>
+</div>
+
+<div class="plank" id="prayer">
+  <span class="no" aria-hidden="true">6</span>
+  <span class="eyebrow">The practice of prayer</span>
+  <h2>Interrupting heaven</h2>
+  <p class="tag">The only football play named after prayer is the last one: the Hail Mary.</p>
+  <div class="prose">
+    <p>We pray when we're desperate. God is humble enough to accept that, but crisis prayer can't sustain a life, and it reveals what we really think: that prayer doesn't change anything. In Revelation 8 there is "silence in heaven for about half an hour" while the prayers of the saints rise like incense, and then things happen on earth. "Prayers of real human beings interrupt heaven." Walter Wink: "History belongs to the intercessors, those who believe and pray the future into being." Abraham bargained God down from fifty to ten righteous people. "Biblical prayer is impertinent, persistent, shameless, indecorous. It is more like haggling in an oriental bazaar."</p>
+    <p>The disciples, who had prayed all their lives, still asked "Lord, teach us to pray." <strong>Prayer is learned behaviour.</strong> Merton said we will never be anything but beginners.</p>
+  </div>
+  <div class="try"><b>How to start</b><ul>
+    <li><strong>Five minutes, same time, every day</strong> (Linette Martin). Don't go longer on good days. If you miss a day, don't make it up and don't feel guilty; just do five minutes the next day. It breaks the cycle of guilt, a heroic plan, and giving up.</li>
+    <li><strong>A place.</strong> Jesus prayed outdoors in beautiful places. Ortberg sits at a window, sometimes pulls up an empty chair for Jesus, sometimes lights a candle. Places used for prayer over years become sacred.</li>
+    <li><strong>Your best time</strong>, which may not be the morning. "God made many other birds beside the larks."</li>
+    <li><strong>Settle the monkeys</strong> (Nouwen): a few deep breaths, a candle or flower to look at, whisper "Heavenly Father."</li>
+    <li><strong>Simple prayer</strong> (Foster): pray what is really on your heart, not what you think should be. "Prayer simply dies from efforts to pray about 'good things' that honestly do not matter to us" (Willard). Moses complained about his job description, and Elijah complained about being called "baldy."</li>
+    <li><strong>Treat wandering thoughts as stepping stones.</strong> A recurring anger fantasy or grandiose daydream is probably what you most need to talk to God about. His spiritual director kept asking, "Did you speak to the Lord about this?"</li>
+    <li><strong>Review your prayer</strong> for three or four minutes afterward. How did it start? What felt alive? Where did your mind go? What was the tone? Write it down.</li>
+    <li><strong>Intercede persistently.</strong> At a Pentecostal college, eight men leaned on Tony Campolo's head while one prayed for "Charlie Stoltzfus" in the silver trailer down the road. Driving home, Campolo picked up a hitchhiker who was Charlie Stoltzfus, drove him home to his wife, and led them both to faith.</li>
+  </ul></div>
+  <div class="prose"><p>Prayer is "talking with God about what we are doing together" (Willard). At deathbeds, Ortberg has heard regrets about years lost to work and money, but never about time spent in prayer. A father calmed his cranky two-year-old in a mall by singing a made-up song: "I love you. I love the way you laugh. I'm glad I get to be your dad." Buckled into the car seat, the boy said: "Sing it to me again, Daddy."</p></div>
+</div>
+
+<div class="plank" id="servanthood">
+  <span class="no" aria-hidden="true">7</span>
+  <span class="eyebrow">The practice of servanthood</span>
+  <h2>Appropriate smallness</h2>
+  <p class="tag">We are all worms. But I do believe that I am a glowworm. (Winston Churchill)</p>
+  <div class="prose">
+    <p>Psychologist Milton Rokeach put three psychiatric patients who each believed he was Jesus Christ, Leon, Joseph and Clyde, into one group for two years. When one claimed God had told him he was the Messiah, another replied, "I never told you any such thing." To keep up the illusion that you're the messiah, you have to live in a universe with room for only one person. Pride is the oldest sin ("you will be like God"). It shows up as vanity, as stubbornness, and at its deepest as exclusion. Pride is "a form of antilove" and "essentially comparative in nature." The Pharisee in the temple didn't realise he was the biggest sinner in the room.</p>
+    <p>Humility isn't running yourself down. (Ortberg lists comic replies to a compliment, ending with the right one: "Smile, say 'thank you,' then be quiet.") It is "a Copernican revolution of the soul," a healthy self-forgetfulness, and it is a relief. A six-year-old playing God in a Sunday-school creation play asked out: "I'm just feeling too crazy to be God today." The trap is to stop being the prodigal and turn into the elder brother. On a diet, Ortberg silently judges people eating what he ate yesterday.</p>
+    <p>In Philippians 2, Gerald Hawthorne reads the participle causally: <em>precisely because</em> he was God, Christ poured himself out. Jesus' servanthood was not a disguise, as when Zeus and Hermes dressed as slaves. It revealed who God is: "the most humble being in all the universe." Jesus also put his would-be messiahs in a small group, and soon they "argued who was the greatest." AA's founder Bill W helped Dr. Bob not because he was strong but because he would drink again if he didn't. "A society of sinners helping each other."</p>
+  </div>
+  <div class="try"><b>Five ministries</b><ol>
+    <li><strong>The ministry of the mundane.</strong> Get up for the crying child instead of faking sleep. Nancy said nothing made her feel closer to him than his vacuuming and bathing the kids. One man skipped his wife's surgery weekend to attend a rally on how to serve his wife.</li>
+    <li><strong>The ministry of being interrupted.</strong> Keep "the latch off the door," like the Russian <em>poustinik</em>. Have a "day of secret service" at home with no agenda. Wait in traffic like everyone else. "Superman don't need no seat belt." "Superman don't need no airplane." Lincoln: "Whose boots do you expect me to black?"</li>
+    <li><strong>Embrace your limits.</strong> "Why do you choose to be so busy?" a friend asked him. The honest answer was grandiosity. So he formed a personal schedule group: no new commitments without discussing them and the motives behind them.</li>
+    <li><strong>Hold your tongue</strong> (Bonhoeffer). Notice when a meeting has become a contest over whose decision prevails. Pope John XXIII imagined an angel saying, "Hey there, Johnny boy, don't take yourself so seriously."</li>
+    <li><strong>Bear with people.</strong> Stop sorting a group into whiners, rationalists and the people worth learning from. Free people from the "mental prisons" you put them in. "The difficult person I have most to deal with is me."</li>
+  </ol></div>
+  <blockquote class="pull">“Every human being who has ever lived has suffered from a messiah complex — except one. And he was the Messiah.”<cite>Chapter 7</cite></blockquote>
+</div>
+
+<div class="plank" id="confession">
+  <span class="no" aria-hidden="true">8</span>
+  <span class="eyebrow">The practice of confession</span>
+  <h2>Life beyond regret</h2>
+  <p class="tag">He who is alone with his sins is utterly alone. (Bonhoeffer)</p>
+  <div class="prose">
+    <p>The Ortbergs swapped a VW Beetle for their first new furniture, a mauve sofa. Then a red jelly stain appeared. Nancy lined up the three children, aged four, two-and-a-half and six months, and said they'd stand there until someone confessed. Mallory said, "Laura did it." Ortberg kept quiet, because he had put the stain there. He figured he would confess somewhere safe, "such as in a book I was going to write."</p>
+    <p>Plantinga notes that we barely name sin anymore: "Let us confess our problem with human relational adjustment dynamics." Our problem is not understanding forgiveness but living in it. Confession isn't for God's sake or an accounting entry. Done well, it frees us from guilt and makes the same sin a little less attractive next time.</p>
+  </div>
+  <ol class="climb">
+    <li><b>Preparation</b>Place yourself in the Spirit's care. Alone, we condemn ourselves for the wrong things and gloss over the real stains. Steinmetz billed GE for one chalk mark: "Making one cross mark, $1. Knowing where to put it, $9,999."</li>
+    <li><b>Self-examination</b>Use a framework: the seven deadly sins, or Luther's Ten Commandments. Be specific. One "I lied to my boss about working" does more than twenty "I haven't been truthful enough." Take responsibility; don't end with an excuse.</li>
+    <li><b>Perception</b>All sin involves denial. The planter James Hammond abused enslaved girls and his own nieces, then wrote in his diary that "never was a man so cursed." Ask two questions: <em>Why did I do it?</em> (sin is often a legitimate need met illegitimately) and <em>What happened as a result?</em> See it through the eyes of the person you hurt, and through God's.</li>
+    <li><b>A new feeling</b>Enter the pain. Ask for the gift of tears if needed, but know whether you tend to beat yourself up or let yourself off. Godly sorrow leads to life; worldly sorrow leads to death. One rushed morning a "stab of pain" made him go to his son's class after all. His son's drawing read: "I'm thankful for God, my dad, and snow."</li>
+    <li><b>A new promise</b>Intend to change and to make it right, as Zacchaeus did when he repaid fourfold. Lewis Smedes asks why anyone should take your confession seriously without a promise.</li>
+    <li><b>Healing grace</b>The summit. In <em>The Mission</em>, a tribesman cuts the rope binding Mendoza (De Niro) to his burden. The burden was grace, and so was the release.</li>
+  </ol>
+</div>
+
+<div class="plank" id="guidance">
+  <span class="no" aria-hidden="true">9</span>
+  <span class="eyebrow">Receiving guidance from the Holy Spirit</span>
+  <h2>The guided life</h2>
+  <p class="tag">Ordering our mental life on more than one level at once. (Thomas Kelly)</p>
+  <div class="prose">
+    <p>One night Ortberg woke and watched Nancy sleeping. Their whole marriage passed through his mind, and he was overwhelmed with love. Then he thought: while I sleep, God watches me like this. "I'm watching you, and I'm full of love." He can't prove it was God, and he has always been suspicious of people who speak easily about God speaking. But a personal relationship has to allow that God sometimes speaks. (He woke Nancy to tell her. "This may not have been a leading.") Lily Tomlin's line: "Why is it that when we speak to God we are said to be praying, but when God speaks to us we are said to be schizophrenic?"</p>
+    <p>Our main problem is "spiritual mindlessness." As a delivery driver, Ortberg once drove off in a Johnson Electrical Supply truck, ignoring the giant blue lettering, and only noticed when "our" truck had been stolen from the post office. Jacob at Bethel said, "Surely the Lord is in this place, and I was not aware of it," and set up a stone. Ortberg tapes the word <em>listen</em> to his dashboard.</p>
+  </div>
+  <h3>What guidance is not</h3>
+  <div class="prose"><ul>
+    <li><strong>Not insider information</strong> about which door on <em>Let's Make a Deal</em> hides the money. Test: do I seek guidance when I'm <em>not</em> facing a decision? Start by asking for guidance about your soul: How do I become more truthful? Who can teach me to pray? What would help me live in joy?</li>
+    <li><strong>Not a badge of importance.</strong> Balaam's donkey saw the angel first. If it had put on airs, "it would have made an ass of itself."</li>
+    <li><strong>Not passivity.</strong> Not applying for a job so that getting it proves God's will is like sitting on the expressway to see if a car hits you.</li>
+    <li><strong>Not a way to avoid risk.</strong> "God's purpose in guidance is not to get us to perform the right actions. His purpose is to help us become the right kind of people." Personhood is formed by making decisions.</li>
+  </ul></div>
+  <div class="try"><b>Pursuing guidance</b><ul>
+    <li><strong>Listen continually.</strong> When you greet someone, ask silently: How should I respond to this person? A colleague of his skipped pizza duty to talk with a volunteer about faith. "Let them get their own food."</li>
+    <li><strong>Be relentlessly responsive.</strong> Guidance is for people resolved to obey, starting with what Scripture already says. A friend sleeping with his girlfriend asked whether to marry her; he wanted a Big Deal of the Day, not guidance. When Ortberg ignored a nudge to help someone with money, he made the next nudge harder to hear.</li>
+    <li><strong>Listen through others.</strong> After a stroke, his old Bible teacher Lorraine hardly knew him. As he left, she called out: "John Ortberg, are you happy?... God made you to preach. You should be full of joy when you do it, honey." That shaped a decision she didn't know he faced. Churches can "sound the call" together.</li>
+    <li><strong>Practise in small things.</strong> A stranger turned back to return his lost Day-Timer because she felt prompted. "Do you believe in the Holy Spirit?" "Lady, I work for him!" Be cautious, too: "I think it's the Lord's will that we date" has been badly abused.</li>
+  </ul></div>
+</div>
+
+<div class="plank" id="secrecy">
+  <span class="no" aria-hidden="true">10</span>
+  <span class="eyebrow">The practice of secrecy</span>
+  <h2>A life of freedom</h2>
+  <p class="tag">Do not let your left hand know what your right hand is doing. (Matthew 6:3)</p>
+  <div class="prose">
+    <p>Mayor Richard J. Daley once complained, "They have vilified me, they have crucified me, yes, they have even criticized me." Many of us live with <strong>approval addiction</strong>: hurt by criticism, constantly comparing, envious of others' success, trying to impress important people. Nouwen: "A little criticism makes me angry, and a little rejection makes me depressed... I am like a small boat on the ocean." Paul calls being judged by the Corinthians "a very small thing." It mattered, but not too much: "It is the Lord who judges me." Smedes calls this "the art of living freely with our critics."</p>
+    <p>Preaching, Ortberg hears a "Sally Field voice" ("You like me! You really like me!"), especially when a visitor hands him a card that reads "Speech instructor." George Herbert Mead's "generalized other" is a mental jury box full of judges: parents, teachers, bosses, peers. And it isn't really other people at all, only what we <em>think</em> they think. "In your forties, you realise nobody was thinking about you anyway." David Burns points out that praise works only if we believe it: a psychiatric patient's "you are the chosen one" does nothing for us. John Quincy Adams, after all he achieved, wrote, "I have done nothing." Approval addiction shows up as comparison ("spiritual bulimia"), as deception and impostor feelings, and as resentment of the very people whose approval we crave.</p>
+    <p>Jesus' remedy is the practice of secrecy. Every so often, do something good and make sure nobody finds out. Join "Righteous Anonymous." <strong>Resign from impression management.</strong> Drop "I don't watch much TV, but..." and "I hardly studied for it." Pray for someone and tell no one. Give lavishly and anonymously. Memorise a passage and keep it to yourself. Mow a neighbour's lawn. Before a meeting full of people they wanted to impress, he and a friend agreed to mention none of their accomplishments. Good deeds done to impress lose their power to train us. The Desert Fathers said that if you want to keep the fire hot, don't open the furnace door too often.</p>
+  </div>
+  <blockquote class="pull">“Do not despise your place, your gifts, or your voice, for you cannot have another's, and it would not fulfill you if you could.”<cite>Chapter 10</cite></blockquote>
+</div>
+
+<div class="plank" id="scripture">
+  <span class="no" aria-hidden="true">11</span>
+  <span class="eyebrow">The practice of reflection on Scripture</span>
+  <h2>An undivided life</h2>
+  <p class="tag">Purity of heart is to will one thing. (Kierkegaard)</p>
+  <div class="prose">
+    <p>FDA purity standards allow apple butter with up to four rodent hairs per 100 grams. ("Hot dogs: you don't want to know.") God's call to purity is a call to be "purely human." In <em>City Slickers</em>, Jack Palance holds up one finger: "The secret of life is pursuing one thing." James calls the opposite double-mindedness, being "like a wave of the sea." It comes in two forms, after Clifford Williams. <strong>Multiplicity</strong> is being pulled both ways, like Augustine's "Lord, give me chastity, but not yet." <strong>Duplicity</strong> is giving false reasons for what we do. A deacon who taught Sunday school confessed to the congregation that he had abused his children for years.</p>
+    <p>Ortberg lists his own "deadly feelings" from a single day: avoiding eye contact with a homeless man, resenting a clerk's English, scheming to make use of an important person, sulking over a locked door, and planning to impress his staff with a morning insight about humility. The Desert Fathers called such thoughts <em>logismoi</em>. We need our minds "washed by the Word." Two college roommates once competed over who could go longest without washing their sheets; after a year they called it a draw. "I have never known someone leading a spiritually transformed life who had not been deeply saturated in Scripture." The purpose is not a perfect score on heaven's entrance exam, but to be "equipped for every good work."</p>
+  </div>
+  <div class="try"><b>Reading for transformation</b><ol>
+    <li><strong>Ask God to meet you.</strong> Augustine heard "Take it and read." A family friend, Eileen, opened a Bible for the first time at midnight, started with the "new" part in case it was updated, and by 3 a.m. had fallen in love with Jesus.</li>
+    <li><strong>Read in a repentant spirit.</strong> Philipp Spener warns against reading for show, for ammunition, or only for the hard passages. A Bible expert in his church told him, "I don't like a lot of what you do, but I love you in the Lord." The blind, illiterate 99-year-old Ethiopian woman who recited Psalm 23 to visitors had been washed by it. "The key question is not 'how much,' but 'how.'"</li>
+    <li><strong>Go slowly with a short passage.</strong> Read it like a love letter, like a bee going deep into a flower (Madame Guyon). Ortberg turned a psalm a day into a gold-star chart. "The goal is not for us to get through the Scriptures. The goal is to get the Scriptures through us."</li>
+    <li><strong>Carry one verse through the day.</strong> For example "Be still, and know that I am God": no chattering, no defending myself, no need to get my way. "What the mind repeats, it retains."</li>
+    <li><strong>Memorise what you most need.</strong> Psalm 27:1 for fear, Philippians 2:3 for pride. As a boy he lost a church memory contest for a white Bible to a girl named Louise. "So I killed her. At least, in my mind I did."</li>
+  </ol></div>
+  <div class="prose"><p>Asked which book he'd take to a desert island, Chesterton chose <em>Thomas' Guide to Practical Shipbuilding</em>. When you're stranded, you want the book that gets you home. Wesley wanted to be "a man of one book."</p></div>
+</div>
+
+<div class="plank" id="rule">
+  <span class="no" aria-hidden="true">12</span>
+  <span class="eyebrow">Developing your own rule of life</span>
+  <h2>A well-ordered heart</h2>
+  <p class="tag">Above all else, guard your heart, for it is the wellspring of life. (Proverbs 4:23)</p>
+  <div class="prose">
+    <p>The knights' quest was the Holy Grail. Ours is a "balanced lifestyle," and time-management consultants are our Merlins. Balance is not too hard a goal; it is too <em>slight</em>. It slices life into a pie chart with one slice marked "spiritual." It means little to a dying person or a single mother of a disabled child. It leaves no room for sacrifice. (On holiday the Ortbergs' "balanced life" chart was mostly peach cobbler at Bob Evans.) Ortberg imagines a time-management consultant reviewing Paul's time log: lashed five times, beaten, stoned, shipwrecked three times. Shaw: "the being a force of nature instead of a feverish selfish little clod of ailments and grievances." But the answer isn't living like Herbie the race car either. "I'd rather flame out than rust out." Either way, you're out.</p>
+    <p>The real disorder is internal. Augustine: a well-ordered heart loves <strong>the right thing, to the right degree, in the right way, with the right kind of love</strong>. Gold isn't the problem when a miser prefers it to justice. A rule of life (<em>regula</em>, something done regularly) is the trellis for that. Paul's "whatever you do, in word or deed, do everything in the name of the Lord Jesus" means doing it in his character, as he would in your place. Ortberg greets God before getting out of bed. He thinks about the first fifteen seconds with family each morning. He drives, watches TV, does chores and fixes the jet-engine attic fan "in Jesus' name," remembering he isn't the Messiah. At work, customers are people rather than accounts, and in shops beauty is good but not the deepest good.</p>
+  </div>
+  <div class="try"><b>Write your rule on one page</b><ul>
+    <li>How and when will I pray?</li>
+    <li>How will I handle money so it draws me closer to God?</li>
+    <li>How can my work help Christ be formed in me?</li>
+    <li>How am I involved in Christian community: worship, fellowship, confession?</li>
+    <li>How can I fill daily tasks with a sense of God's presence?</li>
+    <li>Then walk through waking, greeting, eating, driving, working, shopping, TV, chores, reading and sleep, asking what each would look like "in Jesus' name." Memorise Colossians 3:17. Keep it simple and talk it over with a friend.</li>
+  </ul></div>
+  <div class="prose"><p>Pope John XXIII's youthful rule: fifteen minutes of silent prayer first thing; fifteen minutes of spiritual reading; an examination of conscience before bed with topics chosen for the morning's prayer; set times for prayer, study, recreation and sleep; and turning his mind to God through the day. Frank Laubach imagined God asking of each life: "How far will this man and that woman allow me to carry this hour?"</p></div>
+</div>
+
+<div class="plank" id="suffering">
+  <span class="no" aria-hidden="true">13</span>
+  <span class="eyebrow">The experience of suffering</span>
+  <h2>A life of endurance</h2>
+  <p class="tag">Perhaps his sorrow is his splendor. (Nicholas Wolterstorff)</p>
+  <div class="prose">
+    <p>The Los Angeles marathon had 18,000 runners, including T-bone the Clown and a thirteen-person human centipede. A race moves through pleasure (which lasts "twelve or thirteen feet" for Ortberg), then drudgery, then labour, then the wall. Races are won or lost at the wall. An old husband, asked to nibble his wife's ear as he used to, gets out of bed "to get my teeth." Gifts and IQ are partly out of our control. Endurance is the gift we <em>can</em> offer. "Just don't quit."</p>
+    <p>In a survey, people named suffering as the factor that had done most to form them spiritually. Yet it's the most neglected, because life arranges it for us. "Suffering always changes us, but it does not necessarily change us for the better." Ortberg walks slowly through Abraham's three-day road to Moriah. A test reveals true values, and in the Old Testament the word is used only of God's people, so testing is an act of love. Abraham went on in confusion, with doubts (he had lied and laughed his way through the whole story), and in loneliness, walking beside Isaac carrying the knife and fire while Isaac carried the wood. He didn't have perfect faith. He hung on, answering "Here I am" three times. Kierkegaard calls him the "Knight of the Absurd," not resigned like Socrates but hoping against hope. Faith here "is not doubt-free certainty; rather, it is tenacious obedience."</p>
+    <p>Ortberg doesn't hurry to the happy ending. He tells of a couple who waited twelve years for a son, until at three their answered prayer chased an orange soccer ball that bounced the wrong way off a crack into the street. Hebrews counts Abraham among those who "did not receive what was promised." Start small: the crying baby next to you on a flight, a headache you don't announce. Then pick your biggest unanswered challenge and persevere in prayer. We can trust God in the dark because he has walked there. Jesus carried his own wood, and this time no voice stopped the knife. "But then the third day came. As it will come someday for you and me. In the meanwhile, just don't quit."</p>
+  </div>
+  <blockquote class="pull">“It's morphing time.”<cite>The book's last line</cite></blockquote>
+</div>
+
+</div>
+
+<footer>
+  <p>Summary of <i>The Life You've Always Wanted: Spiritual Disciplines for Ordinary People</i> by John Ortberg (Zondervan, 1997, expanded 2002; e-book edition 2020), read in full including the study guide by Kevin G. Harney. Quotations are from the book.</p>
+  <p>Companion: Ortberg's later <a href="../steps/"><i>Steps</i></a> (2025) picks up where training runs out.</p>
+  <p><a href="../">← Kai's Pages</a></p>
+</footer>
+</div>
+<script>
+(function () {
+  var form = document.getElementById('hurry');
+  var score = document.getElementById('hurry-score');
+  var verdict = document.getElementById('hurry-verdict');
+  function update() {
+    var boxes = form.querySelectorAll('input[type=checkbox]');
+    var n = 0;
+    boxes.forEach(function (b) { if (b.checked) n++; });
+    score.textContent = n + ' of 11';
+    if (n === 0) verdict.textContent = 'Tick what\'s true. Nothing is stored or sent anywhere.';
+    else if (n <= 3) verdict.textContent = 'Some hurry. Pick one slowing practice below for a week.';
+    else if (n <= 7) verdict.textContent = 'Hurry is shaping your days. Ortberg\'s mentor would say: ruthlessly eliminate it.';
+    else verdict.textContent = 'Full-blown hurry sickness. "There is nothing else": start with the slow lane and a day of solitude.';
+  }
+  form.addEventListener('change', update);
+  update();
+})();
+</script>
+</body>
+</html>
