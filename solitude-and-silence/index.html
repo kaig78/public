@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Invitation to Solitude and Silence by Ruth Haley Barton – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&family=Karla:wght@400;500;600&display=swap">
+<style>
+/* Layout: the cover's dusk. A dark night-room page by default with the window's gold for
+   headings and the sea's blue-grey for quiet panels; a light "morning" palette for light mode.
+   The book's twelve chapters follow Elijah's road (broom tree, desert, cave, sheer silence,
+   return), so the contents run as a road; the jar of river water is the one diagram. */
+:root {
+  --bg: #f6f2ea; --bg-2: #ece5d8; --card: #fdfaf4; --ink: #1d1c1a; --ink-2: #4a4740; --ink-3: #7b766b;
+  --rule: #ddd4c4; --gold: #a87516; --gold-soft: #f0dfba; --sea: #4f6f86; --sea-soft: #dfe7ec; --ember: #b4532a;
+  --display: "Cormorant", "Cormorant Garamond", Garamond, Georgia, serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --ui: "Karla", "Helvetica Neue", Arial, sans-serif;
+  --measure: 64ch; --frame: 1080px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0e0d; --bg-2: #181614; --card: #1b1917; --ink: #ece4d6; --ink-2: #c3baab; --ink-3: #8d8578;
+    --rule: #2e2a25; --gold: #e0b45a; --gold-soft: #3a2f1a; --sea: #8fb0c6; --sea-soft: #1c2329; --ember: #e08a5f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f0e0d; --bg-2: #181614; --card: #1b1917; --ink: #ece4d6; --ink-2: #c3baab; --ink-3: #8d8578;
+  --rule: #2e2a25; --gold: #e0b45a; --gold-soft: #3a2f1a; --sea: #8fb0c6; --sea-soft: #1c2329; --ember: #e08a5f;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--ink); font: 400 1.1rem/1.68 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--gold); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.frame { max-width: var(--frame); margin: 0 auto; }
+.home { display: inline-block; margin-top: 22px; font: 500 .8rem/1 var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); text-decoration: none; }
+.home:hover { color: var(--ink); }
+
+.mast { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: clamp(24px, 5vw, 60px); align-items: end; padding-block: 34px 38px; border-bottom: 1px solid var(--rule); }
+.kicker { font: 600 .76rem/1 var(--ui); letter-spacing: .16em; text-transform: uppercase; color: var(--sea); }
+.mast h1 { margin: 12px 0 0; font: 600 clamp(2.5rem, 6.6vw, 4.5rem)/1 var(--display); color: var(--gold); text-wrap: balance; letter-spacing: .01em; }
+.mast .sub { margin: 10px 0 0; font: italic 500 1.4rem/1.3 var(--display); color: var(--ink-2); }
+.mast .dek { margin: 20px 0 0; max-width: 54ch; font-size: 1.12rem; color: var(--ink-2); text-wrap: pretty; }
+.meta { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 6px 20px; font: 400 .84rem/1.45 var(--ui); color: var(--ink-3); }
+.meta b { font-weight: 600; color: var(--ink-2); }
+.mast figure { margin: 0; }
+.mast img { display: block; width: 100%; height: auto; aspect-ratio: 453/700; border-radius: 2px; box-shadow: 0 24px 44px -22px rgba(0,0,0,.6); }
+
+/* Elijah road */
+.road { list-style: none; margin: 0; padding: 24px 0 18px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; border-bottom: 1px solid var(--rule); position: relative; }
+.road li { position: relative; padding: 30px 6px 0; text-align: center; min-width: 0; }
+.road li::before { content: ""; position: absolute; top: 12px; left: 0; right: 0; height: 2px; background: var(--rule); }
+.road li::after { content: ""; position: absolute; top: 6px; left: 50%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--bg); border: 2px solid var(--gold); }
+.road li:first-child::before { left: 50%; } .road li:last-child::before { right: 50%; }
+.road b { display: block; font: 600 1.1rem/1.15 var(--display); color: var(--ink); }
+.road span { display: block; margin-top: 4px; font: 400 .78rem/1.35 var(--ui); color: var(--ink-3); }
+.road a { text-decoration: none; display: block; }
+.road a:hover b { color: var(--gold); }
+
+.prose { max-width: var(--measure); }
+.prose p { margin: 0 0 1.05em; text-wrap: pretty; }
+.prose ul, .prose ol { margin: 0 0 1.1em; padding-left: 1.25em; }
+.prose li { margin-bottom: .45em; }
+.prose li::marker { color: var(--gold); }
+section { padding-block: 52px 6px; scroll-margin-top: 12px; }
+.eyebrow { display: block; font: 600 .74rem/1 var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--sea); margin-bottom: 12px; }
+h2 { margin: 0 0 16px; font: 600 clamp(1.9rem, 4vw, 2.7rem)/1.06 var(--display); text-wrap: balance; }
+h3 { margin: 1.9em 0 .5em; font: 600 1.45rem/1.2 var(--display); color: var(--gold); text-wrap: balance; }
+.lede { font-size: 1.18rem; color: var(--ink-2); }
+.chap { font: 600 .74rem/1 var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-right: 10px; }
+
+.pull { margin: 30px 0; padding: 2px 0 2px 22px; border-left: 2px solid var(--gold); max-width: 58ch; font: italic 500 clamp(1.35rem, 2.8vw, 1.7rem)/1.32 var(--display); text-wrap: balance; }
+.pull cite { display: block; margin-top: 10px; font: 500 .76rem/1.3 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-style: normal; }
+
+.practice { margin: 18px 0 28px; max-width: var(--measure); background: var(--sea-soft); border-radius: 10px; padding: 16px 20px 6px; }
+.practice > b { display: block; font: 600 .72rem/1 var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--sea); margin-bottom: 10px; }
+.practice p, .practice li { font-size: 1.01rem; line-height: 1.55; }
+.practice p { margin: 0 0 10px; }
+.practice ol, .practice ul { margin: 0 0 10px; padding-left: 1.2em; }
+
+/* jar diagram */
+.jars { display: flex; flex-wrap: wrap; gap: 26px 40px; align-items: flex-end; margin: 26px 0 30px; }
+.jar { text-align: center; }
+.jar svg { width: 130px; height: auto; display: block; }
+.jar figcaption { margin-top: 8px; font: 500 .82rem/1.35 var(--ui); color: var(--ink-3); max-width: 150px; }
+.jar .glass { fill: none; stroke: var(--ink-3); stroke-width: 2; }
+.jar .water { fill: var(--sea-soft); }
+.jar .silt { fill: var(--ember); opacity: .55; }
+.jar .bed { fill: var(--ember); opacity: .5; }
+
+/* tiredness scale */
+.scale { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; margin: 22px 0 28px; max-width: 760px; }
+.scale div { padding: 12px 10px; border-radius: 6px; font: 400 .88rem/1.35 var(--ui); min-width: 0; }
+.scale b { display: block; font: 600 .95rem/1.2 var(--ui); margin-bottom: 4px; }
+.scale div:nth-child(1) { background: var(--sea-soft); }
+.scale div:nth-child(2) { background: color-mix(in srgb, var(--sea-soft) 60%, var(--gold-soft)); }
+.scale div:nth-child(3) { background: var(--gold-soft); }
+.scale div:nth-child(4) { background: color-mix(in srgb, var(--ember) 30%, var(--bg)); }
+
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 20px 0 28px; max-width: 780px; }
+.two div { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.two h4 { margin: 0 0 6px; font: 600 1.15rem/1.2 var(--display); color: var(--gold); }
+.two p, .two li { margin: 0; font-size: .97rem; line-height: 1.5; color: var(--ink-2); }
+.two ul { margin: 0; padding-left: 1.1em; }
+
+.session { counter-reset: s; list-style: none; padding: 0; margin: 20px 0 28px; max-width: var(--measure); }
+.session li { counter-increment: s; position: relative; padding: 0 0 14px 44px; }
+.session li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--gold); color: var(--gold); font: 600 1rem/27px var(--display); text-align: center; }
+.session b { font-weight: 600; }
+
+.pattern { margin: 24px 0 30px; max-width: 820px; border: 1px solid var(--gold); border-radius: 12px; overflow: hidden; }
+.pattern .row { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 14px; padding: 12px 18px; border-bottom: 1px solid var(--rule); font-size: 1rem; line-height: 1.5; }
+.pattern .row:last-child { border-bottom: 0; }
+.pattern .row > span { font: 600 .82rem/1.5 var(--ui); letter-spacing: .06em; text-transform: uppercase; color: var(--gold); }
+.pattern .src { font: 400 .78rem/1.3 var(--ui); color: var(--ink-3); }
+
+footer { margin-top: 70px; padding-block: 24px 46px; border-top: 1px solid var(--rule); font: 400 .84rem/1.6 var(--ui); color: var(--ink-3); }
+footer p { margin: 0 0 6px; max-width: 80ch; }
+
+@media (max-width: 760px) {
+  .mast { grid-template-columns: minmax(0, 1fr); }
+  .mast figure { order: -1; max-width: 140px; }
+  .road { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 18px; }
+  .road li::before { display: none; }
+  .scale, .two { grid-template-columns: minmax(0, 1fr); }
+  .pattern .row { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  body { font-size: 1.04rem; }
+}
+</style>
+</head>
+<body>
+<div class="frame">
+<a class="home" href="../">← Kai's Pages</a>
+
+<header class="mast">
+  <div>
+    <span class="kicker">Ruth Haley Barton · foreword by Dallas Willard</span>
+    <h1>Invitation to Solitude and Silence</h1>
+    <p class="sub">Experiencing God's transforming presence</p>
+    <p class="dek">Barton is a spiritual director, and this book is a practical guide to the two practices she calls the most meaningful of her spiritual life. She walks Elijah's road from the broom tree to "a sound of sheer silence" and back. Each chapter ends with a short exercise to do, not just read.</p>
+    <div class="meta">
+      <span><b>InterVarsity Press</b> · Formatio, 2004; expanded edition 2010</span>
+      <span>12 chapters + a day-retreat guide + a 13-session group guide</span>
+    </div>
+  </div>
+  <figure><img src="cover.jpg" alt="Cover: a wooden window opened onto a calm sea at sunset, gold title on black" width="453" height="700"></figure>
+</header>
+
+<nav aria-label="Elijah's road through the book">
+  <ol class="road">
+    <li><a href="#broom"><b>Broom tree</b><span>ch. 1–3 · desperation, beginnings, resistance</span></a></li>
+    <li><a href="#rest"><b>Bread &amp; sleep</b><span>ch. 4–7 · tiredness; rest for body, mind, soul</span></a></li>
+    <li><a href="#desert"><b>The desert</b><span>ch. 8 · emptiness</span></a></li>
+    <li><a href="#cave"><b>The cave</b><span>ch. 9 · "What are you doing here?"</span></a></li>
+    <li><a href="#silence"><b>Sheer silence</b><span>ch. 10–11 · presence, guidance</span></a></li>
+    <li><a href="#return"><b>The return</b><span>ch. 12 · for the sake of others</span></a></li>
+  </ol>
+</nav>
+
+<section id="foreword">
+  <span class="eyebrow">Foreword · Dallas Willard</span>
+  <h2>A decision and a practice</h2>
+  <div class="prose">
+    <p class="lede">Willard begins with Pascal: "all the unhappiness of men arises from one single fact, that they cannot stay quietly in their own room." We chase rest through excitement, and "more time" only fills up the way the old time did. The way out is a decision and a practice. The decision is "to release the world and your fate, including your reputation and 'success,' into the hands of God." You still act, but you don't take charge of outcomes. The practice is solitude and silence, "the most radical of the spiritual disciplines because they most directly attack the sources of human misery." To be in solitude is "to choose to do nothing. For extensive periods of time." In silence "we stop making demands on God. It is enough that God is God and we are his." Over time they are no longer something we have to remember to do: "They are whom we have become."</p>
+    <p>In the preface Barton says these practices have been "the single most meaningful aspect of my spiritual life," which is a strong claim from someone who became a Christian at four. Yet more than ten years in, she still struggles to protect the time against her "inner demons": the wish "to perform, to be seen as competent (at least!), productive, culturally relevant, balanced." She chose silence over Scripture, prayer or journaling as her subject because it is "the most challenging, the most needed and the least experienced spiritual discipline among evangelical Christians." She calls her tradition "very busy, wordy and heady." Read the book slowly, she advises, and stay with each chapter's practice "until God releases you."</p>
+  </div>
+</section>
+
+<section id="broom">
+  <span class="eyebrow">Under the broom tree · chapters 1–3</span>
+  <h2>The jar of river water</h2>
+  <div class="prose">
+    <p class="lede"><span class="chap">Ch. 1 · Beyond words</span>"Truth be told, it was desperation." In her early thirties Barton was a pastor's kid, married with three small children, on a church staff, writing, speaking and in seminary, and inside she was in chaos. "Even though I had been a Christian for many years I did not know how to love — really." She was impatient at best and angry at worst that people wouldn't leave her alone to pursue her ambitions. Under that were questions she couldn't quiet. Was there anything truer about her than her roles and achievements? Was transformation possible this side of the grave? Why couldn't she say no? Under those were buried anger, sadness, confusion and loneliness.</p>
+    <p>She went to a psychologist for therapy, and the therapist eventually suggested they switch to spiritual direction. Barton expected more talking, "in three easy steps if possible!" Instead the director told her: <em>"Ruth, you are like a jar of river water all shaken up. What you need is to sit still long enough that the sediment can settle and the water can become clear."</em> She was a word person and an achiever, and she couldn't imagine it. "Even methods that don't work are better than no methods at all!" But she recognised herself in the image. Her lesson: "you stay with the feelings of desperation and let desperation do its good work." Desperation and desire are "twin engines."</p>
+  </div>
+  <div class="jars" role="img" aria-label="Two jars: shaken, with silt throughout; still, with silt settled and clear water above">
+    <figure class="jar">
+      <svg viewBox="0 0 120 160" aria-hidden="true"><rect class="water" x="22" y="30" width="76" height="118" rx="10"/><g class="silt"><circle cx="40" cy="50" r="3"/><circle cx="70" cy="44" r="2.5"/><circle cx="58" cy="66" r="3.5"/><circle cx="82" cy="78" r="3"/><circle cx="35" cy="88" r="2.5"/><circle cx="62" cy="96" r="3"/><circle cx="46" cy="112" r="3.5"/><circle cx="78" cy="118" r="2.5"/><circle cx="52" cy="134" r="3"/><circle cx="88" cy="100" r="2"/><circle cx="30" cy="124" r="2"/><circle cx="70" cy="58" r="2"/></g><path class="glass" d="M30 18h60v10l8 6v104a12 12 0 0 1-12 12H34a12 12 0 0 1-12-12V34l8-6z"/></svg>
+      <figcaption>Shaken: busyness, emotion, thoughts, inner wrestling</figcaption>
+    </figure>
+    <figure class="jar">
+      <svg viewBox="0 0 120 160" aria-hidden="true"><rect class="water" x="22" y="30" width="76" height="118" rx="10"/><path class="bed" d="M23 128c12-5 26-6 37-3s25 3 37-2v13a10 10 0 0 1-10 10H33a10 10 0 0 1-10-10z"/><path class="glass" d="M30 18h60v10l8 6v104a12 12 0 0 1-12 12H34a12 12 0 0 1-12-12V34l8-6z"/></svg>
+      <figcaption>Still: the sediment settles by itself and the water clears</figcaption>
+    </figure>
+  </div>
+  <div class="practice"><b>Practice · ch. 1</b><p>Settle into a comfortable position and take three deep breaths, breathing in deeply and out slowly. Let whatever is usually unnamed come to the surface. What is drawing you into solitude now: desperation, desire, or another word? Feel it, name it, sit with it, and tell God if you want to. Today it's enough to make space for it. At the end, thank God for being with you while you noticed.</p></div>
+
+  <h3><span class="chap">Ch. 2</span>Beginnings: the spiritual law of gravity</h3>
+  <div class="prose">
+    <p>Solitude means pulling away from people so we can give God our undivided attention. Silence goes further: we also let the noise of our own thoughts and striving settle. Our wordiness, even in prayer, can be "one facet of a need to control things." Basil Pennington: God "will not push himself into our lives," but if we open space with silence, "he will speak to our souls... by presence."</p>
+    <p>Barton found it hard. While "normal" students start with twenty minutes, she called herself a "remedial student" and began with ten. "It was better to celebrate small successes than become discouraged by larger failures." For a year she struggled to reach ten minutes while the laundry and her to-do lists clamoured. But solitude and silence "are not, in the end, about success and failure. They are about showing up and letting God do the rest." She learned to trust a <strong>spiritual law of gravity</strong>: "We don't have to do anything but show up and trust the spiritual law of gravity that says, Be still, and the knowing will come."</p>
+    <p>A <strong>sacred space</strong> has three dimensions. It is a <em>place</em>, away from your desk (or at least with your chair turned to a window), perhaps with a symbol; she lights a candle for the Spirit's presence. It is a <em>time</em> with no work in it, not even preparing next Sunday's lesson. And it is a <em>place in the soul</em>: keep some of what happens private, pondering it like Mary rather than turning it straight into ministry material.</p>
+  </div>
+  <div class="practice"><b>Practice · ch. 2: the basic session</b><ol>
+    <li><strong>Find your sacred space and time.</strong> Experiment until it works, and tell the people you live with so they don't interrupt.</li>
+    <li><strong>Set a modest goal:</strong> ten, fifteen or twenty minutes. Regularity matters more than length.</li>
+    <li><strong>Sit comfortably but alert.</strong> A straight-backed chair, shoulders relaxed and open, both feet on the floor, hands in your lap.</li>
+    <li><strong>Ask God for a simple prayer</strong> of six to eight syllables that fits your breathing and expresses your desire for him. Hers was "Here I am," later "Come, Lord Jesus," "Lord Jesus Christ, have mercy on me," or just "Help!" Pray it to enter the silence. When distractions come, let them pass "like clouds floating across the sky" and return to the phrase without judging yourself.</li>
+    <li><strong>Close</strong> with thanks or the Lord's Prayer. A timer saves you checking the clock.</li>
+    <li><strong>Don't judge the session.</strong> No "I didn't get anything out of it." "Trust that whatever your time in silence was like, it was exactly as it should be."</li>
+  </ol></div>
+
+  <h3><span class="chap">Ch. 3</span>Resistance: the push-pull</h3>
+  <div class="prose">
+    <p>Elijah was forced into solitude after Mount Carmel; most of us are "still fairly functional," so resistance flares just as we're about to begin. Barton calls it <strong>the push-pull phenomenon</strong>. She arrives in solitude like a plane landed by "Captain Crash" and runs to God holding so much baggage she's "clumsy and hard to hug." At O'Hare, on her way to a five-day silent retreat she had longed for, she was ambushed by worry. Will my daughters be okay? Can my husband cope? I'm in the middle of interviews for a job I want. Will I sneak a look at my voicemail? God's gentle question: "Can you trust that I love your family and friends even more than you do?... Can you accept the fact that you are not indispensable?"</p>
+    <p>Then came a subtler fear, of the silence itself. Her journal: afraid of being bored, frantic or panicky; of wanting to go home; of not sleeping; "afraid of hearing promptings from God that are risky to follow... I'm just plain afraid." Willard: "Silence is frightening because it strips us as nothing else does... what if there turns out to be very little between us and God?" Silence also takes away control: "the initiative is God's, not ours" (Carlo Carretto). The deepest fear is "What if I show up and God doesn't?"</p>
+    <p>Underneath fear is <strong>desire</strong>. Christians distrust desire because it can spread like a forest fire, and many of us distance ourselves from it to avoid the pain of not getting what we want. But "your desire for God is the truest and most essential thing about you. It is truer than your sin, it is truer than your woundedness." And God desired us first: "the origin of our desire for God is God's desire for us." Solitude is "about lovers desiring each other enough to finally take the leap."</p>
+  </div>
+  <div class="practice"><b>Practice · ch. 3: the TRUST envelope</b><p>Notice the push and the pull at once. List your cares and concerns on paper, then release them in prayer or put the page in an envelope marked <strong>TRUST</strong> and set it aside. Barton suggests making this a regular way of entering solitude. Name any fear of the silence in words or images, without fighting it, "like a child who is comforted by a parent's presence." Then ask what your desire looks like these days, and whether you are brave enough to claim it. Close with thanks or the Lord's Prayer.</p></div>
+</section>
+
+<section id="rest">
+  <span class="eyebrow">Bread and sleep · chapters 4–7</span>
+  <h2>Rest before the journey</h2>
+  <div class="prose">
+    <p class="lede"><span class="chap">Ch. 4 · Dangerously tired</span>When Elijah reached the broom tree, God didn't teach him anything. He let him sleep, woke him to eat, and let him sleep again. Barton's director's first questions were about her food, sleep and exercise. If you fall asleep in prayer or solitude feels like one more chore, don't judge yourself: "times of solitude and silence are not times for judging. They are times for noticing." "Perhaps the most spiritual thing we could do is get more rest." She plans at least one nap into every longer retreat.</p>
+  </div>
+  <div class="scale" role="list" aria-label="Tiredness continuum">
+    <div role="listitem"><b>Energised</b>Fully refreshed.</div>
+    <div role="listitem"><b>Good tired</b>After a job well done; rest restores you.</div>
+    <div role="listitem"><b>Drifting</b>Toward dangerous tired.</div>
+    <div role="listitem"><b>Dangerous tired</b>Chronic, months long, often hidden by overwork.</div>
+  </div>
+  <div class="prose">
+    <p>Good tired is a spring rain cloud; dangerous tired is a green tornado sky. Its signs: you can't linger over coffee; you check email "just one more time"; you can't stop doing projects; your nightstand is piled with professional reading; a full day off seems impossible; you work through holidays; you can't rest even when you could. In spare time you escape into eating, drinking, spending and TV, because you're "too tired to choose activities that are truly life-giving." You feel numb, both to the bad emotions and the good ones. "I can be very, very busy and look very, very important but be unable to hear the quiet, sure voice of the One who calls me the beloved."</p>
+  </div>
+  <div class="practice"><b>Practice · ch. 4</b><p>Place yourself on the continuum without rushing to fix anything. Pray: <em>"God, this is what is true about me. What are we going to do about this?"</em> Hear Matthew 11:28, "Come to me, all you that are weary," and tell God what you need.</p></div>
+
+  <h3><span class="chap">Ch. 5</span>Rest for the body</h3>
+  <div class="prose">
+    <p>Psalm 131: "I have calmed and quieted my soul, like a weaned child with its mother." Her first daughter, Charity, was restless even while nursing. Their best moments came just afterwards, when the need was met and her body relaxed against her mother's, "heart to heart, skin to skin." God longs for those moments with us. Barton had kept the body in a separate compartment from the spirit. In silence she noticed tension in her shoulders, holding her breath when nervous, and lying awake with worries. One retreatant wrote: "My heart beats too fast... I am definitely hyped up by caffeine... I've been on an adrenalin high my whole life!" Barton changed her habits: real rest instead of caffeine, good food, water, attention to her breathing, more movement.</p>
+    <p>She widened what solitude can look like. Slow walks, jogs and bike rides count. At the end of the day she walks with God and reviews the day: an <em>examen of consciousness</em> (where God was present) and an <em>examen of conscience</em> (how she responded), then releases the day so she can sleep. On longer retreats she starts with a good night's sleep; on single days, with a nap. She no longer tries to arrive rested. "He gives sleep to his beloved."</p>
+  </div>
+  <div class="practice"><b>Practice · ch. 5</b><p>Take three slow breaths, intending to rest your whole self in God "as safe with him as a baby is with his mother." Notice where you're tight and adjust your position. Ask how your body is these days: tired, energised, aching, strong, cared for or abused. Is God offering something now, such as a nap under a blanket, a walk, or simply more sitting? Take it, and close with thanks.</p></div>
+
+  <h3><span class="chap">Ch. 6</span>Rest for the mind</h3>
+  <div class="prose">
+    <p>Psalm 131:1: "I do not occupy myself with things too great and too marvelous for me." "Yesterday I wanted to fix my marriage, today I want to fix my children, tomorrow I'll try to fix the world." Her husband once heard her sit up in her sleep and deliver a coherent sermon introduction. The mind isn't bad, but it is limited: "thinking about someone is not the same thing as being in their presence." Her director let her talk for a long time so she would hit "the wall of mental impasse." The Hebrew behind "Be still" (Ps 46:10) means "let go of your grip." Prayer is "standing in the presence of God with the mind in the heart" (Nouwen), the heart being the biblical centre of the whole person. Our God-talk is "the finger that points to the moon" (Richard Rohr). Silence is sitting in the moonlight.</p>
+  </div>
+  <blockquote class="pull">“Be patient toward all that is unsolved in your heart and try to love the questions themselves.”<cite>Rilke, quoted in ch. 6</cite></blockquote>
+  <div class="practice"><b>Practice · ch. 6</b><p>After three breaths, notice the difference between what's going on in your mind and what's going on in your heart. Name your "I don't know" place, the question no amount of thinking has answered. Say it aloud to God and tell him how it feels not to know. Don't grab at answers; let related thoughts pass like clouds. If you get impatient, ask: "Am I willing to be patient with this thing that is unsolved in my heart?" Close with the Lord's Prayer, letting it shape your response.</p></div>
+
+  <h3><span class="chap">Ch. 7</span>Rest for the soul</h3>
+  <div class="prose">
+    <p>"We all need a place to be a child." The soul rests by "simply being with God with what is," like musical chairs: when the music stops you sit down where you are, "sweaty, out of breath." She used to try to sanitise everything before solitude: relationships, confessions, voicemail, inbox, "I even tried to make sure the dishes were done." That was the wrong idea.</p>
+    <p>Sometimes what is there is <strong>gratitude</strong>. Flying back late from her daughter's prom in the middle of a speaking trip, she let thankfulness fill "every corner of my soul" for 75 minutes, and found it fuelled her teaching the next day "in a way that mere sleep could not have accomplished." Sometimes it is <strong>grief</strong>. After a personal loss she couldn't tell anyone about, she crawled back into bed at lunchtime and let waves of pain wash over her for a couple of hours. God kept her awake. "Nothing was fixed, but I was okay. I had not been swept away." The next morning's set prayer asked God to "quiet our souls in thy presence with the stillness of a wise trust."</p>
+  </div>
+  <div class="practice"><b>Practice · ch. 7</b><p>Stop the music. Is there a grief you've been holding in, big or small, like a hurtful exchange or being left out? Feel it with the One who bears it with you, and let your body kneel, lie down, weep or stay still. Pray: <em>"In silence my soul waits for you alone, O God; from you alone comes my salvation"</em> (Ps 62:1). Then ask what you're grateful for, and simply bask in it.</p></div>
+</section>
+
+<section id="desert">
+  <span class="eyebrow">Forty days through the desert · chapter 8</span>
+  <h2>Emptiness</h2>
+  <div class="prose">
+    <p class="lede">"Get up and eat, otherwise the journey will be too much for you." Elijah must have thought he'd made himself clear that he was finished. But rest was preparation. Once rested, he knew what he wanted, an encounter with God, and he walked forty days to Horeb, the mountain of Moses, which is ringed by five or six deserts. Dan Allender: "In the silence of the desert we hear our dependence on noise... In the desert we trust God or die."</p>
+    <p>Barton could trace her whole spiritual journey through her experiences of emptiness. As a skinny pastor's kid with braces she envied "the beautiful ones," and the only thing that helped was journaling to God. Recently she took a day at short notice because she was becoming demanding and frenetic. Even then everything in her wanted to go shopping, read a novel, or write about solitude instead of doing it. She found three deserts: an empty place in her marriage, a relationship she couldn't fix, and an injury that stopped her running. First came anger, then sadness, then tears, and the tears were a gift. Afterwards she was empty in a different way, "soft and open like a hand outstretched and ready to receive."</p>
+    <p>Nothing seemed to have happened, but something had shifted. She stopped resisting the emptiness. Rilke: "True love consists in this, that two solitudes protect and border and salute each other." She let the unresolved relationship stay unresolved and refused to worry about tomorrow's ankle. "Emptiness is prerequisite to being filled."</p>
+  </div>
+  <div class="practice"><b>Practice · ch. 8</b><p>Name the empty places in your life, the ones you usually avoid. Sit with your hands open in your lap and imagine the emptiness as "a receptacle for the very presence of God." Don't demand that God fill it on your terms. Let it be "a place of openness, receptivity and spiritual possibility."</p></div>
+</section>
+
+<section id="cave">
+  <span class="eyebrow">In the cave · chapter 9</span>
+  <h2>“What are you doing here, Elijah?”</h2>
+  <div class="prose">
+    <p class="lede">There are no quick fixes. Elijah walked forty days and then waited in a cave, and Barton confesses that she hates waiting, whether at the grocery store, the doctor's or the salon. When God finally speaks, it is with a question. Elijah's answer pours out the good ("I have been very zealous"), the bad (the prophets killed) and the ugly ("I alone am left"), which wasn't even true. "This willingness to see ourselves as we are and to name it in God's presence is at the very heart of the spiritual journey," and it takes time to feel safe enough to do it.</p>
+    <p>Her own answer, years in: "I have been very zealous for the Lord... but the truth is, I am empty... I am angry... It feels like I am the only one." God didn't lecture Elijah. He told him to stand on the mountain, and then came wind, earthquake and fire. Barton reads them also as the inner chaos that comes when pretence falls away. Her questions: <em>Am I worth anything if I'm not proving myself? Who am I when I'm not busy? Is God really enough?</em> She saw that much of her service had been driven by "a compulsive need to prove myself," especially to people in authority.</p>
+    <p>A concrete case: she took a day alone to reread five finished chapters of a book on men and women in the church, and she hated them. They were angry, strident, tilted toward women's perspectives, and full of other people's research. "My unresolved hurt and anger had seeped into the book." By the afternoon she sensed God's guidance: stop writing and spend a few months just listening to the men in her life. She did. She wrote a sixth chapter from a softer place, and her editor called: "I didn't much like the first five chapters, but I really liked the sixth one."</p>
+    <p>This is the classic stage of <strong>illumination</strong> (waking up to reality) and <strong>purgation</strong> (being stripped of what is false). You can feel as if you are falling off the path when you are really "in the heart of the journey." The last thing to let go of is "the self we have created in response to the wounds of our life," which she calls "bungee jumping for the soul." Nouwen: solitude "is not a private therapeutic place. Rather it is the place of conversion." Sometimes the insight is small; one woman heard, "Sometimes you're not very nice to people." The waiting is active, like a night watchman who knows morning will come (Ps 130).</p>
+  </div>
+  <div class="practice"><b>Practice · ch. 9</b><p>Breathe, and hear God ask: <em>"What are you doing here, ______?"</em> Let your answer come up unedited, in a journal, aloud or as emotion. It doesn't have to be heavy. Her most recent answer was simply: "I am here because I need to find the ground of my being again." Say what is true, and wait.</p></div>
+</section>
+
+<section id="silence">
+  <span class="eyebrow">A sound of sheer silence · chapters 10–11</span>
+  <h2>Pure presence</h2>
+  <div class="prose">
+    <p class="lede">If we stay with the seeing and the grief and stop fighting, "all of a sudden it becomes very quiet." At first it can feel like another emptiness, or like dread that punishment is coming. But this silence is "pregnant with the presence of God": a stirring, a whisper, sometimes something physical. God didn't scold Elijah. Elijah learned that he was loved as much exhausted in a cave as on Carmel calling down fire. He wrapped his face in his mantle and simply stood there. "I know of no better response." Merton: "The deepest level of communication is not communication but communion."</p>
+    <p>Biblical knowing "unites the subject with object": the difference between reading about someone and becoming their friend, between saying "I love you" and making love. What is left when the false self is stripped away is the essential self: "smaller... truer... softer... freer," held in a Love "deeper than any abyss," which becomes "a bedrock of settledness at the core of our being."</p>
+  </div>
+  <blockquote class="pull">“As we allow ourselves to be known in solitude, we discover that we are known by love.”<cite>Parker Palmer, epigraph to ch. 10</cite></blockquote>
+  <div class="practice"><b>Practice · ch. 10</b><p>Settle in and enjoy the safety of this time, place and Presence. Look back at your answer to "What are you doing here?" Where do you recognise yourself: something is wrong but you can't say what, seeing yourself newly, desperate enough to let go, or in a silence you're not sure you can trust? Stay there, tell God, and follow any prompting. Close with the Lord's Prayer as an anchor if a handhold of the false self is giving way.</p></div>
+
+  <h3><span class="chap">Ch. 11</span>Receiving guidance</h3>
+  <div class="prose">
+    <p>Many people come to silence wanting God's will so they can "get it right." The surprise is that the deepest need is to know we can never fall out of God's love. Only then can we listen without fearing "a killjoy God." Willard: apprentices must become "quite certain that there is no 'catch,' no limit, to the goodness of his intentions." Elijah never asked for guidance; it came when he was ready to hear it. And it was practical: anoint new kings and a successor, and go back with your limits in mind.</p>
+    <p>Barton's example: halfway through a Master of Divinity, the usual degree for pastors, she sensed a call to spiritual direction, which the degree didn't train for. In the stillness, the question came: "Are you enamored with having the letters M.Div. after your name as a way of proving yourself?" She chose different training, and calls it one of her best vocational decisions. Later she still felt a quiet desire to be ordained, and she held it without needing to work it out. Discernment notices circumstances, Scripture, wise friends and tradition, and also the inner movements Ignatius called <strong>consolation</strong> (life-giving connection with God, others and your true self) and <strong>desolation</strong> (off-centre, turmoil). "God's will for us is generally for us to do more of that which gives us life." "Every obedience, however small... quickens our sensitivity to him" (Albert Day).</p>
+  </div>
+  <div class="practice"><b>Practice · ch. 11</b><p>Ask God to bring to mind the moment in the last couple of days you're most grateful for, when you most gave and received love and felt most alive. Then the moment you're least grateful for, which drained life from you. What wisdom or questions come from comparing them? Is God guiding you toward more of what gives life? (This exercise comes from the Linns' <em>Sleeping with Bread</em>.)</p></div>
+</section>
+
+<section id="return">
+  <span class="eyebrow">The return · chapter 12</span>
+  <h2>For the sake of others</h2>
+  <div class="prose">
+    <p class="lede">At first she couldn't get enough of solitude and was frightened by it: would she ever want to re-engage, or produce again? She compares herself to a starving child shovelling down her first bowl of rice, which isn't pretty but does the job. Retreatants often whisper to her afterwards, "When it was time to come back, I didn't want to come back... Is that normal?" Some of us are so starved we no longer even want real food.</p>
+    <p>On a summer night her house filled with about twenty of her daughter's junior-high friends while she was trying to meet a deadline. Her first reaction was irritation. Then she tried Julian of Norwich's line: <em>"I look at God, I look at you, and I keep looking at God."</em> She asked for "sacred eyes" and began to see the noise as youthful energy and each child as beautiful. A wordless prayer of blessing rose in her. "If my experiences in solitude and silence don't make a difference in this real-life moment, then I'm not sure any of this is worth much." Solitude was becoming "an inner condition."</p>
+    <p>The fruit is for others. We speak better because we notice the need to impress or wound before it comes out. We become safer company, because we aren't hooked by our own anxieties. Our hard edges soften, because "every broken place that has not been healed... is a hard edge of our personality that slices and dices other people." Bonhoeffer: "Let him who cannot be alone beware of community. Let him who is not in community beware of being alone." Success now means living in the rhythms of "work and rest, solitude and community, silence and word," so the jar keeps finding time to sit still. She knows her daily, weekly and monthly needs "as clearly as I know that I need to eat three meals a day." When the rhythm slips she doesn't binge on guilt. She goes back to desperation and desire.</p>
+  </div>
+  <div class="practice"><b>Practice · ch. 12</b><p>Sit at least ten minutes and enjoy God's presence. Then ask him to show you a recent moment when you were different with others: trusting love, following wisdom, holding back a critical comment, resting in God instead of panicking. Savour it. Then name the rhythms of solitude and silence that produced it, and set your own, "as concrete and realistic as possible." Tell God your desire and your commitment.</p></div>
+</section>
+
+<section id="day">
+  <span class="eyebrow">Appendix</span>
+  <h2>A day in solitude: being yourself with God</h2>
+  <ol class="session">
+    <li><b>Arrive.</b> Choose a safe, private place at home or a retreat centre. Sit, breathe, notice God's presence and your desire. Tell God what you need today and write it down if that helps. You might reread 1 Kings 19.</li>
+    <li><b>Rest first, if you're tired.</b> Take a nap, sit in a chapel, lie on a blanket in the sun, for an hour or more, "at God's invitation."</li>
+    <li><b>Body:</b> How is your physical condition? Talk to God about it and listen.</li>
+    <li><b>Mind:</b> What questions have been occupying you? Sit still, or walk slowly with them, without grasping for answers. "In silence my soul waits for you and you alone, O God."</li>
+    <li><b>Soul:</b> What weighs on you, what are you celebrating, where does it hurt? Bring it all like a child, without censoring.</li>
+    <li><b>At the end:</b> God asks again, "What are you doing here?" How are you now? What shifted? What do you know more clearly? Is there an invitation, and how will you respond? Give thanks and return gently to the company of others.</li>
+  </ol>
+  <div class="prose"><p><strong>For groups</strong>, the expanded edition adds thirteen sessions with the same shape. Open with silence: the leader says "Be still and know that I am God," everyone keeps three, five or ten minutes of silence, and it ends with "Come Holy Spirit." Then spiritual listening: one person at a time shares their week of practice without interruption, the group is quiet for a moment, then responds without fixing, advising or saying "I know exactly how you feel." Close with silence and "Thanks be to God" or the Lord's Prayer. "Sharing silence is a profound act of trust, love, and courtesy" (Gunilla Norris).</p></div>
+</section>
+
+<section id="pattern">
+  <span class="eyebrow">Putting it together</span>
+  <h2>A meditation pattern: Barton with Comer</h2>
+  <div class="prose"><p>Barton gives the session, the inner route and the honesty. John Mark Comer's <a href="../into-the-quiet/"><i>Into the Quiet</i></a> gives a rhythm and tools for when your mind wanders (he even quotes Barton's tiredness spectrum). Here is one way to combine them. The labels show where each part comes from.</p></div>
+  <div class="pattern">
+    <div class="row"><span>Daily · start</span><div>Ten minutes in a fixed sacred space and time, phone elsewhere. Aim to grow toward Comer's hour, but regularity beats length. <div class="src">Barton ch. 2 · Comer: 1 hour a day</div></div></div>
+    <div class="row"><span>Enter</span><div>Three slow breaths. Put today's cares on paper in the TRUST envelope. Sit upright, open hands, feet on the floor. <div class="src">Barton ch. 1–3, 5</div></div></div>
+    <div class="row"><span>Pray</span><div>One breath-length prayer of six to eight syllables: "Here I am" · "Come, Lord Jesus" · "Lord Jesus Christ, have mercy." Repeat it to enter and to return. <div class="src">Barton ch. 2 · Comer's "I'm here, God"</div></div></div>
+    <div class="row"><span>Sit</span><div>Be with God with what is: tiredness, a question, grief, gratitude, emptiness. Notice, don't judge. <div class="src">Barton ch. 4–8</div></div></div>
+    <div class="row"><span>When it stirs</span><div>Ordinary wandering: let it pass like clouds and return with your phrase. Pain: the Gethsemane prayer (feelings, desires, trust). Lies on a loop: answer with a verse. Worry: turn it into a prayer. <div class="src">Barton ch. 2 · Comer ch. 2–3</div></div></div>
+    <div class="row"><span>Close</span><div>The Lord's Prayer or thanks. Don't rate the session. <div class="src">Barton ch. 2</div></div></div>
+    <div class="row"><span>Evening</span><div>A walk without earbuds, reviewing the day with God: where was he, how did I respond, what gave life and what drained it. <div class="src">Barton ch. 5 &amp; 11 · Comer's dog-walk Examen</div></div></div>
+    <div class="row"><span>Weekly</span><div>A Sabbath with long quiet stretches; once in a while ask, "What are you doing here?" <div class="src">Comer · Barton ch. 9</div></div></div>
+    <div class="row"><span>Monthly · yearly</span><div>A day alone using Barton's appendix (rest first, then body, mind, soul). One longer retreat a year. <div class="src">Barton appendix · Comer: 1 day a month, 1 retreat a year</div></div></div>
+    <div class="row"><span>Back out</span><div>"I look at God, I look at you, and I keep looking at God." <div class="src">Barton ch. 12 · Comer: retreat and return</div></div></div>
+  </div>
+</section>
+
+<footer>
+  <p>Summary of <i>Invitation to Solitude and Silence: Experiencing God's Transforming Presence</i> by Ruth Haley Barton, foreword by Dallas Willard (InterVarsity Press, expanded edition 2010), read in full including the appendix and group guide. Quotations are from the book. The final pattern combines Barton with John Mark Comer's <i>Into the Quiet</i> and is not from either book as such.</p>
+  <p><a href="../">← Kai's Pages</a></p>
+</footer>
+</div>
+</body>
+</html>
