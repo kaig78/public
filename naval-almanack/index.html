@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Almanack of Naval Ravikant by Eric Jorgenson – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long-form reading brief in the cover's own language. White page, the cover's
+   light grey for wide-tracked capitals, black for emphasis, and the cover's solid black bar
+   as the one recurring mark. Two parts, Wealth and Happiness, each opened by a full-width band.
+   Tweets in the book are set as a thread, the way Jorgenson marks them. */
+:root {
+  --paper: #fbfbf9;
+  --paper-2: #f0f0ec;
+  --ink: #141414;
+  --ink-2: #474744;
+  --ink-3: #85857f;
+  --grey: #a3a3a0;        /* the cover's title grey */
+  --rule: #deded8;
+  --bar: #111111;         /* the cover's black bar */
+  --card: #ffffff;
+  --tint: #ecece6;
+
+  --display: "Jost", "Futura", "Century Gothic", "Avenir Next", sans-serif;
+  --body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 64ch;
+  --frame: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #121211; --paper-2: #1a1a19; --ink: #ededea; --ink-2: #c3c3be; --ink-3: #8d8d87;
+    --grey: #7d7d79; --rule: #2e2e2c; --bar: #ededea; --card: #191918; --tint: #232321;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #121211; --paper-2: #1a1a19; --ink: #ededea; --ink-2: #c3c3be; --ink-3: #8d8d87;
+  --grey: #7d7d79; --rule: #2e2e2c; --bar: #ededea; --card: #191918; --tint: #232321;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.125rem/1.62 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.frame { max-width: var(--frame); margin: 0 auto; }
+
+/* ---------- masthead ---------- */
+.home { display: inline-block; margin-top: 22px; font: 500 .8rem/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); text-decoration: none; }
+.home:hover { color: var(--ink); }
+.mast { display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: clamp(28px, 5vw, 64px); align-items: end; padding-block: 36px 40px; border-bottom: 1px solid var(--rule); }
+.mast h1 { margin: 0; font: 600 clamp(2.3rem, 6.4vw, 4.6rem)/.98 var(--display); letter-spacing: .06em; text-transform: uppercase; text-wrap: balance; }
+.mast h1 .g { color: var(--grey); display: block; font-weight: 500; }
+.mast h1 .b { display: block; border-left: 10px solid var(--bar); padding-left: .32em; margin-left: -.1em; margin-top: .08em; }
+.mast .dek { margin: 26px 0 0; max-width: 52ch; font-size: 1.24rem; line-height: 1.5; color: var(--ink-2); text-wrap: pretty; }
+.mast .meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 6px 22px; font: 400 .78rem/1.4 var(--mono); color: var(--ink-3); }
+.mast .meta b { font-weight: 500; color: var(--ink-2); }
+.mast figure { margin: 0; }
+.mast img { display: block; width: 100%; height: auto; aspect-ratio: 800/1189; border: 1px solid var(--rule); box-shadow: 0 22px 40px -24px rgba(0,0,0,.45); }
+
+/* contents */
+.contents { display: flex; flex-wrap: wrap; gap: 8px 10px; padding-block: 22px; border-bottom: 1px solid var(--rule); }
+.contents a { font: 500 .78rem/1 var(--display); letter-spacing: .1em; text-transform: uppercase; text-decoration: none; color: var(--ink-2); padding: 9px 12px; border: 1px solid var(--rule); }
+.contents a:hover { border-color: var(--ink); color: var(--ink); }
+
+/* ---------- prose ---------- */
+.prose { max-width: var(--measure); }
+.prose p { margin: 0 0 1.05em; text-wrap: pretty; }
+.prose ul, .prose ol { margin: 0 0 1.1em; padding-left: 1.2em; }
+.prose li { margin-bottom: .4em; }
+.prose li::marker { color: var(--grey); }
+.prose em { font-style: italic; }
+.prose strong { font-weight: 600; }
+section { padding-block: 56px 8px; scroll-margin-top: 12px; }
+.eyebrow { display: block; font: 500 .74rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+h2 { margin: 0 0 20px; font: 600 clamp(1.7rem, 3.6vw, 2.35rem)/1.08 var(--display); letter-spacing: .01em; text-wrap: balance; }
+h3 { margin: 2.1em 0 .55em; font: 600 1.28rem/1.22 var(--display); letter-spacing: .01em; text-wrap: balance; }
+h3::before { content: ""; display: inline-block; width: 5px; height: .9em; background: var(--bar); margin-right: 10px; vertical-align: -.08em; }
+.lede { font-size: 1.24rem; line-height: 1.55; color: var(--ink-2); }
+
+/* part band */
+.part { margin-top: 64px; padding-block: 40px; border-top: 10px solid var(--bar); border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 32px; align-items: baseline; }
+.part .num { font: 500 .8rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+.part h2 { margin: 0; font-size: clamp(2.6rem, 8vw, 5rem); letter-spacing: .12em; text-transform: uppercase; line-height: 1; }
+.part p { grid-column: 2; margin: 6px 0 0; max-width: 54ch; font-size: 1.15rem; color: var(--ink-2); font-style: italic; }
+
+/* quotes */
+.pull { margin: 34px 0; padding: 4px 0 4px 22px; border-left: 4px solid var(--bar); max-width: 58ch; font: 500 clamp(1.3rem, 2.6vw, 1.6rem)/1.32 var(--display); letter-spacing: .005em; text-wrap: balance; }
+.pull cite { display: block; margin-top: 10px; font: 400 .74rem/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-style: normal; }
+
+/* tweet thread, set the way the book marks Twitter storms */
+.storm { list-style: none; margin: 26px 0 30px; padding: 0; max-width: 62ch; counter-reset: t; }
+.storm li { position: relative; padding: 0 0 18px 46px; margin: 0; counter-increment: t; }
+.storm li::before { content: counter(t, decimal-leading-zero); position: absolute; left: 0; top: .2em; font: 500 .72rem/1 var(--mono); color: var(--ink-3); }
+.storm li::after { content: ""; position: absolute; left: 9px; top: 1.6em; bottom: 4px; width: 1px; background: var(--rule); }
+.storm li:last-child::after { display: none; }
+.storm li p { margin: 0; font-size: 1.04rem; }
+.storm-head { font: 600 .82rem/1.2 var(--display); letter-spacing: .12em; text-transform: uppercase; margin: 30px 0 4px; }
+
+/* small tweet aside */
+.tweet { margin: 22px 0; padding: 14px 18px; background: var(--paper-2); max-width: 58ch; font-size: 1.02rem; }
+.tweet::before { content: "Tweet"; display: block; font: 500 .66rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px; }
+
+/* grids of ideas */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 26px 0 32px; }
+.grid > div { background: var(--card); padding: 18px 18px 20px; min-width: 0; }
+.grid h4 { margin: 0 0 8px; font: 600 1rem/1.25 var(--display); letter-spacing: .02em; }
+.grid h4 .k { display: block; font: 500 .68rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px; }
+.grid p { margin: 0; font-size: .98rem; line-height: 1.5; color: var(--ink-2); }
+
+/* real-estate ladder */
+.ladder { margin: 26px 0 32px; max-width: 760px; display: grid; gap: 6px; }
+.rung { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 18px; align-items: baseline; padding: 12px 16px; background: var(--card); border: 1px solid var(--rule); }
+.rung b { font: 600 1rem/1.25 var(--display); letter-spacing: .02em; }
+.rung .pay { font: 500 .86rem/1.2 var(--mono); white-space: nowrap; }
+.rung .why { grid-column: 1 / -1; font-size: .95rem; line-height: 1.45; color: var(--ink-2); }
+.rung:nth-child(1) { margin-right: 25%; } .rung:nth-child(2) { margin-right: 20%; margin-left: 5%; }
+.rung:nth-child(3) { margin-right: 15%; margin-left: 10%; } .rung:nth-child(4) { margin-right: 10%; margin-left: 15%; }
+.rung:nth-child(5) { margin-right: 5%; margin-left: 20%; } .rung:nth-child(6) { margin-left: 25%; border-left: 6px solid var(--bar); }
+.ladder-note { font: 400 .78rem/1.4 var(--mono); color: var(--ink-3); max-width: 62ch; }
+
+/* timeline */
+.timeline { list-style: none; margin: 24px 0 30px; padding: 0; max-width: 64ch; border-left: 1px solid var(--rule); }
+.timeline li { display: grid; grid-template-columns: 4.6em minmax(0, 1fr); gap: 14px; padding: 7px 0 7px 18px; position: relative; }
+.timeline li::before { content: ""; position: absolute; left: -4px; top: 1.05em; width: 7px; height: 7px; background: var(--paper); border: 1px solid var(--ink-3); }
+.timeline .y { font: 500 .86rem/1.5 var(--mono); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.timeline span { font-size: 1rem; line-height: 1.5; }
+.timeline .mark::before { background: var(--bar); border-color: var(--bar); }
+
+/* formulas */
+.formulas { margin: 22px 0 30px; padding: 20px 22px; background: var(--paper-2); max-width: 66ch; overflow-x: auto; font: 400 .88rem/1.75 var(--mono); }
+.formulas div { white-space: nowrap; }
+.formulas b { font-weight: 500; }
+
+/* rules list */
+.rules { list-style: none; padding: 0; margin: 22px 0 30px; max-width: 64ch; display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.rules li { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 1.02rem; }
+.rules li small { color: var(--ink-3); font: 400 .74rem/1 var(--mono); margin-left: 6px; }
+
+/* three choices */
+.three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 24px 0 30px; max-width: 760px; }
+.three div { border-top: 6px solid var(--bar); padding-top: 12px; min-width: 0; }
+.three b { display: block; font: 600 1.25rem/1.1 var(--display); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 6px; }
+.three p { margin: 0; font-size: .98rem; line-height: 1.45; color: var(--ink-2); }
+
+/* books */
+.shelf { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px 36px; margin: 22px 0 32px; }
+.shelf h4 { margin: 0 0 8px; font: 500 .74rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.shelf ul { list-style: none; margin: 0; padding: 0; }
+.shelf li { padding: 7px 0; border-bottom: 1px solid var(--rule); font-size: .98rem; line-height: 1.4; }
+.shelf li i { color: var(--ink); }
+.shelf li span { color: var(--ink-3); }
+
+/* practice cards */
+.practice { counter-reset: p; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; margin: 24px 0 36px; }
+.practice div { counter-increment: p; background: var(--card); border: 1px solid var(--rule); padding: 18px 18px 18px 20px; min-width: 0; }
+.practice h4 { margin: 0 0 8px; font: 600 1.02rem/1.25 var(--display); }
+.practice p { margin: 0; font-size: .98rem; line-height: 1.5; color: var(--ink-2); }
+.practice .from { display: block; margin-top: 10px; font: 400 .7rem/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+
+footer { margin-top: 70px; padding-block: 26px 48px; border-top: 1px solid var(--rule); font: 400 .78rem/1.6 var(--mono); color: var(--ink-3); }
+footer p { margin: 0 0 6px; max-width: 80ch; }
+
+@media (max-width: 760px) {
+  .mast { grid-template-columns: minmax(0, 1fr); }
+  .mast figure { order: -1; max-width: 170px; }
+  .part { grid-template-columns: minmax(0, 1fr); }
+  .part p { grid-column: 1; }
+  .three { grid-template-columns: minmax(0, 1fr); }
+  .rung:nth-child(n) { margin-left: 0; margin-right: 0; }
+  .rung { grid-template-columns: minmax(0, 1fr); }
+  body { font-size: 1.06rem; }
+}
+</style>
+</head>
+<body>
+<div class="frame">
+<a class="home" href="../">← Kai's Pages</a>
+
+<header class="mast">
+  <div>
+    <h1><span class="g">The Almanack of</span><span class="b">Naval Ravikant</span></h1>
+    <p class="dek">How to get rich without needing luck, and how to be happy on purpose. Eric Jorgenson gathered a decade of Naval's tweets, podcasts and interviews into one book, in Naval's own words. It has two halves: wealth and happiness. Naval's point is that both are skills you can learn.</p>
+    <div class="meta">
+      <span><b>Eric Jorgenson</b> · foreword by Tim Ferriss</span>
+      <span>Illustrations: Jack Butcher</span>
+      <span>Read in German: <i>Der Almanach von Naval Ravikant</i>, FinanzBuch 2021 (3rd ed. 2023), 257 pp.</span>
+      <span>Original: Magrathea, 2020</span>
+    </div>
+  </div>
+  <figure><img src="cover.jpg" alt="Cover of the German edition: Der Almanach von Naval Ravikant, grey and black capitals on white with a black bar" width="800" height="1189"></figure>
+</header>
+
+<nav class="contents" aria-label="Sections">
+  <a href="#book">The book</a>
+  <a href="#life">Naval's life</a>
+  <a href="#wealth">I · Wealth</a>
+  <a href="#judgment">Judgment</a>
+  <a href="#happiness">II · Happiness</a>
+  <a href="#save">Saving yourself</a>
+  <a href="#philosophy">Philosophy</a>
+  <a href="#bonus">Bonus</a>
+  <a href="#practice">To practise</a>
+</nav>
+
+<!-- ============ THE BOOK ============ -->
+<section id="book">
+  <span class="eyebrow">How the book is made</span>
+  <h2>A book Naval never wrote</h2>
+  <div class="prose">
+    <p class="lede">Naval Ravikant founded Epinions and AngelList and was an early investor in Uber and Twitter. He never wrote a book. Eric Jorgenson, a product strategist from Kansas City, collected what Naval had said on Twitter, in blog posts and in long podcasts with Shane Parrish, Joe Rogan and Tim Ferriss. He edited it for clarity, grouped it by topic and published it as a free public service. Naval earns nothing from it.</p>
+    <p>That shapes how it reads. There is no argument that builds over chapters. Each chapter is a set of short passages, each ending with a source number, often followed by a tweet that sums it up. Jorgenson asks you to read generously: everything here is out of context by definition, wording drifts between media, and the transcripts have been edited several times. You can start anywhere. The book says so itself: "choose your own adventure".</p>
+    <p>Tim Ferriss had promised never to write a foreword. He made an exception for three reasons: the book is free, he has wanted it to exist for over a decade, and it raises the odds that Naval names his next child "Tim". He doesn't take Naval seriously because of the money. He takes him seriously because Naval questions almost everything, reasons from first principles, is good at not fooling himself, changes his mind often, laughs a lot and doesn't take himself too seriously. Ferriss's warning sets the tone for the whole book: test the advice against your own life under stress, and don't just parrot it.</p>
+  </div>
+  <blockquote class="pull">“Pay attention, but don't simply repeat his words. Think about everything, and treat nothing as dogma.”<cite>Tim Ferriss, foreword</cite></blockquote>
+</section>
+
+<!-- ============ LIFE ============ -->
+<section id="life">
+  <span class="eyebrow">Before the ideas</span>
+  <h2>Born poor and miserable</h2>
+  <div class="prose">
+    <p>Naval grew up in Queens with a single mother who worked, studied and raised two latchkey boys. His father had been a pharmacist in India; his degree didn't count in America, so he worked in a hardware store. The family did not stay together. The neighbourhood wasn't safe, so the public library became Naval's after-school care: straight there from school, home when it closed. "My only real friends were books." His first job, at 15, was with an unlicensed caterer delivering Indian food from a van. Before that he had delivered newspapers and washed dishes.</p>
+    <p>One thing he credits with saving his life: he passed the entrance test for Stuyvesant High School. That stamp led to an Ivy League college and then into tech. He calls it an "intelligence lottery" that can move you from the working class to the educated class in one step. He also credits his mother's unconditional love. Even if you have nothing else, one person who loves you without conditions does wonders for your self-worth.</p>
+  </div>
+  <ol class="timeline">
+    <li><span class="y">1974</span><span>Born in Delhi, India.</span></li>
+    <li><span class="y">1985</span><span>Moves from New Delhi to Queens, New York, at nine.</span></li>
+    <li><span class="y">1989</span><span>Stuyvesant High School.</span></li>
+    <li><span class="y">1995</span><span>Graduates from Dartmouth in computer science and economics.</span></li>
+    <li class="mark"><span class="y">1999</span><span>Co-founds Epinions and becomes its CEO, at 25. It later goes public as part of Shopping.com.</span></li>
+    <li><span class="y">2001</span><span>Venture partner at August Capital.</span></li>
+    <li><span class="y">2003</span><span>Founds Vast.com, a classifieds marketplace.</span></li>
+    <li><span class="y">2005</span><span>After suing his Epinions investors, he is called "radioactive waste" in Silicon Valley.</span></li>
+    <li><span class="y">2007</span><span>Starts Hit Forge, a small fund, and the blog Venture Hacks.</span></li>
+    <li class="mark"><span class="y">2010</span><span>Founds AngelList. Invests in Uber.</span></li>
+    <li><span class="y">2012</span><span>Lobbies Congress for the JOBS Act.</span></li>
+    <li><span class="y">2018</span><span>Named Angel Investor of the Year.</span></li>
+    <li><span class="y">2020</span><span>Talks philosophy, business and investing on his podcast and as a guest.</span></li>
+  </ol>
+  <div class="prose">
+    <p>By the time of the book he had invested personally in about 200 companies, sat on boards, was a small partner in a crypto fund and chaired AngelList. He sums up his life in two sentences, and they set up the book's two halves.</p>
+  </div>
+  <blockquote class="pull">“I was born poor and miserable. Now I'm fairly wealthy and very happy. I worked at it.”<cite>Naval</cite></blockquote>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part" id="wealth">
+  <span class="num">Part I</span>
+  <h2>Wealth</h2>
+  <p>How to get rich without getting lucky. "Making money isn't a thing you do. It's a skill you learn."</p>
+</div>
+
+<section id="storm">
+  <span class="eyebrow">Building wealth</span>
+  <h2>The tweetstorm that started it</h2>
+  <div class="prose">
+    <p class="lede">Naval says that if he lost all his money and were dropped on a street in any English-speaking country, he would be rich again within five or ten years. It wouldn't depend on hard work. You can work 80 hours a week in a restaurant and never get rich. It would depend on a set of skills anyone can learn: knowing what to do, with whom, and when.</p>
+    <p>He worked out the principles as a teenager of 13 or 14 and says he has lived by them for 30 years. In 2018 he put them into one Twitter thread, "How to Get Rich (without getting lucky)". The whole first part of the book unpacks that thread. Each line could fill an hour. If you absorb them and work hard for ten years, he says, you will get what you want. The key lines:</p>
+  </div>
+  <p class="storm-head">How to get rich (without getting lucky)</p>
+  <ol class="storm">
+    <li><p>Seek wealth, not money or status. Wealth is assets that earn while you sleep. Money is how we move time and wealth. Status is your place in the social hierarchy.</p></li>
+    <li><p>Understand that ethical wealth creation is possible. If you secretly despise wealth, it will elude you.</p></li>
+    <li><p>Ignore people playing status games. They gain status by attacking people playing wealth-creation games.</p></li>
+    <li><p>You're not going to get rich renting out your time. You must own equity, a piece of a business, to gain financial freedom.</p></li>
+    <li><p>You will get rich by giving society what it wants but does not yet know how to get. At scale.</p></li>
+    <li><p>Pick an industry where you can play long-term games with long-term people. Play iterated games. All the returns in life, whether in wealth, relationships or knowledge, come from compound interest.</p></li>
+    <li><p>Pick business partners with high intelligence, energy and, above all, integrity. Don't partner with cynics and pessimists. Their beliefs are self-fulfilling.</p></li>
+    <li><p>Learn to sell. Learn to build. If you can do both, you will be unstoppable.</p></li>
+    <li><p>Arm yourself with specific knowledge, accountability and leverage.</p></li>
+    <li><p>Specific knowledge is knowledge you cannot be trained for. If society can train you, it can train someone else and replace you. It is found by pursuing your genuine curiosity, not whatever is hot. It feels like play to you and looks like work to others. It is taught through apprenticeships, not schools, and it is often highly technical or creative, so it can't be outsourced or automated.</p></li>
+    <li><p>Embrace accountability and take business risks under your own name. Society will reward you with responsibility, equity and leverage.</p></li>
+    <li><p>"Give me a lever long enough and a place to stand, and I will move the earth." Fortunes require leverage: capital, people, and products with no marginal cost of replication (code and media).</p></li>
+    <li><p>Capital and labour are permissioned leverage: someone has to give you money, or follow you. Code and media are permissionless. They are the leverage behind the newly rich. An army of robots is freely available, packed into data centres. Use it. If you can't code, write books and blogs, record videos and podcasts.</p></li>
+    <li><p>Leverage is a force multiplier for your judgment. Judgment takes experience, but you can build it faster by learning foundational skills.</p></li>
+    <li><p>There is no skill called "business". Avoid business magazines and business classes. Study microeconomics, game theory, psychology, persuasion, ethics, mathematics and computers. Reading is faster than listening. Doing is faster than watching.</p></li>
+    <li><p>You should be too busy to "do coffee" while still keeping an uncluttered calendar.</p></li>
+    <li><p>Set and enforce an aspirational personal hourly rate. If fixing a problem saves less than your hourly rate, ignore it. If outsourcing a task costs less than your hourly rate, outsource it.</p></li>
+    <li><p>Work as hard as you can, even though who you work with and what you work on matter more than how hard you work.</p></li>
+    <li><p>Become the best in the world at what you do. Keep redefining what you do until this is true.</p></li>
+    <li><p>There are no get-rich-quick schemes. That's just someone else getting rich off you.</p></li>
+    <li><p>Apply specific knowledge, with leverage, and eventually you will get what you deserve.</p></li>
+    <li><p>When you're finally wealthy, you'll realise it wasn't what you were seeking in the first place. But that is for another day.</p></li>
+  </ol>
+
+  <h3>“Productize yourself”</h3>
+  <div class="prose">
+    <p>Asked to compress the thread into two words, Naval chooses <em>productize yourself</em>. "Yourself" stands for what is unique: your specific knowledge and your accountability, since your name is on it. "Productize" stands for leverage and scale. The words give you two test questions for any long-term plan. First: is this authentically me? Then: am I turning it into a product? Does it scale, through people, capital, code or media? Simple to ask, hard to answer. It can take close to a decade just to find out what you uniquely have to offer.</p>
+  </div>
+
+  <h3>Wealth, money, status</h3>
+  <div class="prose">
+    <p>Money is how we transfer wealth. Naval calls it social credit: an IOU on other people's time. If you do good work for society, society says "thank you, we owe you something for that in the future", and writes you a little note called money. Wealth is the thing that produces: the factory, the robots, the software that serves customers at night, even cash in the bank waiting to be invested. A house you rent out counts too.</p>
+    <p>Society pays you for creating things it wants but doesn't yet know how to get. If it knew, it wouldn't need you. That is why so much wealth comes from technology. Oil was once technology and made Rockefeller rich; cars made Ford rich. Danny Hillis (the book first credits Alan Kay, then corrects itself) defined technology as everything that doesn't work yet. Once it works, it stops being called technology. Your job is to find the new thing you can naturally provide, and then work out how to make a thousand, a million or a billion of them. Steve Jobs and his team saw that people wanted a computer in their pocket with every function of a phone times a hundred. They worked out how to build it, then how to scale it.</p>
+  </div>
+  <div class="tweet">Technology democratizes consumption but consolidates production. The best person in the world at anything gets to do it for everyone.</div>
+
+  <h3>Specific knowledge: the thing only you can do</h3>
+  <div class="prose">
+    <p>Specific knowledge can't be taught, but it can be learned. To find it, look at what you did almost effortlessly as a child or teenager. You didn't see it as a skill, but the people around you noticed it. Your mother or your best friend from childhood could probably tell you. Naval's examples: a knack for sales, musical talent that picks up any instrument, an obsessive personality that dives deep and remembers fast, a love of science fiction that loaded you with knowledge, lots of gaming and so a feel for game theory, gossiping and working your friend network, which might make you a fine journalist. It comes from an odd mix of your DNA, your upbringing and how you responded to it.</p>
+    <p>Sales is his favourite example. Some people are natural salespeople, and you know it within minutes of meeting them. They learned it on the playground or negotiating with their parents, not in class. You can still improve: read Robert Cialdini, take a sales course, or try door-to-door sales, which is brutal but teaches you fast.</p>
+    <p>His own case: he loves reading and technology, learns fast and gets bored fast. Twenty years buried in one field would never have worked. Venture capital rewards exactly his traits, including getting bored quickly. He grew up revering scientists. To him they sit at the top of humanity's production chain, and applied scientists will turn out to be the most powerful people in the world. He wanted to be a great scientist himself. Looking back, he spent his time on money, tinkering with technology and persuading people. At 15 or 16 he told a friend he would be an astrophysicist. His mother called from the kitchen: "No, you're going into business." He thought she had no idea what she was talking about. She knew exactly.</p>
+    <p>Specific knowledge often sits at the frontier, in things that are only just being figured out or are genuinely hard. If you're not 100% into it, someone who is will beat you, and not by a little. In the world of ideas, compounding and leverage stretch small differences into huge ones.</p>
+  </div>
+  <blockquote class="pull">“Escape competition through authenticity.”<cite>Naval, a tweet that didn't fit the thread</cite></blockquote>
+  <div class="prose">
+    <p>If you compete with someone, it's because you're copying them. Build something from scratch that is an extension of yourself, and nobody can compete with you. Who is going to out-Rogan Joe Rogan, or draw a better Dilbert than Scott Adams, or outdo Bill Watterson at Calvin and Hobbes? Nobody can be better at being you than you. The internet makes this practical: it offers an audience for every niche, as long as you serve it best. And since everyone is unique, everyone is best at one thing: being themselves.</p>
+    <p>The most important skill for getting rich is becoming a perpetual learner. The old model was four years of college and 30 years in one job. Now you may need to get up to speed in a new field within nine months; it may be gone four years later, but those three productive years can make you rich. Foundations make this possible. If a library book is too hard for you, ask what foundational knowledge you're missing. Arithmetic and number sense matter more than advanced maths. Explaining yourself simply, in your own language and in English, matters more than poetry or seven languages. Being persuasive matters more than being an expert in digital marketing. Know the basics 90 to 100 percent. Then go deep in one or two things, usually the ones you're obsessed with, or your knowledge will be a mile wide and an inch deep.</p>
+  </div>
+
+  <h3>Long-term games with long-term people</h3>
+  <div class="prose">
+    <p>Compound interest isn't only about capital. It decides who runs public companies and who is trusted with billions. They have stayed in their business for decades and proved their integrity in ways others can see and check. Reputation compounds the same way: a good name built over decades can end up worth thousands of times more than a talented person's who never kept it compounding. In a long relationship the small frictions are forgotten and negotiations get easy, because both sides know it will work out.</p>
+    <p>His example is the angel investor Elad Gil. Elad always gives Naval a little extra on a deal, rounds in his favour, and quietly pays fees out of his own pocket without mentioning it. So Naval sends him every deal he can and tries to do the same in return. His co-founder Babak Nivi put it this way: in a long-term game everyone makes each other rich; in a short-term game everyone makes themselves rich. Long games are positive-sum. Everyone is baking the same pie. Short games only divide the slices.</p>
+    <p>A harsher corollary: 99 percent of effort is wasted. Most of the papers you wrote at university, the languages you learned and forgot, the people you dated before your spouse, did nothing for the goal (though you learned from all of it). You can't skip the 99 percent, because the 1 percent is hard to spot. The point is to recognise the 1 percent when you find it, the field or person you could invest in for the rest of your life, and then go all in and drop the rest. If a relationship won't lead to marriage, move on. If a course will never be useful, stop going.</p>
+  </div>
+  <div class="tweet">Intentions don't matter. Actions do. That's why being ethical is hard.</div>
+
+  <h3>Accountability: put your name on it</h3>
+  <div class="prose">
+    <p>Labour and capital have to be given to you by other people. To get them you need credibility, and you build it best under your own name, which is risky. Accountability cuts both ways: credit when things go well, blame when they fail. We are wired not to fail in public. But debtors' prisons are gone, bankruptcy can clear debts, and Silicon Valley at least forgives failure if you were honest and tried hard with integrity. So people should take far more accountability than they do.</p>
+    <p>His own example: until about 2013 or 2014, his public persona was all startups and investing. When he started posting about philosophy and psychology, colleagues messaged him privately to say he was ruining his career. Same with crypto, early. Putting your name behind something carries risk, and it also brings the reward. In old times the captain went down with the ship. In business the risk is milder: you are the last to get your capital back and the last to be paid for your time.</p>
+  </div>
+
+  <h3>Equity: own a piece of something</h3>
+  <div class="prose">
+    <p>Without equity there is no path to financial freedom. A doctor or a lawyer can earn well, but they are paid for time. Their output is tied to their input. They earn nothing while they sleep, on holiday or in retirement, and their income doesn't grow non-linearly. Doctors who get really rich open a practice with a brand that attracts patients, or invent a device or procedure they own. An employer pays you the minimum needed to make you take the job, however high that minimum is. They carry the risk and own the brand and the IP. Owning equity means owning the upside; owning debt means a guaranteed income with the downside risk. Start small: some shares, stock options at a tech company. Real wealth usually comes from starting your own company or from investing.</p>
+  </div>
+
+  <h3>Leverage: three kinds</h3>
+  <div class="grid">
+    <div><h4><span class="k">Oldest · permissioned</span>Labour</h4><p>Other people working for you. Naval calls it the worst form of leverage in the modern world. Managing people is incredibly hard, and you are always one step from mutiny. It impresses your parents. Don't waste your life chasing it.</p></div>
+    <div><h4><span class="k">Last century · permissioned</span>Capital</h4><p>Money multiplies every decision. The richest people of the last century were bankers and money movers, and the CEO job at big old firms is mostly a finance job. Managing more money is far easier than managing more people.</p></div>
+    <div><h4><span class="k">New · permissionless</span>Code &amp; media</h4><p>Products with no marginal cost of replication: books, films, podcasts, software. It started with the printing press, sped up with broadcasting and exploded with the internet. Nobody has to give you permission. Every new fortune, from Bezos and Zuckerberg to Joe Rogan, comes from here.</p></div>
+  </div>
+  <div class="prose">
+    <p>"Forget rich versus poor, white-collar versus blue. It's now leveraged versus unleveraged." Humans evolved where eight hours of chopping wood meant eight hours of output. With leverage, the right piece of code can create half a billion dollars of value, while ten engineers working ten times as hard on the wrong product create nothing. Input and output come apart, and the more creative the work, the further apart they get. So aim for a job where you control your time and are judged on results. If you have specific knowledge, accountability and leverage, they have to pay you what you're worth, and you get your time back. No meetings for show, no work theatre. You work when you have energy and rest when you don't.</p>
+  </div>
+  <div class="tweet">The 40-hour work week is a relic of the Industrial Age. Knowledge workers function like athletes: train and sprint, then rest and reassess.</div>
+  <div class="prose">
+    <p>Sales at the top end is a good example: an elite estate agent can sell a $5 million house in a tenth of the time someone else spends on a $100,000 flat. Customer support is the opposite: input and output are tied, and hours are what count. In tech, you need to be able to build or sell. "Build" can mean design, engineering, manufacturing, logistics, or in a laundry business getting every garment to the right place on time. "Sell" includes marketing, recruiting, fundraising, inspiring people and PR.</p>
+    <p>Naval walks up the real-estate industry to show how leverage, accountability and specific knowledge stack:</p>
+  </div>
+  <div class="ladder" role="list">
+    <div class="rung" role="listitem"><b>Handyman</b><span class="pay">$10–20 / hour</span><span class="why">Shows up at 8 for the boss, fixes his assigned part of the house. Zero leverage, little accountability (to the boss, not the client), no specific knowledge: many others could do the job.</span></div>
+    <div class="rung" role="listitem"><b>General contractor</b><span class="pay">~$50,000 / project</span><span class="why">Pays the crew $15 an hour and keeps the difference. Worries at night if the project slips. Leverage through labour, plus knowledge of crews, deadlines and building codes.</span></div>
+    <div class="rung" role="listitem"><b>Developer</b><span class="pay">$0.5–1 million / house</span><span class="why">Borrows or raises money, buys land, tears down, builds, sells. High accountability, capital as leverage, and knowledge of financing, zoning, market trends and risk.</span></div>
+    <div class="rung" role="listitem"><b>Real-estate fund manager</b><span class="pay">vast capital</span><span class="why">Deals with many developers and buys huge amounts of property. Leverage through capital at scale.</span></div>
+    <div class="rung" role="listitem"><b>Tech + real-estate team</b><span class="pay">hundreds of millions to billions</span><span class="why">Combines real-estate knowledge with knowing how to hire engineers, build a product and raise venture money. Its name is on a high-risk bet.</span></div>
+    <div class="rung" role="listitem"><b>Trulia, Redfin, Zillow</b><span class="pay">full upside</span><span class="why">Labour, capital and code at once. You move from a salary toward owning the whole upside.</span></div>
+  </div>
+  <p class="ladder-note">Figures as Naval gives them. Each step adds leverage, accountability and specific knowledge; compounding over a long time does the rest.</p>
+  <div class="prose">
+    <p>One thing to avoid on the way: the risk of ruin. Don't do anything illegal; no win is worth an orange jumpsuit. Don't risk your body or your health. Never bet everything you have at once. Make rational, optimistic bets with large upside instead.</p>
+  </div>
+
+  <h3>Get paid for your judgment</h3>
+  <div class="prose">
+    <p>Naval wants to be paid only for judgment, while robots, capital or computers do the work. If someone is right 85 percent of the time instead of 75, you'll pay them $50, $100 or $200 million to steer a $100 billion ship. That is why CEOs are paid so much: leverage magnifies small differences in judgment. Proven judgment, with accountability and a clear track record, is what counts. Warren Buffett is the purest case. He has been accountable in public for decades and built a reputation for integrity, so people give him unlimited leverage. Nobody asks how hard Warren works or when he gets up. They say: "Warren, do your thing."</p>
+  </div>
+  <div class="tweet">We waste our time with short-term thinking and busywork. Warren Buffett spends a year deciding and a day acting. That act lasts decades.</div>
+
+  <h3>Prioritise and focus</h3>
+  <div class="prose">
+    <p>Naval had his share of bad luck. He lost his first small fortune in the stock market right away. His second, he says, his business partners took from him. Only the third attempt worked, and even then the money came in many small pieces, not one jackpot: more options, more companies, more investments, a few chips at a time. Today he has more opportunities than time.</p>
+    <p>The tool he leans on is an absurdly high personal hourly rate. Nobody will value you more than you value yourself. When he had no money he told himself his time was worth $5,000 an hour; looking back, $1,000 would have been closer. Annualised, that is several million dollars. Every errand gets priced: an hour across town to fetch something costs $100 if you're worth $100 an hour. Would you pay that? He still argues with his wife, and with his mother when she gives him chores: "I'm not solving this problem." He'd rather pay for an assistant, and he would rather throw a broken speaker in the bin than return it. Outsource anything that costs less than your rate, even cooking. Ironically, he thinks he beat even the $5,000. He calls himself lazy and works in bursts when something truly motivates him.</p>
+  </div>
+  <h3>Status games and wealth games</h3>
+  <div class="prose">
+    <p>"If you secretly despise wealth, it will elude you." If you compare, you'll resent people who have more, and people sense it when you try to do business with them. People play two big games. The money game is positive-sum and young in evolutionary terms. The status game is old and zero-sum. Monkey tribes already played it: for number three to become number two, number two has to be knocked down. Politics and sport are status games. Many people who believe deep down that they can't make money attack the whole system: "making money is evil, nobody needs money". They are playing for status. Avoid those games. They turn you into an angry, combative person.</p>
+  </div>
+  <div class="tweet">Play stupid games, win stupid prizes.</div>
+  <div class="prose">
+    <p>For young people the most important thing is to spend more time on the three really big decisions: where you live, who you live with, and what you do. You may live in a city for ten years, keep a job for five and stay in a relationship for decades. Spend a year or two thinking about each and cancel everything else. His advice to a young engineer weighing a move to San Francisco: do you want to leave your friends behind, or be left behind by them?</p>
+    <p>His first company came from shame, not a plan. At @Home Network in 1996 he told everyone, his boss and colleagues included, that he was really an entrepreneur who would soon leave to found a company. Then he didn't. People kept asking why he was still there, and he was literally shamed into starting it. He'd rather be a failed entrepreneur than someone who never tried, because even the failed one has the skills to make it alone. An old boss once warned him: "You'll never be rich, because you're obviously smart, and someone will always offer you a job that's just good enough."</p>
+  </div>
+
+  <h3>Work that feels like play</h3>
+  <div class="prose">
+    <p>Humans evolved as hunter-gatherers, each working for themselves. Farming made us hierarchical, and factories made us extremely so. The internet is taking us back toward self-employment. There are nearly seven billion people; Naval hopes one day there will be nearly seven billion companies.</p>
+    <p>He learned to make money because he had to. The year he created the most wealth was the year he worked least and thought least about the future. He told people he was retired and spent his time on the projects he cared about most. Doing things for their own sake is one definition of art, and history remembers the artists, in business, science and politics too. He can now set up a company in three months: raise money, hire a team, launch. That he makes money from it is almost a side effect, and his motivation has moved from goal-driven to artistic, which he thinks makes him better at it. He passes on great investments if the product bores him. "I'm always 'working'. It looks like work to others but feels like play to me. That's why nobody can compete with me. I'm just playing, 16 hours a day."</p>
+  </div>
+  <blockquote class="pull">“Retirement is when you stop sacrificing today for an imaginary tomorrow.”<cite>Naval</cite></blockquote>
+  <div class="prose">
+    <p>There are three ways to retire in that sense: save enough that passive income covers your burn; cut your burn to zero and become a monk; or do something you love so much that money stops being the point.</p>
+    <p>What is enough? Money isn't the root of all evil, but the love of money hurts you, not society. It is a bottomless pit. You get the punishment at the same time as the money: you want more, and you grow paranoid about losing what you have. His defence: don't upgrade your lifestyle as you earn more, and ideally earn in large lumps rather than a slow rise, so there is no time to adjust and you can jump straight to freedom. Freedom is his highest value. As long as money buys freedom, it's great. Past a certain point it makes you less free.</p>
+  </div>
+  <div class="tweet">The winners of any game are the people who are so addicted that they keep playing even as the marginal utility of winning declines.</div>
+  <div class="prose">
+    <p>Do you have to start a company? Not necessarily. In Silicon Valley the most successful people on a risk-adjusted basis, apart from VCs, are those who are good at spotting companies just reaching product-market fit and joining early, like the people who went from Google to Facebook when it had a few hundred staff and then on to Stripe. When Zuckerberg panicked about scaling, Jim Breyer pointed him to exactly such a product head. Early promotion matters a lot and is easier at small companies, where there is less structure in the way.</p>
+  </div>
+
+  <h3>How to get lucky</h3>
+  <div class="prose">
+    <p>"Rich without getting lucky" means being wealthy in 999 out of 1,000 parallel universes, not just the 50 where you got lucky. Naval and Babak Nivi describe four kinds of luck:</p>
+  </div>
+  <div class="grid">
+    <div><h4><span class="k">Luck 1</span>Blind luck</h4><p>Something happens that you had no influence on: fate, chance. You hope it finds you.</p></div>
+    <div><h4><span class="k">Luck 2</span>Luck from hustling</h4><p>You create so much energy and activity, stirring the petri dish, that luck runs into you.</p></div>
+    <div><h4><span class="k">Luck 3</span>Luck from a prepared mind</h4><p>You know a field so well that you notice a breakthrough others walk past. A sensor for luck.</p></div>
+    <div><h4><span class="k">Luck 4</span>Luck that finds you</h4><p>You build a unique character and reputation, so opportunities come to you. At that point it isn't luck any more but destiny.</p></div>
+  </div>
+  <div class="prose">
+    <p>For the fourth kind he gives the image of the world's best deep-sea diver. Someone finds a sunken treasure ship by blind luck but can't reach it. They come to you and hand you half. Their luck became yours, because you made yourself the person it had to go through. The same goes for a trustworthy, long-term deal-maker with high integrity: when strangers want to do business but can't trust each other, they come to you and give you a cut. Buffett is offered companies, warrants and bank rescues nobody else gets, because of his reputation.</p>
+    <p>On networking: business networking is a waste of time. Build something interesting, show and practise your craft, and the right people will find you. On trust: someone who talks a lot about how honest they are is probably dishonest; someone who praises their own values is probably hiding something. When a successful friend treats someone badly, Naval warns them once. Not because of karma, but because you can't hide from yourself: your flaws are written into your psyche, and the worst thing is not respecting yourself. It never helps, so he then quietly removes the person from his life.</p>
+  </div>
+  <blockquote class="pull">“The closer you want to get to me, the better your values have to be.”<cite>Naval</cite></blockquote>
+  <div class="tweet">Sharks eat well, but they live a life surrounded by sharks.</div>
+
+  <h3>Be patient</h3>
+  <div class="prose">
+    <p>Something he learned late: in tech, great people get great results eventually. People he met early in his career and thought "this one is extraordinary" were, almost without exception, very successful 20 years later. It never happens on the timeline you or others want, but it happens. Don't keep count, or you'll run out of patience before success arrives. The most common bad advice he hears is "you're too young". Most of history was made by young people who only got recognised when they were older.</p>
+    <p>It won't be easy. It's the hardest thing you'll do. Look at kids born rich: they often have no meaning. "Your real résumé is just a catalogue of all your suffering." On your deathbed you'll remember the sacrifices and difficulties, not what you were given. To create meaning you have to do something hard anyway, and making money is a good choice. Money buys freedom in the material world. It won't make you happy, fit, calm or fix your family, and it won't switch off the anxious, combative person you trained yourself to be over decades of earning it. Then you still have to learn to be happy.</p>
+    <p>But first, he says, let's get you rich. He's pragmatic about it: the Buddha was a prince. Monks used to give up money, sex, family and science to find peace. Now there is money in a bank account. Do useful work, live a little below your means, and you buy the time and energy to pursue inner peace.</p>
+  </div>
+  <blockquote class="pull">“Let's make everybody rich. Let's make everybody fit and healthy. And then let's make them all happy.”<cite>Naval</cite></blockquote>
+</section>
+
+<!-- ============ JUDGMENT ============ -->
+<section id="judgment">
+  <span class="eyebrow">Building judgment</span>
+  <h2>There is no shortcut to smart</h2>
+  <div class="prose">
+    <p class="lede">You won't get rich by saving money. You get rich by saving time to make money. Hard work is overrated. Judgment is underrated. Naval defines wisdom as knowing the long-term consequences of your actions, and judgment as wisdom applied to external problems. In an age of leverage, one right decision can be the jackpot. Which direction you walk matters more than how fast, especially with leverage.</p>
+  </div>
+
+  <h3>How to think clearly</h3>
+  <div class="prose">
+    <p>"Clear thinker" is a better compliment than "smart". Real knowledge is built up from the foundations: you can't understand trigonometry without arithmetic and geometry. People who throw around jargon and big concepts often don't know what they're talking about. If you can't explain it to a child, you don't know it. Feynman, in <em>Six Easy Pieces</em>, builds maths from the number line to algebra in three pages, one unbroken chain of logic with no definitions. If you can't re-derive a concept from the basics when you need it, you've only memorised it.</p>
+    <p>The biggest thing keeping us from seeing reality is our preconceived idea of how it should be. The "monkey brain" offers the same emotional answer about how the world ought to work. A painful moment can be defined as the moment you see something exactly as it is: the company you believed was fine fails, because you ignored the signs. The good news is that suffering is a moment of truth, and you can only make progress if you start from the truth. The smaller your ego and the less you want a particular outcome, the more of reality you can see. You see it easily when a friend goes through a breakup: you can tell in a minute what's going on. They can't, because their wish is colliding with reality. Naval tries to admit in public, to co-founders, friends and colleagues, when something isn't working. If he hides it from no one, he can't hide it from himself.</p>
+  </div>
+  <div class="tweet">Your feelings don't tell you about the facts. They only tell you about your assessment of the facts.</div>
+  <div class="prose">
+    <p>Thinking needs empty space. If you don't have a day or two a week in your calendar with no meetings, you won't be able to think, have good business ideas or use good judgment. Schedule two, because if you schedule two you'll end up with at least one. Great ideas come only after boredom, never while stressed, busy or rushing.</p>
+  </div>
+  <div class="tweet">A contrarian isn't one who always objects; that's a conformist of a different sort. A contrarian reasons independently from the ground up and resists pressure to conform. Cynicism is easy. Mimicry is easy. Optimistic contrarians are the rarest breed.</div>
+
+  <h3>Shed your identity to see reality</h3>
+  <div class="prose">
+    <p>Our egos form in the first two decades of life, shaped by parents and society, and then we spend the rest of life trying to make that ego happy. We need habits to function, so we bundle them into an identity: "I'm Naval, this is how I am." It's important to de-condition yourself from them. Look at each habit and ask: I probably picked this up as a child to get my parents' attention; does it still serve me? Does it make me happier, healthier, more effective?</p>
+    <p>Any belief you took on as a package (Democrat, Catholic, American) is suspect and should be re-examined from first principles. He identified as a libertarian for a while and found himself defending positions he had never thought through, just because they were part of the canon. If all your beliefs fit into neat bundles, be suspicious. If you want to be honest, speak without identity. A contrarian belief that your own identity and your local tribe reject is all the more likely to be true. Suffering teaches two things: to accept the world as it is, and, painfully, to change your ego, as when an athlete like Bruce Lee is badly injured and has to become a philosopher.</p>
+  </div>
+  <blockquote class="pull">“Tension is who you think you should be. Relaxation is who you are.”<cite>Buddhist saying</cite></blockquote>
+  <div class="tweet">Facebook redesigns. Twitter redesigns. Personalities, careers and teams also need redesigns. There are no permanent solutions in a dynamic system.</div>
+
+  <h3>Learning to decide well</h3>
+  <div class="prose">
+    <p>The classical virtues are all decision-making heuristics that make you optimise for the long term rather than the short term. Almost all biases are time-saving heuristics, so for important decisions, set aside memory and identity and focus on the problem. Hold self-serving conclusions to a higher standard.</p>
+    <p>Radical honesty, for Naval, simply means wanting to be free: to say what he thinks and think what he says. Quoting Feynman: you must not fool yourself, and you are the easiest person to fool. The moment you lie to someone, you've lied to yourself and begun to believe it. He pairs honesty with an old Buffett rule: praise specifically, criticise generally. Criticise the approach, not the person. When you praise, find the best example of the thing and praise that person by name. That way people's egos work for you, not against you. Can you train blunt honesty? Start now and tell everyone. It doesn't have to be blunt: charisma is projecting confidence and love at the same time, and it is almost always possible to be honest and positive.</p>
+    <p>Being right 80 percent of the time instead of 70 can mean being valued hundreds of times higher. If he manages a billion dollars and is right 10 percent more often, his judgment creates $100 million of value. With code, people and capital behind decisions, the leverage keeps rising. He loves Shane Parrish's Farnam Street because it is entirely about deciding better.</p>
+  </div>
+  <div class="tweet">The more you know, the less you diversify.</div>
+
+  <h3>Collect mental models</h3>
+  <div class="prose">
+    <p>The brain is a prediction machine built on memory. "X happened before, so X will happen again" is a bad way to predict, because circumstances differ. You need principles: mental models. His best ones come from evolution, game theory, Charlie Munger, Nassim Taleb and Benjamin Franklin. He uses tweets, his own and others', as compressed maxims, like pointers to experiences. Without the experience, they read as a quote collection you make into a poster and forget.</p>
+  </div>
+  <div class="grid">
+    <div><h4>Evolution</h4><p>Much of society can be explained by sexual selection: sperm is abundant, eggs are scarce, and civilisation sorts out who gets to reproduce. With thermodynamics, information theory and complexity, it explains and predicts a lot.</p></div>
+    <div><h4>Inversion</h4><p>He doesn't claim to know what works. He tries to eliminate what won't. Success is about not making mistakes rather than always being right.</p></div>
+    <div><h4>Complexity theory</h4><p>Taught him in the 1990s the limits of what we know. We're fundamentally ignorant and terrible at predicting the future, so build systems that work amid ignorance.</p></div>
+    <div><h4>Economics</h4><p>You can't do well in a capitalist society without understanding supply and demand, labour and capital, game theory. Read a microeconomics textbook cover to cover.</p></div>
+    <div><h4>Principal-agent problem</h4><p>"If you want it done, go. If not, send someone" (attributed to Caesar). Owners care; agents optimise for themselves. Small companies make everyone feel like a principal. Tie pay to exact value created.</p></div>
+    <div><h4>Compound interest</h4><p>10 percent on $1 gives $1.10, $1.21, $1.33. At 30 percent a year for 30 years you don't end with 20 or 30 times your money but thousands of times. A product with 100 users growing 20 percent a month reaches millions surprisingly fast.</p></div>
+    <div><h4>Basic maths</h4><p>Skip trigonometry and calculus drills. Be very good at multiplication, division, exponents, probability and statistics.</p></div>
+    <div><h4>Black swans</h4><p>The statistics of extreme, improbable events. Taleb, "one of the greatest philosopher-scientists of our time", did the pioneering work.</p></div>
+    <div><h4>Calculus</h4><p>Understand the idea of measuring change in small steps, not solving integrals on command. Business won't ask you to.</p></div>
+    <div><h4>Falsifiability</h4><p>If a theory makes no falsifiable predictions, it isn't science. That's why he thinks macroeconomics has been corrupted: you can't run the US economy twice.</p></div>
+  </div>
+  <div class="tweet">Ignore the noise. The market will decide.</div>
+
+  <h3>If you can't decide, the answer is no</h3>
+  <div class="prose">
+    <p>Should I marry this person, take this job, buy this house, move to this city, start working with this person? If you can't decide, the answer is no. Modern society offers a huge range of options: seven billion people, all reachable online, hundreds of thousands of careers. We evolved in tribes of 150, where someone who turned up might have been your only chance at a partner, so we underestimate how many options exist. Meanwhile these choices last: a company takes ten years, a relationship five or more, a city ten or twenty. Say yes only when you're very sure. If you're making a spreadsheet of pros and cons, forget it.</p>
+  </div>
+  <h3>Run uphill</h3>
+  <div class="prose">
+    <p>When two options are roughly equal, take the one that is more painful in the short term. By definition, if two paths are equal and one has short-term pain, it must carry long-term gains, and with compounding, long-term gains are what you want. Your brain's conflict avoidance pushes you away from short-term pain, so lean against it. Exercise isn't fun for him, but he's healthier for it. A confusing book feels like a sore muscle, for the brain.</p>
+  </div>
+
+  <h3>Learn to love reading</h3>
+  <div class="prose">
+    <p>"What's the most efficient way to build new mental models? Read a lot." If you read science, maths and philosophy for an hour a day, you will probably be in the top ranks of human achievement within seven years. We live in the age of Alexandria: every book is at our fingertips. The means of learning are abundant; the desire to learn is scarce.</p>
+    <p>Reading was his first love: Reader's Digest issues on the floor of his grandfather's house in India, comics, whatever he could get. Nobody told him what to read, so he read a lot of what would now count as mental junk food. He reads only an hour or two a day, which he thinks puts him in the top 0.00001 percent and explains whatever material success and intelligence he has. Most people read about a minute a day. Making it a habit matters more than what you read; your interests will lead you to the good stuff.</p>
+  </div>
+  <blockquote class="pull">“Read what you love until you love to read.”<cite>Naval</cite></blockquote>
+  <div class="prose">
+    <p>How he actually reads is less reverent than you might expect. He has a short attention span, skims, jumps and remembers no passages verbatim; books dissolve into the fabric of his psyche. He reads as many books again as new ones, agreeing with a tweet that you only need to reread the 100 great books. If you realise halfway through that you've read a book before, you were ready to read it again. He starts at the beginning, reads fast, and skips ahead or puts the book down if the first chapter doesn't grab him. Most non-fiction states one thesis and then piles on examples; once he has the core, he's happy to stop. "The number of books completed is a vanity metric." Don't read books written to make money. To absorb what you read, explain it to someone: teaching forces learning.</p>
+    <p>Twitter made him a worse reader and a much better writer. For a while he slid from books to blogs to Twitter and Facebook, living on small dopamine snacks and learning nothing. Getting back into books took a trick: treat them like disposable blog posts. Buy any book someone mentions, keep ten to twenty going at once, skip, start in the middle, feel no duty to finish.</p>
+    <p>What to read matters for your foundation. Some well-read people aren't smart because they read the wrong things in the wrong order, and those half-truths became the axioms they judge everything else by. So build on the solid ground: maths, the hard sciences, microeconomics. Read originals: Darwin before Dawkins; Adam Smith, von Mises or Hayek before modern macroeconomists; Marx himself if you like socialist ideas, rather than today's interpretations. Then no book in the library will scare you. Some will be too hard. Read them anyway, and again later.</p>
+  </div>
+  <div class="prose"><p>The older the problem, the older the solution. How to drive a car or fly a plane is a modern problem, so read something modern. How to stay healthy, calm and peaceful, which values to hold, how to raise a family: those are old problems, and any book that has survived 2,000 years has been filtered by many people, so its principles are more likely to be right.</p></div>
+  <div class="tweet">You know how you get a song stuck in your head? Thoughts get stuck too. Be careful what you read.</div>
+  <blockquote class="pull">“A calm mind, a fit body and a house full of love. These things cannot be bought. They must be earned.”<cite>Naval</cite></blockquote>
+</section>
+
+<!-- ============ PART II ============ -->
+<div class="part" id="happiness">
+  <span class="num">Part II</span>
+  <h2>Happiness</h2>
+  <p>"The three big things in life are wealth, health and happiness. We pursue them in that order, but their importance is reverse."</p>
+</div>
+
+<section id="learned">
+  <span class="eyebrow">Learning happiness</span>
+  <h2>Happiness is learned</h2>
+  <div class="prose">
+    <p class="lede">Ten years earlier Naval would have brushed the question off. On a scale of one to ten he'd have said two or three, four on his best days, and happiness wasn't something he cared about. Now he puts himself at nine. Money helps, but it is a small part. The bigger part is that he decided his own happiness was the most important thing and cultivated it with many techniques, like fitness or nutrition.</p>
+    <p>Answers to questions like this are personal; what works for him may be nonsense for you. For some people happiness is flow, for others satisfaction or contentment. His current definition: happiness is the default state. It is what is there when you remove the sense that something is missing from your life. We are survival-and-replication machines walking around saying "I need this, I need that", caught in a web of desires. When nothing is missing, the mind stops running into the past or future, and for a moment you are at peace.</p>
+    <p>So happiness isn't positive thinking. Every positive thought carries a negative one inside it, as a contrast; the Tao Te Ching says it better. For him happiness is the absence of desire, especially for external things. The more he accepts the present, the happier he is. And the moment he thinks "now I'm happy" and tries to hold on to it, it's gone, because the mind is moving again, trying to make something temporary permanent.</p>
+    <p>Nature has no concept of happiness or unhappiness. It follows unbroken mathematical laws from the Big Bang until now; a tree has no idea of right and wrong. You're born, have a string of sensory experiences, and die. How you interpret them is your choice. That is what he means by happiness being a choice. Once you believe that, you can start working on it.</p>
+  </div>
+  <div class="tweet">There are no external forces affecting your emotions, even though it may feel that way.</div>
+  <div class="prose">
+    <p>It also helps him to believe in the complete insignificance of the self. If you're the most important thing in the universe, the universe must bend to your will, and when it doesn't, something is wrong. If you see yourself as an amoeba, or your work as writing on water or building castles in the sand, you have no expectations of how life should be. The neutral state that remains isn't dull. It's how small children live, absorbed in their surroundings without a thought for how things should be.</p>
+  </div>
+  <div class="tweet">We think of ourselves as fixed and the world as malleable, but it's really we who are malleable and the world is largely fixed.</div>
+  <div class="prose">
+    <p>Does meditation help? Yes, though it's remarkable how little. You can meditate for years, and when someone says the wrong thing the wrong way, you fall right back into your ego. It's like lifting one-pound weights and then having a huge barbell dropped on you. Real happiness only comes as a side effect of peace, mostly through acceptance, not by changing your environment. His own list of what worked:</p>
+  </div>
+  <ul class="rules">
+    <li>I reduced my identity.</li>
+    <li>I reduced the chatter in my mind.</li>
+    <li>I don't care about things that don't really matter.</li>
+    <li>I don't get involved in politics.</li>
+    <li>I don't spend time with unhappy people.</li>
+    <li>I value my time on this earth.</li>
+    <li>I read philosophy. I meditate.</li>
+    <li>I spend time with happy people. And it works.</li>
+  </ul>
+  <div class="prose">
+    <p>You can raise your baseline happiness slowly but steadily and systematically, the way you raise your fitness. The mind is as malleable as the body. We spend huge effort changing the outside world, other people and our bodies, and accept ourselves as we were programmed in youth. Memory and identity are burdens from the past that keep us from living freely in the present.</p>
+  </div>
+
+  <h3>Happiness needs presence and peace</h3>
+  <div class="prose">
+    <p>Walking down any street, only a tiny part of your brain is on the present; the rest is planning or regretting. That stops you from seeing the beauty around you and being grateful for where you are. "I don't believe in anything from my past. Nothing. No memories, no regrets. No people. No trips." Much of our unhappiness comes from comparing the past with the present. A great definition he once found: enlightenment is the space between your thoughts. It isn't something you get after 30 years on a mountain. You can have it moment to moment, a little more each day.</p>
+    <p>"Happiness" is an overloaded word. These days it means calm to him more than joy. Many people carry a constant low-level anxiety, a "nexting" feeling: always thinking about the next thing while at this one. It becomes obvious when you try to sit and do nothing at all, no book, no music. You can't, because the anxiety pushes you to get up and go. He doesn't fight it. He notices that the thoughts are making him anxious and asks: would I rather have this thought or my peace? As long as he has the thoughts, he won't have the peace.</p>
+  </div>
+  <div class="tweet">A happy person isn't someone who's happy all the time. It's someone who effortlessly interprets events in a way that doesn't lose their innate peace.</div>
+  <div class="tweet">What if this life is the paradise we were promised, and we're just squandering it?</div>
+
+  <h3>Every desire is chosen unhappiness</h3>
+  <div class="prose">
+    <p>The most common mistake, he says, is believing some external circumstance will make you happy. It's basic Buddhism, and he claims no credit. Once, waiting for a new car, he read the online forums about it every night. It's a stupid object; it won't change his life, and he'll stop caring once it's at the door. He was addicted to the wanting. That doesn't mean you should avoid the outside world. You're a living being, you locally reverse entropy, you're here to do things. The illusion is only that changing something out there will bring lasting peace.</p>
+  </div>
+  <blockquote class="pull">“Desire is a contract you make with yourself to be unhappy until you get what you want.”<cite>Naval</cite></blockquote>
+  <div class="prose">
+    <p>So choose desires very carefully. He tries to have only one big desire at a time and to recognise it as the axis of his suffering, the place where he has decided to be unhappy. Perfecting your desires matters more than doing things you don't fully want. When you're young and healthy you do more and so pile up desires without noticing that they slowly kill your happiness: young people are less happy but healthier, older people happier but less healthy. Young, you have time and health but no money; in middle age money and health but no time; old, money and time but no health. The goal is all three at once. By the time people realise they have enough money, they've lost their time and health.</p>
+  </div>
+
+  <h3>Success can't buy happiness</h3>
+  <div class="prose">
+    <p>Confucius said we have two lives, and the second begins when we realise we only have one. Naval's began when he reached the material and social success he had fought for and saw that the people around him with similar or greater success weren't happy. He adapted to everything quickly. The conclusion, banal as it sounds, was that happiness comes from within, and he turned to inner work. You still do the outer things; you're wired to. But life brings you back to the inner path.</p>
+  </div>
+  <div class="tweet">Happiness is being satisfied with what you have. Success comes from dissatisfaction. Choose.</div>
+  <div class="prose">
+    <p>Who is successful? Most people name winners of their own game: athletes name athletes, entrepreneurs name Elon Musk. Naval would name Steve Jobs, Marc Andreessen for his work at Netscape, Satoshi Nakamoto for Bitcoin. But the real winners, he says, are the ones who leave the game entirely, people with such inner self-control and self-knowledge that they need nothing from anyone. His trainer Jerzy Gregorek is one: at peace, and indifferent to whether he earns more or less than others. The Buddha and Krishnamurti are others. Pascal wrote that all of humanity's problems stem from man's inability to sit quietly in a room alone. If you can sit for 30 minutes and be happy, you've succeeded.</p>
+    <p>The irony is that most of us try to reach peace through war: starting a company, fighting a flatmate over the washing-up, so that we'll feel secure later. But peace is never guaranteed; it is always in flux. The core skill is to flow with life and accept it most of the time. There are unlimited external problems, so the only way to real peace is to give up the idea of problems.</p>
+  </div>
+  <blockquote class="pull">“Peace is happiness at rest, and happiness is peace in motion.”<cite>Naval</cite></blockquote>
+
+  <h3>Envy is the enemy of happiness</h3>
+  <div class="prose">
+    <p>He tries to get rid of the word "should". Every "should" is guilt or social programming; if you do something because you should, you don't actually want to. Society's "you should look good, make money, buy a big house" are multiplayer competitive games where others can see how you're doing. Training yourself to be happy is purely internal: no external progress, no validation, one player. We're so social that we've forgotten how to play and win single-player games. But life is one. You were born alone, you'll die alone, your interpretations and memories are yours, and in three generations nobody will care. That is also why yoga and meditation are so hard to keep up: they have no external value.</p>
+    <p>Buffett asks whether you'd rather be the world's greatest lover and known as the worst, or the worst and known as the greatest. All real scorecards are internal. Jealousy was hard for Naval to shake. What finally did it: you can't take just someone's body, someone else's money and a third person's personality. You'd have to become that person completely, with their reactions, desires, family, happiness level and self-image, 24/7. If you wouldn't take the whole package, there is no point being jealous. He wouldn't, and the jealousy faded.</p>
+  </div>
+
+  <h3>Happiness is built from habits</h3>
+  <div class="prose">
+    <p>His most surprising discovery of the previous five years: peace and happiness are skills. There's a genetic range and a lot of conditioning, but you can decondition and recondition yourself. It starts with believing you can, the same way dieting, fitness, making money, dating and even love are learnable skills. It's trial and error: seated meditation, tantra, Vipassana, ten days or twenty minutes, yoga, kitesurfing, car racing, cooking, Zen. With medicine for the mind, the placebo effect works 100 percent, so lean slightly positive, not overly sceptical. When Eckhart Tolle's <em>The Power of Now</em> described a body-energy exercise, his old self would have thrown the book away. His new self lay down and tried it. It felt really good.</p>
+    <p>Habits that steady mood: no alcohol, no sugar, no Facebook, Snapchat or Twitter, no video games (he used to be an avid gamer; they give short-term happiness and long-term damage through dopamine you can't control), less caffeine. You're the combination of your habits and the five people you spend most time with. By the "five chimps" theory, you can predict a chimp's behaviour from the five chimps it hangs out with. Choose yours deliberately, not by who lives or works nearby. The first rule for handling conflict: don't hang out with people who are always in conflict.</p>
+  </div>
+  <div class="tweet">Surround yourself at work with people more successful than you. Surround yourself at play with people happier than you.</div>
+  <div class="prose">
+    <p>His Iranian friend Behzad loves life and has no time for anyone unhappy. His secret: "Stop asking why and start saying wow." We should be two monkeys in the jungle watching the sunset and wondering where to sleep. Instead we sit in a building, clothed, fed, talking across space and time. When you're present you notice how many gifts surround you.</p>
+  </div>
+  <h3>Naval's happiness habits</h3>
+  <div class="grid">
+    <div><h4>Insight meditation</h4><p>With one goal: to understand how his mind works.</p></div>
+    <div><h4>Find the positive</h4><p>Catch himself judging and ask how it could be seen positively. It took a few seconds at first. Now it takes a split second.</p></div>
+    <div><h4>Sunlight</h4><p>More sun on his skin. Look up and smile.</p></div>
+    <div><h4>Test each desire</h4><p>"Is this so important that I'll be unhappy if it doesn't work out?" Almost always, no.</p></div>
+    <div><h4>Less caffeine, daily exercise</h4><p>Both made him more stable. Peace with your body makes peace of mind easier.</p></div>
+    <div><h4>Judge less</h4><p>Judging feels good for a moment, then lonely. The world reflects your own feelings back at you.</p></div>
+    <div><h4>Tell friends you're happy</h4><p>People like to be consistent. Your friends will expect it, and you'll live up to it.</p></div>
+    <div><h4>Fewer phone apps</h4><p>Minimise three apps: phone, calendar and alarm clock. Keep fewer secrets: the more you have, the less happy you are.</p></div>
+    <div><h4>Screens out</h4><p>Rule without exception: screen activities go with less happiness, non-screen activities with more.</p></div>
+    <div><h4>One metric</h4><p>How much of your day do you spend doing things out of obligation rather than interest?</p></div>
+    <div><h4>Ignore the news</h4><p>The news is built to make you anxious and angry. The big trends in science, economics, education and conflict point up. Stay optimistic.</p></div>
+    <div><h4>Serotonin without drugs</h4><p>Sunlight, exercise, positive thinking, tryptophan. Bad mood? Meditation, music, exercise, then choose a new source of energy for the day.</p></div>
+  </div>
+  <div class="prose">
+    <p>Hedonic adaptation works more strongly on man-made things (cars, houses, clothes, money) than on natural ones (food, sex, exercise). Politics, academia and social status are zero-sum games; only positive-sum games make people creative. His recipe for changing a habit: pick one thing; cultivate a desire and visualise it; plan a sustainable path; identify needs, triggers and replacements; tell your friends; track carefully. Self-discipline is a bridge to a new self-image. Let the new self-image harden. That's who you are now.</p>
+  </div>
+  <div class="tweet">First you know it. Then you understand it. Then you can explain it. Then you can feel it. Finally you are it.</div>
+
+  <h3>Find happiness in acceptance</h3>
+  <div class="three">
+    <div><b>Change</b><p>That's a desire. It will hurt until you achieve it, so pick only one big one at a time.</p></div>
+    <div><b>Accept</b><p>Be okay with the outcome either way. Balanced, centred, seeing the bigger picture.</p></div>
+    <div><b>Leave</b><p>Walk away. Sitting there wishing you'd change or leave, and doing neither, causes most unhappiness.</p></div>
+  </div>
+  <div class="prose">
+    <p>In every situation you have three options. Why only one big desire, not two? Because two distract you. The word he probably has in his head most often is just "accept". Acceptance is hard, and he has two methods. For big pain, he steps back and remembers, even writes down, other painful times: the last breakup, the last business failure, the last health scare, and the growth that came from each years later. For small annoyances he asks what the upside is. Late to a meeting? He can relax, watch the birds, and spend less time in a boring meeting. When someone flooded his inbox with a hundred photos from an event, the first reaction was irritation; then he saw he could pick his five favourites himself. After a year of practice his brain finds the positive almost instantly. If nothing positive comes to mind, there's always: the universe is trying to teach me something.</p>
+    <p>For what you can't change, it comes down to one hard thing: accepting death. It's the most important thing that will ever happen to you. If you face it instead of running from it, it brings great meaning. Much of our striving is a search for immortality, through an afterlife, children or a legacy. His "hot tip": there is no legacy. Our children, our works, our civilisations, the planet and the solar system will all be gone. Name one famous Sumerian. In tens of thousands of years people will say, "Americans, sure, I've heard of them." Your life is a firefly's blink in the night. If you fully accept the pointlessness of what you do, you can find great peace, because it's a game, and the game can be fun. Being unhappy helps no one. It only wastes the tiny, precious time you have.</p>
+  </div>
+  <blockquote class="pull">“One day you're going to die, and none of this will matter. So enjoy yourself. Do something positive. Project some love. Make someone happy. Laugh a little. Appreciate the moment. And do your work.”<cite>Naval</cite></blockquote>
+</section>
+
+<section id="save">
+  <span class="eyebrow">Saving yourself</span>
+  <h2>Nobody is coming to save you</h2>
+  <ul class="rules">
+    <li>Doctors won't make you healthy.</li>
+    <li>Nutritionists won't make you slim.</li>
+    <li>Teachers won't make you smart.</li>
+    <li>Gurus won't make you calm.</li>
+    <li>Mentors won't make you rich.</li>
+    <li>Trainers won't make you fit.</li>
+    <li><strong>Ultimately, you have to take responsibility. Save yourself.</strong></li>
+  </ul>
+
+  <h3>Choose to be yourself</h3>
+  <div class="prose">
+    <p>Many people beat themselves up with lists: I have to do this, and that. You don't have to do anything. Do what you want, and you'll hear the small voice that has its own ideas. His greatest mentor, whom he never met, made him want to be just like him, but the message was the opposite: be yourself, with passionate intensity. Nobody will ever be better at being you. Combinations of DNA and experience are so varied that no two people are interchangeable. Your goal in life is to find the people, business, project or art that need you most. Something out there is waiting for you. Don't make checklists based on what others do. You'll never be them.</p>
+  </div>
+  <div class="tweet">To make an original contribution, you have to be irrationally obsessed with something.</div>
+
+  <h3>Choose to take care of yourself</h3>
+  <div class="prose">
+    <p>His number one priority, above happiness, family and work, is his own health: physical first, mental second, spiritual third, then his family's health and well-being. Then he can go out into the world. Nothing sharpens the contrast for the rest of your life like a health problem.</p>
+    <p>The modern world doesn't fit the human animal. We should probably eat something close to paleo: mostly vegetables with a little meat and berries. We're built to play rather than run on treadmills, to use all five senses rather than only the visual cortex, to go barefoot rather than in shoes, to feel some cold, which boosts the immune system, and to live less sterile lives (the hygiene hypothesis). We evolved in small tribes with family always around. Growing up partly in India, where a cousin, aunt or uncle was always present, he saw that you are rarely depressed there, though you also have no privacy. We aren't built to check our phones every five minutes, swinging between a like and an angry comment. We evolved in scarcity and now live in abundance, so the constant fight is saying no when our genes say yes: to sugar, to staying in a relationship, to alcohol, to drugs.</p>
+  </div>
+  <div class="tweet">When everyone is sick, we no longer consider it a disease.</div>
+
+  <h3>Diet</h3>
+  <div class="prose">
+    <p>He is no expert, and diet, like politics, is everyone's little religion. Keto seems hard to sustain; paleo is probably better. What interests him is sugar and fat. Fat makes you full. Sugar makes you hungry, because it tells your body there's an unexpected abundance of food. Sugar dominates, so sugar plus fat gives you the hunger and the calories: every dessert is that combination. In nature it barely exists, only in tropical fruit like coconuts, mangoes and perhaps bananas. Any sensible diet avoids it.</p>
+  </div>
+  <div class="grid">
+    <div><h4>Quality before quantity</h4><p>Fit people care far more about what they eat than how much. Quality control is easier than quantity control and leads to it.</p></div>
+    <div><h4>Fasting beats portions</h4><p>On low-carb or paleo, it's easier to fast completely than to control portions. Once the body senses food, it outwits the brain.</p></div>
+    <div><h4>The Wonder Bread test</h4><p>How does it stay soft for months at room temperature? If bacteria won't eat it, maybe you shouldn't either.</p></div>
+    <div><h4>Subtract before you add</h4><p>In medicine and diet. Ignore the extremists and cut whatever was invented in the last few hundred years.</p></div>
+    <div><h4>The simplest diet</h4><p>The more processed the food, the less of it you should eat.</p></div>
+    <div><h4>Taste addicts</h4><p>His trainer sends him photos of his meals; they remind him we're all addicted to taste.</p></div>
+  </div>
+
+  <h3>Exercise</h3>
+  <div class="prose">
+    <p>The habit with the biggest effect on his life: a daily morning workout. It makes him feel healthier and younger and keeps him from late nights. "I don't have time" is just another way of saying "it's not a priority". Once physical health was his top priority, he couldn't say that anymore. The workout takes as long as it takes, and he doesn't start the day until it's done. The world can melt down; it can wait 30 minutes. He skips only a handful of days a year. A month of regular yoga makes him feel ten years younger; staying supple is staying young. Which exercise doesn't matter much. The best one is the one you look forward to every day.</p>
+  </div>
+  <div class="tweet">The harder the workout, the easier the day.</div>
+  <div class="prose">
+    <p>He likes walking meetings: the brain works better, you get movement and daylight, they're shorter with fewer pleasantries, more dialogue, no slide decks, and easy to end by walking back.</p>
+  </div>
+  <blockquote class="pull">“Easy choices, hard life. Hard choices, easy life.”<cite>Jerzy Gregorek, Naval's trainer</cite></blockquote>
+
+  <h3>Meditation and mental strength</h3>
+  <div class="prose">
+    <p>An emotion is our evolved attempt to predict the future effect of a current event; in modern settings, emotions are mostly exaggerated or wrong. Breath is one of the few places where the autonomic nervous system meets the somatic one. Relaxed breathing tells your body you're safe, so your forebrain needs fewer resources and more go to the rest of the body, including the immune system.</p>
+    <p>Wim Hof, "The Iceman", inspired him. Naval is from the Indian subcontinent and rejects ice baths outright, but he tried cold showers with Hof's breathing technique. At first he edged in grimacing. After four or five months he turned the water fully cold and stepped straight in, the moment his head started telling him how cold it would be. The lesson: most suffering comes from avoidance. The worst part of a cold shower is the hesitant tiptoeing in. Once you're under, it's just cold. When your body says it's cold, that's different from your mind saying it. Two minutes won't kill you. Now warm showers are one less thing he needs from life.</p>
+  </div>
+  <div class="tweet">Meditation is intermittent fasting for the mind. Too much sugar makes a heavy body; too much distraction makes a heavy mind.</div>
+  <div class="prose">
+    <p>Meditation is like dieting: everyone says they do it, almost nobody really does. He tried at least four kinds. Mindfulness works best for him: walking, ideally in nature, for ten or fifteen minutes without judging anything. He used to laugh at a man's bad hair. Why? Because he was losing his own and feared it would all be gone. About 90 percent of such thoughts are fear, the rest wishful thinking. When you watch your thoughts closely, the fears dissolve as you see them. Then you notice the details again: what a beautiful place I live in, I have clothes, I can get a coffee any time, every person here has a full life going on in their own head. Life is pretty good.</p>
+    <p>The method he recommends most is simpler and harder: sit for an hour every morning with your eyes closed and do nothing. Don't fight thoughts, don't follow them. Over a lifetime, painful things have stuck to you like burrs: unresolved pain, mistakes, fears, desires. When you sit without resisting, they come up one by one, like an inbox of unanswered emails going back to childhood. You don't have to work on them. You just watch, now an adult with distance, and they resolve. One day you open the mental inbox and it's empty. It's a state of joy and peace worth its weight in gold. Try it for 60 days, an hour right after waking. By then you'll be tired of listening to your own mind.</p>
+  </div>
+  <div class="tweet">Life hack: when you're in bed, meditate. Either you'll have a deep meditation or you'll fall asleep. You win either way.</div>
+  <div class="prose">
+    <p>Osho has a talk called "The Attraction of Drugs Is Spiritual". People drink, smoke or take psychedelics to control their mental state. Society chases thrills, flow and orgasms for the same reason: to escape the voice in the head, the over-developed sense of self. Naval wants his sense of self to get weaker and quieter with age, so he can be present and appreciate things like a child. Meditation doesn't give you the power to control your inner state. Its benefit is seeing how out of control your mind is: a monkey rattling the bars, screaming, smashing things. Once you've seen it, you start to distance yourself, and in that separation lies freedom.</p>
+    <p>He describes it in programmer's terms. He tries to run his brain in debug mode. Brushing his teeth one morning, he caught himself rehearsing an imaginary podcast with Shane Parrish. Why? Would he care if he embarrassed himself? He'll die anyway. So he went back to brushing and noticed how good the toothbrush felt. About 95 percent of what the brain wants to work on doesn't need solving right now. Buddhists speak of awareness versus ego: an operating system that is always calm, with apps running on top. He tries to stay in the awareness layer and start the monkey mind only when he needs it, then at full power. You are more than your mind, habits and preferences. Over time habitual reactions become driverless freight trains controlling your moods. Watch them closely and you can start to rewrite the program.</p>
+  </div>
+  <ul class="rules">
+    <li>Walking is walking meditation.</li>
+    <li>Journaling is written meditation.</li>
+    <li>Praying is gratitude meditation.</li>
+    <li>Showering is accidental meditation.</li>
+    <li>Sitting quietly is direct meditation.</li>
+  </ul>
+
+  <h3>Choose to grow</h3>
+  <div class="prose">
+    <p>His biggest mistakes all fall in one category, and an exercise reveals them: at 30, what advice would you give your 20-year-old self? At 40, your 30-year-old self? He would have done everything the same, but with less emotion and anger. When he sued people involved in his first company, it worked out in the end, but with a lot of fear and anger. Today he'd simply tell them what happened, what he'd do, and what is fair. Seen long-term and without the emotion, he wouldn't call it a mistake.</p>
+    <p>We are thousands of habits running subconsciously, with a little spare neocortex for new problems. His trainer gave him a light daily routine; doing it every day changed him physically and mentally and taught him the power of habits. To get fit and healthy from overweight and untrained, think of a ten-year journey, swapping one bad habit for a good one every six months or so. Krishnamurti talks about an inner state of revolution: whenever we say we'll "try", we're cowards buying time. When we really want something, we just do it. So be honest: "I'm not ready to quit smoking, I like it too much." Then commit publicly to a smaller step, say a fixed amount for three to six months, instead of beating yourself up. If you are ready, tell everyone you know that you've quit, and swear it.</p>
+  </div>
+  <blockquote class="pull">“Impatience with actions, patience with results.”<cite>Naval</cite></blockquote>
+  <div class="prose">
+    <p>If something needs doing, do it now, fast and well and with full attention. Then wait, because markets, teams and great products take time: polish, polish, polish. As Nivi said, inspiration is perishable; act on it immediately.</p>
+    <p>He doesn't believe in specific goals. Scott Adams: "Have systems, not goals." Use judgment to find the environments where you thrive, then build one where you will succeed with high probability. Your current environment programs your brain, but a smart brain chooses its future environment. He doesn't want to be the most successful person on earth, only the most successful version of himself while working as little as possible: a Naval who does fine in 999 of 1,000 lives. If he could do it as a poor kid from India, almost anyone with a working body and brain can. If there's something you want to do later, do it now. There is no later.</p>
+    <p>He keeps to basics when learning: he'd rather go deep on arithmetic than differential equations. Science is the study of truth, the only true discipline because it makes falsifiable predictions, and maths is the language of nature. He's not religious but spiritual: studying the laws of the universe gives him the awe someone else might feel on a pilgrimage to Mecca. Nearly everything people read is read for social approval, so they can fit in with the herd. People read a hundred rehashed books on evolution and nothing by Darwin. The returns in life lie outside the herd. That's why many of the smartest, most successful people he knows started out as losers: if you'll never be accepted anyway, you do your own thing and find your own path.</p>
+  </div>
+  <div class="tweet">For self-improvement without self-discipline, update your self-image.</div>
+  <div class="prose">
+    <p>Everyone is motivated by something. People who call themselves unmotivated get very motivated about video games. His two rules for his children: first, read. Read everything you can, not just what society or I recommend. Romance, paperbacks, comics: there's no junk. You'll find your way to what you should read. Second, connected to it: maths and persuasion. Persuasion is a real skill, and not hard to learn. Maths is under everything hard: money, science, game theory, politics, investing, computers. You don't need much, but know statistics and probability inside out.</p>
+  </div>
+
+  <h3>Choose to free yourself</h3>
+  <div class="prose">
+    <p>The hardest thing isn't doing what you want; it's knowing what you want. There are no adults. Everyone is making it up as they go. His values haven't changed much: freedom is still in his top three. But the meaning has. It used to be "freedom to": do anything, any time. Now it's "freedom from": from reactions, from anger, from sadness, from obligations.</p>
+  </div>
+  <div class="tweet">Advice to my younger self: "Be exactly who you are." Holding back means staying in bad relationships and bad jobs for years instead of minutes.</div>
+  <div class="grid">
+    <div><h4><span class="k">Freedom from</span>Expectations</h4><p>He doesn't track his effectiveness; self-tracking feels like self-punishment. If someone is hurt by their expectations of you, that's their problem. If you had an agreement, it's yours. Courage isn't running into machine-gun fire; it's not caring what others think. He's known for leaving parties and dinners the moment he realises he's wasting time. Your time is all you have. Other people's happiness is their problem.</p></div>
+    <div><h4><span class="k">Freedom from</span>Anger</h4><p>Anger is a way of signalling clearly that you're willing to be violent, a loss of control. It's a contract with yourself to be physically, mentally and emotionally upset until reality changes. Anger punishes itself: the angry man trying to hold your head under water drowns too.</p></div>
+    <div><h4><span class="k">Freedom from</span>Employment</h4><p>People who live far below their means enjoy a freedom that people busy upgrading their lifestyle can't imagine. Once you've truly controlled your own fate, you'll never let anyone tell you what to do again, and you may no longer be employable.</p></div>
+    <div><h4><span class="k">Freedom from</span>Your own mind</h4><p>Children live almost entirely in the moment. At puberty, wanting begins, and with it planning, identity and ego. A thousand people on a street are all talking to themselves. The mind should be a servant and a tool, not the master. "At best I'm a rat that occasionally looks up at the clouds."</p></div>
+  </div>
+  <div class="tweet">The modern struggle: lone individuals summoning superhuman willpower to fast, meditate and exercise, against armies of scientists and statisticians weaponising abundant food, screens and medicine into junk food, clickbait news, infinite porn, endless games and addictive drugs.</div>
+</section>
+
+<section id="philosophy">
+  <span class="eyebrow">Philosophy</span>
+  <h2>Rational Buddhism</h2>
+  <div class="prose">
+    <p class="lede">"The real truths are heresies. They cannot be spoken, only discovered, whispered and perhaps read." The book closes with Naval's philosophy: three answers to the meaning of life, his core values, his "rational Buddhism", and the present moment.</p>
+  </div>
+  <h3>Three answers to “What is the meaning of life?”</h3>
+  <div class="three">
+    <div><b>Personal</b><p>You have to find it yourself. Anyone else's wisdom, Buddha's or mine, will sound like nonsense. Brood on the question, maybe for years or decades.</p></div>
+    <div><b>None</b><p>"Writing on water, building houses of sand" (Osho). You were dead for ten billion years before and will be for long after. Nothing you do lasts. So you make your own meaning.</p></div>
+    <div><b>Entropy</b><p>Living things locally reverse entropy but speed up global entropy toward the heat death of the universe, where everything is at one energy level. The more complex what we build, the sooner we are all one.</p></div>
+  </div>
+  <div class="prose">
+    <p>Under the second answer, he lists the meanings you can choose: is this a play I'm watching? a dance of self-expression? something I want for its own sake? An eternal afterlife decided by 70 years on earth makes no sense to him; after death, he thinks, it's like before birth. Do you remember that? That's what it will be like.</p>
+  </div>
+  <h3>Living by your values</h3>
+  <div class="grid">
+    <div><h4>Honesty</h4><p>A core-core-core value. Never be somewhere he has to watch what he says. Separating what you say from what you think splits your mind and pulls you out of the moment. Before you can lie to someone else, you have to lie to yourself.</p></div>
+    <div><h4>Long-term thinking</h4><p>If someone he does business with shows short-term thinking toward someone else, he stops dealing with them. He only wants people around him he could spend the rest of his life with.</p></div>
+    <div><h4>Peer relationships</h4><p>No hierarchy. He doesn't want to be above or below anyone. If they can't treat each other as equals, he won't work with them.</p></div>
+    <div><h4>No anger</h4><p>Anger was useful when he was young and full of testosterone. "Anger is a hot coal you hold in your hand while waiting to throw it at someone else." He removes angry people from his life without judging them.</p></div>
+  </div>
+  <div class="prose">
+    <p>When values match, the small things don't matter; most conflict between people is a values mismatch. When he met his wife, she was less sure than he was. She came round once she got to know his values, and he's glad he had developed them by then. Munger: to get a good partner, you have to deserve a good partner. Both are loving and family-oriented. Once you have a child, the question of the meaning of life is answered: the most important thing in the universe is suddenly no longer in your own body.</p>
+  </div>
+  <h3>Rational Buddhism</h3>
+  <div class="prose">
+    <p>"Rational" means it has to fit with science and evolution. He keeps what he has verified for himself, by experience or thought experiment: meditation is good for you, quieting the mind is good, there is a base layer of awareness beneath the monkey mind. He drops what he can't verify, like past lives whose karma you're paying off, or the third chakra opening. That may be true or false, but it isn't falsifiable, so he can't treat it as fundamental truth. On one side, evolution as a firm principle because it explains so much about people; on the other, Buddhism as the oldest, most tested philosophy of our inner state. He finds them fully compatible. Try everything, test it, be sceptical, keep what's useful. He doesn't expect to levitate.</p>
+  </div>
+  <div class="tweet">Everyone starts out innocent and is then corrupted. Wisdom is giving up vice and returning to virtue, by way of knowledge. If wisdom could be passed on in words alone, we'd be done by now.</div>
+  <h3>The present is all we have</h3>
+  <div class="prose">
+    <p>Nobody has ever travelled to the past, and nobody has predicted the future in any meaningful way. All that exists is this point in space at this moment. Like every deep truth, it's paradoxical: every moment is unique and passes too fast to grasp. You die and are reborn every moment, whether you notice or not. He can't remember what he said two minutes ago. At best the past is a small fictional tape in his head. Death really means there will be no more future moments.</p>
+  </div>
+  <blockquote class="pull">“Everything is more beautiful because we're doomed. You will never be lovelier than you are now. We will never be here again.”<cite>Homer, The Iliad, quoted by Naval</cite></blockquote>
+  <div class="tweet">Inspiration is perishable. Act on it immediately.</div>
+</section>
+
+<!-- ============ BONUS ============ -->
+<section id="bonus">
+  <span class="eyebrow">Bonus material</span>
+  <h2>What Naval reads, and what he wrote down</h2>
+  <div class="prose">
+    <p>"The truth is, I don't read for self-improvement. I read out of curiosity and interest. The best books are the ones you devour." He spends without restraint on books; they are investments, not costs. When he tells people what he's reading, he leaves out two of every three books, because they sound trivial or embarrassing. He reads plenty he disagrees with, because it might change his mind. Read enough and you become a connoisseur, drifting toward theory and non-fiction.</p>
+  </div>
+  <div class="shelf">
+    <div>
+      <h4>Science &amp; non-fiction</h4>
+      <ul>
+        <li><i>The Beginning of Infinity</i> <span>· David Deutsch. Not easy, but it made him smarter.</span></li>
+        <li><i>Sapiens</i> <span>· Yuval Noah Harari. Best book of the decade, several great ideas per page.</span></li>
+        <li><i>The Rational Optimist</i> <span>· Matt Ridley, who wrote 4 of his 20 favourite books, plus <i>Genome</i>, <i>The Red Queen</i>, <i>The Origins of Virtue</i>, <i>The Evolution of Everything</i>.</span></li>
+        <li><i>Skin in the Game</i> <span>· Nassim Taleb. Best of 2018; also <i>The Bed of Procrustes</i>, <i>The Black Swan</i>, <i>Antifragile</i>, <i>Fooled by Randomness</i>.</span></li>
+        <li><i>Six Easy Pieces</i> <span>· Richard Feynman, for his kids, with <i>Six Not-So-Easy Pieces</i>.</span></li>
+        <li><i>Thing Explainer</i> <span>· Randall Munroe, using only the 1,000 most common words.</span></li>
+        <li><i>Thinking Physics</i> <span>· Lewis Carroll Epstein. Used in primary school and university.</span></li>
+        <li><i>The Lessons of History</i> <span>· Will &amp; Ariel Durant. Thin and broad.</span></li>
+        <li><i>The Sovereign Individual</i> <span>· Davidson &amp; Rees-Mogg. Best since <i>Sapiens</i>.</span></li>
+        <li><i>Poor Charlie's Almanack</i> <span>· Charlie Munger, ed. Peter Kaufman.</span></li>
+        <li><i>Reality Is Not What It Seems</i>, <i>Seven Brief Lessons on Physics</i> <span>· Carlo Rovelli. Best of 2019.</span></li>
+        <li><i>The Compleat Strategyst</i> <span>· J. D. Williams, and <i>The Evolution of Cooperation</i> · Robert Axelrod, for game theory.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Philosophy &amp; spirituality</h4>
+      <ul>
+        <li><i>The Book of Life</i>, <i>Total Freedom</i> <span>· Jiddu Krishnamurti. Huge influence: watch your own mind all the time.</span></li>
+        <li><i>The Book of Secrets</i>, <i>The Great Challenge</i> <span>· Osho. 112 meditations to try one by one.</span></li>
+        <li><i>Siddhartha</i> <span>· Hermann Hesse. The book he has given away most.</span></li>
+        <li><i>Meditations</i> <span>· Marcus Aurelius. Success and power don't fix your inner state.</span></li>
+        <li><i>Love Yourself Like Your Life Depends on It</i> <span>· Kamal Ravikant, his brother, "the philosopher in the family".</span></li>
+        <li><i>The Prophet</i> <span>· Kahlil Gibran. Beside the Gita, Tao Te Ching, Bible and Quran.</span></li>
+        <li>Everything by Jed McKenna and Kapil Gupta; <i>The Way to Love</i> · Anthony de Mello; <i>The Untethered Soul</i> · Michael Singer.</li>
+        <li><i>The Tao of Seneca</i> <span>· his most-listened audiobook.</span></li>
+        <li><i>How to Change Your Mind</i> <span>· Michael Pollan, on psychedelics as a shortcut meditation can also reach.</span></li>
+        <li><i>Striking Thoughts</i> <span>· Bruce Lee.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fiction, comics, essays</h4>
+      <ul>
+        <li><i>Ficciones</i>, <i>Labyrinths</i> <span>· Jorge Luis Borges. His most influential non-philosopher.</span></li>
+        <li><i>Stories of Your Life and Others</i>, <i>Exhalation</i>, <i>The Lifecycle of Software Objects</i> <span>· Ted Chiang.</span></li>
+        <li><i>Snow Crash</i> <span>· Neal Stephenson. "In a league of its own."</span></li>
+        <li><i>The Last Question</i> <span>· Isaac Asimov. He quotes it constantly.</span></li>
+        <li><i>Transmetropolitan</i>, <i>The Boys</i>, <i>Planetary</i>, <i>The Sandman</i> <span>· graphic novels; and <i>Rick and Morty</i>.</span></li>
+        <li>"The Day You Became a Better Writer" <span>· Scott Adams, his template for writing.</span></li>
+        <li>"Crony Beliefs" <span>· Kevin Simler. Ten minutes to get smarter.</span></li>
+        <li>"You and Your Research" <span>· Richard Hamming, on doing great work.</span></li>
+        <li>Blogs <span>· Farnam Street, Stratechery, Melting Asphalt, Idle Words.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Life formulas (2008)</h3>
+  <div class="prose"><p>Notes to himself. "These aren't definitions. They're algorithms for success. Your frame of reference, and so your calculations, may differ."</p></div>
+  <div class="formulas" role="list">
+    <div role="listitem"><b>Happiness</b> = Health + Wealth + Good relationships</div>
+    <div role="listitem"><b>Health</b> = Exercise + Diet + Sleep</div>
+    <div role="listitem"><b>Exercise</b> = High-intensity resistance training + Sports + Rest</div>
+    <div role="listitem"><b>Sleep</b> = No alarms + 8–9 hours + Circadian rhythms</div>
+    <div role="listitem"><b>Wealth</b> = Income + Wealth × (Return on investment)</div>
+    <div role="listitem"><b>Income</b> = Accountability + Leverage + Specific knowledge</div>
+    <div role="listitem"><b>Accountability</b> = Personal brand + Personal platform + Taking risk</div>
+    <div role="listitem"><b>Leverage</b> = Capital + Labour + Intellectual property</div>
+    <div role="listitem"><b>Specific knowledge</b> = Knowing how to do something society can't easily train others to do</div>
+    <div role="listitem"><b>Return on investment</b> = Buy and hold + Valuation + Margin of safety</div>
+  </div>
+
+  <h3>Naval's rules (2016)</h3>
+  <ul class="rules">
+    <li>Be present above all else.</li>
+    <li>Desire is suffering. <small>Buddha</small></li>
+    <li>Anger is a hot coal you hold in your hand while waiting to throw it at someone else. <small>Buddha</small></li>
+    <li>If you can't see yourself working with someone for life, don't work with them for a day.</li>
+    <li>Reading (learning) is the ultimate meta-skill and can be traded for anything else.</li>
+    <li>All the real benefits in life come from compound interest.</li>
+    <li>Earn with your mind, not your time.</li>
+    <li>99 percent of all effort is wasted.</li>
+    <li>Total honesty at all times. It's almost always possible to be honest and positive.</li>
+    <li>Praise specifically, criticise generally. <small>Warren Buffett</small></li>
+    <li>Truth is that which has predictive power.</li>
+    <li>Watch every thought. (Always ask, "Why am I having this thought?")</li>
+    <li>All greatness comes from suffering.</li>
+    <li>Love is given, not received.</li>
+    <li>Enlightenment is the space between your thoughts. <small>Eckhart Tolle</small></li>
+    <li>Mathematics is the language of nature.</li>
+    <li>Every moment has to be complete in and of itself.</li>
+  </ul>
+  <blockquote class="pull">“Health, love and your mission, in that order. Nothing else matters.”<cite>Naval</cite></blockquote>
+</section>
+
+<!-- ============ PRACTICE ============ -->
+<section id="practice">
+  <span class="eyebrow">Taking it off the page</span>
+  <h2>Eight things to try</h2>
+  <div class="prose"><p>Ferriss's advice was to test Naval under stress, not to quote him. These are the most concrete experiments in the book.</p></div>
+  <div class="practice">
+    <div><h4>Set an absurd hourly rate</h4><p>Pick a number that feels too high. Price every errand, return and repair against it, and outsource or drop what costs less.</p><span class="from">Prioritise and focus</span></div>
+    <div><h4>Ask the people who knew you at 12</h4><p>What did you do effortlessly that others noticed? That's where specific knowledge starts. Then ask if it can be productized.</p><span class="from">Specific knowledge</span></div>
+    <div><h4>Put your name on one thing</h4><p>Publish, build or invest in public. Code and media need nobody's permission.</p><span class="from">Accountability · leverage</span></div>
+    <div><h4>Protect one empty day a week</h4><p>Schedule two so you keep one. No meetings: time to get bored and think.</p><span class="from">How to think clearly</span></div>
+    <div><h4>Default to no, then run uphill</h4><p>Can't decide? No. Two equal options? Take the one that hurts more now.</p><span class="from">Learning to decide</span></div>
+    <div><h4>Hold one big desire</h4><p>Name the one thing you've chosen to be unhappy about. For every other wish, ask: will I be unhappy if this doesn't happen?</p><span class="from">Every desire is chosen unhappiness</span></div>
+    <div><h4>Sixty mornings, one hour</h4><p>Sit with eyes closed, don't fight or follow thoughts, and let the old inbox empty.</p><span class="from">Meditation</span></div>
+    <div><h4>Change, accept or leave</h4><p>For each stuck situation, choose one of the three and stop wishing. Look for the upside of small annoyances until it takes a split second.</p><span class="from">Finding happiness in acceptance</span></div>
+  </div>
+</section>
+
+<footer>
+  <p>Summary of <i>Der Almanach von Naval Ravikant: Ein Leitfaden auf dem Weg zu Reichtum und Glücklichsein</i> by Eric Jorgenson (FinanzBuch Verlag, 2021; translated by Sascha Mattke), the German edition of <i>The Almanack of Naval Ravikant</i> (Magrathea, 2020). Quotes are rendered back into English from the German text and may differ from Naval's original wording.</p>
+  <p>The book is free from Naval's publisher as a PDF and e-book. Naval's essays and podcast: nav.al.</p>
+  <p><a href="../">← Kai's Pages</a></p>
+</footer>
+</div>
+</body>
+</html>
