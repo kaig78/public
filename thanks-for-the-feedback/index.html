@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Thanks for the Feedback by Douglas Stone and Sheila Heen – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Permanent+Marker&family=Libre+Franklin:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* The cover is an off-white sheet with the title in tall red condensed capitals, editor's
+   pencil marks scribbled around it ("MUCH LARGER", "SWITCH?"), and a yellow sticky note
+   written in blue marker. The page keeps the paper, the red capitals, the sticky notes for
+   the sentences worth trying, and grey pencil for the asides. */
+:root{
+  --bg:#f6f4ef; --paper:#fffdf8; --ink:#1d1b19; --muted:#615c55; --line:#e2ddd3;
+  --red:#d2232a; --note:#fbe98a; --noteink:#1d3f9a; --pencil:#8b8780;
+  --truth:#d2232a; --rel:#1d3f9a; --id:#7a4c9c;
+  --cond:Oswald,"Arial Narrow",sans-serif; --marker:"Permanent Marker","Comic Sans MS",cursive; --sans:"Libre Franklin",system-ui,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#161514; --paper:#1f1d1b; --ink:#efebe4; --muted:#aaa49b; --line:#33302c;
+  --red:#ff5a55; --note:#5a5221; --noteink:#c9d8ff; --pencil:#8f8a82; --truth:#ff6b66; --rel:#8fb0ff; --id:#c4a0e4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161514; --paper:#1f1d1b; --ink:#efebe4; --muted:#aaa49b; --line:#33302c;
+  --red:#ff5a55; --note:#5a5221; --noteink:#c9d8ff; --pencil:#8f8a82; --truth:#ff6b66; --rel:#8fb0ff; --id:#c4a0e4; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17.5px/1.66 var(--serif)}
+a{color:var(--red)}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:600 13px var(--sans)}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:3px 13px;font:600 12px var(--sans);cursor:pointer}
+.hero{position:relative;text-align:center;padding:30px 0 36px}
+.hero h1{margin:0;font:700 clamp(3rem,13vw,6rem)/.92 var(--cond);color:var(--red);text-transform:uppercase;letter-spacing:.01em}
+.hero h1 small{display:block;font:500 clamp(1rem,4vw,1.6rem)/1.4 var(--cond);color:var(--ink);letter-spacing:.12em}
+.hero .rule{height:2px;background:var(--pencil);opacity:.5;margin:14px auto;width:min(420px,80%);border-radius:2px;transform:rotate(-.6deg)}
+.hero .tag{font:600 clamp(.85rem,3vw,1.05rem)/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.scribble{position:absolute;right:0;top:4px;font:400 clamp(.9rem,3.2vw,1.2rem)/1.1 var(--marker);color:var(--pencil);transform:rotate(-6deg);text-align:left}
+.sticky{display:inline-block;background:var(--note);color:var(--noteink);font:400 clamp(1rem,3.6vw,1.25rem)/1.35 var(--marker);padding:16px 20px;margin:18px auto 0;transform:rotate(-1.5deg);box-shadow:0 6px 14px rgba(0,0,0,.15);max-width:380px;text-align:left}
+.authors{margin-top:22px;font:700 clamp(1.3rem,5vw,1.9rem)/1.1 var(--sans);color:var(--red)}
+.authors span{color:var(--ink);font-weight:600}
+.intro{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:22px 0 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.intro img{width:130px;border-radius:3px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.intro p{margin:0}
+.facts{font:500 13px/1.5 var(--sans);color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}.scribble{display:none}}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+h2{font:700 clamp(1.6rem,5.4vw,2.3rem)/1.08 var(--cond);margin:0 0 10px;text-transform:uppercase;letter-spacing:.01em}
+h3{font:700 1.05rem var(--sans);margin:22px 0 6px}
+.kick{font:400 1rem var(--marker);color:var(--pencil);margin:0 0 2px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-top:16px}
+.card h3:first-child{margin-top:0}
+.note{background:var(--note);color:var(--noteink);font:400 1.06rem/1.45 var(--marker);padding:12px 16px;border-radius:2px;margin:10px 0;box-shadow:0 4px 10px rgba(0,0,0,.1)}
+.quote{font:italic 400 1.2rem/1.5 var(--serif);margin:22px 0;padding-left:16px;border-left:5px solid var(--red)}
+ul{padding-left:1.2em} li{margin:4px 0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+@media (max-width:640px){.three{grid-template-columns:1fr}}
+.three .card{margin-top:0;border-top:5px solid var(--c)}
+.three .card h3{color:var(--c)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+@media (max-width:620px){.grid2{grid-template-columns:1fr}}
+.lab{font:700 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:4px;color:var(--muted)}
+.bad{border-left:5px solid var(--pencil)} .good{border-left:5px solid var(--red)}
+
+/* trigger sorter */
+.voices{display:grid;gap:8px;margin-top:12px}
+.voices button{text-align:left;background:var(--paper);color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:10px 14px;font:italic 400 16px/1.4 var(--serif);cursor:pointer}
+.voices button:hover,.voices button.on{border-color:var(--ink)}
+.verdict{margin-top:12px}
+.pill{display:inline-block;color:#fff;border-radius:999px;padding:1px 10px;font:700 12px var(--sans);margin-right:6px;vertical-align:1px}
+
+/* sorter: which kind of feedback */
+.sorter{display:grid;gap:10px;margin-top:12px}
+.item{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.item p{margin:0 0 8px;font-style:italic}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts button{background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:999px;padding:4px 12px;font:600 13px var(--sans);cursor:pointer}
+.opts button.right{background:var(--red);border-color:var(--red);color:#fff}
+.opts button.wrong{border-color:var(--pencil);color:var(--pencil);text-decoration:line-through}
+.item .why{font:400 14.5px/1.5 var(--serif);color:var(--muted);margin-top:8px}
+
+/* steps back */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+.steps div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font:400 15px/1.5 var(--serif)}
+.steps b{display:block;font:700 13px var(--sans);color:var(--red);text-transform:uppercase;letter-spacing:.06em}
+table{width:100%;border-collapse:collapse;font:400 15px/1.45 var(--serif);margin-top:12px}
+th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+th{font:700 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tablewrap{overflow-x:auto}
+footer{padding:30px 0 50px;font:500 13px var(--sans);color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Dark</button></div>
+
+  <div class="hero">
+    <div class="scribble">much<br>larger</div>
+    <h1>Thanks<small>for the</small>Feedback</h1>
+    <div class="rule"></div>
+    <div class="tag">The science and art of receiving feedback well</div>
+    <div class="sticky">even when it is off base, unfair, poorly delivered, and frankly, you’re not in the mood</div>
+    <div class="authors">Douglas Stone <span>&amp;</span> Sheila Heen</div>
+  </div>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of Thanks for the Feedback">
+    <div>
+      <p>The authors of <em>Difficult Conversations</em> noticed that feedback always made people’s list of hardest conversations, and that everyone blamed the other side: givers say receivers can’t take it, receivers say givers can’t give it. Companies spend billions teaching people to <em>push</em> feedback better. Stone and Heen argue the real lever is the receiver, who decides what gets in. Their book is about <em>pull</em>: how to learn from feedback even when it’s wrong, unfair or badly delivered, and how to say no when it’s enough.</p>
+      <p class="facts">2014 · Viking · Harvard Negotiation Project · 13 chapters: three triggers, the conversation, getting going, organisations</p>
+    </div>
+  </div>
+
+  <section>
+    <p class="kick">the core tension</p>
+    <h2>We want to learn. We also want to be accepted as we are.</h2>
+    <p>Feedback sits where two deep needs meet: the drive to grow, and the wish to be loved and respected just as we are. Every piece of feedback hints that we are not quite okay yet. That tension never goes away. But receiving feedback well is a skill, not a personality trait, and it can be learned. Receiving well does not mean accepting everything. It means understanding the feedback, managing your reaction, and deciding freely what to take.</p>
+    <p>Why bother? People who seek out feedback, especially negative feedback, adapt faster and get better ratings. John Gottman found that a spouse’s willingness to accept influence predicts a stable marriage. And our children learn how to handle a bad call from watching how we handle ours.</p>
+  </section>
+
+  <section>
+    <p class="kick">chapter 1</p>
+    <h2>Three triggers</h2>
+    <p>When feedback hits, it sets off one of three triggers. Each has its own internal voice and its own way out. The reactions are often reasonable. The problem is that they stop the conversation that would let you sort the useful from the useless.</p>
+    <div class="three">
+      <div class="card" style="--c:var(--truth)"><h3>Truth</h3><p>The feedback itself seems wrong, unfair or unhelpful.</p><p class="lab">Way out</p>Separate the kind of feedback, first understand it, look for your blind spots.</div>
+      <div class="card" style="--c:var(--rel)"><h3>Relationship</h3><p>It’s about <em>who</em> is saying it, or how they treat you.</p><p class="lab">Way out</p>Don’t switchtrack. Look at the system between you.</div>
+      <div class="card" style="--c:var(--id)"><h3>Identity</h3><p>It shakes your sense of who you are.</p><p class="lab">Way out</p>Know your wiring, shrink the distortions, grow a learning identity.</div>
+    </div>
+    <h3>Which one is talking? Tap a thought.</h3>
+    <div class="voices" id="voices">
+      <button type="button" data-t="truth">“That’s just not true. I wasn’t even in that meeting.”</button>
+      <button type="button" data-t="rel">“After everything I’ve done for you, this is what you notice?”</button>
+      <button type="button" data-t="id">“I mess everything up. I’ll never be good at this job.”</button>
+      <button type="button" data-t="rel">“Who are you to tell me? You’ve never run a team.”</button>
+      <button type="button" data-t="truth">“That advice might work for you. It won’t work for me.”</button>
+      <button type="button" data-t="id">“If that’s how they see me, maybe I’m a bad person.”</button>
+    </div>
+    <div class="verdict" id="voicev" aria-live="polite"></div>
+  </section>
+
+  <section>
+    <p class="kick">chapter 2 · truth</p>
+    <h2>Appreciation, coaching, evaluation</h2>
+    <p>“Feedback” means three different things, and most misfires happen when the giver offers one kind and the receiver needs another.</p>
+    <div class="tablewrap"><table>
+      <tr><th>Kind</th><th>It says</th><th>It’s for</th></tr>
+      <tr><td><strong>Appreciation</strong></td><td>“Thanks. I see you. You matter.”</td><td>Motivation and connection. Works only when specific, in a form the person values, and genuine.</td></tr>
+      <tr><td><strong>Coaching</strong></td><td>“Here’s a better way.”</td><td>Learning, or fixing something that bothers the giver in the relationship.</td></tr>
+      <tr><td><strong>Evaluation</strong></td><td>“Here’s where you stand.”</td><td>Ranking, expectations, decisions. Always a comparison.</td></tr>
+    </table></div>
+    <p>At one law firm, the partner Donald finally gives everyone feedback. His assistant wanted thanks and got tips. The junior lawyer wanted tips and got “you’re on track”. The senior associate wanted to know her chances of partnership and got thanks, which she read as “thanks and goodbye”. Three for three on crossed wires.</p>
+    <p>Evaluation is the loudest of the three and drowns out the others, and every bit of coaching carries a hint of evaluation (“so far you haven’t done it well”). So hold the evaluation conversation first and the coaching conversation separately, days later. A student checks the grade before reading the margin notes.</p>
+    <div class="note">“You’re offering coaching. Could you first tell me quickly where I stand overall? Then I can relax and really listen.”</div>
+    <h3>Try it: what kind is this?</h3>
+    <div class="sorter" id="sorter"></div>
+  </section>
+
+  <section>
+    <p class="kick">chapter 3 · truth</p>
+    <h2>From “that’s wrong” to “tell me more”</h2>
+    <p>We are brilliant at finding what’s wrong with feedback: it’s out of date, from the wrong people, right for you but not for me. There is nearly always something. But wrong-spotting defeats learning.</p>
+    <ul>
+      <li><strong>Spot the label.</strong> Feedback comes as “be more assertive” or “you’re too enmeshed”. The giver has a whole film in mind; you only get the title. A sales boss told Nicholas to be “more assertive”, so he pressured a customer to sign on the spot. She had meant: show more energy and interest.</li>
+      <li><strong>Ask where it comes from:</strong> the giver’s data (what they saw) and their interpretation (the story they made of it). “All advice is autobiographical.”</li>
+      <li><strong>Ask where it’s going:</strong> for coaching, what exactly to do differently (“Show me an example, good and bad”). For evaluation, the consequences and expectations (“What were people worried about? What would close the gap?”).</li>
+      <li><strong>Spot differences, not errors.</strong> “Why do we see this differently? What do you see that I don’t?” Different data, different interpretations, different implicit rules, and both of you the hero of your own story.</li>
+      <li><strong>Ask what’s right about it.</strong> Even if 90 percent is off, the last 10 percent can be gold.</li>
+    </ul>
+    <div class="note">“That’s so far from how I see myself that I’m almost speechless. I want to explain why, but first I want to make sure I understand what you’re saying.”</div>
+  </section>
+
+  <section>
+    <p class="kick">chapter 4 · truth</p>
+    <h2>Your blind spots</h2>
+    <p>Everyone can see your face and hear your tone except you. (The brain region that reads voices switches off when we speak.) Annabelle worked hard to “act respectful”, but her eye-rolls and sharp answers leaked her impatience, and now her team found her fake as well.</p>
+    <p>Three things widen the gap between how we see ourselves and how others see us:</p>
+    <ul>
+      <li><strong>Emotional maths:</strong> we subtract our emotions (“that wasn’t really me”); others count them double.</li>
+      <li><strong>Situation versus character:</strong> I was late because of traffic; you were late because you’re disorganised.</li>
+      <li><strong>Intent versus impact:</strong> we judge ourselves by our intentions, others judge us by our impact. Talk about the two separately: “I’ve been trying hard to be more patient, and it sounds like that isn’t the effect I’m having. That bothers me. Let’s figure out why.”</li>
+    </ul>
+    <div class="note">“What do you see me doing, or not doing, that gets in my own way?”</div>
+    <p>Other tools: treat “what’s their agenda?” as a blind-spot alarm, look for the same feedback from different people, ask a friend to be an honest mirror rather than a supportive one, record yourself (Zoe heard that her first words to every idea were negative).</p>
+  </section>
+
+  <section>
+    <p class="kick">chapters 5–6 · relationship</p>
+    <h2>Don’t switchtrack</h2>
+    <p>Louie brings Kim red roses. Kim, gently: she doesn’t like red roses, and she has told him so. Louie: you should have thanked me first. Her topic is “you don’t listen to me”; his is “you don’t appreciate me”. Two people giving feedback, nobody receiving it. That is switchtracking: the receiver answers with their own topic and the original feedback vanishes.</p>
+    <p>Relationship triggers come from what we think of the giver (no credibility, bad motives, bad timing) and how we feel treated (not appreciated, not free, not accepted). The fix is to spot both topics and give each its own track:</p>
+    <div class="note">“I see two topics here, and both matter. Let’s talk about yours first, fully, and then come back to mine.”</div>
+    <p>Listen for the relationship issue inside the advice: “you travel too much” often means “I feel lonely”. When your mother asks why you aren’t married yet, don’t argue about dating; ask what she’s worried about. And the best sources of feedback are often strangers and the people you find hardest: they see you at your worst.</p>
+    <h3>Three steps back</h3>
+    <p>Much feedback is really about the system between two people. You snore; your wife is a light sleeper who won’t use the white-noise machine. Both true.</p>
+    <div class="steps">
+      <div><b>1 · You and me</b>How do our differences collide? Sandy treats worry with small treats, Gil with counting pennies; each makes the other worse.</div>
+      <div><b>2 · Roles</b>Are we “accidental adversaries” because of our jobs? Compliance and traders, sales and legal, HR and everyone.</div>
+      <div><b>3 · Big picture</b>Who else is involved? What do processes, timing, space and old coping strategies add?</div>
+    </div>
+    <p>Then turn back to yourself: what am I contributing? Take responsibility for your part first, or “the system” will sound like an excuse. A useful request: “Here’s what would help me change.”</p>
+  </section>
+
+  <section>
+    <p class="kick">chapters 7–9 · identity</p>
+    <h2>See it at actual size</h2>
+    <p>People differ hugely in how far feedback moves them and how fast they recover (by up to 3,000 percent). Krista waves cheerfully at honking drivers; Alita, a doctor, has left an envelope of patient comments unopened for two months. Wiring isn’t destiny, but it explains a lot. Bad is stronger than good for all of us: the brain has a red alarm and no green one.</p>
+    <p>Strong feelings distort the story: the past fills with every failure (“Google bias”), one thing becomes everything, and now becomes forever. Five ways to shrink it back:</p>
+    <ol>
+      <li><strong>Know your “feedback footprint”</strong> (blame, cry, go silent, agree and never change…) and name it when it shows up. Rehearse the worst case in advance.</li>
+      <li><strong>Separate the strands:</strong> What do I feel? What story am I telling, and what is the threat in it? What was actually said?</li>
+      <li><strong>Contain it:</strong> write down what this feedback is about, and what it is <em>not</em> about.</li>
+      <li><strong>Change your vantage point:</strong> what would you tell a friend? How will this look in twenty years? Can you see the comedy?</li>
+      <li><strong>Accept you can’t control how others see you.</strong> Their view is input, not imprint.</li>
+    </ol>
+    <p>Then hold your identity differently. Simple labels (“I’m a good son”) are all or nothing, so feedback either flattens you or has to be denied. Accept three things: you will make mistakes, your intentions are mixed, and you contributed to the problem. Move from a fixed mindset to a growth mindset, sort what you hear towards coaching rather than verdict, and give yourself a <strong>second score</strong> for how you handle the first.</p>
+  </section>
+
+  <section>
+    <p class="kick">chapter 10</p>
+    <h2>When enough is enough</h2>
+    <p>Being able to say no is part of receiving well, not the opposite. Three boundaries, from soft to hard: “I may not take your advice”; “Not that topic, not now”; “Stop, or the relationship changes.” Warning signs that a boundary is needed: the feedback attacks your character, never stops, always has one more demand, holds the relationship hostage, uses threats rather than warnings, or always requires you to change. The deepest test: do your feelings count in this relationship?</p>
+    <div class="grid2">
+      <div class="card bad"><span class="lab">Not this</span>“I love you, <em>but</em> you have to stop criticising everything.”</div>
+      <div class="card good"><span class="lab">This</span>“Mum, I love you and I know you want the best for me. <em>And</em> your comments about my weight and my flat really upset me. While you stay with me, I need you to keep them to yourself. Can you do that?”</div>
+    </div>
+    <p>Be specific about the request, the time frame and the consequences, and ask for their agreement. If you decide not to change, you still owe others a “duty to mitigate”: ask about the impact, teach them how to deal with the unchanged you, and solve it together.</p>
+  </section>
+
+  <section>
+    <p class="kick">chapter 11</p>
+    <h2>Navigating the conversation</h2>
+    <ul>
+      <li><strong>Open:</strong> what kind of feedback is this, who decides, and is it final or open?</li>
+      <li><strong>Listen</strong> on purpose: talk to your inner voice beforehand. Avoid “hot” questions like “Do you actually believe that?”; if you’re too upset to ask, assert instead.</li>
+      <li><strong>Assert what’s missing,</strong> not that you’re right. “I disagree with that advice” instead of “that advice is wrong”. “That’s upsetting to hear, because it isn’t how I see myself or want to be” instead of “that’s ridiculous”.</li>
+      <li><strong>Be your own process referee:</strong> “We’re both arguing and neither of us is listening. Tell me more about why this matters to you.”</li>
+      <li><strong>Solve problems</strong> by digging for interests behind the advice. Earl, a social worker with a ponytail and missing teeth, wouldn’t cut his hair; instead his boss introduced him to families as a semi-professional banjo player.</li>
+      <li><strong>Close</strong> with a commitment, even if it’s only “Let me think about it and we’ll talk tomorrow.”</li>
+    </ul>
+    <div class="card">
+      <h3>A rating conversation done well</h3>
+      <p>You get a 4 out of 5 despite bringing in 23 new clients, the very thing you were told would earn a 5. Not “This is unfair!”, not a passive “I guess 4 is fine”, not an instant “Can it be changed?” Instead: <em>“I’m surprised, but I don’t know much about the criteria. Can you walk me through them?”</em> Then: <em>“By those criteria I’d have expected a 5. Do you see it differently?”</em> You learn that some committee members doubt your commitment. Hard to hear, and now you know what to work on before deciding whether to contest the rating.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">chapters 12–13</p>
+    <h2>Get going</h2>
+    <ul>
+      <li><strong>Name one thing.</strong> Willpower is limited. Ask five people: “What’s one thing I do that gets in my own way?” and look for the theme. Or at home: “What’s one thing I could change that would make a difference to you?” (One boy’s answer: “We never go bowling any more”, the only time the four of them did something together.)</li>
+      <li><strong>Experiment, don’t decide.</strong> “Try it on” in your head, or try it out once. Not all and always, just some and sometimes.</li>
+      <li><strong>Ride out the J curve.</strong> Change usually makes things worse before better. Commit to a set trial period, make it social, keep score, or tie yourself to the mast.</li>
+      <li><strong>Coach your coach.</strong> “Subtle doesn’t work with me.” “I get defensive at first and come round later.” “Not in the middle of a presentation.”</li>
+      <li><strong>Invite them in.</strong> Asking for help changes the relationship. The good listener who never asked for help, the adviser who opened up about his depression and was finally asked for advice in return.</li>
+    </ul>
+    <p>In organisations: no feedback system is perfect, so explain trade-offs, keep appreciation, coaching and evaluation apart, tell learning stories, and praise the 69 percent who finished their reviews rather than shaming the 31 percent who didn’t.</p>
+  </section>
+
+  <section>
+    <p class="kick">what i take from it</p>
+    <h2>Three lines to remember</h2>
+    <p class="quote">“Their views are input, not imprint.”</p>
+    <ul>
+      <li>First understand, then decide. Understanding is not agreeing.</li>
+      <li>When a conversation splits into two topics, name both and take them one at a time.</li>
+      <li>Find the one useful thing, try it for a while, and score yourself on how you handled it.</li>
+    </ul>
+  </section>
+
+  <footer>Summary for personal use. Book: Douglas Stone and Sheila Heen, <em>Thanks for the Feedback</em>, Viking 2014.</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme'), key='tff-theme';
+  function sys(){return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+  function cur(){return root.getAttribute('data-theme')||sys()}
+  function paint(){btn.textContent=cur()==='dark'?'Light':'Dark'}
+  try{var s=localStorage.getItem(key);if(s)root.setAttribute('data-theme',s)}catch(e){}
+  paint();
+  btn.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem(key,n)}catch(e){}paint()});
+
+  var T={
+    truth:['var(--truth)','Truth trigger','The content feels wrong. Before rejecting it, find out what they actually saw and meant. Ask: “What did you notice that led you there?”'],
+    rel:['var(--rel)','Relationship trigger','The giver, not the content, is the issue. That may be a real topic, but it’s a second topic. Name both and give each its own conversation.'],
+    id:['var(--id)','Identity trigger','The feedback has spread from one thing to everything. Ask what it is about, and what it is not about.']
+  };
+  var vb=document.querySelectorAll('#voices button'), vv=document.getElementById('voicev');
+  vb.forEach(function(b){b.addEventListener('click',function(){vb.forEach(function(x){x.classList.toggle('on',x===b)});var t=T[b.dataset.t];vv.innerHTML='<span class="pill" style="background:'+t[0]+'">'+t[1]+'</span>'+t[2];})});
+
+  var items=[
+    ['Your boss, at the team meeting: “I’m so glad to have you on this team.”','a','Appreciation. Nice, and it tells you nothing about how to improve or where you stand.'],
+    ['“Your presentation would land better if you started with the conclusion.”','c','Coaching. It may also sting as evaluation, but its purpose is to help you get better.'],
+    ['“You’re on track for a first-year associate.”','e','Evaluation. Useful if you wanted to know where you stand; useless if you needed tips.'],
+    ['Your friend: “When was the last time you paid for dinner?”','c','Coaching about the relationship: something bothers the giver and they want it to change.']
+  ];
+  var names={a:'Appreciation',c:'Coaching',e:'Evaluation'};
+  var box=document.getElementById('sorter');
+  items.forEach(function(it){
+    var d=document.createElement('div');d.className='item';
+    var p=document.createElement('p');p.textContent=it[0];d.appendChild(p);
+    var o=document.createElement('div');o.className='opts';
+    var w=document.createElement('div');w.className='why';w.hidden=true;w.textContent=it[2];
+    ['a','c','e'].forEach(function(k){var b=document.createElement('button');b.type='button';b.textContent=names[k];
+      b.addEventListener('click',function(){if(k===it[1]){b.classList.add('right');w.hidden=false}else{b.classList.add('wrong')}});o.appendChild(b)});
+    d.appendChild(o);d.appendChild(w);box.appendChild(d);
+  });
+})();
+</script>
+</body>
+</html>

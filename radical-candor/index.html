@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Radical Candor by Kim Scott – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Work+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* The cover is a slate-grey board inside a pale grey frame, with the title and subtitle
+   written by hand in white chalk-like strokes and the author in spaced capitals. The page
+   keeps the frame and the slate for the hero, the handwriting for headings that "say what
+   you mean", and gives the four quadrants four quiet colours. */
+:root{
+  --bg:#f3f3f1; --paper:#ffffff; --ink:#1f1f21; --muted:#5d5d63; --line:#dcdcdf;
+  --slate:#58585a; --frame:#b4b6ba; --chalk:#ffffff;
+  --rc:#2e8b57; --oa:#c4472b; --re:#2f6db5; --mi:#7b6a8f;
+  --hand:"Gochi Hand","Comic Sans MS",cursive; --sans:"Work Sans",system-ui,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#151517; --paper:#1d1d20; --ink:#ececee; --muted:#a6a6ad; --line:#303035;
+  --slate:#3c3c3f; --frame:#5b5d61; --rc:#5fc48a; --oa:#ef7a5d; --re:#6fa3ea; --mi:#b19fc6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151517; --paper:#1d1d20; --ink:#ececee; --muted:#a6a6ad; --line:#303035;
+  --slate:#3c3c3f; --frame:#5b5d61; --rc:#5fc48a; --oa:#ef7a5d; --re:#6fa3ea; --mi:#b19fc6; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17.5px/1.66 var(--serif)}
+a{color:var(--re)}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:600 13px var(--sans)}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:3px 13px;font:600 12px var(--sans);cursor:pointer}
+.hero{background:var(--frame);padding:14px;border-radius:4px;margin:6px 0 30px}
+.slate{background:var(--slate);color:var(--chalk);padding:clamp(26px,7vw,60px) clamp(20px,6vw,56px);text-align:right}
+.slate h1{font:400 clamp(2.6rem,11vw,5.2rem)/.95 var(--hand);margin:0;letter-spacing:.02em;text-transform:uppercase}
+.slate .sub{font:400 clamp(1.15rem,4.4vw,1.7rem)/1.35 var(--hand);margin:22px 0 0}
+.slate .by{font:500 14px var(--sans);letter-spacing:.42em;text-transform:uppercase;margin-top:26px}
+.intro{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:6px 0 24px;border-bottom:1px solid var(--line)}
+.intro img{width:130px;border-radius:3px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.intro p{margin:0}
+.facts{font:500 13px/1.5 var(--sans);color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+h2{font:400 clamp(1.8rem,6vw,2.5rem)/1.1 var(--hand);margin:0 0 10px}
+h3{font:600 1.05rem var(--sans);margin:22px 0 6px}
+.kick{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;margin:0 0 4px;color:var(--muted)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:16px}
+.card h3:first-child{margin-top:0}
+.quote{font:italic 400 1.2rem/1.5 var(--serif);margin:22px 0;padding-left:16px;border-left:5px solid var(--slate)}
+.say{font:400 1.25rem/1.4 var(--hand);color:var(--ink)}
+ul{padding-left:1.2em}
+li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+@media (max-width:620px){.grid2{grid-template-columns:1fr}}
+.bad{border-left:5px solid var(--oa)}
+.good{border-left:5px solid var(--rc)}
+.lab{font:600 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:4px;color:var(--muted)}
+
+/* quadrant explorer */
+.qwrap{display:grid;grid-template-columns:28px 1fr;grid-template-rows:1fr 28px;gap:6px;margin-top:18px}
+.yax{writing-mode:vertical-rl;transform:rotate(180deg);font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center}
+.xax{grid-column:2;font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center}
+.quad{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.q{border:2px solid transparent;border-radius:12px;padding:14px 12px;min-height:96px;cursor:pointer;color:#fff;font:600 15px/1.25 var(--sans);text-align:left}
+.q small{display:block;font:400 12.5px/1.35 var(--sans);opacity:.92;margin-top:6px}
+.q[aria-pressed="true"]{border-color:var(--ink);box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--ink)}
+.q.re{background:var(--re)}.q.rc{background:var(--rc)}.q.mi{background:var(--mi)}.q.oa{background:var(--oa)}
+.qpanel{margin-top:14px}
+.qpanel .ex{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:620px){.qpanel .ex{grid-template-columns:1fr}}
+
+/* fly-down quiz */
+.choices{display:grid;gap:8px;margin-top:12px}
+.choices button{text-align:left;background:var(--paper);color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:11px 14px;font:400 15.5px/1.45 var(--serif);cursor:pointer}
+.choices button:hover{border-color:var(--ink)}
+.choices button.on{border-color:var(--ink);background:var(--bg)}
+.verdict{margin-top:12px;font:400 15.5px/1.55 var(--serif)}
+.pill{display:inline-block;color:#fff;border-radius:999px;padding:1px 10px;font:600 12px var(--sans);margin-right:6px;vertical-align:1px}
+
+/* growth grid */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tabs button{background:var(--paper);color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font:600 13px var(--sans);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--slate);border-color:var(--slate);color:#fff}
+
+/* GSD wheel */
+.wheel{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:14px;font:600 13px var(--sans)}
+.wheel span{background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:5px 12px}
+.wheel i{color:var(--muted);font-style:normal}
+table{width:100%;border-collapse:collapse;font:400 14.5px/1.45 var(--serif);margin-top:12px}
+th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+th{font:600 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tablewrap{overflow-x:auto}
+footer{padding:30px 0 50px;font:500 13px var(--sans);color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Dark</button></div>
+
+  <div class="hero"><div class="slate">
+    <h1>Radical<br>Candor</h1>
+    <p class="sub">How to Get What You Want<br>by Saying What You Mean</p>
+    <div class="by">Kim Scott</div>
+  </div></div>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of Radical Candor">
+    <div>
+      <p>Kim Scott ran sales teams at Google, designed the management course at Apple University and coached the CEOs of Dropbox, Twitter and Qualtrics. The book starts with her worst failure as a boss: an employee she liked so much she never told him his work was bad, until she had to fire him. Her answer is a simple frame. Show that you care about the person, and say the hard thing clearly, at the same time.</p>
+      <p class="facts">2017 · St. Martin’s Press · Part I: the philosophy (relationships, guidance, team, results) · Part II: tools and a step-by-step start</p>
+    </div>
+  </div>
+
+  <section>
+    <p class="kick">The story that started it</p>
+    <h2>“Why didn’t you tell me?”</h2>
+    <p>At her start-up Juice, Kim hired “Bob”: kind, funny, liked by everyone, and doing terrible work. When he handed in a document that made no sense, she said it was “a good start” and fixed it herself. She did that for ten months. The team covered for him, standards slipped, and her own annoyance grew until she no longer thought the work was bad but the person was. When she finally let him go over coffee, he asked: <em>“Why didn’t you tell me? Why didn’t anyone tell me? I thought you all cared about me!”</em></p>
+    <p>Her point: being nice was not kind. Not telling Bob cost him his job, and it cost the team its trust in her judgment.</p>
+  </section>
+
+  <section>
+    <p class="kick">The frame</p>
+    <h2>Two lines, four corners</h2>
+    <p>One line is <strong>Care Personally</strong>: treat people as whole human beings, not only as workers, and bring your own whole self too. The other is <strong>Challenge Directly</strong>: tell people when their work is not good enough, make the hard calls, and invite them to challenge you back. Put both together and you get Radical Candor. Miss one or both and you land in one of the other three corners. Tap a corner.</p>
+    <div class="qwrap">
+      <div class="yax">Care personally →</div>
+      <div class="quad" role="group" aria-label="Four kinds of guidance">
+        <button class="q re" type="button" data-q="re" aria-pressed="false">Ruinous Empathy<small>Cares, but doesn’t say it</small></button>
+        <button class="q rc" type="button" data-q="rc" aria-pressed="true">Radical Candor<small>Cares and says it</small></button>
+        <button class="q mi" type="button" data-q="mi" aria-pressed="false">Manipulative Insincerity<small>Neither cares nor says it</small></button>
+        <button class="q oa" type="button" data-q="oa" aria-pressed="false">Obnoxious Aggression<small>Says it without caring</small></button>
+      </div>
+      <div></div><div class="xax">Challenge directly →</div>
+    </div>
+    <div class="card qpanel" id="qpanel" aria-live="polite"></div>
+    <p>Two things Scott insists on. The corners describe <em>what you said</em>, never <em>who you are</em>; everyone visits all four. And candor is measured at the listener’s ear, not the speaker’s mouth: what feels direct to you may land as harsh, or as nothing at all.</p>
+  </section>
+
+  <section>
+    <p class="kick">The test you can run in your head</p>
+    <h2>Your colleague’s fly is down</h2>
+    <p>Scott’s simplest way to tell the corners apart. Alex walks out of the restroom, fly open, shirt tail sticking out. A meeting starts in two minutes. What do you do?</p>
+    <div class="choices" id="fly">
+      <button type="button" data-v="rc">Pull Alex aside and say quietly: “Hey, your fly’s down. I’m always glad when someone tells me.”</button>
+      <button type="button" data-v="oa">Point it out loudly in front of everyone. It’s funny, and Alex will fix it.</button>
+      <button type="button" data-v="re">Say nothing. Alex is shy and would be mortified.</button>
+      <button type="button" data-v="mi">Say nothing because you don’t want to look awkward, and nudge a colleague to have a look.</button>
+    </div>
+    <div class="verdict" id="flyv" aria-live="polite"></div>
+    <p>The bigger, scarier versions (a missed target, a bad habit, a body-odour problem) work the same way. Imagine it is only the fly, and “just say it”.</p>
+  </section>
+
+  <section>
+    <p class="kick">Guidance, the atomic unit of management</p>
+    <h2>Get it before you give it</h2>
+    <p>Scott calls praise and criticism “guidance”. A boss has to <strong>get</strong> it, <strong>give</strong> it and <strong>encourage</strong> it between team members. She is clear about the order: ask for criticism of yourself first. You learn a lot, you feel how it lands, and people see that you mean it.</p>
+    <div class="card">
+      <h3>Asking for criticism</h3>
+      <ul>
+        <li><strong>Have one question ready.</strong> <span class="say">“Is there anything I could do, or stop doing, that would make it easier to work with me?”</span></li>
+        <li><strong>Sit through the silence.</strong> The first answer is always “all fine”. Count to six, ask again, or offer to talk later. Sheryl Sandberg kept smiling at a banker after an investor pitch until he came up with something.</li>
+        <li><strong>Listen to understand, not to answer.</strong> Never criticise the criticism. Repeat it back: “So what I’m hearing is…”</li>
+        <li><strong>Reward it.</strong> If you agree, change something visibly. Kim wore a blue rubber band and let her team snap it whenever she interrupted. If you disagree, find the part you agree with, take time, and explain your reasons properly.</li>
+        <li><strong>Count it.</strong> If you only ever hear praise, you are not being told the truth.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Giving guidance</h3>
+      <ul>
+        <li><strong>Be humble.</strong> Say what happened, not who the person is: situation, behaviour, impact. <span class="say">“I think that’s wrong”</span> instead of <span class="say">“You’re wrong.”</span></li>
+        <li><strong>Be helpful.</strong> State your intent: “I’m going to describe a problem I see. I may be wrong, and if I am, tell me.” Show, don’t tell: name the real details, however awkward.</li>
+        <li><strong>Do it right away,</strong> in two or three minutes between meetings. Don’t save it for the one-on-one or the review. Guidance has a short half-life, and unspoken criticism eventually explodes.</li>
+        <li><strong>In person if you can.</strong> Then video, then phone. Email last, and never criticise with Reply All.</li>
+        <li><strong>Praise in public, criticise in private.</strong> Correcting a fact or disagreeing is not criticising the person, and can happen openly.</li>
+        <li><strong>Don’t personalise.</strong> “You’re sloppy” is a verdict. “You’ve been working nights for three weeks and it’s starting to show in the details” is something you can fix together.</li>
+      </ul>
+    </div>
+    <div class="grid2">
+      <div class="card bad"><span class="lab">Not this</span>“Great font! The content is obvious, though. But wow, your desk is so tidy.”<br><small>The “feedback sandwich”: praise as packaging, which everyone sees through.</small></div>
+      <div class="card good"><span class="lab">This</span>“You’re one of the smartest people I know, but saying ‘um’ so much makes you <em>sound</em> stupid. A speaking coach can fix that. Want an intro?”<br><small>Sandberg to Scott: real praise, the problem in plain words, about behaviour not character, plus help.</small></div>
+    </div>
+    <div class="card">
+      <h3>When feelings come up</h3>
+      <p>Scott’s rules: acknowledge the feeling (“I can see you’re frustrated”) and keep asking until you understand. Never say “don’t take it personally” or “don’t be sad”; work is personal and the order only makes it worse. Tears don’t mean you did something wrong. If you can’t cope, say so: <span class="say">“I’m sorry you’re upset. Let me get you some water, and let’s come back to this, because I can see it matters.”</span> And when you are the one in a bad mood, tell the team it isn’t about them.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Team</p>
+    <h2>Rock stars and superstars</h2>
+    <p>An Apple leader told Scott that a team needs both. <strong>Superstars</strong> are on a steep growth curve: they want new challenges and will outgrow the job. <strong>Rock stars</strong> are on a gentle curve: excellent, happy in their craft, the rock the team stands on. Both are equally valuable, and people move between the two at different times of life. The boss’s job is to know which one each person wants to be <em>right now</em>.</p>
+    <div class="tabs" role="tablist" id="gtabs">
+      <button role="tab" type="button" data-g="rock" aria-selected="true">Rock star</button>
+      <button role="tab" type="button" data-g="super" aria-selected="false">Superstar</button>
+      <button role="tab" type="button" data-g="mid" aria-selected="false">Doing OK</button>
+      <button role="tab" type="button" data-g="poor" aria-selected="false">Not working</button>
+    </div>
+    <div class="card" id="gpanel" aria-live="polite"></div>
+    <div class="card">
+      <h3>Career conversations (Russ Laraway’s three talks)</h3>
+      <ol>
+        <li><strong>Life story.</strong> “Starting with kindergarten, tell me about your life.” Listen for the moments people changed course and why. That is where their motivations show.</li>
+        <li><strong>Dreams.</strong> “What would the very top of your career look like?” Ask for three to five dreams, including a crazy one. One of Russ’s people wanted to run a spirulina farm, which turned out to need management experience more than presentation skills.</li>
+        <li><strong>An 18-month plan.</strong> What to learn next, from whom, and how the current job can change to teach it.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Results</p>
+    <h2>Telling people what to do doesn’t work</h2>
+    <p>At Google, Scott reorganised her team quickly and alone. It made sense, and three of her five direct reports left. Sheryl Sandberg: you were spinning a long rope; from the middle it feels slow, but at the end people are hanging on for dear life. Steve Jobs “always got it right” not because he was always right, but because he insisted people prove him wrong: “It was your job to convince me, and you failed.”</p>
+    <div class="wheel"><span>Listen</span><i>→</i><span>Clarify</span><i>→</i><span>Debate</span><i>→</i><span>Decide</span><i>→</i><span>Persuade</span><i>→</i><span>Execute</span><i>→</i><span>Learn</span><i>↺</i></div>
+    <ul>
+      <li><strong>Listen</strong> in your own style: quietly (Tim Cook’s long silences) or loudly (strong opinions, then “Please poke holes in this”). Give the quiet ones a voice.</li>
+      <li><strong>Clarify</strong>: new ideas are fragile. Help people sharpen them before the debate. Pixar’s rule: point out a problem only with a fix attached.</li>
+      <li><strong>Debate</strong> ideas, not egos. Swap sides halfway. Name someone with a duty to dissent.</li>
+      <li><strong>Decide</strong> close to the facts. The boss is usually not the decider.</li>
+      <li><strong>Persuade</strong> with the listener’s emotions, your credibility and shown working, not authority.</li>
+      <li><strong>Execute</strong>: protect the team’s time, keep your own hands in the work.</li>
+      <li><strong>Learn</strong>: admit the “ugly baby”, and change course out loud when the facts change.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="kick">The toolkit</p>
+    <h2>What to do on Monday</h2>
+    <div class="tablewrap"><table>
+      <tr><th>Tool</th><th>What it is</th></tr>
+      <tr><td>One-on-ones</td><td>Their agenda, not yours. Good questions: “What keeps you up at night?” “What are you working on that you don’t want to?” “What are you not working on that you want to?” Warning signs: cancellations, only good news, never a criticism of you.</td></tr>
+      <tr><td>Staff meeting</td><td>Twenty minutes of numbers, fifteen minutes writing and reading updates in silence, thirty minutes naming the week’s big decisions and debates (not settling them).</td></tr>
+      <tr><td>Big debate / big decision</td><td>Separate meetings, so nobody is confused about whether today ends in a decision.</td></tr>
+      <tr><td>Skip-level meetings</td><td>Once a year, ask your managers’ teams what their boss could do better. Take the notes yourself, share them with the manager straight away.</td></tr>
+      <tr><td>“Whoops the Monkey”</td><td>A stuffed toy for whoever tells the story of their own mistake that week. Automatic forgiveness, shared lesson.</td></tr>
+      <tr><td>No back-stabbing</td><td>Don’t let one person complain to you about another. Send them to talk directly, or sit down with both.</td></tr>
+      <tr><td>Think time</td><td>Block it in the calendar and defend it.</td></tr>
+    </table></div>
+    <div class="card">
+      <h3>With your own boss</h3>
+      <p>Ask for guidance first. Then ask permission: <span class="say">“Would it be helpful if I told you what I think about X?”</span> Start small and watch how it lands. If you’ve argued and lost, Andy Grove’s rule applies: listen, challenge, commit. You can then tell your team honestly: “I argued, here is what I said, here is why we’re doing it anyway.”</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">What I take from it</p>
+    <h2>Three lines to remember</h2>
+    <p class="quote">“It’s not mean, it’s clear!” — a stranger at a crosswalk, after telling Scott her dog would die if she didn’t teach it to sit</p>
+    <ul>
+      <li>Most management mistakes happen in Ruinous Empathy: being nice instead of kind.</li>
+      <li>Start by asking for criticism of yourself, and make it worth people’s while to give it.</li>
+      <li>Guidance is a gift, not a whip or a carrot: quick, specific, private when critical, about the work and not the person.</li>
+    </ul>
+  </section>
+
+  <footer>Summary for personal use. Book: Kim Scott, <em>Radical Candor</em>, St. Martin’s Press 2017.</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme'), key='rc-theme';
+  function sys(){return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+  function cur(){return root.getAttribute('data-theme')||sys()}
+  function paint(){btn.textContent=cur()==='dark'?'Light':'Dark'}
+  try{var s=localStorage.getItem(key);if(s)root.setAttribute('data-theme',s)}catch(e){}
+  paint();
+  btn.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem(key,n)}catch(e){}paint()});
+
+  var Q={
+    rc:{t:'Radical Candor',d:'You show you care and you say the hard thing. People can act on it, and they trust you more afterwards, not less.',c:'“The deck was strong on the market data. Slide 6 lost the room, though: three people asked what the chart meant. Want to walk through it together before Thursday?”',p:'“Before I showed this to the board I looked at what you did with the customer quotes. That made the case. Thank you.”'},
+    oa:{t:'Obnoxious Aggression',d:'You challenge but don’t show you care. Scott calls it the second-best corner: at least people know where they stand. But it erodes trust, and the worst form uses what you know about someone’s weak spots against them.',c:'“I said national costume, not dress like a fool!” (a new boss, in front of the whole party)',p:'“Well, you finally got it right this time.”'},
+    re:{t:'Ruinous Empathy',d:'You care but don’t challenge. It feels kind and does the most damage: the person never learns what is wrong. Scott says most management mistakes live here. Like cutting a dog’s tail off an inch a day to spare it pain.',c:'“It’s a good start, I’ll help you finish it.” (about work that was unusable)',p:'“Good job!” with no idea what was good, so it teaches nothing.'},
+    mi:{t:'Manipulative Insincerity',d:'Neither caring nor challenging: flattery to your face, criticism behind your back, praise because it is easier than the truth. The corner people fall into when they are tired, political, or trying too hard to be liked.',c:'Saying nothing, then telling a colleague how bad it was.',p:'“Loved your presentation!” while privately planning to replace them.'}
+  };
+  var panel=document.getElementById('qpanel'), qs=document.querySelectorAll('.q');
+  function showQ(k){var x=Q[k];qs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.q===k?'true':'false')});
+    panel.innerHTML='<h3>'+x.t+'</h3><p>'+x.d+'</p><div class="ex"><div><span class="lab">Criticism sounds like</span>'+x.c+'</div><div><span class="lab">Praise sounds like</span>'+x.p+'</div></div>';}
+  qs.forEach(function(b){b.addEventListener('click',function(){showQ(b.dataset.q)})});
+  showQ('rc');
+
+  var V={
+    rc:['rc','Radical Candor','You care about Alex and you say it. The moment is awkward for ten seconds, and Alex is grateful.'],
+    oa:['oa','Obnoxious Aggression','Alex learns about it, but at the cost of being humiliated. Still better for Alex than silence.'],
+    re:['re','Ruinous Empathy','Ten more people see it, and when Alex finally notices, the embarrassment is worse. Alex will wonder why you didn’t say anything.'],
+    mi:['mi','Manipulative Insincerity','You protected yourself, not Alex, and made it a joke at Alex’s expense. The worst corner.']
+  };
+  var colors={rc:'var(--rc)',oa:'var(--oa)',re:'var(--re)',mi:'var(--mi)'};
+  var fb=document.querySelectorAll('#fly button'), fv=document.getElementById('flyv');
+  fb.forEach(function(b){b.addEventListener('click',function(){fb.forEach(function(x){x.classList.toggle('on',x===b)});var v=V[b.dataset.v];fv.innerHTML='<span class="pill" style="background:'+colors[v[0]]+'">'+v[1]+'</span>'+v[2];})});
+
+  var G={
+    rock:'<h3>Gradual growth, excellent work</h3><p>Recognise and reward, but don’t push a promotion they don’t want. That is how you lose them or create a bad manager. Give top ratings, raises, a “guru” role teaching others if they enjoy it, public credit. Scott turned down a CEO interview during a risky twin pregnancy and needed a boss who respected that. T. S. Eliot’s bank manager offered him a branch; what he needed was to leave an hour early to write.</p>',
+    super:'<h3>Steep growth, excellent work</h3><p>Keep them challenged, find them mentors beyond you, and have them teach their job to someone else, because they won’t stay. Don’t block their moves. Not every superstar wants to manage; give them a path to grow without people to lead.</p>',
+    mid:'<h3>Solid but not excellent</h3><p>There is no such thing as a B-player, only people in the wrong job. Raise the bar. At Google, Scott gave anyone without exceptional work for two years a project where they could shine, and helped them find a better fit elsewhere if that didn’t work.</p>',
+    poor:'<h3>Poor work, not improving</h3><p>First look in the mirror: wrong role, too much too fast, a private crisis, or a culture mismatch? If you’ve been clear, repeatedly, and nothing changes, part ways, and do it with care. The four lies bosses tell themselves: it will get better; anybody is better than nobody; a transfer will fix it; it would hurt morale. Remember a job you were bad at and how relieved you were to leave it. It’s the job that’s wrong for them, not them that’s wrong.</p>'
+  };
+  var gt=document.querySelectorAll('#gtabs button'), gp=document.getElementById('gpanel');
+  function showG(k){gt.forEach(function(b){b.setAttribute('aria-selected',b.dataset.g===k?'true':'false')});gp.innerHTML=G[k];}
+  gt.forEach(function(b){b.addEventListener('click',function(){showG(b.dataset.g)})});
+  showG('rock');
+})();
+</script>
+</body>
+</html>
