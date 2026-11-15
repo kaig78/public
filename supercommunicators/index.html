@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Supercommunicators by Charles Duhigg – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bodoni+Moda:opsz,wght@6..96,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* The cover: plain white, the word "supercommunicators" built up one letter at a time in
+   a staircase of rounded bold lowercase that runs from yellow through orange, red and
+   magenta to violet and black, the author in a tall Bodoni, and a thin black circle
+   holding the subtitle. The page keeps the white, the staircase as the hero, Bodoni for
+   names, and gives the three kinds of conversation three stops from the ramp. */
+:root{
+  --bg:#ffffff; --card:#fbfaf8; --ink:#141414; --muted:#5f5b57; --line:#ebe7e2; --soft:#f6f3ef;
+  --y:#f5b80b; --o:#f07c1b; --r:#e23b2a; --m:#c8287a; --v:#7a2a9c; --d:#2b1450;
+  --prac:#d9670f; --emo:#c8287a; --soc:#6a2a9c;
+  --round:Poppins,system-ui,sans-serif; --didone:"Bodoni Moda",Didot,Georgia,serif; --serif:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121113; --card:#1b1a1d; --ink:#f1eef2; --muted:#aaa3ad; --line:#2c2a30; --soft:#222026;
+  --prac:#ffa257; --emo:#ff7ab8; --soc:#c39af0; --d:#d8c6ff; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121113; --card:#1b1a1d; --ink:#f1eef2; --muted:#aaa3ad; --line:#2c2a30; --soft:#222026;
+  --prac:#ffa257; --emo:#ff7ab8; --soc:#c39af0; --d:#d8c6ff; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17.5px/1.66 var(--serif)}
+a{color:var(--m)}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:600 13px var(--round)}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:3px 13px;font:600 12px var(--round);cursor:pointer}
+.hero{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;padding:18px 0 34px}
+.stair{font:700 clamp(.95rem,4.6vw,1.75rem)/1.08 var(--round);letter-spacing:-.01em;overflow-wrap:anywhere}
+.stair span{display:block}
+.side{text-align:right}
+.author{font:500 clamp(1.6rem,6vw,2.8rem)/1 var(--didone);letter-spacing:.06em;text-transform:uppercase}
+.badge{display:inline-flex;align-items:center;justify-content:center;text-align:center;width:150px;height:150px;border:1.5px solid var(--ink);border-radius:50%;font:600 13px/1.35 var(--round);padding:18px;margin-top:22px}
+@media (max-width:600px){.hero{grid-template-columns:1fr}.side{text-align:left}.badge{width:130px;height:130px;font-size:12px}}
+.intro{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:22px 0 8px;border-top:1px solid var(--line)}
+.intro img{width:130px;border-radius:3px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.intro p{margin:0}
+.facts{font:500 13px/1.5 var(--round);color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:42px 0;border-bottom:1px solid var(--line)}
+h2{font:700 clamp(1.5rem,4.6vw,2.15rem)/1.15 var(--round);margin:0 0 10px;letter-spacing:-.015em}
+h3{font:600 1.08rem var(--round);margin:22px 0 6px}
+.kick{font:600 12px var(--round);letter-spacing:.16em;text-transform:uppercase;margin:0 0 6px;color:var(--m)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:16px}
+.card h3:first-child{margin-top:0}
+.quote{font:italic 400 1.2rem/1.5 var(--serif);margin:22px 0;padding-left:16px;border-left:5px solid var(--o)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.grid2 .card,.grid3 .card{margin:0}
+@media (max-width:700px){.grid3{grid-template-columns:1fr}}
+@media (max-width:620px){.grid2{grid-template-columns:1fr}}
+.kind{border-top:6px solid var(--c)}
+.k-prac{--c:var(--prac)}.k-emo{--c:var(--emo)}.k-soc{--c:var(--soc)}
+.kind h3{color:var(--c);margin-top:0}
+.kind .q{font:700 1.02rem/1.3 var(--round)}
+.rules{counter-reset:r;list-style:none;padding:0;margin:16px 0 0}
+.rules li{counter-increment:r;position:relative;padding:12px 0 12px 54px;border-bottom:1px solid var(--line)}
+.rules li::before{content:counter(r);position:absolute;left:0;top:10px;width:38px;height:38px;border-radius:50%;color:#fff;font:700 18px/38px var(--round);text-align:center;background:var(--o)}
+.rules li:nth-child(2)::before{background:var(--r)}.rules li:nth-child(3)::before{background:var(--m)}.rules li:nth-child(4)::before{background:var(--v)}
+.rules b{font-family:var(--round);font-weight:600}
+.vs{display:grid;grid-template-columns:1fr 1fr;margin-top:14px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.vs div{padding:10px 14px;font-size:15.5px;border-bottom:1px solid var(--line)}
+.vs .h{font:600 13px var(--round);letter-spacing:.08em;text-transform:uppercase;background:var(--soft)}
+.vs div:nth-child(odd){border-right:1px solid var(--line)}
+.vs .no{color:var(--muted)}.vs .yes{font-weight:600}
+@media (max-width:560px){.vs{grid-template-columns:1fr}.vs div:nth-child(odd){border-right:0}.vs .h:nth-child(2){display:none}.vs div.no::before{content:"✗ "}.vs div.yes::before{content:"✓ "}}
+ul.tight{padding-left:20px;margin:8px 0}ul.tight li{margin:4px 0}
+.loop{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.loop div{border-radius:12px;padding:12px;background:var(--soft);font-size:15px}
+.loop b{display:block;font:700 1.4rem var(--round);color:var(--m)}
+@media (max-width:640px){.loop{grid-template-columns:1fr 1fr}}
+/* tools */
+.tool{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:18px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tabs button,.opts button{font:600 13.5px var(--round);border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 13px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.say{font:600 clamp(1.1rem,3.8vw,1.35rem)/1.35 var(--round);text-align:center;margin:8px 0 14px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.opts button.k-prac{border-color:var(--prac);color:var(--prac)}.opts button.k-emo{border-color:var(--emo);color:var(--emo)}.opts button.k-soc{border-color:var(--soc);color:var(--soc)}
+.fb{margin-top:14px;min-height:4.5em;border-radius:12px;background:var(--soft);padding:12px 14px;font-size:15.5px}
+.fb .rep{display:block;font:600 1rem/1.4 var(--round);margin:6px 0 2px}
+.score{font:500 13px var(--round);color:var(--muted);text-align:center;margin-top:8px}
+.next{display:block;margin:10px auto 0;font:600 13.5px var(--round);border:0;background:var(--m);color:#fff;border-radius:999px;padding:7px 18px;cursor:pointer}
+.deep{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
+.deep .from{background:var(--soft);border-radius:12px;padding:12px;font:600 1rem/1.35 var(--round);color:var(--muted)}
+.deep .to{border:2px solid var(--m);border-radius:12px;padding:12px;font:600 1rem/1.35 var(--round)}
+.deep .arrow{font:700 1.4rem var(--round);color:var(--m)}
+@media (max-width:560px){.deep{grid-template-columns:1fr}.deep .arrow{transform:rotate(90deg);justify-self:center}}
+.why{font-size:15px;color:var(--muted);margin-top:10px}
+.grid-me{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;margin-top:6px;font-size:14.5px}
+.grid-me .ax{font:600 12px var(--round);color:var(--muted);display:flex;align-items:center;justify-content:center;text-align:center}
+.grid-me button{font:400 14.5px/1.35 var(--serif);text-align:left;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:10px 12px;cursor:pointer;min-height:76px}
+.grid-me button b{display:block;font:600 14px var(--round)}
+.grid-me button[aria-pressed="true"]{border-color:var(--m);background:var(--soft)}
+.grid-me .vlab{writing-mode:vertical-rl;transform:rotate(180deg)}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;position:relative;padding:10px 0 10px 50px;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);position:absolute;left:0;top:8px;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--ink);font:700 16px/31px var(--round);text-align:center}
+footer{padding:36px 0 60px;font:400 15px var(--round);color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.related a{border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-decoration:none;background:var(--card)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+  <header class="hero">
+    <h1 class="stair" id="stair" aria-label="Supercommunicators"></h1>
+    <div class="side">
+      <div class="author">Charles<br>Duhigg</div>
+      <div class="badge">How to Unlock the Secret Language of Connection</div>
+    </div>
+  </header>
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of Supercommunicators">
+    <div>
+      <p>Duhigg, the author of <em>The Power of Habit</em>, wrote this book after failing as a first-time manager: a colleague told him they felt ignored, and he answered with an org chart. At home he gave advice when his family wanted support. So he went looking for the people everyone calls on a bad day (an FBI negotiator, a CIA recruiter, a cancer surgeon, a juror, sitcom writers, a NASA psychiatrist) and the research behind them. His answer: most discussions are really three different conversations, and connecting means having the same one at the same time.</p>
+      <div class="facts">Random House / Doubleday, 2024 · 7 chapters in 4 parts + 4 practical guides · ~300 pages</div>
+    </div>
+  </div>
+
+  <section>
+    <p class="kick">Prologue · the man who was easy to talk to</p>
+    <h2>“It's a set of skills. There's nothing magical about it.”</h2>
+    <p>Researchers asked Felix Sigala, the FBI's go-to negotiator, how he thinks about communication. Instead of explaining, he asked a lab head about his favourite memory (his daughter's wedding, months before his mother died) and shared one of his own. Forty-five minutes of questions and matching stories later, a psychologist was ready to give divorce advice from her own life to a room of colleagues. Felix pointed it out: the trust had been built from small choices, close listening, questions that invite vulnerability, and feelings answered with feelings.</p>
+    <p>Brains that “click” really do synchronise: pupils, pulse, even skin conductance align (<em>neural entrainment</em>), and the more a listener's brain couples with a storyteller's, the more they understand. In one Dartmouth study the groups that synchronised most were not the ones with strong leaders. Dominant leaders produced the <em>least</em> alignment. The high synchronisers had people who talked less, asked 10–20 times more questions, repeated others' ideas, admitted confusion, laughed at others' jokes and, above all, kept adjusting to the group's mood. When one man hinted at being abandoned, they got serious with him at once.</p>
+  </section>
+
+  <section>
+    <p class="kick">The core idea</p>
+    <h2>Three conversations, one matching principle</h2>
+    <div class="grid3">
+      <div class="card kind k-prac"><h3>Practical</h3><p class="q">What's this really about?</p>Decisions, plans, logistics, ideas. Under the surface topic there is usually a deeper one, and a quiet negotiation about how we'll talk and decide.</div>
+      <div class="card kind k-emo"><h3>Emotional</h3><p class="q">How do we feel?</p>Feelings, worries, joys. Shaping every conversation, spoken or not. Here people want empathy, not solutions.</div>
+      <div class="card kind k-soc"><h3>Social</h3><p class="q">Who are we?</p>Relationships, groups and identities: who we know, where we come from, what our communities mean to us. One study found about 70% of our talk is social.</div>
+    </div>
+    <p style="margin-top:16px">Each kind uses a different mindset (and, simplifying a lot, different brain networks), and we switch between them in a single talk. <b>Miscommunication happens when two people are having different conversations.</b> “Jim is driving me crazy!” “Why don't you just invite him to lunch?” One person is in the emotional conversation, the other in the practical one. Hence the <b>matching principle</b>: notice which conversation is going on, then match it. If someone is emotional, let yourself be emotional too; if they want to decide something, decide with them.</p>
+    <p>Matching is not mimicry. The CIA officer Jim Lawler had lost his would-be source Yasmin by revealing who he worked for, then spent their last dinner trying to cheer her up with jokes. Nothing worked until he remembered a sale he once made in Texas by answering a customer's honesty with his own. He told Yasmin about his own fears of failing, the same way she had told him hers. She said “I can do this”, and stayed a source for twenty years. His rule: <em>listen for someone's truth, and put your truth next to it.</em></p>
+    <p>A useful question when a talk starts to tip into an argument: <em>“Do we want to talk about our feelings, make a decision, or is this about something else?”</em> Teachers ask a crying student a lighter version: <em>“Do you want to be helped, hugged, or heard?”</em></p>
+    <div class="tool" id="kindTool">
+      <p class="kick" style="text-align:center">Try it · which conversation is this?</p>
+      <p class="say" id="kSay"></p>
+      <div class="opts" id="kOpts"></div>
+      <div class="fb" id="kFb" aria-live="polite">Choose the kind of conversation the speaker wants to have.</div>
+      <p class="score" id="kScore"></p>
+      <button class="next" id="kNext" type="button" hidden>Next line</button>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">The four rules of a learning conversation</p>
+    <h2>Learn how they see the world, and help them see yours</h2>
+    <p>For the conversations that matter, the goal is a <b>learning conversation</b>. The book's four practical guides each develop one rule:</p>
+    <ol class="rules">
+      <li><b>Pay attention to what kind of conversation is happening.</b> Before you speak, ask yourself: why am I opening my mouth? In one bank, writing a single sentence about the goal before each meeting (“to choose a budget”, “to air complaints and hear each other out”) noticeably cut the shouting matches.</li>
+      <li><b>Share your goals, and ask what others want.</b> Spend thirty seconds beforehand: two topics, one thing you hope to say, one question you'll ask. Notice the signals (leaning in, backchanneling, interrupting to add something) and treat silence and a blank face as a declined invitation, not as listening.</li>
+      <li><b>Ask about others' feelings, and share your own.</b> Ask deep questions, read mood and energy, prove you're listening by looping, and give vulnerability back.</li>
+      <li><b>Explore whether identities matter here.</b> Bring out the many identities each person has, put everyone on equal footing and agree on guidelines for the hard talks.</li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="kick">Part II · What's this really about?</p>
+    <h2>Every conversation is a quiet negotiation</h2>
+    <p>The start of every conversation hides a negotiation that nobody announces, with two questions: <b>what does everyone want from this?</b> and <b>how will we talk and decide together?</b> We settle them by trying things out: a joke, an interruption, a new topic, a change of tone. Then we watch whether the others play along.</p>
+    <h3>The surgeon who stopped lecturing</h3>
+    <p>Dr Behfar Ehdaie, a prostate-cancer surgeon, kept advising low-risk patients to watch and wait, armed with data: for 97% the outcome was the same as with surgery. Patients fixated on the other 3%, researched counter-evidence and asked for the operation anyway. A negotiation professor showed him his mistake: he had assumed he knew what they wanted. So he started asking: <em>“What does this diagnosis mean to you?”</em> One man talked about his father dying young and not wanting to put his own family through that. Some wanted reassurance, some control, some to hear what others had done. Within six months, 30% fewer of his patients chose surgery. In his words, asking what people want “is an invitation for people to tell you who they are”.</p>
+    <h3>The juror who changed eleven minds</h3>
+    <p>In 1985 a Milwaukee jury had to judge Leroy Reed, an ex-convict with a learning disability who had bought a pistol because a mail-order private-detective course told him to, then left it boxed in his closet. On paper he was clearly guilty. One juror, the literature professor John Boly, started with <em>“I'm not at all sure what I think… I want to figure this out together”</em> and asked casual questions until he had a mental list: Henry wants guidance, Barbara wants compassion, Karl (a by-the-book firefighter) wants the law followed. Then he experimented, wondering aloud how he'd walk around Milwaukee with a new gun on his hip, whereas Reed locked his away “like a sacramental thing”. Others picked up the story (“we can't even say he knew how to use it”).</p>
+    <p>Duhigg names two kinds of persuasion. The <b>logic of costs and benefits</b> runs on data and analysis. The <b>logic of similarities</b> asks “what would someone like me do here?” and runs on stories. Find out which one the other person is using. Data never moves a conspiracy-minded cousin; a call-centre agent doesn't want your backstory. For Karl, the last holdout, Boly switched to Karl's own logic: his students were being mugged and assaulted, and juries wasting time on harmless Leroy Reeds were bad for public safety. Then he gave Karl respect for his sense of the law, to cover the cost to his pride of changing his mind. The verdict was twelve times not guilty.</p>
+    <p>From negotiation research (<em>Getting to Yes</em>): when you're stuck, put something new on the table. If the talks on wages are stuck, add sick days or working from home. At home, that might be: “What if I do the shopping and the dishes, and you get the kids and the laundry?”</p>
+  </section>
+
+  <section>
+    <p class="kick">Part III · How do we feel?</p>
+    <h2>Ask deep questions, then answer them yourself</h2>
+    <p>Psychologist Nick Epley ignored the lectures of police and parents after two drunk-driving stops as a teenager, but a counsellor who only asked questions (“Why were you drinking?” “What if you had hit someone?”) got through. That shaped his research: <b>perspective-taking</b> (imagining yourself in their shoes) often fails, because you guess wrong. <b>Perspective-getting</b> works: ask. When people describe their feelings, they hand you a map of what they care about.</p>
+    <p>The famous “36 questions” (Aron's Fast Friends Procedure) turned strangers into friends, and once into a married couple, within an hour. But only when partners took turns. Answering all the questions in a row was boring and created no closeness. What makes a question deep is that it invites <b>vulnerability</b>, and vulnerability triggers emotional contagion. Questions about everyday facts (“How did you spend Halloween?”) stay shallow; questions about values, beliefs, judgements and formative experiences (“What do you value most in a friendship?”) go deep, even when they don't sound emotional.</p>
+    <p>People badly overestimate how awkward this will be. Hedge-fund managers dreaded answering “When did you last cry in front of someone?”. Twenty minutes later they wouldn't stop talking, and one called it the best conversation he'd had in months. When Duhigg's father died, almost nobody asked him “What was your dad like?”, though it was the one question he longed for.</p>
+    <div class="tool">
+      <p class="kick" style="text-align:center">Try it · make a question deep</p>
+      <div class="tabs" id="dTabs" role="group" aria-label="Question"></div>
+      <div class="deep"><div class="from" id="dFrom"></div><div class="arrow" aria-hidden="true">→</div><div class="to" id="dTo"></div></div>
+      <p class="why" id="dWhy"></p>
+    </div>
+    <p style="margin-top:16px">Three marks of a deep question: it asks about values, beliefs, judgements or experiences rather than facts; it invites people to say how they feel (“How did you feel when…?”, “Why do you think he got angry?”); and asking it feels a little like sharing something yourself. A shortcut from one study: imagine you're talking to a close friend. What would you ask? Then <b>follow up</b>, because follow-up questions are the clearest sign you're listening, and they let you share about yourself without making it about you.</p>
+    <h3>Hearing what isn't said: mood and energy</h3>
+    <p>The first <em>Big Bang Theory</em> pilot flopped because the audience couldn't tell what anyone felt. In real life, people rarely name their feelings; they act them out (“I cooked you dinner, you're <em>welcome</em>!”). Exact emotions are hard to read, but two dimensions are easy: <b>mood</b> (positive or negative) and <b>energy</b> (high or low). Most laughter (over 80%) follows lines that aren't funny at all; it signals a wish to connect, and it only works at matching intensity. A NASA psychiatrist picked astronauts partly by whether they matched his laughter and his sadness. One candidate gave a perfect answer about his father's death but asked nothing when the interviewer spoke of his own sister. Another asked, “Were you close? How did your mother take it?”. Guess who flew. The reshot pilot worked through a scene of everyone saying “Hi” at the same volume and pace, each with a different attitude.</p>
+    <div class="tool">
+      <p class="kick" style="text-align:center">Try it · mood × energy</p>
+      <div class="grid-me" id="meGrid">
+        <div></div><div class="ax">Negative mood</div><div class="ax">Positive mood</div>
+        <div class="ax vlab">High energy</div>
+        <button type="button" data-i="0"><b>Agitated, angry</b>loud, fast, tense</button>
+        <button type="button" data-i="1"><b>Excited, thrilled</b>loud, fast, bright</button>
+        <div class="ax vlab">Low energy</div>
+        <button type="button" data-i="2"><b>Sad, worn out</b>quiet, slow, sighing</button>
+        <button type="button" data-i="3"><b>Content, calm</b>quiet, relaxed, warm</button>
+      </div>
+      <div class="fb" id="meFb" aria-live="polite">Pick what you notice in the other person.</div>
+    </div>
+    <h3>In a conflict: prove you're listening</h3>
+    <p>In an argument, everyone suspects the other side is just preparing a rebuttal, and speakers barely notice nodding anyway. So you have to <b>prove</b> you've heard, after they stop talking. The method is called <b>looping for understanding</b>:</p>
+    <div class="loop">
+      <div><b>1</b>Ask questions until you understand.</div>
+      <div><b>2</b>Say back, in your own words, what you heard.</div>
+      <div><b>3</b>Ask: “Did I get that right?”</div>
+      <div><b>4</b>Repeat until they say yes.</div>
+    </div>
+    <p style="margin-top:14px">At a 2018 meeting of gun-control and gun-rights activists, an Alabama gun owner told how his mother killed herself when he was a baby. A liberal activist from New York looped it back: “You've carried a lot of pain and found it hard to express, and it made you push people away.” “Exactly,” he said, and took her hands. “Thank you for hearing me.” Personal stories only, no lessons, no rebuttals dressed as questions. A woman explained her bedside gun as proof “that I deserve to feel safe”. Sheila Heen (<em>Difficult Conversations</em>): every fight has a surface conflict and an emotional one underneath, and if you don't talk about the feelings, “you'll just keep having the same argument over and over”.</p>
+    <p>Online, without training, it took 45 minutes before someone was called a Nazi. Research on couples explains part of it. Happy and unhappy couples fight about the same things; the difference is <b>what they try to control</b>. Unhappy couples try to control each other (“Don't use that tone!” “If you roll your eyes once more…”). Happy couples control <b>themselves</b> (pauses, breathing, slower speech, a joke), <b>the setting</b> (not at 2 a.m. with a screaming baby) and <b>the scope of the fight</b> (no “kitchen-sinking” from holidays to “you never do the laundry”). Looping and matching work partly because they <em>share</em> control.</p>
+    <h3>Answering vulnerability</h3>
+    <ul class="tight">
+      <li>Loop until you understand the feeling, then work out the need: comfort, empathy, advice, tough love? (If you can't tell, loop more.)</li>
+      <li>Ask permission: “Would it be okay if I told you how that lands with me?” / “Can I share something from my own life?”</li>
+      <li>Give something back, without grabbing the spotlight. To a cancer diagnosis, not your own aches, but: “I know how scary that is. Tell me what you're feeling.”</li>
+      <li>In a conflict: confirm you understand, name specific points of agreement (“I think you're right that…”), soften your claims (“it might be…”) and stay specific: the dishes last night, not “you never help”.</li>
+      <li>Online: be extra polite, drop the sarcasm, add thanks, greetings and hedges (“I think…”), and don't criticise in public.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="kick">Part IV · Who are we?</p>
+    <h2>Many identities, equal footing, real common ground</h2>
+    <p>A senior doctor once told the paediatrician Jay Rosenbloom how to handle vaccine sceptics: “Tell them: I'm the doctor and I know better than you.” Handouts and studies only made parents dig in; for many, being sceptical had become an <b>identity</b>, and nobody changes if the price is admitting that everything they believed was wrong. Rosenbloom noticed the white coat narrowed him too, into “the team with all the answers”.</p>
+    <p>Research on stereotype threat points to a remedy. Women primed with the “men are better at maths” stereotype scored lower, unless they had first drawn a detailed map of all their roles, clubs and identities. Then the gap disappeared. A small map with few nodes didn't help. Reminding ourselves that everyone contains many identities loosens the grip of any single one. So Rosenbloom started each visit by finding something in common: family, neighbourhood, favourite parks. That reminded him he was a parent and a neighbour too.</p>
+    <p>In Qaraqosh, Iraq, after ISIS, a soccer league added three Muslim players to half the Christian teams, with equal playing time for everyone. Within weeks the teams spoke Arabic so they could win, pooled money for taxis for teammates stuck at checkpoints, and voted a Muslim player of the year. It worked through three design choices, which are also the recipe for any <b>Who are we?</b> conversation:</p>
+    <div class="grid3">
+      <div class="card kind k-soc"><h3>Many identities</h3>Goalkeeper, captain, drinks organiser, not just “the Muslim”. Ask about backgrounds and roles; avoid one-dimensional labels: “As a lawyer you back the police, but as a parent, do you worry when cops stop your kid?”</div>
+      <div class="card kind k-soc"><h3>Equal footing</h3>No unsolicited advice, no showing off connections or status. Pick topics where everyone is an expert (your own experience) or everyone a beginner. Draw out the quiet.</div>
+      <div class="card kind k-soc"><h3>Shared identity that means something</h3>Not just “we both know Jim”, but what Jim's friendship means to each of you. Make an identity you already share more salient.</div>
+    </div>
+    <p style="margin-top:16px">The doctor Rima Chamie met a devout retired policeman who said God would protect him. She didn't argue. She praised his faith, mentioned how much his grandchildren must matter, and on the way out said she was grateful God gave us brains and labs. “Maybe He gave us vaccines to keep us safe?” Half an hour later he asked for the shot. Another motivational-interviewing move: “On a scale of one to ten, how do you feel about this? Three? Why not two? Why not four?”</p>
+    <h3>The hardest conversations need guidelines</h3>
+    <p>What wrecks these talks most reliably is <b>identity threat</b>: putting someone into a group they reject (“You're rich, so you know most rich people are snobs”), or excluding them from one they value (“Since you don't have kids, you might not understand…”). In one study people met about eleven of these a week. Netflix learned this the hard way. After an executive used a racial slur as an “example” and the company's culture of brutal candour turned the fallout into civil war, its new inclusion team set ground rules:</p>
+    <div class="vs">
+      <div class="h">Instead of</div><div class="h">Try</div>
+      <div class="no">Generalising (“people like you…”, “everyone who voted for…”)</div><div class="yes">Speaking from your own experience and feelings</div>
+      <div class="no">Questioning, minimising or solving someone's painful story</div><div class="yes">“That must have hurt. I'm sorry it happened to you.”</div>
+      <div class="no">Blaming, shaming, attacking</div><div class="yes">Questions asked in good faith, and the right not to answer</div>
+      <div class="no">Hoping it won't get awkward</div><div class="yes">Saying up front that it will, and that mistakes are expected</div>
+    </div>
+    <p style="margin-top:14px">Leaders opened with their own mistakes, then asked, “When were you excluded?”, and later, the harder question, “When did you exclude someone?”. One designer, describing the “Netflix bar” for hiring (RISD, Apple), stopped mid-sentence: “I just described me.” In another study, friends who spent a few minutes before talking about race noting the benefits, the likely obstacles and how they'd handle them had longer, deeper and warmer conversations. The goal is not perfection but staying in the conversation, with room for messy learning.</p>
+    <h3>Before any hard talk</h3>
+    <ul class="tight">
+      <li><b>Before:</b> What do I want to say, learn, achieve, and what might they want? How will it start? What could go wrong (anger, silence), and what will I do then? Is it worth it? (Usually yes.) Studies suggest the person with less power should speak first.</li>
+      <li><b>At the start:</b> agree on guidelines, ask for everyone's goals (emotional: “I want us to stay friends”; practical: “I'd like a plan”) and say out loud that discomfort is normal and useful.</li>
+      <li><b>During:</b> draw out multiple identities, keep everyone level, acknowledge experiences, look for genuine common ground and deepen it (“Valley High? Me too! It was hard for me. What was it like for you?”), and change the setting if it helps.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="kick">Afterword · the Harvard study</p>
+    <h2>Connection is the most important thing</h2>
+    <p>The Harvard Study of Adult Development has followed lives since 1938. Godfrey Camille was a hypochondriac student with a bleak childhood who everyone expected to fail. During a year on a tuberculosis ward he made friends with patients and nurses, and died at 82 on a climbing trip, with 300 people at his 80th birthday. “I learned love,” he said. John Marsden, the star student and successful lawyer, coped by keeping things to himself and “toughing it out”, and ended lonely. The study's clearest finding: <b>how satisfied people were with their relationships at 50 predicted their health at 80</b> better than anything else. Duhigg's own fix started with a list of every conversation he had botched in a year. The skills help, but what matters is wanting to connect.</p>
+  </section>
+
+  <section>
+    <p class="kick">Five things to keep</p>
+    <h2>Pocket version</h2>
+    <ol class="keep">
+      <li><b>Name the conversation.</b> Practical, emotional or social? If you're unsure, ask: helped, hugged or heard?</li>
+      <li><b>Don't assume what they want; ask.</b> Open questions about what it means to them, then match their logic: data or stories.</li>
+      <li><b>Ask one level deeper and follow up.</b> Feelings, values and experiences, not facts. Then share something real yourself.</li>
+      <li><b>Loop to prove you heard,</b> and in a fight control yourself, the setting and the scope, never the other person.</li>
+      <li><b>No one is one thing.</b> Bring out many identities, keep everyone level and speak from your own experience.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Summary of <em>Supercommunicators: How to Unlock the Secret Language of Connection</em> by Charles Duhigg (Random House, 2024). Quotations are brief; examples condensed and paraphrased.</p>
+    <p>Related summaries:</p>
+    <div class="related"><a href="../difficult-conversations/">Difficult Conversations</a><a href="../never-split-the-difference/">Never Split the Difference</a><a href="../the-next-conversation/">The Next Conversation</a><a href="../miteinander-reden/">Miteinander reden 1</a><a href="../coaching-habit/">The Coaching Habit</a><a href="../talk/">Talk</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('sc-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('sc-theme',n);};
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+
+/* hero staircase: one word built letter by letter, coloured along the cover's ramp */
+var W='supercommunicators',st=document.getElementById('stair');
+var ramp=[[245,184,11],[240,124,27],[226,59,42],[200,40,122],[122,42,156],[43,20,80]];
+function col(t){var s=t*(ramp.length-1),i=Math.min(Math.floor(s),ramp.length-2),f=s-i,a=ramp[i],b=ramp[i+1];return 'rgb('+a.map(function(v,k){return Math.round(v+(b[k]-v)*f)}).join(',')+')';}
+var dark=function(){return root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches)};
+function drawStair(){var h='';for(var n=1;n<=W.length;n++){var t=(n-1)/(W.length-1),c=(n===W.length)?(dark()?'#f1eef2':'#141414'):col(t);h+='<span aria-hidden="true" style="color:'+c+'">'+W.slice(0,n)+'</span>';}st.innerHTML=h;}
+drawStair();document.getElementById('theme').addEventListener('click',drawStair);
+try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawStair)}catch(e){}
+
+/* which conversation? */
+var K={prac:'Practical · What\'s this really about?',emo:'Emotional · How do we feel?',soc:'Social · Who are we?'};
+var L=[
+ ['“Jim is driving me crazy. He took credit for my slides again.”','emo','Frustration first. A fix (“invite him to lunch”) will feel like not being heard.','“Again? That\'s infuriating. What happened?”'],
+ ['“Can we decide by Friday whether we take the flat on Elm Street?”','prac','A decision with a deadline. Match it: options, costs, a plan.','“Yes. Shall we list what matters most to each of us and compare the two places?”'],
+ ['“You went to Bonn? Do you know Lena Fischer from the choir?”','soc','Looking for shared people and places, a Who are we? move.','“I do! How do you know her? What was the choir like for you?”'],
+ ['“I don\'t know… the scan is on Monday.”','emo','Low energy, worry underneath. Acknowledge before anything else.','“That sounds like a lot to carry this weekend. How are you feeling about it?”'],
+ ['“What\'s our budget for the summer trip, roughly?”','prac','Pure planning. A long story about your feelings would miss the mark.','“About 3,000. Want me to sketch two options at that level?”'],
+ ['“As the only woman on that board, I see this differently than you do.”','soc','An identity is being named. Ask about it, don\'t argue past it.','“I\'d like to understand that. What do you see that I might be missing?”'],
+ ['“I finally got the job!!”','emo','High energy, positive mood. Match it, then ask.','“No way, congratulations! Tell me everything, how did they tell you?”'],
+ ['“Everyone in accounting says layoffs are coming.”','soc','Office gossip about the group and where we stand in it. Underneath there may also be worry.','“What are people saying? And how are you feeling about it?”']
+];
+var ord=L.map(function(_,i){return i}).sort(function(){return Math.random()-.5}),pos=0,ok=0,done=0,ans=false;
+var kS=document.getElementById('kSay'),kO=document.getElementById('kOpts'),kF=document.getElementById('kFb'),kSc=document.getElementById('kScore'),kN=document.getElementById('kNext');
+['prac','emo','soc'].forEach(function(k){var b=document.createElement('button');b.type='button';b.className='k-'+k;b.textContent=K[k].split(' · ')[0];b.onclick=function(){pick(k)};kO.appendChild(b)});
+function showK(){var x=L[ord[pos%ord.length]];kS.textContent=x[0];kF.textContent='Choose the kind of conversation the speaker wants to have.';kN.hidden=true;ans=false;}
+function pick(k){if(ans)return;ans=true;var x=L[ord[pos%ord.length]];done++;if(k===x[1])ok++;
+ kF.innerHTML=(k===x[1]?'<b>Yes, ':'<b>Closer to ')+esc(K[x[1]])+'</b><br>'+esc(x[2])+'<span class="rep">'+esc(x[3])+'</span>';
+ kSc.textContent=ok+' of '+done+' matched';kN.hidden=false;kN.focus();}
+kN.onclick=function(){pos++;showK()};showK();
+
+/* deepen a question */
+var D=[
+ ['Job','“What do you do for work?”','“Do you love that job? Is there something else you dream of doing?”','Two questions in and you\'ve reached someone\'s dreams. Epley does this with strangers on trains.'],
+ ['Home','“Where do you live?”','“What do you like about living there?”','Asks for a preference and a reason, which makes it easy to share your own in return.'],
+ ['College','“Where did you study?”','“What was your favourite part of university?”','Invites an experience instead of a fact, with obvious follow-ups (“Me too! Do you still…?”).'],
+ ['Holiday','“Where did you go on holiday?”','“What was the best moment of the trip?”','Asks for a judgement and a feeling, not an itinerary.'],
+ ['Grief','“Sorry for your loss.” (and change the subject)','“What was your dad like?”','The question Duhigg longed for after his father died, and almost nobody asked.'],
+ ['Workplace','“How long have you worked here?”','“What\'s the best part of working here?”','Shown to make listeners think, and to cut through stereotypes about who is allowed to be “emotional”.']
+];
+var dT=document.getElementById('dTabs'),dF=document.getElementById('dFrom'),dTo=document.getElementById('dTo'),dW=document.getElementById('dWhy'),dc=0;
+function drawD(){var x=D[dc];dF.textContent=x[1];dTo.textContent=x[2];dW.textContent=x[3];dT.querySelectorAll('button').forEach(function(b,i){b.setAttribute('aria-pressed',i===dc?'true':'false')});}
+D.forEach(function(x,i){var b=document.createElement('button');b.type='button';b.textContent=x[0];b.onclick=function(){dc=i;drawD()};dT.appendChild(b)});drawD();
+
+/* mood x energy */
+var ME=[
+ ['Don\'t match it: anger plus anger drives you apart. Acknowledge the mood and energy instead, calmly and without rushing.','“You seem really upset. What happened?”'],
+ ['Match it. A lukewarm “nice” to someone bursting with news feels like rejection.','“That\'s fantastic! How did it happen?”'],
+ ['Come down to their pace. Lower your voice, slow down, leave pauses. Cheering them up too soon misses them (Lawler\'s mistake with Yasmin).','“You seem worn out. Do you want to talk about it, or just sit for a bit?”'],
+ ['Settle in with them. Keep it unhurried; this is a good moment for a deeper question.','“You look happy today. What\'s going on in your life that you\'re enjoying?”']
+];
+var mg=document.getElementById('meGrid'),mf=document.getElementById('meFb');
+mg.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed','false');b.onclick=function(){mg.querySelectorAll('button').forEach(function(y){y.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');var x=ME[+b.dataset.i];mf.innerHTML=esc(x[0])+'<span class="rep">'+esc(x[1])+'</span>';};});
+})();
+</script>
+</body>
+</html>
