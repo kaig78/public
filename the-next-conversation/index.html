@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Next Conversation by Jefferson Fisher – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+<style>
+/* The cover: warm off-white, heavy black geometric type, and two thin gold speech bubbles
+   that overlap in the middle where the subtitle sits. The page keeps the paper, the black,
+   and uses gold bubble outlines for the three rules and the "say this" boxes. */
+:root{
+  --bg:#f6f4ef; --card:#fffefb; --ink:#141414; --muted:#5d5a52; --line:#e3ded2;
+  --gold:#b8955a; --gold2:#d8bd8a; --soft:#f1ead9; --red:#a5432f;
+  --sans:Lexend,system-ui,sans-serif; --serif:Literata,Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141311; --card:#1c1a17; --ink:#f1ede4; --muted:#b2aa98; --line:#33302a; --soft:#262219; --gold:#d8bd8a; --red:#e48d76; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141311; --card:#1c1a17; --ink:#f1ede4; --muted:#b2aa98; --line:#33302a; --soft:#262219; --gold:#d8bd8a; --red:#e48d76; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.7 var(--serif)}
+a{color:var(--ink);text-decoration-color:var(--gold)}
+.wrap{max-width:800px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:500 13px var(--sans)}
+.top a{text-decoration:none}
+.theme{background:none;border:1.5px solid var(--gold);color:var(--ink);border-radius:999px;padding:4px 12px;font:500 12px var(--sans);cursor:pointer}
+.hero{position:relative;padding:20px 0 40px;overflow:hidden}
+.bubbles{position:absolute;right:-60px;top:-30px;width:420px;height:520px;pointer-events:none;opacity:.9}
+@media (max-width:640px){.bubbles{width:300px;right:-110px;opacity:.5}}
+h1{position:relative;font:800 clamp(2.8rem,10vw,5.4rem)/1 var(--sans);margin:30px 0 0;letter-spacing:-.02em}
+.sub{position:relative;font:500 clamp(1rem,3.4vw,1.35rem) var(--sans);letter-spacing:.14em;color:var(--gold);margin-top:14px}
+.auth{position:relative;font:800 clamp(1.6rem,6vw,2.6rem)/1.05 var(--sans);margin-top:24px}
+.intro{position:relative;display:grid;grid-template-columns:120px 1fr;gap:20px;margin-top:30px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+.intro img{width:120px;border-radius:3px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.intro p{margin:0}
+.facts{font:300 13px/1.5 var(--sans);color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:42px 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(1.6rem,4.6vw,2.3rem)/1.12 var(--sans);margin:0 0 10px;letter-spacing:-.01em}
+h3{font:500 1.1rem var(--sans);margin:22px 0 6px}
+.kick{font:500 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;margin:0 0 6px;color:var(--gold)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.grid2 .card{margin:0}.grid2 h3{margin-top:0}
+@media (max-width:620px){.grid2{grid-template-columns:1fr}}
+.quote{font:italic 400 1.3rem/1.45 var(--serif);margin:22px 0;padding:6px 0 6px 18px;border-left:3px solid var(--gold)}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.rules div{border:2px solid var(--gold);border-radius:999px 999px 999px 8px;padding:20px 18px;text-align:center;font:300 14px/1.45 var(--sans);background:var(--card)}
+.rules b{display:block;font:800 1.25rem var(--sans);margin-bottom:4px}
+@media (max-width:640px){.rules{grid-template-columns:1fr}.rules div{border-radius:28px 28px 28px 8px}}
+.saythis{border:2px solid var(--gold);border-radius:22px 22px 22px 6px;padding:14px 18px;margin-top:12px;background:var(--card)}
+.saythis p{margin:4px 0;font:400 16px/1.5 var(--serif)}
+.saythis .lbl{font:500 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.ba{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:12px}
+.ba div{padding:9px 14px;font-size:15px;border-bottom:1px solid var(--line)}
+.ba .h{font:500 12px var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.ba .x{background:var(--card);color:var(--muted)}.ba .y{background:var(--soft)}
+.ba .x s{text-decoration-color:var(--red)}
+.list{list-style:none;padding:0;margin:10px 0 0}
+.list li{padding:8px 0 8px 28px;position:relative;border-bottom:1px dashed var(--line)}
+.list li::before{content:"";position:absolute;left:4px;top:15px;width:12px;height:12px;border:2px solid var(--gold);border-radius:50% 50% 50% 2px}
+.num{counter-reset:n;list-style:none;padding:0;margin:10px 0 0}
+.num li{counter-increment:n;position:relative;padding:8px 0 8px 42px;border-bottom:1px dashed var(--line)}
+.num li::before{content:counter(n);position:absolute;left:0;top:6px;width:30px;height:30px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font:800 14px var(--sans)}
+/* breath */
+.breath{display:grid;grid-template-columns:180px 1fr;gap:22px;align-items:center}
+@media (max-width:560px){.breath{grid-template-columns:1fr;justify-items:center;text-align:center}}
+.ring{width:170px;height:170px;border-radius:50%;border:3px solid var(--gold);display:grid;place-items:center;position:relative}
+.ring i{position:absolute;inset:0;margin:auto;width:40%;height:40%;border-radius:50%;background:var(--gold2);opacity:.55;transition:width linear,height linear}
+.ring span{position:relative;font:500 15px var(--sans);text-align:center}
+.btn{font:500 14px var(--sans);border:1.5px solid var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer;background:none;color:var(--ink)}
+.btn.solid{background:var(--ink);color:var(--bg)}
+/* editor */
+textarea{width:100%;min-height:110px;font:400 16px/1.5 var(--serif);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}
+.out{margin-top:12px;padding:14px 16px;border-radius:12px;background:var(--soft);font:400 16px/1.55 var(--serif)}
+.out mark{background:none;color:var(--red);text-decoration:line-through}
+.hits{font:300 13px var(--sans);color:var(--muted);margin-top:8px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tabs button{font:500 13px var(--sans);border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 13px;cursor:pointer}
+.tabs button[aria-pressed="true"]{border-color:var(--gold);background:var(--gold);color:#fff}
+.reply{margin-top:12px}
+.types{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.types div{border-radius:14px;padding:12px;background:var(--card);border:1px solid var(--line);font:300 14px/1.45 var(--sans)}
+.types b{display:block;font:500 15px var(--sans)}
+@media (max-width:640px){.types{grid-template-columns:1fr}}
+.wb{background:var(--soft);border-radius:18px;padding:20px;margin-top:16px}
+footer{padding:36px 0 60px;font:300 15px var(--sans);color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.related a{border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-decoration:none;background:var(--card)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <svg class="bubbles" viewBox="0 0 420 520" aria-hidden="true"><g fill="none" stroke="#c9a76a" stroke-width="3"><path d="M210 30a170 170 0 1 1-120 290l-35 30 12-48A170 170 0 0 1 210 30z"/><path d="M210 190a170 170 0 1 1 120 290l35 30-12-48A170 170 0 0 0 210 190z"/></g></svg>
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+  <h1>The Next<br>Conversation</h1>
+  <div class="sub">ARGUE LESS, TALK MORE</div>
+  <div class="auth">Jefferson<br>Fisher</div>
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of The Next Conversation">
+    <div>
+      <p>A Texas trial lawyer from four generations of lawyers, the eldest of four siblings, and since 2022 the man filming communication tips from the driver's seat of his truck ("Try that and follow me"). Millions followed. The book is deliberately not academic: his own courtroom and family stories, and <b>the exact words</b> to use. His advice on reading it: pick <b>one</b> tip, use it for a week, then add the next. This page also covers the companion <em>Workbook</em>.</p>
+      <div class="facts">TarcherPerigee, 2025 · 12 chapters in 2 parts · + <em>The Next Conversation Workbook</em> (2025)</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <p class="kick">Part I · The essentials</p>
+  <h2>Never win an argument</h2>
+  <p>In a deposition, a giant of a witness named Bobby LaPray slammed the table: lawyers were the worst thing to happen to America, these were "stupid questions," and he didn't trust Fisher "as far as I can throw you." Fisher felt the anger rise and a put-down forming. Instead he breathed, waited ten seconds, said "Well, maybe you're right," and then asked: <b>"What's been your biggest struggle this year?"</b> Bobby had just moved his mother into a care home, alone, buried in legal letters. "I'm sorry. I can't imagine what that's like. But what I can tell you is, you're a good son." The man wept, they took a break, Fisher connected him with an elder-law colleague, and the deposition ended in a bear hug.</p>
+  <p class="quote">The person you see isn't the person you're talking to.</p>
+  <p>When someone jumps from level one to level ten, there's another conversation going on in their head. You can win an argument and still be wrong; and even if you win, you lose trust, respect and connection. <b>An argument is a window into the other person's struggle.</b> The goal isn't to win but to untie the knot. (Workbook: "Drop the rope." Pulling from both ends only tightens it.)</p>
+  <div class="grid2">
+    <div class="card"><h3>Your next conversation matters more than the first</h3>The first try at a hard talk often goes wrong. The next one has hindsight, lower voices and "what I meant was…". And it needs a <b>realistic goal</b>: not "they'll apologise and admit I was right," but "they'll know I care," "I'll understand where they're coming from," "we'll agree one step." The mindset: <em>have something to learn, not something to prove.</em></div>
+    <div class="card"><h3>…and values</h3>Values answer "how will I show up for myself?" Fisher's three: <em>Where there is room for kindness, I will use it. Tell them who I am without saying my name. If I can't be a bridge, I'll be a lighthouse.</em> Ask a friend: What do I seem to care about? Three words for my character? Which emotion should I show more?</div>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">The redo</h3>
+    <p style="margin:0">Two friends meet after a fight. Version one: "What you said really hurt me." "I hurt <em>you</em>?" …and lunch ends in a walkout. Version two, with the goal "understand each other" and the value "gratitude": "Thank you for meeting with me." "Of course." "I could've done better." "Me too." <b>"Help me better understand what you were trying to tell me. What did I miss?"</b> Twenty minutes of listening, no rebuttal. Then: "Can I share what I saw from my perspective?"</p>
+  </div>
+  <h3>Transmission is not connection</h3>
+  <p>His mother texted asking the mileage of the old Nissan; three "No ma'am"s later she wrote "I just don't like your attitude." Text strips out tone. <b>Connection = understanding + acknowledgement</b>, like two-factor authentication, and it doesn't require agreement ("You don't have to like it. You just need to understand it," his father used to say). Three things cut it: lack of <b>awareness</b> (you can't hear your own voice or see your own frown), lack of <b>understanding</b>, and lack of <b>self-assurance</b> ("Sorry to bother you, you can totally say no, but…").</p>
+</section>
+
+<section>
+  <p class="kick">Part II · The function</p>
+  <h2>Three rules</h2>
+  <div class="rules">
+    <div><b>Say it with control</b>Yourself, the moment, the pace.</div>
+    <div><b>Say it with confidence</b>Assertive words, difficult people, boundaries.</div>
+    <div><b>Say it to connect</b>Frames, defensiveness, difficult conversations.</div>
+  </div>
+</section>
+
+<section>
+  <p class="kick">Rule 1 · Control yourself (ch. 4)</p>
+  <h2>Ignition and cooling</h2>
+  <p>John lets three-year-old Lilly play "a bit longer"; Grace, who wants an 8 p.m. bedtime, has swallowed it for two weeks. Within minutes: "You have a control problem," "You're never here," and then the line about her "crazy mother." Every argument has an <b>ignition phase</b> (feel threatened, get defensive, go nuclear) and a <b>cooling phase</b> (walk away, reach understanding, or nothing left to burn). Lilly ends up asleep on her bedroom floor.</p>
+  <p>Triggers are physical (a raised voice, someone in your space, a pointed finger, tiredness) or psychological:</p>
+  <div class="types">
+    <div><b>Social evaluation</b>Will they judge, reject, laugh? The theme is <em>vulnerability</em>.</div>
+    <div><b>Personal identity</b>Competence, autonomy, purpose, values. Even "no" or a sharp "why?" can trigger it. The theme is <em>adequacy</em>.</div>
+    <div><b>Loss</b>Of a relationship, a job, status. Shows up as over-explaining, hesitating, avoiding. The theme is <em>separation</em>.</div>
+  </div>
+  <p style="margin-top:14px"><b>What triggers you teaches you.</b> Once you know your own, a raised voice from someone else reads as data, "a plea to remove the threat." If you want to put out their fire, find their trigger. (Workbook: replay your last argument as a spectator, rate its temperature at the start, peak and end, and note which words, looks and silences heated or cooled it.)</p>
+</section>
+
+<section>
+  <p class="kick">Rule 1 · Control the moment (ch. 5)</p>
+  <h2>Breath, scan, small talk</h2>
+  <p>In the pine woods of East Texas you can't see rain coming, but you sense it. Arguments have the same charged pause. Most people spend it planning their opening line for the <em>other</em> person. Spend it on yourself.</p>
+  <div class="card">
+    <h3 style="margin-top:0">1 · Your first word is your breath</h3>
+    <p>His client Elizabeth, pressed by a hostile lawyer, took a breath before answering "No." When he jabbed "Did you not like my question?", she smiled: "I like your questions just fine. I appreciate you helping me clarify it. Again, the answer is no." <b>Conversational breath:</b> in through the nose for two seconds, a quick extra sip for one, out through the nose for six. Nobody notices.</p>
+    <div class="breath">
+      <div class="ring" id="ring"><i id="ball"></i><span id="bTxt">Ready</span></div>
+      <div><p style="margin:0 0 10px">Try three rounds (about 27 seconds). The workbook suggests a timer, because most people count too fast.</p><button class="btn solid" id="bGo" type="button">Start</button> <button class="btn" id="bStop" type="button">Stop</button></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>2 · Your first thought is a quick scan</h3>At the top of the in-breath, close your eyes for a long blink; on the out-breath, find where the stress sits (jaw, shoulders) and let it go; name the feeling in one word. Then say it out loud with <b>"I can tell…"</b>: "I can tell I'm getting frustrated. I need a time-out." "I can tell I'm overwhelmed. Can we take this step by step?" "I can tell I'm still confused. Could you say it differently?" When you claim it, you control it.</div>
+    <div class="card"><h3>3 · Your first conversation is a small talk</h3>A short phrase to yourself, tied to your goal, <b>starting with a verb</b>, personal. His first trial: "You be Jefferson." "Wait for the right pitch." "Let the facts tell the truth." A client's: "Tell 'em, Doris" (her grandfather's line to her grandmother). For Bobby LaPray it would have been "Find the struggle." Others: "Claim your space," "Put it down, [name]," "Slow down, [name]."</div>
+  </div>
+</section>
+
+<section>
+  <p class="kick">Rule 1 · Control the pace (ch. 6)</p>
+  <h2>The gift of a pause</h2>
+  <p>Anxious people speak faster. Silence isn't weakness; rushing is. <b>Short pauses (1–4 s) are reading glasses</b>: "How are you?" … "I'm good" suddenly means it. <b>Long pauses (5–10 s) are mirrors</b>: they let rude or false words echo back. A truck driver swore he "never" texted while driving. Eight seconds of silence and he was back-pedalling; ten more and he admitted texting a colleague. "Honest people don't mind the discomfort of a pause."</p>
+  <p>In arguments, <b>the person who speaks last often loses</b>: the only way to top a cutting remark is to cut deeper. A pause also lets you ask: Is this person worth my peace of mind? Does this need saying, now, by me?</p>
+</section>
+
+<section>
+  <p class="kick">Rule 2 · Assertive voice (ch. 7)</p>
+  <h2>Confidence is as assertive does</h2>
+  <p>Confidence is a feeling, and you can't summon feelings on command (a scientist slams a clipboard on your head: "Now feel forgiveness!"). Assertiveness is the action that produces it. Ten lessons, each worth a week:</p>
+  <ol class="num">
+    <li><b>Every word matters.</b> "I just wanted to touch base" → "I wanted to touch base."</li>
+    <li><b>Prove it to yourself.</b> Say what you'll do, in the present tense, then do it: "I'm attaching the contract." Not "I'm leaving if you say that again!" and staying, but "I'm going to end the call," and ending it.</li>
+    <li><b>State needs unapologetically.</b> Be your own lawyer: "My client won't accept that" → "I won't accept that." Swap fake sorries for thanks: "Sorry I'm late" → "Thank you for your patience."</li>
+    <li><b>Speak when it matters.</b> The partner who chimes in on everything loses credibility; the one who rarely speaks gets silence when she does.</li>
+    <li><b>Say less.</b> The more words it takes to tell the truth, the more it sounds like a lie.</li>
+    <li><b>Drop fillers</b> (um, like, you know, right?). Let silence take their place.</li>
+    <li><b>Never undersell.</b> "This might be a dumb question…" forces them to reassure you first. Replace "Does that make sense?" with "What are your thoughts?"</li>
+    <li><b>Cut the excess:</b> just, actually, basically, literally, "to be honest," "no offense, but."</li>
+    <li><b>Fall back on experience:</b> "I haven't come across this before." "In my experience…"</li>
+    <li><b>Say "I'm confident…"</b> instead of "I think…".</li>
+  </ol>
+  <p style="margin-top:14px">And mind the tone: balanced, "I respect you and I respect myself," no upward lilt at the end ("pass the salt"), and eye contact at the <em>end</em> of your sentence.</p>
+  <div class="card">
+    <h3 style="margin-top:0">Try it: strip the hedges</h3>
+    <p style="margin:0 0 8px;font-size:15px">Paste an email or text you're about to send. Words Fisher would cut are struck through.</p>
+    <textarea id="txt" aria-label="Your text">Hi, sorry to bother you! I just wanted to quickly check in on the budget. I think we should maybe move the deadline, does that make sense? This is probably a dumb question, but basically I'm not sure we can actually make it.</textarea>
+    <div class="out" id="out"></div>
+    <div class="hits" id="hits"></div>
+  </div>
+</section>
+
+<section>
+  <p class="kick">Rule 2 · Difficult people (ch. 8)</p>
+  <h2>Don't hand them the dopamine</h2>
+  <p>"You always play nice. That doesn't mean you play soft." When two sisters were fighting over an inherited business, one said in the final meeting: "I've never liked you. You're dead to me anyway." His client paused, then: "I need you to repeat that." "I'm… I'm not repeating that." "Then I won't be repeating this. I'm getting off this roller coaster. If you want to get off with me, do it now. And I've always loved you." The case settled minutes later.</p>
+  <p>Put-downs look for a reaction, a hit of dopamine. Don't give it.</p>
+  <div class="types">
+    <div><b>Insult</b>"You're an idiot." → long pause → slowly repeat: "I'm an idiot?" → keep breathing out.</div>
+    <div><b>Belittling</b>"I knew you wouldn't get it right." → "I need you to say that again." → "Did that feel good to say out loud?" → silence.</div>
+    <div><b>Rude, dismissive</b>"No one asked you." → short pause → "Did you mean for that to come across as dismissive?" → wait.</div>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">Pushing back against bad apologies</h3>
+    <div class="tabs" id="apTabs" role="group" aria-label="Apology type"></div>
+    <div class="saythis reply"><div class="lbl">They say</div><p id="apThey"></p><div class="lbl" style="margin-top:8px">You say</div><p id="apYou"></p><p id="apWhy" style="font:300 14px/1.5 var(--sans);color:var(--muted)"></p></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Interruptions</h3>Let the first one go (the glass is full; let it spill), then resume exactly where you stopped. Second time: say their name. Third: correct it with an "I": "I can't hear you when you interrupt me." "I'll listen to you when I've finished." Not "Did the middle of my sentence interrupt the beginning of yours?"</div>
+    <div class="card"><h3>A better way to disagree</h3>First: "Is this something we have to agree on?" Then: "…right at this moment?" (Ninety-nine per cent of arguments are about nothing.) Instead of "I disagree" (heard as "you're wrong"), offer a vantage point: <b>"I see things differently." "I take another approach." "I tend to lean the opposite."</b></div>
+  </div>
+</section>
+
+<section>
+  <p class="kick">Rule 2 · Boundaries (ch. 9)</p>
+  <h2>No is a complete sentence</h2>
+  <p>A colleague invites you for coffee you don't want. Ignoring it buys time and costs trust. "Thanks for the invite, but I can't, I'm just super busy, sorry!" invites "why not?". Reverse the order and drop the "but":</p>
+  <div class="saythis"><div class="lbl">Say no · show gratitude · show kindness</div><p>"I can't. Thank you for the invite. I've heard good things about that place!"</p><p style="font:300 14px var(--sans);color:var(--muted)">If they ask why, repeat "I can't." The disappointment you fear is usually 98% ego.</p></div>
+  <p style="margin-top:16px">A boundary isn't a line, it's a <b>fence around something you value</b>, and it only exists once your choices show it. Don't hand people the remote control to your emotions; give them the <b>manual</b>:</p>
+  <div class="ba">
+    <div class="h x">Remote control</div><div class="h y">Manual</div>
+    <div class="x">"Stop yelling at me!"</div><div class="y">"I don't respond to that volume."</div>
+    <div class="x">"You can't speak to me that way!"</div><div class="y">"I don't accept the way you're speaking to me."</div>
+    <div class="x">"You only care about yourself!" (theirs)</div><div class="y">"I get to decide that."</div>
+  </div>
+  <ol class="num" style="margin-top:14px">
+    <li><b>State the boundary</b> with "I": "I don't work weekends." Or a boundary of presence ("I'm here because you matter to me"), of purpose ("I'm here to talk about what you said last Friday") or of integrity ("I'm not going there with you"). Then stop talking.</li>
+    <li><b>Add the consequence</b> if they keep pushing: "If you continue to…, I'm going to…".</li>
+    <li><b>Follow through.</b> Otherwise you've lowered the drawbridge yourself.</li>
+  </ol>
+  <p>Some people will hate it. "Their discomfort with your boundary is not a sign that it's wrong, it's a sign that it's working." But don't hide behind boundaries to dodge reasonable requests.</p>
+</section>
+
+<section>
+  <p class="kick">Rule 3 · Frames (ch. 10)</p>
+  <h2>One frame, one issue</h2>
+  <p>Faced with a wall of trainers, his mother picked two pairs: "Choose." Conversations without a frame wander, run long, and leave the listener playing detective ("What's your point?", "What do you want me to do?"). Frame it at the very start:</p>
+  <div class="saythis"><div class="lbl">Direction · call your shot · commitment</div><p>"I'd like to talk about how I saw your behaviour last night, and I'm not saying anyone is right or wrong. I want us to leave knowing how to show up for each other better. Can we do that?"</p></div>
+  <p style="margin-top:14px">Finish "<em>And by the end of it…</em>": "…I want to be heard without you feeling you need to fix it." When it drifts, use the keyword ("budget") or "We're getting off track." When <em>they</em> deflect ("What about when you did the same thing three weeks ago?"), acknowledge then hold: "I hear your point. I need to finish the conversation we started, and if needed I'm willing to come back to that." When <em>you</em> derail: "I'm sorry I raised my voice. That wasn't fair. Here's what I was trying to say."</p>
+</section>
+
+<section>
+  <p class="kick">Rule 3 · Defensiveness (ch. 11)</p>
+  <h2>Stop attending every argument you're invited to</h2>
+  <p>An expert witness answered Fisher's question with "…if you can grasp it." An older juror muttered "Mm-mm," and his credibility drained away. Every defensive reflex starts with <b>"you"</b>: "you never," "you always," "what about when you…". In the kitchen a tired spouse says "the last thing I want is these dishes"; the defensive partner hears an accusation: "I did them yesterday!"</p>
+  <p class="quote">How often you take things personally is a reflection of how much grace you give.</p>
+  <div class="grid2">
+    <div class="card"><h3>Stop your own</h3>Catch it with a breath. Let their words fall to the floor before you pick them up ("Put it down, [name]"). Get curious: where is this coming from? Workbook extra: don't interrupt; when they seem done, ask "Anything else?", then "Okay. I hear you. I understand", not "yeah, but."</div>
+    <div class="card"><h3>Prevent theirs</h3><b>Start with I, not you:</b> "You're always on your phone" → "I enjoy our time together without screens." <b>Swap "why" for what, when, how:</b> "Why didn't you take out the trash?" → "When are you planning to take out the trash?" <b>Acknowledge first:</b> "I agree this is worth discussing." "I've learned this matters a lot to you." "That's helpful to know."</div>
+  </div>
+</section>
+
+<section>
+  <p class="kick">Rule 3 · Difficult conversations (ch. 12)</p>
+  <h2>Approach is everything</h2>
+  <ol class="num">
+    <li><b>Set aside real, undistracted time.</b> As a law clerk he walked into a partner's office mid-thought and got "Nope! Out!"; fifteen minutes later the partner came back, apologised, and asked for an email next time. Propose a narrow window: "Do you have the bandwidth to talk about the kids' schedule once they're in bed?" Not "Got a second?" (which really means "got two hours?"). Phone off the table, not face down.</li>
+    <li><b>Drop the pleasantries.</b> "How are you liking it here?" before firing someone is cruel, because they can sense what's coming. Lead with "This is going to be hard to hear," pause one second, then say it: "I need to let you go."</li>
+    <li><b>Begin with your end.</b> Put the "in conclusion" first. "I've got bad news, I can't make it tonight. Thanks for the invite, have a great time!" beats a paragraph about stress and a sick dog.</li>
+  </ol>
+  <h3>Be a safe space</h3>
+  <p>His six-year-old came in, hands over a hole he'd cut in a new shirt: "I just wanted to see if my scissors would cut my shirt." "What did you learn?" "It definitely cuts it." "Thank you for coming to me and telling me." Useful phrases: "I'm glad you came to me with this." "Thank you for telling me." Avoid "I know what you're going through" or "something similar happened to me": they pull the spotlight onto you. Instead ask one question ("How are you feeling about it?"), ask permission before sharing, and offer "Can I tell you what I've learned?" rather than advice.</p>
+</section>
+
+<section>
+  <p class="kick">The companion</p>
+  <h2>The Workbook in brief</h2>
+  <div class="wb">
+    <p style="margin-top:0">The workbook repeats each idea in a page and then makes you work: checklists, 1–5 scales and role-plays. Its opening stories show the method in single sentences: <b>Kelly</b> finally answered forty years of "I'm sorry I'm such a horrible mother" with "I'm willing to accept an apology." <b>Daniel</b> told an executive "I see things differently" and got his plan approved. <b>Hanna</b> stopped over-explaining: "I can't. Thank you for the invitation."</p>
+    <ul class="list">
+      <li><b>Goals:</b> tick the struggles that fit (being assertive without confrontation, listening without planning your reply, setting boundaries late, sarcasm, circular conversations…) and rewrite each as "I will…".</li>
+      <li><b>Trigger scales:</b> whose opinion matters more, yours or theirs? How strong is your people-pleasing, need for control, fear of change and of abandonment? Rank your triggers.</li>
+      <li><b>Pace check:</b> score yourself 1–5 on planning your reply while they talk, cutting in, stumbling, running out of breath. Over 20 suggests over-explaining; under 15 suggests people-pleasing.</li>
+      <li><b>Strike-through drills:</b> "Hey, so I essentially just like really wanted to say…". Print your last emails and cross out every just, sorry and "I think".</li>
+      <li><b>Framing role-plays:</b> a friend may have gossiped about you; a raise is overdue while newer colleagues got one; your partner is overspending the shared budget; and the conversation you've been avoiding.</li>
+      <li><b>Accountability:</b> ask a friend to check in weekly: "What have you learned? How have you used it?"</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <p class="kick">The 47-second version</p>
+  <h2>In his own format</h2>
+  <ol class="num">
+    <li><b>Never win an argument</b>, or you'll lose more than you gain. Regulate before you respond.</li>
+    <li><b>Confidence is an outcome, not an act.</b> Short, assertive words that protect your needs without fear of disappointing people.</li>
+    <li><b>Don't try to change the whole relationship.</b> Change the next conversation. Have something to learn, not something to prove.</li>
+  </ol>
+  <p style="margin-top:16px">His client Clemon Lee, a 61-year-old school janitor in his only (church) suit, was afraid the jury wouldn't like him: "I don't talk good." In the corridor they rehearsed. "Who will you be?" "Only be Clemon Lee." "If they disagree?" "Teach them." "When you're not sure what to say, what comes first?" "My breath."</p>
+</section>
+
+<footer>
+  <p>Summary of <em>The Next Conversation: Argue Less, Talk More</em> (TarcherPerigee, 2025) and <em>The Next Conversation Workbook</em> by Jefferson Fisher. A bonus chapter on narcissists and gaslighting is online only and not covered here.</p>
+  <p>Related summaries:</p>
+  <div class="related"><a href="../nonviolent-communication/">Gewaltfreie Kommunikation</a><a href="../difficult-conversations/">Difficult Conversations</a><a href="../never-split-the-difference/">Never Split the Difference</a><a href="../crucial-conversations/">Crucial Conversations</a><a href="../talk/">Talk</a></div>
+</footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('tnc-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('tnc-theme',n);};
+
+/* breath: 2s in, 1s sip, 6s out, x3 */
+var ball=document.getElementById('ball'),txt=document.getElementById('bTxt'),timers=[];
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function size(p,ms){ball.style.transitionDuration=(reduce?0:ms)+'ms';ball.style.width=p+'%';ball.style.height=p+'%';}
+function stop(){timers.forEach(clearTimeout);timers=[];size(40,300);txt.textContent='Ready';}
+document.getElementById('bStop').onclick=stop;
+document.getElementById('bGo').onclick=function(){stop();var t=0;
+  for(var r=0;r<3;r++){(function(r){
+    timers.push(setTimeout(function(){txt.textContent='In · nose ('+(r+1)+'/3)';size(80,2000)},t));t+=2000;
+    timers.push(setTimeout(function(){txt.textContent='Sip';size(92,1000)},t));t+=1000;
+    timers.push(setTimeout(function(){txt.textContent='Out · six';size(36,6000)},t));t+=6000;
+  })(r);}
+  timers.push(setTimeout(function(){txt.textContent='Now speak';},t));
+};
+
+/* hedge stripper */
+var W=['sorry to bother you','sorry','i just wanted to','just','actually','basically','essentially','literally','really','very','quickly','maybe','i think','i guess','i feel like','sort of','kind of','does that make sense\\?','know what i mean\\?','you know','this is probably a dumb question,? but','probably','to be honest,?','no offense,? but','i hate to bother you,? but','like,'];
+var re=new RegExp('\\b('+W.join('|')+')(?=\\W|$)','gi');
+var ta=document.getElementById('txt'),out=document.getElementById('out'),hits=document.getElementById('hits');
+function esc(s){return s.replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function run(){var n=0;var h=esc(ta.value).replace(re,function(m){n++;return '<mark>'+m+'</mark>'});out.innerHTML=h||'&nbsp;';hits.textContent=n?n+' hedge'+(n>1?'s':'')+' found. Read it again without them.':'Clean. Serve your words neat.';}
+ta.addEventListener('input',run);run();
+
+/* bad apologies */
+var A=[
+ ['No-empathy','"I\'m sorry you feel that way."','"Don\'t apologize for my feelings. Apologize for what you did."','It moves the focus from their action to your reaction.'],
+ ['No-apology','"I\'m sorry if I upset you."','"I need you to change the if to that."','"If" leaves the harm up for debate.'],
+ ['Excuse','"I\'m sorry, okay? I\'ve just been so stressed."','"You don\'t need to apologize for your stress. I need you to apologize for your words."','Their stress didn\'t say it; they did.'],
+ ['Toxic','"I\'m sorry I\'m such a horrible person."','"I\'m willing to accept an apology."','It casts them as the victim and you as the comforter. Repeat as needed.'],
+ ['Justification','"I was just kidding."','"Then be funnier." Or simply: "I wasn\'t."','Humour never justifies harm.']
+];
+var tabs=document.getElementById('apTabs');
+function show(i){var a=A[i];document.getElementById('apThey').textContent=a[1];document.getElementById('apYou').textContent=a[2];document.getElementById('apWhy').textContent=a[3];tabs.querySelectorAll('button').forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')});}
+A.forEach(function(a,i){var b=document.createElement('button');b.type='button';b.textContent=a[0];b.onclick=function(){show(i)};tabs.appendChild(b);});
+show(0);
+})();
+</script>
+</body>
+</html>
