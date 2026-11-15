@@ -136,6 +136,8 @@ section { padding-top: clamp(56px, 8vw, 104px); }
 .chapter .body { display: grid; gap: 28px; min-width: 0; }
 .points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: var(--measure); }
 .points li { padding-left: 26px; position: relative; }
+.points .so { display: block; margin-top: 6px; color: var(--ink-2); }
+.points .so b { color: var(--ink); font-weight: 600; }
 .points li::before { content: ""; position: absolute; left: 2px; top: .72em; width: 12px; height: 2px; background: var(--bias); }
 .story { max-width: var(--measure); border-left: 2px solid var(--ink); padding: 2px 0 2px 20px; display: grid; gap: 6px; }
 .story p { font-size: 17px; color: var(--ink-2); }
@@ -398,10 +400,10 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Discretion once looked humane. Then people measured what it produced.</p>
     </div>
     <ul class="points">
-      <li>In 1973 Judge Marvin Frankel set out cases like two first offenders passing bad cheques: $58.40 earned one man fifteen years, $35.20 earned the other 30 days.</li>
-      <li>A 1981 study gave 208 federal judges the same sixteen hypothetical cases. On only three did all agree that prison was right.</li>
-      <li>Irrelevant details also move outcomes. Studies link rulings to the local football result, the defendant's birthday and the temperature outside.</li>
-      <li>The Sentencing Reform Act of 1984 produced guidelines with 43 offence levels, and studies found the gap between judges shrank. In 2005 the Supreme Court made them advisory. Judges mostly welcomed this. Crystal Yang's data on nearly 400,000 defendants showed the harsh-judge penalty, 2.8 months before, doubling afterwards.</li>
+      <li>In 1973 the US judge Marvin Frankel collected real cases to show how much a sentence depended on which judge you drew. Two men, both first offenders, were both convicted of cashing small bad cheques. One got fifteen years for $58.40; the other got 30 days for $35.20. <span class="so"><b>What it shows:</b> nearly the same crime, a huge difference in punishment. The difference came from the judge, not from the case.</span></li>
+      <li>To test this properly, a 1981 study sent 208 federal judges the same sixteen made-up case files and asked each for a sentence. On only three of the sixteen cases did all the judges even agree that prison was the right outcome. <span class="so"><b>What it shows:</b> every judge saw identical facts, so all of that disagreement is noise.</span></li>
+      <li>Judges are also moved by things that should play no role. Studies link harsher rulings to the local football team losing the weekend before, milder ones to the day being the defendant's birthday, and harsher ones to hot weather. <span class="so"><b>What it shows:</b> the same judge can rule differently depending on the day. The book calls this occasion noise (chapter 7).</span></li>
+      <li>Congress reacted with the Sentencing Reform Act of 1984: binding guidelines with 43 offence levels told judges which range to use, and studies found that judges disagreed less. In 2005 the Supreme Court made the guidelines advisory, and most judges welcomed the freedom. Economist Crystal Yang's data on nearly 400,000 defendants shows what happened next: the extra prison time for drawing a harsh judge instead of an average one was 2.8 months under the binding guidelines and roughly doubled once they became optional. <span class="so"><b>What it shows:</b> when the rule that limited discretion was removed, the noise came back.</span></li>
     </ul>
   </div>
 </article>
@@ -414,10 +416,10 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Give many professionals the same file separately, then compare. The result is nearly always a shock.</p>
     </div>
     <ul class="points">
-      <li>At an insurer, the median gap was 55% for underwriters and 43% for claims adjusters. When one quoted $9,500, the other said $16,700, not the $10,500 people imagined. One executive put the yearly cost in the hundreds of millions.</li>
-      <li>828 senior executives expected about 10%. Forty-two investors at one firm, valuing the same stock, came in at 41%.</li>
-      <li>Errors don't cancel. A noisy system judges different cases once each, so one overpriced policy and one underpriced policy are two mistakes, not a correct average.</li>
-      <li>The <strong>illusion of agreement</strong> hides all this. Veterans gain confidence by agreeing with their past selves, and offices avoid contact with disagreement.</li>
+      <li>A large insurer asked its underwriters (who set the price of a policy) and its claims adjusters (who estimate how much to pay out) to work on the same realistic cases, each on their own. Pick any two of them: the typical gap between their numbers was 55% for underwriters and 43% for adjusters. In money: if one underwriter quoted $9,500, a colleague would typically quote $16,700 for the identical policy, not the $10,500 managers had guessed. One executive put the cost at hundreds of millions a year, because overcharged clients leave and undercharged ones lose the company money. <span class="so"><b>What it shows:</b> the price a client pays depends heavily on which employee happens to handle the file.</span></li>
+      <li>Executives expected far less. Asked beforehand, 828 senior managers guessed a gap of about 10%. At an investment firm, 42 investors who valued the same stock differed by 41%. <span class="so"><b>What it shows:</b> people inside an organisation hugely underestimate how much their colleagues disagree.</span></li>
+      <li>Why random errors still hurt: in real life each case is judged once, by one person. If one client is overcharged and another undercharged, the company has made two mistakes. The errors only cancel out in an average on paper, never for the client in front of you.</li>
+      <li>Why nobody notices: the authors call it the <strong>illusion of agreement</strong>. Experienced staff rarely see a colleague judge the same case, and they feel sure of themselves because they agree with their own earlier judgments. Organisations rarely check.</li>
     </ul>
   </div>
 </article>
@@ -430,8 +432,8 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">A one-off choice is a repeated decision that happens to be made once.</p>
     </div>
     <ul class="points">
-      <li>In 2014 President Obama kept borders open during Ebola and sent three thousand people to West Africa. Different advisers might have led elsewhere.</li>
-      <li>You can't measure noise in a decision made once, but its sources are still present, as with a single shot from an unsteady hand. So the methods that help recurrent judgments should help unique ones too.</li>
+      <li>In 2014, during the Ebola outbreak, President Obama decided not to close US borders and instead sent about three thousand people to West Africa to fight the disease there. It was a one-time decision. With different advisers, a different mood in the room or a different first speaker, it could easily have gone another way.</li>
+      <li>You can't measure noise in a decision that is made only once, because there is nothing to compare it with. But the same sources of noise are at work: who is in the room, their mood, the order of the arguments. A single shot from an unsteady hand is still unsteady, even if you only see one hole. <span class="so"><b>What it shows:</b> the methods that reduce noise in repeated decisions (chapters 19–25) also help with big one-off decisions.</span></li>
     </ul>
   </div>
 </article>
@@ -451,9 +453,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">A judgment call is a question where we allow some disagreement, but not much.</p>
     </div>
     <ul class="points">
-      <li>Asked to rate a fictional CEO candidate, 115 MBA students ranged from 10 to 95 on a 100-point scale. Variability enters at each step: noticing cues, blending them, turning an impression into a number.</li>
-      <li>What ends the task is an <strong>internal signal</strong>: the answer feels coherent. It isn't evidence of accuracy.</li>
-      <li><strong>Predictive</strong> judgments aim at a true value, so disagreement means someone is wrong. <strong>Evaluative</strong> judgments, like sentences or grades, have no bull's-eye, but scatter still breaks fairness. The authors would grade the process, not the single result.</li>
+      <li>In a class exercise, 115 MBA students read the same profile of a fictional CEO candidate and rated, on a scale from 0 to 100, how likely he was to succeed. Their answers ranged from 10 to 95. <span class="so"><b>What it shows:</b> even with identical information, people differ at every step: which facts they notice, how they weigh them, and how they turn an impression into a number.</span></li>
+      <li>How do we know a judgment is finished? Not because we have checked the answer, but because it suddenly feels right and the pieces fit. The authors call this the <strong>internal signal</strong> of judgment completion. It feels like confidence, but it says nothing about whether the answer is correct.</li>
+      <li>There are two kinds of judgment. <strong>Predictive</strong> judgments have a true answer that will be known later, such as whether a candidate succeeds; if two people disagree, at least one is wrong. <strong>Evaluative</strong> judgments have no single correct answer, such as a fair sentence or the grade an essay deserves. There is no bull's-eye, but if two people get different outcomes for the same case, that is still unfair. Because single outcomes are often unknowable, the authors suggest judging the quality of the process rather than one result.</li>
     </ul>
   </div>
 </article>
@@ -466,10 +468,10 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Overall error is bias squared plus noise squared. A given cut to either buys the same improvement.</p>
     </div>
     <ul class="points">
-      <li>Gauss's mean squared error, dating from 1795, is the standard yardstick. Squaring makes big misses count far more: going from 11cm off to 10cm is worth 21 times going from 1cm off to a perfect hit.</li>
-      <li>In the fictional firm GoodSell, forecasts of market share averaged 44% with a standard deviation of 10, and the truth turned out to be 34%. Bias and noise are both 10. The boss wants to see the bias before touching noise. The equation says he is wrong: the two are independent.</li>
-      <li>Bias has to be large to match noise. With a normal curve the two tie only when 84% of judgments fall on one side of the truth.</li>
-      <li>The equation covers predictions, not evaluations. Hence the advice to separate facts from values: estimate an elevator's load neutrally, then choose the safety margin.</li>
+      <li>The standard way to measure total error goes back to the mathematician Gauss in 1795: take each error, square it, and average the squares (the <em>mean squared error</em>). Squaring makes big misses count far more than small ones. Getting from 11 cm off to 10 cm off lowers the squared error by 21 (121 to 100); getting from 1 cm off to a perfect hit lowers it by only 1. <span class="so"><b>What it shows:</b> this is why a wide scatter of judgments is so costly.</span></li>
+      <li>The formula splits neatly into two parts: total error = bias² + noise². <strong>Bias</strong> is how far the average judgment is from the truth. <strong>Noise</strong> is how widely the judgments scatter around their own average.</li>
+      <li>The book's example: at the fictional firm GoodSell, employees forecast a product's market share. Their forecasts averaged 44% and scattered with a standard deviation of 10 points; the real share turned out to be 34%. So bias was 10 (44 against 34) and noise was also 10. The boss wanted to fix the bias first. The formula shows that this is a mistake: cutting noise by some amount improves accuracy exactly as much as cutting bias by the same amount, and you don't need to know the true answer to reduce noise.</li>
+      <li>Two more points. Bias has to be very large before it does as much harm as noise: with normally distributed errors, only when 84% of forecasts miss in the same direction. And the formula applies only to predictions that have a true answer. For mixed questions, split them: first estimate the facts neutrally (how much weight can this lift carry?), then decide the values question separately (how much safety margin do we want?).</li>
     </ul>
     <div class="fig">
       <h4>Try the error equation</h4>
@@ -507,9 +509,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Some judges are harsher overall. They also disagree about which cases deserve it.</p>
     </div>
     <ul class="points">
-      <li>In the 1981 audit, 208 judges times 16 cases gives a 3,328-cell table. Mean sentences ran from 1 year to 15.3. For the average case, the mean was 7.0 years and the standard deviation 3.4: that is the system noise.</li>
-      <li><strong>Level noise</strong>, the spread of judges' personal averages, was 2.4 years. It behaves like a personality trait.</li>
-      <li><strong>Pattern noise</strong> is the rest: each judge's own reaction to a type of case. Here it was about as large as level noise, and the squares add up again.</li>
+      <li>Back to the 1981 sentencing study: 208 judges each sentencing 16 cases gives a table of 3,328 sentences. The judges' personal average sentences ran from 1 year for the most lenient to 15.3 years for the harshest. For a typical case the average sentence was 7.0 years, and the standard deviation across judges was 3.4 years. That 3.4 years is the <strong>system noise</strong>: roughly how much your sentence depends on which judge you get.</li>
+      <li>Part of it is <strong>level noise</strong>: some judges are simply harsher than others across every case. Here it accounted for 2.4 years. It behaves like a personality trait.</li>
+      <li>The rest is <strong>pattern noise</strong>: judges also disagree about which cases are serious. One is especially tough on fraud, another on violence. Here it was about as large as level noise. <span class="so"><b>What it shows:</b> even if every judge had the same average severity, they would still disagree a lot, case by case.</span></li>
     </ul>
     <div class="fig">
       <h4>What each kind of noise does to the table</h4>
@@ -527,10 +529,10 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Your answer is one draw from a cloud of answers you could have given.</p>
     </div>
     <ul class="points">
-      <li>Wine experts tasting the same wines blind scored just 18% identically. This second lottery picks your mood and the moment.</li>
-      <li><strong>The crowd within:</strong> Vul and Pashler found that averaging two guesses from one person beats either guess. Asked straight away, it's worth a tenth of a second opinion; after three weeks, a third; arguing against your first estimate, about half.</li>
-      <li>Triggers include mood (good moods make people more gullible), fatigue (doctors prescribe more opioids late in the day) and sequence (US asylum judges are 19% less likely to grant after two grants).</li>
-      <li>Reassuringly, you resemble yourself more than you resemble a colleague: occasion noise was the smaller part wherever it could be sized. In a tightly controlled memory study, every measured factor together explained only 11% of a person's variation.</li>
+      <li>Same person, different day: wine experts who tasted the same wines twice, without knowing it, gave the identical score only 18% of the time. <span class="so"><b>What it shows:</b> a judgment is not one fixed answer. It is one draw from all the answers you might have given. This is <strong>occasion noise</strong>.</span></li>
+      <li><strong>The crowd within:</strong> psychologists Vul and Pashler asked people for an estimate and later asked them again. The average of a person's two guesses was more accurate than either guess. Asked straight away, the second guess was worth about a tenth of a second person's opinion; three weeks later, about a third; and if people were told to assume their first answer was wrong and argue against it, about half. <span class="so"><b>What it shows:</b> sleep on a judgment, or argue against yourself, and then average the two answers.</span></li>
+      <li>What shifts us from moment to moment: mood (people in a good mood are more easily fooled), fatigue (doctors prescribe more opioids late in the day) and order (US asylum judges are 19% less likely to grant asylum right after granting it in the two previous cases, as if to make up for being lenient).</li>
+      <li>The reassuring part: we resemble ourselves more than we resemble our colleagues. Wherever it could be measured, occasion noise was smaller than the differences between people. It is also hard to pin down: in one tightly controlled memory study, all the measured factors together explained only 11% of a person's day-to-day variation.</li>
     </ul>
   </div>
 </article>
@@ -543,10 +545,10 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Averaging independent views removes noise. Letting people hear each other first can add it back.</p>
     </div>
     <ul class="points">
-      <li>Salganik's music experiment ran history eight times with 72 unknown songs. When people could see download counts, rankings diverged wildly: beyond the very best and worst, early luck decided.</li>
-      <li>A single artificial up-vote raised a comment's mean rating by 25% after five months.</li>
-      <li><strong>Cascades</strong> spread because people reasonably trust those who spoke first, or don't want to look difficult. <strong>Polarisation</strong> pushes a group past its own starting point.</li>
-      <li>In the authors' jury work, deliberating juries were far noisier than "statistical juries" built by taking the median of six separate opinions. And 27% of juries landed at or above the award of their harshest member.</li>
+      <li>Sociologist Matthew Salganik set up eight parallel online music worlds with the same 72 unknown songs. In some of them, listeners could see how often each song had been downloaded. In those worlds the final rankings came out very different from one another: apart from the very best and the very worst songs, early random downloads decided which songs became hits. <span class="so"><b>What it shows:</b> when people can see what others think, small early accidents get amplified, and group judgment becomes noisier.</span></li>
+      <li>On a news website, researchers gave some comments a single fake up-vote at the start. Five months later, those comments had an average rating 25% higher than comparable ones. <span class="so"><b>What it shows:</b> one click at the beginning shaped thousands of later judgments.</span></li>
+      <li>Two group effects drive this. In a <strong>cascade</strong>, people follow whoever spoke first, because they reasonably trust that person or don't want to look difficult. In <strong>polarisation</strong>, a group ends up more extreme after discussion than its members were at the start.</li>
+      <li>In the authors' study of mock juries deciding damages, juries that talked it through were much noisier than “statistical juries” made by simply taking the middle value of six people's separate opinions. And in 27% of cases, the deliberating jury ended at or above the amount its harshest member had wanted alone. <span class="so"><b>What it shows:</b> averaging independent views reduces noise; discussing first can increase it.</span></li>
     </ul>
     <div class="fig">
       <h4>A hiring cascade</h4>
@@ -575,10 +577,11 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Most of what feels like subtlety in expert judgment turns out to be noise.</p>
     </div>
     <ul class="points">
-      <li>Paul Meehl argued in 1954 that simple formulas generally outdo clinicians at combining information. A 2000 review of 136 studies: formulas won 63, 65 were ties, humans won 8.</li>
-      <li>Lewis Goldberg built simple statistical models of individual judges and found the crude copy usually predicted better than the original. In one replication the model beat its human for all 98 participants. A model strips out your subtleties and your noise, and losing the noise wins.</li>
-      <li>Yu and Kuncel went further with 847 executive candidates, testing 10,000 linear formulas with random weights. These beat the human experts 77% of the time in one sample and 100% in two others.</li>
-      <li>The <strong>illusion of validity</strong> confuses how good a case looks with how it will turn out.</li>
+      <li>In 1954 psychologist Paul Meehl compared the predictions of clinicians (for example about patients or students) with simple statistical formulas that used the same information. The formulas usually did better. A 2000 review of 136 studies counted: the formula won 63, there were 65 ties, and the humans won only 8.</li>
+      <li>Lewis Goldberg went a step further. He built a simple formula that imitated each individual expert, based on how that person had weighed the facts in earlier cases. The surprise: this crude copy usually predicted better than the expert it copied. In one replication it did so for all 98 participants. The model keeps the expert's general rules and drops the random inconsistency. <span class="so"><b>What it shows:</b> much of what feels like subtle expert judgment is actually noise, and removing it makes predictions better.</span></li>
+      <li>Yu and Kuncel tested this with 847 candidates for executive jobs. Even 10,000 formulas with <em>random</em> weights for the factors beat the human experts 77% of the time in one sample and 100% of the time in two others. <span class="so"><b>What it shows:</b> being consistent matters more than being clever.</span></li>
+      <li>Why we resist: the <strong>illusion of validity</strong>. When a case looks convincing, such as a coherent, impressive candidate, we feel sure of our prediction, even though how good someone looks is only weakly linked to how they will actually do.</li>
+      <li>How to read the chart below: <em>percent concordant</em> asks, of two people you rated, how often the one you rated higher actually did better. 50% is a coin toss; 100% would be perfect.</li>
     </ul>
     <div class="fig">
       <h4>How often the better-rated person really does better</h4>
@@ -597,10 +600,10 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Rules at both ends of the sophistication scale beat people, and being noise-free is a large part of why.</p>
     </div>
     <ul class="points">
-      <li><strong>Equal weights.</strong> In 1974 Robyn Dawes showed that simply adding standardised predictors did about as well as regression. Regression fits flukes in its sample: in one case .69 shrank to .57 on new data, while equal weights managed .60.</li>
-      <li><strong>Frugal rules.</strong> A two-input bail score (age, missed court dates) did better than virtually all human judges at predicting flight.</li>
-      <li><strong>Machine learning.</strong> Trained on 758,027 bail decisions, Mullainathan's model could cut crime by up to 24% with the same number jailed, or detention by up to 42% with no more crime. The authors report 41% fewer people of colour jailed at the judges' crime rate, while warning that algorithms can also entrench discrimination.</li>
-      <li>Meehl's <strong>broken leg</strong>: override a model when you hold decisive information it couldn't consider, and not because you dislike its answer.</li>
+      <li>Even very simple rules work. In 1974 Robyn Dawes showed that just adding up the relevant factors with equal weight (after putting them on a common scale) predicts about as well as a carefully fitted statistical model. A fitted model also learns the accidents of the data it was fitted on: in one example its accuracy (as a correlation) dropped from .69 to .57 on new data, while the simple equal-weight sum reached .60.</li>
+      <li>For bail decisions, a rule with just two inputs, the defendant's age and the number of court dates they had missed before, predicted who would fail to appear better than nearly all human judges.</li>
+      <li>Sendhil Mullainathan and colleagues trained a machine-learning model on 758,027 real bail decisions. Used instead of the judges, it could either cut crime by released defendants by up to 24% while jailing the same number of people, or jail up to 42% fewer people with no rise in crime. Matched to the judges' crime rate, it would also jail 41% fewer people of colour. The authors add a warning: algorithms can also lock in discrimination if they learn from biased data.</li>
+      <li>When should a person overrule a model? Meehl's <strong>broken leg</strong> example: a formula predicts that someone will go to the cinema tonight, but you know he has just broken his leg. Override the model when you have decisive information it could not consider, not because you dislike its answer.</li>
     </ul>
   </div>
 </article>
@@ -613,10 +616,10 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">What can't be known caps every forecast, and gut feeling acts as if it doesn't.</p>
     </div>
     <ul class="points">
-      <li>Ignorance has two parts: what cannot be known, and what could be known but isn't. Believing you can predict anyway is the <strong>denial of ignorance</strong>.</li>
-      <li>Philip Tetlock tracked almost 300 experts over two decades. The average roughly matched a chimp throwing darts, and those with the clearest theories were the most confident and the least accurate.</li>
-      <li>Models win, but modestly: across the review's studies, clinicians were right 68% of the time and formulas 73%. A heart-attack model with more than 2,400 variables still found only 30% actual heart attacks in its top risk decile.</li>
-      <li>Why bother, then? Nobody would pick a 59% lottery ticket over a 65% one at the same price. The real price is giving up the warm internal signal.</li>
+      <li>There are two kinds of not knowing: what simply cannot be known, because the future depends on events nobody can foresee (the authors call this <strong>objective ignorance</strong>), and what could be known but you don't know. Acting as if you can predict well anyway is the <strong>denial of ignorance</strong>.</li>
+      <li>Philip Tetlock tracked the predictions of almost 300 political and economic experts over two decades. On average they did hardly better than chance, which he compared to a chimp throwing darts. The experts with one big, clear theory were the most confident and the least accurate.</li>
+      <li>So models beat people, but only by a small margin, because the world is hard to predict. In the review's terms, clinicians were right 68% of the time and formulas 73%. A heart-attack model with more than 2,400 variables still found only 30% of actual heart attacks among the patients it rated as highest risk.</li>
+      <li>Why use a model that is only slightly better? Nobody would buy a lottery ticket with a 59% chance of winning when one with 65% costs the same. What really makes people resist is having to give up the satisfying feeling of “I know” (the internal signal from chapter 4).</li>
     </ul>
   </div>
 </article>
@@ -629,9 +632,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Events we could not have predicted still feel understood once they've happened.</p>
     </div>
     <ul class="points">
-      <li>In the Fragile Families challenge, 160 teams used thousands of data points on almost five thousand children to predict outcomes at fifteen. The best model reached .22 for eviction (PC 57%). Across social psychology a typical correlation is about .21.</li>
-      <li>Memory finds a cause and stops, so the result feels inevitable. The opposite outcome would have had an equally good story.</li>
-      <li><strong>Causal thinking</strong> is easy and tells stories about cases. <strong>Statistical thinking</strong>, the outside view, takes effort and sees cases as members of a class. Noise is visible only to the second.</li>
+      <li>In the Fragile Families challenge, 160 research teams received thousands of data points on almost five thousand children and had to predict how they would be doing at age fifteen, for example whether the family would be evicted. The best model reached a correlation of only .22, which means it picked the right one of two children just 57% of the time, barely better than a coin toss. For comparison, a typical finding in social psychology has a correlation of about .21. <span class="so"><b>What it shows:</b> even with rich data, individual lives are very hard to predict.</span></li>
+      <li>Yet after the fact, everything seems explainable. When something happens, our mind finds a cause and stops looking, so the result feels as if it had to happen. Had the opposite happened, we would have found an equally convincing story. The authors call this the valley of the normal: in hindsight, events look normal and expected.</li>
+      <li><strong>Causal thinking</strong> tells a story about this one case; it is natural and easy. <strong>Statistical thinking</strong>, also called the outside view, sees the case as one of many similar ones and asks how such cases usually turn out; it takes effort. <span class="so"><b>What it shows:</b> noise only shows up in the statistical view, which is why we so easily overlook it.</span></li>
     </ul>
     <div class="fig" style="background:transparent;border-style:dashed">
       <blockquote class="pull">“Causally, noise is nowhere; statistically, it is everywhere.”</blockquote>
@@ -655,9 +658,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Psychological bias becomes statistical bias when shared, and noise when it differs from person to person.</p>
     </div>
     <ul class="points">
-      <li><strong>Substitution:</strong> we answer an easier question. Asked how probable something is, we judge how similar it seems, and ignore base rates. With CEO turnover near 15% a year, about 72% of new CEOs last two years, a number few readers think to seek.</li>
-      <li><strong>Conclusion bias:</strong> we start from what we want. Anchoring belongs here too.</li>
-      <li><strong>Excessive coherence:</strong> first impressions stick. The same four adjectives about a candidate read very differently depending on which comes first.</li>
+      <li><strong>Substitution:</strong> we answer an easier question than the one asked. Asked how likely something is, we judge how much it looks like a typical example, and forget how common it is in general (the <em>base rate</em>). Example: about 15% of CEOs are replaced each year, so roughly 72% of new CEOs are still in post after two years (85% of 85%). Few people think to start from that number; they judge the individual's story instead.</li>
+      <li><strong>Conclusion bias:</strong> we start from the answer we want and then look for reasons. Anchoring belongs here: a number we have just seen pulls our estimate toward it. <strong>Excessive coherence:</strong> first impressions colour everything after them. The same four adjectives about a job candidate create a very different impression depending on which one comes first.</li>
+      <li>How this turns into noise: if everyone makes the same mistake in the same direction, it is bias. If each person makes it differently, one anchoring high and another low, it is noise.</li>
     </ul>
   </div>
 </article>
@@ -670,9 +673,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">We translate intensities across scales effortlessly, and the translation ignores how weak the link is.</p>
     </div>
     <ul class="points">
-      <li>Told only that Julie read fluently at four, people guess a college GPA of 3.7 or 3.8. They've matched one percentile to another as though reading age predicted grades perfectly.</li>
-      <li>Matching predictions are <strong>nonregressive</strong>: they forget that extremes drift toward the mean, as with the hit director's next film.</li>
-      <li>People reliably label only about seven categories on a scale. Comparing cases side by side discriminates far better, though it costs more effort.</li>
+      <li>The Julie example: you are told only that Julie could read fluently at age four, and asked to guess her university grade average (GPA, on a scale up to 4.0). Most people say 3.7 or 3.8. They are <em>matching</em>: her early reading was unusually good, so they pick an unusually good GPA, as if early reading predicted grades perfectly. In reality the link is weak; the authors put the correlation at .20 at most.</li>
+      <li>Such predictions are <strong>nonregressive</strong>: they forget that extreme results tend to be followed by more ordinary ones. A director's next film after a huge hit is usually less of a hit.</li>
+      <li>People can reliably tell apart only about seven categories on a rating scale. Comparing two cases side by side (is A better than B?) is far more precise than giving each an absolute score, though it takes more effort. The chart below shows how to correct a matching prediction: start from the average for all students, then move toward your intuition only as far as the evidence justifies.</li>
     </ul>
     <div class="fig">
       <h4>Correcting a matching prediction</h4>
@@ -703,9 +706,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Much disagreement lies in the ruler, not in what people think.</p>
     </div>
     <ul class="points">
-      <li>In Kahneman, Sunstein and Schkade's study, 899 people rated injury cases on outrage, punitive intent or dollars. Mean outrage and punitive intent correlated at .98. People swapped "how much punishment?" for "how angry am I?"</li>
-      <li>A dollar scale has no top and no natural reference, so the first number you pick is arbitrary, and later numbers keep in proportion to it. Convert awards to ranks and most of the disagreement disappears.</li>
-      <li>US law bars telling juries what other cases got. The authors argue that this assumes an ability people lack, and that an agreed anchor case would tie the scale down.</li>
+      <li>Kahneman, Sunstein and David Schkade gave 899 people descriptions of injury lawsuits against companies. Some rated how outrageous the company's behaviour was, some how severely it should be punished (both on a scale from 0 to 6), and some how many dollars of punitive damages to award. Average outrage and average punishment ratings matched almost perfectly (correlation .98). <span class="so"><b>What it shows:</b> when people decide how much to punish, they are really answering “how angry am I?”, and on that they largely agree.</span></li>
+      <li>The disagreement comes from the dollar scale. It has no upper limit and no natural reference point, so the first amount a person picks is arbitrary, and their other awards follow from it. Turning each person's dollar awards into ranks (which case gets the most, which the second most) removes most of the disagreement: the chart shows the noise share falling from 94% to 49%.</li>
+      <li>US law forbids telling juries what was awarded in similar cases. The authors argue that this assumes jurors can translate outrage into dollars consistently, which they cannot, and that an agreed reference case would anchor the scale.</li>
     </ul>
     <div class="fig">
       <h4>Share of variance that is noise, same cases, different scale</h4>
@@ -727,9 +730,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Pattern noise isn't random. It's as personal and persistent as character.</p>
     </div>
     <ul class="points">
-      <li>Give Julie a messier life story and people pick different cues, so disagreement grows.</li>
-      <li>Pattern error splits into a stable part and a passing part (occasion noise). The stable part comes from your history: a case reminds you of a relative, and would again next week.</li>
-      <li>Judges, like personalities, have signature reactions. That is delightful in a friend and an error in a professional.</li>
+      <li>Give people a more complicated life story for Julie and they latch onto different details: one notices her parents' divorce, another her talent for maths. Their predictions then differ more.</li>
+      <li>Pattern noise has a passing part, which is occasion noise such as today's mood, and a stable part: your personal way of reacting to certain kinds of cases. A defendant who reminds a judge of a relative will remind him of that relative next week too.</li>
+      <li>Each judge has a judgment personality, a signature set of reactions. <span class="so"><b>What it shows:</b> in a friend that is charming; in a professional who is supposed to be interchangeable with colleagues, it is error.</span></li>
     </ul>
   </div>
 </article>
@@ -742,9 +745,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">The authors began by thinking of residual noise as random. It turned out to be mostly stable and personal.</p>
     </div>
     <ul class="points">
-      <li>Bail models of 173 judges applied to 141,833 cases showed stable pattern noise at 26% of total variance against 7% for level noise.</li>
-      <li>This matters because level noise is the only kind organisations can sometimes monitor without an audit. Equalising average severity leaves most of the problem in place.</li>
-      <li>Noise escapes notice because bias makes a good story after a failure, and noise can't appear in a story about one case.</li>
+      <li>Researchers built a model of each of 173 bail judges from 141,833 of their real cases, so they could compare the judges on identical cases. Stable pattern noise, meaning each judge's consistent personal reactions to particular kinds of defendants, made up 26% of all the variation in decisions. Level noise, some judges simply being stricter, made up only 7%.</li>
+      <li>Why that matters: level noise is the only kind an organisation can spot without a special test, because you can see that one judge's average is harsher. So managers try to even out the averages, and the larger part, pattern noise, stays untouched.</li>
+      <li>Why noise stays invisible: after a failure we look for a cause in that one case, and bias makes a good story (“the judge was prejudiced”). Noise cannot be seen in a single case, only by comparing many cases. That is what the quote after chapter 12 means.</li>
     </ul>
     <div class="fig">
       <h4>How error breaks down</h4>
@@ -782,9 +785,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">The best judges keep looking for reasons they might be wrong.</p>
     </div>
     <ul class="points">
-      <li>Where outcomes can be checked, you can identify true experts. Elsewhere you have <strong>respect-experts</strong>, trusted because peers respect their training, experience and confident stories.</li>
-      <li>General mental ability predicts performance, at about .50 for complex jobs, and keeps mattering even inside the top 1%.</li>
-      <li>The one style measure found to predict forecasting was <strong>actively open-minded thinking</strong>: seeking out evidence against your own view.</li>
+      <li>In some fields you can check who is good, because outcomes become known, as with weather forecasters or chess players. In many others you cannot, so we rely on what the authors call <strong>respect-experts</strong>: people trusted because colleagues respect their training, experience and confident explanations, not because their track record has been tested.</li>
+      <li>What does make better judges: general mental ability predicts job performance, at about .50 for complex jobs, and it keeps making a difference even among the top 1%.</li>
+      <li>And one thinking style: the only measure that predicted good forecasting was <strong>actively open-minded thinking</strong>, deliberately looking for evidence that you might be wrong and changing your mind when you find it.</li>
     </ul>
   </div>
 </article>
@@ -797,9 +800,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Debiasing needs you to know the error in advance. Hygiene doesn't.</p>
     </div>
     <ul class="points">
-      <li>Debiasing can come after the fact (the UK Treasury's <em>Green Book</em> adjusts for optimism) or before it, through nudges like pension auto-enrolment or through training. Training is hard to carry across fields.</li>
-      <li>So the authors propose a <strong>decision observer</strong>, invited by the decision makers, who uses a checklist to spot signs of bias in real time. They say the evidence so far is informal.</li>
-      <li><strong>Decision hygiene</strong> works like handwashing. You prevent errors you'll never identify, so the win is invisible and the routine is thankless.</li>
+      <li><strong>Debiasing</strong> targets a specific bias you already know about. It can correct afterwards, as the UK Treasury's <em>Green Book</em> does by telling planners to add a set margin to cost estimates because projects routinely run over. Or it can act beforehand, through nudges such as automatically enrolling employees in a pension plan, or through training, although training rarely carries over from one field to another.</li>
+      <li>The authors' own proposal is a <strong>decision observer</strong>: someone the decision makers invite into the meeting to watch, with a checklist, for signs of bias as they happen, for example whether alternatives were considered. They admit the evidence for this is so far informal.</li>
+      <li><strong>Decision hygiene</strong> is the other approach, named after handwashing: you wash your hands without knowing which germ you are stopping. Hygiene steps likewise prevent errors you will never identify. The downside is that you never see the error you avoided, so the routine feels thankless. Chapters 20 to 25 each show one hygiene technique.</li>
     </ul>
   </div>
 </article>
@@ -812,10 +815,10 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Accurate information can still damage a judgment if it arrives too early.</p>
     </div>
     <ul class="points">
-      <li>After the 2004 Madrid train bombings, which killed 192 people, FBI examiners matched a print to Oregon lawyer Brandon Mayfield. He had not left the US in a decade. He was held for two weeks and later paid $2 million. A respected first examiner set off a cascade.</li>
-      <li>Itiel Dror re-showed examiners their own past prints with stories attached. Four of five changed an identification in one study. In another, 4 of 24 decisions moved. With no story at all, a 2012 study still found about one decision in ten altered after seven months.</li>
-      <li>A 2011 FBI study put false positives near one in six hundred. That is low, and much higher than jurors would likely believe.</li>
-      <li>The fix: <strong>linear sequential unmasking</strong>. Reveal only what's needed, document each step before seeing the next, and keep verifiers unaware of the first conclusion.</li>
+      <li><strong>What happened in Madrid:</strong> after the 2004 train bombings, which killed 192 people, investigators found a fingerprint on a bag of detonators. The FBI ran it against its database, and a respected senior examiner declared a match with Brandon Mayfield, a lawyer in Oregon. Other examiners then checked the print and agreed, but they already knew what the first expert had concluded, so they were checking with that answer in mind. In fact Mayfield had not left the US in ten years, and Spanish police later identified the real owner of the print. Mayfield was held for two weeks and later received $2 million in compensation. <span class="so"><b>What it shows:</b> the confirmations looked independent but were not. Each examiner leaned on the respected first opinion, a cascade like the ones in chapter 8. Knowing a colleague's conclusion too early steered the checks.</span></li>
+      <li>How common is this? Psychologist Itiel Dror showed experienced examiners fingerprints they themselves had matched years earlier, without telling them, this time with a story attached, such as “the suspect has a solid alibi”. In one study four of five examiners changed their own earlier conclusion; in another, 4 of 24 decisions changed. Even with no story at all, a 2012 study found that about one decision in ten changed when examiners saw the same prints again seven months later. <span class="so"><b>What it shows:</b> context and mood change expert judgments that feel purely technical.</span></li>
+      <li>Fingerprint errors are rare: a 2011 FBI study found false matches in roughly one case in six hundred. But that is far more often than juries assume, because most people believe fingerprints never lie.</li>
+      <li>The fix is <strong>linear sequential unmasking</strong>. Examiners first study the print from the crime scene on its own and write down what they see, and only then look at the suspect's print. They receive case information only when they need it, and a second examiner checks without knowing the first one's conclusion. <span class="so"><b>What it shows:</b> the principle applies anywhere: control what information people see, and when, so that irrelevant facts cannot steer them.</span></li>
     </ul>
     <div class="fig">
       <h4>Everyone's noisy but me</h4>
@@ -836,12 +839,12 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Averaging independent judgments is the closest thing to a guaranteed improvement.</p>
     </div>
     <ul class="points">
-      <li>Forecasters are overconfident: returns landed inside US finance chiefs' 80% ranges only 36% of the time.</li>
-      <li>Averaging divides noise by the square root of the number of judgments. It does nothing for shared bias, which is why independence matters.</li>
-      <li>Options include a select crowd of top performers, prediction markets, and the Delphi method with its one-meeting version: estimate, talk, estimate.</li>
-      <li>In the Good Judgment Project, tens of thousands of volunteers gave probabilities, scored on calibration and on taking a stand. About 2% stood out as <strong>superforecasters</strong>, reportedly beating intelligence analysts who could read secret data.</li>
-      <li>Their edge is less raw intelligence than habit: breaking questions into parts, starting from base rates, updating relentlessly. Tetlock calls this <strong>perpetual beta</strong>.</li>
-      <li>Training, teaming and selection all improved accuracy. Satopää and colleagues found that all three worked mainly by cutting noise, even the training built to fight bias.</li>
+      <li><strong>Forecasters are overconfident.</strong> In a long-running survey, the chief financial officers of US companies were asked each quarter to forecast the stock market for the next year and to give a range they were 80% sure would contain the actual return, such as “between 2% and 10%”. If their confidence were justified, the real result would land inside their range about 80% of the time. It did so only 36% of the time. <span class="so"><b>What it shows:</b> their ranges were far too narrow. They were much more certain than their knowledge justified.</span></li>
+      <li>The most reliable improvement is to average independent judgments. Averaging four people's estimates halves the noise, and nine cut it to a third, because noise shrinks with the square root of the number of judgments. But averaging does nothing against a bias everyone shares, and it only works if people judge independently, not after discussing.</li>
+      <li>Ways to combine views include a <em>select crowd</em> of the best performers, <em>prediction markets</em> where people bet on outcomes, and the <em>Delphi method</em>, in which people estimate privately, discuss, then estimate again. Its one-meeting version is estimate, talk, estimate.</li>
+      <li>In Philip Tetlock's Good Judgment Project, tens of thousands of volunteers gave probabilities for real events (“Will X happen by June?”) and were scored on accuracy and on daring to commit. About 2% were consistently excellent. These <strong>superforecasters</strong> reportedly beat US intelligence analysts who had access to secret information.</li>
+      <li>Their edge is less raw intelligence than habit: breaking a question into parts, starting from how often such events usually happen (the base rate), and updating often in small steps. Tetlock calls this being in <strong>perpetual beta</strong>, always a work in progress.</li>
+      <li>Training, teamwork and selecting the best people all improved accuracy. When Ville Satopää and colleagues analysed why, all three worked mainly by reducing noise rather than bias, even the training that had been designed to fight bias.</li>
     </ul>
     <div class="figrow">
       <div class="fig">
@@ -861,9 +864,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">A good guideline replaces one hard judgment with several easy ones.</p>
     </div>
     <ul class="points">
-      <li>Early angiogram readers disagreed 31% of the time on whether a major vessel was more than 70% blocked. Mammogram false negatives ranged from 0% to over 50% across radiologists in one study.</li>
-      <li>Virginia Apgar's 1952 newborn score rates colour, pulse, reflexes, muscle tone and breathing from 0 to 2 each. Since a total of 7 or more signals good health, the judgment is now five small steps and a sum. Other scores work similarly.</li>
-      <li>Psychiatry is the hard case. Early studies found two psychiatrists agreeing just 50–57% of the time, and DSM revisions have helped only modestly.</li>
+      <li>Doctors disagree more than patients assume. In early studies of angiograms, X-ray images of the heart's arteries, two doctors disagreed 31% of the time on whether a major artery was more than 70% blocked, a key question for treatment. For mammograms, the share of cancers missed ranged from 0% for some radiologists to over 50% for others.</li>
+      <li>A classic remedy is the Apgar score from 1952, still used on newborns worldwide. Instead of one overall judgment (is this baby healthy?), the midwife or doctor rates five things, colour, pulse, reflexes, muscle tone and breathing, each from 0 to 2, and adds them up. A total of 7 or more means the baby is doing well. <span class="so"><b>What it shows:</b> one hard, noisy judgment becomes five easy ones and a sum. Breaking a judgment into parts is a core hygiene technique.</span></li>
+      <li>Psychiatry shows the limits: in early studies two psychiatrists agreed on a diagnosis only 50 to 57% of the time, and later editions of the diagnostic manual (the DSM) with more precise criteria have improved this only modestly. The chart below shows yet another source of noise: how often doctors order cancer screening falls as the day goes on, probably because they run behind schedule and drop preventive conversations.</li>
     </ul>
     <div class="fig">
       <h4>Cancer screening orders through the clinic day</h4>
@@ -888,10 +891,10 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Most of what a performance rating measures is the rater.</p>
     </div>
     <ul class="points">
-      <li>In 360-degree reviews, true performance usually explains 20–30% of variance. The rest, 70–80%, is noise. It stays high even for purely developmental feedback.</li>
-      <li>Deloitte counted 2 million hours a year on its 65,000 people. One industrial firm rated 98% of managers as fully meeting expectations.</li>
-      <li>Rankings beat ratings, because lenient and tough raters use the same ranks. The flaw in forced ranking is the forcing: in a random ten, the chance of exactly two top-20% performers is just 30%.</li>
-      <li>The authors favour <strong>frame-of-reference training</strong> and <strong>case scales</strong>: raters compare each person with shared anchor examples. It works, and has seldom caught on.</li>
+      <li>In 360-degree reviews, where bosses, colleagues and staff all rate an employee, the person's actual performance explains only about 20 to 30% of the differences between ratings. The other 70 to 80% is noise, mostly reflecting who the rater is. This holds even when the feedback is only meant for personal development, not for pay.</li>
+      <li>The effort is huge: Deloitte calculated that it spent 2 million hours a year rating its 65,000 people. And ratings often say little: one industrial company rated 98% of its managers as fully meeting expectations.</li>
+      <li>Ranking people against each other is more reliable than rating them on an absolute scale, because a lenient and a tough rater will still put people in a similar order. The flaw in forced ranking (for example, every team must label exactly 20% as top performers) is the forcing: in a random group of ten, the chance that exactly two are top-20% performers is only 30%, so most teams end up with wrong labels.</li>
+      <li>The authors favour <strong>frame-of-reference training</strong> and <strong>case scales</strong>: raters are shown concrete example employees as anchors (“this is what a 4 looks like”) and compare each person with them. It works, they say, but has seldom caught on.</li>
     </ul>
   </div>
 </article>
@@ -904,8 +907,8 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">The unstructured interview is a confident ritual with modest predictive power.</p>
     </div>
     <ul class="points">
-      <li>First minutes drive outcomes, down to the handshake, and interviewers then steer toward confirmation. In one experiment candidates answered at random and no interviewer noticed.</li>
-      <li>Google found its interviews predicted nothing, then rebuilt them on three principles. <strong>Decomposition:</strong> four defined assessments. <strong>Independence:</strong> behavioural questions scored against a rubric, with ratings filed before colleagues talk. <strong>Delayed holistic judgment:</strong> a committee decides at the end, anchored on the average. Four interviews replaced as many as twenty-five.</li>
+      <li>Interviews mislead. Interviewers form an impression in the first minutes, down to the handshake, and then ask questions that confirm it. In one experiment some candidates were secretly told to answer at random, and none of the interviewers noticed; they still felt they had learned a lot. <span class="so"><b>What it shows:</b> an unstructured interview feels informative but predicts job performance only modestly.</span></li>
+      <li>Google found that its interviews did not predict who would do well and rebuilt them on three principles. <strong>Decomposition:</strong> decide in advance what to assess, for example four defined qualities. <strong>Independence:</strong> each interviewer asks set behavioural questions (“tell me about a time when…”), scores the answers against a written rubric and files the scores before talking to colleagues. <strong>Delayed holistic judgment:</strong> only at the end does a committee decide, starting from the average of the scores. Four interviews now predict as well as up to twenty-five did before.</li>
     </ul>
   </div>
 </article>
@@ -918,8 +921,8 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">Run a strategic decision the way a good structured interview runs.</p>
     </div>
     <ul class="points">
-      <li>In the book's composite case, a CEO, Joan, applies this to a possible acquisition. It mostly changes the agenda.</li>
-      <li>The analysts' report comes back without the usual rosy unity, as some ratings are strong and others aren't. That unevenness is the benefit.</li>
+      <li>The idea is to treat the options in a big decision like job candidates: define in advance which aspects to assess, have each one assessed separately, and form the overall judgment only at the end. In the book's composite case, CEO Joan uses it to decide on an acquisition. What mostly changes is the meeting agenda: each assessment is discussed on its own before anyone gives an overall view.</li>
+      <li>The analysts' report no longer paints the usual uniformly rosy picture: some aspects score high, others low. <span class="so"><b>What it shows:</b> that unevenness is the benefit. The board sees where the real risks are instead of one confident story.</span></li>
     </ul>
     <div class="fig">
       <h4>The protocol, step by step</h4>
@@ -951,9 +954,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <p class="idea">If one remedy is bad, the authors say, look for a better one and don't settle for the noise.</p>
     </div>
     <ul class="points">
-      <li>Cost is sometimes a fair objection: nobody needs five teachers grading each essay. It's often an excuse too.</li>
-      <li>Rules can be consistently wrong, as with three-strikes laws.</li>
-      <li>Algorithms can be noiseless and biased, through predictors tied to race or gender or skewed training data. The authors accept the risk and argue that algorithms can be tested in ways human minds can't, and that good ones can beat people on both accuracy and fairness. They stress "can", not "will".</li>
+      <li>Reducing noise has costs, and sometimes they are not worth it: no school will pay five teachers to grade each essay just to average out their differences. But “it's too expensive” is often an excuse.</li>
+      <li>Rules can be consistently wrong. Three-strikes laws, which impose very long sentences after a third conviction, remove noise but produce harsh and sometimes absurd results for minor crimes.</li>
+      <li>Algorithms can be free of noise and still biased, for example if their inputs are linked to race or gender, or if they learned from biased past decisions. The authors accept that risk but argue that algorithms, unlike human minds, can be tested for bias and corrected, and that good ones can be both more accurate and fairer than people. They stress that they <em>can</em> be, not that they will be.</li>
     </ul>
   </div>
 </article>
@@ -987,9 +990,9 @@ footer p { font-size: 14px; color: var(--ink-3); max-width: 70ch; }
       <div><h5>Standards</h5><ul><li>"Drive prudently"</li><li>Delegate judgment, so invite noise</li><li>Cheap to write, costly to apply</li><li>Suit trusted agents, or groups that can't agree on specifics</li><li>Need hygiene around them to stay consistent</li></ul></div>
     </div>
     <ul class="points">
-      <li>The choice comes down to the cost of decisions and the cost of errors. Facebook backed its public standards with a private rulebook of about 12,000 words.</li>
-      <li>US disability benefits moved to a matrix after look-alike claimants got different results. Jerry Mashaw named this bureaucratic justice.</li>
-      <li>The authors argue that the law should do far more about noise, and that it can sometimes count as a rights violation.</li>
+      <li>The choice between rules and standards depends on two costs: the cost of making each decision (standards make every decision effortful) and the cost of errors (rules go wrong when they don't fit the case). Facebook, for example, publishes broad community standards but gives its moderators a detailed internal rulebook of about 12,000 words, so that thousands of moderators decide alike.</li>
+      <li>In the US, people with similar disabilities used to get different benefit decisions depending on which official handled the claim. The agency moved to a grid based on age, education, work experience and remaining capacity. Legal scholar Jerry Mashaw called this <strong>bureaucratic justice</strong>: less individual, but similar people are treated alike.</li>
+      <li>The authors conclude that the law should pay far more attention to noise, and that treating similar people very differently for no reason can sometimes count as a violation of their rights.</li>
     </ul>
   </div>
 </article>
