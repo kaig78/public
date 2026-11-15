@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Seven Principles for Making Marriage Work by John Gottman &amp; Nan Silver – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* A "love lab" notebook: warm paper, a heart-rate trace as the recurring motif.
+   wine = friendship, amber = conflict, sage = repair & calm. */
+:root{
+  --paper:#fbf7f2; --paper-2:#f3ece3; --card:#fffdfa;
+  --ink:#241c1f; --ink-2:#55494d; --ink-3:#86787c; --rule:#e2d8cd;
+  --wine:#a3324f; --amber:#c47a1c; --sage:#3b7a63; --slate:#4a5a78;
+  --display:"Fraunces",Georgia,serif; --body:"Source Serif 4",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --measure:64ch; --frame:1120px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#151214; --paper-2:#1e1a1d; --card:#221d20;
+    --ink:#f1e9e6; --ink-2:#c2b5b3; --ink-3:#958787; --rule:#362e31;
+    --wine:#f07a98; --amber:#f0aa4e; --sage:#6fcfa9; --slate:#9fb2dc;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#151214; --paper-2:#1e1a1d; --card:#221d20;
+  --ink:#f1e9e6; --ink-2:#c2b5b3; --ink-3:#958787; --rule:#362e31;
+  --wine:#f07a98; --amber:#f0aa4e; --sage:#6fcfa9; --slate:#9fb2dc;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 var(--body);
+  padding:0 max(16px,env(safe-area-inset-right)) 64px max(16px,env(safe-area-inset-left))}
+.frame{max-width:var(--frame);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;font-weight:650}
+p{margin:0}
+a{color:inherit;text-underline-offset:3px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px;border-radius:3px}
+.label{font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.prose{max-width:var(--measure);display:grid;gap:1em}
+.muted{color:var(--ink-2)}
+.c-wine{--c:var(--wine)} .c-amber{--c:var(--amber)} .c-sage{--c:var(--sage)} .c-slate{--c:var(--slate)}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.top a{text-decoration:none;font:500 14px var(--mono)}
+.theme{background:none;border:1px solid var(--rule);border-radius:99px;padding:6px 14px;cursor:pointer;font:500 13px var(--mono)}
+.theme:hover{border-color:var(--ink-3)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.6fr);gap:clamp(24px,5vw,64px);align-items:center;padding:clamp(32px,6vw,72px) 0 12px}
+.hero h1{font-size:clamp(40px,7.4vw,84px);line-height:.98;letter-spacing:-.02em;font-weight:700}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--wine)}
+.hero .dek{font-size:clamp(19px,2vw,23px);line-height:1.45;color:var(--ink-2);margin-top:20px;max-width:40ch;font-style:italic}
+.hero .by{margin-top:18px}
+.cover{justify-self:end;width:100%;max-width:260px;aspect-ratio:275/367;object-fit:cover;border-radius:3px;transform:rotate(-1.8deg);
+  box-shadow:0 22px 44px -18px rgba(40,10,20,.45),0 6px 14px -8px rgba(40,10,20,.3)}
+.trace{display:block;width:100%;height:70px;margin-top:22px}
+.trace path{fill:none;stroke:var(--wine);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.trace .base{stroke:var(--rule);stroke-width:1}
+
+/* sections */
+section{padding-top:clamp(56px,8vw,96px)}
+.sh{display:grid;gap:10px;margin-bottom:26px}
+.sh h2{font-size:clamp(30px,4.6vw,50px);line-height:1.04;letter-spacing:-.015em}
+.sh .lede{font-size:20px;color:var(--ink-2);max-width:54ch}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-top:30px}
+.stat{background:var(--card);padding:18px 18px 20px}
+.stat b{display:block;font:700 clamp(34px,4.5vw,48px)/1 var(--display);color:var(--c);font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:8px;font-size:15px;line-height:1.4;color:var(--ink-2)}
+
+/* the core claim */
+.claim{margin-top:30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.box{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:20px 22px}
+.box h3{font-size:22px;margin-bottom:8px}
+.box.tint{background:color-mix(in srgb,var(--c) 9%,var(--card));border-color:color-mix(in srgb,var(--c) 30%,var(--rule))}
+.box ul{margin:8px 0 0;padding-left:1.1em;display:grid;gap:6px}
+
+/* six signs */
+.signs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.sign{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:18px 20px;position:relative}
+.sign .n{font:600 13px var(--mono);color:var(--amber)}
+.sign h3{font-size:21px;margin:4px 0 6px}
+.sign p{font-size:16px;line-height:1.5;color:var(--ink-2)}
+
+/* horsemen */
+.horses{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.horse{border-radius:12px;border:1px solid var(--rule);background:var(--card);overflow:hidden;display:flex;flex-direction:column}
+.horse .hd{padding:16px 18px 12px;border-bottom:1px dashed var(--rule)}
+.horse .hd h3{font-size:22px}
+.horse .hd p{font-size:15px;color:var(--ink-2);line-height:1.45;margin-top:4px}
+.horse .say{padding:12px 18px;font-size:16px;line-height:1.45;font-style:italic}
+.horse .anti{margin-top:auto;padding:14px 18px;background:color-mix(in srgb,var(--sage) 10%,var(--card));font-size:15px;line-height:1.45}
+.horse .anti b{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--sage);display:block;margin-bottom:3px}
+
+/* sorter quiz */
+.quiz{margin-top:24px;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:22px}
+.quiz .q{font:500 clamp(20px,2.4vw,26px)/1.35 var(--display);margin:8px 0 16px;min-height:2.7em}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:1px solid var(--rule);background:var(--paper);border-radius:99px;padding:8px 14px;cursor:pointer;font-size:15px}
+.opt:hover{border-color:var(--ink-3)}
+.opt.right{background:color-mix(in srgb,var(--sage) 18%,var(--card));border-color:var(--sage)}
+.opt.wrong{background:color-mix(in srgb,var(--wine) 14%,var(--card));border-color:var(--wine)}
+.fb{margin-top:14px;font-size:16px;line-height:1.5;color:var(--ink-2);min-height:3em}
+.qfoot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+.btn{border:1px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:99px;padding:8px 16px;cursor:pointer;font:500 14px var(--mono)}
+.btn[disabled]{opacity:.35;cursor:default}
+.btn.ghost{background:none;color:var(--ink)}
+
+/* pulse slider */
+.pulse{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:center;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:22px}
+.bpm{font:700 clamp(54px,8vw,84px)/1 var(--display);font-variant-numeric:tabular-nums;color:var(--c,var(--sage))}
+.bpm small{font:500 14px var(--mono);color:var(--ink-3);margin-left:6px}
+input[type=range]{width:100%;accent-color:var(--wine);margin-top:14px}
+.state h3{font-size:22px;margin-bottom:6px}
+.state p{font-size:16px;line-height:1.5;color:var(--ink-2)}
+
+/* principles */
+.princ{display:grid;gap:14px}
+.pr{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:20px 22px}
+.pr .num{font:700 52px/1 var(--display);color:var(--c)}
+.pr h3{font-size:clamp(22px,2.6vw,28px)}
+.pr .tag{margin-top:2px}
+.pr .body{display:grid;gap:10px;margin-top:10px;font-size:17px}
+.pr .try{border-left:3px solid var(--c);padding:6px 0 6px 14px;font-size:16px;color:var(--ink-2)}
+.pr .try b{color:var(--ink)}
+.groupnote{display:flex;gap:10px;align-items:center;margin:26px 0 10px}
+.groupnote i{flex:1;height:1px;background:var(--rule)}
+
+/* dialogue compare */
+.cmp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:4px}
+.cmp>div{border-radius:10px;padding:12px 14px;font-size:15.5px;line-height:1.5}
+.cmp .no{background:color-mix(in srgb,var(--wine) 8%,var(--paper));}
+.cmp .yes{background:color-mix(in srgb,var(--sage) 10%,var(--paper));}
+.cmp .label{display:block;margin-bottom:4px}
+
+/* flip cards */
+.flips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.flip{text-align:left;cursor:pointer;border:1px solid var(--rule);border-radius:14px;background:var(--card);padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;min-height:190px}
+.flip .side{font:500 19px/1.4 var(--display)}
+.flip .why{font-size:15px;line-height:1.45;color:var(--ink-2)}
+.flip.on{background:color-mix(in srgb,var(--sage) 10%,var(--card));border-color:color-mix(in srgb,var(--sage) 45%,var(--rule))}
+.flip .label{margin-top:auto}
+.formula{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.formula span{border:1px dashed var(--rule);border-radius:8px;padding:8px 12px;font-size:16px;background:var(--card)}
+.formula b{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;display:block;color:var(--c)}
+
+/* repair kit */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{border:1px solid var(--rule);border-radius:99px;padding:7px 14px;background:var(--card);cursor:pointer;font-size:15px}
+.tab[aria-selected=true]{background:var(--sage);border-color:var(--sage);color:#fff}
+:root[data-theme=dark] .tab[aria-selected=true]{color:#10221b}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .tab[aria-selected=true]{color:#10221b}}
+.phrases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.phrase{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--sage);border-radius:8px;padding:12px 14px;font:500 18px/1.4 var(--display)}
+
+/* two kinds of conflict */
+.kinds{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.meter{height:14px;border-radius:99px;background:var(--paper-2);overflow:hidden;display:flex;margin:10px 0 6px}
+.meter i{display:block;height:100%}
+
+/* compromise circles */
+.circ{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:22px;align-items:center}
+.circ svg{width:100%;max-width:340px;height:auto;display:block;margin-inline:auto}
+.circ svg text{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+.steps{counter-reset:s;display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;font-size:17px}
+.steps li::before{content:counter(s);font:700 20px/1.3 var(--display);color:var(--amber)}
+
+/* dreams */
+.dreams{display:flex;flex-wrap:wrap;gap:8px}
+.dreams span{border:1px solid var(--rule);border-radius:99px;padding:6px 12px;font-size:15px;background:var(--card)}
+.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.levels div{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:14px 16px;font-size:16px}
+.levels b{display:block;font:700 30px/1 var(--display);color:var(--slate);margin-bottom:6px}
+
+/* five hours */
+.hours{display:flex;height:46px;border-radius:10px;overflow:hidden;margin:18px 0 10px;border:1px solid var(--rule)}
+.hours div{display:flex;align-items:center;justify-content:center;font:500 12px var(--mono);color:#fff;min-width:0;overflow:hidden;white-space:nowrap}
+.hlist{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.hlist div{font-size:15px;line-height:1.45}
+.hlist b{display:flex;align-items:center;gap:8px;font:600 16px var(--display)}
+.hlist b i{width:12px;height:12px;border-radius:3px;display:inline-block;flex:none}
+
+/* weekly check */
+.check{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px;margin-top:6px}
+.check label{display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:1.4;cursor:pointer;padding:6px 0}
+.check input{accent-color:var(--wine);width:18px;height:18px;margin-top:2px;flex:none}
+.verdict{margin-top:16px;padding:14px 16px;border-radius:10px;background:var(--paper-2);font-size:16px}
+
+/* takeaways */
+.takes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;counter-reset:t}
+.takes li{list-style:none;counter-increment:t;background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:16px 18px 16px 58px;position:relative;font-size:17px}
+.takes li::before{content:counter(t,decimal-leading-zero);position:absolute;left:18px;top:15px;font:600 15px var(--mono);color:var(--wine)}
+.takes{padding:0;margin:0}
+footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--rule);font-size:15px;color:var(--ink-3)}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .cover{justify-self:start;max-width:170px;order:-1}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .signs,.flips{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .horses{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hlist{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .claim,.signs,.flips,.horses,.cmp,.pulse,.kinds,.circ,.phrases,.levels,.check,.takes{grid-template-columns:1fr}
+  .pr{grid-template-columns:1fr;gap:4px}
+  .pr .num{font-size:40px}
+  .hlist{grid-template-columns:1fr}
+  .hours div span{display:none}
+}
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+  <header class="hero">
+    <div>
+      <p class="label">Book notes · John M. Gottman &amp; Nan Silver · 1999</p>
+      <h1>The Seven Principles for <em>Making Marriage Work</em></h1>
+      <p class="dek">After watching hundreds of couples argue in a lab, Gottman's conclusion is unexpected: what keeps a marriage alive is mostly how the two of you treat each other when nobody is fighting.</p>
+      <p class="by label">Summary · reading time ≈ 15 min · six interactive tools</p>
+    </div>
+    <img class="cover" src="cover.jpg" alt="Cover of The Seven Principles for Making Marriage Work">
+  </header>
+  <svg class="trace" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true">
+    <path class="base" d="M0 40H1000"/>
+    <path id="ecg" d=""/>
+  </svg>
+
+  <!-- ===== The lab ===== -->
+  <section id="lab">
+    <div class="sh">
+      <p class="label">Chapter 1 · The Love Lab</p>
+      <h2>A flat in Seattle full of cameras</h2>
+      <p class="lede">Couples stayed a weekend in an apartment rigged with cameras, microphones and heart monitors. Gottman's team coded every expression and sentence, then followed the couples for years.</p>
+    </div>
+    <div class="prose">
+      <p>The headline result: after listening to a couple talk for about five minutes, the team could predict with roughly 91 percent accuracy who would later divorce. They did not look at whether a couple fought. They looked at <em>how</em> the partners spoke, whether they reached each other's attempts to cool things down, and what their bodies did while it happened.</p>
+      <p>The book also knocks down several marriage myths. The most surprising one concerns <strong>active listening</strong>, the therapist's standard tool ("What I hear you saying is…"). Happy couples hardly use it in a fight. Asking someone you have just attacked to calmly validate you is, in Gottman's phrase, emotional gymnastics that few people can do. Other myths: that personality problems, avoiding conflict, or keeping score ruin marriages; that affairs are the root cause (they are usually a symptom of growing distance); that men and women are from different planets.</p>
+    </div>
+    <div class="stats">
+      <div class="stat c-wine"><b>91%</b><span>accuracy predicting divorce from a few minutes of conversation</span></div>
+      <div class="stat c-amber"><b>96%</b><span>of a discussion's outcome is set in its first three minutes</span></div>
+      <div class="stat c-slate"><b>69%</b><span>of marital conflicts are perpetual. They never get “solved”</span></div>
+      <div class="stat c-sage"><b>70%</b><span>of satisfaction with sex, romance and passion comes from the quality of the friendship (for both sexes)</span></div>
+    </div>
+    <div class="claim">
+      <div class="box tint c-wine">
+        <h3>The real foundation: friendship</h3>
+        <p class="muted">Partners who know each other in detail, respect each other and stay in touch through small daily gestures build what Gottman calls <strong>positive sentiment override</strong>. A sharp tone gets read generously (“she's stressed”), not as an attack.</p>
+      </div>
+      <div class="box tint c-sage">
+        <h3>The secret weapon: repair</h3>
+        <p class="muted">Every couple says hurtful things. Stable couples have <strong>repair attempts</strong>: a joke, a silly face, “wait, let me start again”. Whether a repair lands depends less on the words than on how much friendship is in the account.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Six signs ===== -->
+  <section id="signs">
+    <div class="sh">
+      <p class="label">Chapter 2 · How Gottman predicts divorce</p>
+      <h2>Six warning signs</h2>
+      <p class="lede">None of these alone ends a marriage. Together, and especially without working repair, they predict separation with uncomfortable precision.</p>
+    </div>
+    <div class="signs">
+      <div class="sign"><p class="n">01</p><h3>Harsh startup</h3><p>The talk opens with blame or sarcasm. How a conversation starts is how it ends, so the fix is to stop, take a break and start again.</p></div>
+      <div class="sign"><p class="n">02</p><h3>The four horsemen</h3><p>Criticism, contempt, defensiveness and stonewalling. They tend to arrive in that order, one handing over to the next.</p></div>
+      <div class="sign"><p class="n">03</p><h3>Flooding</h3><p>The other person's negativity feels so overwhelming that you stop listening and only want to protect yourself.</p></div>
+      <div class="sign"><p class="n">04</p><h3>Body language</h3><p>Pulse above 100, adrenaline, fight-or-flight. Men's bodies react faster and calm down more slowly, so men are more likely to withdraw.</p></div>
+      <div class="sign"><p class="n">05</p><h3>Failed repair</h3><p>The horsemen alone predict divorce at 82%; add failed repair attempts and it rises above 90%. Couples whose repairs land stay happy despite the horsemen.</p></div>
+      <div class="sign"><p class="n">06</p><h3>Bad memories</h3><p>The shared past gets rewritten. The wedding becomes a mistake, and kind gestures read as manipulation.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== Horsemen ===== -->
+  <section id="horsemen">
+    <div class="sh">
+      <p class="label">The four horsemen and their antidotes</p>
+      <h2>Complain, yes. Criticise, no.</h2>
+      <p class="lede">A complaint is about one specific thing someone did. Criticism turns that thing into a flaw in who they are. The difference is often only a few words.</p>
+    </div>
+    <div class="horses">
+      <div class="horse"><div class="hd"><h3>Criticism</h3><p>Attacks the person, not the deed. Signals: “always”, “never”, “what's wrong with you?”</p></div>
+        <p class="say">“You never think about anyone but yourself.”</p>
+        <div class="anti"><b>Antidote</b>Soft startup: describe the situation, say how you feel, ask for something concrete.</div></div>
+      <div class="horse"><div class="hd"><h3>Contempt</h3><p>Sarcasm, mockery, eye-rolling, a tone of moral superiority. Gottman ranks it as the worst predictor of all.</p></div>
+        <p class="say">“Oh sure, because you're so organised.” (eyes roll)</p>
+        <div class="anti"><b>Antidote</b>A culture of fondness and admiration: deliberately notice and say what you value.</div></div>
+      <div class="horse"><div class="hd"><h3>Defensiveness</h3><p>Excuses, counter-attacks, playing the innocent victim. It sounds like self-protection, but it is really blame in disguise.</p></div>
+        <p class="say">“I only forgot because you dumped everything on me.”</p>
+        <div class="anti"><b>Antidote</b>Take responsibility for even a small part: “You're right, I forgot. Sorry.”</div></div>
+      <div class="horse"><div class="hd"><h3>Stonewalling</h3><p>Shutting down: no eye contact, no nods, no answer. In 85% of couples it is the man. It is usually a reaction to flooding.</p></div>
+        <p class="say">(stares at the phone, says nothing)</p>
+        <div class="anti"><b>Antidote</b>Say that you need a break, take at least 20 minutes to calm down, then come back.</div></div>
+    </div>
+
+    <div class="quiz" id="quiz" aria-live="polite">
+      <p class="label">Try it · Which one is it? <span id="qn"></span></p>
+      <p class="q" id="qq"></p>
+      <div class="opts" id="qo"></div>
+      <p class="fb" id="qf"></p>
+      <div class="qfoot"><span class="label" id="qs"></span><button class="btn" id="qnext" type="button" disabled>Next →</button></div>
+    </div>
+  </section>
+
+  <!-- ===== Flooding ===== -->
+  <section id="flooding">
+    <div class="sh">
+      <p class="label">Flooding · the body takes over</p>
+      <h2>Above 100 beats, nobody is listening</h2>
+      <p class="lede">Once your heart rate climbs above about 100 beats per minute, adrenaline narrows your attention. You can no longer process what your partner is saying. Drag the slider to see where you are.</p>
+    </div>
+    <div class="pulse">
+      <div>
+        <div class="bpm" id="bpm">72<small>bpm</small></div>
+        <input type="range" id="hr" min="60" max="165" value="72" aria-label="Heart rate in beats per minute">
+        <div style="display:flex;justify-content:space-between" class="label"><span>60</span><span>100</span><span>165</span></div>
+      </div>
+      <div class="state" id="hrstate"></div>
+    </div>
+  </section>
+
+  <!-- ===== Seven principles ===== -->
+  <section id="principles">
+    <div class="sh">
+      <p class="label">Chapters 3–11 · The seven principles</p>
+      <h2>Three for friendship, one for power, three for conflict</h2>
+      <p class="lede">The principles feed into each other: the more friendship there is, the easier conflict becomes, and handling conflict well protects the friendship.</p>
+    </div>
+
+    <div class="groupnote"><span class="label">Friendship</span><i></i></div>
+    <div class="princ">
+      <article class="pr c-wine"><div class="num">1</div><div>
+        <h3>Enhance your love maps</h3><p class="tag label">Know your partner's inner world</p>
+        <div class="body">
+          <p>A love map is the part of your mind that holds the details of your partner's life: their current worries, the colleague who annoys them, what they hope for and what they fear. Couples with detailed love maps get through big changes much better. When the first baby arrives, about two thirds of mothers see their marital satisfaction drop sharply; the third who don't are largely the ones whose couples knew each other in detail.</p>
+          <p class="try"><b>Practice:</b> ask open questions regularly and keep them current. “What's stressing you most at work right now?” “What are you looking forward to this month?” Listen without judging or giving advice.</p>
+        </div></div></article>
+
+      <article class="pr c-wine"><div class="num">2</div><div>
+        <h3>Nurture fondness and admiration</h3><p class="tag label">The antidote to contempt</p>
+        <div class="body">
+          <p>If there is still some respect and warmth left, a marriage can be saved. A useful test: ask a couple how they met. If they tell the story with warmth, things look good. Fondness is not a feeling you wait for but a habit of attention: you train yourself to notice what is good about the other person rather than what is missing.</p>
+          <p class="try"><b>Practice:</b> pick three qualities you value in your partner and attach a concrete memory to each: “You're generous. When my brother lost his job you offered to help without being asked.” Say it out loud.</p>
+        </div></div></article>
+
+      <article class="pr c-wine"><div class="num">3</div><div>
+        <h3>Turn toward each other instead of away</h3><p class="tag label">Bids, and the emotional bank account</p>
+        <div class="body">
+          <p>Everyday life is full of small <strong>bids</strong> for attention: “Look at that boat”, a sigh, a question about the weekend. Responding to them (turning toward) pays into an emotional bank account; ignoring them withdraws from it. People usually turn away out of distraction, not malice. Romance grows from these small moments more than from candlelit dinners.</p>
+          <p>The book's key daily ritual is the <strong>stress-reducing conversation</strong>, 20–30 minutes about stress <em>outside</em> the relationship. Take turns, show real interest, and above all: understanding comes before advice. Take your partner's side even if you see it differently. It is “us against the world”.</p>
+          <div class="cmp">
+            <div class="no"><span class="label">Turning away</span>“Well, maybe your boss had a point. You did send it late.”</div>
+            <div class="yes"><span class="label">Turning toward</span>“That's so unfair after the weekend you put in. No wonder you're fed up.”</div>
+          </div>
+          <p class="try"><b>Ask first:</b> “Do you want me to just listen, or should we think about it together?”</p>
+        </div></div></article>
+    </div>
+
+    <div class="groupnote"><span class="label">Power</span><i></i></div>
+    <div class="princ">
+      <article class="pr c-slate"><div class="num">4</div><div>
+        <h3>Let your partner influence you</h3><p class="tag label">Share power, yield to win</p>
+        <div class="body">
+          <p>Husbands who refuse to share power with their wives had an 81% chance of the marriage failing. The typical pattern: she raises a concern, he escalates with a horseman. The emotionally intelligent partner looks for common ground and takes the other's opinion into the decision, which is not the same as giving in to everything. The paradox: people who accept influence end up with more influence.</p>
+          <p class="try"><b>Practice:</b> “yield to win”. Hear the message underneath the tone, find the reasonable core of the request, and offer something. “You're right, I didn't see how much you'd done. Show me what's left and I'll help.”</p>
+        </div></div></article>
+    </div>
+
+    <div class="groupnote"><span class="label">Conflict</span><i></i></div>
+    <div class="princ">
+      <article class="pr c-amber"><div class="num">5</div><div>
+        <h3>Solve your solvable problems</h3><p class="tag label">Five steps</p>
+        <div class="body">
+          <p>Solvable problems are situational: who takes the bins out, how to handle a visit. They don't touch a deeper life dream. The model: <strong>(1)</strong> soften your startup, <strong>(2)</strong> make and receive repair attempts, <strong>(3)</strong> soothe yourself and each other, <strong>(4)</strong> compromise, <strong>(5)</strong> be tolerant of each other's faults. A good reference point: treat your partner with the politeness you'd give a guest. Nobody tells a guest who forgot their umbrella “what's wrong with you?”</p>
+          <p class="try">The book also works through the classic flashpoints: stress from work (decompress first, then talk), in-laws (the couple is the primary unit, so stand by your partner), money (balance freedom with security), sex (talk concretely and positively), housework (fairness as your partner experiences it) and becoming parents (the father has to follow his partner into the new world, not wait for the old one).</p>
+        </div></div></article>
+
+      <article class="pr c-amber"><div class="num">6</div><div>
+        <h3>Overcome gridlock</h3><p class="tag label">From stalemate to dialogue</p>
+        <div class="body">
+          <p>Gridlock happens when a perpetual problem stops being talked about and becomes trench warfare: each side feels rejected, digs in, and starts to see the other as the villain. Underneath almost every gridlock lies a <strong>dream</strong> that isn't being heard: security, freedom, order, adventure, a family like the one you had or never had. The goal is not to solve the problem but to declaw it.</p>
+          <p class="try"><b>Five steps:</b> become a dream detective · talk about the dream (15 minutes each, no solving) · soothe each other · find a temporary compromise · say thank you.</p>
+        </div></div></article>
+
+      <article class="pr c-sage"><div class="num">7</div><div>
+        <h3>Create shared meaning</h3><p class="tag label">A culture of two</p>
+        <div class="body">
+          <p>Every couple builds its own small culture: rituals (how you say goodbye, Sunday breakfast, how you care for each other when one of you is ill), shared ideas about roles (partner, parent, worker), goals, and symbols such as objects and family stories. You don't have to agree on everything. You need a relationship where your deepest convictions can be said out loud. The more you share, the less sharply perpetual problems bite.</p>
+          <p class="try"><b>Questions to start:</b> What should our evenings look like? What did dinner mean in your family? What would you want your obituary to say? What does “home” need to have for you?</p>
+        </div></div></article>
+    </div>
+  </section>
+
+  <!-- ===== Soft startup ===== -->
+  <section id="startup">
+    <div class="sh">
+      <p class="label">Principle 5 in practice · Soft startup</p>
+      <h2>Say it so it can be heard</h2>
+      <p class="lede">Gottman's rules for starting a difficult topic: complain without blaming; start with “I” rather than “you”; describe, don't judge; be clear; be polite; show appreciation; and don't let things pile up. Tap a card to see the soft version.</p>
+    </div>
+    <div class="formula">
+      <span class="c-amber"><b>Situation</b>what happened, camera-neutral</span>
+      <span class="c-wine"><b>I feel</b>your emotion, not a verdict</span>
+      <span class="c-sage"><b>I'd like</b>a concrete, positive request</span>
+    </div>
+    <div class="flips" id="flips"></div>
+  </section>
+
+  <!-- ===== Repair kit ===== -->
+  <section id="repair">
+    <div class="sh">
+      <p class="label">Principle 5 · Repair attempts</p>
+      <h2>A repair kit you can say out loud</h2>
+      <p class="lede">Gottman gives couples a list of ready-made phrases sorted by purpose. The phrases feel stilted at first, which is the point: say openly that you're making a repair attempt. Accept one even when it comes out clumsily, and listen to what it means rather than how it sounds.</p>
+    </div>
+    <div class="tabs" role="tablist" id="rtabs"></div>
+    <div class="phrases" id="rlist"></div>
+  </section>
+
+  <!-- ===== Two kinds ===== -->
+  <section id="kinds">
+    <div class="sh">
+      <p class="label">Chapter 7 · Two kinds of conflict</p>
+      <h2>Most of what you argue about will never go away</h2>
+      <p class="lede">Choosing a partner means choosing a particular set of problems you'll live with for decades. Happy couples treat their perpetual problems like a bad knee: they manage it, sometimes with humour.</p>
+    </div>
+    <div class="meter" role="img" aria-label="69 percent perpetual, 31 percent solvable"><i style="width:69%;background:var(--slate)"></i><i style="width:31%;background:var(--amber)"></i></div>
+    <div style="display:flex;justify-content:space-between" class="label"><span>Perpetual · 69%</span><span>Solvable · 31%</span></div>
+    <div class="kinds" style="margin-top:20px">
+      <div class="box tint c-slate"><h3>Perpetual</h3><p class="muted">Rooted in personality, values or life dreams: how tidy a home should be, how much closeness versus independence you want, how strict to be with children, what money means.</p><ul class="muted"><li>Becomes dangerous only when it turns into <strong>gridlock</strong>: no progress, no humour, the other person as the enemy.</li></ul></div>
+      <div class="box tint c-amber"><h3>Solvable</h3><p class="muted">Situational, with no deeper layer: who brings in the bins, when to leave for the airport, how to spend one particular bonus.</p><ul class="muted"><li>Left unresolved, even a small problem can harden into a perpetual one.</li></ul></div>
+    </div>
+    <div class="prose" style="margin-top:22px">
+      <p><strong>The key to both:</strong> people can only change when they feel accepted as they are. A request for change has to come wrapped in basic acceptance. “You drive like a maniac, slow down” fails. “I know you love driving fast. It makes me nervous though. Could you slow down a bit?” has a chance. Also: there is no objective truth in a marital argument, only two subjective realities that both make sense.</p>
+    </div>
+  </section>
+
+  <!-- ===== Compromise ===== -->
+  <section id="compromise">
+    <div class="sh">
+      <p class="label">Principles 5 &amp; 6 · Finding common ground</p>
+      <h2>Keep the inner circle small</h2>
+    </div>
+    <div class="circ">
+      <svg viewBox="0 0 300 300" role="img" aria-label="Two concentric circles: a small inner circle of non-negotiables inside a large outer circle of flexible areas">
+        <circle cx="150" cy="150" r="138" fill="color-mix(in srgb, var(--sage) 14%, transparent)" stroke="var(--sage)" stroke-width="1.5"/>
+        <circle cx="150" cy="150" r="52" fill="color-mix(in srgb, var(--wine) 20%, transparent)" stroke="var(--wine)" stroke-width="1.5"/>
+        <text x="150" y="146" text-anchor="middle">CORE NEEDS</text>
+        <text x="150" y="162" text-anchor="middle">non-negotiable</text>
+        <text x="150" y="58" text-anchor="middle">FLEXIBLE</text>
+        <text x="150" y="74" text-anchor="middle">timing · size · how · who</text>
+        <text x="150" y="240" text-anchor="middle">make this as big as possible</text>
+      </svg>
+      <div>
+        <ol class="steps">
+          <li><span>Each partner draws two circles. The inner circle holds what you truly cannot give up without betraying a core need or value. Keep it <strong>small</strong>.</span></li>
+          <li><span>The outer circle holds everything you can be flexible about: timing, amount, form. Make it <strong>large</strong>.</span></li>
+          <li><span>Compare: What do we agree on? Which feelings and goals do we share? How could we reach them?</span></li>
+          <li><span>Agree on a <strong>temporary</strong> compromise, try it for about two months, then review. In gridlock the aim is to live with the difference, not to make it vanish.</span></li>
+        </ol>
+        <p class="muted" style="margin-top:16px;font-size:16px">The book's example: one partner dreams of a mountain cabin, the other needs a safety cushion of savings. Their core needs were “a cabin someday” and “a fixed savings target”. Flexible: the cabin's size and the timing. Result: a small cabin in three years, with savings split between the down payment and a fund.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Dreams ===== -->
+  <section id="dreams">
+    <div class="sh">
+      <p class="label">Principle 6 · Dream detective</p>
+      <h2>Behind the position, a story</h2>
+      <p class="lede">A strong sign that a hidden dream is at work: you see your partner as the only cause of the problem (“he's just messy”). Dreams Gottman often hears include:</p>
+    </div>
+    <div class="dreams"><span>a sense of freedom</span><span>peace</span><span>adventure</span><span>order</span><span>security</span><span>healing</span><span>honour</span><span>being productive</span><span>a place to just “be”</span><span>knowing my family</span><span>building something important</span><span>a spiritual journey</span><span>getting over past hurts</span><span>quietness</span></div>
+    <div class="cmp" style="margin-top:22px">
+      <div class="no"><span class="label">Listener, don't</span>“A trek in Nepal? We can't afford that, and you get altitude sickness on a ladder.”</div>
+      <div class="yes"><span class="label">Listener, do</span>“Tell me what it would mean to you. What would it give you?” <span class="muted">Then the real story comes out: a childhood of being told to be careful, and a wish to feel strong.</span></div>
+    </div>
+    <div class="prose" style="margin-top:20px">
+      <p><strong>Questions for the listener:</strong> Tell me the story behind this. What do you believe about it? What do you feel? What do you want, what do you need? What does it mean to you? The speaker uses “I” statements and talks as if to a good friend. Nobody tries to solve anything yet.</p>
+    </div>
+    <div class="levels">
+      <div><b>1</b>Understand the dream and show interest in it, even if you don't share it.</div>
+      <div><b>2</b>Support it in practice, for example with money or time.</div>
+      <div><b>3</b>Join in, and make it part of your own dreams too.</div>
+    </div>
+  </section>
+
+  <!-- ===== Five hours ===== -->
+  <section id="hours">
+    <div class="sh">
+      <p class="label">Afterword · The magic five hours</p>
+      <h2>Five hours a week</h2>
+      <p class="lede">Couples whose marriages kept improving after the workshops did not overhaul their lives. They spent about five extra hours a week on their marriage, roughly like this:</p>
+    </div>
+    <div class="hours" role="img" aria-label="Weekly time: partings 10 minutes, reunions 100 minutes, admiration 35 minutes, affection 35 minutes, weekly date 120 minutes">
+      <div style="flex:10;background:var(--slate)"><span>10m</span></div>
+      <div style="flex:100;background:var(--sage)"><span>Reunions 1h 40m</span></div>
+      <div style="flex:35;background:var(--wine)"><span>35m</span></div>
+      <div style="flex:35;background:var(--amber)"><span>35m</span></div>
+      <div style="flex:120;background:color-mix(in srgb,var(--ink) 75%,var(--wine))"><span>Weekly date 2h</span></div>
+    </div>
+    <div class="hlist">
+      <div><b><i style="background:var(--slate)"></i>Partings</b>Before saying goodbye, learn one thing that's happening in your partner's day. 2 min × 5.</div>
+      <div><b><i style="background:var(--sage)"></i>Reunions</b>A stress-reducing conversation after work. 20 min × 5.</div>
+      <div><b><i style="background:var(--wine)"></i>Admiration</b>Say something genuinely appreciative every day. 5 min × 7.</div>
+      <div><b><i style="background:var(--amber)"></i>Affection</b>Touch, hold, and kiss goodnight, letting the day's irritations go with it. 5 min × 7.</div>
+      <div><b><i style="background:color-mix(in srgb,var(--ink) 75%,var(--wine))"></i>Weekly date</b>Two relaxed hours to update your love maps: “Where shall we go next?”</div>
+    </div>
+  </section>
+
+  <!-- ===== Weekly check ===== -->
+  <section id="check">
+    <div class="sh">
+      <p class="label">Afterword · Early-warning check</p>
+      <h2>Does something smell wrong?</h2>
+      <p class="lede">People who expect a lot from their marriage tend to have better marriages; letting negativity slide does not help. Gottman suggests a short weekly self-check. Tick what applies lately (abridged; nothing is stored).</p>
+    </div>
+    <div class="check" id="chk"></div>
+    <p class="verdict" id="verdict" aria-live="polite"></p>
+  </section>
+
+  <!-- ===== Takeaways ===== -->
+  <section id="takeaways">
+    <div class="sh">
+      <p class="label">What to keep</p>
+      <h2>Ten sentences to remember</h2>
+    </div>
+    <ol class="takes">
+      <li>The strength of the friendship decides whether conflict does damage.</li>
+      <li>Complain about the action; never turn it into a verdict on the person.</li>
+      <li>The first three minutes set the tone. If it starts harsh, stop and restart softly.</li>
+      <li>Contempt is the strongest poison; daily, specific appreciation is the antidote.</li>
+      <li>Take responsibility for even a small part, and defensiveness loses its fuel.</li>
+      <li>Above 100 beats per minute, take a 20-minute break, and say that you'll come back.</li>
+      <li>Make repair attempts openly and accept them even when they're clumsy.</li>
+      <li>Turn toward the small bids; romance is built in the everyday.</li>
+      <li>When your partner is stressed, take their side first and hold the advice.</li>
+      <li>Most conflicts are perpetual: ask about the dream behind the position, and stop trying to win.</li>
+    </ol>
+    <div class="prose" style="margin-top:28px">
+      <p class="muted">The book closes on forgiving yourself. There is no constructive criticism, and much chronic fault-finding comes from being hard on yourself. The suggested exercise: for a week, look for what is right rather than what is missing, give your partner one genuine compliment a day, and learn to say “I was wrong” and “I'm sorry” and mean it.</p>
+    </div>
+  </section>
+
+  <footer>Summary of <em>The Seven Principles for Making Marriage Work</em> by John M. Gottman and Nan Silver (Three Rivers Press, 1999). Example sentences in the tools are my own unless noted. · <a href="../">All summaries</a></footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('sp-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('sp-theme',n);};
+function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+
+/* ECG trace: calm on the left, faster and higher toward the right */
+(function(){var d='M0 40',x=0,i=0;while(x<1000){var t=x/1000,gap=110-70*t,amp=14+30*t;d+=' L'+(x+gap*.45)+' 40 L'+(x+gap*.52)+' '+(40-amp)+' L'+(x+gap*.58)+' '+(40+amp*.35)+' L'+(x+gap*.64)+' 40 L'+(x+gap)+' 40';x+=gap;i++;}document.getElementById('ecg').setAttribute('d',d);})();
+
+/* Horseman sorter */
+var H=['Complaint (fine)','Criticism','Contempt','Defensiveness','Stonewalling'];
+var Q=[
+ ['“The bins weren\'t taken out last night, and I\'m annoyed because we agreed you\'d do Thursdays.”',0,'A specific action plus a feeling plus the agreement. That is a complaint, and it\'s healthy.'],
+ ['“You never take anything seriously. What is wrong with you?”',1,'“Never” plus “what\'s wrong with you” turns one incident into a character flaw.'],
+ ['“Wow. Another brilliant financial decision. Truly, a genius.”',2,'Sarcasm with a tone of superiority is contempt, the strongest predictor of divorce.'],
+ ['“That\'s not my fault. If you had reminded me like you said, I would have done it.”',3,'An excuse that bounces the blame back. Antidote: “You\'re right, I forgot that one.”'],
+ ['(She raises the holiday plans; he keeps scrolling and says nothing.)',4,'Shutting down with no signal is stonewalling, usually a sign of flooding. Better: “I need twenty minutes, then I\'m back.”'],
+ ['“You always put your friends before me.”',1,'“Always” and a judgement about priorities. Softer: “I was hoping for an evening with just us. Could we plan one this week?”'],
+ ['“Oh please. Like you\'d even know what hard work looks like.”',2,'A mocking put-down from above. Antidote: build a culture of appreciation.'],
+ ['“I\'m not shouting, YOU\'RE the one who started this.”',3,'Counter-attack disguised as self-defence. Taking responsibility for even a small part breaks the spiral.'],
+ ['“I\'d really like it if you\'d call when you\'re going to be later than seven. I start to worry.”',0,'An “I” statement and a clear, doable request. A soft startup.']
+];
+var qi=0,score=0,answered=false;
+var qq=document.getElementById('qq'),qo=document.getElementById('qo'),qf=document.getElementById('qf'),qn=document.getElementById('qn'),qs=document.getElementById('qs'),nx=document.getElementById('qnext');
+function showQ(){answered=false;nx.disabled=true;var q=Q[qi];qn.textContent='· '+(qi+1)+' / '+Q.length;qq.textContent=q[0];qf.textContent='';qo.innerHTML='';
+ H.forEach(function(h,j){var b=el('button','opt');b.type='button';b.textContent=h;b.onclick=function(){if(answered)return;answered=true;if(j===q[1]){score++;b.classList.add('right');qf.textContent='Right. '+q[2];}else{b.classList.add('wrong');qo.children[q[1]].classList.add('right');qf.textContent='It\'s '+H[q[1]].replace(' (fine)','')+'. '+q[2];}qs.textContent='Score '+score+' / '+(qi+1);nx.disabled=false;nx.textContent=qi===Q.length-1?'Start again':'Next →';};qo.appendChild(b);});}
+nx.onclick=function(){if(qi===Q.length-1){qi=0;score=0;qs.textContent='';}else qi++;showQ();};
+showQ();
+
+/* Pulse slider */
+var hr=document.getElementById('hr'),bpm=document.getElementById('bpm'),hs=document.getElementById('hrstate');
+function pulse(){var v=+hr.value;bpm.firstChild.nodeValue=v;var c,t,p;
+ if(v<90){c='var(--sage)';t='Calm enough to talk';p='You can take in what your partner says and look for solutions. A good moment for a difficult topic.';}
+ else if(v<100){c='var(--amber)';t='Getting hot';p='Notice it. Slow down, breathe, consider a repair: “Let me say that again, more gently.”';}
+ else{c='var(--wine)';t='Flooded: take a break';p='Problem-solving is now physically out of reach. Agree on a pause of at least 20 minutes, do something calming, and avoid thoughts like “I don\'t have to take this” or “why is it always my fault?”. Then come back.';}
+ bpm.style.setProperty('--c',c);hs.innerHTML='';hs.appendChild(el('h3','',t));hs.appendChild(el('p','',p));}
+hr.oninput=pulse;pulse();
+
+/* Soft startup flips (my own examples) */
+var F=[
+ ['“You never help with anything around here.”','“I\'m exhausted after doing the kitchen alone again tonight. Could you take over the dishes on weekdays?”','Situation + feeling + a doable request instead of “never”.'],
+ ['“You\'re glued to your phone. You don\'t care about me.”','“I miss talking with you in the evenings. Could we put the phones away during dinner?”','Says what you miss rather than what they lack.'],
+ ['“Your mother walks all over you, and you just let her.”','“I\'m nervous about Sunday. I\'d feel much better knowing you\'ll back me up if she criticises the kids.”','Describes your worry, not their weakness.'],
+ ['“Late again. You obviously don\'t respect my time.”','“I waited for 40 minutes and got worried. Next time, could you text me if you\'re running late?”','Describe, don\'t judge. Assume no bad motive.'],
+ ['“You spend money like it grows on trees.”','“I\'m anxious about our savings. Can we sit down on Saturday and make a plan together?”','“We” framing plus a time to talk.'],
+ ['“We never do anything fun any more.”','“Remember our Friday nights at the little Italian place? I\'d love to bring that back.”','Appreciation of the past is an invitation, not an accusation.']
+];
+var fl=document.getElementById('flips');
+F.forEach(function(f){var b=el('button','flip');b.type='button';b.setAttribute('aria-pressed','false');
+ function r(on){b.innerHTML='';b.appendChild(el('span','label',on?'Soft startup':'Harsh startup'));b.appendChild(el('span','side',on?f[1]:f[0]));if(on)b.appendChild(el('span','why',f[2]));b.appendChild(el('span','label',on?'↺ tap to flip back':'tap to soften →'));b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');}
+ var on=false;r(on);b.onclick=function(){on=!on;r(on);};fl.appendChild(b);});
+
+/* Repair kit (adapted from the book's list) */
+var R={
+ 'I feel':['I\'m getting scared.','Please say that more gently.','I feel blamed. Could you put that another way?','That hurt my feelings.','I feel like you don\'t understand me right now.','I\'m starting to feel flooded.'],
+ 'Calm down':['I need your support right now.','Just listen to me and try to understand.','Tell me you love me.','Can I take that back?','Please let me finish.','Can we take a break?'],
+ 'Sorry':['My reaction was too strong. I\'m sorry.','I really messed up there.','Let me try that again.','I can see my part in this.','How can I make it better?','Let me start again more gently.'],
+ 'Get to yes':['You\'re starting to convince me.','I agree with part of what you\'re saying.','Let\'s find our common ground.','I never thought of it that way.','In the bigger picture, this isn\'t so bad.','Let\'s include both our views in a solution.'],
+ 'Stop!':['I might be wrong here.','Let\'s stop for a moment.','Give me a minute, I\'ll be right back.','Please stay with me, don\'t withdraw.','We\'re getting off track.'],
+ 'I appreciate':['I know this isn\'t your fault.','My part of this is…','I see what you mean.','Thank you for…','This isn\'t your problem, it\'s our problem.']
+};
+var rt=document.getElementById('rtabs'),rl=document.getElementById('rlist');
+function showR(k){Array.prototype.forEach.call(rt.children,function(b){b.setAttribute('aria-selected',b.dataset.k===k?'true':'false');});rl.innerHTML='';R[k].forEach(function(p){rl.appendChild(el('div','phrase','“'+p+'”'));});}
+Object.keys(R).forEach(function(k){var b=el('button','tab');b.type='button';b.setAttribute('role','tab');b.dataset.k=k;b.textContent=k;b.onclick=function(){showR(k);};rt.appendChild(b);});
+showR('I feel');
+
+/* Weekly check (abridged) */
+var C=['I\'ve been irritable.','I\'ve felt emotionally distant.','There\'s been a lot of tension between us.','I\'ve felt lonely.','My partner has seemed unavailable to me.','We\'ve been out of touch.','Stress has taken its toll on us.','I wish we were closer right now.','Small issues have been escalating.','We\'ve been hurting each other\'s feelings.','There hasn\'t been much fun or joy.','We really need to talk.'];
+var ck=document.getElementById('chk'),vd=document.getElementById('verdict');
+function verdict(){var n=ck.querySelectorAll('input:checked').length;
+ vd.textContent=n>4?n+' ticked: time for a gentle talk within the next three days. Open softly, e.g. “I\'ve been feeling out of touch with you. What\'s going on?” Not right before bed.':n+' ticked. Gottman\'s threshold is more than four; below that, keep up the small daily rituals.';}
+C.forEach(function(c){var l=el('label');var i=el('input');i.type='checkbox';i.onchange=verdict;l.appendChild(i);l.appendChild(el('span','',c));ck.appendChild(l);});
+verdict();
+})();
+</script>
+</body>
+</html>
