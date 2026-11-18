@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Laws of Connection by David Robson – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Figtree:wght@500;600;700&display=swap">
+<style>
+/* The cover: on white, a wide ring of thousands of tiny confetti dots whose colour runs
+   round the circle (magenta and red at the top, orange, then gold at the bottom, green,
+   and navy on the left), with the title set in a classic Garamond inside, "of" in italic,
+   and the author in spaced capitals. The page redraws the ring as its hero, keeps the
+   Garamond and the white, and uses the ring's colours to number the thirteen laws. */
+:root{
+  --bg:#fdfcfa; --card:#ffffff; --ink:#1e1d1c; --muted:#66625d; --line:#ebe7e1; --soft:#f5f2ed;
+  --accent:#b8306a; --orange:#d9661f; --gold:#c39a12; --green:#4c8a3a; --navy:#2f3f86;
+  --serif:"EB Garamond",Garamond,Georgia,serif; --sans:Figtree,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131315; --card:#1b1b1e; --ink:#efede9; --muted:#aaa59f; --line:#2c2b30; --soft:#222227;
+  --accent:#ff6fa6; --orange:#ff9a5a; --gold:#ecc34a; --green:#8fcf79; --navy:#9aaaf5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131315; --card:#1b1b1e; --ink:#efede9; --muted:#aaa59f; --line:#2c2b30; --soft:#222227;
+  --accent:#ff6fa6; --orange:#ff9a5a; --gold:#ecc34a; --green:#8fcf79; --navy:#9aaaf5; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 19.5px/1.6 var(--serif)}
+a{color:var(--accent)}
+.wrap{max-width:780px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:600 13px var(--sans)}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:3px 13px;font:600 12px var(--sans);cursor:pointer}
+.hero{position:relative;max-width:560px;margin:0 auto;aspect-ratio:1/1}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero .t{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 22%}
+.hero h1{margin:0;font:400 clamp(2rem,8.6vw,3.7rem)/1.02 var(--serif)}
+.hero h1 i{font-style:italic}
+.hero .sub{font:italic 400 clamp(.95rem,3.3vw,1.3rem)/1.3 var(--serif);margin-top:10px}
+.byline{text-align:center;font:400 clamp(1.2rem,4.6vw,1.8rem) var(--serif);letter-spacing:.22em;margin:-2px 0 0}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 10px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.intro p{margin:0}
+.facts{font:500 13px/1.5 var(--sans);color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:500 clamp(1.6rem,5.2vw,2.2rem)/1.15 var(--serif);margin:0 0 10px}
+h3{font:600 1.02rem var(--sans);margin:22px 0 6px}
+.kick{font:700 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;margin:0 0 6px;color:var(--c,var(--accent))}
+.law{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:var(--soft);border-radius:14px;padding:14px 16px;margin:16px 0 4px}
+.law .num{width:44px;height:44px;border-radius:50%;background:var(--c,var(--accent));color:#fff;font:700 18px/44px var(--sans);text-align:center}
+.law p{margin:0;font:italic 500 1.12rem/1.45 var(--serif)}
+.law b{display:block;font:700 11.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;font-style:normal;color:var(--muted);margin-bottom:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:16px}
+.card h3:first-child{margin-top:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.grid2 .card{margin:0}
+@media (max-width:620px){.grid2{grid-template-columns:1fr}}
+.quote{font:italic 400 1.25rem/1.5 var(--serif);margin:22px 0;padding-left:16px;border-left:4px solid var(--c,var(--accent))}
+.quote small{display:block;font:500 13px var(--sans);font-style:normal;color:var(--muted);margin-top:4px}
+.story{background:var(--soft);border-radius:14px;padding:14px 18px;margin-top:16px;font-size:18.5px}
+.story b{font-family:var(--sans);font-size:.92em}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:16.5px;line-height:1.45}
+.stat b{display:block;font:700 1.55rem/1.1 var(--sans);color:var(--c,var(--accent));margin-bottom:4px}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.qs div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:16px;line-height:1.4}
+.qs b{display:block;font:600 12.5px var(--sans);color:var(--c,var(--accent))}
+@media (max-width:640px){.qs{grid-template-columns:1fr 1fr}}
+ul.tight{padding-left:20px;margin:8px 0}ul.tight li{margin:5px 0}
+.do{list-style:none;padding:0;margin:12px 0 0}
+.do li{padding:6px 0 6px 28px;position:relative}
+.do li::before{content:"→";position:absolute;left:0;color:var(--c,var(--accent));font-family:var(--sans);font-weight:700}
+.partHead{text-align:center;padding:44px 0 4px;border:0}
+.partHead span{font:700 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.partHead h2{margin-top:4px}
+/* tools */
+.tool{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:20px}
+.tool h3{margin-top:0}
+.dots{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:12px}
+.dots button{width:36px;height:36px;border-radius:50%;border:2px solid transparent;color:#fff;font:700 14px var(--sans);cursor:pointer;opacity:.55}
+.dots button[aria-pressed="true"]{opacity:1;border-color:var(--ink);transform:scale(1.1)}
+.lawbox{min-height:12.5em}
+.lawbox .lt{font:italic 500 1.25rem/1.4 var(--serif);text-align:center;margin:4px 0 12px}
+.lawbox .ev,.lawbox .ac{font-size:17px;background:var(--soft);border-radius:10px;padding:10px 14px;margin-top:8px}
+.lawbox b{font:700 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;display:block;color:var(--muted)}
+.checks{display:grid;gap:6px;margin-top:6px}
+.checks label{display:flex;gap:10px;align-items:flex-start;background:var(--soft);border-radius:10px;padding:9px 12px;font-size:17px;cursor:pointer}
+.checks input{margin-top:5px;accent-color:var(--accent);width:18px;height:18px;flex:none}
+.checks small{display:block;color:var(--muted);font-size:15px}
+.meter{height:12px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:14px}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy),var(--green),var(--gold),var(--orange),var(--accent));transition:width .3s}
+.mtext{font:600 14px var(--sans);text-align:center;margin-top:8px;min-height:2.6em}
+.keep{list-style:none;padding:0;margin:16px 0 0;counter-reset:k}
+.keep li{counter-increment:k;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:18px}
+.keep li::before{content:counter(k);width:26px;height:26px;border-radius:50%;background:var(--c);color:#fff;font:700 12.5px/26px var(--sans);text-align:center;margin-top:3px}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:16px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:600 13px var(--sans);text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+  <header>
+    <div class="hero">
+      <canvas id="ring" aria-hidden="true"></canvas>
+      <div class="t"><h1>The<br>Laws <i>of</i><br>Connection</h1><div class="sub">The Scientific Secrets of Building a Strong Social Network</div></div>
+    </div>
+    <p class="byline">DAVID ROBSON</p>
+  </header>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of The Laws of Connection by David Robson">
+    <div>
+      <p>David Robson, a British science writer, was so shy as a teenager that he went tongue-tied with strangers, yet dreamed of becoming a journalist who interviews people for a living. He forced himself, step by step, past his fears and found people far kinder and keener than his intuitions had predicted. This is the book he wishes he'd had. Its central idea is <b>shared reality</b>: the sense that another person experiences the world the way you do. Robson gathers a decade of social-psychology research showing the many ways we misjudge each other (we think strangers won't want to talk, that people like us less than they do, that compliments will be awkward, that asking for help is a burden) and turns it into twelve “laws”, plus a thirteenth. He stresses that this is robust, often replicated research, not pop-psych one-offs.</p>
+      <div class="facts">Pegasus Books (US), 2024 · first published in the UK by Canongate, 2023 · 12 chapters in 2 parts · ~80,000 words</div>
+    </div>
+  </div>
+
+  <section style="--c:var(--accent)">
+    <p class="kick">Introduction</p>
+    <h2>Helen Keller and the liking gap</h2>
+    <p>Helen Keller described her early deafblindness as captivity: a prisoner in her own mind until Anne Sullivan taught her to communicate by touch. Few of us know that kind of isolation, but most of us know smaller versions. Robson's way in is a finding by psychologists Erica Boothby and Gus Cooney, who chatted after a party and wondered whether everyone leaves conversations underestimating how much the other person enjoyed them. They tested it: pairs did a five-minute icebreaker, then rated each other. Almost everyone was too pessimistic. They called it the <b>liking gap</b>, and it's why we swap numbers and never call.</p>
+  </section>
+
+  <div class="partHead"><span>Part 1</span><h2>Building connections</h2></div>
+
+  <section style="--c:var(--accent)">
+    <p class="kick">Chapter 1 · The social cure</p>
+    <h2>Connection is as vital as diet and exercise</h2>
+    <p>In 1981 Yossi Ghinsberg, a 22-year-old Israeli backpacker, followed a con man into the Bolivian Amazon and ended up lost and alone for three weeks among jaguars, snakes and burrowing parasites. What nearly broke him was the loneliness. He had once dismissed the idea that “people need people”; today connection is at the centre of his life. C. S. Lewis, Robson says, was “precisely wrong” to write that friendship “has no survival value”.</p>
+    <div class="stat">
+      <div><b>Alameda</b>The 1960s Alameda County study produced the famous seven health habits (don't smoke, sleep, exercise…). Berkman and Syme later found an eighth: social ties predicted who was still alive years later.</div>
+      <div><b>148 studies</b>Julianne Holt-Lunstad's 2010 meta-analysis: social relationships matched or beat almost every other factor for mortality, bigger than alcohol, exercise, BMI and air pollution. Only smoking came close.</div>
+      <div><b>2,026</b>Dean Simonton's study of 2,026 scientists: the most eminent (Newton above all) had the richest networks. Broadway's best musicals came from teams mixing old collaborators with new blood.</div>
+    </div>
+    <p style="margin-top:16px">Why? The body reads isolation as a threat and stays on alert: more inflammation, weaker immunity, higher blood pressure (people with more ties caught fewer colds when given a virus). Support buffers stress; even a photo of a loved one dampens fear and pain. And networks bring jobs, ideas and creativity.</p>
+    <h3>The frenemy problem</h3>
+    <p>Quality matters most. Rate someone in your life from 1 to 6 on two questions: <i>How helpful is this person? How upsetting?</i> High on both makes them <b>ambivalent</b>. In Holt-Lunstad's studies, blood pressure rose more when meeting an ambivalent tie than when meeting someone reliably unpleasant, and even knowing one was in the next room raised stress. Ambivalent ties are linked to faster cellular ageing. Robson's honest turn: he checked whether <i>he</i> was someone's frenemy (late replies, forgotten birthdays).</p>
+    <div class="law"><div class="num">1</div><p><b>First law</b>Be consistent in your treatment of others. Avoid being a stressful frenemy.</p></div>
+  </section>
+
+  <section style="--c:var(--orange)">
+    <p class="kick">Chapter 2 · How we connect</p>
+    <h2>Shared reality: when minds merge</h2>
+    <p>At 18, Sylvia Plath wrote at Smith College: “Life is loneliness.” She wasn't alone in a jungle; she just felt nobody saw the world as she did. That feeling, or its opposite, is <b>shared reality</b>, and it is about inner worlds, not CVs. Imagine a new colleague: you laugh at the same joke, cry at the same song, feel awe at the same painting, come from the same town, went to the same university. The first three matter far more.</p>
+    <div class="story"><b>Inkblots across the aisle.</b> Elizabeth Pinel asked 417 Trump and Biden supporters, days before the 2020 election, what they saw in inkblots (a monster? a clown? a smile?). Partisans disliked each other, but anyone told their partner saw the same thing in the blot felt markedly warmer towards them, whatever their politics. In a similar game (“If Jennifer Aniston were a tool, would she be a screwdriver or nail clippers?”) a shared silly answer created instant “I-sharing”.</div>
+    <p style="margin-top:16px">Couples and friends who score high on Maya Rossignac-Milon's shared reality scale (“We often think of things at the exact same time”, “Events feel more real when we experience them together”) feel closer and more committed, and their identities overlap. Even disagreeing over how sweet a gummy sweet tastes dented it. Brain scans show it physically: Carolyn Parkinson found friends' brains responded so similarly to the same videos that neural overlap predicted who was friends with whom. Singing, dancing and moving in time (Durkheim's “collective effervescence”) build it fast: people who sang the Canadian anthem together cooperated more. And Arthur and Elaine Aron's research adds <b>self-expansion</b>: the best relationships help each person grow, as in Patti Smith's memories of building a life and a home with Fred Smith.</p>
+    <p>So: don't screen people on superficial checklists (Paul Eastwick found people's stated ideals don't predict whom they actually click with). Do new things together, move together, and validate the other person's perceptions.</p>
+    <div class="law"><div class="num">2</div><p><b>Second law</b>Create a mutual understanding with the people you meet. Ignore superficial similarities and instead focus on your internal worlds, and the peculiar ways that your thoughts and feelings coincide.</p></div>
+  </section>
+
+  <section style="--c:var(--gold)">
+    <p class="kick">Chapter 3 · The personality myth</p>
+    <h2>They like you more than you think</h2>
+    <p>Mr Darcy claims he lacks the talent for conversing with strangers; Elizabeth Bennet replies that, like her piano playing, it needs practice. The science sides with Elizabeth.</p>
+    <ul class="tight">
+      <li><b>Strangers want to talk.</b> Nicholas Epley and Juliana Schroeder asked Chicago commuters to strike up a conversation on the train. People predicted they'd prefer solitude, but those who talked enjoyed the journey more, and not one reported a negative reaction. It held in London too. Gillian Sandstrom's studies with over 2,300 people found fears “vastly overblown”.</li>
+      <li><b>The liking gap lasts.</b> College roommates underestimated how much their roommate liked them for months. Colleagues name each other's strengths easily but doubt their own appeal. It appears by age five, when children start to realise others may be feigning interest.</li>
+      <li><b>We misjudge more than liking.</b> We think others rate our intelligence, humour and competence lower than they do. Our blunders and blushing are judged far more kindly than we judge them ourselves.</li>
+      <li><b>Introverts too.</b> Introverts expect to enjoy socialising less, but afterwards report just as much enjoyment. The difference is in the forecast, not the experience.</li>
+    </ul>
+    <h3>Growing social grace</h3>
+    <p>Set specific goals with implementation intentions (“When I get to the coffee machine, I'll ask a colleague about their weekend”). Give catastrophising thoughts a reality check: <i>How bad would that really be? What are the odds? How would I cope?</i> Build self-compassion (Kristin Neff), for instance by writing yourself a kind letter, which actually helps you learn from mistakes better than self-criticism. And adopt a growth mindset about your social skills: people taught that the brain can change grow more confident.</p>
+    <div class="law"><div class="num">3</div><p><b>Third law</b>Trust that others, on average, will like you as much as you like them, and be prepared to practise your social skills to build your social confidence.</p></div>
+  </section>
+
+  <section style="--c:var(--green)">
+    <p class="kick">Chapter 4 · Overcoming egocentric thinking</p>
+    <h2>“Watch the borders”</h2>
+    <p>J. Edgar Hoover scrawled “Watch the borders” on a memo. Agents phoned Customs and Immigration about Mexico and Canada for days, too scared to ask what he meant. He meant the memo's margins were too narrow. Everyone assumed a shared frame of reference that didn't exist.</p>
+    <p>Our theory of mind is good, but under pressure we fall back on an automatic <b>egocentric</b> default and fail to correct it. Hence:</p>
+    <div class="grid2">
+      <div class="card"><h3>False consensus</h3>We assume others share our views and tastes, which can jolt a new acquaintance when we breezily declare an opinion as obvious truth.</div>
+      <div class="card"><h3>Illusion of transparency</h3>We think our feelings show: liars think their lies are obvious, guests think their disgust at the host's food is visible. Our stress and our affection are both less visible than we think.</div>
+      <div class="card"><h3>Illusion of understanding</h3>Sarcasm, humour and ambiguous lines get lost, especially in text. Writers predicted readers would spot their jokes and emotions far more often than readers did. Across cultures it's worse.</div>
+      <div class="card"><h3>Closeness-communication bias</h3>We check less with people we know well. The Mars Climate Orbiter was lost in 1999 because one team used imperial units and another metric, and nobody checked.</div>
+    </div>
+    <p style="margin-top:16px">The fix isn't just imagining yourself in someone's shoes. Tal Eyal's studies found <b>perspective-taking</b> barely improved accuracy, and sometimes made it worse. What works is <b>perspective-getting</b>: ask, and listen to the answer. And be more forgiving when others misread you; your feelings weren't as obvious as you thought, so say them out loud.</p>
+    <div class="law"><div class="num">4</div><p><b>Fourth law</b>Check your assumptions; engage in ‘perspective-getting’ rather than ‘perspective-taking’ to avoid egocentric thinking and misunderstandings.</p></div>
+  </section>
+
+  <section style="--c:var(--navy)">
+    <p class="kick">Chapter 5 · The art of conversation</p>
+    <h2>Questions, attention, disclosure, familiarity</h2>
+    <p><b>Hazlitt's Law</b>: “The art of conversation is the art of hearing as well as of being heard.” Asking questions makes people like you more, but Karen Huang found the type matters.</p>
+    <div class="qs">
+      <div><b>Follow-up ✓</b>“Have you been to Canada before?” Builds on what they said. Most liked.</div>
+      <div><b>Switch</b>Changes the topic. Less engaging.</div>
+      <div><b>Mirror</b>Just bounces their question back.</div>
+      <div><b>Introductory</b>“How's it going?” Necessary, shallow.</div>
+      <div><b>Rhetorical</b>Not really a question.</div>
+      <div><b>Boomerask ✗</b>A question asked so you can talk about yourself. Particularly unlikeable.</div>
+    </div>
+    <p style="margin-top:16px">Show attention in your words, not just nods: refer back to the core of what they said. Don't phub (phone-snub). Well-timed interruptions that complete their thought or chime agreement (“Oh yeah, Radiohead are great”) actually build flow.</p>
+    <h3>The fast friends procedure</h3>
+    <p>Arthur Aron paired strangers for 45 minutes. Half discussed small talk (“How did you celebrate last Halloween?”); half answered escalating personal questions, the famous “36 questions to fall in love” (“What would constitute a perfect day for you?”, “Do you have a secret hunch about how you will die?”, “Your house catches fire; what one item do you save?”). The deep-talk pairs felt as close as many people feel to their closest friends. Self-disclosure works across ethnic groups too, and releases natural opioids. We avoid it because we wrongly expect others to be bored by our inner lives. (For people from marginalised groups, Kiara Sanchez notes, such openness can be a “threatening opportunity”, so tact matters.)</p>
+    <h3>The novelty penalty</h3>
+    <p>Gus Cooney found people enjoy hearing about things they already know (a film they've seen) more than about novel experiences, because gaps in shared knowledge make stories hard to follow. That's why your amazing trip bores your friends. Choose shared terrain, or tell new experiences as a full, vivid narrative.</p>
+    <div class="law"><div class="num">5</div><p><b>Fifth law</b>In conversation, demonstrate active attention, engage in self-disclosure, and avoid the novelty penalty, to build mutual understanding and contribute to the merging of our minds.</p></div>
+  </section>
+
+  <section style="--c:var(--accent)">
+    <p class="kick">Chapter 6 · Expressing appreciation</p>
+    <h2>Praise generously, and specifically</h2>
+    <p>From Aesop's fox flattering the crow to Dante putting flatterers in a pit of excrement, we've been warned against honeyed words. But praise works like pay: the brain processes compliments like money; one factory found praise boosted output as much as cash bonuses. Yet 63% of Americans feel underappreciated most days.</p>
+    <ul class="tight">
+      <li><b>We hold back compliments</b> because we expect them to be awkward and badly phrased. Boothby and Vanessa Bohns found recipients were far more delighted, and less uncomfortable, than givers predicted. Repeated compliments don't wear out.</li>
+      <li><b>The gratitude gap:</b> MBA students writing thank-you letters underestimated the joy they'd cause and overestimated how much the recipient already knew. Expressing gratitude also calmed pairs before a stressful “shark tank” pitch.</li>
+      <li><b>The witnessing effect:</b> people who saw someone thank another for catching typos started catching typos themselves, and wanted to befriend people they'd seen express gratitude. Sara Algoe calls gratitude's job “find, remind, bind”.</li>
+    </ul>
+    <p>Make it specific: describe what the person did and what it says about them, not just how it helped you. Avoid clichés and “positive stereotypes”. People with low self-esteem may reject praise that clashes with their self-image, so give detailed reasons. And don't forget weak ties.</p>
+    <div class="law"><div class="num">6</div><p><b>Sixth law</b>Praise people generously, but be highly specific in your words of appreciation.</p></div>
+  </section>
+
+  <div class="partHead"><span>Part 2</span><h2>Maintaining connections</h2></div>
+
+  <section style="--c:var(--orange)">
+    <p class="kick">Chapter 7 · Truth, lies and secrets</p>
+    <h2>The beautiful mess effect</h2>
+    <p>Schopenhauer's porcupines huddle for warmth and prick each other, so they settle at a polite distance. Robson argues we should brave a bit more closeness.</p>
+    <p>Secrets weigh, literally. Robson, who is gay, describes the loneliness of keeping it hidden. People carrying a big secret judge hills steeper and distances longer, perform worse on mental tasks, and feel less supported. Disclosing, when you're ready, lightens the load.</p>
+    <div class="story"><b>Princess Diana</b> confessed to bulimia and self-harm in her 1995 <i>Panorama</i> interview, and her popularity soared. Research agrees: participants handed a fake “biography” revealing they had wet the bed were judged far more kindly than they feared. Students predicted strangers would like a list of their strengths more than a list of insecurities; readers actually preferred the insecurities (likeability 4.3 vs 3.8), because they seemed authentic. Robson calls this the <b>beautiful mess effect</b>.</div>
+    <h3>Dodging is as bad as lying</h3>
+    <p>On dating profiles, refusing to answer whether you'd ever hidden an STD was judged as harshly as admitting doing it “frequently”. <b>Paltering</b>, true statements that mislead (Clinton in 1998: “There is not a sexual relationship”, in the present tense, the affair being over), is judged like lying. And <b>white lies</b> aren't as kind as we think: in Emma Levine and Taya Cohen's study, people told to be completely honest for three days enjoyed it as much as those told to be kind, and found it more meaningful. We underestimate how much people want honest feedback. Skip the “feedback sandwich”; state good intentions, then be specific and constructive. Trusting people, it turns out, are better judges of who to trust.</p>
+    <div class="law"><div class="num">7</div><p><b>Seventh law</b>Be open about your vulnerabilities, and value honesty over kindness (but practise both, if possible).</p></div>
+  </section>
+
+  <section style="--c:var(--gold)">
+    <p class="kick">Chapter 8 · Avoiding envy and enjoying confelicity</p>
+    <h2>Share your wins; skip the humblebrag</h2>
+    <p>“Just won GQ style award in Germany. Obviously they made a mistake” (Jared Leto). Humblebrags exist because we fear envy. But research shows:</p>
+    <ul class="tight">
+      <li><b>Be accurate.</b> Claims you can back up are accepted; exaggerations that may be exposed backfire. We often don't know our real abilities, so err on the side of evidence.</li>
+      <li><b>Don't compare.</b> Vera Hoorens's <b>hubris hypothesis</b>: “I'm a good friend” goes down fine; “I'm a better friend than others” makes listeners feel judged. Narcissists fall into this most.</li>
+      <li><b>False modesty is worse than bragging.</b> Humblebrags are judged as insincere. Hiding a success from a friend (Annabelle Roberts) feels patronising, as if they couldn't handle it, and erodes trust.</li>
+    </ul>
+    <p>The upside is <b>confelicity</b> (Nietzsche's <i>Mitfreude</i>, shared joy): when someone celebrates your good news, the joy grows and both of you feel closer. Yet 40% of people in one study wouldn't tell a close friend about a promotion for fear of seeming a braggart. Tell the story of the journey, including the struggles, which reads as authentic pride rather than hubris. And keep the conversation balanced: confelicity runs out if you stop paying attention to their life.</p>
+    <div class="law"><div class="num">8</div><p><b>Eighth law</b>Do not fear envy. Disclose your successes but be accurate in your statements and avoid comparing yourself to others. Enjoy ‘confelicity’.</p></div>
+  </section>
+
+  <section style="--c:var(--green)">
+    <p class="kick">Chapter 9 · Asking for help</p>
+    <h2>The Benjamin Franklin effect, aka amae</h2>
+    <p>In 1736 a rival legislator opposed young Benjamin Franklin. Franklin asked to borrow a rare book from his library, returned it with a warm note, and “we became great friends, and our friendship continued to his death.”</p>
+    <div class="stat">
+      <div><b>~48%</b>How much people underestimate others' willingness to help (Vanessa Bohns, 14,000+ requests: borrowing phones, sponsorship, directions).</div>
+      <div><b>113.9 vs 120.7</b>Systolic blood pressure after six weeks for older adults with hypertension told to spend $40 on others versus on themselves: an effect like medication.</div>
+      <div><b>5.8 → 7.6</b>Ratings (out of 12) of an unlikeable experimenter by people who hadn't helped him vs those who gave him back $3 of their winnings (Landy & Jecker).</div>
+    </div>
+    <p style="margin-top:16px">Giving soothes our own stress system (the caregiving system overlaps with reward), so a request is partly a gift. Japanese psychologist Yu Niiya studies <b>amae</b>, presuming on someone's indulgence, like asking a busy roommate for help you could manage alone. Across Japan and the US, people felt warmer and closer after amae requests. But the flip side of our “underestimation of compliance” is that people struggle to say no, even to unethical requests. So ask, but give an easy out, acknowledge their other demands, say thank you, and make sure it's reciprocal.</p>
+    <div class="law"><div class="num">9</div><p><b>Ninth law</b>Ask for help when you need it, in the expectation that your pleas for support can build a stronger long-term bond.</p></div>
+  </section>
+
+  <section style="--c:var(--navy)">
+    <p class="kick">Chapter 10 · Healing bad feelings</p>
+    <h2>Validate, then help them step back</h2>
+    <p>In 1883 the philosopher William James wrote to his friend Grace Norton, deep in depression: “Sorrow comes in great waves … but it rolls over us, and though it may almost smother us it leaves us.” We're better comforters than we think: in James Dungan's studies, people underestimated how much their reaching out would be appreciated, especially by those who were struggling.</p>
+    <p>But the old “hydraulic” model, that venting releases pressure, is wrong. After 9/11 and the Virginia Tech shooting, people who talked endlessly about it didn't recover faster. <b>Co-brooding</b>, going round the same distress together, can deepen it. What helps is <b>co-reflection</b>, which still acknowledges the pain but looks for meaning. Children learn this from caregivers' “emotion coaching”, and adults can still learn it. Robson's two steps:</p>
+    <div class="grid2">
+      <div class="card"><h3>1 · Validation</h3>Re-establish shared reality. Listen humbly, ask what happened and how it felt, and don't jump to fixes or conclusions.</div>
+      <div class="card"><h3>2 · Reappraisal</h3>Gently move to <i>why</i> questions. Ethan Kross's script: “Why do you think you reacted that way? Why do you think they did? Have you learned anything? Looking at the big picture, does that help you make sense of it?” Why-questions brought faster relief than what-questions.</div>
+    </div>
+    <p style="margin-top:16px">And let go: don't force it. “Autonomy-supportive” support means noticing a change, expressing concern, and offering flexibility on timing, topic and depth: “I can see you're upset, and I'm available to talk whenever you like.” The <b>paradox of compassion</b>: caring for others' pain tends to raise, not drain, your own wellbeing. Norton held on, and the two stayed close confidants until James's death.</p>
+    <div class="law"><div class="num">10</div><p><b>Tenth law</b>Offer emotional support to those in need, but do not force it upon them. Validate their feelings while providing an alternative perspective on their problems.</p></div>
+  </section>
+
+  <section style="--c:var(--accent)">
+    <p class="kick">Chapter 11 · Constructive disagreement</p>
+    <h2>Scalia and Ginsburg</h2>
+    <p>Antonin Scalia and Ruth Bader Ginsburg disagreed on almost everything in law and were “best buddies”: shared New Year's Eves, opera, a photo together on an elephant. “I attack ideas. I don't attack people,” Scalia said. When he sent her 24 roses for her birthday, a colleague asked what good it had done him with her votes. “Some things are more important than votes.” Meanwhile about 40% of US voters have no close friend on the other side.</p>
+    <p>Asch's famous conformity experiment looks different through this lens: people who went along with the group weren't weak; disagreement shattered their sense of shared reality, and one ally was enough to free them. Elizabeth Pinel shows that people feeling existentially isolated drift to extreme groups. Mock your cousin's flat-Earth beliefs and you push him further towards the people who “get” him.</p>
+    <div class="grid2">
+      <div class="card"><h3>Montagu Principle</h3>“Civility costs nothing and buys everything” (Lady Mary Wortley Montagu). Incivility loses even your own side's respect.</div>
+      <div class="card"><h3>Curiosity</h3>In Frances Chen's debates, one question (“Can you tell me more about how come you think that?”) made opponents more open and willing to talk again. Admit uncertainty.</div>
+      <div class="card"><h3>Tucholsky's Principle</h3>“The death of one man is a tragedy, the death of millions is a statistic.” Personal stories shift views where arguments don't, as in canvassing on trans rights.</div>
+      <div class="card"><h3>Moral reframing</h3>Translate your case into their values. Framing conservation as patriotic (“protect and preserve the American way of life”) raised conservatives' engagement; it has since worked on topics from same-sex marriage onward.</div>
+    </div>
+    <div class="story"><b>Sarah's story.</b> An angry, lonely schoolgirl joined neo-Nazi skinheads, got swastika tattoos and ended in prison for armed robbery. There, a Black inmate offered her a cigarette. Friendships followed, and with them unanswerable questions (“If you met me on the street before this, would you have kicked my ass?”). “As much as they tried to learn about me … I was learning about me.” She left the movement and testified against her former gang.</div>
+    <div class="law"><div class="num">11</div><p><b>Eleventh law</b>Be civil and curious in disagreements; show interest in the other side's viewpoint; share personal experiences; and translate your opinions into their moral language.</p></div>
+  </section>
+
+  <section style="--c:var(--orange)">
+    <p class="kick">Chapter 12 · Finding forgiveness</p>
+    <h2>Choose forgiveness over spite</h2>
+    <p>In 1976, <i>Saturday Night Live</i> offered the Beatles $3,000 to reunite on air. Lennon and McCartney were watching together, a couple of miles away, and nearly went. By then the bitterness had faded; McCartney later said “the main bit was the affection.”</p>
+    <p>Grudges have a function (we're not doormats), but revenge leaves us feeling dehumanised. Karina Schumann and Gregory Walton had people write either a revenge letter or a forgiveness letter to someone who'd hurt them; forgiving restored their own sense of humanity and moral self. (Robson's workplace voodoo doll gets a cameo: an Ig Nobel-winning study found stabbing one eased resentment of an abusive boss.) Forgiveness is linked to better mental and physical health and can be learned: Everett Worthington's REACH programme, tested on nearly 5,000 people across several countries, raised forgiveness and lowered depression and anxiety. Worthington forgave the teenager who murdered his mother.</p>
+    <p><b>Zoom out.</b> Couples taught to view their arguments for seven minutes, three times a year, from the perspective of “a neutral third party who wants the best for all involved” stopped the usual decline in their relationship quality. Affirming your core values first (ranking eleven values and writing about the top one) makes it easier to admit fault.</p>
+    <div class="tool" id="apology">
+      <h3>Build a better apology</h3>
+      <p style="margin:0 0 8px;font-size:17px">We overestimate how humiliating apologising will be and underestimate how much it helps. Robson's list of what researchers find in effective apologies. The more you include, the more sincere it reads; the most important are marked ★.</p>
+      <div class="checks" id="checks"></div>
+      <div class="meter"><i id="mbar"></i></div>
+      <div class="mtext" id="mtext"></div>
+    </div>
+    <div class="law"><div class="num">12</div><p><b>Twelfth law</b>For your wellbeing, choose forgiveness over spite. Look at the big picture in arguments. Ensure your apologies define the offence, take responsibility for your actions, and express regret. Have faith that people can change for the better.</p></div>
+  </section>
+
+  <section style="--c:var(--accent)">
+    <p class="kick">Conclusion · The thirteenth law</p>
+    <h2>Reach out to the ones who are missing</h2>
+    <p>Thirty years after they met, Helen Keller wrote to Anne Sullivan about her “soul-birthday”, the day Sullivan arrived “and opened life's shut portals”. Robson wishes we celebrated friendships the way we do wedding anniversaries.</p>
+    <p>Peggy Liu's studies: people who sent a short “just thinking of you” note to someone they'd lost touch with badly underestimated how welcome it was. Recipients rated it 6.2 out of 7, weak ties most of all. On technology: social media and video calls can strengthen bonds if used to communicate actively rather than scroll passively. Face to face beats voice, voice beats text, but any genuine contact beats none. His closing nudge: think of three people who mean something to you, and tell them.</p>
+    <div class="law"><div class="num">13</div><p><b>Thirteenth law</b>Reach out to the people who are missing in your life. Let them know that they are still a part of your thoughts.</p></div>
+    <div class="tool" id="laws">
+      <h3>The thirteen laws, with one thing to do</h3>
+      <div class="dots" id="dots"></div>
+      <div class="lawbox"><div class="lt" id="lt"></div><div class="ev" id="lev"></div><div class="ac" id="lac"></div></div>
+    </div>
+  </section>
+
+  <section style="--c:var(--accent)">
+    <p class="kick">Pocket version</p>
+    <h2>What to keep</h2>
+    <ol class="keep">
+      <li style="--c:var(--accent)">Connection rivals not smoking for your health. Watch out for ambivalent ties, and for being one.</li>
+      <li style="--c:var(--orange)">Look for shared inner worlds (same joke, same awe), not shared CVs.</li>
+      <li style="--c:var(--gold)">Strangers want to talk; people like you more than you think.</li>
+      <li style="--c:var(--green)">Your feelings and meanings are less obvious than you think. Ask, don't assume.</li>
+      <li style="--c:var(--navy)">Ask follow-up questions, disclose something real, tell stories in full.</li>
+      <li style="--c:var(--accent)">Compliment and thank people more, and more specifically.</li>
+      <li style="--c:var(--orange)">Show your beautiful mess. Honest beats evasive or a white lie.</li>
+      <li style="--c:var(--gold)">Share good news accurately, without comparisons. Enjoy confelicity.</li>
+      <li style="--c:var(--green)">Ask for help: people are twice as willing as you think, and like you more for it.</li>
+      <li style="--c:var(--navy)">Validate first, then help with why-questions. Offer, don't force.</li>
+      <li style="--c:var(--accent)">Disagree with civility, curiosity, stories and their moral language.</li>
+      <li style="--c:var(--orange)">Forgive, zoom out, and apologise properly.</li>
+      <li style="--c:var(--gold)">Message three people you miss today.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Summary of <em>The Laws of Connection: The Scientific Secrets of Building a Strong Social Network</em> by David Robson (Pegasus Books, 2024; Canongate, 2023). Quotations are brief; studies condensed and paraphrased.</p>
+    <p>Related summaries:</p>
+    <div class="related"><a href="../platonic/">Platonic</a><a href="../how-to-know-a-person/">How to Know a Person</a><a href="../supercommunicators/">Supercommunicators</a><a href="../talk/">Talk</a><a href="../thanks-for-the-feedback/">Thanks for the Feedback</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('loc-theme'); if(th) root.setAttribute('data-theme',th);
+function isDark(){return root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches)}
+document.getElementById('theme').onclick=function(){var n=isDark()?'light':'dark';root.setAttribute('data-theme',n);set('loc-theme',n);};
+
+/* dot ring, redrawn from the cover */
+var cv=document.getElementById('ring');
+function hueAt(a){ /* a: 0 at top, clockwise. top magenta → right orange → bottom gold → bottom-left green → left navy → top */
+  var stops=[[0,[200,30,90]],[.18,[225,70,40]],[.32,[230,130,30]],[.5,[205,160,25]],[.62,[120,150,40]],[.72,[40,110,60]],[.84,[40,50,110]],[.94,[120,40,110]],[1,[200,30,90]]];
+  for(var i=1;i<stops.length;i++){if(a<=stops[i][0]){var p=(a-stops[i-1][0])/(stops[i][0]-stops[i-1][0]),c0=stops[i-1][1],c1=stops[i][1];return c0.map(function(v,k){return Math.round(v+(c1[k]-v)*p)})}}
+  return stops[0][1];
+}
+function draw(){
+  var r=cv.getBoundingClientRect(),dpr=Math.min(2,window.devicePixelRatio||1),W=Math.round(r.width*dpr);
+  if(!W)return; cv.width=W;cv.height=W; var g=cv.getContext('2d'); g.clearRect(0,0,W,W);
+  var cx=W/2,cy=W/2,R=W*.47,rin=W*.30,seed=7;
+  function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646}
+  var n=Math.round(3200*(W/1100)+900);
+  for(var i=0;i<n;i++){
+    var t=rnd(),ang=t*Math.PI*2,u=rnd();
+    var rad=rin+(R-rin)*Math.pow(u,.8)+ (rnd()-.5)*W*.02;
+    var x=cx+Math.sin(ang)*rad,y=cy-Math.cos(ang)*rad;
+    var c=hueAt(t),j=(rnd()-.5)*50;
+    var edge=Math.min(1,(R-rad)/(W*.06)), inner=Math.min(1,(rad-rin)/(W*.05));
+    g.globalAlpha=Math.max(.15,Math.min(edge,inner))*(.65+rnd()*.35);
+    g.fillStyle='rgb('+Math.max(0,c[0]+j)+','+Math.max(0,c[1]+j)+','+Math.max(0,c[2]+j)+')';
+    var s=(1.2+rnd()*2.2)*dpr*(W/(560*dpr));
+    if(rnd()<.5){g.fillRect(x,y,s,s)}else{g.beginPath();g.arc(x,y,s*.6,0,7);g.fill()}
+  }
+}
+draw(); var rt; window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(draw,150)});
+
+/* thirteen laws */
+var COL=['#b8306a','#d9661f','#c39a12','#4c8a3a','#2f3f86'];
+var L=[
+ ["Be consistent in your treatment of others. Avoid being a stressful frenemy.","Ambivalent ties (helpful and upsetting) raise blood pressure more than reliably unpleasant people.","Rate a few relationships for helpfulness and upset, and ask whether you're ambivalent to anyone."],
+ ["Create a mutual understanding with the people you meet; focus on your internal worlds, not superficial similarities.","Seeing the same thing in an inkblot warmed Trump and Biden supporters to each other.","Do something new together: sing, move, learn. Validate how they see things."],
+ ["Trust that others will like you as much as you like them, and practise your social skills.","The liking gap: after a chat, people underestimate how much the other liked them.","Set one concrete goal: “When I'm on the train, I'll start one conversation.”"],
+ ["Check your assumptions; get perspectives rather than take them.","Hoover's “Watch the borders” meant the memo's margins. Imagining others' views barely improves accuracy.","Before an important message, ask “How might this be misread?” Then ask the person."],
+ ["Show active attention, self-disclose, and avoid the novelty penalty.","Follow-up questions are the most liked; deep questions made strangers as close as old friends.","Ask one follow-up question per conversation, and share one real thing about yourself."],
+ ["Praise generously, but be highly specific.","Givers underestimate how much compliments and thank-you letters delight people.","Send one specific thank-you today: what they did, and what it says about them."],
+ ["Be open about your vulnerabilities; value honesty over kindness, ideally both.","The beautiful mess effect: insecurities made people more likeable (4.3 vs 3.8).","Spend a day replacing one white lie with a kind, specific truth."],
+ ["Don't fear envy: share successes accurately, without comparisons. Enjoy confelicity.","Hiding a success from a friend erodes trust; humblebrags read as insincere.","Tell someone your good news, with the journey that led there."],
+ ["Ask for help, expecting it to build a stronger bond.","People underestimate others' willingness to help by ~48%; helping lowers the helper's stress.","Ask a small favour of someone you'd like to know better, with an easy way to say no."],
+ ["Offer emotional support without forcing it; validate, then offer perspective.","Venting and co-brooding prolong distress; why-questions help people make sense of it.","Say: “I can see you're upset, and I'm here whenever you want to talk.”"],
+ ["Be civil and curious; share experiences; use their moral language.","One question (“Can you tell me more about how come you think that?”) opened debaters' minds.","In your next disagreement, ask that question before making your case."],
+ ["Choose forgiveness over spite; zoom out; apologise well; believe people can change.","Viewing fights as a neutral third party stopped couples' decline in relationship quality.","Picture the argument through a kind outsider's eyes for five minutes."],
+ ["Reach out to the people who are missing in your life.","Out-of-the-blue messages were rated 6.2 / 7 by recipients, far more than senders expected.","Send three short “thinking of you” messages today."]
+];
+var dots=document.getElementById('dots'),cur=0;
+L.forEach(function(_,i){var b=document.createElement('button');b.type='button';b.textContent=i+1;b.style.background=COL[i%5];b.setAttribute('aria-label','Law '+(i+1));b.onclick=function(){cur=i;showL()};dots.appendChild(b)});
+function showL(){[].forEach.call(dots.children,function(b,i){b.setAttribute('aria-pressed',i===cur)});document.getElementById('lt').textContent=L[cur][0];document.getElementById('lev').innerHTML='<b>Evidence</b>'+L[cur][1];document.getElementById('lac').innerHTML='<b>Try this</b>'+L[cur][2];}
+showL();
+
+/* apology builder */
+var A=[["A clear statement framing the apology","“I want to apologise for…”",1],["Acknowledgment of responsibility","“It was my fault.” No “mistakes were made”.",3],["Identification of the offence","Name exactly what you did.",2],["An expression of regret or sadness","Show that you feel the hurt you caused.",2],["An offer of repair","“How can I make this right?”",3],["An explanation of why it happened","Context, not an excuse.",1],["A promise it won't recur","And then keep it.",1],["A request for forgiveness","Ask; don't demand.",1]];
+var box=document.getElementById('checks'),tot=A.reduce(function(s,a){return s+a[2]},0);
+A.forEach(function(a,i){var l=document.createElement('label');l.innerHTML='<input type="checkbox" data-w="'+a[2]+'"><span>'+(a[2]>=2?'★ ':'')+a[0]+'<small>'+a[1]+'</small></span>';box.appendChild(l)});
+function upd(){var s=0,n=0;[].forEach.call(box.querySelectorAll('input'),function(c){if(c.checked){s+=+c.dataset.w;n++}});document.getElementById('mbar').style.width=(100*s/tot)+'%';var t=n===0?'Tick what your apology will include.':s<5?'A start. Saying sorry has some power, but the more elements you include, the more sincere it seems.':s<10?'Getting there. Have you named the offence and offered to repair it?':s<tot?'Strong. Remember timing, and give them room to express their hurt.':'Complete. Now deliver it, and listen.';document.getElementById('mtext').textContent=t;}
+box.addEventListener('change',upd);upd();
+})();
+</script>
+</body>
+</html>

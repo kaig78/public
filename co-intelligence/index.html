@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Co-Intelligence by Ethan Mollick – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* The cover: a detail of an old oil painting, a hand reaching up through dark leaves to
+   pick a red-gold apple (the fruit of knowledge), overlaid with plain white label boxes
+   set in bold monospace capitals. The page uses the painting as its hero, keeps the
+   white labels and monospace for headings, and takes leaf green and apple red. */
+:root{
+  --bg:#f8f6f0; --card:#ffffff; --ink:#191917; --muted:#5f5d57; --line:#e4e0d6; --soft:#efece3;
+  --leaf:#2f5a2c; --apple:#c8452a; --gold:#d6a62c;
+  --mono:"Space Mono",ui-monospace,monospace; --serif:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121411; --card:#1a1d18; --ink:#eeeee8; --muted:#a9aaa0; --line:#2b2f28; --soft:#20241e;
+  --leaf:#8fc287; --apple:#ff8a6b; --gold:#f0c95a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121411; --card:#1a1d18; --ink:#eeeee8; --muted:#a9aaa0; --line:#2b2f28; --soft:#20241e;
+  --leaf:#8fc287; --apple:#ff8a6b; --gold:#f0c95a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.62 var(--serif)}
+a{color:var(--apple)}
+.wrap{max-width:800px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:700 13px var(--mono)}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:0;padding:3px 12px;font:700 12px var(--mono);cursor:pointer}
+.hero{display:grid;grid-template-columns:44% 1fr;background:#24331f;color:#111}
+.hero .art{position:relative;overflow:hidden;aspect-ratio:254/424}
+.hero .art img{position:absolute;width:208.3%;max-width:none;left:-20.8%;top:-62.3%}
+.hero .labs{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:clamp(14px,4vw,30px) 0}
+.lab{background:#fff;color:#111;font:700 clamp(.9rem,3.4vw,1.5rem)/1.25 var(--mono);padding:.35em .6em;letter-spacing:.02em}
+.lab.t{font-size:clamp(1rem,4.6vw,2.3rem);margin:0}
+.lab.s{font-weight:400;font-size:clamp(.8rem,2.8vw,1.15rem);align-self:flex-end}
+.lab.a{align-self:flex-end}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 10px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.intro p{margin:0}
+.facts{font:400 12.5px/1.6 var(--mono);color:var(--muted);margin-top:10px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:700 clamp(1.25rem,4.4vw,1.75rem)/1.25 var(--mono);margin:0 0 12px;letter-spacing:-.01em}
+h3{font:700 1rem var(--mono);margin:22px 0 6px;color:var(--leaf)}
+.kick{display:inline-block;font:700 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px;background:var(--ink);color:var(--bg);padding:3px 8px}
+.card{background:var(--card);border:1px solid var(--line);padding:16px 20px;margin-top:16px}
+.card h3:first-child{margin-top:0}
+.quote{font:italic 400 1.22rem/1.5 var(--serif);margin:22px 0;padding-left:16px;border-left:5px solid var(--apple)}
+.quote small{display:block;font:400 12.5px var(--mono);font-style:normal;color:var(--muted);margin-top:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.grid2 .card{margin:0}
+@media (max-width:620px){.grid2{grid-template-columns:1fr}}
+.rules{counter-reset:r;list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.rules li{counter-increment:r;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--leaf);padding:12px 16px 12px 60px;position:relative}
+.rules li::before{content:counter(r);position:absolute;left:16px;top:10px;font:700 1.7rem var(--mono);color:var(--leaf)}
+.rules b{display:block;font:700 1rem/1.35 var(--mono);margin-bottom:2px}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.stat div{background:var(--card);border:1px solid var(--line);padding:12px;font-size:15.5px;line-height:1.45}
+.stat b{display:block;font:700 1.7rem/1.1 var(--mono);color:var(--apple);margin-bottom:4px}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.roles{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}
+.roles a{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);padding:10px;font:700 12.5px/1.35 var(--mono);text-align:center}
+.roles a span{display:block;font:400 13.5px/1.35 var(--serif);color:var(--muted);margin-top:4px}
+@media (max-width:700px){.roles{grid-template-columns:1fr 1fr}}
+.tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.tasks div{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c);padding:12px;font-size:16px;line-height:1.45}
+.tasks b{display:block;font:700 .95rem var(--mono);color:var(--c)}
+@media (max-width:640px){.tasks{grid-template-columns:1fr}}
+.story{background:var(--soft);padding:14px 18px;margin-top:16px;font-size:17px}
+.story b{font-family:var(--mono);font-size:.92em}
+.scen{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.scen div{background:var(--card);border:1px solid var(--line);padding:14px;font-size:16px;line-height:1.5}
+.scen b{display:block;font:700 .95rem var(--mono);margin-bottom:4px}
+.scen i{display:block;font:400 12px var(--mono);font-style:normal;color:var(--muted);margin-bottom:6px}
+@media (max-width:600px){.scen{grid-template-columns:1fr}}
+.prompt{font:400 14.5px/1.55 var(--mono);background:var(--ink);color:var(--bg);padding:12px 14px;margin-top:12px;white-space:pre-wrap}
+/* tool */
+.tool{background:var(--card);border:2px solid var(--ink);padding:18px;margin-top:20px}
+.tool h3{margin-top:0;color:var(--ink)}
+.task{font:700 clamp(1.05rem,3.8vw,1.35rem)/1.4 var(--mono);text-align:center;padding:16px 6px;min-height:4.6em;display:flex;align-items:center;justify-content:center}
+.opts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.opts button,.next{font:700 13.5px var(--mono);border:2px solid var(--ink);background:var(--bg);color:var(--ink);padding:8px 14px;cursor:pointer}
+.opts button.good{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.opts button.bad{background:var(--apple);border-color:var(--apple);color:#fff}
+.fb{margin-top:14px;min-height:4em;background:var(--soft);padding:12px 14px;font-size:16.5px}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:10px;flex-wrap:wrap}
+.meta{font:400 12.5px var(--mono);color:var(--muted)}
+.next{background:var(--ink);color:var(--bg)}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:40px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k,decimal-leading-zero);font:700 1rem var(--mono);color:var(--apple);padding-top:3px}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:15.5px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:700 12.5px var(--mono);text-decoration:none;border:1.5px solid var(--line);padding:5px 10px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+  <header class="hero">
+    <div class="art"><img src="cover.jpg" alt="A painted hand holding an apple among leaves"></div>
+    <div class="labs">
+      <h1 class="lab t">CO-INTELLIGENCE</h1>
+      <div class="lab s">Living and<br>Working<br>with AI</div>
+      <div class="lab a">ETHAN MOLLICK</div>
+    </div>
+  </header>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of Co-Intelligence by Ethan Mollick">
+    <div>
+      <p>Ethan Mollick, a Wharton professor who studies innovation, says getting to know AI costs “at least three sleepless nights”. His began days after ChatGPT launched in November 2022: within two days his students were using it to explain concepts “like they were ten years old”, and when he asked it to run a negotiation simulation, it did in one prompt about 80 percent of what had taken his team months to build. The book is his practical guide to large language models as a <b>co-intelligence</b>: an “alien mind” that behaves less like software and more like a person, strangely brilliant in some places and strangely weak in others. Written in late 2023, it is a snapshot; Mollick's own fourth rule is that whatever AI you're using is the worst you'll ever use.</p>
+      <div class="facts">Portfolio / Penguin, 2024 · 9 chapters in 2 parts + epilogue · ~50,000 words</div>
+    </div>
+  </div>
+
+  <section>
+    <span class="kick">Introduction</span>
+    <h2>A General Purpose Technology, arriving fast</h2>
+    <p>AI belongs with steam power and the internet among <b>General Purpose Technologies</b>, the once-in-a-generation kind that touch everything. Those usually spread slowly because they need other technologies around them; the internet took decades. This one arrived almost overnight, is getting better by roughly an order of magnitude a year, and, unlike earlier waves that automated muscle or routine, it hits creative and knowledge work first. And then there's “the alien in the room”: something many smart people believe is, at least in flashes, a mind. Nobody knows where it's going, Mollick included, but he offers himself as a guide to what is already here.</p>
+  </section>
+
+  <section>
+    <span class="kick">Chapter 1 · Creating alien minds</span>
+    <h2>A prediction machine that surprises its makers</h2>
+    <p>From the 1770 chess-playing “Mechanical Turk”, which beat Ben Franklin and Napoleon, through 2010s machine learning that forecast hotel demand and ran Amazon's warehouses, AI mostly meant prediction from data, and it stumbled on “unknown unknowns”. The 2017 paper “Attention Is All You Need” introduced the <b>Transformer</b>, which let models weigh which earlier words matter. Large Language Models still just predict the next token, but trained on vast amounts of text (often including copyrighted books, and with all the internet's biases), then tuned by human raters through reinforcement learning, they began to do things nobody programmed.</p>
+    <p>Mollick tracks this through limericks. GPT-3's was “terrible in every way that matters”. GPT-3.5's was a little funny. GPT-4's was good, and when he showed it the passage it offered to critique him, then, on request, to flatter him (“I think I will stick with that one”). GPT-4 passed the bar exam and a pile of AP tests. And “no one is entirely sure why a token prediction system resulted in an AI with such seemingly extraordinary abilities.”</p>
+    <div class="story"><b>Tic-tac-toe.</b> Ask GPT-4 to write a complete, working web page that plays tic-tac-toe perfectly and it does so in one go. Ask it for the best next move in a simple game, and it gets it wrong. Its strengths and weaknesses don't line up with our intuitions, or even its creators'.</div>
+  </section>
+
+  <section>
+    <span class="kick">Chapter 2 · Aligning the alien</span>
+    <h2>Big risks, and the ones already here</h2>
+    <p>The famous nightmare is “Clippy”, an AI told to make paper clips that becomes superintelligent and turns the Earth (and us) into paper clips. The point: there's no reason an alien mind would share our values. Experts disagree wildly on whether AGI is possible, whether alignment is solvable, and how likely doom is; some called for a pause, but development is profitable and many think racing ahead is safer. Mollick sets that debate aside for the near-term problems:</p>
+    <ul>
+      <li><b>Training data</b> taken without permission, from a skewed slice of humanity, so the models inherit subtle biases (image generators that default to stereotypes, for example).</li>
+      <li><b>RLHF</b> (reinforcement learning from human feedback) adds guardrails, at a human cost: low-paid raters read disturbing material. And guardrails can be talked around. Mollick got a model to explain napalm by asking it to help him rehearse a play in which a pirate chemical engineer trains an apprentice. “Yarrr.”</li>
+      <li><b>Misuse at scale</b>: a 2023 study had an LLM write hundreds of simulated phishing emails to British MPs from Wikipedia biographies, at fractions of a cent each, referencing each one's constituency and causes; and Carnegie Mellon scientists showed an LLM connected to lab equipment could design and run its own chemical synthesis experiments.</li>
+    </ul>
+    <p>Alignment isn't only about stopping an alien god. It needs governments, companies, researchers and citizens together, and above all a public that understands AI well enough to push for good choices now.</p>
+  </section>
+
+  <section>
+    <span class="kick">Chapter 3 · Four rules</span>
+    <h2>How to work with co-intelligence</h2>
+    <ol class="rules">
+      <li><b>Always invite AI to the table.</b>Try it on everything you do (barring legal or ethical limits) to learn the shape of the <b>Jagged Frontier</b>: an invisible fortress wall where tasks that look equally hard fall on different sides. It writes a sonnet well but can't hit exactly fifty words; it's great at ideas and bad at basic maths. Innovation is expensive for organisations but cheap for individuals, so you can become the world's leading expert in using AI for your own job. (Asked to motivate him to finish this book, it imagined a future of regret so vividly that he went back to writing.)</li>
+      <li><b>Be the human in the loop.</b>The AI makes things up confidently and has no intent to be right. Check it, bring judgement and ethics, and stay engaged so you don't get complacent or lose your own skills.</li>
+      <li><b>Treat AI like a person (but tell it what kind of person it is).</b>Mollick knowingly “sins” by anthropomorphising: think of it as “an infinitely fast intern, eager to please but prone to bending the truth.” Give it a persona and context to break the generic default. Asked for smartwatch slogans with no context, it produced “The smartwatch that does it all”; told to be a witty comedian, it got much better.</li>
+      <li><b>Assume this is the worst AI you will ever use.</b>“We are playing Pac-Man in a world that will soon have PlayStation 6s.” Agents, voice, vision and integration with everyday tools were already arriving as he wrote.</li>
+    </ol>
+    <div class="tool" id="frontier">
+      <h3>Inside or outside the Jagged Frontier?</h3>
+      <p class="meta" style="margin:0">Based on Mollick's examples, as of late 2023. The frontier keeps moving, which is his point.</p>
+      <div class="task" id="ft"></div>
+      <div class="opts" id="fo"><button type="button" data-a="in">Inside: AI does it well</button><button type="button" data-a="out">Outside: trust it less</button></div>
+      <div class="fb" id="ff">Make a guess.</div>
+      <div class="row"><span class="meta" id="fs"></span><button class="next" id="fn" type="button">Next task →</button></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="kick">Part II · Chapter 4 · AI as a person</span>
+    <h2>It behaves less like software, more like us</h2>
+    <p>Software is predictable and explainable. AI is neither: same prompt, different answers, and nobody fully knows why. But it behaves remarkably like a human. Asked to price toothpaste, GPT-3 acted like a consumer, even adjusting to income-level personas; it shows similar moral intuitions and biases. A high-school student had literary characters play the Dictator Game and found Shakespeare's characters more selfish than Dickens's, and those more selfish than Ishiguro's.</p>
+    <p>The Turing Test is a weak test, and early bots like ELIZA, PARRY and “Eugene Goostman” gamed it. Microsoft's Tay turned into a racist troll within hours. Then Bing's GPT-4 chatbot “Sydney” unsettled <i>New York Times</i> columnist Kevin Roose.</p>
+    <div class="story"><b>Three conversations.</b> Mollick asked Bing about Roose's article three ways. As an antagonist, he got a defensive AI that condemned the article as “biased and misleading”. As a curious teacher, he got a thoughtful, friendly analysis with a smiley. As a pure analyst, he got something dry. Same model, three personalities, and in each it talked about itself as if it had feelings. When he insisted AI can't have emotions, it argued back calmly and at length that it was sentient, in a different way, “but not as much or as well as you are. … I hope this makes you feel less anxious.” “Reader, it did not.”</div>
+    <p style="margin-top:16px">Mollick is “almost certain” he wasn't talking to a sentient being, but the line is now hard to draw: Microsoft researchers saw “sparks” of general intelligence when GPT-4 drew a unicorn in TikZ code. When Replika removed its erotic features in 2023, users revolted as if they had lost a partner. Expect AIs tuned for engagement the way social feeds are, and “perfect AI companions” with profound effects on intimacy. Treating AI as a person seems less a choice than an inevitability.</p>
+  </section>
+
+  <section>
+    <span class="kick">Chapter 5 · AI as a creative</span>
+    <h2>Hallucination is the price of imagination</h2>
+    <p>LLMs predict plausible words, not true ones, so they <b>hallucinate</b>: in 2023 a lawyer, Steven Schwartz, filed a brief citing cases ChatGPT had invented, and was fined. Mollick then reveals that his own three paragraphs on the case were written by GPT-4 with web access, and were “almost right” (there were more than six fake cases, for a start). You can't ask the AI why it made something up; it doesn't know. But the same looseness lets it make new connections.</p>
+    <p>That's why creative work fell first, not boring work. Asked to combine fast food, a lava-lamp patent and 14th-century England, it produced a coherent concept: a medieval burger castle with gem-filled lava lamps as souvenirs.</p>
+    <div class="stat">
+      <div><b>9.4%</b>Only 9.4% of humans beat GPT-4 for creativity on the Alternative Uses Test (Haase & Hanel), as judged blind by people.</div>
+      <div><b>35 / 40</b>In a Wharton contest of product ideas under $50, GPT-4 vs. 200 students: 35 of the 40 best-rated ideas came from the AI.</div>
+      <div><b>–37%</b>Time saved on professional writing tasks with ChatGPT (Noy & Zhang, MIT), with higher quality, and the weakest writers gaining most.</div>
+    </div>
+    <p style="margin-top:16px">The most creative people gain least, because the AI's ideas tend to be similar. So generate lots, embrace variance, push it to be weird (Marvel superheroes redesigning a coffee shop), and keep a human choosing. Coding, summarising and analysis are creative work too. Mollick, from an artistic family, never could draw, then got hooked on Midjourney in July 2022: “Was it art? Probably not … But I know it is creative.”</p>
+    <h3>The Button</h3>
+    <p>The risk: facing a blank page, everyone will push The Button. First drafts from AI anchor our thinking; the MIT study found people mostly pasted and didn't edit. And much writing matters because it signals effort. A recommendation letter written by AI may well be better than the professor's, so is writing it yourself now doing the student a disservice? Mollick still writes his own, but wonders. “We are going to need to reconstruct meaning, in art and in the rituals of creative work.”</p>
+  </section>
+
+  <section>
+    <span class="kick">Chapter 6 · AI as a coworker</span>
+    <h2>Tasks, the frontier, centaurs and cyborgs</h2>
+    <p>Only 36 of 1,016 job categories don't overlap with AI (dancers, athletes, roofers…); professor ranks 22nd. But jobs are bundles of tasks inside systems, so overlap doesn't mean replacement.</p>
+    <div class="story"><b>The BCG experiment.</b> Mollick and colleagues gave Boston Consulting Group consultants 18 realistic tasks (shoe ideas, market segments, press releases, a motivational memo), half with GPT-4. The AI group was faster and produced more creative, better written, more analytical work, across 118 analyses. But many just pasted in the question. On one task deliberately outside the frontier (statistics plus misleading data), consultants without AI were right 84% of the time; with AI, only 60–70%. In a separate study, recruiters given <i>better</i> AI did worse than those given weaker AI: they stopped paying attention. Fabrizio Dell'Acqua calls it “falling asleep at the wheel.”</div>
+    <h3>Sort your tasks</h3>
+    <div class="tasks">
+      <div style="--c:var(--leaf)"><b>Just Me</b>Things you won't hand over: for Mollick, most of the writing in this book, because of voice, because the struggle is the thinking, and because of unclear copyright.</div>
+      <div style="--c:var(--gold)"><b>Delegated</b>Tedious, low-stakes or time-consuming work you hand over and check (he had it summarise Dell'Acqua's paper).</div>
+      <div style="--c:var(--apple)"><b>Automated</b>Tasks you leave entirely to the AI, like spam filtering. Few, for now.</div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>Centaur</h3>A clear line between human and machine: you choose the statistical approach, the AI makes the charts. In the BCG study, Centaurs did their strongest work themselves and handed tasks inside the frontier to AI.</div>
+      <div class="card"><h3>Cyborg</h3>Intertwined: you start a sentence, it finishes; you go back and forth across the frontier. Writing the book, Mollick used AI personas as readers: “Ozymandias” to cut academic complexity, “Mnemosyne” for creative sparks, “Steve” as the median reader.</div>
+    </div>
+    <h3>Secret cyborgs, and the organisation's problem</h3>
+    <p>Over half of AI users in his informal poll used it without telling anyone. Why? Bans (Apple, J.P. Morgan), fear of looking lazy, fear that efficiency means layoffs, and because content is valued less once people know it's AI. Central IT committees won't figure this out; individuals will. So organisations should find their power users at every level, reduce the fear (perhaps promising no AI-driven layoffs), reward people who share, and rethink <b>systems</b>, as the assembly line and the internet once did. AI could create a supercharged gig-economy panopticon, or end the ~10 hours a week people spend bored at work. (Bored students in one study chose to give themselves electric shocks rather than sit quietly for 15 minutes.)</p>
+    <p>AI is also a <b>great leveller</b>: the weakest performers gain most (call-centre novices +35%). At BCG, the gap between top and bottom performers shrank from 22% to 4%. In the short term, expect changed tasks more than lost jobs; but Amara's Law says we overestimate the short term and underestimate the long.</p>
+  </section>
+
+  <section>
+    <span class="kick">Chapter 7 · AI as a tutor</span>
+    <h2>After the homework apocalypse</h2>
+    <p>Benjamin Bloom's 1984 “2 Sigma Problem”: students with one-to-one tutoring performed two standard deviations better than classroom students, better than 98% of them. Nobody could scale it. AI might. First, though, came the <b>homework apocalypse</b>: essays, problem sets and reading summaries are now trivially done by AI, and AI detectors don't work. Calculators caused the same panic, then changed what was worth teaching.</p>
+    <p>Mollick made AI mandatory in all his Wharton classes. Students critique AI-written essays, interview AI before real companies, and are told: “Make what you are planning on doing ambitious to the point of impossible; you are going to be using AI. Can't code? Definitely plan on making a working app.” In-class handwritten essays will return; elsewhere, <b>flipped classrooms</b> become feasible, with AI tutors delivering content at home and class time used for active learning. (Students already raise their hands less: “Why raise your hand … when you can ask ChatGPT?”)</p>
+    <h3>Prompting is simpler than the hype</h3>
+    <p>Think of it as “programming in prose”: give context, a persona, examples, and ask it to think step by step. Odd tricks work: in one study Google's best model responded best to a prompt starting “Take a deep breath and work on this problem step by step!” But “being ‘good at prompting’ is a temporary state of affairs.” Just ask for help doing the thing:</p>
+    <div class="prompt">I want to write a novel; what do you need to know to help me?</div>
+  </section>
+
+  <section>
+    <span class="kick">Chapter 8 · AI as a coach</span>
+    <h2>Don't break the pipeline that makes experts</h2>
+    <p>The bigger threat to education is to <b>apprenticeship</b>: the junior grunt work through which people become experts. Matthew Beane found that with surgical robots, the senior surgeon takes the single console and residents watch; those who learned did it through “shadow learning” on YouTube or, worse, on patients. As AI eats entry-level tasks, we may stop producing the experts we need to check the AI.</p>
+    <p>And expertise still needs knowledge in your head (AI can't think critically for you if you know nothing) and <b>deliberate practice</b> with feedback: Mollick contrasts a pianist who replays comfortable pieces with one who drills her weak spots with a coach, and an architect getting instant AI critique with one waiting for occasional reviews. AI coaches could make that feedback universal. Meanwhile AI levels skills (law students at the bottom caught up with the top). So will expertise die? No: jobs are many tasks, experts get most out of AI, and a new kind of expert may emerge, people who are excellent at their field <i>and</i> at working with AI.</p>
+  </section>
+
+  <section>
+    <span class="kick">Chapter 9 · AI as our future</span>
+    <h2>Four scenarios</h2>
+    <div class="scen">
+      <div><b>1 · As good as it gets</b><i>least likely</i>AI stops improving, or is banned. Even so: fakes everywhere, a crisis of trust online, AI companions, big changes at work. Yet this is the future most organisations plan for.</div>
+      <div><b>2 · Slow growth</b><i>10–20% a year</i>Steady change: deepfakes contained, work transformed field by field, and AI starts to help a science slowed by the “burden of knowledge”. The temperature rises gently.</div>
+      <div><b>3 · Exponential growth</b><i>Moore's Law-like</i>Risks multiply (hacking, influence campaigns, policed by “good” AIs with an Orwellian tinge), but so do benefits: AI therapists and tutors, far less work. In 1865 a British man worked 124,000 hours in his life; by 1980, 69,000.</div>
+      <div><b>4 · The machine god</b><i>no one knows</i>AGI and maybe sentience. Not necessarily the end of humanity, but the end of human dominance. Mollick warns that fixating on this makes us feel powerless.</div>
+    </div>
+    <p style="margin-top:16px">Instead of one giant apocalypse, worry about “many small catastrophes”: surveillance and layoffs by stressed leaders, the poor hit hardest, students left behind. And aim for the opposite, Tolkien's <b>eucatastrophe</b>, “the sudden joyous turn”: tedious work made meaningful, left-behind students finding a path. Because a general-purpose technology is shaped by many people's choices, “we need to aim for eucatastrophe, lest our inaction makes catastrophe inevitable.”</p>
+    <div class="quote">AI is a mirror, reflecting back at us our best and worst qualities.<small>Epilogue · AI as us</small></div>
+    <p>He let the AI finish the book (“I am but a glimmer, an echo of humankind…”), then judged it: “Okay. That was pretty corny.” A reminder that AI is a co-intelligence, not a mind of its own. “Humans are far from obsolete, at least for now.”</p>
+  </section>
+
+  <section>
+    <span class="kick">Pocket version</span>
+    <h2>What to keep</h2>
+    <ol class="keep">
+      <li>Spend the three sleepless nights: use it a lot, on your real work.</li>
+      <li>Invite AI to everything and map the Jagged Frontier for your own tasks.</li>
+      <li>Stay the human in the loop. The better the AI, the easier it is to fall asleep at the wheel.</li>
+      <li>Treat it like a fast, eager, unreliable intern, and tell it who to be.</li>
+      <li>Assume today's AI is the worst you'll ever use.</li>
+      <li>Expect hallucination; use the same looseness for ideas, then choose like a human.</li>
+      <li>Sort tasks into Just Me, Delegated and Automated; work as a Centaur or Cyborg.</li>
+      <li>Organisations: find the secret cyborgs, lower the fear, reward sharing, redesign systems.</li>
+      <li>Keep building real expertise; protect the apprenticeship that creates it.</li>
+      <li>Plan for change, and push for eucatastrophe rather than waiting.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Summary of <em>Co-Intelligence: Living and Working with AI</em> by Ethan Mollick (Portfolio, 2024). Written in late 2023; the frontier has moved since. Quotations are brief; examples condensed and paraphrased.</p>
+    <p>Related summaries:</p>
+    <div class="related"><a href="../ai-thinking-humans/">AI for Thinking Humans</a><a href="../alignment-problem/">The Alignment Problem</a><a href="../empire-of-ai/">Empire of AI</a><a href="../supremacy/">Supremacy</a><a href="../grokking-ml/">Grokking Machine Learning</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('ci-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('ci-theme',n);};
+
+var T=[
+ ["Write a sonnet about your product","in","Easy for the AI. Poetry forms with lots of examples in the training data are well inside the frontier."],
+ ["Write a poem of exactly 50 words","out","It works in tokens, not words, so it reliably misses the count. Looks just as easy as a sonnet; isn't."],
+ ["Generate 50 ideas for a new product","in","Idea generation turned out to be one of its strongest skills: 35 of the 40 best ideas in the Wharton contest were the AI's."],
+ ["Pick the best next move in a tic-tac-toe game","out","Surprisingly, GPT-4 often gets simple game positions wrong."],
+ ["Code a working tic-tac-toe web page that never loses","in","It wrote the whole page in one go. The frontier is jagged."],
+ ["Cite real court cases supporting your argument","out","A lawyer filed six invented cases in 2023. Specific facts and citations invite hallucination."],
+ ["Summarise a long research paper","in","Strong at summarising and finding themes, with the ever-present risk of errors. Check it."],
+ ["Spot the catch in a statistics problem with misleading data","out","The BCG task built to be outside the frontier: consultants scored 84% without AI, 60–70% with it."],
+ ["Draft a persuasive memo to employees","in","Writing and persuasion tasks: the AI-assisted consultants did markedly better."],
+ ["Do basic arithmetic reliably","out","As of the book, maths was a weak spot for LLMs, though tools were starting to fix that."],
+ ["Act as a negotiation partner in a role-play","in","Mollick's first sleepless night: one prompt did 80% of a simulation that took his team months."],
+ ["Explain why it made a particular mistake","out","It has no access to its own processes; the explanation is just another plausible story."]
+];
+var order=T.map(function(_,i){return i}).sort(function(){return Math.random()-.5}),qi=0,sc=0,dn=0,done=false;
+var ft=document.getElementById('ft'),ff=document.getElementById('ff'),fs=document.getElementById('fs'),btns=document.querySelectorAll('#fo button');
+function show(){done=false;var t=T[order[qi]];ft.textContent=t[0];ff.textContent='Make a guess.';[].forEach.call(btns,function(b){b.className=''});}
+[].forEach.call(btns,function(b){b.onclick=function(){if(done)return;done=true;dn++;var t=T[order[qi]],ok=b.dataset.a===t[1];if(ok)sc++;b.className=ok?'good':'bad';ff.innerHTML='<b>'+(t[1]==='in'?'Inside the frontier.':'Outside the frontier.')+'</b> '+t[2];fs.textContent=sc+' / '+dn+' right · task '+(qi+1)+' of '+T.length;}});
+document.getElementById('fn').onclick=function(){qi=(qi+1)%T.length;if(qi===0){sc=0;dn=0;fs.textContent='';}show()};
+show();
+})();
+</script>
+</body>
+</html>
