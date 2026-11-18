@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>How to Know a Person by David Brooks – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<style>
+/* The cover: two faces in profile, nose to nose, each outlined in layered paper bands
+   (charcoal, sage, mustard, orange, red) on a berry ground, with the title in heavy
+   white geometric capitals. The page keeps the berry and the bands, draws the two
+   profiles as the hero, uses a Futura-like sans for headings, and gives the book's
+   three parts three colours from the bands. */
+:root{
+  --bg:#fbf8f5; --card:#ffffff; --ink:#1d1a1c; --muted:#615a5e; --line:#ebe4e0; --soft:#f4eeea;
+  --berry:#b33468; --red:#c9332f; --orange:#e2632a; --mustard:#e2a31d; --sage:#8b9f8d; --char:#545a57;
+  --p1:#c9332f; --p2:#6f8a73; --p3:#c98a10; --accent:#b33468;
+  --sans:Jost,"Futura",system-ui,sans-serif; --serif:Newsreader,Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#151213; --card:#1d1a1b; --ink:#f2edee; --muted:#ada4a8; --line:#2e2a2c; --soft:#241f21;
+  --p1:#ff7a6e; --p2:#a9c4ad; --p3:#f2c25a; --accent:#ff6fa3; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151213; --card:#1d1a1b; --ink:#f2edee; --muted:#ada4a8; --line:#2e2a2c; --soft:#241f21;
+  --p1:#ff7a6e; --p2:#a9c4ad; --p3:#f2c25a; --accent:#ff6fa3; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.62 var(--serif)}
+a{color:var(--accent)}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:600 13px var(--sans)}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:3px 13px;font:600 12px var(--sans);cursor:pointer}
+/* hero */
+.hero{position:relative;border-radius:18px;overflow:hidden;background:var(--berry);color:#fff;margin-top:4px}
+.hero svg{display:block;width:100%;height:auto}
+.hero .txt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(14px,4vw,30px);text-align:center;pointer-events:none}
+.hero .auth{font:700 clamp(1.3rem,5.4vw,2.6rem)/1 var(--sans);letter-spacing:.08em;text-shadow:0 2px 14px rgba(60,0,20,.35)}
+.hero h1{margin:0;font:700 clamp(1.9rem,8.4vw,4.2rem)/.98 var(--sans);letter-spacing:.04em;text-transform:uppercase;text-shadow:0 2px 18px rgba(60,0,20,.4)}
+.hero .sub{font:500 clamp(.85rem,2.6vw,1.15rem)/1.3 var(--sans);margin-top:10px;text-shadow:0 1px 8px rgba(60,0,20,.5)}
+.intro{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:26px 0 10px}
+.intro img{width:130px;border-radius:3px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.intro p{margin:0}
+.facts{font:500 13px/1.5 var(--sans);color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+.parts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 6px}
+.parts a{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.4}
+.parts b{display:block;font:700 1rem var(--sans);color:var(--c)}
+.pt1{--c:var(--p1)}.pt2{--c:var(--p2)}.pt3{--c:var(--p3)}
+@media (max-width:640px){.parts{grid-template-columns:1fr}}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+.partHead{padding:46px 0 6px;border-bottom:0}
+.partHead .num{font:700 13px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--c)}
+.partHead h2{font:700 clamp(1.8rem,6vw,2.7rem)/1.05 var(--sans);text-transform:uppercase;letter-spacing:.02em;margin:4px 0 6px}
+.partHead p{color:var(--muted);margin:0}
+.partHead .bar{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--char),var(--sage),var(--mustard),var(--orange),var(--red),var(--berry));margin-top:16px}
+h2{font:700 clamp(1.45rem,4.6vw,2.05rem)/1.15 var(--sans);margin:0 0 10px;letter-spacing:-.005em}
+h3{font:600 1.1rem var(--sans);margin:22px 0 6px}
+.kick{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;margin:0 0 6px;color:var(--c,var(--accent))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:16px}
+.card h3:first-child{margin-top:0}
+.quote{font:italic 400 1.22rem/1.5 var(--serif);margin:22px 0;padding-left:16px;border-left:5px solid var(--c,var(--accent))}
+.quote small{display:block;font:500 13px var(--sans);font-style:normal;color:var(--muted);margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.grid2 .card,.grid3 .card{margin:0}
+@media (max-width:700px){.grid3{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.grid2,.grid3{grid-template-columns:1fr}}
+.card.t{border-top:5px solid var(--c,var(--accent))}
+.card.t h3{color:var(--c,var(--accent));margin-top:0}
+ul.tight{padding-left:20px;margin:8px 0}ul.tight li{margin:5px 0}
+.n{counter-reset:r;list-style:none;padding:0;margin:14px 0 0}
+.n li{counter-increment:r;position:relative;padding:10px 0 10px 50px;border-bottom:1px solid var(--line)}
+.n li:last-child{border-bottom:0}
+.n li::before{content:counter(r);position:absolute;left:0;top:9px;width:34px;height:34px;border-radius:50%;color:#fff;font:700 16px/34px var(--sans);text-align:center;background:var(--c,var(--accent))}
+.n b,.terms b{font-family:var(--sans);font-weight:600}
+.vs{display:grid;grid-template-columns:1fr 1fr;margin-top:14px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.vs div{padding:10px 14px;font-size:16px;border-bottom:1px solid var(--line)}
+.vs .h{font:600 13px var(--sans);letter-spacing:.08em;text-transform:uppercase;background:var(--soft)}
+.vs div:nth-child(odd){border-right:1px solid var(--line)}
+.vs .no{color:var(--muted)}
+@media (max-width:560px){.vs{grid-template-columns:1fr}.vs div:nth-child(odd){border-right:0}.vs .h:nth-child(2){display:none}.vs div.no::before{content:"✗ "}.vs div.yes::before{content:"✓ "}}
+.terms{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.terms div{background:var(--soft);border-radius:12px;padding:12px 14px;font-size:16px}
+.terms b{display:block;color:var(--c,var(--accent))}
+@media (max-width:560px){.terms{grid-template-columns:1fr}}
+.story{background:var(--soft);border-radius:14px;padding:14px 18px;margin-top:16px;font-size:17px}
+.story b{font-family:var(--sans)}
+.ladder{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.ladder div{display:grid;grid-template-columns:150px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-left:7px solid var(--b);border-radius:12px;padding:12px 14px;font-size:16px}
+.ladder b{font:600 1rem/1.25 var(--sans);color:var(--ink)}
+.ladder i{display:block;font:500 12.5px var(--sans);font-style:normal;color:var(--muted);margin-top:3px}
+@media (max-width:560px){.ladder div{grid-template-columns:1fr;gap:4px}}
+.big5{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}
+.big5 div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:15px;line-height:1.45}
+.big5 b{display:block;font:700 1rem var(--sans);color:var(--b)}
+.big5 .up{color:var(--ink)}.big5 .dn{color:var(--muted);display:block;margin-top:6px}
+@media (max-width:760px){.big5{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.big5{grid-template-columns:1fr}}
+/* tools */
+.tool{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:18px}
+.tool h3{margin-top:0}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tabs button,.opts button,.next{font:600 13.5px var(--sans);border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 13px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.qcard{min-height:7.5em;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-radius:14px;padding:18px;background:linear-gradient(135deg,var(--berry),var(--red) 55%,var(--orange));color:#fff}
+.qcard .q{font:600 clamp(1.15rem,4vw,1.5rem)/1.3 var(--sans)}
+.qcard .w{font:400 14.5px/1.4 var(--serif);opacity:.92;margin-top:8px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+.row .meta{font:500 13px var(--sans);color:var(--muted)}
+.next{background:var(--accent);border-color:var(--accent);color:#fff}
+.situ{font:500 14px/1.45 var(--sans);color:var(--muted);text-align:center;margin:0 0 10px}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opts button{text-align:left;border-radius:12px;padding:12px 14px;font:500 16px/1.4 var(--serif)}
+.opts button.good{border-color:#3e8e5a;background:rgba(62,142,90,.12)}
+.opts button.bad{border-color:var(--red);background:rgba(201,51,47,.08)}
+.fb{margin-top:12px;min-height:3.5em;border-radius:12px;background:var(--soft);padding:12px 14px;font-size:16px}
+.score{font:500 13px var(--sans);color:var(--muted);text-align:center;margin-top:8px}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:40px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);font:700 1.25rem var(--sans);color:var(--accent)}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:15px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:600 13px var(--sans);text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+  <header class="hero">
+    <svg viewBox="0 0 400 300" role="img" aria-label="Two faces in profile, nose to nose, outlined in layered bands of colour">
+      <defs>
+        <path id="face" d="M-40,310 L-40,40 C-40,6 10,-12 70,-12 C116,-12 134,18 136,58 L138,92 L153,124 C156,130 152,134 145,135 L143,149 C146,152 145,156 141,157 C144,161 143,165 139,167 C137,181 130,188 114,190 L106,191 C106,214 112,231 131,250 L152,310 Z"/>
+      </defs>
+      <rect width="400" height="300" fill="#b33468"/>
+      <g transform="translate(36,22) scale(.95)" stroke-linejoin="round" fill="none">
+        <use href="#face" stroke="#454a48" stroke-width="50"/>
+        <use href="#face" stroke="#8b9f8d" stroke-width="37"/>
+        <use href="#face" stroke="#e2a31d" stroke-width="24"/>
+        <use href="#face" stroke="#e2632a" stroke-width="11"/>
+        <use href="#face" fill="#5a605d"/>
+      </g>
+      <g transform="translate(364,22) scale(-.95,.95)" stroke-linejoin="round" fill="none">
+        <use href="#face" stroke="#c9332f" stroke-width="50"/>
+        <use href="#face" stroke="#e2632a" stroke-width="37"/>
+        <use href="#face" stroke="#454a48" stroke-width="24"/>
+        <use href="#face" stroke="#8b9f8d" stroke-width="11"/>
+        <use href="#face" fill="#a8312d"/>
+      </g>
+    </svg>
+    <div class="txt">
+      <div class="auth">DAVID BROOKS</div>
+      <div><h1>How to Know a Person</h1><div class="sub">The Art of Seeing Others Deeply and Being Deeply Seen</div></div>
+    </div>
+  </header>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of How to Know a Person by David Brooks">
+    <div>
+      <p>David Brooks grew up in a family whose motto might have been “Think Yiddish, act British”: loving, clever and buttoned up. He became a columnist who, by his own account, could make meaningful eye contact with people's shoes whenever they got personal. Once a broken bat landed at his feet at a baseball game and he just sat there, still-faced. Fatherhood, failures and ageing softened him, and after his second interview with her, Oprah told him: “I've rarely seen someone change so much. You were so blocked before.” This book collects what he learned on the way, from therapists, actors, biographers, teachers, novelists and researchers, about the one skill he thinks sits under all the others: <b>seeing another person accurately and making them feel seen.</b></p>
+      <div class="facts">Random House, 2023 · 17 chapters in 3 parts · ~300 pages</div>
+    </div>
+  </div>
+
+  <nav class="parts" aria-label="The three parts">
+    <a class="pt1" href="#part1"><b>I See You</b>Attention, accompaniment, what a person is, conversation, questions. Chapters 1–7</a>
+    <a class="pt2" href="#part2"><b>I See You in Your Struggles</b>A blind culture, hard talks, despair, empathy, suffering. Chapters 8–12</a>
+    <a class="pt3" href="#part3"><b>I See You with Your Strengths</b>Personality, life tasks, life stories, ancestors, wisdom. Chapters 13–17</a>
+  </nav>
+
+  <section style="--c:var(--accent)">
+    <p class="kick">Chapter 1 · The power of being seen</p>
+    <h2>Diminishers and Illuminators</h2>
+    <p>People need recognition about as much as they need food. “The worst sin towards our fellow creatures is not to hate them,” Shaw wrote, “but to be indifferent to them.” When Brooks asks people about times they felt seen, their eyes light up: someone spotted a talent they couldn't see themselves, or knew exactly what they needed when they were exhausted.</p>
+    <p>He gives three reasons to get good at this. The <b>practical</b> one: you can't choose a spouse, hire, keep staff or parent well without understanding people. (When McKinsey asked managers in 2021 why staff quit, they guessed pay. The staff said they didn't feel valued or seen.) The <b>spiritual</b> one: being seen makes people grow. “In how you see me, I will learn to see myself.” And the <b>civic</b> one: diverse democracies only hold together if citizens can look across difference and say, “I'm beginning to see the world through your eyes.”</p>
+    <div class="grid2">
+      <div class="card t" style="--c:var(--char)"><h3>Diminishers</h3>Make people feel small and unseen. They treat others as things to use, stereotype and ignore, and are too busy with themselves to notice anyone else.</div>
+      <div class="card t" style="--c:var(--accent)"><h3>Illuminators</h3>Persistently curious about others. They know what to look for and which question to ask when, and they leave people feeling bigger, deeper, respected, lit up.</div>
+    </div>
+    <div class="story"><b>Gladstone and Disraeli.</b> The story goes that young Jennie Jerome (later Churchill's mother) dined with Gladstone and left thinking he was the cleverest person in England. Then she dined with Disraeli and left thinking <i>she</i> was the cleverest person in England. Better to be Disraeli. At Bell Labs, the researchers who filed the most patents turned out to share one habit: they ate breakfast or lunch with the engineer Harry Nyquist, who listened, got inside their problems and asked good questions.</div>
+    <p style="margin-top:16px">And you are worse at this than you think. In William Ickes' studies of “empathic accuracy”, strangers read each other's thoughts correctly about 20% of the time, close friends and family about 35%. People who are terrible at it rate themselves as highly as people who are good. Long-married couples often get <i>worse</i>, because they lock in an early picture of their spouse and stop updating it.</p>
+    <p>The chapter ends with Brooks glancing up from a dull book and seeing his wife in the doorway, late light behind her, looking at an orchid. He felt, for a moment, that he knew her through and through: not facts, but “the whole flowing of her being”. The word he lands on is <b>beholding</b>. “To really know someone, you have to know how they know you.”</p>
+  </section>
+
+  <div class="partHead" id="part1" style="--c:var(--p1)">
+    <div class="num">Part 1</div>
+    <h2>I See You</h2>
+    <p>The basic skills for meeting people in ordinary, healthy times.</p>
+    <div class="bar"></div>
+  </div>
+
+  <section style="--c:var(--p1)">
+    <p class="kick">Chapter 2 · How not to see a person</p>
+    <h2>Seven habits that keep us blind</h2>
+    <p>Brooks sits in a Washington bar watching a man on a first date talk about himself for ten minutes while staring at a spot on the wall above his date's head. Nobody in the room is really seeing anybody. Brooks is no better: he is doing the <b>size-up</b>, reading the bartender's tattoos and filing her under a music taste. The untrained eye isn't enough. “You'd never think of trying to fly a plane without going to flight school.”</p>
+    <div class="terms">
+      <div><b>Egotism</b>Too self-centred to try. Not curious about anyone else.</div>
+      <div><b>Anxiety</b>So much noise about “how am I coming across?” that you can't hear the other person.</div>
+      <div><b>Naïve realism</b>Assuming the way the world looks to you is how it is. (“How do I get to the other side of the river?” “You <i>are</i> on the other side.”)</div>
+      <div><b>The lesser-minds problem</b>You hear all your own thoughts but only the few others say out loud, so they seem shallower. Nicholas Epley's business students went into business “to do something worthwhile”; the others, they assumed, went for the money.</div>
+      <div><b>Objectivism</b>The pollster's view: good for trends across groups, useless for one person's inner world.</div>
+      <div><b>Essentialism</b>Treating groups as having a fixed nature, then “stacking”: learn one fact (they voted for Trump) and assume five more.</div>
+      <div><b>The static mindset</b>A picture of you that was right once and never got updated, like parents who still see the child you were.</div>
+    </div>
+    <div class="story"><b>Fierce Attachments.</b> Vivian Gornick's memoir of walking New York with her mother, Bess, shows how you can be loved by someone without being known by them. After her husband's death, Bess made widowhood her identity and her grief “sucked the oxygen out of the air”. Mother and daughter talk all their lives and never quite meet, because each pays attention only to the effect the other has on her. Vivian never asks who her mother is apart from her. The line that haunts Brooks: “She doesn't even know I'm there.”</div>
+    <p style="margin-top:16px">Other languages have words for the opposite: Korean <i>nunchi</i>, sensitivity to other people's moods, and German <i>Herzensbildung</i>, training the heart to see the full humanity in someone.</p>
+  </section>
+
+  <section style="--c:var(--p1)">
+    <p class="kick">Chapter 3 · Illumination</p>
+    <h2>Attention is a moral act</h2>
+    <p>In Waco, Brooks interviewed LaRue Dorsey, a 93-year-old retired teacher who presented herself as a strict disciplinarian. Brooks felt a little intimidated. Then Jimmy Dorrell, a pastor who runs a church for homeless people under a motorway bridge, walked in, grabbed her shoulders and shouted “Mrs. Dorsey! You're the best! I love you!” Her stern face vanished and “a joyous, delighted nine-year-old girl appeared”. A different quality of attention called out a different version of her.</p>
+    <p>Jimmy looks at everyone as a soul of infinite worth. You don't have to share his faith, Brooks says, but you do need that posture of respect: assume every person contains something with no weight or shape that gives them infinite dignity, and that every person is “not a puzzle that can be solved but a mystery that can never be gotten to the bottom of”. “Attention,” as Iain McGilchrist writes, “is a moral act: it creates.”</p>
+    <h3>What the illuminating gaze is made of</h3>
+    <div class="terms">
+      <div><b>Tenderness</b>Like Rembrandt's portraits: warts visible, dignity visible. Olga Tokarczuk: tenderness “perceives the bonds that connect us”.</div>
+      <div><b>Receptivity</b>Not “how would I feel in your shoes?” but patiently taking in what the other person offers. Mind slack and attentive at once.</div>
+      <div><b>Active curiosity</b>Zadie Smith as a girl, wondering in every friend's house what it would be like never to leave.</div>
+      <div><b>Affection</b>In the Bible, “knowing” is a whole-body act. The priest who passes the beaten man sees him intellectually; only the Samaritan sees him.</div>
+      <div><b>Generosity</b>Ludwig Guttmann, challenged over his paraplegic war patients (“moribund cripples”): “They are the best of men.” His games led to the Paralympics.</div>
+      <div><b>A holistic attitude</b>Tolstoy: people are like rivers, narrow here, swift there, “frequently quite unlike himself, while still remaining the same man.”</div>
+    </div>
+    <div class="quote">Every epistemology becomes an ethic.<small>Parker J. Palmer: the way you see people decides who you become</small></div>
+    <p>This is Brooks' answer to “how do I become a better person?” Against Kant-style systems of abstract principle, he follows <b>Iris Murdoch</b>: morality happens mostly in how we attend to others, all day long. The essential immoral act is failing to see people correctly; the essential moral act is casting a <b>“just and loving attention”</b> on them. Her example is a mother-in-law, M, who is always polite to her daughter-in-law D but privately finds her coarse and common. Nothing about her behaviour changes; she simply decides to see D as “spontaneous” and “fresh” instead. That inner work is the moral act. We can, Murdoch writes, “grow by looking”.</p>
+    <p>The therapist <b>Mary Pipher</b> is his model: her trick is to have no tricks. She sees people as love-seeking and doing their best, looks for the good in families, and once called a father back into her office to praise him for offering his family ice cream after a hard session. His eyes filled with tears. Her questions lean forward: “Isn't it time you forgave yourself for that?”</p>
+  </section>
+
+  <section style="--c:var(--p1)">
+    <p class="kick">Chapter 4 · Accompaniment</p>
+    <h2>Side by side before face to face</h2>
+    <p>The naturalist Loren Eiseley, who couldn't swim, once lay back in the shallow Platte River and let it carry him, feeling himself part of the whole continent's watershed. He wasn't studying the river. He was accompanying it. That is Brooks' image for the second stage of knowing someone.</p>
+    <p>Most of life is errands, meetings and school drop-offs. Early on, don't stare into each other's souls; look at something together. Small talk is how two bodies get used to each other's rhythms, and “nothing can be heard in the mind until the situation feels safe and familiar to the body.” You can learn more from how someone treats a waiter than from asking their philosophy of life. And if you don't talk about the little things regularly, it's hard to talk about the big ones.</p>
+    <div class="grid2">
+      <div class="card t"><h3>Patience</h3>Simone Weil's “negative effort”: holding back and respecting the other person's timetable. One couple Brooks knows treasures friends who are <i>lingerable</i>. Treat someone's reserve as dignity, not an obstacle.</div>
+      <div class="card t"><h3>Playfulness</h3>People are most themselves at play. Men in a monthly basketball game who have never had a deep talk would die for each other. Brooks knew his baby son better than anyone, from 4 a.m. games, before the boy could say a word.</div>
+      <div class="card t"><h3>Other-centredness</h3>Like the piano accompanist, you help someone else's song shine. Brooks' failure: assisting a dad who coached his son's baseball team, he kept offering “genius ideas”, and a warm friendship cooled into a power struggle. “Let others voluntarily evolve.”</div>
+      <div class="card t"><h3>Presence</h3>Showing up at funerals and after layoffs. A grieving medical professor dreaded the family-photo class; the year before's students quietly filled the room. A Yale student crying at a friend's father-daughter dance came out to find her whole table waiting, saying nothing, hugging her one by one.</div>
+    </div>
+    <div class="quote">The ultimate touchstone of friendship is not improvement … the ultimate touchstone is witness.<small>David Whyte, Consolations</small></div>
+  </section>
+
+  <section style="--c:var(--p1)">
+    <p class="kick">Chapter 5 · What is a person?</p>
+    <h2>A person is a point of view</h2>
+    <p>Emmanuel Carrère was in Sri Lanka on Boxing Day 2004 with his girlfriend Hélène, about to break up and full of self-pity about his “inability to love”. The tsunami killed four-year-old Juliette, the daughter of a French couple they had just met. Over the following days the same catastrophe gave everyone a different task. Juliette's father Jérôme decided at once: “I can no longer do anything for my daughter, so I will save my wife.” Her mother Delphine had simply to withstand it. Hélène became the woman who organised insurers, flights and comfort for everyone. A Scottish honeymooner, Ruth, sat at the hospital refusing to sleep in case she missed her husband (he turned out to be alive). Carrère, at first, felt useless. Then the experience broke him open. He saw Hélène in a new way, told her he never wanted to separate, and they married. His book about it is called <i>Lives Other Than My Own</i>.</p>
+    <p>Two lessons. Different people live the same event in completely different ways (“Experience is not what happens to you, it's what you do with what happens to you,” Huxley). And a person's whole way of seeing can be transformed, slowly in normal times, or all at once after a shock.</p>
+    <div class="card t"><h3>Constructionism</h3>The brain doesn't record reality like a camera. It gets a low-resolution feed through the eyes and builds a “high-definition movie” by predicting what it expects and correcting. So we miss the gorilla walking through the basketball video, and most people giving directions don't notice when the stranger they're helping is swapped for another behind a passing door. After a brutal 1951 Dartmouth–Princeton football game, each side's students rewatched the film and saw the other side commit twice as many fouls. Every person is a creative artist constructing their own world: <b>“People don't see the world with their eyes; they see it with their entire life.”</b></div>
+    <p style="margin-top:16px">So the useful questions aren't “what happened to this person?” or “what's on their CV?” but <b>How do they see it? How do they construct their reality?</b> Brooks rejects typologies (Myers-Briggs, the Enneagram, the zodiac) that pin people down. The way in is conversation: ask how things look to someone, then what experiences make them see it that way. As Robert Kegan put it, what the eye sees more deeply the heart tends to love more tenderly.</p>
+  </section>
+
+  <section style="--c:var(--p1)">
+    <p class="kick">Chapter 6 · Good talks</p>
+    <h2>Conversation is joint exploration</h2>
+    <p>If a person is a point of view, you can't guess it; you have to ask. Brooks admits his subtitle should really say “hearing others deeply”. A good conversationalist is neither a raconteur nor a lecturer. Arthur Balfour, said John Buchan, would take a shy guest's hesitant remark, probe and expand it until its author felt he had added to human wisdom, and guests “would leave walking on air”. A good conversation starts in one place and ends in another. (A bad one is the official who kept lecturing Brooks for ten minutes after the call had dropped.)</p>
+    <ol class="n">
+      <li><b>Attention is on/off, not a dimmer.</b> People speak 120–150 words a minute, which leaves your brain room to wander. Go all in: sit up, lean forward, ask, nod, track (SLANT).</li>
+      <li><b>Be a loud listener.</b> Oprah's open mouth and “aahh … oooh”; Andy Crouch's “Amen! Preach!” Passive listening makes people hold back. Listening is hosting the party; speaking is bringing gifts.</li>
+      <li><b>Favour familiarity.</b> There's a “novelty penalty”: people prefer to talk about the film they've already seen. Start with what they're attached to, like the team on their T-shirt.</li>
+      <li><b>Make them authors, not witnesses.</b> Ask for concrete detail (“Where was your boss sitting?”), then how they felt then, and how they see it now.</li>
+      <li><b>Don't fear the pause.</b> Most of us stop listening at the elbow of a story and start drafting our reply. Japanese business people tolerate eight-second silences, about twice what Americans do.</li>
+      <li><b>Do the looping.</b> Say back what you heard. “So you were angry at your mother?” “No, I felt diminished. There's a difference.” Brooks does it casually so he doesn't sound like a shrink.</li>
+      <li><b>Be a midwife.</b> In lopsided talks, help the other person give birth to their own insight. A Quaker clearness committee asked Parker Palmer what he'd like about being a college president. The plaque on the desk, he said. “Can you think of an easier way to get your picture in the paper?” He laughed and turned the job down.</li>
+      <li><b>Keep the gem statement at the centre.</b> The truth under a fight that you both agree on: “I've never doubted you want the best for Dad.”</li>
+      <li><b>Find the disagreement under the disagreement.</b> What values, place or story makes each of you see it this way? “Being curious about your friend's experience is more important than being right” (Lisa Feldman Barrett).</li>
+      <li><b>Don't be a topper.</b> “I know exactly, my Steven is just the same” moves the spotlight back to you. Sit with their experience first.</li>
+    </ol>
+    <p style="margin-top:14px">Mónica Guzmán of Braver Angels: “The experience of being listened to all the way on something, until your meaning is completely clear to another human being, is extremely rare in life.”</p>
+  </section>
+
+  <section style="--c:var(--p1)">
+    <p class="kick">Chapter 7 · The right questions</p>
+    <h2>Questions are a moral practice</h2>
+    <p>Brooks' friend David Bradley (who rebuilt <i>The Atlantic</i>) asks about your ultimate goals, what you're doing when you feel most alive, and how you actually spend your days. Then he hands you a newspaper, writes index cards and lays out a frame: what you want to do, what you are doing, and how to bring card B closer to card A. People keep his cards for decades. “People often haven't had anyone tell them about themselves.” When hiring, he looks for narrow “extreme talent” and a spirit of generosity, and says “Take me back to when you were born”, because people answer better in narrative and “nobody escapes high school”.</p>
+    <p>Children ask around 40,000 questions between two and five. When the educator Niobe Way let eighth-grade boys interview her, they went from “Are you married?” to “Do you still love him? Does he know?” in four questions. Adults lose that nerve. Brooks reckons only about 30% of people are natural questioners; he often leaves parties realising no one asked him a single thing. Asking is humble: you admit you don't know. As Epley puts it, <b>perspective taking</b> (imagining what's in someone's head) is unreliable; <b>perspective receiving</b> (asking them) works.</p>
+    <div class="vs">
+      <div class="h">Shuts people down</div><div class="h">Opens them up</div>
+      <div class="no">Evaluative: “Where did you go to college? What do you do?”</div><div class="yes">Humble and open: “How did you…”, “What's it like…”, “Tell me about…”</div>
+      <div class="no">Closed: “Were you close to your mother?”</div><div class="yes">“How is your mother?” They choose the depth.</div>
+      <div class="no">Vague: “How's it going?”</div><div class="yes">Specific: “Tell me about the last time you went to the store after 11 p.m.”</div>
+    </div>
+    <p style="margin-top:14px">Sometimes simple works best: in Moscow in 1991 Brooks interviewed a 94-year-old woman who had lived through pogroms, revolution, the purges and the Nazis, and just kept asking “And then what happened?” And sometimes a broad, naive question helps more than a clever one: Condoleezza Rice kept inviting him back because his uninformed questions made her step back and see the big picture. The experts he asked said people almost never answer “none of your business”. A Harvard study found people would give up money to talk about themselves. Studs Terkel: “Listen, listen, listen … people will talk. Because no one has ever listened to them before in all their lives.”</p>
+    <div class="tool" id="deck">
+      <h3>A deck of Brooks' questions</h3>
+      <div class="tabs" id="deckTabs"></div>
+      <div class="qcard"><div class="q" id="dq"></div><div class="w" id="dw"></div></div>
+      <div class="row"><span class="meta" id="dmeta"></span><button class="next" id="dnext" type="button">Another one</button></div>
+    </div>
+  </section>
+
+  <div class="partHead" id="part2" style="--c:var(--p2)">
+    <div class="num">Part 2</div>
+    <h2>I See You in Your Struggles</h2>
+    <p>The “graduate course”: seeing people amid conflict, power, depression and grief.</p>
+    <div class="bar"></div>
+  </div>
+
+  <section style="--c:var(--p2)">
+    <p class="kick">Chapter 8 · The epidemic of blindness</p>
+    <h2>A crisis of connection, and its moral root</h2>
+    <p>The numbers Brooks lines up for the US: suicides up 33% (1999–2019); teens reporting persistent hopelessness up from 26% to 44% by 2021; the share with no close friends quadrupled since 1990; 54% say no one knows them well; time with friends fell from 6.5 hours a week (2013) to under 3 (2021); people who say “most people can be trusted” fell from about 60% to 30%, and 19% of millennials. After a talk in Oklahoma someone passed up a card: “What do you do when you no longer want to be alive?”</p>
+    <p>Unseen people withdraw, grow suspicious and turn bitter. “Pain that is not transformed gets transmitted.” Every society has a “recognition order” (Axel Honneth) that showers some with respect and leaves millions invisible, and that hurt spills into politics. Lonely people are seven times likelier to say they're politically active. Healthy societies argue about distribution; unhappy ones produce a <b>politics of recognition</b>, which offers belonging and moral drama but no actual community: “to be moral in this world, you don't have to feed the hungry or sit with the widow.” At the extreme: a would-be mass shooter told Tom Junod he wanted attention, and if someone had said “we accept you”, “I would have broken down and given up.” A Rwandan génocidaire told Jean Hatzfeld that as he swung the machete, his neighbour's face went blurry: “nothing firmly reminded me that I had lived beside him.”</p>
+    <div class="card t"><h3>Brooks' diagnosis: a failure of moral formation</h3>Social media, inequality and demagogues all play a part, but underneath he sees a moral failure. From the 1940s–60s schools dropped character education for test scores and college admissions; parents moved to “acceptance parenting”. In 1966 nearly 90% of US freshmen wanted “a meaningful philosophy of life”; by 2000 only 42% did, and being well off came first. Moral formation means three plain things: restraining selfishness, finding a purpose, and learning the basic social and emotional skills to be considerate. Several generations, Brooks' included, were never taught them.</div>
+  </section>
+
+  <section style="--c:var(--p2)">
+    <p class="kick">Chapter 9 · Hard conversations</p>
+    <h2>Stay in their frame, step into their ken</h2>
+    <p>On a 2022 panel about the “culture war”, Brooks tried to give the long view: two legitimate moral traditions clashing. His co-panellist, a prominent Black scholar, heard the phrase as another assault on teaching Black history, the latest step back after a step forward. Nobody raised their voice, but her face showed contempt, he started watering down his views, and he left feeling he had neither understood her nor clearly said what he thought. Hard conversations, he concludes, need you to see three things at once: the <b>unique individual</b>, the <b>groups</b> they belong to, and their <b>social location</b>, where they stand in a structure of power.</p>
+    <ol class="n">
+      <li><b>Conditions before content.</b> A professional at a hotel conference can just be himself; a trucker in the same room has to work out which self he can show. For members of marginalised groups there's often a chasm between who they are and how they're seen. Ralph Ellison: “I am invisible … simply because people refuse to see me.”</li>
+      <li><b>Every conversation runs on two levels.</b> The official one (the topic) and the actual one: a volley of signals that make each other feel safer or more threatened, respected or not. <i>Crucial Conversations</i>: respect is like air; when it's missing, it's all anyone can think about.</li>
+      <li><b>Notice the frame, and stay in theirs.</b> He wanted to analyse; she was speaking as an activist in a fight. When someone talks about feeling excluded or wronged, don't drag it back to your frame. Ask “What am I missing?” The person lower in a hierarchy always knows more about the situation than the one above.</li>
+      <li><b>Step into their ken</b>, the old Scots sailors' word for everything visible out to your horizon.</li>
+      <li><b>No labels.</b> When people start arguing to win, they reach for “reactionary”, “woke”, “establishment”. Micah Goodman: “A great conversation is between two people who think the other is wrong. A bad conversation is between those who think something is wrong with you.”</li>
+      <li><b>Repair when it goes south:</b> ask “How did we get to this tense place?”; <i>split</i> your motives (“I wasn't trying to silence you; I was trying to include you, and went too fast”); enlarge the shared purpose; treat the rupture as a chance for a deeper bond, since now both your hearts are on the table.</li>
+    </ol>
+    <div class="story"><b>Hills look steeper with a backpack.</b> The psychologist Dennis Proffitt found students overestimate hill gradients wildly, except one batch: the women's varsity soccer team, for whom the hills really were easier. People wearing heavy backpacks or who have just heard sad music see steeper hills, people with an energy drink in them see gentler ones; baseball players on a hot streak see bigger balls. James Gibson called it <i>affordances</i>: we see what we're able to do in a scene. Rich and poor people walk into different Neiman Marcuses; Yale students and New Haven locals see different campuses. People in different circumstances don't just hold different opinions about the world, “they literally see different worlds.” So you have to ask: how do you see this?</div>
+    <p style="margin-top:16px">You can never make hard conversations easy or fully know a life unlike yours. But Brooks finds that a respectful, curious reply to an abusive email almost always changes the sender's tone at once. Terence: “I am human, and nothing human is alien to me.”</p>
+  </section>
+
+  <section style="--c:var(--p2)">
+    <p class="kick">Chapter 10 · How do you serve a friend who is in despair?</p>
+    <h2>Pete</h2>
+    <p>Peter Marks was Brooks' oldest friend, from summer camp at eleven: athletic, goofy (he once skipped so exuberantly he smashed his forehead on a door frame and lay there giggling), later a navy man and an eye surgeon who phoned his patients the evening after every operation. In 2019 a light went out. Severe depression, rooted partly in childhood trauma he had rarely spoken about, held him for three years despite the best doctors and endless changes of medication. He died by suicide in April 2022, weeks before his younger son's graduation. A few days earlier he'd said in the car home: “How can I not be able to talk to my oldest friend? Brooksie can talk to people. I can't.”</p>
+    <div class="grid2">
+      <div class="card t" style="--c:var(--red)"><h3>What didn't help</h3><ul class="tight"><li><b>Advice.</b> Brooks suggested he go back to operating in Vietnam. A depressed person lacks energy and desire, not ideas; advice tells them you don't get it.</li><li><b>Positive reframing.</b> Listing his blessings could make him feel worse for not enjoying them.</li><li>Assuming you can extrapolate from ordinary sadness. Depression distorts time, space and self.</li></ul></div>
+      <div class="card t" style="--c:var(--p2)"><h3>What does</h3><ul class="tight"><li>Acknowledge the reality; show you haven't walked away.</li><li>Just be normal, the friend you've always been.</li><li>Small touches with no reply needed. One man's brother sent him over 700 postcards.</li><li>Words from someone who's been there: Mike Gerson's sermon on depression as a “malfunction of the instrument we use to determine reality” made Pete feel understood.</li><li>It's OK to ask directly about suicide; you won't plant the idea.</li><li>Give the family an hour or two off.</li></ul></div>
+    </div>
+    <div class="quote">If you know someone who's depressed, please resolve to never ask them why. Be there for them when they come through the other side.<small>Stephen Fry</small></div>
+    <p>His wife Jen: “I was very aware this was not the real Pete. I tried not to take things personally.” Brooks feels sorrow that he didn't know more, but not guilt; “the beast was bigger than Pete; it was bigger than us.” If he ever faces it again he'll know it's enough to show some understanding and offer “the comfort of being seen”. And to anyone who ever thinks their death would help their family: “it is completely wrong.”</p>
+  </section>
+
+  <section style="--c:var(--p2)">
+    <p class="kick">Chapter 11 · The art of empathy</p>
+    <h2>Defences, and the three skills of empathy</h2>
+    <p>In the “still face” experiment, mothers stop responding to their babies; within minutes the babies squirm, cry, then collapse. Every child is asking: Am I safe? How does love work? Am I worthy? The Grant Study, which followed Harvard men from the 1940s to their deaths, found that the warmth of a man's childhood home predicted who became an officer in the war better than IQ or class, and that cold childhoods meant more medication and five times more time in psychiatric hospitals. Children build defences to survive, and adults still carry them.</p>
+    <div class="terms">
+      <div><b>Avoidance</b>Emotions hurt, so minimise them: keep it superficial, retreat into work, always be the strong one.</div>
+      <div><b>Deprivation</b>“My needs won't be met” becomes “I'm not worthy”, with a fierce inner critic however successful they are.</div>
+      <div><b>Overreactivity</b>A threat detector set too high: neutral faces read as angry, ambiguous moments as attacks.</div>
+      <div><b>Passive aggression</b>Anger expressed sideways by someone who fears conflict: the martyred husband who “lets” his wife go away for the weekend, then sulks.</div>
+    </div>
+    <p style="margin-top:16px">Will Storr calls these a <b>“sacred flaw”</b>: the model once protected you and made you the hero of your story. (Finish the sentence “I'm only safe when …”.) Many political fighters learned early that life is combat, and like vines planted in resistant clay, it made them strong. But a sacred flaw is still a flaw. Criticism feels like an attack on identity; anger hunts for targets and takes over its host; and old models go out of date. WWI generals trained for cavalry kept sending men at machine guns: <b>conceptual blindness</b>.</p>
+    <p>You can't fix this alone. Introspection is overrated: you can't see the lenses you see with, and you either settle for a flattering “epiphany” or spiral into rumination. People need friends who give them the outside view, and that takes empathy, which is not a gush of fellow-feeling but a set of trainable skills:</p>
+    <div class="grid3">
+      <div class="card t"><h3>1 · Mirroring</h3>Catching the other person's emotion in your own body. Good mirrorers have high <i>emotional granularity</i> (Lisa Feldman Barrett): they can tell anxious from depressed, frustration from pressure. (Botox users read worry less well because they can't frown.)</div>
+      <div class="card t"><h3>2 · Mentalizing</h3>Working out <i>why</i> they feel it, by projecting your own memories: not “woman crying” but “woman humiliated by a professional setback”. It lets you sympathise and still judge.</div>
+      <div class="card t"><h3>3 · Caring</h3>Con artists read emotions too. Caring means seeing they may need something different from what you'd need. Kate Bowler, who has cancer, wants compliments “that don't feel like a eulogy” and gifts that aren't about cancer.</div>
+    </div>
+    <h3>How to get better at it</h3>
+    <ul class="tight">
+      <li><b>Contact</b> (Gordon Allport): it's hard to hate up close, especially sitting in a circle and working on a shared goal.</li>
+      <li><b>Observe like an actor.</b> Viola Davis is “an observer and a thief”; Matthew McConaughey looks for the one gesture (“hands in his front pockets”) that reveals a character, and the story the character tells himself: a killer thinks “I'm here to restore order”. Brooks' advice: send your kids to drama club.</li>
+      <li><b>Read</b> character-driven novels and biographies (thrillers don't do it).</li>
+      <li><b>Spot emotions.</b> Marc Brackett's mood meter (energy × pleasantness) and RULER: recognise, understand, label, express, regulate. In public almost everyone says they feel fine; in confidential surveys 60–70% place themselves on the negative side. Employees of emotionally intelligent bosses feel inspired 75% of the time, versus 25%.</li>
+      <li><b>Suffering</b> that doesn't harden you. A woman with a brain injury who often fell said people rushed to lift her: “what I really need is for someone to get down on the ground with me.”</li>
+    </ul>
+    <p>Empathy is bodily. People heal by living through the opposite of their wound (intimacy that is safe, people who stay) and by <b>co-regulation</b>, calming each other's hearts and guts just by being close (Martha Welch). A safe person literally sees a wider world: fear narrows peripheral vision, happiness widens it. Thornton Wilder: “In love's service only the wounded soldiers can serve.”</p>
+  </section>
+
+  <section style="--c:var(--p2)">
+    <p class="kick">Chapter 12 · How were you shaped by your sufferings?</p>
+    <h2>Excavation: retelling the story together</h2>
+    <p>When Barbara Lazear Ascher's husband was given three months to live, they threw theme parties and felt “certain death had granted us an extra life”. Grief afterwards was harder: “You'll think you're sane, but you're not,” a widowed neighbour warned, and soon Barbara was screaming at CVS staff for playing “I'll Be Home for Christmas”. Loss shatters our assumptions that the world is fair and controllable. Stephen Joseph's distinction: people who are damaged try to <b>assimilate</b> the trauma into their old model (“I'll keep chugging”); people who grow <b>accommodate</b> it and build a new one (“this changes who I am”). After terror attacks, 46% said their outlook got worse, 43% better.</p>
+    <div class="story"><b>Frederick Buechner.</b> At ten he watched from his window as his mother and grandmother pumped his father's legs on the gravel drive, blue smoke coming from the garage. The note was pencilled in the back of <i>Gone with the Wind</i>. The family moved to Bermuda and sealed up; his mother never spoke of it. Years later a friend whose family had just crashed asked him to sit with him at the airport. His mother thought the request absurd, and hearing his own thoughts from her mouth revolted him. That started a decades-long journey inward. By middle age he could weep for his father. “The same steel that secures your life against being destroyed secures your life also against being opened up and transformed.”</div>
+    <p style="margin-top:16px">The pattern: a blow, a period when feelings are held “in suspension”, then a time to dig it all out and share it. Excavation isn't solitary. Exercises friends can do together:</p>
+    <ol class="n">
+      <li><b>Family rules.</b> “In our family, the one thing you must never do is ___.” “… must do above all else is ___.”</li>
+      <li><b>This Is Your Life.</b> Some couples write a summary of the year in the first person, from their partner's point of view.</li>
+      <li><b>Filling in the calendar.</b> Walk through someone's life year by year: what was second grade like?</li>
+      <li><b>Expressive writing</b> (James Pennebaker): twenty minutes on your emotional experiences, just for you, then throw it away. Over the days the story gets coherent; writers move from victim to author.</li>
+      <li><b>Just talk.</b> Tell each other stories about the person you lost, and new stories about the years ahead.</li>
+    </ol>
+    <p style="margin-top:14px">Rabbi Harold Kushner, whose son died at fourteen, says the loss made him a better pastor and counsellor, “and I would give up all those gains in a second if I could have my son back.”</p>
+    <div class="vs">
+      <div class="h">Warrior / statesman model of character</div><div class="h">Illuminator model</div>
+      <div class="no">We're divided: reason must master the passions</div><div class="yes">We're social animals who need recognition</div>
+      <div class="no">Character is built alone, by willpower and habit, like the gym</div><div class="yes">Character is built with others, in specific acts of attention</div>
+      <div class="no">Exemplars on marble horses</div><div class="yes">The friend next to you on the bench</div>
+    </div>
+    <p style="margin-top:14px">Murdoch again: “virtue is the attempt to pierce the veil of selfish consciousness and join the world as it really is.”</p>
+  </section>
+
+  <div class="partHead" id="part3" style="--c:var(--p3)">
+    <div class="num">Part 3</div>
+    <h2>I See You with Your Strengths</h2>
+    <p>Learning to see the gifts people bring: temperament, the task they're in, their story, their roots.</p>
+    <div class="bar"></div>
+  </div>
+
+  <section style="--c:var(--p3)">
+    <p class="kick">Chapter 13 · Personality: what energy do you bring into the room?</p>
+    <h2>Be a sommelier of people</h2>
+    <p>George W. Bush can close the distance to anyone in milliseconds. When the Democrat Bob Bullock told him at a breakfast, “I'm going to have to fuck you on this one,” Bush walked over, kissed him on the lips and said, “If you're going to fuck me, you'll have to kiss me first.” But the psychologist Dan McAdams argues Bush's very high extroversion combined with low curiosity (one book per topic, no alternative perspectives) helped lead him into Iraq. To understand anyone, you need to sense the energy they bring into a room.</p>
+    <p>Brooks dismisses Myers-Briggs: about half of people land in a different type when retested, it predicts little, and its binaries are false (good thinkers tend to be good feelers too). Adam Grant compared it to asking “shoelaces or earrings?” The research-backed map is the <b>Big Five</b>, and every trait is a gift with a cost:</p>
+    <div class="big5">
+      <div style="--b:var(--orange)"><b>Extroversion</b><span class="up">Drawn to every reward and pleasure; warm, fun, bold.</span><span class="dn">Risk-taking, quicker anger, more accidents.</span></div>
+      <div style="--b:var(--p2)"><b>Conscientiousness</b><span class="up">Discipline, focus, follow-through; better grades, careers, longer lives.</span><span class="dn">Guilt, rigidity, workaholism.</span></div>
+      <div style="--b:var(--char)"><b>Neuroticism</b><span class="up">Early warning of danger; the prophet, the Freud, the reformer.</span><span class="dn">Threat spirals, depression, worse relationships.</span></div>
+      <div style="--b:var(--red)"><b>Agreeableness</b><span class="up">Kind, trusting, tracks who thinks what about whom; lower divorce rates.</span><span class="dn">Passed over for promotion and the CEO job.</span></div>
+      <div style="--b:var(--berry)"><b>Openness</b><span class="up">Hungry for new ideas and art; divergent thinking (says “armadillo”, not “dog”).</span><span class="dn">Boredom is the enemy, as with JFK.</span></div>
+    </div>
+    <p style="margin-top:16px">You don't need a test: personality sits on the surface, in someone's way of being. Traits predict life outcomes about as well as IQ or class. They also tell you how to treat people: a low-agreeable father's mild critique lands as a brutal attack on a high-neuroticism daughter. Danielle Dick: there's no right way to parent, only a right fit between two personalities; push gently against a child's traits and praise the “positive opposite” instead of punishing. Charlotte and Emily Brontë had the same parents, town and schooling, yet one sought “company with whom to seek justice and love” and the other “privacy in which to experience sublimity”. And traits change: in over 200 intervention studies neuroticism dropped by half a standard deviation in as little as six weeks, and most of us grow kinder, steadier and more conscientious with age.</p>
+  </section>
+
+  <section style="--c:var(--p3)">
+    <p class="kick">Chapter 14 · Life tasks</p>
+    <h2>What task is this person in the middle of?</h2>
+    <p>A newborn's eyes focus at about a foot, the distance of a mother's face. A baby has “lantern” attention that lights the whole room; adults have a spotlight. At two, the child discovers “I am not my mother” and says no because you want her to. Drawing on Erik Erikson and Robert Kegan, Brooks treats life not as fixed stages but as a series of common <b>tasks</b>, each with its own state of mind. Not everyone does them all or in this order.</p>
+    <div class="ladder">
+      <div style="--b:var(--char)"><b>Imperial<i>industry vs inferiority</i></b><span>Prove you're competent. The world is a message about me. Life is a series of contests, relationships are instrumental, pride is touchy. People can form alliances but not collaborations. Some adults never leave it (Brooks names Trump and Putin).</span></div>
+      <div style="--b:var(--sage)"><b>Interpersonal<i>intimacy vs isolation</i></b><span>Fit in; build a social identity. You think psychologically, feel guilt rather than fear of being caught, and become idealistic. The core question is “Do you like me?”: people-pleasing, cliques, swallowed anger. A breakup can feel like losing the self.</span></div>
+      <div style="--b:var(--mustard)"><b>Career consolidation<i>consolidation vs drift</i></b><span>Find your vocation and master it, like young LBJ literally running up Capitol Hill to escape his failed father. Self-control and saying no; feelings get sealed away. Eventually success stops satisfying: Sébastien Bras, after eighteen years of three stars, asked Michelin never to come back.</span></div>
+      <div style="--b:var(--orange)"><b>Generative<i>generativity vs stagnation</i></b><span>Foster the next generation, as parent, mentor, leader or guardian of an institution. Gift logic replaces merit logic. A friend took a publicly disgraced man to dinner every Sunday for two years. Generative people get lonely and burn out too.</span></div>
+      <div style="--b:var(--red)"><b>Integrity<i>integrity vs despair</i></b><span>Make peace with your life before death, or turn regret into anger at the world. The wisdom here is holding contradictions together. Wilfred McClay's mother, a brilliant talker silenced by a stroke, became warmer, more grateful and a superb grandmother.</span></div>
+    </div>
+    <div class="story"><b>Adam Newman</b> (a pseudonym in the Grant Study) was tied to his bed as a boy by a mother who “could make anyone feel small”. He grew into a rigid, judgemental perfectionist whose daughter said he destroyed her self-esteem. In middle age he quit NASA for Sudan to help farmers, then taught, then did city planning. At 72 he gave George Vaillant a “Texas good-bye” bear hug. Sent his college interview transcript at 55, he replied: “George, you must have sent this to the wrong person.”</div>
+    <p style="margin-top:16px">Moving between tasks means <b>disembedding</b>: “I am my friendships” becomes “I have friendships.” Kegan: “All growth is costly.” Empty-nesters and new retirees often flounder until they find the next task. Brooks places himself between career consolidation and generativity: he wrote a book about living for others, then checked his Amazon ranking for weeks. Jung: “We cannot live the afternoon of life according to the program of life's morning.”</p>
+  </section>
+
+  <section style="--c:var(--p3)">
+    <p class="kick">Chapter 15 · Life stories</p>
+    <h2>Ask people to tell you their story</h2>
+    <p>Dan McAdams pays volunteers to tell their life stories over about four hours: high points, low points, turning points. Half of them cry. Many try to give the money back: no one had ever asked them before. Nicholas Epley got Chicago commuters to talk to strangers on the train, and introverts as well as extroverts loved it. We don't start these conversations because we underestimate how much others want to talk, how much we'll learn and how quickly they'll go deep.</p>
+    <p>Jerome Bruner distinguished <b>paradigmatic</b> thinking (arguments, data, PowerPoint) from <b>narrative</b> thinking, the only kind that grasps an individual. We're “paradigmatic rich and narrative poor”. So Brooks reframes his questions to invite a story: not “What do you think about X?” but <b>“How did you come to believe X?”</b>; not “What are your values?” but <b>“Tell me about the person who shaped your values most.”</b> Then take people back (“What did you want to be as a kid?”) and forward (“How do you hope to spend the years ahead?”). Isak Dinesen: “All sorrows can be borne if you put them into a story.”</p>
+    <h3>What he listens for</h3>
+    <div class="terms">
+      <div><b>Tone of voice</b>Sassy, ironic, earnest, elegiac? Is the world safe or threatening to this narrator? Inner voices often include a Faithful Friend, an Ambivalent Parent, a Proud Rival and a Helpless Child. (Talking to yourself as “you” lowers anxiety.)</div>
+      <div><b>Who's the hero</b>McAdams' <i>imago</i>: the Healer, Caregiver, Warrior, Sage, Survivor… Viola Davis is the Fighter: “I'm the little girl who would run after school every day.” James Marcia's levels: identity achievement, foreclosure, diffusion, moratorium.</div>
+      <div><b>The plot</b>Overcoming the monster, rags to riches, the quest, or the very American redemption story. Some lives are a surfing story: catch a wave, then another.</div>
+      <div><b>Reliability</b>Faulkner came home in a pilot's uniform with dogfight stories, never having seen combat; Leonard Bernstein claimed a poor, music-less childhood. Watch for evasive stories that leave out the pain, and stories too perfect to be true.</div>
+      <div><b>Narrative flexibility</b>Can they revise the story when life breaks it? Therapists are essentially story editors, helping people get causation right and see their own agency.</div>
+    </div>
+    <p style="margin-top:16px">And listening helps people <i>write</i> their story: most of us only organise our life into a narrative when someone asks. A friend a week from dying of cancer told Brooks mostly about kindnesses he hadn't deserved, and found gratitude at every turn.</p>
+  </section>
+
+  <section style="--c:var(--p3)">
+    <p class="kick">Chapter 16 · How do your ancestors show up in your life?</p>
+    <h2>Culture inheritor and culture creator</h2>
+    <p>Zora Neale Hurston grew up in Eatonville, Florida, an all-Black town. As a girl she'd stop passing carriages: “Don't you want me to go a piece of the way with you?” Her father raged at her ambition (“you ain't white”); her mother told her to “jump at the sun”. She hung around the porch of Joe Clarke's store absorbing the men's insults and folk tales, the raw material of all her later work. When her mother lay dying, Zora's family overrode her mother's wishes on the old deathbed customs, and Zora never learned what her mother was trying to say. Later, studying anthropology under Franz Boas at Columbia, she chose to go back to Florida to record that culture. Yet she refused to flatten anyone into a type: “There is no The Negro here.”</p>
+    <p>That's the double vision Brooks asks for: see the group culture poured into a person over generations, and at the same time the individual crafting their own point of view, often against it. A Ugandan student of his saw a white woman in New Haven hide behind a skinny tree as he walked by. “One of the great fallacies of life is to think culture is everything; another great fallacy is to think culture is nothing.”</p>
+    <div class="grid2">
+      <div class="card t"><h3>Culture runs deep</h3><ul class="tight"><li>When UN diplomats had immunity from New York parking fines (1997–2002), those from the UK, Sweden, Canada and Australia ran up zero tickets; Kuwait, Albania, Chad and Bulgaria over 100 each.</li><li>WEIRD societies are outliers: nuclear families dominate in only 8% of societies studied. Most Americans and Canadians don't think a friend can expect them to lie under oath for him; most people in Nepal, Venezuela or South Korea would.</li><li>Shown a man, woman and child, American kids grouped the adults; Taiwanese kids grouped mother and child.</li><li>Descendants of rice farmers are more interdependent than wheat farmers' descendants; plough cultures have sharper gender roles.</li></ul></div>
+      <div class="card t"><h3>Albion's Seed</h3>David Hackett Fischer traced four English migrations: East Anglians to New England (moralistic, educated, civic), southern English to Virginia (aristocratic, patriarchal), Midlanders to Pennsylvania, northern borderers to Appalachia (honour culture, clan, warrior ethic). The 1896 electoral map looks like 2020's, with the parties swapped.<br><br>Brooks, now a churchgoer, is still a Jew “in every fiber”: reverence for words, argument as prayer, a stranger's affinity for strangers, and above all the sense that life is an audacious moral journey. Have you taken your Exodus?</div>
+    </div>
+    <p style="margin-top:16px">Questions for seeing someone's roots: Where's home, the place you spiritually never leave? How do the dead show up in your life? How are you embracing, rebelling against, creating or passing on your culture? Where are you caught between cultures?</p>
+  </section>
+
+  <section style="--c:var(--p3)">
+    <p class="kick">Chapter 17 · What is wisdom?</p>
+    <h2>Wise people witness</h2>
+    <p>Small moments of being seen: a teacher tells a struggling second-grader “you're really good at thinking before you speak” and her whole year turns. Brooks' own eleventh-grade teacher: “David, you're trying to get by on glibness. Stop it.” Humiliated, and strangely honoured. A strict father finds his 13-year-old daughter drunk on the porch, carries her inside and says, “There'll be no punishment here. You've had an experience.” Maupassant sums up a character in one line: “a gentleman with red whiskers who always went first through a doorway.”</p>
+    <p>Brooks used to think of the wise as Yoda or Solomon, dispensing answers. Now he believes the opposite. <b>Wise people don't tell you what to do; they start by witnessing your story.</b> They are more coaches than philosopher-kings: they accept your account, then push you to name what you left out and find the problem under the problem, until your own answer comes into view. Their gift is receptivity, an active hospitality that makes honesty safe.</p>
+    <div class="grid2">
+      <div class="card t"><h3>Kidder and Deo</h3>Tracy Kidder spent two years drawing out the story of Deo, who fled the Burundian genocide, arrived in New York with $200 and no English, slept in Central Park and ended up at Columbia. What opened the book was a small shared feeling: Deo only entered the park after dark so no one would see him as a pathetic homeless man. Kidder walked the places with him, back to the hospital room in Burundi. “If you spend time, what you want to know will creep out.” Deo now runs a health centre in Burundi serving people of both groups.</div>
+      <div class="card t"><h3>Gottlieb and John</h3>Lori Gottlieb's client John, a cruel, Emmy-winning TV writer, took calls in sessions and called her his “hooker”. She refused to reduce him to a diagnosis (“behavior is how we speak the unspeakable”) and told herself “have compassion”. One day he let slip “Gabe is getting so emotional.” Gabe was his son, killed at six in a crash while John glanced at his phone. John later told her she had “a more complete picture of my total humanity than anyone else in my life.”</div>
+    </div>
+    <div class="quote">Receptivity without confrontation leads to a bland neutrality that serves nobody. Confrontation without receptivity leads to an oppressive aggression which hurts everybody.<small>Henri Nouwen. Buddhists call endless soothing “idiot compassion”.</small></div>
+    <p>In <i>Good Will Hunting</i>, the therapist on the park bench tells the genius orphan he knows everything from books and nothing about war, love or loss: “I see a cocky, scared-shitless kid.” That is <b>critiquing with care</b>: naming something the other person almost knew, inside unshakable regard. Like a good editor finding the paragraph you suspected wasn't working. Randolph Bourne: “A man with few friends is only half-developed.”</p>
+    <p>Two novelists told Brooks they start a book not with a character or a plot but with a <b>relationship</b>. So too wisdom: less a trait than something practised in a relationship, a “community of truth” (Parker Palmer), whether a classroom, a coffee table or a book club whose members can no longer tell whose ideas were whose. The last example: Kathryn Schulz's talkative father, who fell silent near the end, looking from face to face, eyes shining with tears, as each family member told him what he had given them. “That was a guy who was truly seen.”</p>
+    <h3>Brooks' honest self-assessment</h3>
+    <p>Still too much of a topper and a performer; still calmer of face than a loud listener should be; just this week he let two crucial moments slip by (a woman planning “four months of soul-searching”, an official who confessed he can't stay present). But his posture has changed: warmer, more vulnerable, better at big questions, no longer freezing when someone opens up. W. H. Auden: “If equal affection cannot be / Let the more loving one be me.”</p>
+    <div class="tool" id="quiz">
+      <h3>Diminisher or Illuminator? Pick the better move</h3>
+      <p class="situ" id="qs"></p>
+      <div class="opts" id="qo"></div>
+      <div class="fb" id="qf">Choose an answer.</div>
+      <div class="row"><span class="meta" id="qscore"></span><button class="next" id="qnext" type="button">Next</button></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Pocket version</p>
+    <h2>What to keep</h2>
+    <ol class="keep">
+      <li>The most important skill is seeing someone accurately and letting them feel seen. It can be learned.</li>
+      <li>You read people far worse than you think (20% for strangers, 35% for loved ones). Ask, don't guess: perspective <i>receiving</i> beats perspective taking.</li>
+      <li>Your gaze sets the tone. Approach each person as a mystery of infinite dignity; attention is a moral act.</li>
+      <li>Accompany before you probe: small talk, play, patience, showing up.</li>
+      <li>A person is a point of view. Ask how they see it, and what made them see it that way.</li>
+      <li>Listen loudly, loop back, pause, don't top. Ask open, humble, big questions, and questions that invite stories.</li>
+      <li>In hard conversations, mind the conditions and the emotional undercurrent, stay in their frame, and repair ruptures aloud.</li>
+      <li>With a friend in despair, don't fix or cheer. Stay, be normal, keep in touch, ask directly.</li>
+      <li>Empathy is mirroring, mentalizing and caring, and it grows with contact, close observation, literature and survived suffering.</li>
+      <li>See strengths: temperament (Big Five), the life task someone is in, the story they tell, the ancestors in them.</li>
+      <li>Wisdom is witnessing, then caring enough to say the hard thing.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Summary of <em>How to Know a Person: The Art of Seeing Others Deeply and Being Deeply Seen</em> by David Brooks (Random House, 2023). Quotations are brief; examples condensed and paraphrased.</p>
+    <p>Related summaries:</p>
+    <div class="related"><a href="../supercommunicators/">Supercommunicators</a><a href="../crucial-conversations/">Crucial Conversations</a><a href="../difficult-conversations/">Difficult Conversations</a><a href="../the-next-conversation/">The Next Conversation</a><a href="../nonviolent-communication/">Gewaltfreie Kommunikation</a><a href="../platonic/">Platonic</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('hk-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('hk-theme',n);};
+
+/* question deck */
+var DECK={
+ "Getting started":[
+  ["Where did you grow up?","Gets people talking about home; often you know something about the place."],
+  ["That's a lovely name. How did your parents choose it?","Opens family history and cultural background."],
+  ["Tell me about the last time you…","Specific beats vague. The focus-group moderator's trick."],
+  ["What did you want to be when you were a kid? What did your parents want you to be?","Takes people back in time."],
+  ["Take me back to when you were born.","David Bradley's way out of the CV and into the life."]],
+ "Big questions":[
+  ["What crossroads are you at?","Most of us are in the middle of some transition."],
+  ["What would you do if you weren't afraid?","Names how fear is holding someone back."],
+  ["If you died tonight, what would you regret not doing?",""],
+  ["If we meet a year from now, what will we be celebrating?",""],
+  ["If the next five years are a chapter in your life, what is that chapter about?",""],
+  ["Can you be yourself where you are and still fit in?",""],
+  ["I'm eighty. What should I do with the rest of my life?","A political scientist's question at dinner, which made the evening."],
+  ["Why you?","Mónica Guzmán: why were you the one who started it, who ran?"]],
+ "Peter Block":[
+  ["What is the no, or refusal, you keep postponing?",""],
+  ["What have you said yes to that you no longer really believe in?",""],
+  ["What forgiveness are you withholding?",""],
+  ["How have you contributed to the problem you're trying to solve?",""],
+  ["What is the gift you currently hold in exile?",""]],
+ "Bright side":[
+  ["Tell me about a time you adapted to change.",""],
+  ["What's working really well in your life?",""],
+  ["What are you most self-confident about?",""],
+  ["Which of your five senses is strongest?",""],
+  ["Have you ever been solitary without feeling lonely?",""],
+  ["What has become clearer to you as you have aged?",""]],
+ "Stories":[
+  ["How did you come to believe that?","Instead of “What do you think about X?”"],
+  ["Tell me about the person who shaped your values most.","Instead of “What are your values?”"],
+  ["How do you hope to spend the years ahead?","Intentions reveal where someone has been and wants to go."],
+  ["Where were you sitting when they told you? What did you say?","Make them authors, not witnesses."],
+  ["Looking back now, what did that experience turn out to mean?","How they experience now what they experienced then."],
+  ["Why is that a problem for you?","Asked in a Chicago programme for gang members: which past event set off that reaction?"]],
+ "Roots":[
+  ["In your family, the one thing you must never do is…?",""],
+  ["In your family, the one thing you must do above all else is…?",""],
+  ["The most important thing in life is…?","Will Storr: completions reveal someone's models."],
+  ["I'm only safe when…?",""],
+  ["Where's home, the place you spiritually never leave?",""],
+  ["How do your ancestors show up in your life?",""]]
+};
+var cats=Object.keys(DECK),cur=cats[0],last=-1,tabs=document.getElementById('deckTabs');
+cats.forEach(function(c){var b=document.createElement('button');b.type='button';b.textContent=c;b.setAttribute('aria-pressed',c===cur);b.onclick=function(){cur=c;[].forEach.call(tabs.children,function(x){x.setAttribute('aria-pressed',x===b)});last=-1;draw()};tabs.appendChild(b)});
+function draw(){var L=DECK[cur],i;do{i=Math.floor(Math.random()*L.length)}while(L.length>1&&i===last);last=i;document.getElementById('dq').textContent=L[i][0];var w=document.getElementById('dw');w.textContent=L[i][1];w.hidden=!L[i][1];document.getElementById('dmeta').textContent=cur+' · '+L.length+' questions';}
+document.getElementById('dnext').onclick=draw;draw();
+
+/* quiz */
+var Q=[
+ ["You've just met someone at a work event.",["So, what do you do?","Where did you grow up?"],1,"“What do you do?” and “Where did you go to college?” evaluate: they signal you're about to judge. Hometown questions are easy to answer and find common ground."],
+ ["A friend mentions their mother.",["Were you close?","How is your mother?"],1,"A closed question forces the close/distant frame. The open one lets them choose how deep to go."],
+ ["A colleague tells you about trouble with her teenage son.",["I know exactly. My Steven is the same, last week he…","That sounds exhausting. What's it like at home right now?"],1,"Matching their story with yours is topping: it moves the spotlight back to you. Sit with their experience first."],
+ ["Your oldest friend is severely depressed.",["You should take that trip you always loved, it'd give you energy.","I'm not going anywhere. No need to reply, I'll keep writing."],1,"Advice tells a depressed person you don't get it; what's missing is energy and desire, not ideas. Presence and small no-reply touches help."],
+ ["Someone says: “My mother can be a real piece of work.”",["Mine too! Let me tell you…","So you were pretty angry with her?"],1,"Looping checks what you heard. They may answer: “Not angry, diminished. There's a difference.”"],
+ ["In a tense meeting, a younger colleague says she felt excluded from a decision.",["Here's how it looked from my side and why we decided fast.","I want to understand. What am I missing?"],1,"Yanking it back to your frame reads as disrespect. Stay in their frame and step into their ken first."],
+ ["A friend is deciding whether to take a big job.",["Take it. Here's what I'd do.","What would you like about it? What would you not?"],1,"Be a midwife, like the Quaker clearness committee: ask, and let them hear themselves decide."],
+ ["You want to understand someone's political view.",["What do you think about immigration?","How did you come to see immigration the way you do?"],1,"“How did you come to believe X?” invites a story, and stories show the person behind the opinion."],
+ ["A stranger sits next to you on a train.",["Put your headphones in; they probably want quiet.","Ask where they're coming from, then about their life."],1,"Epley: we underestimate how much others want to talk and how fast they'll go deep. Commuters who talked enjoyed the ride more, introverts included."],
+ ["Someone with cancer is coming to dinner.",["Tell them how sorry you are and ask about treatment.","Give them a real compliment and plan something fun."],1,"Kate Bowler: the best people “just want to delight you, not try to fix you”, with compliments that don't feel like a eulogy."]
+];
+var qi=0,score=0,done=0,answered=false,order=Q.map(function(_,i){return i}).sort(function(){return Math.random()-.5});
+function show(){answered=false;var q=Q[order[qi]];document.getElementById('qs').textContent=q[0];var o=document.getElementById('qo');o.innerHTML='';var idx=[0,1];if(Math.random()<.5)idx.reverse();idx.forEach(function(k){var b=document.createElement('button');b.type='button';b.textContent=q[1][k];b.onclick=function(){if(answered)return;answered=true;done++;var ok=k===q[2];if(ok)score++;b.className=ok?'good':'bad';if(!ok)[].forEach.call(o.children,function(x){if(x!==b)x.className='good'});document.getElementById('qf').innerHTML='<b>'+(ok?'Illuminator.':'Diminisher move.')+'</b> '+q[3];document.getElementById('qscore').textContent=score+' of '+done+' · question '+(qi+1)+' of '+Q.length};o.appendChild(b)});document.getElementById('qf').textContent='Choose an answer.';}
+document.getElementById('qnext').onclick=function(){qi=(qi+1)%Q.length;if(qi===0){score=0;done=0;document.getElementById('qscore').textContent='';}show()};
+show();
+})();
+</script>
+</body>
+</html>
