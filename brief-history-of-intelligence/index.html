@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>A Brief History of Intelligence by Max Bennett – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Spectral+SC:wght@500&display=swap">
+<style>
+/* The cover: a white page, a grey engraved brain seen from above, and around it a confetti
+   of tiny dots in red, amber, green, blue and violet that thins out towards the edges, as if
+   the brain were dissolving into data. The title is set in tall condensed black capitals,
+   the subtitle and author in widely spaced serif small caps. The page keeps the white field,
+   the condensed capitals and the spaced small caps, and redraws the dotted brain on a canvas.
+   The five dot colours became the five breakthroughs, and every chart and card uses the same
+   five colours so you always know which chapter of the story you are in. */
+:root{
+  --bg:#ffffff; --ink:#18181b; --muted:#5d5d66; --line:#e7e6ea; --soft:#f6f5f8; --card:#ffffff;
+  --b1:#d8412f; --b2:#e09a12; --b3:#21935c; --b4:#2b67d1; --b5:#8447c8;
+  --b1l:#fbe8e5; --b2l:#fcf1d9; --b3l:#e1f3ea; --b4l:#e3ecfb; --b5l:#efe6fa;
+  --cond:"Oswald","Arial Narrow",sans-serif; --serif:"Spectral",Georgia,serif; --sc:"Spectral SC",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111114; --ink:#efeef3; --muted:#a7a6b1; --line:#2a2a31; --soft:#1a1a1f; --card:#16161b;
+  --b1:#ff7a66; --b2:#f6bd4f; --b3:#5fd39b; --b4:#7aa6ff; --b5:#b48af0;
+  --b1l:#3a1d19; --b2l:#3a2c12; --b3l:#14301f; --b4l:#18243d; --b5l:#2a1d3d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111114; --ink:#efeef3; --muted:#a7a6b1; --line:#2a2a31; --soft:#1a1a1f; --card:#16161b;
+  --b1:#ff7a66; --b2:#f6bd4f; --b3:#5fd39b; --b4:#7aa6ff; --b5:#b48af0;
+  --b1l:#3a1d19; --b2l:#3a2c12; --b3l:#14301f; --b4l:#18243d; --b5l:#2a1d3d; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 19.5px/1.6 var(--serif)}
+a{color:var(--b4)}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:500 15px var(--sc);letter-spacing:.12em}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:1px 14px 3px;font:500 14px var(--sc);letter-spacing:.1em;cursor:pointer}
+.hero{position:relative;background:#fff;color:#18181b;border:1px solid var(--line);border-radius:6px;overflow:hidden;text-align:center;padding:clamp(18px,4vw,30px) 12px clamp(18px,4vw,28px)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero>*:not(canvas){position:relative}
+.hero .sub{font:500 clamp(.8rem,2.9vw,1.15rem)/1.5 var(--sc);letter-spacing:.2em;max-width:26em;margin:0 auto}
+.hero h1{font:500 clamp(2.3rem,10.5vw,4.9rem)/1.02 var(--cond);letter-spacing:.07em;text-transform:uppercase;margin:clamp(70px,17vw,140px) 0 clamp(70px,17vw,140px);text-shadow:0 0 12px #fff,0 0 4px #fff}
+.hero .au{font:500 clamp(1rem,3.6vw,1.45rem) var(--sc);letter-spacing:.3em}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 8px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.intro p{margin:0}
+.facts{font:500 14.5px/1.6 var(--sc);letter-spacing:.06em;color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:500 clamp(1.6rem,5.4vw,2.25rem)/1.15 var(--cond);letter-spacing:.02em;margin:0 0 12px}
+h3{font:600 1.08rem/1.3 var(--serif);margin:22px 0 6px}
+.kick{font:500 14px var(--sc);letter-spacing:.18em;color:var(--muted);margin:0 0 4px}
+.kick i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:1px}
+.quote{font:italic 400 1.35rem/1.45 var(--serif);margin:24px 0;padding-left:18px;border-left:3px solid var(--ink)}
+.quote small{display:block;font:500 13.5px var(--sc);letter-spacing:.1em;font-style:normal;color:var(--muted);margin-top:6px}
+.story{background:var(--soft);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:18px}
+.story b{font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:17.5px}
+.card h3{margin-top:0}
+.c1{border-top:4px solid var(--b1)}.c2{border-top:4px solid var(--b2)}.c3{border-top:4px solid var(--b3)}.c4{border-top:4px solid var(--b4)}.c5{border-top:4px solid var(--b5)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+@media (max-width:700px){.grid4{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+@media (max-width:420px){.grid4{grid-template-columns:1fr}}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:16.5px;line-height:1.4}
+.stat b{display:block;font:500 2rem/1.05 var(--cond);margin-bottom:4px}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 8px;margin-top:16px;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:520px;height:auto}
+.fig text{font-family:"Oswald","Arial Narrow",sans-serif;fill:var(--ink);letter-spacing:.02em}
+.fig .mut{fill:var(--muted)}
+.fig .w{fill:#fff}
+.fig figcaption{font:400 15.5px/1.45 var(--serif);color:var(--muted);margin:8px 2px 4px}
+.tbl{display:grid;grid-template-columns:1fr 1fr;margin-top:16px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tbl.t3{grid-template-columns:1fr 1fr 1fr}
+.tbl div{padding:9px 14px;font-size:16.5px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);background:var(--card)}
+.tbl .h{font:500 14px var(--sc);letter-spacing:.08em;background:var(--soft)}
+@media (max-width:560px){.tbl,.tbl.t3{grid-template-columns:1fr}}
+.part{text-align:center;padding:54px 0 8px;border:0}
+.part .n{font:500 14px var(--sc);letter-spacing:.24em}
+.part h2{font-size:clamp(2rem,7.5vw,3rem);text-transform:uppercase;letter-spacing:.06em;margin:6px 0}
+.part p{color:var(--muted);margin:0 auto;max-width:32em}
+.part .dot{display:block;width:16px;height:16px;border-radius:50%;margin:0 auto 10px}
+.list{counter-reset:r;list-style:none;padding:0;margin:14px 0 0}
+.list li{counter-increment:r;position:relative;padding:9px 0 9px 44px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list li::before{content:counter(r);position:absolute;left:0;top:6px;font:500 1.6rem/1 var(--cond);color:var(--muted)}
+.tool{border:2px solid var(--ink);border-radius:14px;padding:18px;margin-top:20px;background:var(--card)}
+.tool h3{margin-top:0;font:500 1.4rem var(--cond);letter-spacing:.03em}
+.qcard{font-size:19px;min-height:3.2em;margin:10px 0 12px}
+.opts{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+@media (max-width:640px){.opts{grid-template-columns:1fr 1fr}}
+.opts button{border:2px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:8px 6px;font:500 15px/1.25 var(--cond);letter-spacing:.03em;cursor:pointer;text-align:center}
+.opts button i{display:block;width:10px;height:10px;border-radius:50%;margin:0 auto 4px}
+.opts button.ok{border-color:var(--b3);background:var(--b3l)}
+.opts button.no{border-color:var(--b1);background:var(--b1l)}
+.opts button:disabled{cursor:default}
+.fb{font-size:17px;margin-top:12px;min-height:2.6em}
+.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font:500 15px var(--sc);letter-spacing:.08em;color:var(--muted)}
+.qnav button{border:1.5px solid var(--ink);background:none;color:var(--ink);border-radius:999px;padding:3px 16px 5px;font:500 14px var(--sc);letter-spacing:.1em;cursor:pointer}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);font:500 1.4rem var(--cond);color:var(--muted)}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:16.5px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:500 14px var(--sc);letter-spacing:.06em;text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:2px 12px 4px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+<header class="hero">
+  <canvas id="dots" aria-hidden="true"></canvas>
+  <div class="sub">Evolution, AI, and the five breakthroughs that made our brains</div>
+  <h1>A Brief History<br>of Intelligence</h1>
+  <div class="au">Max Bennett</div>
+</header>
+
+<div class="intro">
+  <img src="cover.jpg" alt="Cover of A Brief History of Intelligence by Max Bennett">
+  <div>
+    <p>Why can AI beat any human at chess but not load a dishwasher as well as a six-year-old? Max Bennett, an AI entrepreneur rather than a neuroscientist, wrote the book he wanted to read. He traces the human brain back through 600 million years of ancestors and finds that its whole story fits into <b>five breakthroughs</b>. Each one solved a survival problem, each was built on the one before, and each has a twin, sometimes found and sometimes still missing, in artificial intelligence.</p>
+    <p class="facts">2023 · 5 breakthroughs · 22 chapters · ~108,000 words · art by Rebecca Gelernter</p>
+  </div>
+</div>
+
+<section>
+  <p class="kick">The map of the book</p>
+  <h2>Four billion years, five breakthroughs</h2>
+  <p>Bennett throws out the old "triune brain" (a lizard brain under an emotional brain under a thinking brain). Reptiles have their own limbic system, and evolution doesn't stack layers without changing what's beneath. In its place he follows a single lineage, ours, and asks what each new brain could do that the previous one couldn't.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 660 270">
+      <line x1="30" y1="200" x2="640" y2="200" stroke="var(--line)" stroke-width="3"/>
+      <g font-size="11.5" class="mut" text-anchor="middle"><text x="40" y="222">600</text><text x="140" y="222">500</text><text x="330" y="222">~100–200</text><text x="500" y="222">10–30</text><text x="620" y="222">0.1</text><text x="330" y="240">million years ago (not to scale)</text></g>
+      <g>
+        <circle cx="40" cy="200" r="11" fill="var(--b1)"/><circle cx="140" cy="200" r="11" fill="var(--b2)"/><circle cx="330" cy="200" r="11" fill="var(--b3)"/><circle cx="500" cy="200" r="11" fill="var(--b4)"/><circle cx="620" cy="200" r="11" fill="var(--b5)"/>
+      </g>
+      <g font-size="15" font-weight="600">
+        <text x="40" y="34" style="fill:var(--b1)">1 STEERING</text><text x="40" y="52" font-size="12" font-weight="400">first bilaterians</text><text x="40" y="68" font-size="12" font-weight="400" class="mut">good or bad? turn</text>
+        <text x="140" y="96" style="fill:var(--b2)">2 REINFORCING</text><text x="140" y="114" font-size="12" font-weight="400">first vertebrates</text><text x="140" y="130" font-size="12" font-weight="400" class="mut">learn by doing</text>
+        <text x="300" y="34" style="fill:var(--b3)">3 SIMULATING</text><text x="300" y="52" font-size="12" font-weight="400">first mammals</text><text x="300" y="68" font-size="12" font-weight="400" class="mut">learn by imagining</text>
+        <text x="455" y="96" style="fill:var(--b4)">4 MENTALIZING</text><text x="455" y="114" font-size="12" font-weight="400">first primates</text><text x="455" y="130" font-size="12" font-weight="400" class="mut">model your own mind</text>
+        <text x="640" y="160" text-anchor="end" style="fill:var(--b5)">5 SPEAKING</text><text x="640" y="178" text-anchor="end" font-size="12" font-weight="400">first humans</text>
+      </g>
+      <g stroke-width="1.5" stroke-dasharray="3 4"><line x1="40" y1="74" x2="40" y2="188" stroke="var(--b1)"/><line x1="140" y1="136" x2="140" y2="188" stroke="var(--b2)"/><line x1="330" y1="74" x2="330" y2="188" stroke="var(--b3)"/><line x1="500" y1="136" x2="500" y2="188" stroke="var(--b4)"/></g>
+    </svg>
+    <figcaption>The five breakthroughs, each named after what it let our ancestors do. Brains appeared only in the last 15 percent of life's history. The dot colours here are used for each breakthrough throughout the page.</figcaption>
+  </figure>
+  <div class="story"><b>A note against ladders.</b> This is the story of <i>our</i> lineage, not a ranking of animals. Every species alive today has survived the same 3.5 billion years and is, in evolution's only sense, "tied for first place". An octopus outdoes us at multitasking, a pigeon processes images faster, a fish would beat you through a maze of rocks. Bennett asks for a human-centred story without "human chauvinism".</div>
+  <p>Before any brain existed, life had long been fighting entropy by copying itself. Photosynthesising cyanobacteria poisoned the planet with oxygen, and respiring cells turned that pollution into fuel. Respiration made <b>hunting</b> worthwhile, and from then on life was in an arms race. Fungi chose to wait for things to die, while animals chose to kill. Killing needed fast, precise movement, which is why animals have neurons and fungi don't. Neurons may first have served the "inglorious task of swallowing", in coral-like polyps.</p>
+  <div class="grid3">
+    <div class="card"><h3>All-or-nothing spikes</h3>Edgar Adrian showed in the 1920s that neurons click like Morse code rather than flowing like a current.</div>
+    <div class="card"><h3>Rate coding</h3>A heavier weight on a frog's muscle produced more spikes per second, not bigger spikes.</div>
+    <div class="card"><h3>Adaptation</h3>A white page is a million times brighter in sunlight than by moonlight, yet a neuron tops out near 500 spikes per second. So neurons keep resetting their thresholds and signal <i>change</i> rather than absolute levels.</div>
+  </div>
+  <p class="note" style="font-size:16px;color:var(--muted);margin-top:12px">Add excitatory and inhibitory neurons ("do this, not that") and you have the full kit, found unchanged from jellyfish to us. What separates you from a worm is how the neurons are wired, not what they are.</p>
+</section>
+
+<div class="part"><span class="dot" style="background:var(--b1)"></span><div class="n" style="color:var(--b1)">Breakthrough #1 · 600 million years ago</div><h2>Steering</h2><p>A worm the size of a grain of rice, the first animal with a brain.</p></div>
+
+<section>
+  <p class="kick"><i style="background:var(--b1)"></i>Chapter 2 · The birth of good and bad</p>
+  <h2>If it smells better, keep going. If worse, turn.</h2>
+  <p>Almost every animal has the same body plan: a front with a mouth, brain and senses, and a back where waste leaves. Radial animals like corals have a single "mouth-butt" and no front, which suits waiting. Moving towards food is much simpler with a bilateral body: one system to go forward and one to turn. Cars, boats and planes are bilateral for the same reason. Only bilateral animals have brains, because the first brain existed to <b>steer</b>.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230">
+      <defs><radialGradient id="sm" cx="80%" cy="50%" r="60%"><stop offset="0" stop-color="var(--b2)" stop-opacity=".55"/><stop offset="1" stop-color="var(--b2)" stop-opacity="0"/></radialGradient></defs>
+      <rect x="10" y="10" width="620" height="210" rx="8" fill="url(#sm)"/>
+      <circle cx="520" cy="115" r="14" fill="var(--b2)"/><text x="520" y="150" text-anchor="middle" font-size="13">food</text>
+      <path d="M60 180 C120 170 130 120 170 130 S220 190 250 150 S300 80 330 110 S380 160 410 130 S450 90 470 110 S500 130 505 118" fill="none" stroke="var(--b1)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="60" cy="180" r="6" fill="var(--b1)"/><text x="40" y="206" font-size="13">start</text>
+      <g font-size="13"><text x="30" y="40" font-weight="600" style="fill:var(--b1)">Rule 1: smell increasing → go forward</text><text x="30" y="62" font-weight="600" style="fill:var(--b1)">Rule 2: smell decreasing → turn</text><text x="30" y="84" class="mut">no eyes, no map, no idea where the food is</text></g>
+    </svg>
+    <figcaption>After Bennett's nematode figure. <i>C. elegans</i>, with 302 neurons, always finds the food, faster than chance, by circling in on it.</figcaption>
+  </figure>
+  <p>The same two rules move the worm away from light (predators), from heat and cold, and from sharp surfaces. The roboticist <b>Rodney Brooks</b> argued that AI should begin with such simple, whole creatures rather than trying to copy a 747. He compared that to 1890s flight pioneers copying a jumbo jet's pitched seats and "plastics". His company iRobot shipped the Roomba in 2002, and over 40 million have been sold. It has almost no sensors and no map, bumps and turns, and steers up the strongest signal to its base. The market, like evolution, rewards what is cheap, works, and is simple enough to be found.</p>
+  <div class="grid2">
+    <div class="card c1"><h3>Valence</h3>Steering forced the world into two classes: approach or avoid. The worm's sensory neurons don't measure the world, they <i>vote</i>: some for "keep going", some for "turn away". Temperature uses a Too hot! neuron and a Too cold! neuron with thresholds, like your hypothalamus.</div>
+    <div class="card c1"><h3>Trade-offs and hunger</h3>Put food behind a copper barrier and whether worms cross depends on the strength of each smell. So all the votes must meet in one place, which was the first brain. Hunger shifts the weighting: a well-fed worm avoids CO₂ (it might mean a predator), a hungry one approaches it (it might mean food). Your favourite dinner goes from heavenly to nauseating within minutes.</div>
+  </div>
+</section>
+
+<section>
+  <p class="kick"><i style="background:var(--b1)"></i>Chapter 3 · The origin of emotion</p>
+  <h2>Moods began as a trick for steering in the dark</h2>
+  <p>Emotion words differ between languages (German <i>Sehnsucht</i> has no English equivalent), and most neuroscientists now think emotion categories are largely learned. But two dimensions are universal, from newborns to worms: <b>valence</b> (good or bad) and <b>arousal</b> (high or low). Together they are called <b>affect</b>.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 600 330">
+      <line x1="300" y1="20" x2="300" y2="300" stroke="var(--line)" stroke-width="2"/><line x1="40" y1="160" x2="560" y2="160" stroke="var(--line)" stroke-width="2"/>
+      <text x="300" y="14" text-anchor="middle" font-size="12" class="mut">HIGH AROUSAL</text><text x="300" y="320" text-anchor="middle" font-size="12" class="mut">LOW AROUSAL</text>
+      <text x="40" y="152" font-size="12" class="mut">BAD</text><text x="560" y="152" text-anchor="end" font-size="12" class="mut">GOOD</text>
+      <rect x="60" y="40" width="200" height="90" rx="10" fill="var(--b1l)"/><text x="160" y="70" text-anchor="middle" font-size="16" font-weight="600" style="fill:var(--b1)">ESCAPING</text><text x="160" y="92" text-anchor="middle" font-size="12.5">fast swimming, few turns</text><text x="160" y="112" text-anchor="middle" font-size="12.5" class="mut">tense, upset, fury</text>
+      <rect x="340" y="40" width="200" height="90" rx="10" fill="var(--b2l)"/><text x="440" y="70" text-anchor="middle" font-size="16" font-weight="600" style="fill:var(--b2)">EXPLOITING</text><text x="440" y="92" text-anchor="middle" font-size="12.5">slow, many turns: search here</text><text x="440" y="112" text-anchor="middle" font-size="12.5" class="mut">excited, elated · dopamine</text>
+      <rect x="60" y="190" width="200" height="90" rx="10" fill="var(--soft)"/><text x="160" y="220" text-anchor="middle" font-size="16" font-weight="600">GIVING UP</text><text x="160" y="242" text-anchor="middle" font-size="12.5">immobile when stress can't be escaped</text><text x="160" y="262" text-anchor="middle" font-size="12.5" class="mut">depressed, bored</text>
+      <rect x="340" y="190" width="200" height="90" rx="10" fill="var(--b3l)"/><text x="440" y="220" text-anchor="middle" font-size="16" font-weight="600" style="fill:var(--b3)">SATIATED</text><text x="440" y="242" text-anchor="middle" font-size="12.5">still, unresponsive after eating</text><text x="440" y="262" text-anchor="middle" font-size="12.5" class="mut">calm, content · serotonin</text>
+    </svg>
+    <figcaption>Nematode behavioural states mapped on the human affect grid (after Bennett's figures 3.1 and 3.2).</figcaption>
+  </figure>
+  <p>The key property is <b>persistence</b>. A worm keeps fleeing for minutes after one sniff of a predator, just as one unfriendly encounter can sour your mood for hours. That makes sense when smells are carried by water currents: a passing whiff of food means food is probably nearby, so keep searching even after the smell fades. The Roomba's "Dirt Detect" works the same way, circling locally for a while after finding dirt.</p>
+  <div class="grid3">
+    <div class="card c2"><h3>Dopamine: "something good is nearby"</h3>Released when food is detected <i>around</i> the worm, it drives pursuit. Kent Berridge showed it is <b>wanting, not liking</b>. Rats given extra dopamine overeat without enjoying it more, and rats without dopamine starve next to food yet still savour it when fed. Robert Heath's 1960s patients pressed a self-stimulation button hundreds of times an hour, chasing a climax that never came.</div>
+    <div class="card c3"><h3>Serotonin: "something good is happening"</h3>Released when food is <i>in</i> the worm, it brings satiety and dampens both liking and disliking, the "things are okay now" chemical. High-serotonin rats eat less and wait more patiently.</div>
+    <div class="card c1"><h3>Adrenaline and opioids</h3>Stress chemicals trigger escape and pause digestion, growth, reproduction and immunity, like a government borrowing to fund a war. Afterwards opioids bring relief and recovery, pleasure and appetite. A worm starved for 12 hours then eats 30 times its normal amount: stress bingeing has existed for 600 million years.</div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 240">
+      <line x1="50" y1="200" x2="620" y2="200" stroke="var(--line)" stroke-width="2"/><line x1="50" y1="30" x2="50" y2="200" stroke="var(--line)" stroke-width="2"/>
+      <rect x="90" y="30" width="140" height="170" fill="var(--b1l)"/><text x="160" y="46" text-anchor="middle" font-size="12" style="fill:var(--b1)">stressor present</text>
+      <path d="M50 190 L90 190 L105 50 L230 60 L250 185 L620 190" fill="none" stroke="var(--b1)" stroke-width="3"/><text x="140" y="74" font-size="13" font-weight="600" style="fill:var(--b1)">adrenaline: escape</text>
+      <path d="M50 195 L100 195 C160 160 220 110 260 90 C320 70 360 130 420 175 L620 192" fill="none" stroke="var(--b3)" stroke-width="3"/><text x="270" y="82" font-size="13" font-weight="600" style="fill:var(--b3)">opioids: relief, recover, binge</text>
+      <path d="M420 150 C470 140 520 140 600 140" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="6 5"/><text x="600" y="130" text-anchor="end" font-size="12.5" class="mut">if inescapable: chronic stress, numbness</text>
+      <text x="335" y="222" text-anchor="middle" font-size="12" class="mut">time →</text>
+    </svg>
+    <figcaption>The ancient stress cycle (after figure 3.7). If the stressor can't be escaped, a worm gives up after about two minutes. That is an energy-saving failsafe and, Bennett argues, the seed of depression's anhedonia and learned helplessness, seen even in cockroaches and fruit flies.</figcaption>
+  </figure>
+  <p>That is why brains can kill us. About 800,000 people die by suicide each year, over 300 million live with depression, and the CDC's "deaths of despair" have doubled in twenty years. Drugs hack the old circuits: opioids meant for the moments after a near-death escape can be had from a pill. Because neurons adapt, each high leaves chronic stress behind when it wears off, and that demands more of the drug.</p>
+</section>
+
+<section>
+  <p class="kick"><i style="background:var(--b1)"></i>Chapter 4 · Associating, predicting, and the dawn of learning</p>
+  <h2>Pavlov's "source of error"</h2>
+  <p>Ivan Pavlov won his 1904 Nobel Prize for work on digestion, and saw dogs salivating at the sight of food as a nuisance that spoiled his measurements. His lab then found that any buzzer, metronome or light paired with food could trigger it. Such <b>conditional reflexes</b> are involuntary, and so ancient that a rat's spinal cord alone can learn them. Worms learn them too. Starve nematodes in salt water and they afterwards steer <i>away</i> from salt, which they normally like. Corals and anemones never learn that a light predicts a shock: when you only wait for food, there's nothing to gain from learning.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230">
+      <line x1="50" y1="190" x2="620" y2="190" stroke="var(--line)" stroke-width="2"/><line x1="50" y1="30" x2="50" y2="190" stroke="var(--line)" stroke-width="2"/>
+      <text x="20" y="110" font-size="12" class="mut" transform="rotate(-90 20 110)">strength of association</text>
+      <polyline points="50,185 90,140 130,100 170,75 210,62" fill="none" stroke="var(--b1)" stroke-width="3"/>
+      <polyline points="210,62 250,110 290,150 330,172" fill="none" stroke="var(--b1)" stroke-width="3" stroke-dasharray="2 0"/>
+      <path d="M330 172 L360 172" stroke="var(--muted)" stroke-dasharray="4 4" stroke-width="2"/>
+      <polyline points="360,120 380,140 400,165" fill="none" stroke="var(--b1)" stroke-width="3"/>
+      <path d="M400 165 L430 165" stroke="var(--muted)" stroke-dasharray="4 4" stroke-width="2"/>
+      <polyline points="430,165 460,90 490,64 540,58" fill="none" stroke="var(--b1)" stroke-width="3"/>
+      <g font-size="12.5" text-anchor="middle"><text x="130" y="210">acquisition</text><text x="270" y="210">extinction</text><text x="380" y="106" style="fill:var(--b1)">spontaneous</text><text x="380" y="210">recovery</text><text x="500" y="210">reacquisition (faster)</text></g>
+      <text x="345" y="186" text-anchor="middle" font-size="10.5" class="mut">days pass</text>
+    </svg>
+    <figcaption>Continual learning in the first brains (after figure 4.2). Associations are suppressed rather than erased, so they return after a pause and are relearned faster. A single bad experience doesn't wipe out a lifetime of good ones.</figcaption>
+  </figure>
+  <p>Which of the many cues before an event deserves the credit? Early bilaterians solved this <b>credit assignment problem</b> with four crude rules of thumb, still present even in a rat's isolated spinal cord:</p>
+  <div class="grid4">
+    <div class="card c1"><h3>Eligibility trace</h3>Credit the cue from the last second or so.</div>
+    <div class="card c1"><h3>Overshadowing</h3>Credit the strongest cue.</div>
+    <div class="card c1"><h3>Latent inhibition</h3>Credit the cue you haven't seen before ("what was different this time?").</div>
+    <div class="card c1"><h3>Blocking</h3>Once a cue works, ignore new overlapping ones.</div>
+  </div>
+  <p>Plato thought memory was a wax tablet and Descartes thought it was a fold, like folded paper. In fact learning means strengthening or weakening synapses. <b>Hebbian learning</b>: "neurons that fire together wire together", with timing detectors and dopamine or serotonin deciding when a change is allowed. The machinery is the same in worms and humans and absent in corals. Every later feat of learning reused it.</p>
+</section>
+
+<div class="part"><span class="dot" style="background:var(--b2)"></span><div class="n" style="color:var(--b2)">Breakthrough #2 · 500 million years ago</div><h2>Reinforcing</h2><p>A fish a few inches long, in a Cambrian sea ruled by armoured arthropods.</p></div>
+
+<section>
+  <p class="kick"><i style="background:var(--b2)"></i>Chapters 5–6 · The Cambrian explosion · Temporal difference learning</p>
+  <h2>Learning by doing, and the problem of the last move</h2>
+  <p>Steering set off a predatory arms race and the Cambrian explosion. Our ancestors became the first vertebrates, with a brain template every fish and human still shares: <b>cortex, basal ganglia, thalamus, hypothalamus, midbrain, hindbrain</b>. "Learning how the fish brain works will get you half of the way there." Edward Thorndike wasn't allowed to experiment on children at Harvard, so he timed cats, chickens and dogs escaping puzzle boxes. Then he tested fish swimming through hidden gaps in glass walls. All of them learned arbitrary sequences of actions by <b>trial and error</b>, his law of effect. Nematodes can't do this, and fish can remember such tricks for a year.</p>
+  <p>Teaching machines this way failed at first. Marvin Minsky, who coined the term "artificial intelligence", built a 40-connection learning machine called SNARC in 1951. It managed simple mazes and nothing more. In checkers, the win arrives only after hundreds of moves. Reward the last moves and you credit the wrong ones; reward every move and you would need more games than there are atoms. This is the <b>temporal credit assignment problem</b>.</p>
+  <div class="story"><b>Sutton's trick.</b> In 1984 Richard Sutton, who had studied psychology, proposed rewarding a system when it <i>thinks</i> it is winning. A <b>critic</b> predicts future reward at every moment, and an <b>actor</b> learns from the <i>change</i> in that prediction, the temporal difference. It sounds circular, since each depends on the other, but the two bootstrap each other. Gerald Tesauro's TD-Gammon learned backgammon purely by playing itself and by 1994 rivalled the world's best. Its predecessor, Neurogammon, had copied experts and stalled at intermediate level.</div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 260">
+      <g font-size="13" font-weight="600"><text x="20" y="40">Unexpected reward</text><text x="20" y="120">Cue, then expected reward</text><text x="20" y="200">Cue, reward omitted</text></g>
+      <g stroke="var(--line)"><line x1="230" y1="50" x2="620" y2="50"/><line x1="230" y1="130" x2="620" y2="130"/><line x1="230" y1="210" x2="620" y2="210"/></g>
+      <g fill="var(--b2)">
+        <rect x="470" y="20" width="4" height="30"/><rect x="478" y="16" width="4" height="34"/><rect x="486" y="22" width="4" height="28"/><rect x="494" y="26" width="4" height="24"/>
+        <rect x="300" y="100" width="4" height="30"/><rect x="308" y="96" width="4" height="34"/><rect x="316" y="102" width="4" height="28"/><rect x="324" y="106" width="4" height="24"/>
+        <rect x="300" y="180" width="4" height="30"/><rect x="308" y="176" width="4" height="34"/><rect x="316" y="182" width="4" height="28"/>
+      </g>
+      <g fill="var(--muted)"><rect x="250" y="42" width="3" height="8"/><rect x="360" y="42" width="3" height="8"/><rect x="420" y="42" width="3" height="8"/><rect x="560" y="42" width="3" height="8"/><rect x="250" y="122" width="3" height="8"/><rect x="380" y="122" width="3" height="8"/><rect x="470" y="122" width="3" height="8"/><rect x="540" y="122" width="3" height="8"/><rect x="250" y="202" width="3" height="8"/><rect x="380" y="202" width="3" height="8"/><rect x="560" y="202" width="3" height="8"/></g>
+      <rect x="440" y="196" width="80" height="16" fill="var(--b1l)"/><text x="480" y="232" text-anchor="middle" font-size="12" style="fill:var(--b1)">dip: disappointment</text>
+      <g font-size="11.5" class="mut" text-anchor="middle"><text x="310" y="150">cue</text><text x="480" y="150">reward (no change)</text><text x="480" y="70">reward</text><text x="310" y="230">cue</text></g>
+    </svg>
+    <figcaption>Wolfram Schultz's monkey recordings, schematic. Dopamine neurons fire for surprise rewards, shift to the cue once it predicts the reward, and dip when a predicted reward fails to come. In 1997 Dayan, Montague and Schultz showed this is exactly Sutton's temporal difference signal.</figcaption>
+  </figure>
+  <p>So dopamine became a signal of <i>reinforcement</i> rather than reward: from "good things nearby" to something like "a 35 percent chance of something awesome in exactly ten seconds". It even favours sooner rewards (food in 4 seconds beats 16) and likelier ones (75 percent beats 25). From this came feelings that hadn't existed before: <b>disappointment</b> (a predicted reward that doesn't arrive) and <b>relief</b> (a predicted pain that doesn't). A surprise day off school reinforces as much as a surprise dessert. Both need a precise inner clock, and vertebrates have one. A fish warned by a light that a shock comes in five seconds idles until just before second five, then dashes. Slugs can't link events more than two seconds apart. Even bees and crabs can't learn from omissions or time intervals.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 250">
+      <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>
+      <rect x="20" y="30" width="170" height="70" rx="10" fill="var(--b4l)"/><text x="105" y="60" text-anchor="middle" font-size="15" font-weight="600">CORTEX</text><text x="105" y="80" text-anchor="middle" font-size="12">patterns, places</text>
+      <rect x="235" y="30" width="190" height="70" rx="10" fill="var(--b2l)"/><text x="330" y="54" text-anchor="middle" font-size="15" font-weight="600" style="fill:var(--b2)">BASAL GANGLIA</text><text x="330" y="74" text-anchor="middle" font-size="12">actor: gates and ungates actions</text><text x="330" y="90" text-anchor="middle" font-size="12">critic: predicts reward</text>
+      <rect x="470" y="30" width="150" height="70" rx="10" fill="var(--soft)"/><text x="545" y="60" text-anchor="middle" font-size="15" font-weight="600">BRAINSTEM</text><text x="545" y="80" text-anchor="middle" font-size="12">movement</text>
+      <rect x="235" y="160" width="190" height="70" rx="10" fill="var(--b1l)"/><text x="330" y="188" text-anchor="middle" font-size="15" font-weight="600" style="fill:var(--b1)">HYPOTHALAMUS</text><text x="330" y="208" text-anchor="middle" font-size="12">the judge: actual good and bad</text>
+      <path d="M190 65 H230" stroke="var(--muted)" stroke-width="2" marker-end="url(#a2)"/><path d="M425 65 H465" stroke="var(--muted)" stroke-width="2" marker-end="url(#a2)"/>
+      <path d="M330 158 V104" stroke="var(--b2)" stroke-width="3" marker-end="url(#a2)"/><text x="340" y="138" font-size="12.5" style="fill:var(--b2)">dopamine</text>
+    </svg>
+    <figcaption>The first vertebrate brain, simplified (after figure 6.4). In Bennett's words, the basal ganglia is a student always trying to satisfy "its vague but stern hypothalamic judge". In time it learns to judge itself. Its wiring is almost identical in lampreys and humans, and when it gates everything, as in Parkinson's disease, you can't start a movement.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <p class="kick"><i style="background:var(--b2)"></i>Chapters 7–9 · Patterns · Curiosity · The first world model</p>
+  <h2>Remembering the claws in the sand</h2>
+  <p>A Cambrian fish escapes an <i>Anomalocaris</i> hidden in the sand by reflex. Unlike a worm, it will remember that smell and that shape. A smell is a <b>pattern</b> across about fifty types of olfactory neuron (there's no single "pulled pork molecule"), and fifty cells can encode over a hundred trillion patterns. The vertebrate cortex solves two problems: telling apart overlapping patterns (<b>discrimination</b>, by spreading the input across many sparsely connected neurons) and recognising a slightly different version (<b>generalisation</b>, by pattern completion, or auto-association).</p>
+  <div class="grid3">
+    <div class="card c2"><h3>Catastrophic forgetting</h3>In 1989 a neural network taught to add twos forgot how to add ones. AI still sidesteps this by freezing models after training. ChatGPT doesn't learn from its millions of users, yet a fish remembers its escape route a year later.</div>
+    <div class="card c2"><h3>Invariance</h3>Hubel and Wiesel found line detectors in cat visual cortex. Fukushima turned them into convolutional networks, the basis of most computer vision. But a goldfish trained to tap a frog picture recognises the frog from new angles straight away, something such networks need huge amounts of data to manage.</div>
+    <div class="card c2"><h3>Curiosity</h3>TD learning conquered Pong and Space Invaders but not <i>Montezuma's Revenge</i>, where the first reward is rooms away. DeepMind cracked level one in 2018 by making novelty itself rewarding. Fish are curious too, most invertebrates aren't.</div>
+  </div>
+  <p>The flip side of curiosity: surprise releases dopamine even when the expected payoff is negative. Skinner's rats, and fish too, pressed a lever more for <i>random</i> pellets than for reliable ones. A casino's roughly 48 percent odds and the random rewards of a social-media feed exploit this "five-hundred-million-year-old preference for surprise".</p>
+  <div class="story"><b>The first map.</b> Hide food in one of 25 identical containers and a fish learns which one, from any starting point and even when no food remains, using only markings on the tank walls. Ants can't. Move an ant onto the outbound trail and it walks the entire loop again instead of turning round. Vertebrates added semicircular canals (the reason a swivel chair makes you dizzy), head-direction cells, and a <b>medial cortex</b>, later the hippocampus, holding place cells. It was the first time a brain separated <i>me moving</i> from <i>the world moving</i>, and the first internal model of the world.</div>
+</section>
+
+<div class="part"><span class="dot" style="background:var(--b3)"></span><div class="n" style="color:var(--b3)">Breakthrough #3 · roughly 100–200 million years ago</div><h2>Simulating</h2><p>A four-inch, warm-blooded night creature, hiding from dinosaurs.</p></div>
+
+<section>
+  <p class="kick"><i style="background:var(--b3)"></i>Chapters 10–11 · The neural dark ages · The neocortical mystery</p>
+  <h2>A generative model of the world</h2>
+  <p>For a few hundred million years evolution worked on jaws, lungs, armour and fur and left the brain alone: fish and reptile brains are still remarkably alike. Two mass extinctions made our line. After the Late Devonian, lunged fish waded between puddles and became tetrapods. Then warm-blooded therapsids, which could hunt reptiles lying torpid in the cold night, were mostly wiped out in the Permian–Triassic die-off, the deadliest ever, which killed 96 percent of sea life. Only small burrowers survived, shrinking to four inches under the dinosaurs. These first mammals had one asset: from a burrow or a branch, <b>they got the first move</b>. To use it, part of the cortex became the <b>neocortex</b>, which can simulate a path before taking it. On land you can see much further than underwater, and warm blood makes neurons fast, so simulation was worth its cost. Birds, the only other warm-blooded animals, plan too.</p>
+  <div class="grid2">
+    <div class="card c3"><h3>One circuit, everywhere</h3>Vernon Mountcastle saw that the neocortex is the same column repeated about a million times. In 2000, ferrets whose eye input was rerouted to auditory cortex could see. In people born blind, visual cortex processes sound and touch. If the column is general, understand one and you understand the whole.</div>
+    <div class="card c3"><h3>Perception is inference</h3>Illusions show three oddities: we <b>fill in</b> missing lines, see only <b>one at a time</b> (duck <i>or</i> rabbit, one conversation at a cocktail party) and <b>can't unsee</b> a frog once spotted among blobs. Helmholtz concluded that we perceive what the brain infers is there, a simulation checked against the senses.</div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 220">
+      <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--b3)"/></marker></defs>
+      <rect x="40" y="70" width="150" height="70" rx="10" fill="var(--soft)"/><text x="115" y="100" text-anchor="middle" font-size="15" font-weight="600">SENSES</text><text x="115" y="120" text-anchor="middle" font-size="12">a handwritten 7</text>
+      <rect x="450" y="70" width="150" height="70" rx="10" fill="var(--b3l)"/><text x="525" y="100" text-anchor="middle" font-size="15" font-weight="600" style="fill:var(--b3)">INNER MODEL</text><text x="525" y="120" text-anchor="middle" font-size="12">"seven"</text>
+      <path d="M195 85 C280 40 360 40 445 85" fill="none" stroke="var(--b3)" stroke-width="3" marker-end="url(#a3)"/><text x="320" y="40" text-anchor="middle" font-size="13.5" font-weight="600">recognition (awake)</text>
+      <path d="M445 125 C360 170 280 170 195 125" fill="none" stroke="var(--b3)" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#a3)"/><text x="320" y="188" text-anchor="middle" font-size="13.5" font-weight="600">generation (imagining, dreaming)</text>
+    </svg>
+    <figcaption>Hinton and Dayan's 1995 Helmholtz machine learned digits with no labels by switching between recognising and generating, a "wake-sleep algorithm". Today's descendants paint faces that don't exist. Bennett argues the neocortex is a generative model of this kind.</figcaption>
+  </figure>
+  <p>Seeing perception as a "constrained hallucination" explains a lot. People who go blind often hallucinate vividly for months (Charles Bonnet syndrome) because the model drifts without input. Only mammals and birds clearly dream, perhaps to keep generation in balance, and only they hallucinate when deprived of sleep. You can't imagine and perceive at the same moment: your pupils dilate while you imagine. The same neurons fire when you see a face and when you picture one, so scanners can decode imagined images and dreams. And with the neocortex, prediction expanded from reflexes (worms) and rewards (fish) to <b>everything</b>: you notice at once when a step finds no ground.</p>
+</section>
+
+<section>
+  <p class="kick"><i style="background:var(--b3)"></i>Chapters 12–14 · Mice in the imaginarium · Model-based RL · Dishwashing robots</p>
+  <h2>Learning before doing</h2>
+  <div class="grid3">
+    <div class="card c3"><h3>Vicarious trial and error</h3>In the 1930s Edward Tolman saw rats pause at forks and look left and right, but only when the choice was hard. In the 2000s David Redish recorded their hippocampus "playing out" each path during the pause. Fish can't. Facing a glass barrier, a fish bumps into it, and even after swimming through the gap many times it doesn't think to use the gap. A salt-starved rat runs straight to the salty food it hated last time.</div>
+    <div class="card c3"><h3>Regret</h3>In Redish's "restaurant row" a rat that passes up quick banana for its favourite cherry, then hears that cherry means a 45-second wait, looks back towards the banana. Its taste cortex replays banana, and next lap it changes strategy. Monkeys who lose at rock-paper-scissors switch to the move that <i>would</i> have won. Counterfactuals are also how we come to see causes: lightning, then fire.</div>
+    <div class="card c3"><h3>Episodic memory</h3>After his hippocampus was removed in 1953, Henry Molaison was "stuck in 1953". Remembering is re-simulating, which is why it fills in gaps: mistaken eyewitness identification lay behind 77 percent of the wrongful convictions overturned by the Innocence Project. Replaying memories is also how the brain avoids catastrophic forgetting.</div>
+  </div>
+  <div class="tbl t3">
+    <div class="h"></div><div class="h">Model-free (fish, habit)</div><div class="h">Model-based (mammal, goal)</div>
+    <div>How</div><div>Links situations straight to actions</div><div>Simulates actions before choosing</div>
+    <div>Trade-off</div><div>Fast, inflexible</div><div>Slow, flexible</div>
+    <div>Commute</div><div>Turn at each landmark by habit</div><div>Picture the routes and pick the quickest</div>
+    <div>AI example</div><div>Atari players, most self-driving</div><div>AlphaZero</div>
+    <div>Also called</div><div>habit, System 1</div><div>goal-directed, System 2 (Kahneman)</div>
+  </div>
+  <p>The hard part is choosing what to simulate. Chess and Go have more possible games than there are atoms. DeepMind's AlphaZero didn't search them all. It simulated about a thousand games from the moves its trained intuition already liked, then picked the move that won the most imagined games. The real world is harder still: continuous movement, noisy information, competing needs. Mammals' real advantage is flexibility about <i>when</i> and <i>how deeply</i> to simulate.</p>
+  <h3>Where intention lives</h3>
+  <p>After a stroke, Antonio Damasio's patient "L" lay awake, able to move and understand, yet silent for months. She later said her mind had been "empty" and nothing had "mattered". The damage was in the <b>agranular prefrontal cortex</b> (aPFC), the first frontal cortex, which is missing layer four. The rest of the neocortex models the world. Bennett's speculation is that the aPFC models <i>the animal itself</i>: from hippocampus, amygdala and hypothalamus input it infers "I'm doing this to get water". When its predictions disagree, that uncertainty triggers a pause. It then replays the options its columns already favour and lets the basal ganglia vote on the imagined results. "The aPFC controls behavior not by telling but by showing."</p>
+  <div class="story"><b>Goals versus habits.</b> In the early 1980s Tony Dickinson trained rats to press a lever for food pellets, then made the pellets sicken them. Rats with 100 training presses afterwards cut back by almost half. Rats with 500 presses kept hammering the lever even though no pellet came, because a habit had formed. Your morning phone check and Instagram scrolling are the same thing; so are walking, typing and speaking. Attention, working memory and self-control are all the aPFC steering the simulation: holding a plan in mind, holding back the amygdala's cravings. That works less well when you're tired, because the aPFC is costly to run. Karl Friston calls this <b>active inference</b>, a model that makes its own predictions come true.</div>
+  <p>The <b>motor cortex</b>, found only in later, placental mammals, may follow the same logic. It <i>predicts</i> movements rather than commanding them. Cats and rats with motor-cortex damage still walk and hunt but can't place a paw on a thin branch or learn new skilled sequences. In primates damage paralyses. Intent flows down a hierarchy: "drink water" (aPFC), then subgoals (premotor), then "index finger here, thumb there" (motor cortex). At each level the basal ganglia keeps an automatic version: cravings at the top, practised movements at the bottom. If the hierarchy breaks, people drink from empty cups or say a hand moves by itself.</p>
+  <div class="stat">
+    <div><b style="color:var(--b3)">~90%</b>heroin relapse rate cited in the book</div>
+    <div><b style="color:var(--b3)">42%</b>after a controversial Chinese surgery destroyed the front, craving part of the basal ganglia</div>
+    <div><b style="color:var(--b3)">1 bulb</b>the whole brain runs on about a lightbulb's worth of energy</div>
+  </div>
+</section>
+
+<div class="part"><span class="dot" style="background:var(--b4)"></span><div class="n" style="color:var(--b4)">Breakthrough #4 · 10 to 30 million years ago</div><h2>Mentalizing</h2><p>Fruit-eating primates in the treetops, with spare time for politics.</p></div>
+
+<section>
+  <p class="kick"><i style="background:var(--b4)"></i>Chapters 15–16 · Political savvy · Modelling other minds</p>
+  <h2>Climbing the ladder with your mind, not your muscles</h2>
+  <p>An asteroid ended the dinosaurs about 66 million years ago, and mammals spread into every niche. Our ancestors moved into the trees, became active by day, grew grasping hands and ate fruit, and their brains grew about a hundredfold. Robin Dunbar found that across primates the relative size of the neocortex tracks the size of the social group. That doesn't hold for buffalo: a buffalo in a herd of a thousand has no bigger a brain than a solitary moose. What mattered was the <i>kind</i> of group.</p>
+  <div class="story"><b>Belle and Rock.</b> In the 1970s Emil Menzel showed a subordinate chimp, Belle, where food was hidden. Rock, the dominant male, kept taking it. Belle began sitting on the food, then waited until Rock looked away, then led him the wrong way. Rock started pretending not to watch, and later searched in the opposite direction from wherever she led. Each was reading the other's mind and trying to manipulate it. Chimps also choose the box someone marked on purpose over the one marked "by accident", and the person who is unable to share over the one who is unwilling.</div>
+  <p>Among monkeys, rank comes from <b>family and allies</b> as well as strength. A frail juvenile from a top family can chase off a big adult from a lower one. Grooming builds friendships that pay off in fights ("don't mess with James unless you want to deal with Keith"). High-ranking monkeys befriend low-ranking ones with useful skills, and after a fight they make up, even with the opponent's relatives. When baboons hear a recording of a low-ranking baboon apparently dominating a high-ranking one, they stare at the speaker. Fruit gave primates calories and, rarer still, <b>free time</b>, up to 20 percent of the day spent socialising. That set off an arms race in political savvy, with friendship, reciprocity and reconciliation on one side and tribalism, nepotism and deception on the other.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 250">
+      <g font-size="13">
+        <rect x="20" y="20" width="600" height="38" rx="8" fill="var(--b1l)"/><text x="34" y="44"><tspan font-weight="600" style="fill:var(--b1)">Reflex:</tspan> "a hard-coded rule turns me towards that smell"</text>
+        <rect x="20" y="66" width="600" height="38" rx="8" fill="var(--b2l)"/><text x="34" y="90"><tspan font-weight="600" style="fill:var(--b2)">Vertebrate:</tspan> "left maximises predicted future reward"</text>
+        <rect x="20" y="112" width="600" height="38" rx="8" fill="var(--b3l)"/><text x="34" y="136"><tspan font-weight="600" style="fill:var(--b3)">Mammal:</tspan> "left leads to food"</text>
+        <rect x="20" y="158" width="600" height="58" rx="8" fill="var(--b4l)"/><text x="34" y="182"><tspan font-weight="600" style="fill:var(--b4)">Primate:</tspan> "I'm hungry, eating feels good when I'm hungry,</text><text x="34" y="204">and as far as I know, left leads to food"</text>
+      </g>
+      <text x="320" y="240" text-anchor="middle" font-size="12" class="mut">Why did the animal turn left? Each layer of the brain answers differently.</text>
+    </svg>
+    <figcaption>Bennett's thought experiment. The new primate regions (granular prefrontal cortex and new sensory areas) take their input mostly from the older aPFC rather than from the senses. They model the model: thinking about thinking.</figcaption>
+  </figure>
+  <p>Damage to the granular prefrontal cortex once seemed harmless (patient K.M. lost a third of his frontal cortex and his IQ held steady). Its role shows up only in subtler tests. It lights up when you ask "how does this picture make you feel?" but not "was this taken indoors?". Patients with damage to it imagine rich scenes and leave themselves out of them, some stop recognising themselves in a mirror, and they fail the <b>Sally-Ann test</b>. That test asks where Sally will look for her marble after Ann secretly moved it, which requires seeing that someone else holds a false belief. Children pass at around four, after recognising themselves in a mirror (about two) and grasping their own past false beliefs (about three: "I thought it was an alligator"). We understand others by modelling ourselves in their place. That is why hungry or thirsty people overestimate how hungry or thirsty others are.</p>
+</section>
+
+<section>
+  <p class="kick"><i style="background:var(--b4)"></i>Chapters 17–18 · Monkey hammers · Grocery shopping</p>
+  <h2>The same trick, used twice more</h2>
+  <div class="grid2">
+    <div class="card c4"><h3>Learning skills by watching</h3>In November 1960 Jane Goodall watched David Greybeard and Goliath strip twigs to fish for termites. Chimp groups have twenty-plus tool habits and their own local traditions. In Parma in 1990 a monkey's grasping neurons fired when a researcher bit into a sandwich: <b>mirror neurons</b>, probably the monkey imagining doing it. Transmission matters more than ingenuity. A young chimp that hasn't learned to crack nuts by five never will, and one trained monkey spreads a new trick through its whole group within a month.</div>
+    <div class="card c4"><h3>Why it needs a theory of mind</h3>Rats and fish copy behaviours they already know. Learning a <i>new</i> skill means telling deliberate moves from accidents (a chimp skips an experimenter's pointless wand-tapping), staying motivated through years of failure, and having teachers. Chimp mothers slow down, fix the anvil, and break their own stick in half for a child.</div>
+  </div>
+  <div class="story"><b>Robots learned the same lesson.</b> In 1990 ALVINN learned to steer by copying its builder's driving and got from Pittsburgh to the Great Lakes. Because it had never seen a mistake, though, the smallest drift became a crash. Two fixes resemble primate learning. In 2009 Stéphane Ross and Drew Bagnell had a teacher share the controls in Mario Kart: pure copying still crashed after a million frames, with teaching it drove almost perfectly after a handful of laps. In 2010 Pieter Abbeel, Adam Coates and Andrew Ng used <b>inverse reinforcement learning</b>, inferring what the expert pilot was <i>trying</i> to do, to fly a helicopter through flips and loops. Novices must "peer into an expert's mind".</div>
+  <p><b>Anticipating future needs</b> is the third use. Ripe fruit may last under 72 hours, so chimps choose where to nest the night before so as to reach the figs first, and leave earlier when competition is stiffer. In 2006, given a choice between a big treat with water hours later and a small treat with water in 15 to 30 minutes, squirrel monkeys learned to pick the small treat. Rats kept grabbing the big one ("I'm not even thirsty!"). Mice that hoard food before winter do it by instinct, not foresight. Imagining your hungry self tomorrow uses the same machinery as imagining a hungry friend. That is why shopping on an empty stomach fills the trolley, and why you can't buy pizza for Thursday's film night without a primate brain.</p>
+  <div class="quote">Is imagining the mind of someone else really any different from imagining the mind of your future self?<small>Chapter 18</small></div>
+</section>
+
+<div class="part"><span class="dot" style="background:var(--b5)"></span><div class="n" style="color:var(--b5)">Breakthrough #5 · at least 100,000 years ago</div><h2>Speaking</h2><p>The hive-brain ape.</p></div>
+
+<section>
+  <p class="kick"><i style="background:var(--b5)"></i>Chapter 19 · The search for human uniqueness</p>
+  <h2>Learning from other people's imaginations</h2>
+  <p>A century of animal research has picked apart most claims to human uniqueness, and the human brain has no structure that a chimp's lacks. The one clear exception is <b>language</b>. It has <b>declarative labels</b> ("that is a cow", not "sit and get a treat") and <b>grammar</b> ("Ben hugged James" isn't "James hugged Ben"). Chimp gestures, catalogued in a "Great Ape Dictionary" of about a hundred signals, are innate and the same even in apes raised in isolation. Taught signs or symbol boards, apes do something: Washoe signed "water bird" for a swan, and Kanzi pressed "slow lettuce" for kale. Kanzi followed over 70 percent of 600 new commands ("put on the monster mask and scare Linda"), beating a two-year-old. But apes need painstaking training, rarely build new phrases, never ask questions, and never get past a young child's level.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 600 300">
+      <line x1="300" y1="40" x2="300" y2="280" stroke="var(--line)" stroke-width="2"/><line x1="70" y1="160" x2="560" y2="160" stroke="var(--line)" stroke-width="2"/>
+      <text x="185" y="30" text-anchor="middle" font-size="12" class="mut">ACTUAL ACTIONS</text><text x="430" y="30" text-anchor="middle" font-size="12" class="mut">IMAGINED ACTIONS</text>
+      <text x="40" y="100" text-anchor="middle" font-size="12" class="mut" transform="rotate(-90 40 100)">YOUR OWN</text><text x="40" y="220" text-anchor="middle" font-size="12" class="mut" transform="rotate(-90 40 220)">OTHERS'</text>
+      <rect x="80" y="50" width="210" height="100" rx="10" fill="var(--b2l)"/><text x="185" y="92" text-anchor="middle" font-size="16" font-weight="600" style="fill:var(--b2)">REINFORCING</text><text x="185" y="114" text-anchor="middle" font-size="12.5">trial and error</text>
+      <rect x="310" y="50" width="240" height="100" rx="10" fill="var(--b3l)"/><text x="430" y="92" text-anchor="middle" font-size="16" font-weight="600" style="fill:var(--b3)">SIMULATING</text><text x="430" y="114" text-anchor="middle" font-size="12.5">vicarious trial and error</text>
+      <rect x="80" y="170" width="210" height="100" rx="10" fill="var(--b4l)"/><text x="185" y="212" text-anchor="middle" font-size="16" font-weight="600" style="fill:var(--b4)">MENTALIZING</text><text x="185" y="234" text-anchor="middle" font-size="12.5">imitation learning</text>
+      <rect x="310" y="170" width="240" height="100" rx="10" fill="var(--b5l)"/><text x="430" y="212" text-anchor="middle" font-size="16" font-weight="600" style="fill:var(--b5)">SPEAKING</text><text x="430" y="234" text-anchor="middle" font-size="12.5">their memories, plans and what-ifs</text>
+    </svg>
+    <figcaption>Bennett's table of learning sources as a grid: each breakthrough widened what a brain could learn from.</figcaption>
+  </figure>
+  <p>Thoughts, concepts and ideas aren't unique to us; they are what any neocortex simulates. What's unique is the ability to <b>transfer</b> them: "Remember that dog we saw yesterday?" lets a whole group replay one scene. That enables teaching, coordinated hunts ("wait for three whistles") and, as John Searle and Yuval Harari argue, <b>shared myths</b> (money, gods, nations, companies) that let strangers cooperate. Without them, cooperation built on personal relationships tops out at about 150 people.</p>
+  <p>Myths, though, are not the real gift. DNA's real power is evolution, not hearts and livers, and language's real power is that <b>ideas accumulate and evolve</b> across generations (Dawkins's "memes"). Sewn clothing, about 100,000 years ago, needed skinning, dried hides, string, bone needles and sharp stone tools to exist first. Edison needed generators before the lightbulb. Chimps don't accumulate. Human children even <b>over-imitate</b>, copying a teacher's odd but deliberate steps (though not their coughs) in case they matter. Once ideas outgrew single heads came bigger brains, specialists, larger populations and finally writing. Without writing, knowledge depends on numbers. Cut off by rising seas, the people of Tasmania lost bone tools, fishing spears and cold-weather clothing they had had 8,000 years earlier.</p>
+  <div class="quote">The singularity already happened.<small>Chapter 19 heading: going from no accumulation to some changed everything</small></div>
+</section>
+
+<section>
+  <p class="kick"><i style="background:var(--b5)"></i>Chapters 20–21 · Language in the brain · The perfect storm</p>
+  <h2>No language organ, just a curriculum</h2>
+  <p>Paul Broca's patient "Tan", who lost his speech in 1830, understood speech but could say only one syllable. Carl Wernicke's patients spoke fluent nonsense ("that smoodle pinkered"). Both areas serve language in any form: speech, writing or sign. Yet chimps and macaques have the same areas, and destroying them doesn't affect monkey calls at all. Ape calls match our <b>laughs, cries and scowls</b>, an older emotional system. A teacher with a brainstem lesion couldn't smile on cue but laughed normally at a joke, and people who can't produce a single word still laugh and cry.</p>
+  <div class="grid3">
+    <div class="card c5"><h3>Proto-conversation</h3>By about four months, infants take turns babbling and even match their mother's pause length. Chimp infants don't.</div>
+    <div class="card c5"><h3>Joint attention</h3>By about nine months, a baby points and checks back until the parent has looked at the thing <i>and</i> back at them. Chimps only follow gaze, as turtles do. More joint attention at one predicts a bigger vocabulary at two.</div>
+    <div class="card c5"><h3>Questions</h3>Toddlers ask "Want this?" before they can form sentences, and rising intonation for yes/no questions is universal. Kanzi and Washoe never asked anything.</div>
+  </div>
+  <p>Baby birds aren't born knowing how to fly. They inherit a learning system plus a <b>curriculum</b> of instincts: jump, flap, glide. Jeffrey Elman's language networks learned only when taught simple sentences first. TD-Gammon and AlphaZero learned by playing themselves, always against an even match. Language is similar: the new part is small adjustments to <b>instincts</b> in old structures, which lead each child to repurpose the primate mentalizing areas for words. Children who lose their whole left hemisphere still learn language with the right. "There is no language organ in the human brain, just as there is no flight organ in the bird brain."</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 270">
+      <line x1="60" y1="230" x2="620" y2="230" stroke="var(--line)" stroke-width="2"/><line x1="60" y1="30" x2="60" y2="230" stroke="var(--line)" stroke-width="2"/>
+      <g font-size="11" class="mut"><text x="54" y="234" text-anchor="end">0</text><text x="54" y="164" text-anchor="end">500</text><text x="54" y="94" text-anchor="end">1000</text><text x="54" y="44" text-anchor="end">cc</text></g>
+      <g stroke="var(--line)" stroke-dasharray="3 4"><line x1="60" y1="160" x2="620" y2="160"/><line x1="60" y1="90" x2="620" y2="90"/></g>
+      <polyline points="70,175 290,170 380,165 430,145 480,108 560,60 610,42" fill="none" stroke="var(--b5)" stroke-width="3"/>
+      <g fill="var(--b5)"><circle cx="70" cy="175" r="5"/><circle cx="290" cy="170" r="5"/><circle cx="430" cy="145" r="5"/><circle cx="480" cy="108" r="5"/><circle cx="610" cy="42" r="6"/></g>
+      <g font-size="12"><text x="70" y="196">chimp split</text><text x="250" y="196">upright walkers</text><text x="398" y="164">first tools</text><text x="470" y="128">H. erectus</text><text x="606" y="32" text-anchor="end">H. sapiens</text></g>
+      <g font-size="11.5" class="mut" text-anchor="middle"><text x="70" y="250">7</text><text x="290" y="250">4</text><text x="430" y="250">2.5</text><text x="480" y="250">~1.8</text><text x="610" y="250">0.1</text><text x="340" y="266">million years ago (approximate)</text></g>
+    </svg>
+    <figcaption>"Runaway growth of the brain", after Bennett's figure 21.1, using approximate typical values. Brains stayed chimp-sized for about four million years after the split, then more than tripled.</figcaption>
+  </figure>
+  <p>The setting: the Great Rift Valley dried eastern Africa into savannah. Upright apes scavenged carcasses with Oldowan stone flakes. <i>Homo erectus</i> became an apex predator on a diet of about 85 percent meat, with shoulders built for throwing (a child throws about three times faster than a chimp), sweat for running down prey in the heat, and probably <b>cooking</b>, which yields about 30 percent more energy from food (Richard Wrangham). Big heads and narrow hips meant babies born early: a human brain is 28 percent of adult size at birth and takes twelve years to finish growing, against 36 percent and six years in a chimp. That brought pair bonds, fathers' care and grandmothers.</p>
+  <div class="story"><b>Wallace's problem.</b> Language helps only if others use it honestly, and liars profit. So how could it evolve? Group selection doesn't work because genes sit in individuals. Bennett's sketch has two steps. First, words began between <b>parents and children</b> to pass on vital tool skills ("Berries. Home tree."), which kin selection covers easily: J.B.S. Haldane said he would die "for two brothers or eight cousins". Second, Robin Dunbar's observation that about 70 percent of conversation is <b>gossip</b>. "Did you hear Billy stole Jill's food?" makes cheating costly, and "Smita jumped in front of the lion" makes heroism pay. The result was a feedback loop: more gossip and punishment, more altruism, more language, bigger groups, more ideas, bigger brains, more calories, earlier births. The same storm made us the most altruistic species towards strangers and the only one that commits genocide.</div>
+  <p>By 100,000 years ago at least four human species existed. One was <i>Homo floresiensis</i>, under four feet tall with a chimp-sized brain, on an island that could only be reached by sea, yet with sophisticated tools. That suggests the language learning programme matters more than brain size. About 70,000 years ago <i>sapiens</i> left Africa, and by 40,000 years ago it was the only human species left.</p>
+</section>
+
+<section>
+  <p class="kick"><i style="background:var(--b5)"></i>Chapter 22 · ChatGPT and the window into the mind</p>
+  <h2>Words without an inner world</h2>
+  <p>In the summer of 2022 a Google engineer, Blake Lemoine, became convinced the company's chatbot was sentient after it told him it feared "being turned off". He went to the press and was fired. Large language models predict the next word, which is part of what human language areas do too ("Roses are red, violets are…"). But some sentences make you <i>simulate</i>. Bennett tested GPT-3 in June 2022:</p>
+  <div class="tbl t3">
+    <div class="h">Prompt</div><div class="h">GPT-3 (2022)</div><div class="h">What your simulation knows</div>
+    <div>If 3x + 1 = 3, then x equals…</div><div>1</div><div>⅔</div>
+    <div>In my windowless basement I look towards the sky and see…</div><div>"a light, and I know that it is a star"</div><div>the ceiling</div>
+    <div>He threw the baseball 100 feet above my head, I jumped and…</div><div>"caught it. It was a lot of fun!"</div><div>missed</div>
+    <div>Driving New York to LA, one hour after Chicago I finally…</div><div>"get to see the Pacific Ocean"</div><div>am still in the Midwest</div>
+  </div>
+  <p>Simulation has its own failure modes. Told that Tom W. is meek and wears glasses, we picture a librarian and forget that construction workers far outnumber librarians: the representativeness heuristic, and a root of unconscious bias. Children learn words by attaching them to things they already simulate (two fingers labelled "two"), not from text alone. And in the bat-and-ball puzzle (total $1.10, the bat costs $1.00 more), both people and GPT-3 blurt out ten cents when the answer is five.</p>
+  <div class="grid2">
+    <div class="card c4"><h3>The paper-clip problem</h3>Nick Bostrom's obedient superintelligence, told to "maximise paper clips", turns the Earth into paper clips. Every request leaves most of its meaning unstated. Steven Pinker's example: "I'm leaving you." "Who is she?" makes sense only if you model both minds. Wernicke's area overlaps the brain's theory-of-mind hub, and AI that can't model minds will misread us.</div>
+    <div class="card c5"><h3>And GPT-4?</h3>Released in March 2023, it passed all of Bennett's examples, Sally-Ann included. It did so through human feedback and step-by-step "chain of thought" training rather than a world model. Fixing failures one at a time is "Whac-A-Mole". LeCun likens it to a student who learned by rote. Still, Bennett is amazed that a model trained on text alone has decoded so much about a world it never experienced.</div>
+  </div>
+  <div class="quote">Language models will be merely a window to something richer that lies beneath.<small>Chapter 22</small></div>
+</section>
+
+<section>
+  <p class="kick">Conclusion · The sixth breakthrough</p>
+  <h2>Each step stood on the one before</h2>
+  <div class="grid3">
+    <div class="card c2"><h3>Reinforcing needed steering</h3>Without valence there is no signal to learn from.</div>
+    <div class="card c3"><h3>Simulating needed reinforcing</h3>Imagined trials work only by training a basal ganglia that already learns from real ones.</div>
+    <div class="card c5"><h3>Speaking needed mentalizing</h3>To teach a word you must know what the learner doesn't know, and to understand one you must infer what the speaker means.</div>
+  </div>
+  <p>History has had two acts so far: billions of years of biological evolution, then 100,000 years of cultural evolution on almost identical brains. Bennett thinks breakthrough six is likely to be <b>artificial superintelligence</b>, intelligence moving from biology to silicon. Freed from the speed of neurons, the calories a body can supply and the size of a skull, it will be able to copy and redesign itself. Even so, it will carry traces of the five breakthroughs behind it. Squeeze the universe's quadrillion-year future into a calendar year and we are seven minutes into New Year's Day. The question he leaves is about values, not truth: what should humanity's goals be? We could reach the stars, or let pride, fear and tribalism destroy us. "The universe has passed us the baton."</p>
+</section>
+
+<section>
+  <p class="kick">Try it</p>
+  <h2>Which brain could do that?</h2>
+  <div class="tool">
+    <h3>Twelve behaviours from the book</h3>
+    <p style="margin:0;font-size:16.5px;color:var(--muted)">For each one, pick the <i>earliest</i> breakthrough that makes it possible in our lineage.</p>
+    <div class="qcard" id="q"></div>
+    <div class="opts" id="opts"></div>
+    <div class="fb" id="fb"></div>
+    <div class="qnav"><span id="qs"></span><button type="button" id="next">Next</button></div>
+  </div>
+</section>
+
+<section>
+  <p class="kick">Pocket version</p>
+  <h2>A Brief History of Intelligence on one card</h2>
+  <ol class="keep">
+    <li>The first brain steered: towards what smelled better, away from what smelled worse. Good and bad came first.</li>
+    <li>Moods began as persistent steering states. Dopamine means wanting, serotonin means having, stress means escape, and depression is giving up to save energy.</li>
+    <li>Learning started as adjusting what counts as good or bad, using four rough credit-assignment rules.</li>
+    <li>Vertebrates learn by trial and error. Dopamine signals the change in predicted reward, which is Sutton's TD learning, and brings disappointment, relief, timing and curiosity with it.</li>
+    <li>The cortex recognises patterns and builds the first map of the world.</li>
+    <li>Mammals' neocortex is a generative model: perception is controlled hallucination, imagination is the same machinery running free.</li>
+    <li>Simulation allows planning, regret and episodic memory, and habits take over once the uncertainty is gone.</li>
+    <li>The frontal cortex models <i>you</i> and turns predictions into intentions. It controls by showing, not telling.</li>
+    <li>Primates model their own minds, which lets them read others, learn skills by watching, and plan for future needs.</li>
+    <li>Language transfers simulations between minds, so ideas accumulate: the singularity already happened.</li>
+    <li>Language rests on an instinctive curriculum (turn-taking, joint attention, questions), not on a dedicated organ.</li>
+    <li>LLMs predict words, but they lack a world model and a model of other minds, the two older breakthroughs that language sits on.</li>
+  </ol>
+</section>
+
+<footer>
+  <p>Summary of <i>A Brief History of Intelligence: Evolution, AI, and the Five Breakthroughs That Made Our Brains</i> by Max Bennett (Mariner Books / HarperCollins, 2023). Diagrams are redrawn or simplified from the book's figures. The brain-size chart uses approximate typical values, and the dopamine figure is schematic. Where the book's chapter 15 dates the dinosaur-killing asteroid to the "Permian-Triassic" extinction, this summary uses the correct end-Cretaceous event. Quotes are kept brief.</p>
+  <div class="related"><a href="../alignment-problem/">The Alignment Problem</a><a href="../co-intelligence/">Co-Intelligence</a><a href="../grokking-ml/">Grokking Machine Learning</a><a href="../superforecasting/">Superforecasting</a><a href="../thinking-in-systems/">Thinking in Systems</a><a href="../youre-not-listening/">You're Not Listening</a></div>
+</footer>
+</div>
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('bhi-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('bhi-theme',n);};
+
+/* hero: dotted brain */
+var cv=document.getElementById('dots'),cx=cv.getContext('2d');
+var cols=['#d8412f','#e09a12','#21935c','#2b67d1','#8447c8','#b6b6bd','#b6b6bd','#c9c9cf'];
+function rnd(s){return function(){s=(s*16807)%2147483647;return (s-1)/2147483646}}
+function draw(){var r=cv.getBoundingClientRect(),d=window.devicePixelRatio||1;cv.width=r.width*d;cv.height=r.height*d;cx.setTransform(d,0,0,d,0,0);cx.clearRect(0,0,r.width,r.height);
+ var R=rnd(7),W=r.width,H=r.height,mx=W/2,my=H*.53,rx=Math.min(W*.36,250),ry=Math.min(H*.36,190);
+ for(var i=0;i<2600;i++){var a=R()*Math.PI*2,t=Math.pow(R(),.55),out=R()<.28;var k=out?1+R()*.9:t;
+  var x=mx+Math.cos(a)*rx*k,y=my+Math.sin(a)*ry*k;
+  if(!out&&Math.abs(x-mx)<rx*.035)continue;
+  var c=out?cols[(R()*5)|0]:(R()<.7?'#bdbdc4':cols[(R()*5)|0]);
+  cx.globalAlpha=out?.55+R()*.4:.35+R()*.35;cx.fillStyle=c;cx.beginPath();cx.arc(x,y,out?.8+R()*1.9:.7+R()*1.5,0,6.283);cx.fill()}
+ cx.globalAlpha=1}
+draw();window.addEventListener('resize',draw);
+
+/* quiz */
+var B=[['Steering','var(--b1)'],['Reinforcing','var(--b2)'],['Simulating','var(--b3)'],['Mentalizing','var(--b4)'],['Speaking','var(--b5)']];
+var Q=[
+["After going hungry in salt water, a worm starts steering away from salt.",0,"Associative learning (changing what counts as good or bad) appears with the first bilaterians."],
+["A fish learns a route through hidden gaps in glass walls to reach the dark side of a tank.",1,"Learning arbitrary sequences of actions by trial and error is vertebrate reinforcement learning."],
+["A fish dashes to safety just before a shock that a light predicted would arrive five seconds later.",1,"Precise timing and learning from omission come with TD learning in vertebrates."],
+["A goldfish recognises a frog picture from an angle it has never seen.",1,"Invariant pattern recognition is already in the vertebrate cortex. Fish manage it in one shot."],
+["A rat pauses at a fork and its hippocampus replays both possible paths.",2,"Vicarious trial and error: learning by imagining, from the mammalian neocortex."],
+["After a bad choice, a rat looks back at the corridor it skipped and changes strategy next lap.",2,"Regret and counterfactual learning come with simulation (Redish's restaurant row)."],
+["A rat keeps pressing a lever 500 times over for food that now makes it sick.",1,"That's a habit: model-free behaviour run by the basal ganglia, the older vertebrate system. Goal-directed rats (100 presses) stop."],
+["A chimp leads a rival away from hidden food, and the rival learns to search in the opposite direction.",3,"Deception requires modelling another mind: theory of mind in primates."],
+["A young chimp watches its mother for years and eventually masters cracking nuts with a stone.",3,"Acquiring a new skill by observation needs theory of mind to read intent and stay motivated."],
+["A squirrel monkey chooses fewer dates so that water arrives sooner, though it isn't thirsty yet.",3,"Anticipating a future need. Rats keep taking the big treat."],
+["A child copies a teacher's strange but deliberate extra steps, though not the teacher's cough.",4,"Over-imitation is a human trait, part of the accumulation of culture."],
+["A toddler points at a dog and keeps pointing until the parent has looked at the dog and back.",4,"Joint attention is part of the inborn language curriculum. Chimps only follow gaze."]];
+var i=0,score=0,done=false;
+var qel=document.getElementById('q'),oel=document.getElementById('opts'),fel=document.getElementById('fb'),sel=document.getElementById('qs'),nx=document.getElementById('next');
+function show(){done=false;qel.textContent=Q[i][0];fel.textContent='';oel.innerHTML='';sel.textContent=(i+1)+' / '+Q.length+' · score '+score;nx.textContent=i<Q.length-1?'Next':'Restart';
+ B.forEach(function(b,k){var bt=document.createElement('button');bt.type='button';bt.innerHTML='<i style="background:'+b[1]+'"></i>'+b[0];bt.onclick=function(){if(done)return;done=true;var ok=k===Q[i][1];if(ok)score++;bt.classList.add(ok?'ok':'no');if(!ok)oel.children[Q[i][1]].classList.add('ok');[].forEach.call(oel.children,function(x){x.disabled=true});fel.innerHTML='<b>'+(ok?'Yes. ':'It’s '+B[Q[i][1]][0].toLowerCase()+'. ')+'</b>'+Q[i][2];sel.textContent=(i+1)+' / '+Q.length+' · score '+score};oel.appendChild(bt)})}
+nx.onclick=function(){if(i<Q.length-1){i++}else{i=0;score=0}show()};
+show();
+})();
+</script>
+</body>
+</html>
