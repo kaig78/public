@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>You're Not Listening by Kate Murphy – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lora:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@500;600&display=swap">
+<style>
+/* The cover: plain white with the outline of a human ear drawn as one continuous line made
+   of differently coloured segments (sky blue, orange, teal, lime, red, pink, yellow, green),
+   overlaid by a large black Garamond title and a small, widely tracked sans-serif subtitle.
+   The page redraws the many-coloured ear in the hero, keeps the black Garamond and the small
+   tracked caps, and uses the ear's colours as section accents, one per part of the book. */
+:root{
+  --bg:#ffffff; --ink:#151515; --muted:#5f5f5f; --line:#ebebeb; --soft:#f6f6f4; --card:#ffffff;
+  --blue:#2aa3dc; --orange:#ef8a3b; --teal:#16809b; --lime:#a9c936; --red:#e3533f; --pink:#e46aa2; --yellow:#f3c623; --green:#3aa84a; --lilac:#c9a3d6;
+  --acc:var(--teal);
+  --title:"Cormorant Garamond",Garamond,Georgia,serif; --serif:Lora,Georgia,serif; --sans:"Work Sans",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121212; --ink:#efefec; --muted:#a8a8a3; --line:#2a2a2a; --soft:#1b1b1a; --card:#171716; --teal:#4fc0dd; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121212; --ink:#efefec; --muted:#a8a8a3; --line:#2a2a2a; --soft:#1b1b1a; --card:#171716; --teal:#4fc0dd; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 18.5px/1.62 var(--serif)}
+a{color:var(--teal)}
+.wrap{max-width:800px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:600 12.5px var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:4px 13px;font:600 11.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.hero{position:relative;background:#fff;color:#151515;border:1px solid var(--line);border-radius:6px;overflow:hidden;padding:clamp(26px,6vw,48px) 16px clamp(24px,5vw,40px);text-align:center;min-height:clamp(360px,80vw,520px)}
+.hero svg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:94%;width:auto}
+.hero .t{position:relative}
+.hero h1{margin:0;font:500 clamp(3rem,13vw,5.8rem)/.98 var(--title);letter-spacing:-.01em}
+.hero .sub{font:600 clamp(.8rem,2.8vw,1.05rem)/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;margin:clamp(16px,4vw,26px) auto 0;max-width:15em}
+.hero .au{font:500 clamp(2rem,8vw,3.4rem) var(--title);margin-top:clamp(14px,4vw,28px)}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 8px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.intro p{margin:0}
+.facts{font:600 12px/1.6 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:600 clamp(1.8rem,5.6vw,2.5rem)/1.12 var(--title);margin:0 0 12px}
+h3{font:600 12.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;margin:22px 0 6px;color:var(--acc)}
+.kick{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;margin:0 0 6px;color:var(--acc)}
+.kick::before{content:"";display:inline-block;width:22px;height:3px;border-radius:2px;background:var(--acc);vertical-align:middle;margin-right:8px}
+.quote{font:italic 500 1.55rem/1.35 var(--title);margin:24px 0;padding-left:18px;border-left:3px solid var(--acc)}
+.quote small{display:block;font:600 11.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;font-style:normal;color:var(--muted);margin-top:8px}
+.story{background:var(--soft);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:17.5px}
+.story b{font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:17px;border-top:3px solid var(--acc)}
+.card h3{margin-top:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:16px;line-height:1.45}
+.stat b{display:block;font:600 2.1rem/1 var(--title);color:var(--acc);margin-bottom:6px}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 8px;margin-top:16px;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:520px;height:auto}
+.fig text{font-family:"Work Sans",system-ui,sans-serif;fill:var(--ink)}
+.fig .mut{fill:var(--muted)}
+.fig figcaption{font:400 15px/1.45 var(--serif);color:var(--muted);margin:6px 2px 4px}
+.list{counter-reset:r;list-style:none;padding:0;margin:14px 0 0}
+.list li{counter-increment:r;position:relative;padding:9px 0 9px 44px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list li::before{content:counter(r);position:absolute;left:0;top:6px;font:600 1.7rem/1 var(--title);color:var(--acc)}
+.list b{font-weight:600}
+.pair{display:grid;grid-template-columns:1fr 1fr;margin-top:14px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.pair div{padding:10px 14px;font-size:16.5px;border-bottom:1px solid var(--line);background:var(--card)}
+.pair div:nth-child(odd){border-right:1px solid var(--line);color:var(--muted)}
+.pair .h{font:600 11.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)!important;background:var(--soft)}
+@media (max-width:560px){.pair{grid-template-columns:1fr}.pair div:nth-child(odd){border-right:0}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:500 13.5px var(--sans);border:1.5px solid var(--acc);border-radius:999px;padding:3px 11px}
+.part{text-align:center;padding:48px 0 6px;border:0}
+.part .n{font:600 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
+.part h2{font-size:clamp(2.1rem,7vw,3rem);margin:6px 0}
+.part p{color:var(--muted);margin:0 auto;max-width:32em}
+.part .bar{display:flex;justify-content:center;gap:4px;margin-top:14px}
+.part .bar i{width:26px;height:4px;border-radius:2px}
+/* tool */
+.tool{border:2px solid var(--ink);border-radius:14px;padding:18px;margin-top:20px;background:var(--card)}
+.tool h3{margin-top:0;font-size:14px;color:var(--ink)}
+.sc{padding:12px 0;border-bottom:1px solid var(--line)}
+.sc p{margin:0 0 8px;font-size:17.5px}
+.sc p b{font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.opts{display:grid;gap:6px}
+.opts button{text-align:left;font:400 16.5px/1.4 var(--serif);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer}
+.opts button.ok{border-color:var(--green);background:color-mix(in srgb,var(--green) 12%,var(--bg))}
+.opts button.no{border-color:var(--red);background:color-mix(in srgb,var(--red) 10%,var(--bg))}
+.why{font-size:15.5px;margin-top:6px;color:var(--muted)}
+.score{margin-top:12px;font:600 13px var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);font:600 1.5rem var(--title);color:var(--teal)}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:16px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:600 11.5px var(--sans);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+  <header class="hero">
+    <svg viewBox="0 0 300 470" aria-hidden="true" fill="none" stroke-width="4.5" stroke-linecap="round">
+      <path d="M70,120 C80,55 140,22 200,30" stroke="#2aa3dc"/>
+      <path d="M200,30 C250,38 282,80 282,140 C282,190 270,220 265,250" stroke="#ef8a3b"/>
+      <path d="M70,120 C55,190 52,280 70,340" stroke="#a9c936"/>
+      <path d="M70,340 C85,400 120,440 170,452" stroke="#3aa84a"/>
+      <path d="M170,452 C205,458 220,440 228,420" stroke="#2aa3dc"/>
+      <path d="M228,420 C238,395 250,380 265,368" stroke="#e46aa2"/>
+      <path d="M100,130 C115,80 170,62 215,80" stroke="#e3533f"/>
+      <path d="M215,80 C240,92 252,120 248,160" stroke="#16809b"/>
+      <path d="M248,160 C244,200 225,215 200,225" stroke="#c9a3d6"/>
+      <path d="M100,130 C92,180 92,230 110,270" stroke="#e3533f"/>
+      <path d="M110,270 C125,300 160,300 175,280" stroke="#c9a3d6"/>
+      <path d="M200,225 C170,235 150,250 150,275" stroke="#f3c623"/>
+      <path d="M150,275 C152,300 175,312 190,330" stroke="#f3c623"/>
+      <path d="M135,170 C150,140 190,135 205,160" stroke="#c9a3d6"/>
+      <path d="M205,160 C215,180 200,195 182,200" stroke="#2aa3dc"/>
+    </svg>
+    <div class="t">
+      <h1>You’re<br>Not<br>Listening</h1>
+      <div class="sub">What you’re missing and why it matters</div>
+      <div class="au">Kate Murphy</div>
+    </div>
+  </header>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of You're Not Listening by Kate Murphy">
+    <div>
+      <p>Kate Murphy, a <i>New York Times</i> journalist, spent two years interviewing people whose jobs depend on listening: a CIA interrogator, an FBI hostage negotiator, focus-group moderators, improv teachers, radio producers, priests, bartenders and a furniture salesman. Her argument: we're losing the skill. Listening isn't silently waiting for your turn. It's curiosity, attention to tone and silence, and a response that helps the other person say what they mean. Done well, it's how we understand people, build trust and avoid loneliness.</p>
+      <div class="facts">Celadon Books, 2020 · 17 chapters + introduction &amp; conclusion · ~55,000 words</div>
+    </div>
+  </div>
+
+  <section style="--acc:var(--blue)">
+    <p class="kick">Introduction &amp; chapter 1 · The lost art of listening</p>
+    <h2>Who listens to you?</h2>
+    <p>Schools teach debate and rhetoric, never listening. We idolise the TED stage, wear earbuds and text instead of calling. Murphy once interviewed Oliver Sacks sitting cross-legged in her closet to escape construction noise; their talk drifted to the “climate of the mind”, and she still carries it. Her best interviews are the ones that veered personal: “I've never told anyone that before.” Eudora Welty on why the South produced so many writers: “we didn't have anything else to do but sit on the porch and talk, and some of us wrote it down.”</p>
+    <div class="stat">
+      <div><b>&gt;14 a day</b>Loneliness raises the risk of early death as much as obesity and alcoholism combined; it is worse than smoking 14 cigarettes a day.</div>
+      <div><b>~½</b>of 20,000 Americans surveyed in 2018 had no meaningful in-person interaction on a typical day; about the same share often felt lonely.</div>
+      <div><b>90-9-1</b>Online, 90% only watch, 9% contribute a little and 1% create most content. Social media is a poor substitute for listening to “real people”.</div>
+    </div>
+    <p style="margin-top:16px">Asked “Who listens to you?”, most interviewees paused. Many named no one, or people they pay: therapists, coaches, hairdressers, astrologers. A Dallas trader thought it “rude” not to keep things light. An arts director in Los Angeles: “If I really listened to the people in my life, I'd have to face the fact that I detest most of them.” A Houston lawyer insisted, “I'm a better listener than most people… Wait, hold on a second, I have another call.” The Algonquin Round Table's famous wits were often lonely; Dorothy Parker later said it was “just a lot of people telling jokes and telling each other how good they were.”</p>
+    <div class="quote">To really listen is to be moved physically, chemically, emotionally, and intellectually by another person's narrative.<small>Introduction</small></div>
+  </section>
+
+  <div class="part" style="--acc:var(--teal)"><div class="n">How listening works</div><h2>Sync, curiosity, assumptions</h2><p>Chapters 2 to 4.</p><div class="bar"><i style="background:var(--blue)"></i><i style="background:var(--orange)"></i><i style="background:var(--lime)"></i><i style="background:var(--red)"></i><i style="background:var(--pink)"></i></div></div>
+
+  <section style="--acc:var(--orange)">
+    <p class="kick">Chapter 2 · That syncing feeling</p>
+    <h2>When brains click</h2>
+    <p>Zuckerberg's 2017 “listening tour”, with advance scouts and a photographer, was mocked because contrived listening isn't listening. People find bad listening easier to describe than good: interrupting, vague or illogical replies, looking at phones, fidgeting. Stopping those only hides bad listening, because “listening is more of a mind-set than a checklist.”</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 200" role="img" aria-label="Neural coupling between speaker and listener">
+        <g transform="translate(20,20)">
+          <text x="0" y="14" font-size="14" font-weight="600">Speaker</text>
+          <path d="M0,60 C30,20 60,100 90,60 S150,20 180,60 S240,100 270,60" stroke="var(--orange)" stroke-width="3" fill="none"/>
+          <text x="330" y="14" font-size="14" font-weight="600">Listener who “gets it”</text>
+          <path d="M330,60 C360,22 390,98 420,60 S480,22 510,60 S570,98 600,60" stroke="var(--teal)" stroke-width="3" fill="none"/>
+          <text x="0" y="126" font-size="14" class="mut">Listener who drifts</text>
+          <path d="M0,160 C20,150 40,175 70,150 S120,180 150,145 S220,170 270,158" stroke="var(--muted)" stroke-width="2.5" fill="none" stroke-dasharray="6 5"/>
+          <text x="330" y="140" font-size="13.5">The more the listener's brain pattern</text>
+          <text x="330" y="160" font-size="13.5">mirrors the speaker's, the better</text>
+          <text x="330" y="180" font-size="13.5">the communication (Uri Hasson).</text>
+        </g>
+      </svg>
+      <figcaption>Illustrative. In Hasson's Princeton lab, a person retelling a scene from <i>Sherlock</i> showed the same brain pattern as while watching it, and listeners' brains took on that pattern as they listened.</figcaption>
+    </figure>
+    <p>Close friends' brains even respond alike to video clips; who we listen to shapes how we think. Great partnerships (the Wright brothers, Watson and Crick, Lennon and McCartney, Kahneman and Tversky, who wrote “sharing a mind” at one typewriter) grew out of endless conversation. We learn to listen from how we were listened to as children: securely attached people listen empathetically; anxious ones worry about losing attention; avoidant ones shut down. A much-married shipping owner who talked like a stage actor had been silenced by his father with “That's enough of that.” Talking about feelings, he said, is how you “lose your audience”.</p>
+    <div class="story"><b>“She has an idea.”</b> Graduate students scoring videos of parent-coaching sessions gave top marks to a clinician who simply leaned toward a toddler playing with Play-Doh and said to the distracted mother: “Look. She has an idea.” Another mother said she couldn't stand her baby's crying. The best response explained nothing: “What is it about the crying that bothers you?” It reminded her of crying as a child with nobody coming. Listening isn't teaching or praising (“Smile for Daddy”). It is “the experience of being experienced”.</div>
+    <div class="quote">Talking without listening is like touching without being touched.<small>Chapter 2</small></div>
+  </section>
+
+  <section style="--acc:var(--lime)">
+    <p class="kick">Chapter 3 · Listening to your curiosity</p>
+    <h2>What we can learn from toddlers</h2>
+    <p>Barry McManus, for 26 years the CIA's chief interrogator and polygrapher in 140 countries, says the agency doesn't train listeners so much as recruit them. His secret is an almost compulsive curiosity, even about terrorists. He got a Pakistani nuclear scientist to admit meeting bin Laden not by bullying him but by listening at length to the man's knowledge of the American civil rights movement, then asking whether he'd rather tell his story “to someone like me than someone like ‘them’”.</p>
+    <div class="grid2">
+      <div class="card"><h3>Dull is on you</h3>“Everybody is interesting if you ask the right questions.” In a University of Utah study, speakers facing inattentive listeners remembered less and spoke less clearly; attentive listeners drew out more detail even without asking anything.</div>
+      <div class="card"><h3>Talk to strangers</h3>Chicago commuters told to chat with a stranger expected to hate it, yet they had the happiest rides, got no less done and were never rebuffed. Uncertainty makes us feel alive: surprise gives a dopamine lift.</div>
+    </div>
+    <p style="margin-top:16px">Coaching tricks (nod, say “mmm-hmm”, paraphrase) used only to get what you want come across as fake. Physicist Eric Betzig: “Everyone is born a scientist. It's just unfortunate that with a lot of people, it gets beat out of them.” Studs Terkel: the tape recorder was his tool, “but I suppose the real tool is curiosity.” And “What do you do for a living? Where do you live? Married?” is interrogation, not curiosity.</p>
+  </section>
+
+  <section style="--acc:var(--red)">
+    <p class="kick">Chapter 4 · Assumptions as earplugs</p>
+    <h2>I know what you're going to say</h2>
+    <p>After “I love you”, couples' most common lines may be “You're not listening!”, “Let me finish!” and “That's not what I said!”. The <b>closeness-communication bias</b> means we overestimate how well we read those closest to us. Spouses decoding ambiguous phrases (“You look different today”) did no better than strangers. Friends wrongly assumed the other could see the same objects. People change daily; André Maurois: “A happy marriage is a long conversation that always seems too short.”</p>
+    <div class="grid3">
+      <div class="card"><h3>Dunbar's layers</h3>About 150 meaningful relationships, in tiers: 1–2 intimates you talk to daily, about 4 you need weekly. Friends you can pick up with after years are those you once listened to deeply.</div>
+      <div class="card"><h3>Weak ties</h3>Mario Small found that, slightly more than half the time, people confide their biggest worries in weaker ties rather than their closest, fearing judgment or drama.</div>
+      <div class="card"><h3>Signals, not people</h3>T-shirts, bumper stickers and profiles show a <i>persona</i>, not a person. The more people signal, the less we listen. Nobody can “speak as” a group, only as themselves.</div>
+    </div>
+    <div class="story"><b>“I will never understand that man.”</b> So said Bishop Daniel Flores's grandmother, after 65 years of marriage. He believes expecting complete understanding is the root of many troubled relationships: we should still give each other “the gift of listening, for that is love, even if we aren't always able to understand.” In Judith Coche's year-long couples groups, a lecturing “mansplainer” finally paraphrased his wife, and she cried.</div>
+  </section>
+
+  <div class="part" style="--acc:var(--pink)"><div class="n">Responding well</div><h2>Feelings, focus, opposing views</h2><p>Chapters 5 to 10.</p><div class="bar"><i style="background:var(--teal)"></i><i style="background:var(--yellow)"></i><i style="background:var(--green)"></i><i style="background:var(--lilac)"></i><i style="background:var(--blue)"></i></div></div>
+
+  <section style="--acc:var(--pink)">
+    <p class="kick">Chapter 5 · The tone-deaf response</p>
+    <h2>Why people would rather talk to their dog</h2>
+    <p>A friend says he's lost his job: fine, he hated the boss, the commute took 90 minutes for 20 miles, he ate standing in the kitchen; then his voice catches about telling his family; and the Mexico fishing trip will have to go.</p>
+    <div class="pair">
+      <div class="h">Tone-deaf</div><div class="h">Listening</div>
+      <div>“I'm sorry you lost your job.” · “You'll find another one soon.” · “You think that's bad? When I got laid off…”</div><div>“So now you have to break the news to your family? That's rough. How do you think they're going to react?”</div>
+    </div>
+    <p style="margin-top:14px">Graham Bodie's research: people feel understood by responses that interpret, not by nodding or parroting. Yet responses are emotionally attuned less than 5% of the time. Ask yourself, like a detective, “Why is this person telling me this?” You've succeeded when they say “Yes, exactly!”. Carl Rogers' original “active listening” meant hearing “even the meaning that is below the conscious intent”, not a handbook rule to keep your lips pressed together.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 220" role="img" aria-label="The doughnut: facts inside, feelings around">
+        <circle cx="160" cy="110" r="95" fill="var(--pink)" fill-opacity=".18" stroke="var(--pink)" stroke-width="3"/>
+        <circle cx="160" cy="110" r="42" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/>
+        <text x="160" y="115" text-anchor="middle" font-size="15" font-weight="600">facts</text>
+        <text x="160" y="40" text-anchor="middle" font-size="14">feelings &amp; meaning</text>
+        <g font-size="15"><text x="300" y="70">Gary Noesner, the FBI's lead hostage negotiator:</text>
+        <text x="300" y="98" font-style="italic">“It's not really what happens to us in life</text>
+        <text x="300" y="120" font-style="italic">but how we feel about it.”</text>
+        <text x="300" y="158" class="mut" font-size="14">To a man holding his ex at gunpoint: “Sounds to me</text>
+        <text x="300" y="178" class="mut" font-size="14">like what she said really hurt you.”</text></g>
+      </svg>
+    </figure>
+    <div class="story"><b>Neil Armstrong.</b> On a cross-country flight, the oil heir and mountaineer Dick Bass talked about McKinley and Everest the whole way, then realised he hadn't introduced himself. “That's okay,” said his seatmate. “I'm Neil Armstrong. Nice to meet you.” After any conversation, ask yourself: What did I learn about that person? What worried them most today? How did they feel about it? Marilyn Manson, asked what he'd say to the people of Columbine: “I wouldn't say a single word to them. I would listen… And that's what no one did.”</div>
+  </section>
+
+  <section style="--acc:var(--teal)">
+    <p class="kick">Chapter 6 · Talking like a tortoise, thinking like a hare</p>
+    <h2>The speech–thought differential</h2>
+    <p>We speak 120–150 words a minute, and the brain has plenty of capacity left over for side trips: spinach in your teeth, the parking meter, and above all the clever thing you'll say next. Clever people and introverts aren't automatically better listeners; they have busier heads. Ralph Nichols, the father of listening research, found most people missed at least half of a short talk right after hearing it, and kept about 25% two months later.</p>
+    <div class="grid2">
+      <div class="card"><h3>Use the spare capacity</h3>Treat listening like meditation: notice the drift and come back. Spend the spare thinking on subtext: the Ivy League woman's clenched jaw (“I'm smart, respect me”), the woman twisting her wedding ring (“someone loves me”).</div>
+      <div class="card"><h3>Stop rehearsing</h3>Worrying about your reply makes it worse. Pause after they finish; a diplomat married his second wife because “she actually pauses a couple of beats.” It's fine to say “I'd like to think about that.” And mistakes are mendable: in Heinz Kohut's view, repaired rifts are the fabric of relationships.</div>
+    </div>
+  </section>
+
+  <section style="--acc:var(--green)">
+    <p class="kick">Chapter 7 · Listening to opposing views</p>
+    <h2>Like being chased by a bear</h2>
+    <p>When strongly held political beliefs are challenged, the brain reacts as if threatened by a predator, and the amygdala and careful listening work against each other. Gillien Todd tells her Harvard negotiation students that their inner stance must be curiosity; otherwise every nod and paraphrase rings false. Tip O'Neill told Ronald Reagan after a partisan fight, “Old buddy, that's politics, after six o'clock we can be friends,” and together they reformed Social Security. In 2018 a senator hurled Susan Collins' “talking stick” at another and chipped a glass elephant.</p>
+    <div class="stat">
+      <div><b>51%</b>of US students in a Brookings survey thought shouting down a speaker acceptable; 19% supported violence.</div>
+      <div><b>55% / 49%</b>of Democrats and Republicans said they fear the other party (Pew).</div>
+      <div><b>~⅓</b>had stopped talking to a friend or relative over politics since 2016 (Frank Luntz).</div>
+    </div>
+    <p style="margin-top:16px">“We only become secure in our convictions by allowing them to be challenged.” Listen for evidence that you might be wrong (Nichols). Keats called the capacity to stay in doubt without “irritable reaching after fact and reason” <b>negative capability</b>; psychologists call it cognitive complexity, and it goes with creativity, self-compassion and better decisions. Steve Jobs rewarded staff who stood up to him and scolded one who backed down too soon: “It was your job to convince me I was wrong. And you failed!” Listening isn't agreeing, and listening begets listening.</p>
+  </section>
+
+  <section style="--acc:var(--yellow)">
+    <p class="kick">Chapters 8–9 · Big data, and improvisational listening</p>
+    <h2>What matters can't be counted</h2>
+    <p>Robert Merton invented the focus group in the 1940s: anti-Nazi messages showing savages backfired (people feared for “our boys”), while appeals to American values worked. Betty Crocker's just-add-water mix failed until focus groups revealed housewives felt guilty; leaving the eggs out fixed it. Naomi Henderson has moderated 6,000 groups. Rather than ask “why?”, which makes people defensive, she invites a story: “Tell me about the last time you went to the store after 11 p.m.” (“I had just smoked a joint and was looking for a ménage à trois: me, Ben, and Jerry.”) A cleaner's confession that she mopped the floor with her foot using damp, “lightly used” paper towels led to the Swiffer.</p>
+    <div class="quote">If you poll enough people, then you can tell a story; it's not the truth, it's just a story.<small>Naomi Henderson</small></div>
+    <p>Princeton's Matthew Salganik: data shows only what's under the lamppost, and social media is like studying human behaviour in a casino. “Algorithms aspire to make guesses… They don't aspire to understand.” Naomi's secret: “it's not about me… I want them to fill my cup.”</p>
+    <div class="grid2">
+      <div class="card"><h3>Google's best teams</h3>Project Aristotle studied 180 teams. What mattered was equal turn-taking and high social sensitivity, reading tone and faces. Successful teams listened, and that created psychological safety.</div>
+      <div class="card"><h3>Improv at Second City</h3>If a story runs from shoulder to fingertips, most people stop listening at the elbow. Exercises: group storytelling with sudden handovers, speaking with one voice, mirroring. “Ms Yoga Pose”, who forced her partner into a pretzel, concluded: “my need to show what I can do is keeping me from finding out what other people can do.”</div>
+    </div>
+    <p style="margin-top:16px">Humour depends on listening too. Bob Mankoff: “Dating is a ritual of getting to know another person well enough to laugh.” Inside jokes are banked listening: “I guess you had to be there.”</p>
+  </section>
+
+  <section style="--acc:var(--lilac)">
+    <p class="kick">Chapter 10 · Conversational sensitivity</p>
+    <h2>Terry Gross, LBJ and con men</h2>
+    <p><i>Fresh Air</i>'s producers each hear a different interview, and they edit it together. Communication professor Katherine Hampsten compares listening to playing catch with a lump of clay that each person reshapes. The producers are hired for “good ears”: <b>conversational sensitivity</b>, the knack for hidden meaning, tone, power and fake versus real warmth. It grows from listening to many kinds of people; intuition is recognition. Terry Gross prepares thoroughly, tells guests they may stop her at any time, and stops them herself whenever she doesn't understand.</p>
+    <div class="grid3">
+      <div class="card"><h3>Ask, don't guess</h3>“When you said X, I was confused.” Unclarified confusion contributes to medical errors (~250,000 US deaths a year), Challenger and Lehman. Miles Davis: “If you understood everything I said, you'd be me.”</div>
+      <div class="card"><h3>Know your soft spots</h3>If you feel out of step, you'll hear “original” as “oddball”. Self-awareness corrects for it, Theodor Reik's “third ear”. “You can only be as intimate with another person as you are with yourself.”</div>
+      <div class="card"><h3>Listening as power</h3>LBJ's phone calls opened with nothing but “Mmmm-hmmm” while he found out what the other man wanted and feared (Robert Caro). Con men listen superbly; lying is often a cooperative act.</div>
+    </div>
+  </section>
+
+  <div class="part" style="--acc:var(--red)"><div class="n">Inside and around us</div><h2>Inner voice, questions, ears, silence</h2><p>Chapters 11 to 17 and the conclusion.</p><div class="bar"><i style="background:var(--red)"></i><i style="background:var(--yellow)"></i><i style="background:var(--blue)"></i><i style="background:var(--pink)"></i><i style="background:var(--lime)"></i></div></div>
+
+  <section style="--acc:var(--blue)">
+    <p class="kick">Chapter 11 · Listening to yourself</p>
+    <h2>The voluble inner voice</h2>
+    <p>Murphy tells a self-critical friend to stop listening to “Spanky”, her mean inner voice. Inner dialogue uses the same brain networks as conversation, and it is built from the voices we've listened to: a coach, a parent, a therapist. Securely attached people develop a “friendlier” one. The more people you listen to, the more sides you can argue in your head (Feynman: “I have two voices that work back and forth”). In University of Virginia studies, 64% of men and 15% of women gave themselves electric shocks rather than sit alone with their thoughts for 6–15 minutes. Suppressed, the voice only gets louder, “Hello! Remember me?” at 4 a.m.</p>
+  </section>
+
+  <section style="--acc:var(--red)">
+    <p class="kick">Chapter 12 · Supporting, not shifting, the conversation</p>
+    <h2>Disraeli's secret</h2>
+    <p>Lady Randolph Churchill on her dinner partners: after Gladstone she thought him “the cleverest man in England”; after Disraeli she felt she was “the cleverest woman”. Sociologist Charles Derber calls the difference the <b>shift response</b> (turning attention to yourself) versus the <b>support response</b> (helping the other person say more).</p>
+    <div class="pair">
+      <div class="h">Shift</div><div class="h">Support</div>
+      <div>“My dog got out last week.” → “Ours is always digging under the fence.”</div><div>→ “Oh no. Where did you finally find him?”</div>
+      <div>“I watched a great documentary about turtles.” → “I'm more of an action-film guy.”</div><div>→ “Turtles? How did you happen to see that?”</div>
+      <div>“Didn't that piss you off?” · “Don't you think…?” · “…right?”</div><div>“What was your reaction?” · “You and Roger fought because…?”</div>
+    </div>
+    <p style="margin-top:14px">Avoid hidden assumptions. When Murphy asked “What made you decide to become a sociologist?”, Howard Becker objected: “You're assuming it was a decision. Better to ask, ‘How did it happen that you became a sociologist?’” Don't fix either. <i>There Is No Good Card for This</i> warns against claiming to know how someone feels, diagnosing, advising, minimising, offering platitudes or admiring their strength.</p>
+    <div class="story"><b>A Quaker clearness committee.</b> Considering a college presidency, Parker Palmer was asked again and again, “But what would you <i>like</i> about it?” He kept listing what he wouldn't like, until he admitted: “getting my picture in the paper with the word president under it.” Silence. Then: “Parker, can you think of an easier way to get your picture in the paper?” He withdrew his name, grateful for “this rare opportunity to listen to myself.” <i>Open and honest</i> questions carry no hidden advice (“Have you thought of seeing a therapist?” does).</div>
+    <div class="grid2">
+      <div class="card"><h3>Your child says “I quit”</h3>Not “You can't quit”, “I'll call the coach” or “Let's eat, you'll feel better”. Try “Have you always felt this way?” or “What would quitting mean?”</div>
+      <div class="card"><h3>Beyond the checklist</h3>“How was school? Homework? Lunchbox?” is logistics, not conversation. Try “What did you learn today?” or “What was the best part and the worst part of your day?” Arthur Aron's 36 questions made strangers feel close; two pairs later married.</div>
+    </div>
+  </section>
+
+  <section style="--acc:var(--lime)">
+    <p class="kick">Chapters 13–14 · The ear, and distraction</p>
+    <h2>Turning sound waves into meaning</h2>
+    <p>In the din of Houston's airport, Murphy's father heard her call “Dad!”: “You can always hear your puppies.” Meaning lives in prosody: the eager “Sure!”, the reluctant “Suuuure”, the clipped “Sure” before a “but”. In Hasson's study, listeners told one detail differently about the same Salinger story showed measurably different brain patterns, which is an argument for listening to many sources. Speech is decoded faster by the right ear, emotion by the left (reversed for many left-handers).</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 210" role="img" aria-label="Where emotional meaning comes from">
+        <text x="0" y="22" font-size="15" font-weight="600">Feelings and attitudes in a spoken message (the book's often-cited split)</text>
+        <rect x="0" y="44" width="352" height="34" fill="var(--lime)"/><rect x="352" y="44" width="243" height="34" fill="var(--blue)"/><rect x="595" y="44" width="45" height="34" fill="var(--orange)"/>
+        <text x="12" y="67" font-size="15" font-weight="600" fill="#151515">55% face &amp; body</text><text x="364" y="67" font-size="15" font-weight="600" fill="#fff">38% tone of voice</text><text x="604" y="67" font-size="14" font-weight="600" fill="#151515">7%</text>
+        <text x="595" y="98" font-size="12.5" class="mut">words</text>
+        <text x="0" y="132" font-size="14">Hearing damage: conversation ≈ 60 dB (safe) · earbuds ≈ 100 dB: damage after 15 minutes</text>
+        <text x="0" y="154" font-size="14">88 dB: after 4 hours · jackhammer or jet engine: under 30 seconds · keep volume ≤ 60%</text>
+        <text x="0" y="186" font-size="13" class="mut">15% of Americans (48 million) have hearing loss, two-thirds of them under 65. The brain fills the gaps, often wrongly.</text>
+      </svg>
+      <figcaption>Hence phone beats text (tone survives) and a call beats a screen, but the face carries most of all. Children at a five-day device-free camp read faces markedly better afterwards.</figcaption>
+    </figure>
+    <div class="grid2">
+      <div class="card"><h3>Addicted to distraction</h3>Phones replaced cigarettes as what we reach for. Time spent listening to people fell from 42% to 24% of waking hours; people speed-listen to audiobooks and podcasts; Second City sketches shrank from 15 to 5 minutes. A <b>silent phone on the table</b> alone makes conversation shallower (University of Essex).</div>
+      <div class="card"><h3>Make room</h3>Restaurants average 80 dB and trendy ones top 90. Choose quiet, put the computer to sleep, keep the phone out of sight, walk. The Family Dinner Project's starters: “What is the best gift you ever received?” Attention is hospitality; Eudora Welty “actually let you tell your story.”</div>
+    </div>
+    <div class="story"><b>A potpie dinner.</b> After five Dallas officers were killed in 2016, police chief David Brown urged people to sit down and listen to each other. At eleven, a white classmate's family had welcomed him to dinner and taken an interest in him: “Why aren't we smarter than sixth graders?… ‘Let's sit down and listen to each other and invite someone home for dinner.’”</div>
+  </section>
+
+  <section style="--acc:var(--yellow)">
+    <p class="kick">Chapter 15 · What words conceal and silences reveal</p>
+    <h2>Let the silence work</h2>
+    <div class="story"><b>Greg Hopf, top salesman.</b> At Houston's Gallery Furniture, an elderly couple sat silently over a dining table for five to ten minutes. Murphy squirmed; Hopf looked serene. Then Mrs Horton bought the table, the chairs, a bureau and an entertainment console. “I've learned to be quiet. I guarantee you if I'd said something… they would have just bought the bureau or nothing at all.” And: “when you hear people's stories, you tend to want to do right by them.”</div>
+    <figure class="fig">
+      <svg viewBox="0 0 640 170" role="img" aria-label="Tolerance for silence by culture">
+        <text x="0" y="22" font-size="15" font-weight="600">How long a silence people tolerate in business talks</text>
+        <text x="0" y="60" font-size="14.5">Americans</text><rect x="130" y="44" width="230" height="24" fill="var(--orange)"/><text x="368" y="62" font-size="14.5" font-weight="600">4.6 s</text>
+        <text x="0" y="100" font-size="14.5">Japanese</text><rect x="130" y="84" width="410" height="24" fill="var(--teal)"/><text x="548" y="102" font-size="14.5" font-weight="600">8.2 s</text>
+        <text x="0" y="140" font-size="13" class="mut">In English conversation most gaps are 0–200 milliseconds. After about 4 seconds of silence, people start softening their own opinions.</text>
+      </svg>
+    </figure>
+    <p>In the West, a pause of more than half a second reads as disapproval. Kim Scott, warned about Tim Cook's silences, still filled one and told him more about a mistake than she meant to. But being “silent with” differs from being “silent to”. Gustav Mahler: “What's best in music is not to be found in the notes.” A singer on six weeks of vocal rest learned “the unimportance of your words and the importance of other people's words”. Try one conversation where you speak only when asked something; bartenders find people barely notice. “You can't talk your way into a relationship… Silence is what allows people in.”</p>
+  </section>
+
+  <section style="--acc:var(--green)">
+    <p class="kick">Chapters 16–17 · The morality of listening, and when to stop</p>
+    <h2>Gossip, regret and limits</h2>
+    <p>Up to two-thirds of adult talk is gossip, and only 3–4% of it is truly mean (Dunbar). It replaced grooming, teaches us whom to trust, and makes cheats behave. Listening is how we become ethical: Emmanuel Levinas saw the face-to-face encounter with the “other” as the root of the duty to do no harm. People regret not listening more than listening, and regret what they said more than what they didn't. Not listening is “in that sweet spot” of lasting regret (Amy Summerville). Murphy's 97-year-old great-great-aunt, asked about regrets: “What good would that do?”</p>
+    <div class="grid2">
+      <div class="card"><h3>Grice's maxims</h3>We expect <b>quality</b> (truth), <b>quantity</b> (new, not too much), <b>relation</b> (relevance), <b>manner</b> (brief, orderly, clear). Break them and people tune out. Often bad speakers are bad listeners, so listen while you talk: “Have I lost you?” “Too much?” “What do you think?”</div>
+      <div class="card"><h3>Know your limits</h3>Air traffic controllers get 1.5–2-hour shifts. Naomi Henderson rings her own doorbell to escape calls: “You're like a bowl of chocolate mousse and everybody's got a spoon.” Tiredness is human; exit and come back later. Some stories you can't hear, and that's okay. But most of us give up too soon.</div>
+    </div>
+    <p style="margin-top:16px">Listening continues afterwards: in reflection, a journal (Anthony Doerr: “almost like a prayer”), a quote notebook, and the words “I've been thinking about what you said.” Keep confidences, because private information is like other people's money. Ghosting is the most wounding way to end things. And ask yourself whom you find hard to listen to, and whether the reasons say more about you.</p>
+  </section>
+
+  <section style="--acc:var(--teal)">
+    <p class="kick">Conclusion</p>
+    <h2>A field hospital for the unheard</h2>
+    <p>At the Basilica of Our Lady of San Juan del Valle in Texas, six confessionals run up to twelve hours a day and the lines grow every week, many people not even Catholic. Father Jorge Gómez: “It's like they are going to a field hospital. They so badly need to be heard… I just let the people talk. At the very end, they say how nice it was to talk, but I didn't talk.” He prepares by going to confession himself.</p>
+    <div class="quote">The greatest compliment that was ever paid me was when one asked me what I thought, and attended to my answer.<small>Henry David Thoreau, quoted in the conclusion</small></div>
+    <p>Listening is the more powerful position: it's how you learn, discern truth and spot deception. It isn't owed to everyone, but it helps you recognise fools and keeps you from being one. “How one responds is the measure of a good listener and, arguably, the measure of a good person.” When people say “I can't talk right now”, they usually mean “I can't listen right now”.</p>
+
+    <div class="tool" id="quiz">
+      <h3>Support or shift? Practice round</h3>
+      <p style="margin:0 0 6px;font-size:16.5px">Pick the reply a good listener would give, then see why. Scenarios written for this page, based on the book's principles.</p>
+      <div id="sc"></div>
+      <div class="score" id="score">0 / 6 answered</div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Pocket version</p>
+    <h2>What to keep</h2>
+    <ol class="keep">
+      <li>Listening is a mindset of curiosity, not a checklist of nods. If someone seems dull, ask better questions.</li>
+      <li>Don't assume you know, least of all with the people closest to you. Keep asking.</li>
+      <li>Listen for the feeling around the facts. Ask yourself “Why is this person telling me this?”</li>
+      <li>Use your spare mental bandwidth on subtext, not on rehearsing your reply. Pause before answering.</li>
+      <li>With opposing views, take a curious stance; listen for evidence you might be wrong.</li>
+      <li>Give support responses, not shift responses. Ask open questions without hidden advice or assumptions.</li>
+      <li>Don't rush to fix. Help people hear themselves.</li>
+      <li>Ask when you're confused: “When you said X, I was confused.”</li>
+      <li>Let silences breathe. Put the phone away, choose quiet places, protect your hearing.</li>
+      <li>Keep confidences, know your limits, and reflect afterwards: “I've been thinking about what you said.”</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Summary of <em>You're Not Listening: What You're Missing and Why It Matters</em> by Kate Murphy (Celadon Books, 2020). Charts use figures quoted in the book; the brain-sync drawing is illustrative. Quiz scenarios are written for this page. Quotations are brief; stories condensed and paraphrased.</p>
+    <p>Related summaries:</p>
+    <div class="related"><a href="../supercommunicators/">Supercommunicators</a><a href="../how-to-know-a-person/">How to Know a Person</a><a href="../talk/">Talk</a><a href="../coaching-habit/">The Coaching Habit</a><a href="../never-split-the-difference/">Never Split the Difference</a><a href="../intelligent-conversationalist/">The Intelligent Conversationalist</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('yl-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('yl-theme',n);};
+
+var S=[
+["A colleague: “I finally handed in the report. Three late nights in a row.”",
+ ["“Same here, I've had the worst week too.”","“What kept you up the longest?”","“You should really learn to plan better.”"],1,
+ "A support response invites more of their story. The first shifts attention to you; the third fixes and judges."],
+["Your partner: “My mother called again today.” (sighs)",
+ ["“What did she want this time?”","“Just block her number.”","“That sigh sounds heavy. How was it?”"],2,
+ "Respond to the feeling in the tone, the doughnut around the facts. The first is a detail question with an edge; the second is a fix."],
+["A friend: “I'm thinking of quitting my job and going back to study.”",
+ ["“Don't you think that's risky at your age?”","“What draws you to it?”","“My cousin did that and regretted it.”"],1,
+ "An open, honest question with no hidden verdict. “Don't you think…?” smuggles in your opinion; the cousin story is a shift."],
+["Your teenager gets in the car: “I hate football. I quit.”",
+ ["“You can't quit, think of your team.”","“Are you hungry? Let's get food.”","“What would quitting mean for you?”"],2,
+ "One of the book's own suggestions. The others correct the feeling or change the subject."],
+["At a party, someone mentions they just moved here from Lisbon.",
+ ["“What do you do for a living?”","“Lisbon! What made you leave, or did it just happen?”","“I've been to Lisbon twice, let me tell you about the trams…”"],1,
+ "Curiosity without an assumption (Howard Becker: don't assume it was a decision). Opening with a job question sizes them up; the trams are a shift."],
+["A friend goes quiet in the middle of telling you about a breakup.",
+ ["Wait, and stay with them in the silence.","Fill the gap: “Well, plenty more fish in the sea!”","Change the topic to ease the tension."],0,
+ "“Silent with” isn't “silent to”. Pauses are where people find the words; platitudes and topic changes cut them off."]];
+var box=document.getElementById('sc'),done=0,right=0;
+S.forEach(function(s,i){var d=document.createElement('div');d.className='sc';d.innerHTML='<p><b>'+(i+1)+'</b> '+s[0]+'</p><div class="opts"></div><div class="why" hidden></div>';var o=d.querySelector('.opts'),w=d.querySelector('.why'),answered=false;
+ s[1].forEach(function(t,k){var b=document.createElement('button');b.type='button';b.textContent=t;b.onclick=function(){if(answered)return;answered=true;done++;if(k===s[2])right++;[].forEach.call(o.children,function(x,j){if(j===s[2])x.classList.add('ok');else if(j===k)x.classList.add('no')});w.hidden=false;w.textContent=(k===s[2]?'Yes. ':'Not quite. ')+s[3];document.getElementById('score').textContent=right+' of '+done+' answered as a supporter'+(done===S.length?(right>=5?' · great listening instincts.':right>=3?' · good, keep practising.':' · try the support response next time.'):'')};o.appendChild(b)});
+ box.appendChild(d)});
+})();
+</script>
+</body>
+</html>
