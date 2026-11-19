@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>High Output Management by Andrew S. Grove – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* The cover: a saturated royal-blue field, Grove in a blue shirt and Intel key card standing
+   in front of a huge white Intel logo, the title in heavy white capitals across the top and
+   the author's name on a bright orange band at the foot. The page keeps that blue and that
+   orange, the heavy sans capitals, and replaces the photo with the book's founding image:
+   the breakfast factory, three production lines (egg, toast, coffee) converging on one
+   delivery time. Blue is used for structure and output, orange for the thing to act on:
+   the limiting step, the reject point, the leverage. Body text is a calm serif because the
+   book itself reads like a patient engineer explaining things over coffee. */
+:root{
+  --bg:#f6f8fc; --ink:#121a2b; --muted:#56627a; --line:#dde3ee; --soft:#eaf0fa; --card:#ffffff;
+  --blue:#1f62c9; --bluel:#dce8fb; --orange:#e5761f; --orangel:#fde9d8; --green:#2b8a5d; --greenl:#ddf2e6;
+  --sans:"Archivo",system-ui,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1220; --ink:#e9eef8; --muted:#9aa6bd; --line:#26304a; --soft:#151d31; --card:#121a2c;
+  --blue:#6fa4ff; --bluel:#1a2a4c; --orange:#ff9a4a; --orangel:#3a2414; --green:#62d19a; --greenl:#14301f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1220; --ink:#e9eef8; --muted:#9aa6bd; --line:#26304a; --soft:#151d31; --card:#121a2c;
+  --blue:#6fa4ff; --bluel:#1a2a4c; --orange:#ff9a4a; --orangel:#3a2414; --green:#62d19a; --greenl:#14301f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 19px/1.6 var(--serif)}
+a{color:var(--blue)}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:700 14px var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:3px 14px;font:700 13px var(--sans);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.hero{background:#1f62c9;color:#fff;border-radius:8px;overflow:hidden;text-align:center}
+.hero h1{margin:0;padding:clamp(22px,5vw,38px) 14px 0;font:800 clamp(2rem,8.6vw,4rem)/.98 var(--sans);letter-spacing:.01em;text-transform:uppercase}
+.hero .sub{font:500 clamp(.9rem,3.2vw,1.15rem)/1.35 var(--sans);opacity:.92;margin:12px auto 0;max-width:30em;padding:0 14px}
+.hero svg{display:block;width:min(92%,620px);height:auto;margin:clamp(14px,3vw,24px) auto clamp(14px,3vw,22px)}
+.hero svg text{font-family:"Archivo",system-ui,sans-serif;fill:#fff}
+.hero .band{background:#e5761f;font:800 clamp(1.05rem,4vw,1.5rem) var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:12px 10px}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 8px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.intro p{margin:0}
+.facts{font:600 13.5px/1.6 var(--sans);letter-spacing:.04em;color:var(--muted);margin-top:8px;text-transform:uppercase}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:800 clamp(1.55rem,5vw,2.15rem)/1.15 var(--sans);margin:0 0 12px;letter-spacing:-.01em}
+h3{font:700 1.05rem var(--sans);margin:22px 0 6px}
+.kick{font:700 13px var(--sans);letter-spacing:.16em;color:var(--orange);margin:0 0 6px;text-transform:uppercase}
+.quote{font:italic 400 1.35rem/1.45 var(--serif);margin:24px 0;padding-left:18px;border-left:4px solid var(--orange)}
+.quote small{display:block;font:600 13px var(--sans);letter-spacing:.06em;font-style:normal;color:var(--muted);margin-top:6px;text-transform:uppercase}
+.story{background:var(--soft);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:18px}
+.story b{font:700 .92em var(--sans)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:17.5px}
+.card h3{margin-top:0}
+.card.b{border-top:4px solid var(--blue)}.card.o{border-top:4px solid var(--orange)}.card.g{border-top:4px solid var(--green)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:16.5px;line-height:1.4}
+.stat b{display:block;font:800 1.9rem/1.05 var(--sans);color:var(--blue);margin-bottom:4px}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.eq{background:var(--card);border:2px solid var(--blue);border-radius:12px;padding:16px;margin:18px 0;text-align:center;font:700 clamp(1rem,3.6vw,1.3rem)/1.5 var(--sans)}
+.eq .o{color:var(--orange)}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 8px;margin:16px 0 0;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:520px;height:auto}
+.fig text{font-family:"Archivo",system-ui,sans-serif;fill:var(--ink)}
+.fig .mut{fill:var(--muted)}
+.fig .w{fill:#fff}
+.fig figcaption{font:400 15.5px/1.45 var(--serif);color:var(--muted);margin:8px 2px 4px}
+.list{counter-reset:r;list-style:none;padding:0;margin:14px 0 0}
+.list li{counter-increment:r;position:relative;padding:9px 0 9px 44px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list li::before{content:counter(r);position:absolute;left:0;top:8px;font:800 1.5rem/1 var(--sans);color:var(--orange)}
+.list b{font-weight:600}
+.tbl{display:grid;grid-template-columns:1fr 1fr;margin-top:16px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tbl div{padding:9px 14px;font-size:16.5px;border-bottom:1px solid var(--line);background:var(--card)}
+.tbl div:nth-child(odd){border-right:1px solid var(--line)}
+.tbl .h{font:700 13.5px var(--sans);letter-spacing:.05em;text-transform:uppercase;background:var(--soft)}
+@media (max-width:560px){.tbl{grid-template-columns:1fr}.tbl div:nth-child(odd){border-right:0}}
+.stg{border-collapse:collapse;font:500 14px var(--sans);min-width:560px;width:100%}
+.stg th,.stg td{border:1px solid var(--line);padding:5px 4px;text-align:center}
+.stg th{font-weight:700;font-size:12px;color:var(--muted)}
+.stg td.a{background:var(--orangel);color:var(--orange);font-weight:800}
+.stg td.m{background:var(--bluel)}
+.part{text-align:center;padding:52px 0 8px;border:0}
+.part .n{font:800 13px var(--sans);letter-spacing:.22em;color:var(--orange);text-transform:uppercase}
+.part h2{font-size:clamp(1.9rem,7vw,2.8rem);margin:6px 0;text-transform:uppercase}
+.part p{color:var(--muted);margin:0 auto;max-width:32em}
+.tool{border:2px solid var(--blue);border-radius:14px;padding:18px;margin-top:20px;background:var(--card)}
+.tool h3{margin-top:0;font-size:1.25rem}
+.trow{display:grid;grid-template-columns:28px 1fr 46px;gap:10px;align-items:start;padding:8px 0;border-bottom:1px solid var(--line);font-size:17px;cursor:pointer}
+.trow input{width:20px;height:20px;margin-top:4px;accent-color:var(--blue)}
+.trow .p{font:800 15px var(--sans);color:var(--orange);text-align:right;padding-top:2px}
+.trow.done span{color:var(--muted);text-decoration:line-through}
+.tgrp{font:700 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:16px 0 2px}
+.meter{position:sticky;top:0;background:var(--card);padding:10px 0;z-index:2;border-bottom:1px solid var(--line)}
+.bar{height:14px;border-radius:999px;background:var(--soft);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--blue);transition:width .3s}
+.bar i.full{background:var(--green)}
+.mtxt{font:700 15px var(--sans);margin-top:6px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.calc{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:end;margin-top:12px}
+.calc label{font:600 13px var(--sans);letter-spacing:.04em;color:var(--muted);display:flex;flex-direction:column;gap:4px;text-transform:uppercase}
+.calc input{width:96px;font:600 17px var(--sans);padding:6px 8px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.calc output{font:800 1.6rem var(--sans);color:var(--orange)}
+.note{font-size:15.5px;color:var(--muted);margin-top:10px}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);font:800 1.3rem var(--sans);color:var(--orange)}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:16.5px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:700 13px var(--sans);letter-spacing:.04em;text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+<header class="hero">
+  <h1>High Output Management</h1>
+  <p class="sub">An Intel president's field manual for anyone whose output is other people's output</p>
+  <svg viewBox="0 0 620 200" role="img" aria-label="The breakfast factory: egg, toast and coffee lines timed backwards so they meet at one delivery time">
+    <g stroke="#fff" stroke-width="2" fill="none" opacity=".5"><line x1="20" y1="176" x2="560" y2="176"/><line x1="560" y1="20" x2="560" y2="184" stroke-dasharray="5 5"/></g>
+    <text x="560" y="14" text-anchor="middle" font-size="13" font-weight="700">DELIVER</text>
+    <text x="40" y="194" font-size="11" opacity=".75">START: CUSTOMER ORDER</text>
+    <rect x="230" y="40" width="330" height="26" rx="5" fill="#e5761f"/><text x="246" y="58" font-size="14" font-weight="700">BOIL EGG · 3 MIN · LIMITING STEP</text>
+    <rect x="40" y="40" width="190" height="26" rx="5" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 4"/><text x="54" y="58" font-size="13" font-weight="600">get eggs</text>
+    <rect x="410" y="88" width="150" height="26" rx="5" fill="#fff" fill-opacity=".9"/><text x="424" y="106" font-size="14" font-weight="700" style="fill:#1f62c9">TOAST</text>
+    <rect x="330" y="88" width="80" height="26" rx="5" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 4"/><text x="340" y="106" font-size="13">get bread</text>
+    <rect x="480" y="136" width="80" height="26" rx="5" fill="#fff" fill-opacity=".9"/><text x="490" y="154" font-size="14" font-weight="700" style="fill:#1f62c9">COFFEE</text>
+    <path d="M232 92 L322 101" stroke="#fff" stroke-width="1.5" stroke-dasharray="3 4"/><text x="236" y="86" font-size="11" opacity=".85">time offset</text>
+    <circle cx="590" cy="101" r="20" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M590 89 V101 L599 107" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </svg>
+  <div class="band">Andrew S. Grove</div>
+</header>
+
+<div class="intro">
+  <img src="cover.jpg" alt="Cover of High Output Management by Andrew S. Grove">
+  <div>
+    <p>Andrew Grove fled Hungary at twenty, arrived in New York with almost no English, and ended up running Intel. In 1983 he wrote down what twenty years of managing engineers had taught him, using one stubborn idea: <b>management is production</b>. Treat a team like a factory, with inputs, limiting steps, inspections and indicators, and most of the mystery goes out of the job. What's left is the human part: motivation, training, honest reviews. Silicon Valley has handed this book to new managers for forty years.</p>
+    <p class="facts">1983 · revised 1995 · foreword by Ben Horowitz · 4 parts · 16 chapters · ~67,000 words</p>
+  </div>
+</div>
+
+<section>
+  <p class="kick">The one sentence</p>
+  <h2>Your output is your team's output</h2>
+  <p>Grove says one sentence matters more than any other in the book. A manager's own work, however busy, isn't the output. The output is what the people they run, and the people they influence, actually produce.</p>
+  <div class="eq">Manager's output = <span class="o">output of their organisation</span> + output of neighbouring organisations under their influence</div>
+  <p>That second term matters. Grove counts <b>know-how managers</b> as managers too: the internal consultant, the pricing analyst, the engineer whose process spec governs every fab. They have no reports but huge influence, so they're judged the same way.</p>
+  <div class="grid3">
+    <div class="card b"><h3>1 · Production</h3>Every kind of work, including a manager's, runs like a factory and can be steered with factory tools.</div>
+    <div class="card o"><h3>2 · Leverage</h3>Work is done by teams, so the manager's job is to choose the activities that multiply what the team produces.</div>
+    <div class="card g"><h3>3 · Players</h3>A team performs only as well as its individuals, so the manager trains and motivates them toward peak performance.</div>
+  </div>
+  <div class="story"><b>The 1995 introduction.</b> Twelve years on, Grove had lived through a near-death experience: Japanese memory makers wiped out the business Intel was founded on, and Intel retreated to microprocessors. His motto for the new climate was "Let chaos reign, then rein in chaos." He also warned middle managers that they now run "a business with one employee: yourself". He gave them three questions to ask themselves: am I adding real value or just passing on information? Am I plugged into the network? Am I trying new things myself?</div>
+</section>
+
+<div class="part"><div class="n">Part I</div><h2>The Breakfast Factory</h2><p>Production principles, learned at a college waiter's job, applied to all work.</p></div>
+
+<section>
+  <p class="kick">Chapter 1 · The basics of production</p>
+  <h2>A three-minute egg, buttered toast, coffee</h2>
+  <p>The task: deliver this breakfast hot, at a scheduled time, at acceptable quality and the lowest possible cost. The egg takes longest and matters most, so it is the <b>limiting step</b>. You schedule backwards from delivery: start the egg first, then offset the toast and the coffee so all three land together. Total time from the first step to the plate is the <b>throughput time</b>.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 210">
+      <line x1="40" y1="178" x2="600" y2="178" stroke="var(--line)" stroke-width="2"/>
+      <line x1="560" y1="24" x2="560" y2="186" stroke="var(--orange)" stroke-width="2" stroke-dasharray="5 5"/>
+      <text x="560" y="18" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--orange)">Deliver</text>
+      <text x="40" y="200" font-size="12" class="mut">Start (customer order)</text>
+      <rect x="40" y="36" width="90" height="24" rx="4" fill="var(--bluel)"/><text x="50" y="53" font-size="13">get eggs</text>
+      <rect x="130" y="36" width="380" height="24" rx="4" fill="var(--orange)"/><text x="142" y="53" font-size="13" font-weight="700" class="w">boil eggs (limiting step)</text>
+      <rect x="510" y="36" width="50" height="24" rx="4" fill="var(--bluel)"/><text x="514" y="53" font-size="11">assemble</text>
+      <rect x="300" y="82" width="60" height="24" rx="4" fill="var(--bluel)"/><text x="304" y="99" font-size="12">get bread</text>
+      <rect x="360" y="82" width="150" height="24" rx="4" fill="var(--blue)"/><text x="372" y="99" font-size="13" font-weight="700" class="w">toast</text>
+      <rect x="400" y="128" width="110" height="24" rx="4" fill="var(--blue)"/><text x="412" y="145" font-size="13" font-weight="700" class="w">pour coffee</text>
+      <path d="M130 70 H300" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#ar)"/><text x="170" y="80" font-size="12" class="mut">time offset</text>
+      <path d="M130 116 H400" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#ar)"/>
+      <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>
+      <text x="40" y="168" font-size="12" class="mut">Total throughput time ⟶</text>
+    </svg>
+    <figcaption>Redrawn from Grove's first figure. Find the limiting step, then schedule everything else backwards from delivery.</figcaption>
+  </figure>
+  <h3>Process, assembly, test</h3>
+  <p>Every production flow has three kinds of operation. <b>Process</b> changes the material (boiling an egg). <b>Assembly</b> puts parts together (egg, toast and coffee on one tray). <b>Test</b> checks the result. A sales training course follows the same pattern: data is processed into strategies, the strategies are assembled into a programme, and a dry run tests it. A compiler has unit tests, assembly and system test.</p>
+  <h3>Everything is a trade-off</h3>
+  <p>Now suppose the toaster can only take two slices. Toast becomes the limiting step, and the fixes all cost something: hire a toast specialist (overhead), borrow a colleague (unpredictable), buy toasters (capital), or keep toast ready (waste). Equipment, manpower and inventory can be traded against each other and against delivery time. You find the right mix by thinking it through, not by rule. Grove's breakfast eventually gets a continuous egg-boiler. It is cheaper and more predictable, but now nobody can order a four-minute egg.</p>
+  <h3>Fix it at the lowest-value stage</h3>
+  <p>Material gains value at each step. A rotten egg costs pennies at receiving, a whole breakfast at the table, and a customer at the door. So the core rule of the book is to <b>detect and fix problems at the lowest-value stage possible</b>. For college recruiting, that means screening candidates by phone before the expensive plant visit. For software, it means unit tests before the system test.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 220">
+      <g font-size="13">
+        <rect x="60" y="150" width="90" height="30" fill="var(--bluel)"/><text x="105" y="200" text-anchor="middle">raw egg</text>
+        <rect x="190" y="118" width="90" height="62" fill="var(--bluel)"/><text x="235" y="200" text-anchor="middle">boiled egg</text>
+        <rect x="320" y="76" width="90" height="104" fill="var(--blue)" fill-opacity=".6"/><text x="365" y="200" text-anchor="middle">on the tray</text>
+        <rect x="450" y="30" width="90" height="150" fill="var(--blue)"/><text x="495" y="200" text-anchor="middle">at the table</text>
+      </g>
+      <line x1="40" y1="180" x2="600" y2="180" stroke="var(--line)" stroke-width="2"/>
+      <text x="105" y="140" text-anchor="middle" font-size="13" font-weight="800" style="fill:var(--orange)">reject here</text>
+      <path d="M105 144 V148" stroke="var(--orange)" stroke-width="2"/>
+      <text x="495" y="22" text-anchor="middle" font-size="12" class="mut">a lost customer</text>
+      <text x="40" y="20" font-size="12" class="mut">Value invested ↑</text>
+    </svg>
+    <figcaption>Value accumulates through the line; so does the cost of a defect. Inspect where the material is still cheap.</figcaption>
+  </figure>
+  <div class="story"><b>The wrong limiting step.</b> Grove treats criminal justice as a production line running from crime through investigation, arrest, trial and sentence to jail. At the time it spent over a million dollars per conviction. Yet a jail cell cost about $80,000 to build plus $10,000–20,000 a year to run. So the whole expensive line was being throttled by its cheapest step.</div>
+</section>
+
+<section>
+  <p class="kick">Chapter 2 · Managing the breakfast factory</p>
+  <h2>Indicators: windows into the black box</h2>
+  <p>Grove would run the restaurant on five daily indicators: the <b>sales forecast</b> (and yesterday's actual), <b>raw-material inventory</b>, <b>equipment condition</b>, <b>manpower</b> and <b>quality</b>, which here means the customer complaint log. Indicators steer attention, and like steering a bicycle it's easy to overcorrect. So he <b>pairs them</b>, effect with counter-effect. Watch inventory alongside shortages. Watch a compiler's completion date alongside its capability, so speed isn't bought with quality.</p>
+  <h3>Measure output, not activity</h3>
+  <p>For administrative work, "a measurement, any measurement, is better than none". Count the orders a salesperson closes, not the calls they make. Count physical things:</p>
+  <div class="tbl">
+    <div class="h">Function</div><div class="h">Output indicator</div>
+    <div>Accounts payable</div><div># vouchers processed</div>
+    <div>Custodial</div><div># square feet cleaned</div>
+    <div>Customer service</div><div># sales orders entered</div>
+    <div>Data entry</div><div># transactions entered</div>
+    <div>Employment</div><div># people hired</div>
+    <div>Inventory control</div><div># items managed</div>
+  </div>
+  <p class="note">Pair each one with a quality measure: errors found, or a senior manager's rating of how clean the building is.</p>
+  <p>The <b>black box</b> picture runs through the whole book: input and labour go in, output comes out. Indicators cut windows into the box so you can see tomorrow's output today. But leading indicators only help if you believe them enough to act. Otherwise, "all you will get from monitoring them is anxiety".</p>
+  <h3>The linearity indicator</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 640 250">
+      <g stroke="var(--line)"><line x1="70" y1="210" x2="600" y2="210"/><line x1="70" y1="30" x2="70" y2="210"/><line x1="70" y1="40" x2="600" y2="40" stroke-dasharray="4 4"/></g>
+      <text x="596" y="34" text-anchor="end" font-size="12" class="mut">hiring target</text>
+      <g font-size="12" class="mut" text-anchor="middle"><text x="100" y="228">Jan</text><text x="190" y="228">Feb</text><text x="280" y="228">Mar</text><text x="370" y="228">Apr</text><text x="460" y="228">May</text><text x="550" y="228">Jun</text></g>
+      <line x1="70" y1="210" x2="550" y2="40" stroke="var(--blue)" stroke-width="2.5"/>
+      <text x="300" y="112" font-size="13" style="fill:var(--blue)" transform="rotate(-19 300 112)">straight-line progress</text>
+      <polyline points="70,210 100,204 190,190 280,176 370,160" fill="none" stroke="var(--orange)" stroke-width="3"/>
+      <g fill="var(--orange)"><circle cx="100" cy="204" r="4"/><circle cx="190" cy="190" r="4"/><circle cx="280" cy="176" r="4"/><circle cx="370" cy="160" r="5"/></g>
+      <path d="M370 160 L550 40" stroke="var(--orange)" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="380" y="176" font-size="13" font-weight="700" style="fill:var(--orange)">actual (April)</text>
+      <text x="470" y="112" font-size="12" style="fill:var(--orange)">needed now: a steep climb</text>
+      <text x="20" y="120" font-size="12" class="mut" transform="rotate(-90 20 120)">graduates accepting offers</text>
+    </svg>
+    <figcaption>After Grove's recruiting example (illustrative values). By April you can see the June target slipping, while there is still time to act. The same chart shows a factory that makes its monthly number only by cramming the last week.</figcaption>
+  </figure>
+  <h3>The stagger chart: Grove's favourite indicator</h3>
+  <p>Every month you forecast the next few months and write the new forecast underneath the old ones. The actual figure appears on the diagonal. You see the outlook <i>and</i> how the outlook keeps changing. Grove calls the drift between forecasts "the most valuable indicator of business trends" he had ever seen. He wished economists were obliged to publish their forecasts this way.</p>
+  <figure class="fig">
+    <table class="stg">
+      <tr><th>Made in</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th></tr>
+      <tr><th>Jul '81</th><td>22</td><td>28</td><td>34</td><td>29</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><th>Aug</th><td class="a">23</td><td>27</td><td>33</td><td>31</td><td>29</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><th>Sep</th><td></td><td class="a">21</td><td>30</td><td>30</td><td>35</td><td>33</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><th>Oct</th><td></td><td></td><td class="a">29</td><td>32</td><td>32</td><td>32</td><td>29</td><td></td><td></td><td></td><td></td></tr>
+      <tr><th>Nov</th><td></td><td></td><td></td><td class="a">27</td><td>32</td><td>31</td><td>32</td><td>31</td><td></td><td></td><td></td></tr>
+      <tr><th>Dec</th><td></td><td></td><td></td><td></td><td class="a">27</td><td>27</td><td>31</td><td>30</td><td class="m">40</td><td></td><td></td></tr>
+      <tr><th>Jan '82</th><td></td><td></td><td></td><td></td><td></td><td class="a">26</td><td>28</td><td>29</td><td class="m">39</td><td>30</td><td></td></tr>
+      <tr><th>Feb</th><td></td><td></td><td></td><td></td><td></td><td></td><td class="a">24</td><td>30</td><td class="m">36</td><td>32</td><td>34</td></tr>
+    </table>
+    <figcaption>Grove's stagger chart of forecast incoming orders for an Intel division, 1981–82. Orange: the actual result. Read across the diagonal and the actuals keep landing below forecast: November was forecast at 29–35 and came in at 27. Read down a column and the outlook for March slides 40 → 39 → 36. That slide is the signal.</figcaption>
+  </figure>
+  <h3>Build to order or build to forecast</h3>
+  <p>A sofa shop builds to order and makes you wait. If a rival delivers in four weeks, you have to <b>build to forecast</b> and accept inventory risk. A manufacturing flow and a sales flow then run side by side, and ideally the product and the order reach the shipping dock together. Ask <i>both</i> manufacturing and sales to forecast, so each owns its prediction. Slack goes into inventory, kept at the lowest-value stage (raw eggs, not cooked ones). The same thinking applies to an "administrative factory": forecast its workload and staff to it, or Parkinson's law fills the time.</p>
+  <h3>Quality: gates, monitors and variable inspection</h3>
+  <div class="grid3">
+    <div class="card b"><h3>Receiving</h3>Inspect incoming material. Reject it, or knowingly waive the spec after a balanced group (QA, manufacturing, design) weighs the cost. Never compromise on reliability: think pacemaker parts.</div>
+    <div class="card b"><h3>In-process</h3>A <b>gate</b> holds everything until it passes, which is safe but slow. A <b>monitor</b> samples while the flow continues and stops the line after repeated failures. It's cheaper, so lean towards it when big problems are unlikely.</div>
+    <div class="card b"><h3>Final</h3>The last chance before the customer, and the most expensive place to find anything. <b>Variable inspection</b> means checking less when quality is steady and more when it slips.</div>
+  </div>
+  <div class="story"><b>The visa factory.</b> The US Embassy in London received about a million visa applications a year and approved roughly 98 percent. Sixty staff processed up to 6,000 a day, held 60,000–80,000 passports, and still had queues of a hundred people outside. Its expediting schemes only added overhead. Grove's fix came from production: <b>sample</b> the applications thoroughly, as tax auditors do, instead of checking every one. For managers, variable inspection means digging into a subordinate's work at random. Check everything and you're meddling, and people stop owning their work.</div>
+  <h3>Productivity = output ÷ labour</h3>
+  <p>There are two ways to raise it. Work faster, or raise the <b>leverage</b> of each activity, so that each unit of activity produces more output. A waiter running two egg-boilers and two toasters has high leverage. So does a programmer using a high-level language rather than ones and zeros. One cheap source of leverage is <b>work simplification</b>: flow-chart every step honestly, count the steps, set a target and question why each step exists. A first pass usually removes 30 to 50 percent of them; Intel's administrative groups cut about 30.</p>
+</section>
+
+<div class="part"><div class="n">Part II</div><h2>Management Is a Team Game</h2><p>Leverage, meetings, decisions and planning: where a manager's hours actually go.</p></div>
+
+<section>
+  <p class="kick">Chapter 3 · Managerial leverage</p>
+  <h2>Activities are not output</h2>
+  <p>When Grove asked middle managers what their output was, they listed judgements, direction, allocating resources, mistakes caught, people trained and commitments negotiated. These are all <i>activities</i>. The output of a fab manager is good wafers; of a school principal, educated students; of a surgeon, a healed patient. As Grove puts it, league standings are kept by team.</p>
+  <h3>A day in the life</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 660 330">
+      <g font-size="11" class="mut" text-anchor="middle"><text x="70" y="22">8:00</text><text x="130" y="22">9:00</text><text x="190" y="22">10:00</text><text x="250" y="22">11:00</text><text x="310" y="22">12:00</text><text x="370" y="22">13:00</text><text x="430" y="22">14:00</text><text x="490" y="22">15:00</text><text x="550" y="22">16:00</text><text x="610" y="22">17:00</text></g>
+      <g stroke="var(--line)"><line x1="70" y1="28" x2="70" y2="300"/><line x1="310" y1="28" x2="310" y2="300"/><line x1="610" y1="28" x2="610" y2="300"/></g>
+      <g font-size="12.5">
+        <rect x="70" y="36" width="30" height="22" fill="var(--orange)"/><text x="106" y="52">Resigning manager: listen, nudge, decide to save him</text>
+        <rect x="100" y="66" width="30" height="22" fill="var(--blue)"/><text x="136" y="82">Read mail: scribbled nudges, one project denied</text>
+        <rect x="130" y="96" width="180" height="22" fill="var(--blue)" fill-opacity=".75"/><text x="136" y="112" class="w" font-weight="700">Executive staff meeting</text><text x="316" y="112">orders, plan priorities, two programme reviews</text>
+        <rect x="310" y="126" width="60" height="22" fill="var(--green)"/><text x="376" y="142">Cafeteria lunch: hears a training complaint</text>
+        <rect x="370" y="156" width="60" height="22" fill="var(--orange)"/><text x="436" y="172">Quality problem: resume shipment</text>
+        <rect x="430" y="186" width="120" height="22" fill="var(--green)"/><text x="436" y="202" class="w" font-weight="700">Orientation lecture</text>
+        <rect x="550" y="216" width="45" height="22" fill="var(--orange)"/><text x="544" y="232" text-anchor="end">Calls: denies an out-of-norm raise, calls a site meeting</text>
+        <rect x="595" y="246" width="15" height="22" fill="var(--blue)"/><text x="589" y="262" text-anchor="end">Assistant: declines some meeting requests</text>
+        <rect x="610" y="276" width="40" height="22" fill="var(--blue)"/><text x="604" y="292" text-anchor="end">Evening mail and reports, more nudges</text>
+      </g>
+      <g font-size="12" transform="translate(70 318)"><rect width="12" height="10" fill="var(--blue)"/><text x="18" y="9">information-gathering</text><rect x="170" width="12" height="10" fill="var(--orange)"/><text x="188" y="9">decisions &amp; nudges</text><rect x="320" width="12" height="10" fill="var(--green)"/><text x="338" y="9">information-giving, role model</text></g>
+    </svg>
+    <figcaption>Grove's own busy day, about 25 separate activities from 8:00 to 18:15 (colour = main type). It looks random, two thirds of it is in meetings, and "My day always ends when I'm tired... not when I'm done."</figcaption>
+  </figure>
+  <div class="grid2">
+    <div class="card b"><h3>Information-gathering</h3>The base of everything else. The best information comes from quick, casual talk. Reports are an archive and a safety net, and above all a discipline for the <i>writer</i>: "Writing the report is important; reading it often is not." Grove's information sources work like headline, article and magazine: each faster but sketchier than the next, and you want redundancy.</div>
+    <div class="card b"><h3>Visits</h3>A two-minute matter becomes a thirty-minute meeting once someone sits down in your office. Walking the floor handles it in two. Managers feel awkward wandering without a reason, so Intel invented reasons: "Mr. Clean" housekeeping inspections in unfamiliar areas.</div>
+    <div class="card o"><h3>Nudging &amp; deciding</h3>Few decisions are made outright. Many are shaped: offering facts, debating, ratifying or vetoing. A <b>nudge</b> advocates without commanding, and for every clear decision there are about a dozen nudges.</div>
+    <div class="card g"><h3>Information-giving &amp; role model</h3>Pass on objectives and preferences so others can decide as you would; that makes delegation possible. "Nothing leads as well as example," and how you spend your own time is the loudest example.</div>
+  </div>
+  <p>Meetings, Grove insists, are not an activity but a <b>medium</b>. Almost none of this work could be done outside one.</p>
+
+  <h3>The leverage equation</h3>
+  <div class="eq">Managerial output = L<sub>1</sub>×A<sub>1</sub> + L<sub>2</sub>×A<sub>2</sub> + … <br><span style="font-weight:500;font-size:.85em">each activity A multiplied by its <span class="o">leverage L</span></span></div>
+  <p>So there are three ways to raise output: <b>speed up</b> your activities, <b>raise the leverage</b> of each one, and <b>shift the mix</b> from low- to high-leverage work. High leverage comes from three situations:</p>
+  <div class="grid3">
+    <div class="card o"><h3>Many people affected</h3>Robin defines the annual planning process <i>before</i> it starts and saves 200 managers weeks of confusion. Doing the same afterwards would have far less effect, so timing matters. Act on a resignation the same day.</div>
+    <div class="card o"><h3>Brief act, long effect</h3>A performance review takes a few hours and shapes someone's work for a year. A tickler file is set up once and helps forever.</div>
+    <div class="card o"><h3>Unique knowledge</h3>The engineer who sets prices for hundreds of salespeople. The process expert, the geologist, the actuary. Teaching groups also counts: Grove's orientation talk reached 200 new hires at their most impressionable.</div>
+  </div>
+  <h3>Negative leverage</h3>
+  <p>Arrive unprepared and you waste everyone's time. A division head who got depressed after a bad plan spread the gloom through his organisation until someone told him. <b>Waffling</b>: "no green light is a red light", so a whole team stops. <b>Meddling</b>: using superior knowledge to dictate a subordinate's next moves teaches them to stop solving their own problems.</p>
+  <h3>Delegation without follow-through is abdication</h3>
+  <p>Grove's pencil test: a boss holds out a pencil, won't let go, and asks why you won't take it. Delegation needs a shared base of information and shared ways of working. Delegating a task doesn't end your responsibility, so <b>monitor</b>, which isn't the same as meddling. That makes it wise to delegate the work you know best, because you can check it most easily, even though it's emotionally harder. Apply quality-assurance logic: review the rough draft, not the polished report, and sample more or less often depending on the person's experience with <i>that</i> task.</p>
+  <h3>Run your day like a factory, not a job shop</h3>
+  <div class="grid2">
+    <div class="card b"><h3>Calendar as production plan</h3>Don't let your calendar fill up with other people's "orders". Fix the true limiting steps (for Grove, the class he taught), batch similar tasks to share set-up time, and fill the gaps with non-urgent work.</div>
+    <div class="card b"><h3>Say no early</h3>Factories refuse starts at the door rather than let work jam halfway through. Every yes to one thing is a no to another. Leave some slack, like a metered freeway.</div>
+    <div class="card b"><h3>Keep an inventory of projects</h3>Have discretionary projects ready for free moments. Without them, free time turns into meddling.</div>
+    <div class="card b"><h3>Six to eight reports</h3>Allow half a day a week each: two days leads to meddling, an hour is too little to monitor. Half a day a week on an advisory group counts as one report. A plant manager with only two reports can act as his own engineering manager.</div>
+  </div>
+  <div class="story"><b>Interruptions.</b> When about twenty Intel middle managers were asked what most limited their output, uncontrolled interruptions topped the list. They proposed hiding, which Grove calls no answer: the interrupters have real problems. His alternatives come from production. Prepare <b>standard responses</b> to common questions so others can handle them. <b>Batch</b> issues into one-on-ones and staff meetings. Keep an <b>archive of indicators</b> so answers are quick. Post office hours: "Please don't interrupt me unless it really can't wait until 2:00." In short, make the irregular regular.</div>
+</section>
+
+<section>
+  <p class="kick">Chapter 4 · Meetings</p>
+  <h2>The medium of managerial work</h2>
+  <p>Drucker said a manager spending more than a quarter of their time in meetings is a sign of poor organisation. Grove disagrees. Sharing know-how and making decisions <i>need</i> face-to-face contact, so the goal is efficient meetings, not fewer. There are two kinds: <b>process-oriented</b> meetings (regular, for exchanging information) and <b>mission-oriented</b> ones (ad hoc, to solve a problem or decide).</p>
+  <h3>One-on-ones</h3>
+  <p>These started when Grove, a research physicist suddenly in charge of manufacturing memory chips, asked two of his own reports to give him lessons. That spirit of mutual teaching stayed.</p>
+  <div class="grid2">
+    <div class="card b"><h3>The rules</h3>
+      <b>How often:</b> by task-relevant maturity. Weekly for someone new to a task, every few weeks for a veteran, more often where things change fast.<br>
+      <b>How long:</b> at least an hour, or only easy things come up.<br>
+      <b>Where:</b> in the subordinate's office, where you learn how they work.<br>
+      <b>Whose:</b> the <i>subordinate's</i> meeting. They bring an outline: indicators, problems, and especially whatever is nagging them.</div>
+    <div class="card o"><h3>The craft</h3>
+      <b>"Ask one more question!"</b> (Grove's principle of didactic management) until you both reach the bottom of an issue.<br>
+      <b>Both take notes</b> on the outline. A note taken on the spot is a commitment, like a handshake.<br>
+      <b>A hold file</b> batches non-urgent items for next time.<br>
+      <b>Beware the zinger:</b> "I've been looking for another job," with five minutes left.<br>
+      <b>Schedule on a rolling basis</b>, booking the next one as each ends.</div>
+  </div>
+  <div class="stat">
+    <div><b>90 min</b>every two weeks shapes about 80 hours of a subordinate's work</div>
+    <div><b>1 hour</b>minimum length, so the hard issues have room</div>
+    <div><b>6–8</b>reports, each worth half a day a week</div>
+  </div>
+  <p>The leverage runs both ways. In one one-on-one, Intel's sales head showed Grove order trends that proved business was slowing, not just going through a summer lull. Both left committed to caution, and Grove carried that conclusion to every group he ran. Grove also held one-on-ones with his two teenage daughters, over dinner and without notes.</p>
+  <h3>Staff meetings and operation reviews</h3>
+  <p>A <b>staff meeting</b> (supervisor plus all reports) is where peers learn to decide together, "like the dinner-table conversation of a family". Discuss anything that affects more than two people. Send an agenda in advance and leave an open session. The supervisor moderates and keeps it on track but never lectures.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 560 290">
+      <rect x="110" y="20" width="200" height="120" fill="var(--soft)"/><rect x="310" y="20" width="200" height="120" fill="var(--soft)"/>
+      <rect x="110" y="140" width="200" height="120" fill="var(--soft)"/><rect x="310" y="140" width="200" height="120" fill="var(--greenl)" stroke="var(--green)" stroke-width="2"/>
+      <text x="210" y="85" text-anchor="middle" font-size="14" class="mut">the boss lectures</text>
+      <text x="410" y="85" text-anchor="middle" font-size="14" class="mut">discussion off track</text>
+      <text x="210" y="205" text-anchor="middle" font-size="14" class="mut">snore</text>
+      <text x="410" y="198" text-anchor="middle" font-size="15" font-weight="800" style="fill:var(--green)">discussion on track</text>
+      <text x="410" y="218" text-anchor="middle" font-size="12" style="fill:var(--green)">desired region</text>
+      <path d="M180 240 V110 Q180 90 200 100 L320 175" fill="none" stroke="var(--orange)" stroke-width="3" stroke-dasharray="8 5" marker-end="url(#ar2)"/>
+      <defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--orange)"/></marker></defs>
+      <text x="100" y="80" text-anchor="end" font-size="12">active</text><text x="100" y="200" text-anchor="end" font-size="12">inactive</text>
+      <text x="40" y="140" text-anchor="middle" font-size="12" font-weight="700" transform="rotate(-90 40 140)">SUPERVISOR</text>
+      <text x="210" y="278" text-anchor="middle" font-size="12">inactive</text><text x="410" y="278" text-anchor="middle" font-size="12">active</text>
+      <text x="310" y="292" text-anchor="middle" font-size="12" font-weight="700" dy="-2">SUBORDINATES</text>
+    </svg>
+    <figcaption>After Grove's staff-meeting figure. The supervisor steps in to get things moving, then steps back so the subordinates do the work while the supervisor only steers.</figcaption>
+  </figure>
+  <p><b>Operation reviews</b> let managers several levels apart teach each other. The organiser coaches presenters and keeps time with discreet signals. The senior reviewer asks questions and never previews the slides. Presenters allow about four minutes per visual and watch the audience "like a hawk". The audience works too: yawning is worse than staying away, and if a presenter states a factual error, it's your job to correct it on the record.</p>
+  <h3>Mission-oriented meetings: the chairman's job</h3>
+  <p>Most of the chairman's work happens <i>before</i> the meeting: knowing exactly what decision is needed, asking whether a meeting is necessary, desirable and justifiable, and getting commitments from the right people. That means no more than six or seven, with eight as the absolute limit ("Decision-making is not a spectator sport"). Then come an agenda with roles, punctuality enforced without apology, and minutes sent out quickly saying what, who and when.</p>
+  <div class="tool" style="border-color:var(--orange)">
+    <h3>What does this meeting cost?</h3>
+    <p class="note" style="margin-top:0">Grove priced a manager's hour, overhead included, at about $100 in 1983, so ten managers for two hours cost $2,000. That's money nobody would let you spend on a copier without approval. Use your own rate.</p>
+    <div class="calc">
+      <label>People<input id="mp" type="number" min="1" value="10"></label>
+      <label>Hours<input id="mh" type="number" min="0.25" step="0.25" value="2"></label>
+      <label>Cost per hour<input id="mr" type="number" min="1" value="100"></label>
+      <div><output id="mc">2,000</output><div class="note" style="margin:0">per meeting</div></div>
+      <div><output id="my" style="color:var(--blue)">104,000</output><div class="note" style="margin:0">if it runs weekly for a year</div></div>
+    </div>
+  </div>
+  <p>Grove's own test of poor organisation: routine meetings should absorb about 80 percent of issues. If more than 25 percent of your time goes on <b>ad hoc</b> mission-oriented meetings, something is wrong.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 5 · Decisions, decisions</p>
+  <h2>Free discussion, clear decision, full support</h2>
+  <p>In a know-how business, <b>knowledge power</b> and <b>position power</b> pull apart. The young engineer knows today's technology, while the senior manager has rank but is "a little more obsolete every day". Decisions must bring the two together, at the <b>lowest competent level</b>, where technical knowledge meets the bruises of experience.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 600 200">
+      <defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--blue)"/></marker></defs>
+      <circle cx="110" cy="90" r="62" fill="var(--bluel)" stroke="var(--blue)" stroke-width="2.5"/><text x="110" y="86" text-anchor="middle" font-size="15" font-weight="800">FREE</text><text x="110" y="104" text-anchor="middle" font-size="15" font-weight="800">DISCUSSION</text>
+      <circle cx="300" cy="90" r="62" fill="var(--bluel)" stroke="var(--blue)" stroke-width="2.5"/><text x="300" y="86" text-anchor="middle" font-size="15" font-weight="800">CLEAR</text><text x="300" y="104" text-anchor="middle" font-size="15" font-weight="800">DECISION</text>
+      <circle cx="490" cy="90" r="62" fill="var(--blue)"/><text x="490" y="86" text-anchor="middle" font-size="15" font-weight="800" class="w">FULL</text><text x="490" y="104" text-anchor="middle" font-size="15" font-weight="800" class="w">SUPPORT</text>
+      <path d="M174 90 H234" stroke="var(--blue)" stroke-width="3" marker-end="url(#ar3)"/><path d="M364 90 H424" stroke="var(--blue)" stroke-width="3" marker-end="url(#ar3)"/>
+      <path d="M490 154 Q490 190 300 190 Q110 190 110 156" fill="none" stroke="var(--orange)" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ar2)"/>
+      <text x="300" y="182" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--orange)">if it proves wrong, go round again</text>
+    </svg>
+    <figcaption>Grove's ideal model. The more controversial the issue, the more "free" and "clear" matter. Support does not require agreement, only an honest commitment.</figcaption>
+  </figure>
+  <div class="grid3">
+    <div class="card b"><h3>Free</h3>Everyone speaks before the direction is known. Grove quotes a fired car-company executive who was told that people who do well wait to hear their superiors' view and then support it, and calls that a terrible way to manage.</div>
+    <div class="card b"><h3>Clear</h3>Being vague about a controversial call doesn't avoid the argument, it only postpones it. People who dislike a decision will be angrier still if they don't get a prompt, straight account of it.</div>
+    <div class="card b"><h3>Supported</h3>Honest disagreement is normal. An organisation runs on commitment to its decisions, not on agreement.</div>
+  </div>
+  <p>Intel's egalitarian trappings (casual dress, cubicles, no reserved parking) puzzled one journalist, who asked whether they were affectation. Grove answered that they were "a matter of survival": status symbols choke the flow of facts between the people with knowledge and the people with rank.</p>
+  <h3>The peer-group syndrome</h3>
+  <div class="story"><b>Peer-plus-one.</b> At Intel's first management training session, a group of equals worked a real problem while their boss waited outside. They went round in circles for fifteen minutes without noticing. The boss came back in, listened, darkened, slapped the table and asked what was going on. The problem was then solved in short order. Peers wait for consensus before anyone risks a view. One engineer described the result as someone saying "I think our position seems to be…" Grove's remedy is self-confidence, rooted in a gut-level fact: "nobody has ever died from making a wrong business decision". If the syndrome sets in, the person with most at stake takes charge, or else the senior person acts as godfather. Fear of sounding dumb and fear of being overruled must be fought, because every question held back makes the decision worse.</div>
+  <p>Once everything has been aired and there's still no consensus, the senior person decides. Doing that at the end is legitimate; doing it at the start is destructive. Americans, Grove notes, find giving orders "not nice" and so let discussion drag on. If the final call surprises people, announce it, adjourn, and meet again once they've absorbed it.</p>
+  <h3>Six questions to settle before any decision</h3>
+  <ol class="list">
+    <li><b>What</b> decision needs to be made?</li>
+    <li><b>When</b> does it have to be made?</li>
+    <li><b>Who</b> will decide?</li>
+    <li><b>Who</b> will need to be consulted first?</li>
+    <li><b>Who</b> will ratify or veto it?</li>
+    <li><b>Who</b> will need to be informed?</li>
+  </ol>
+  <div class="story"><b>The Philippine plant.</b> Intel had to double its Philippine factory. It could build a high-rise next to the existing plant (shared overhead, easy staff transfers, but a tall fab is inefficient) or a low building on cheaper land further away. <i>When:</i> the plant was needed in two to two and a half years, so working back through time offsets, the decision was due within a month. <i>Who decided:</i> construction and manufacturing managers from matching levels, so neither side dominated. <i>Ratify:</i> Grove, their first common boss, who knew the site. <i>Inform:</i> chairman Gordon Moore. The group chose to build next door but stop at four storeys. Grove probed their reasoning and ratified it. Settling the structure in advance prevents the late, surprise veto that looks like politics. One business-school graduate left Intel for a company where "everyone decides alone". He was back within four months: if he could decide without consulting anyone, so could everyone else.</div>
+</section>
+
+<section>
+  <p class="kick">Chapter 6 · Planning</p>
+  <h2>Today's actions for tomorrow's output</h2>
+  <p>Planning is as ordinary as glancing at the fuel gauge on the way to work. It follows the factory logic:</p>
+  <div class="grid3">
+    <div class="card b"><h3>1 · Environmental demand</h3>What will customers, internal ones included, want from you a year from now, and how does that differ from today? Don't scale the demand down to what you think you can deliver. Marketing that forecasts 10 widgets because the factory "can only make 10" kills the real demand for 100.</div>
+    <div class="card b"><h3>2 · Present status</h3>What will your pipeline produce if nothing changes? Count it in the same units as demand and allow for losses: in chip making only about 80 percent of material started is finished.</div>
+    <div class="card o"><h3>3 · Close the gap</h3>Ask what you <i>need</i> to do and what you <i>can</i> do, then decide what you <i>will</i> do. That set of actions is your strategy. One level's strategy is the next level up's tactics.</div>
+  </div>
+  <div class="quote">Today's gap represents a failure of planning sometime in the past.<small>Chapter 6</small></div>
+  <p>So the question isn't what decision fixes today's gap, which is like hunting for petrol once the tank is empty. It is <b>"What do I have to do today to solve, or better, avoid tomorrow's problem?"</b> The output of planning is the actions it triggers. Grove admits he hardly ever opens the bound annual plan. A five-year plan really commits only the next year, and planners must be the managers who will carry the plan out. Plans also need the nerve to <b>drop</b> projects, because every yes is a no to something else.</p>
+  <p>Two middle managers show the method. Bruce had three people and too many projects. He moved non-critical work to less busy groups, got a summer student, shared work with similar teams, and used the remaining gap to justify more headcount. Cindy wasn't getting complete data from development engineers. She listed every step a new process must pass, worked out the dates by time offsets, agreed the schedule with the development manager, and then published weekly how each "vendor" was performing against it.</p>
+  <h3>Management by objectives</h3>
+  <p>MBO is planning applied to daily work, and it needs only two answers: <b>Where do I want to go?</b> (the objective) and <b>How will I pace myself to see if I'm getting there?</b> (the key results). To catch a plane in an hour, you need to pass towns A, B and C at 10, 20 and 30 minutes. If you haven't reached A after 20 minutes, you're lost and should ask for directions now.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230">
+      <rect x="20" y="20" width="270" height="56" rx="8" fill="var(--blue)"/><text x="34" y="42" font-size="12" class="w" font-weight="700">SUPERVISOR'S OBJECTIVE</text><text x="34" y="62" font-size="13.5" class="w">All plant expansions on schedule</text>
+      <rect x="320" y="20" width="300" height="56" rx="8" fill="var(--bluel)"/><text x="334" y="42" font-size="12" font-weight="700">ITS KEY RESULT</text><text x="334" y="62" font-size="13.5">Philippine decision by October</text>
+      <path d="M470 76 V104" stroke="var(--orange)" stroke-width="2.5" marker-end="url(#ar2)"/><text x="480" y="96" font-size="12" style="fill:var(--orange)">becomes</text>
+      <rect x="20" y="110" width="600" height="40" rx="8" fill="var(--orange)"/><text x="34" y="135" font-size="13.5" class="w" font-weight="700">CONSTRUCTION MANAGER'S OBJECTIVE: obtain decision on Philippine plant expansion</text>
+      <g font-size="12.5"><rect x="20" y="160" width="142" height="58" rx="6" fill="var(--soft)"/><text x="30" y="182">Land study,</text><text x="30" y="200">both sites, by June</text>
+      <rect x="172" y="160" width="142" height="58" rx="6" fill="var(--soft)"/><text x="182" y="182">Cost trade-offs:</text><text x="182" y="200">land vs building</text>
+      <rect x="324" y="160" width="142" height="58" rx="6" fill="var(--soft)"/><text x="334" y="182">Steering group</text><text x="334" y="200">decision</text>
+      <rect x="476" y="160" width="144" height="58" rx="6" fill="var(--soft)"/><text x="486" y="182">Grove ratifies</text><text x="486" y="200">by October</text></g>
+    </svg>
+    <figcaption>Nested objectives from the book: a manager's key result becomes a subordinate's objective, so if everyone below meets theirs, the level above meets its own.</figcaption>
+  </figure>
+  <p>Keep objectives few: "if we try to focus on everything, we focus on nothing". Use short periods, quarterly or even monthly, so the feedback arrives in time to act on. Grove's tongue-in-cheek Columbus story shows the limits. Queen Isabella needed money for her war, so her objective was more trade. Columbus's objective was a new route to the Orient. He hit every key result (ships, crews, a shakedown cruise, setting sail) and missed the objective, yet found a New World. MBO is a stopwatch in your own hand, not a legal document for your review. Turning down an unplanned opportunity because it isn't "a key result" is petty.</p>
+</section>
+
+<div class="part"><div class="n">Part III</div><h2>Team of Teams</h2><p>When one breakfast factory becomes a hundred.</p></div>
+
+<section>
+  <p class="kick">Chapters 7–8 · The breakfast factory goes national · Hybrid organisations</p>
+  <h2>Grove's Law: every large organisation ends up hybrid</h2>
+  <p>The breakfast business franchises nationwide. Now every question becomes "central or local?" Local managers know who reads the <i>Daily Blatt</i> and what wages their area pays. Chicago can buy the machines and enforce one quality standard. Eggs come from regional buying centres, a few hours away by truck. Tableware is uniform, but nobody in Montana should have to ask Chicago for two broken plates. Overhead creeps in, and the founder misses pouring the coffee himself. Management has become "a team of teams".</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 170">
+      <defs><linearGradient id="gr" x1="0" x2="1"><stop offset="0" stop-color="var(--orange)"/><stop offset="1" stop-color="var(--blue)"/></linearGradient></defs>
+      <rect x="40" y="60" width="560" height="18" rx="9" fill="url(#gr)"/>
+      <text x="40" y="40" font-size="14" font-weight="800" style="fill:var(--orange)">MISSION-ORIENTED</text><text x="40" y="104" font-size="12.5">each unit does everything itself</text><text x="40" y="122" font-size="12.5" class="mut">one advantage: responsiveness</text>
+      <text x="600" y="40" text-anchor="end" font-size="14" font-weight="800" style="fill:var(--blue)">FUNCTIONAL</text><text x="600" y="104" text-anchor="end" font-size="12.5">shared central departments</text><text x="600" y="122" text-anchor="end" font-size="12.5" class="mut">scale, shifting resources, expert leverage</text>
+      <circle cx="380" cy="69" r="13" fill="#fff" stroke="var(--ink)" stroke-width="3"/><text x="380" y="152" text-anchor="middle" font-size="13" font-weight="800">Intel: about ⅔ of staff in functional groups</text>
+    </svg>
+    <figcaption>Sloan of General Motors: good management is a reconciliation of centralisation and decentralisation. In other words, responsiveness against leverage.</figcaption>
+  </figure>
+  <p>Intel is built like an army. Business divisions are the fighting units with a mission, and functional groups (manufacturing, sales, finance, technology) supply them like internal subcontractors. The functional side's drawbacks are real: overloaded with requests, slow to influence through layers, and fought over by the units. The mission side has only <b>one</b> advantage, staying close to its market. But that one is decisive, because responding to the environment is the point of any business.</p>
+  <p>Grove's evidence that hybrids are inevitable: a typical trade-press announcement of a start-up reorganising into three product divisions while sales and manufacturing stay central; a school's departments plus administration; Junior Achievement; a mid-size law firm that set up a committee to share its typing pool. Conglomerates are the only exception, because they have no common purpose. Central allocation doesn't work either. In communist Hungary, young Grove the amateur photographer couldn't find high-contrast film anywhere in winter, then everyone was "up to his waist in the stuff" all summer. The people who can allocate shared resources are middle managers, through <b>dual reporting</b>.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 9 · Dual reporting</p>
+  <h2>Two bosses, on purpose</h2>
+  <div class="story"><b>Where should plant security report?</b> The plant manager can see whether the guards turn up but knows nothing about security. The corporate security chief sets the standards but can't see the guards. Intel's answer was to have them report to both: one says <i>how</i> the job is done, the other watches <i>that</i> it's done. The staff struggled with the idea ("A person has to have a boss, so who is in charge here?"), and dual reporting at Intel had "a slow, laborious birth".</div>
+  <p>The need is built into careers. A star salesman rises to general manager and now oversees manufacturing, which he knows nothing about. So manufacturing managers from several divisions start meeting over coffee, and the habit becomes a council. Each now has two supervisors: his general manager for business priorities, and a <b>group of peers</b> for technical direction. A division controller likewise reports to the general manager for priorities and to finance for methods, training and career.</p>
+  <p>Joining such a group means giving up some freedom, like two couples holidaying together: more fun, less freedom. That only works with <b>trust</b>, which is culture, not organisation chart. It is ambiguous, and Grove admits people dislike it. But like democracy, it isn't good in itself; it's just better than everything else Intel tried. One university planning council member said the arrangement taught people "to think institutionally", which is how someone representing student affairs ended up arguing for a new bulldozer.</p>
+  <h3>The two-plane organisation</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 640 250">
+      <text x="20" y="24" font-size="12.5" font-weight="800" style="fill:var(--blue)">PLANE 1 · RUN THE PLANT (80% of her time)</text>
+      <g font-size="12.5"><rect x="40" y="36" width="170" height="32" rx="6" fill="var(--bluel)"/><text x="125" y="57" text-anchor="middle">Plant engineering mgr</text>
+      <rect x="40" y="86" width="170" height="32" rx="6" fill="var(--bluel)"/><text x="125" y="107" text-anchor="middle">Supervising engineer</text>
+      <rect x="40" y="136" width="170" height="32" rx="6" fill="var(--orange)"/><text x="125" y="157" text-anchor="middle" class="w" font-weight="800">Cindy</text></g>
+      <path d="M125 68 V86 M125 118 V136" stroke="var(--muted)" stroke-width="1.5"/>
+      <text x="350" y="24" font-size="12.5" font-weight="800" style="fill:var(--green)">PLANE 2 · COORDINATE ALL PLANTS</text>
+      <g font-size="12.5"><rect x="370" y="36" width="230" height="32" rx="6" fill="var(--greenl)"/><text x="485" y="57" text-anchor="middle">Engineering Managers Council</text>
+      <rect x="370" y="86" width="230" height="32" rx="6" fill="var(--greenl)"/><text x="485" y="107" text-anchor="middle">Process coordinating group (chair)</text>
+      <rect x="370" y="136" width="70" height="32" rx="6" fill="var(--soft)"/><text x="405" y="157" text-anchor="middle">peer</text>
+      <rect x="450" y="136" width="70" height="32" rx="6" fill="var(--orange)"/><text x="485" y="157" text-anchor="middle" class="w" font-weight="800">Cindy</text>
+      <rect x="530" y="136" width="70" height="32" rx="6" fill="var(--soft)"/><text x="565" y="157" text-anchor="middle">peer</text></g>
+      <path d="M485 68 V86 M485 118 V136" stroke="var(--muted)" stroke-width="1.5"/>
+      <path d="M210 152 C300 200 380 200 450 160" fill="none" stroke="var(--orange)" stroke-width="2" stroke-dasharray="5 5"/>
+      <text x="320" y="222" text-anchor="middle" font-size="13">the same person, two organisation charts, more leverage</text>
+    </svg>
+    <figcaption>Redrawn from Grove's figure. Working on a second plane is like belonging to a church as well as a company. Each has its own hierarchy, and nobody confuses them.</figcaption>
+  </figure>
+  <p>Ranks can even flip between planes. Grove, Intel's president, sat on a strategic planning group chaired by a division controller, like being in the Army Reserve under someone you outrank at work. That let him serve "as a foot soldier rather than as a general". Temporary task forces add a third plane. In a business that changes faster than any reorganisation, such transient teams are how work gets done, and they run on culture.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 10 · Modes of control</p>
+  <h2>Market, contract, or culture</h2>
+  <p>Grove starts with a drive. You buy tyres purely on price (<b>free-market forces</b>). You stop at a red light without thinking (<b>contractual obligation</b>, enforced by the traffic police). You stop at a crash and risk yourself to help (<b>cultural values</b>). Work is governed by the same three.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 580 330">
+      <rect x="110" y="20" width="220" height="130" fill="var(--bluel)"/><rect x="330" y="20" width="220" height="130" fill="var(--orangel)"/>
+      <rect x="110" y="150" width="220" height="130" fill="var(--soft)"/><rect x="330" y="150" width="220" height="130" fill="var(--greenl)"/>
+      <text x="220" y="78" text-anchor="middle" font-size="16" font-weight="800">FREE-MARKET</text><text x="220" y="98" text-anchor="middle" font-size="16" font-weight="800">FORCES</text><text x="220" y="120" text-anchor="middle" font-size="12" class="mut">buying tyres</text>
+      <text x="440" y="78" text-anchor="middle" font-size="16" font-weight="800" style="fill:var(--orange)">NOTHING WORKS</text><text x="440" y="100" text-anchor="middle" font-size="12" class="mut">every man for himself</text><text x="440" y="116" text-anchor="middle" font-size="12" class="mut">on a sinking ship</text>
+      <text x="220" y="208" text-anchor="middle" font-size="16" font-weight="800">CONTRACTUAL</text><text x="220" y="228" text-anchor="middle" font-size="16" font-weight="800">OBLIGATIONS</text><text x="220" y="250" text-anchor="middle" font-size="12" class="mut">stopping at a red light</text>
+      <text x="440" y="208" text-anchor="middle" font-size="16" font-weight="800" style="fill:var(--green)">CULTURAL</text><text x="440" y="228" text-anchor="middle" font-size="16" font-weight="800" style="fill:var(--green)">VALUES</text><text x="440" y="250" text-anchor="middle" font-size="12" class="mut">helping at the accident</text>
+      <text x="100" y="40" text-anchor="end" font-size="12">self-interest</text><text x="100" y="275" text-anchor="end" font-size="12">group interest</text>
+      <text x="36" y="150" text-anchor="middle" font-size="12" font-weight="700" transform="rotate(-90 36 150)">INDIVIDUAL MOTIVATION</text>
+      <text x="220" y="300" text-anchor="middle" font-size="12">low</text><text x="440" y="300" text-anchor="middle" font-size="12">high</text>
+      <text x="330" y="322" text-anchor="middle" font-size="12" font-weight="700">CUA: COMPLEXITY, UNCERTAINTY, AMBIGUITY</text>
+    </svg>
+    <figcaption>Grove's quadrant. Match the mode of control to the motivation of the person and the CUA of the environment.</figcaption>
+  </figure>
+  <p><b>Markets</b> need no supervision, but the goods must carry a clear price; nobody can price each "bit" of an engineer's work. <b>Contracts</b> (employment, taxes, a utility's monopoly regulated by a commission) need managers to set rules and monitor them, which is overhead. <b>Culture</b> suits high-CUA work: the group's interest comes first, and that requires trust built from shared values, objectives and methods. Managers build it by spelling it out and, more powerfully, by example. Culture isn't always best, though. Nobody should buy tyres by it.</p>
+  <p>CUA has three faces: Cindy's job was <i>complex</i>, Bruce's <i>uncertain</i> (his boss waffled on headcount), and Mike's, under endless committees, so <i>ambiguous</i> that he quit. That suggests a career path. Give newcomers structured, low-CUA jobs. As they learn it's better to help row than to run to the bow, move them into murkier, better-paid work. Strong cultures therefore promote from within. A senior outsider hired to rescue a troubled unit starts with high self-interest in a high-CUA job, the worst quadrant. In that case, Grove says, all you can do is cross your fingers.</p>
+  <div class="story"><b>All three in one day.</b> Bob buys lunch in the cafeteria (market), turns up because he's paid to (contract), and volunteers for strategic planning because the company needs it (culture). Intel's own divisions taught salespeople pure self-interest by running prize contests against each other for the sales force's time. Yet when one division had nothing to sell for nearly a year, its sales engineers stayed, out of belief and faith in the company.</div>
+</section>
+
+<div class="part"><div class="n">Part IV</div><h2>The Players</h2><p>Motivation, maturity, reviews, hiring, pay and training: getting each individual to their personal best.</p></div>
+
+<section>
+  <p class="kick">Chapter 11 · The sports analogy</p>
+  <h2>Can't do it, or won't do it?</h2>
+  <p>When someone isn't performing, there are only two causes: they can't (capability) or they won't (motivation). Grove's test: if their life depended on it, could they do it? He couldn't play the violin to save his life, but he could probably run a six-minute mile. The manager's two tools match: <b>training</b> and <b>motivation</b>. Motivation can't be injected, only allowed to grow, so the manager's job is to create an environment in which motivated people can flourish. Someone saying "I feel motivated" means nothing; only performance counts.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 300">
+      <g font-size="14" font-weight="700">
+        <path d="M320 20 L380 76 H260 Z" fill="var(--orange)"/><text x="320" y="64" text-anchor="middle" class="w" font-size="12">SELF-ACTUALISATION</text>
+        <path d="M260 80 H380 L430 128 H210 Z" fill="var(--orange)" fill-opacity=".7"/><text x="320" y="110" text-anchor="middle" class="w">Esteem / recognition</text>
+        <path d="M210 132 H430 L480 180 H160 Z" fill="var(--blue)" fill-opacity=".55"/><text x="320" y="162" text-anchor="middle">Social / affiliation</text>
+        <path d="M160 184 H480 L530 232 H110 Z" fill="var(--blue)" fill-opacity=".75"/><text x="320" y="214" text-anchor="middle" class="w">Safety / security</text>
+        <path d="M110 236 H530 L580 284 H60 Z" fill="var(--blue)"/><text x="320" y="266" text-anchor="middle" class="w">Physiological</text>
+      </g>
+      <g font-size="12.5"><path d="M440 22 H600 M440 124 H600" stroke="var(--orange)"/><text x="604" y="62" text-anchor="end" style="fill:var(--orange)" font-weight="700">make you</text><text x="604" y="80" text-anchor="end" style="fill:var(--orange)" font-weight="700">perform</text>
+      <path d="M40 132 V284" stroke="var(--blue)" stroke-width="2"/><text x="48" y="150" style="fill:var(--blue)" font-weight="700">get you</text><text x="48" y="166" style="fill:var(--blue)" font-weight="700">to work</text></g>
+    </svg>
+    <figcaption>Grove builds on Maslow. A satisfied need stops motivating, and every level is self-limiting except the top one, which has no ceiling.</figcaption>
+  </figure>
+  <p>Each level gets a story. A friend took a poorly paid job purely for the company of colleagues. Jim, a young engineer, left a job he liked for Intel because his roommates worked there and his old office was full of married people ten years older. A Harvard MBA student moved from fear of failing, to study groups for security, to pride in his section. An earthquake sent a high-performing fab team running for the exits, straight back down to survival. Esteem works through whoever's opinion matters to <i>you</i>: a nod in the corridor from the school's star athlete. But reaching a goal can leave a vacuum, as with a friend made vice-president who fell into an early mid-life crisis.</p>
+  <h3>Self-actualisation: competence and achievement</h3>
+  <p>"What I can be, I must be." The virtuoso practises daily, and the skateboarder who won't sit still for homework repeats a trick for hours: <b>competence</b>-driven. In a ring-toss experiment, some people dropped rings straight onto the pegs (conservatives), some threw wildly from far away (gamblers), and some stood exactly where it was hard but possible (<b>achievers</b>). So managers should set MBO objectives where hard effort gives a <b>fifty-fifty</b> chance, and value output over knowing. At Grove's first research lab, knowledge was prized. At Intel, the junior engineer who delivers outranks the PhD who merely knows.</p>
+  <div class="grid2">
+    <div class="card b"><h3>Money</h3>Caribbean assembly workers quit once they'd saved a set sum, because money motivates only until a need is met. A venture capitalist chases a second ten million as keenly as the first, because there money is a <b>measure</b>. The test: if the absolute size of a raise matters, the person is driven by lower needs; if what matters is the raise compared with others', money is a scorecard.</div>
+    <div class="card o"><h3>Fear and feedback</h3>Fear of failure, if it becomes a preoccupation, makes achievers cautious. Give ring-tossers an electric shock for each miss and they'd all drop rings onto the peg. A Hungarian Olympic fencing champion quit after emigrating because nobody in the US could give him a real contest and he felt his skill fading. Achievers need relevant feedback, not a bigger office.</div>
+  </div>
+  <h3>Give them a racetrack</h3>
+  <p>Society admires a man who exhausts himself in a marathon and pities a workaholic. Grove's response: make work like competitive sport. Intel's building maintenance was mediocre for years until each building got a senior "building czar" who scored its upkeep against the other buildings. Everything improved almost at once, with no extra pay, just "a racetrack". Take the competition away and the drive goes too. A newspaper columnist whose paper merged with its rival recalled thinking, on his way to the train that day: "There isn't anyone else to beat." Sports also normalise losing: half of all matches are lost, and nobody quits mid-game. The manager is the <b>coach</b>: takes no personal credit, is tough on the team, and once played the game well.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 12 · Task-relevant maturity</p>
+  <h2>There is no best management style</h2>
+  <p>Research never found one, and neither did Intel. When managers rotated between similar groups, neither the managers nor the groups stayed high- or low-performing. Output came from particular <i>combinations</i>. The variable that decides the right style is the subordinate's <b>task-relevant maturity (TRM)</b>: achievement orientation, readiness to take responsibility, education and experience, all for <i>this specific task</i>.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 250">
+      <line x1="60" y1="200" x2="610" y2="200" stroke="var(--line)" stroke-width="2"/><line x1="60" y1="30" x2="60" y2="200" stroke="var(--line)" stroke-width="2"/>
+      <text x="335" y="236" text-anchor="middle" font-size="12.5" font-weight="700">TASK-RELEVANT MATURITY →</text>
+      <text x="26" y="115" text-anchor="middle" font-size="12" font-weight="700" transform="rotate(-90 26 115)">MANAGER'S INVOLVEMENT</text>
+      <rect x="62" y="40" width="176" height="160" fill="var(--blue)"/><rect x="242" y="100" width="176" height="100" fill="var(--blue)" fill-opacity=".55"/><rect x="422" y="160" width="186" height="40" fill="var(--blue)" fill-opacity=".3"/>
+      <text x="150" y="70" text-anchor="middle" font-size="14" font-weight="800" class="w">LOW</text><text x="150" y="96" text-anchor="middle" font-size="12.5" class="w">structured, task-oriented:</text><text x="150" y="114" text-anchor="middle" font-size="12.5" class="w">what, when, how</text>
+      <text x="330" y="126" text-anchor="middle" font-size="14" font-weight="800">MEDIUM</text><text x="330" y="148" text-anchor="middle" font-size="12">two-way communication,</text><text x="330" y="164" text-anchor="middle" font-size="12">support, mutual reasoning</text>
+      <text x="515" y="146" text-anchor="middle" font-size="14" font-weight="800">HIGH</text><text x="515" y="185" text-anchor="middle" font-size="12">agree objectives, monitor</text>
+      <line x1="62" y1="190" x2="608" y2="190" stroke="var(--orange)" stroke-width="3" stroke-dasharray="7 5"/><text x="606" y="222" text-anchor="end" font-size="12" style="fill:var(--orange)" font-weight="700">monitoring never stops (or delegation becomes abdication)</text>
+    </svg>
+    <figcaption>Grove's TRM table as a chart. None of these styles is "nicer" than another; the only question is which one works for this person on this task.</figcaption>
+  </figure>
+  <div class="grid2">
+    <div class="card b"><h3>It's specific to the task</h3>Intel moved an excellent field sales manager to run a factory unit of similar size. He floundered, then gradually recovered. "We confused the manager's general competence and maturity with his task-relevant maturity." It's like a country driver put on a city motorway.</div>
+    <div class="card b"><h3>Like raising a child</h3>Tell a toddler "no" about the heirloom vase. Run beside the first bicycle. Stop reciting safety rules. Monitor from a distance at college. Go back to a closer style if a crisis hits. The structure doesn't disappear; it moves from imposed to internalised.</div>
+  </div>
+  <div class="quote">The subordinate's tuition is paid by his customers.<small>Chapter 12, against "he has to make his own mistakes"</small></div>
+  <p>Raising TRM quickly saves time, allows real delegation, and frees the most powerful energy there is, self-actualisation. But a change in the environment drops TRM again. A sergeant in a sleepy camp merely monitors until an enemy jeep comes over the hill, then barks orders, and eases off once even the fighting becomes routine. Managers struggle with this. They gravitate to the extremes, either doing their people's work or leaving them alone. About 90 percent of supervisors Grove surveyed saw themselves as more communicative and delegating than their subordinates did, partly because a passing suggestion from the boss lands as an order. Skiing and drinking together isn't a communicating style. Grove's test for <b>friendship at work</b>: imagine giving your friend a tough performance review. If you cringe, don't make friends at work.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 13 · Performance appraisal</p>
+  <h2>Manager as judge and jury</h2>
+  <p>Ask managers about reviews and you get pride, anger, anxiety, guilt and embarrassment. Ask them about reviews they've received and you hear: too general, mixed messages, no way to improve, negatives dodged, a boss who didn't know their work, only recent events, surprises. Yet the review is the most important task-relevant feedback a manager gives, and one of the highest-leverage things they do. Its fundamental purpose is to <b>improve performance</b>, by finding missing skills and raising motivation. Grove learned how unusual it is in a culture that avoids conflict: in Hungarian "argument" was everyday speech, while Americans corrected him to "discussion".</p>
+  <h3>Assessing</h3>
+  <div class="grid2">
+    <div class="card b"><h3>Output and internal measures</h3>Weigh results (designs done, quota met) against what's happening inside the black box: morale, people being developed, groundwork for next year. The weighting can be 50/50 or 90/10, but know what you're trading. Price long-term work like a finance person would, at its present value.</div>
+    <div class="card o"><h3>The "potential" trap</h3>A general manager's unit lost money, missed every forecast and slipped schedules, yet his boss rated him outstanding because "he handles himself well". Grove refused: a manager's rating can't be higher than their organisation's. Rating form over substance tells everyone that acting like a manager is enough.</div>
+  </div>
+  <div class="story"><b>The light from distant stars.</b> One of Grove's managers had a superb year in sales, margins and products, despite high turnover and grumbling staff. Grove rated him superior. The next year everything collapsed. Thinking it through, Grove concluded the manager had actually been <i>improving</i>; the great numbers reflected work done long before, "the light from distant stars". The first rating was wrong, and he should have trusted the internal signs. The reverse also happens: a manager setting up a new plant has no output yet and still deserves credit. Managers must judge performance, not just record it.</div>
+  <h3>Delivering: the three L's</h3>
+  <div class="grid3">
+    <div class="card b"><h3>Level</h3>Be completely frank. Plain praise can be as hard to give as criticism.</div>
+    <div class="card b"><h3>Listen</h3>The words are only a vehicle for the thought. Watch the person until you're sure the message has landed, unlike the professor mumbling at the blackboard.</div>
+    <div class="card b"><h3>Leave yourself out</h3>It's the subordinate's day in court, not a place for your own nerves or guilt.</div>
+  </div>
+  <h3>The worksheet: fewer messages, better heard</h3>
+  <p>People can absorb only a few messages. If you have seven truths and they can take four, you waste three, or overload them so nothing sticks. So scan the reports, objectives and one-on-one notes, then write <i>everything</i> on a blank sheet without editing. Look for patterns and turn them into a few messages. Grove's own example:</p>
+  <div class="tbl">
+    <div class="h">Positives</div><div class="h">Negatives</div>
+    <div>Planning process much better (quick start)</div><div>Spec process: zero!</div>
+    <div>Good report to Materials Council</div><div>"Debating society" meetings, all mushy</div>
+    <div>Helped on purchasing cost analysis</div><div>Poor kick-off for spec training</div>
+  </div>
+  <p>Messages: (1) good results on the planning system; (2) <b>hard time setting clear, crisp goals; satisfied with activities instead of driving results</b>. Then Grove crossed out a third: just concentrate on number two. If the worksheet turns up a surprise, swallow hard and say it anyway.</p>
+  <h3>The blast: a review for a serious problem</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 640 250">
+      <g font-size="13.5" font-weight="700">
+        <rect x="40" y="200" width="110" height="30" fill="var(--bluel)"/><text x="50" y="220">Ignore</text>
+        <rect x="150" y="170" width="110" height="60" fill="var(--bluel)"/><text x="160" y="190">Deny</text>
+        <rect x="260" y="140" width="110" height="90" fill="var(--bluel)"/><text x="270" y="160">Blame others</text>
+        <rect x="370" y="60" width="120" height="170" fill="var(--orange)"/><text x="380" y="80" class="w">Assume</text><text x="380" y="98" class="w">responsibility</text>
+        <rect x="490" y="30" width="120" height="200" fill="var(--blue)"/><text x="500" y="50" class="w">Find solution</text>
+      </g>
+      <path d="M362 136 L362 66" stroke="var(--orange)" stroke-width="2.5" marker-end="url(#ar2)"/>
+      <text x="300" y="118" text-anchor="end" font-size="12" style="fill:var(--orange)" font-weight="700">the big, emotional step</text>
+      <text x="610" y="22" text-anchor="end" font-size="12" class="mut">an intellectual step, comparatively easy</text>
+    </svg>
+    <figcaption>Grove's stages of problem-solving. Facts and examples move someone from ignoring to denying to blaming. The jump to "it's my problem" is emotional, because it means work. Don't start on solutions while they're still blaming others.</figcaption>
+  </figure>
+  <p>An outcome is acceptable if it ends in <b>commitment to act</b>, even without agreement. "Don't confuse emotional comfort with operational need." Early in his career, one subordinate told Grove that he'd already agreed to do it, so why did Grove insist on convincing him? Grove realised the convincing was for his own comfort. If someone is stuck blaming others, use position power openly: this is what I, as your boss, am telling you to do. Grove did exactly that with a manager who refused to rewrite a shallow review, telling him the integrity of the review system simply mattered more to Grove than to him. The manager said "Okay" and rewrote it well.</p>
+  <h3>Review the ace properly</h3>
+  <p>When about twenty high-performing managers analysed reviews they had received, the reviews were well written but only looked backwards. They justified the high rating and offered little on how to get even better. Poor performers, meanwhile, get detailed improvement plans. Grove thinks that's backwards: stars do a disproportionate share of the work, so improving them is the high-leverage move. Other practices: no self-reviews (the boss must commit to a judgement first); upward reviews are fine but only advisory ("he is not your leader; you are his"); hand over the written review <i>before</i> the meeting so the person can react privately first. Grove read about a hundred reviews a year and sent them back for rewrites "with as much noise and visibility" as he could.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 14 · Two difficult tasks</p>
+  <h2>Hiring, and the valued person who quits</h2>
+  <p>"If performance appraisal is difficult, interviewing is just about impossible." You have an hour to predict how a stranger will perform somewhere new, and the references rarely volunteer criticism. Let the candidate talk <b>80 percent</b> of the time, but steer firmly; politely interrupting a rambler is your right. Use terms you both understand. Aim at four things:</p>
+  <div class="tbl">
+    <div class="h">What you're after</div><div class="h">Questions that get at it</div>
+    <div>Technical knowledge and skills</div><div>Describe projects your management's management valued · What are your weaknesses?</div>
+    <div>What they did with that knowledge</div><div>Most significant achievements · most significant failures</div>
+    <div>Why capability and performance differ</div><div>What did you learn from failures? · Problems in your current job, and how you could have prevented them</div>
+    <div>Operational values</div><div>Why are you ready? · Why should we hire you? · Most important course or project at college</div>
+  </div>
+  <p>Grove interviewed a Harvard MBA from the food industry for a cost-accounting job. Neither knew the other's field, so Grove walked him through the chip-making process and asked what a finished wafer would cost. The candidate worked out the accounting principles as he went and got it right. He was hired, and he was good. Another candidate brought an annual report marked up with sharp questions, impressed everyone, and failed badly. Admiral Rickover's three-legged chair is a trick to avoid: be straight, because first impressions last. And humility applies. A senior hire Grove vetted with great care "was a disaster from day one", and careful interviewing "merely increases your odds of getting lucky". With references, the last ten minutes of a half-hour call are worth more than the first ten, once some rapport exists.</p>
+  <h3>"Do you have a minute?"</h3>
+  <p>The resignation Grove dreaded most came from a loyal, valued person who felt unappreciated, and it always arrived when he was rushing to a meeting.</p>
+  <ol class="list">
+    <li><b>Drop everything, at once.</b> Putting it off confirms they don't matter to you. Let them deliver their rehearsed speech, then keep asking until the real reasons come out. Don't argue, lecture or panic: you can't win the war in this first skirmish, but you can lose it.</li>
+    <li><b>Make it your boss's problem too</b>, and go all out to keep them for the <i>company</i>, even by transferring them to another manager. Tomorrow that manager may do the same for you.</li>
+    <li><b>Remove the blackmail feeling:</b> "You did not blackmail us… we are just doing what we should have done."</li>
+    <li><b>If they've already accepted elsewhere, make them quit again.</b> Their commitment to the people they work with every day outweighs one to a near stranger. Other high performers are watching how this ends.</li>
+  </ol>
+</section>
+
+<section>
+  <p class="kick">Chapter 15 · Compensation as task-relevant feedback</p>
+  <h2>Pay that says something about performance</h2>
+  <p>Middle managers are paid enough that money isn't critical, but not so much that it's irrelevant. Be careful not to project your own circumstances onto theirs. The <b>performance bonus</b> should grow as a share of pay with seniority, up to 50 percent for senior people and 10–25 percent for middle managers. Grove's example splits a 20 percent bonus three ways: individual performance as the boss judges it, the immediate team's measurable results, and the company's financial results. It's paid soon enough that people remember what it was for, and never lavishly while the company is sinking.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 660 230">
+      <g transform="translate(20 10)"><text x="90" y="16" text-anchor="middle" font-size="13" font-weight="800">Experience only</text>
+        <line x1="10" y1="180" x2="180" y2="180" stroke="var(--line)" stroke-width="2"/><line x1="10" y1="30" x2="10" y2="180" stroke="var(--line)" stroke-width="2"/>
+        <path d="M10 160 Q80 70 180 64" fill="none" stroke="var(--blue)" stroke-width="3"/><text x="96" y="204" text-anchor="middle" font-size="11.5" class="mut">same pay for same tenure</text></g>
+      <g transform="translate(240 10)"><text x="90" y="16" text-anchor="middle" font-size="13" font-weight="800">Merit only</text>
+        <line x1="10" y1="180" x2="180" y2="180" stroke="var(--line)" stroke-width="2"/><line x1="10" y1="30" x2="10" y2="180" stroke="var(--line)" stroke-width="2"/>
+        <line x1="10" y1="48" x2="180" y2="48" stroke="var(--muted)" stroke-dasharray="4 4"/><text x="176" y="42" text-anchor="end" font-size="11" class="mut">job's maximum value</text>
+        <g fill="var(--blue)"><circle cx="40" cy="150" r="5"/><circle cx="40" cy="80" r="5"/><circle cx="100" cy="120" r="5"/><circle cx="100" cy="60" r="5"/><circle cx="160" cy="140" r="5"/><circle cx="160" cy="70" r="5"/></g><text x="96" y="204" text-anchor="middle" font-size="11.5" class="mut">tenure ignored (impractical)</text></g>
+      <g transform="translate(460 10)"><text x="90" y="16" text-anchor="middle" font-size="13" font-weight="800" style="fill:var(--orange)">Compromise</text>
+        <line x1="10" y1="180" x2="180" y2="180" stroke="var(--line)" stroke-width="2"/><line x1="10" y1="30" x2="10" y2="180" stroke="var(--line)" stroke-width="2"/>
+        <path d="M10 165 Q80 60 180 44" fill="none" stroke="var(--orange)" stroke-width="3"/><path d="M10 165 Q90 100 180 86" fill="none" stroke="var(--orange)" stroke-width="2.5" opacity=".7"/><path d="M10 165 Q100 130 180 124" fill="none" stroke="var(--orange)" stroke-width="2" opacity=".5"/>
+        <text x="96" y="204" text-anchor="middle" font-size="11.5" class="mut">same start, different speeds</text></g>
+    </svg>
+    <figcaption>After Grove's three salary schemes (salary against time in the job). Every job has a maximum value. Experience-only pay, as in big Japanese firms' early years, unions and many teachers' scales, tells people performance doesn't matter.</figcaption>
+  </figure>
+  <p>Merit pay requires <b>ranking</b>, and if someone comes first, someone comes last. Americans accept that in a race but find it hard at work. Promotions say most clearly what a company values, so they must follow performance.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 220">
+      <line x1="70" y1="190" x2="610" y2="190" stroke="var(--line)" stroke-width="2"/>
+      <line x1="70" y1="80" x2="610" y2="80" stroke="var(--line)" stroke-dasharray="4 4"/><line x1="70" y1="150" x2="610" y2="150" stroke="var(--line)" stroke-dasharray="4 4"/>
+      <text x="64" y="84" text-anchor="end" font-size="12">exceeds</text><text x="64" y="154" text-anchor="end" font-size="12">meets</text>
+      <polyline points="80,150 180,80 190,150 300,80 310,150 420,80 430,150 610,150" fill="none" stroke="var(--blue)" stroke-width="3"/>
+      <g font-size="12" font-weight="700" style="fill:var(--orange)"><text x="186" y="66" text-anchor="middle">promoted</text><text x="306" y="66" text-anchor="middle">promoted</text><text x="426" y="66" text-anchor="middle">promoted</text></g>
+      <g font-size="12" class="mut" text-anchor="middle"><text x="130" y="210">Job 1</text><text x="245" y="210">Job 2</text><text x="365" y="210">Job 3</text><text x="520" y="210">settles: no longer promoted</text></g>
+    </svg>
+    <figcaption>Grove's version of the Peter Principle: an achiever swings between "meets" and "exceeds" until settling at "meets". He sees no alternative, because leaving a person who exceeds requirements where they are leads to atrophy.</figcaption>
+  </figure>
+  <p>There are two kinds of "meets" performer: the settled non-competitor and the competitor on their way up. If someone is promoted far beyond their depth, <b>recycle</b> them openly back to the job they did well. It was management's mistake. Pushing them out "for their own sake" is wrong, the embarrassment fades quickly, and such people often succeed when promoted a second time.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 16 · Why training is the boss's job</p>
+  <h2>A process, not an event</h2>
+  <div class="story"><b>Two training failures.</b> Grove and his wife booked dinner at a restaurant that had lost its liquor licence. Nobody had told the new booking clerk to mention it, so the maître d' apologised to every table and nobody had wine. At Intel, an ion implanter drifted slightly out of tune. A new operator hadn't been taught the warning signs, so nearly a day's wafers, worth over a million dollars, were scrapped and deliveries slipped by more than two weeks.</div>
+  <p>Motivation is accepted as a manager's job that can't be delegated, so why hand training to specialists? The trainer must be a believable role model, teaching how <i>this</i> organisation actually works. An outside career-development course once taught Intel staff multi-year career plans with planned rotations. Intel actually ran an internal job market, and the class left demoralised.</p>
+  <div class="stat">
+    <div><b>12 h</b>Grove's example: four one-hour lectures, three hours of preparation each</div>
+    <div><b>20,000 h</b>of work the ten students will put in over the next year</div>
+    <div><b>200 h</b>gained if the course improves their performance by just 1 percent</div>
+  </div>
+  <p>At Intel, 2–4 percent of employees' time was spent in class, much of it taught by managers, from a catalogue of over 50 courses. They ranged from telephone manners to the ion implanter (about 200 hours of on-the-job training, almost five times a private pilot's licence) to "constructive confrontation". Grove taught reviews, meetings and a three-hour introduction to Intel, and said he had become far too obsolete to teach technical material. Teaching newcomers is limited by turnover and growth: 10 percent of each means retraining 20 percent of the staff every year. Teaching a new skill to everyone is five times bigger. A one-day course for Intel's middle managers cost over a million dollars in students' time alone.</p>
+  <h3>How to start</h3>
+  <p>List what your people need, ask them too, and take stock of teachers and materials. Then start small with one short course on the most urgent topic. Set deadlines, outline the course, write only the first lecture, and go. Treat the first run as a throwaway and teach it to your most knowledgeable people, who will help fix it. Ask for anonymous critiques, but expect equal shares of "too detailed", "too superficial" and "just right". You'll find training is hard work; try explaining stick-shift driving over the phone. You'll also find that you learn most, and that seeing someone use what you taught is exhilarating.</p>
+</section>
+
+<section>
+  <p class="kick">One more thing…</p>
+  <h2>Grove's 100-point homework</h2>
+  <p>Grove closes like a diet book: you've invested the price of the book and about eight hours, so now do some of the work. Collect at least <b>100 points</b> and, he promises, you'll be a distinctly better manager. Here are his assignments, lightly condensed. Your ticks are saved in this browser.</p>
+  <div class="tool">
+    <div class="meter"><div class="bar"><i id="pbar"></i></div><div class="mtxt"><span id="ptxt">0 / 100 points</span><button class="theme" id="preset" type="button" style="font-size:11px">Reset</button></div></div>
+    <div id="tasks"></div>
+  </div>
+</section>
+
+<section>
+  <p class="kick">Pocket version</p>
+  <h2>High Output Management on one card</h2>
+  <ol class="keep">
+    <li>Your output is your team's output, plus that of everyone you influence.</li>
+    <li>Find the limiting step; schedule backwards from delivery.</li>
+    <li>Catch problems at the lowest-value stage: raw egg, phone screen, rough draft.</li>
+    <li>Measure output, not activity; pair every indicator with its counter-indicator.</li>
+    <li>Use stagger charts: the drift between forecasts is the signal.</li>
+    <li>Choose high-leverage work: many people affected, brief act with long effect, unique knowledge.</li>
+    <li>Delegation without follow-through is abdication; monitor by sampling, not meddling.</li>
+    <li>One-on-ones belong to the subordinate. Ask one more question.</li>
+    <li>Free discussion, clear decision, full support; settle the six questions first.</li>
+    <li>Plan by asking what you must do today to avoid tomorrow's gap. Keep objectives few, key results dated.</li>
+    <li>Large organisations end up hybrid; dual reporting and culture make them work.</li>
+    <li>Fit your style to task-relevant maturity; judge real output, not potential; train your people yourself.</li>
+  </ol>
+</section>
+
+<footer>
+  <p>Summary of <i>High Output Management</i> by Andrew S. Grove (Random House 1983; Vintage edition 1995, with a foreword by Ben Horowitz). Figures are redrawn from the book's diagrams; the stagger chart reproduces Grove's numbers, and the linearity chart uses illustrative values. Dollar figures are those of the early 1980s. Quotes are kept brief.</p>
+  <div class="related"><a href="../culture-code/">The Culture Code</a><a href="../radical-candor/">Radical Candor</a><a href="../thanks-for-the-feedback/">Thanks for the Feedback</a><a href="../coaching-habit/">The Coaching Habit</a><a href="../good-strategy/">Good Strategy Bad Strategy</a><a href="../thinking-in-systems/">Thinking in Systems</a></div>
+</footer>
+</div>
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('hom-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('hom-theme',n);};
+
+/* meeting cost */
+function fmt(n){return Math.round(n).toLocaleString('en-GB')}
+function mc(){var p=+document.getElementById('mp').value||0,h=+document.getElementById('mh').value||0,r=+document.getElementById('mr').value||0,c=p*h*r;document.getElementById('mc').textContent=fmt(c);document.getElementById('my').textContent=fmt(c*52)}
+['mp','mh','mr'].forEach(function(id){document.getElementById(id).addEventListener('input',mc)});mc();
+
+/* Grove's homework */
+var T=[["Production",[
+ ["Identify the operations in your work most like process, assembly and test.",10],
+ ["For a current project, find the limiting step and map the flow of work around it.",10],
+ ["Place receiving, in-process and final inspection in your work; decide gate or monitor; say when you could switch to variable inspection.",10],
+ ["Define half a dozen new indicators of your group's output, covering quantity and quality.",10],
+ ["Install them as a routine and review them regularly in staff meetings.",20],
+ ["Describe your most important strategy: the environmental demand behind it, your current status, and whether success would leave you in good shape.",20]]],
+ ["Leverage",[
+ ["Work-simplify your most tedious task and remove at least 30% of its steps.",10],
+ ["Define your output: the outputs of the organisation you run and those you influence, in order of importance.",10],
+ ["Check your information system: are headlines, articles and news magazines balanced, with redundancy built in?",10],
+ ["Take a tour, then list the transactions you got involved in.",10],
+ ["Create a once-a-month “excuse” for a tour.",10],
+ ["Describe how you'll monitor the next task you delegate: what, how and how often.",10],
+ ["Build an inventory of projects for discretionary time.",10],
+ ["Hold a prepared one-on-one with each of your subordinates (explain the idea first).",20],
+ ["Classify last week's calendar as low, medium or high leverage and plan to do more of the high (and less of what?).",10],
+ ["Forecast next week's time: how much in meetings, process versus mission? If mission meetings exceed 25%, how will you cut them?",10],
+ ["Set your organisation's three most important objectives for the next three months, with key results.",20],
+ ["Have your subordinates do the same, after discussing yours.",20],
+ ["List your pending decisions and structure three with the six questions.",10]]],
+ ["People",[
+ ["Place yourself and each subordinate on Maslow's hierarchy.",10],
+ ["Give each subordinate a racetrack: a set of performance indicators.",20],
+ ["List the task-relevant feedback your people receive. How well can they gauge their progress?",10],
+ ["Rate each subordinate's task-relevant maturity and compare your actual style with the right one.",10],
+ ["Evaluate the last review you received and the last ones you gave: did they improve performance, and how did the conversation go?",20],
+ ["Rewrite one of those reviews as it should have been done.",10]]]];
+var K='hom-tasks',done={};try{done=JSON.parse(get(K)||'{}')||{}}catch(e){done={}}
+var box=document.getElementById('tasks'),n=0;
+T.forEach(function(g){var h=document.createElement('div');h.className='tgrp';h.textContent=g[0];box.appendChild(h);
+ g[1].forEach(function(t){var id='t'+(n++);var l=document.createElement('label');l.className='trow';l.innerHTML='<input type="checkbox"><span></span><b class="p">'+t[1]+'</b>';l.querySelector('span').textContent=t[0];var c=l.querySelector('input');c.checked=!!done[id];l.classList.toggle('done',c.checked);c.onchange=function(){if(c.checked)done[id]=t[1];else delete done[id];l.classList.toggle('done',c.checked);set(K,JSON.stringify(done));upd()};box.appendChild(l)})});
+function upd(){var s=0;for(var k in done)s+=done[k];var b=document.getElementById('pbar');b.style.width=Math.min(100,s)+'%';b.classList.toggle('full',s>=100);document.getElementById('ptxt').textContent=s>=100?s+' points: Grove says you’re a distinctly better manager':s+' / 100 points'}
+document.getElementById('preset').onclick=function(){done={};set(K,'{}');[].forEach.call(box.querySelectorAll('input'),function(c){c.checked=false;c.parentNode.classList.remove('done')});upd()};
+upd();
+})();
+</script>
+</body>
+</html>
