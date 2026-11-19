@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Being Mortal by Atul Gawande – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* The cover: off-white textured paper inside a mustard-gold frame with a thin inner rule;
+   the author's name and title in widely spaced black humanist capitals (Gill Sans), a tiny
+   gold leaf between two gold rules, and the word MORTAL fading into the paper from below.
+   The page keeps the paper, the gold frame, the spaced capitals (Josefin Sans as a free
+   stand-in), the leaf ornament, and the fade, used on the hero title and section rules. */
+:root{
+  --bg:#fbf8f1; --paper:#ffffff; --ink:#1d1b17; --muted:#6a6356; --line:#e8e1d1; --soft:#f4efe3;
+  --gold:#c9a64e; --golddk:#8e6f1f; --accent:#8e6f1f; --cold:#4f6b84; --warm:#a8552f;
+  --caps:"Josefin Sans","Gill Sans","Gill Sans MT",system-ui,sans-serif; --serif:"EB Garamond",Garamond,Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141210; --paper:#1c1915; --ink:#efe9dc; --muted:#a79f8f; --line:#2f2a22; --soft:#221e18;
+  --gold:#d9b75e; --golddk:#e2c47a; --accent:#e2c47a; --cold:#93b5d3; --warm:#e8916a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141210; --paper:#1c1915; --ink:#efe9dc; --muted:#a79f8f; --line:#2f2a22; --soft:#221e18;
+  --gold:#d9b75e; --golddk:#e2c47a; --accent:#e2c47a; --cold:#93b5d3; --warm:#e8916a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 19px/1.6 var(--serif)}
+a{color:var(--accent)}
+.wrap{max-width:800px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:600 13px var(--caps);letter-spacing:.08em;text-transform:uppercase}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:4px 13px 2px;font:600 12px var(--caps);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.hero{background:var(--gold);padding:clamp(10px,2.4vw,18px);border-radius:3px}
+.hero .in{background:var(--paper);outline:1.5px solid var(--gold);outline-offset:-8px;text-align:center;padding:clamp(28px,7vw,60px) 18px clamp(26px,6vw,50px)}
+.hero .au{font:400 clamp(1.5rem,6vw,2.7rem)/1.15 var(--caps);letter-spacing:.14em}
+.leaf{display:flex;align-items:center;justify-content:center;gap:10px;margin:clamp(14px,3vw,22px) 0}
+.leaf i{width:46px;height:1.5px;background:var(--gold)}
+.leaf svg{width:16px;height:12px}
+.hero h1{margin:0;font:400 clamp(2.4rem,10vw,4.6rem)/1.08 var(--caps);letter-spacing:.14em}
+.hero h1 .fade{display:inline-block;background:linear-gradient(180deg,var(--ink) 30%,var(--ink) 52%,transparent 96%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font:400 clamp(1rem,3.2vw,1.35rem)/1.4 var(--caps);letter-spacing:.06em;color:var(--muted);margin-top:clamp(16px,4vw,28px)}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 8px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.intro p{margin:0}
+.facts{font:400 13.5px/1.6 var(--caps);letter-spacing:.04em;color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:400 clamp(1.45rem,4.6vw,2rem)/1.2 var(--caps);letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+h3{font:600 1rem var(--caps);letter-spacing:.1em;text-transform:uppercase;margin:24px 0 6px;color:var(--accent)}
+.kick{font:600 12.5px var(--caps);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.quote{font:italic 400 1.3rem/1.45 var(--serif);margin:24px 0;padding:0 0 0 18px;border-left:3px solid var(--gold)}
+.quote small{display:block;font:400 12.5px var(--caps);letter-spacing:.1em;text-transform:uppercase;font-style:normal;color:var(--muted);margin-top:6px}
+.story{background:var(--soft);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:18px}
+.story b{font:600 .82em var(--caps);letter-spacing:.08em;text-transform:uppercase}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:17.5px}
+.card h3{margin-top:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.stat div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:16.5px;line-height:1.45}
+.stat b{display:block;font:400 1.75rem/1.1 var(--caps);letter-spacing:.03em;color:var(--accent);margin-bottom:4px}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.list{counter-reset:r;list-style:none;padding:0;margin:14px 0 0}
+.list li{counter-increment:r;position:relative;padding:9px 0 9px 44px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list li::before{content:counter(r);position:absolute;left:0;top:9px;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--gold);color:var(--accent);font:600 15px/31px var(--caps);text-align:center}
+.list b{font-weight:600}
+.fig{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 14px 8px;margin-top:16px;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:520px;height:auto}
+.fig text{font-family:"Josefin Sans",system-ui,sans-serif;fill:var(--ink)}
+.fig .mut{fill:var(--muted)}
+.fig figcaption{font:400 13.5px/1.45 var(--caps);letter-spacing:.02em;color:var(--muted);margin:6px 2px 4px}
+.vs{display:grid;grid-template-columns:1fr 1fr;margin-top:16px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper)}
+.vs div{padding:10px 14px;font-size:17px;border-bottom:1px solid var(--line)}
+.vs div:nth-child(odd){border-right:1px solid var(--line)}
+.vs .h{font:600 12.5px var(--caps);letter-spacing:.12em;text-transform:uppercase;background:var(--soft)}
+@media (max-width:560px){.vs{grid-template-columns:1fr}.vs div:nth-child(odd){border-right:0}}
+.phrase{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.phrase div{border-radius:10px;padding:10px 14px;font-size:17px}
+.phrase .no{background:var(--soft);text-decoration:line-through;text-decoration-color:var(--warm);color:var(--muted)}
+.phrase .yes{border:1.5px solid var(--gold);background:var(--paper)}
+@media (max-width:560px){.phrase{grid-template-columns:1fr}}
+.part{text-align:center;padding:50px 0 4px;border:0}
+.part .n{font:600 12.5px var(--caps);letter-spacing:.25em;text-transform:uppercase;color:var(--accent)}
+.part h2{font-size:clamp(1.7rem,6vw,2.4rem);margin:6px 0}
+.part p{color:var(--muted);margin:0 auto;max-width:34em}
+/* tool */
+.tool{background:var(--paper);border:2px solid var(--gold);border-radius:14px;padding:18px;margin-top:20px}
+.tool h3{color:var(--ink);font-size:1.05rem;margin-top:0}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.tabs button{font:600 12.5px var(--caps);letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 12px 4px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#111}
+.q{margin:12px 0}
+.q label{display:block;font:600 13px var(--caps);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.q .hint{font-size:15.5px;color:var(--muted);margin:0 0 6px}
+.q textarea{width:100%;min-height:68px;font:400 17px/1.45 var(--serif);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;resize:vertical}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.toolbar button{font:600 12.5px var(--caps);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:8px 14px 6px;cursor:pointer}
+.toolbar button.sec{background:none;color:var(--ink);border:1.5px solid var(--line)}
+.out{margin-top:12px;background:var(--soft);border-radius:10px;padding:12px 16px;font-size:17px;white-space:pre-wrap}
+.note{font-size:14.5px;color:var(--muted);margin-top:8px}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);font:400 1.3rem var(--caps);color:var(--accent)}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:16px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:600 12.5px var(--caps);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:6px 12px 4px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+  <header class="hero"><div class="in">
+    <div class="au">ATUL<br>GAWANDE</div>
+    <div class="leaf"><i></i><svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 0 C10 4 12 6 16 7 C12 8 10 9 8 12 C6 9 4 8 0 7 C4 6 6 4 8 0Z" fill="var(--gold)"/></svg><i></i></div>
+    <h1>BEING<br><span class="fade">MORTAL</span></h1>
+    <div class="sub">Illness, Medicine,<br>and What Matters in the End</div>
+  </div></header>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of Being Mortal by Atul Gawande">
+    <div>
+      <p>Atul Gawande, a Boston surgeon, admits that medical school taught him almost nothing about ageing or dying, and that he and his colleagues have been getting both wrong. Following his wife's grandmother Alice, a geriatrician, nursing-home rebels, hospice nurses, his own patients and finally his father, he shows how we handed the end of life to medicine, which offers safety and treatment when people want something else: a life that is still their own. His answer: ask people what matters to them, and build care around that.</p>
+      <div class="facts">Metropolitan Books / Profile, 2014 · Introduction, 8 chapters, epilogue · ~75,000 words plus notes · Epigraphs: the Mahabharata and Philip Larkin's “Ambulances”</div>
+    </div>
+  </div>
+
+  <section>
+    <p class="kick">Introduction</p>
+    <h2>Who are the primitive ones?</h2>
+    <p>The one hour Gawande's medical school spent on mortality was on Tolstoy's <i>The Death of Ivan Ilyich</i>, whose hero suffers most from “the deception, the lie” that he is merely ill, not dying. The students thought this was a failure of character in a primitive age. Then, as a junior resident, Gawande got the consent form signed for Joseph Lazaroff, a city administrator with metastatic prostate cancer pressing on his spine. Lazaroff insisted: “Don't you give up on me. You give me every chance I've got.” The operation was a technical success; he never recovered, and on day 14 Gawande took out his breathing tube.</p>
+    <p>What strikes Gawande now isn't how bad the choice was but “how much we all avoided talking honestly about the choice before him.” If he was pursuing a delusion, so were the doctors.</p>
+    <div class="stat">
+      <div><b>1945</b>Most Americans still died at home.</div>
+      <div><b>17%</b>Died at home by the 1980s. Ageing and dying had moved into hospitals and nursing homes.</div>
+      <div><b>Decades</b>“This experiment of making mortality a medical experience is just decades old… And the evidence is it is failing.”</div>
+    </div>
+    <div class="quote">Death, of course, is not a failure. Death is normal. Death may be the enemy, but it is also the natural order of things.<small>Atul Gawande</small></div>
+  </section>
+
+  <div class="part"><div class="n">Part one · Chapters 1–5</div><h2>Growing old</h2><p>How we traded the family for the independent self, and what happens when independence is no longer possible.</p></div>
+
+  <section>
+    <p class="kick">Chapter 1 · The Independent Self</p>
+    <h2>Two grandparents</h2>
+    <div class="grid2">
+      <div class="card"><h3>Sitaram, India</h3>Gawande's grandfather, a farmer in the village of Uti, lived to almost 110. He was revered, consulted on marriages and land, served first at meals. At 100 he still rode out each night to inspect his fields, on a smaller horse with someone beside him. He died after falling from a bus on his way to court business, “the way he wished and with his family around him.”</div>
+      <div class="card"><h3>Alice, Virginia</h3>His wife's grandmother, widowed at 56, lived alone for decades in Arlington: she mowed her lawn, fixed the plumbing, drove a big Chevy Impala sitting on a cushion and delivered meals-on-wheels “for those with more frailties than herself”. She would not hear of moving in with family.</div>
+    </div>
+    <p style="margin-top:16px">Why did we move from Sitaram's world to Alice's? Old age lost its rarity value (US over-65s: under 2% in 1790, 14% today), elders lost their monopoly on knowledge, and longer lives created tension over who controlled the land. Above all, given money and pensions, <i>both</i> generations chose freedom: “intimacy at a distance”. In the US, 60% of over-65s lived with a child in the early 1900s; by 1975 under 15%. “We think, nostalgically, that we want the kind of old age my grandfather had. But … we do not actually want it.”</p>
+    <div class="quote">Modernization did not demote the elderly. It demoted the family.<small>Chapter 1</small></div>
+    <p>The veneration of elders was replaced by the veneration of the independent self. One problem: sooner or later independence becomes impossible. “If independence is what we live for, what do we do when it can no longer be sustained?” Medicine measures that moment with the eight <b>Activities of Daily Living</b> (toilet, eating, dressing, bathing, grooming, getting out of bed, out of a chair, walking) and eight <b>Independent Activities</b> (shopping, cooking, housekeeping, laundry, medication, phone, travel, finances).</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 2 · Things Fall Apart</p>
+    <h2>Three ways down</h2>
+    <p>For most of history, illness struck like bad weather. Medicine has changed the shape of the curve as well as its length. Gawande's graphs (from Lunney et al., <i>JAMA</i> 2003) show three trajectories:</p>
+    <figure class="fig">
+      <svg viewBox="0 0 690 230" role="img" aria-label="Three trajectories of decline">
+        <g transform="translate(10,10)">
+          <text x="0" y="12" font-size="14" font-weight="600">1 · Sudden drop</text>
+          <line x1="0" y1="30" x2="0" y2="180" stroke="var(--muted)"/><line x1="0" y1="180" x2="190" y2="180" stroke="var(--muted)"/>
+          <path d="M2,40 H120 C135,40 145,70 150,110 L162,178" fill="none" stroke="var(--golddk)" stroke-width="3"/>
+          <text x="0" y="202" font-size="12.5" class="mut">Fine, then a trap door. Today:</text><text x="0" y="217" font-size="12.5" class="mut">incurable cancer, later but still steep.</text>
+        </g>
+        <g transform="translate(232,10)">
+          <text x="0" y="12" font-size="14" font-weight="600">2 · Hilly road down</text>
+          <line x1="0" y1="30" x2="0" y2="180" stroke="var(--muted)"/><line x1="0" y1="180" x2="190" y2="180" stroke="var(--muted)"/>
+          <path d="M2,50 H40 L46,95 L54,68 H85 L91,118 L100,95 H130 L136,150 L144,130 H160 L170,178" fill="none" stroke="var(--golddk)" stroke-width="3" stroke-linejoin="round"/>
+          <text x="0" y="202" font-size="12.5" class="mut">Organ failure: crises and rallies,</text><text x="0" y="217" font-size="12.5" class="mut">never back to the old baseline.</text>
+        </g>
+        <g transform="translate(454,10)">
+          <text x="0" y="12" font-size="14" font-weight="600">3 · Long, slow fade</text>
+          <line x1="0" y1="30" x2="0" y2="180" stroke="var(--muted)"/><line x1="0" y1="180" x2="190" y2="180" stroke="var(--muted)"/>
+          <path d="M2,128 H22 C28,128 28,140 34,140 H55 C61,140 61,150 67,150 H90 C96,150 96,160 102,160 H135 C141,160 141,166 147,166 H168 L178,178" fill="none" stroke="var(--golddk)" stroke-width="3"/>
+          <text x="0" y="202" font-size="12.5" class="mut">Frailty and old age: low function</text><text x="0" y="217" font-size="12.5" class="mut">for years. “Old age is not a diagnosis.”</text>
+        </g>
+      </svg>
+      <figcaption>Function over time until death, redrawn from the book's three graphs. More and more of us live the third curve.</figcaption>
+    </figure>
+    <h3>The story of our parts</h3>
+    <div class="grid3">
+      <div class="card">Jaw muscles lose about <b>40%</b> of their mass; by 60 a third of teeth are gone, after 85 almost 40% have none.</div>
+      <div class="card">Calcium leaves the bones and stiffens the arteries (“crunchy” aortas). Muscle loss starts around <b>40</b>; by 80, a quarter to a half is gone.</div>
+      <div class="card">The brain shrinks until there is almost an inch of spare room in the skull; by <b>85</b>, 40% of people have textbook dementia.</div>
+    </div>
+    <p style="margin-top:16px">Why? Genes explain little: only 3% of how long you live relative to average comes from your parents' lifespan, against up to 90% of your height. Leonid Gavrilov's view is that we fail like complex machines with lots of redundancy: backups take over until one defect too many tips us into frailty. Geriatrician Felix Silverstone puts it plainly: “We just fall apart.” Meanwhile the population is “rectangularising”: there are now as many 50-year-olds as five-year-olds in the US, and soon there will be as many over-80s as under-fives. The number of certified US geriatricians <i>fell</i> 25% between 1996 and 2010.</p>
+    <div class="story"><b>“You must always examine the feet.”</b> Geriatrician Juergen Bludau saw Jean Gavrilles, 85, who listed back pain, arthritis, glaucoma, incontinence and a possible lung metastasis. He asked about her ordinary day in detail (cereal and a banana she hated, <i>The Price Is Right</i>, the Red Sox), then spent most of the exam on her feet. The biggest threat, he said, was not cancer but <b>falling</b>. About 350,000 Americans break a hip each year; 40% end up in a nursing home and 20% never walk again. His plan: a podiatrist every four weeks, swap the dehydrating diuretic, add snacks and company at meals (“Eating alone is not very stimulating”). A year later: eating better, still at home, not one fall.</div>
+    <figure class="fig">
+      <svg viewBox="0 0 640 180" role="img" aria-label="Fall risk with zero versus three risk factors">
+        <text x="0" y="20" font-size="15" font-weight="600">Chance of a fall within a year</text>
+        <text x="0" y="60" font-size="14.5">No risk factors</text><rect x="200" y="44" width="48" height="24" rx="3" fill="var(--gold)" opacity=".55"/><text x="256" y="62" font-size="15" font-weight="600">12%</text>
+        <text x="0" y="104" font-size="14.5">All three risk factors</text><rect x="200" y="88" width="400" height="24" rx="3" fill="var(--golddk)"/><text x="540" y="106" font-size="15" font-weight="600" fill="#fff">≈100%</text>
+        <text x="0" y="146" font-size="13" class="mut">The three risk factors: poor balance · more than four prescription medications · muscle weakness.</text>
+      </svg>
+    </figure>
+    <div class="stat">
+      <div><b>568</b>frail over-70s randomised in Minnesota to a geriatric team or their usual doctor.</div>
+      <div><b>−25% / −50%</b>Geriatric patients were a quarter less likely to become disabled and half as likely to be depressed (deaths were equal, 10%).</div>
+      <div><b>Closed</b>Months after the results came out, the university shut its geriatrics division. The care cost $1,350 more per patient than it saved.</div>
+    </div>
+    <p style="margin-top:16px">If someone invented an “automatic defrailer”, there would be pink-ribbon campaigns for it. Instead, “it was just geriatrics”: fewer medications, trimmed toenails, square meals. “When the prevailing fantasy is that we can be ageless, the geriatrician's uncomfortable demand is that we accept we are not.” Silverstone himself, at 87, managed his own ageing well: he saved, kept friends, exercised, saw a dentist, and found purpose in caring for his blind wife Bella. (At dinner both of them choked. Ageing tips your head forward, he explained: “You have to eat looking down, sweetie.” Minutes later: “Didn't follow my own advice.”)</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 3 · Dependence</p>
+    <h2>Safe, and empty</h2>
+    <p>“It is not death that the very old tell me they fear. It is what happens short of death.” In Silverstone's words, “Old age is a continuous series of losses.” When Bella broke both legs she was moved to the nursing floor, where staff treated her as a patient, not a person: nobody learned how she liked her hair brushed. Felix moved her back to their apartment one floor up. She died four days after the casts came off, at home.</p>
+    <div class="story"><b>Alice moves out.</b> After she was scammed out of more than $7,000 by tree workers, the family chose a well-rated church-run high-rise. On her first day she reported her car stolen; she had parked it in the supermarket lot next door, and gave up driving. “In one day, she lost her car as well as her home.” Staff monitored her diet, imposed a walker and made her take pills at the nurses' station. She said only: “It just isn't home.” After a hip fracture she was moved to the nursing floor (hospital clothes, set wake-up times, roommates with dementia), and she felt “in prison for being old”. One day she whispered to her son: “I'm ready.” A few months later she vomited blood at night and told no one. In the morning she was gone.</div>
+    <h3>How nursing homes happened</h3>
+    <p>Nursing homes weren't designed for old age. Poorhouses held the frail elderly (one 1912 report: “unfit to decently house animals”). Pensions after 1935 didn't empty them, because the problem was frailty, not money. In 1954 hospitals got funds to build custodial units to <b>clear hospital beds</b>, hence “nursing” homes. When Medicare came in 1965, the invented category of “substantial compliance” let thousands of substandard homes qualify; by 1970 there were 13,000. One scholar compared this history from the elders' side to telling the opening of the American West “from the perspective of the mules”.</p>
+    <div class="grid2">
+      <div class="card"><h3>Goffman's “total institution”</h3>All of life in one place under one authority · done in batches with others treated alike · tightly scheduled from above · organised around the institution's aims. Prisons, barracks, asylums, and nursing homes.</div>
+      <div class="card"><h3>The rebels</h3>Residents labelled “feisty” fight for control: skipping the walker, sneaking cigarettes. Food is “the Hundred Years' War”: a diabetic with secret sugar cookies. “Who knew you could rebel just by eating a cookie?”</div>
+    </div>
+    <div class="story"><b>Harry Truman of Spirit Lake.</b> In 1980, at 83, he refused to leave his lodge below the rumbling Mount St. Helens: “If this place is gonna go, I want to go with it.” The eruption buried him, his 16 cats and his home, and he became a folk hero. Alice wasn't facing a volcano, but she might as well have been: “cheerful border guards had taken her keys and her passport. With her home went her control.”</div>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 4 · Assistance</p>
+    <h2>A door you can lock</h2>
+    <p>Lou Sanders, 88, a widower who had rebuilt a happy life (library, cribbage, a friendship with a young Iranian video clerk), started falling and moved in with his daughter Shelley. She became “concierge/chauffeur/schedule manager/medication-and-technology troubleshooter … cook/maid/attendant”, while also earning a living. A family Caribbean holiday was cut short after three days. Lou had made her promise never to put him in a home: “They're full of old people.”</p>
+    <div class="story"><b>Keren Brown Wilson and Park Place.</b> Wilson's mother, paralysed by a stroke at 55, moved through nursing homes saying “Take me home” and asked: “Why don't you do something to help people like me?” Jessie wanted a small place with her cat, her unfinished projects, Vicks VapoRub, a coffeepot and cigarettes, a door she could lock and no one forcing her up. In 1983 Wilson and her husband built it in Portland: 112 units for tenants, not patients, with kitchens, locking doors, pets, their own furniture, and help with everything else. Residents controlled their own risks (pizza and M&M's despite a pureed-diet order). Oregon's data: satisfaction rose, health held, physical and cognitive function <i>improved</i>, depression fell, and for residents on government support it cost 20% less than a nursing home.</div>
+    <h3>Maslow, revised: perspective matters</h3>
+    <p>Stanford's Laura Carstensen paged people aged 18 to 94 at random moments for a week, every five years. Contrary to Maslow, people grew <b>happier</b> with age: less anxiety, depression and anger. Her <b>socioemotional selectivity theory</b> says that how we spend time depends on how much time we think we have. When horizons are wide we chase novelty, achievement and new networks; when they narrow we turn to everyday pleasures and the people closest to us.</p>
+    <div class="grid3">
+      <div class="card">Young men with terminal AIDS chose like old men: time with close family over new acquaintances.</div>
+      <div class="card">Asked to imagine moving far away, the young chose like the old; promised 20 extra years, the old chose like the young.</div>
+      <div class="card">Hong Kong before the 1997 handover, after 9/11 and during SARS: age differences vanished whenever “life's fragility is primed”.</div>
+    </div>
+    <p style="margin-top:16px">Carstensen came to this through her own near-death: at 21 a drunk driver rolled her minibus, and she spent months on a ward with elderly women recovering from hip fractures. Doctors worked with her all day and waved at the woman in the next bed: “Keep up the good work, hon!” Tolstoy saw it too. Only the servant Gerasim understood Ivan Ilyich: he sat all night with his master's legs on his shoulders, caring “without calculation or deception”.</p>
+    <p>Assisted living then boomed, and was watered down into “a redecorated wing of a nursing facility”. A 2003 survey of 1,500 facilities found only <b>11%</b> offering both privacy and enough services to stay. Wilson's board wanted bigger, richer markets; she left in 2000. Why does it so often fail? Dressing someone is quicker than letting them dress themselves, so “the tasks come to matter more than the people”. Only safety gets measured: whether Dad loses weight, not whether he's lonely. And the places are sold to the children.</p>
+    <div class="quote">We want autonomy for ourselves and safety for those we love.<small>A colleague of Keren Wilson</small></div>
+    <p>Lou managed a year in assisted living, with weekends at Shelley's, a friend named George, and one brandy party with two admirers that ended with him passed out on the floor. When he got frailer Shelley found a clean nursing home, wheelchairs lined up in the corridors. Why, Gawande asked, when he was happier where he was? “Safety was paramount.” She couldn't say more.</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 5 · A Better Life</p>
+    <h2>Two dogs, four cats, a hundred parakeets</h2>
+    <p>In 1991 Bill Thomas, a 31-year-old doctor who lived off-grid on his own farm, became medical director of Chase Memorial Nursing Home in New Berlin, New York. He first ordered tests and changed medications, until the nursing director told him to back off: “I was confusing care with treatment.” The real diseases, he decided, were the <b>Three Plagues: boredom, loneliness and helplessness</b>.</p>
+    <div class="story"><b>“What about birds?”</b> Administrator Roger Halbert recalls the meeting: two dogs (the code allowed one), then cats for each floor, then: “Picture… January… What sounds do you hear?” Birdsong. “Let's put one hundred.” “ONE HUNDRED BIRDS? IN THIS PLACE?” “No, but wouldn't it be worth trying?” They got a state grant and waivers and went for a “Big Bang”: a greyhound, a lapdog, cats, live plants in every room, a garden, children after school. The hundred parakeets arrived before their cages and were set loose in the beauty salon; residents watched staff chase them “and laughed their butts off”. An old medication cart that once dispensed Thorazine became the “bird-mobile” handing out Milk-Bones.</div>
+    <div class="stat">
+      <div><b>½</b>prescriptions per resident compared with a nearby control home; psychotropics like Haldol dropped in particular.</div>
+      <div><b>38%</b>Total drug costs compared with the control home.</div>
+      <div><b>−15%</b>Deaths. Thomas: “the fundamental human need for a reason to live.”</div>
+    </div>
+    <p style="margin-top:16px">Residents who hadn't spoken started speaking, and withdrawn people asked to walk the dog. Mr. L., who had stopped eating after his wife of 60 years died, took two parakeets “with the indifference of a person who knows he will soon be gone”, began advising the staff on their care, then walked the dogs, and three months later moved back home. (In a 1970s study by Rodin and Langer, residents given a plant to water themselves were more active and appeared to live longer.)</p>
+    <div class="card" style="margin-top:16px"><h3>Royce's loyalty</h3>In <i>The Philosophy of Loyalty</i> (1908) Josiah Royce argued that merely being housed, fed and safe feels empty: we need a <b>cause beyond ourselves</b>, large (family, country) or small (a building project, a pet). We care what happens to the world after we die. “The only way death is not meaningless is to see yourself as part of something greater.” Psychologists now call this <b>transcendence</b>, a level above self-actualisation.</div>
+    <h3>The pioneers</h3>
+    <div class="grid3">
+      <div class="card"><b>NewBridge on the Charles:</b> households of at most 16 around a kitchen. A 99-year-old nearly blind woman is allowed to walk with a risk of falling: “the best thing in your life is when you can go yourself to the bathroom.” Residents tutor at the school next door.</div>
+      <div class="card"><b>Peter Sanborn Place:</b> a subsidised apartment block whose director Jacquie Carson keeps very disabled tenants at home: “We'll figure this out.” Ruth, 85, has her margarita on Friday outings. A mother is moved in next to her disabled son.</div>
+      <div class="card"><b>Green Houses:</b> Thomas's later model, at most 12 residents, a hearth, one big table, a doorbell. Staff are generalists who cook, clean and keep company, “closer to a companion than a clinician”. More than 150 in 25 states.</div>
+    </div>
+    <div class="vs">
+      <div class="h">Autonomy as free action</div><div class="h">Autonomy as authorship (Dworkin)</div>
+      <div>Living completely independently, free of all limits. A fantasy: we all end up dependent.</div><div>The freedom “to lead our own lives rather than be led along them”, shaping them by our character and loyalties.</div>
+    </div>
+    <div class="quote">All we ask is to be allowed to remain the writers of our own story.<small>Chapter 5</small></div>
+    <p>Lou ended up in a Green House at the Leonard Florence Center. He was sold the moment he heard the rooms were single: “You must be kidding!” He went to bed when he liked, got rid of the wheelchair (“I'm kind of proud that I pushed the matter”), played cribbage, toured Chengdu on YouTube, where he'd been stationed in the war, and listened to Benny Goodman at night: “Then I lie back and think.” At 94, “teeth like toppled stones”, he made Gawande unafraid of old age for the first time. Lou: “I know my time is limited. And so what? I've had a good shot at it.”</p>
+  </section>
+
+  <div class="part"><div class="n">Part two · Chapters 6–8</div><h2>Letting go</h2><p>Medicine at the end of life: when to fight, how to talk, and the courage to act on the truth.</p></div>
+
+  <section>
+    <p class="kick">Chapter 6 · Letting Go</p>
+    <h2>Hope is not a plan</h2>
+    <p>Sara Monopoli was 34 and 39 weeks pregnant when a cough turned out to be metastatic lung cancer. She had never smoked. “We don't have cancer on Tuesday,” she and her husband agreed, and Vivian was born that Tuesday. Then came erlotinib (the tumour lacked the mutation it targets), two more chemotherapies, a pulmonary embolism, and spread to her liver and spine. The family wanted to talk only about next options. Her oncologist offered a fourth chemo while she waited to qualify for an experimental Phase I drug. Gawande, asked about her separate, slow thyroid cancer, avoided the subject too, even hinting a trial drug might treat both: “Discussing a fantasy was easier.” Nine brain metastases ruled out the trial; she had hidden double vision for two months: “I just didn't want to stop treatment. They would make me stop.”</p>
+    <div class="stat">
+      <div><b>25%</b>of US Medicare spending goes on the 5% of patients in their final year, mostly on the last months, with little benefit.</div>
+      <div><b>530%</b>How far doctors' survival estimates for ~500 terminally ill patients overshot on average (Christakis). 63% overestimated.</div>
+      <div><b>40%+</b>of oncologists admit offering treatments they believe are unlikely to work.</div>
+    </div>
+    <p style="margin-top:16px">A friend in intensive care: “I'm running a warehouse for the dying.” Patients put on ventilators, defibrillated or sent to the ICU near death had a worse last week, and six months later their carers were three times as likely to be depressed. The seriously ill want other things: to avoid suffering, strengthen relationships, stay mentally aware, not be a burden and feel their life is complete.</p>
+    <div class="story"><b>Hospice is about priorities, not giving up.</b> Hospice nurse Sarah Creed visits Lee Cox, 72, dragging 30 feet of oxygen tubing; she finds missing heart pills and a broken nebuliser, reminds her of good days and makes sure the 24-hour number is taped by the phone. Ordinary medicine sacrifices the quality of life now for a chance of time later; hospice aims at “the fullest possible lives right now”. Cox was expected to live weeks and had lived a year. Firefighter Dave Galloway, 42, with pancreatic cancer, wouldn't press his morphine pump: “It feels like defeat.” Creed knelt in front of him: “You've got a beautiful wife and daughter, and you're not going to be able to enjoy them with the pain.” He pressed it. “Ninety-nine percent understand they're dying, but one hundred percent hope they're not.”</div>
+    <figure class="fig">
+      <svg viewBox="0 0 640 230" role="img" aria-label="Long-tail survival curve">
+        <line x1="40" y1="20" x2="40" y2="180" stroke="var(--muted)"/><line x1="40" y1="180" x2="620" y2="180" stroke="var(--muted)"/>
+        <path d="M42,178 C70,60 95,30 120,40 C160,55 190,120 240,150 C320,168 450,174 610,176" fill="var(--gold)" fill-opacity=".25" stroke="var(--golddk)" stroke-width="3"/>
+        <line x1="135" y1="180" x2="135" y2="40" stroke="var(--golddk)" stroke-dasharray="4 4"/>
+        <text x="142" y="36" font-size="14" font-weight="600">median: 8 months</text>
+        <text x="360" y="150" font-size="14">the long, slender tail</text>
+        <text x="40" y="202" font-size="13" class="mut">Survival after diagnosis →</text>
+        <text x="40" y="222" font-size="13" class="mut">Gould lived 20 more years. “Hope is not a plan, but hope is our plan.”</text>
+      </svg>
+      <figcaption>Stephen Jay Gould's “The Median Isn't the Message” (1985): his mesothelioma's survival curve was skewed right. Nothing wrong with hoping for the tail, says Gawande, “unless it means we have failed to prepare for the outcome that's vastly more probable.” We have built “a multitrillion-dollar edifice for dispensing the medical equivalent of lottery tickets”.</figcaption>
+    </figure>
+    <h3>What just talking does</h3>
+    <div class="grid2">
+      <div class="card"><b>Aetna “concurrent care” (2004):</b> dying patients could have hospice without giving up treatment. Hospice use went from 26% to 70%, ER visits halved, hospital and ICU use fell by over two-thirds, costs by almost a quarter. A version that only added phone calls from palliative nurses cut ICU use among the elderly by more than 85%.</div>
+      <div class="card"><b>MGH 2010:</b> 151 stage IV lung cancer patients, half also seeing a palliative care specialist who asked about their goals. They stopped chemo sooner, entered hospice earlier, suffered less, and lived <b>25% longer</b>. “If end-of-life discussions were an experimental drug, the FDA would approve it.”</div>
+      <div class="card"><b>Hospice and survival:</b> in 4,493 Medicare patients there was no difference for breast, prostate or colon cancer; pancreatic cancer +3 weeks, lung cancer +6 weeks, heart failure +3 months. “You live longer only when you stop trying to live longer.”</div>
+      <div class="card"><b>La Crosse, Wisconsin:</b> since 1991 everyone admitted is asked four questions: resuscitation? intubation and ventilation? antibiotics? tube feeding? Advance directives rose from 15% to 85% of deaths, end-of-life hospital days halved. “The discussion, not the list, was what mattered most.”</div>
+    </div>
+    <h3>How to talk (Susan Block)</h3>
+    <p>“A family meeting is a procedure, and it requires no less skill than performing an operation.” The aim isn't to pick treatment X or Y but to help people through overwhelming anxiety and find out what matters most. Sit down, make time, and if you talk more than half the time, you're talking too much.</p>
+    <div class="phrase">
+      <div class="no">“I'm sorry things turned out this way.”</div><div class="yes">“I wish things were different.”</div>
+      <div class="no">“What do you want when you are dying?”</div><div class="yes">“If time becomes short, what is most important to you?”</div>
+    </div>
+    <div class="story"><b>Chocolate ice cream and football.</b> Block's father, a 74-year-old professor, faced spinal surgery with a 20% risk of quadriplegia. Driving home across the Bay Bridge she realised she didn't know what he wanted, and turned back. He said: if he could eat chocolate ice cream and watch football on TV, he'd go through a lot of pain. After surgery he bled into his spinal cord; she had three minutes to decide on a second operation. Would he still be able to eat ice cream and watch football? Yes. “He had already made the decision.” He lived ten more years and wrote two books.</div>
+    <p style="margin-top:16px">Swedish doctors call these talks a <b>breakpoint discussion</b>: the point where you switch from fighting for time to fighting for the other things people value. We need generals like Robert E. Lee, who fight for ground that can be won and surrender what can't, not Custer. Medicine supplies neither, saying instead: “You let me know when you want to stop.” But “people die only once. They have no experience to draw on.”</p>
+    <div class="story"><b>Sara's end.</b> One February morning she woke gasping: “I can't do this. I'm scared.” There was no hospice nurse and no emergency kit, so they called 911. Her primary care doctor, Chuck Morris, met them in the ER: “I'm worried this is it.” The family agreed: antibiotics, but no ventilator. A small dose of morphine eased her breathing, and her mother then stopped the catheters and finger sticks: “I was very uninterested in their bookkeeping.” Her husband whispered: “It's okay to let go.” Of the last three months of treatment, Gawande writes, almost nothing achieved anything except making her worse.</div>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 7 · Hard Conversations</p>
+    <h2>Three kinds of doctor</h2>
+    <p>This is no longer only a rich-world story. As countries develop, deaths move from homes to hospitals, and families in Africa sell seed crops for futile treatment. At the highest incomes, deaths at home rise again. In the US home deaths fell to 17% and are now climbing; by 2010, 45% of Americans died in hospice. We are “plodding novices” at the new way.</p>
+    <div class="grid3">
+      <div class="card"><h3>Paternalistic</h3>“Take the red pill. It will be good for you.” Doctor knows best.</div>
+      <div class="card"><h3>Informative</h3>“Here's what the red pill does, here's the blue. Which one do you want?” Retail medicine.</div>
+      <div class="card"><h3>Interpretive</h3>“What is most important to you? What are your worries?” Then: which pill best serves that. Shared decision-making.</div>
+    </div>
+    <div class="story"><b>Gawande's father.</b> A tennis-playing urologist in his early 70s, Atmaram Gawande found a tumour filling his spinal canal from the brain stem to his shoulder blades. A Boston neurosurgeon pushed for immediate surgery and grew impatient with his questions. Edward Benzel at the Cleveland Clinic sat at eye level, answered every question, and saw that the questions came from fear: “more worried about what the operation might do to him than what the tumor would.” He judged the risk of surgery itself at one in four and advised him to “draw a line in the sand”. They waited, and Benzel was right. For years nothing changed that mattered to how he lived; he wore a glove on his cold, numb hand and kept operating.</div>
+    <p style="margin-top:16px">Jewel Douglass, 72, a former Miss Massachusetts with metastatic ovarian cancer and a blocked bowel, put her hair and glasses in order around a nasogastric tube: “I seem to be in a pickle.” Palliative doctor Bob Arnold's advice: people want meaning, not facts, so say what the facts mean to you, in three words. Then <b>ask, tell, ask</b>: ask what they want to know, tell them, ask what they understood.</p>
+    <div class="quote">“I am worried.”<small>Three words that convey seriousness, that you're on their side, and that there is still room for hope</small></div>
+    <p>“The weather in the room had changed.” The blockage came back the next day; she understood what was happening: the <b>ODTAA syndrome</b>, One Damn Thing After Another, the series of crises from which medicine offers only brief rescue. She went to Florida, put her feet in the sand, and paused chemotherapy to be a wife, mother and friend again.</p>
+    <h3>Moving the line in the sand</h3>
+    <p>His father's diagnosis narrowed his focus (grandchildren, a trip to India, his will). As years passed without change, his ambitions returned. When his right hand failed and he had to stop operating, he threw himself into being Rotary district governor, changed his email signature from “M.D.” to “D.G.”, and spoke at all 59 clubs twice. “You may not control life's circumstances, but getting to be the author of your life means getting to control what you do with them.”</p>
+    <div class="story"><b>The hard conversation.</b> When paralysis threatened, Atul asked his father Block's questions. Understanding: “I'm becoming paralysed.” Fears: being a burden, not caring for himself. Goals: finish his Rotary term, secure the college and family in India. Tradeoffs: ice cream and football would not be enough; he needed to be with people and in charge of his world. Full-time care, a ventilator? “Never. Let me die instead.” Afterwards: relief, clarity. During surgery his heart raced and Benzel came out to ask whether to stop. Which carried more risk of quadriplegia? Stopping. Proceed. In the ICU, intubated, his father spelled out a word in the air: <b>HAPPY</b>.</div>
+    <p style="margin-top:16px">But then specialists pushed radiation as “almost all upside”, and Atul pushed too. His father lost his sense of taste for good and 21 pounds; the tumour kept growing. The neuro-oncologist ran through eight or nine chemotherapy options in ten minutes (average syllables per drug: 4.1), never offered doing nothing, and dangled “back on a tennis court this summer”. Pressed, she said three months to three years without treatment, not much more with it. “I didn't realize.” After a night on the floor with his wife beside him (“It was almost romantic”), he chose hospice.</p>
+    <div class="story"><b>Appalachian Community Hospice.</b> The local nurse began “Do you have a lot of pain?”, then let silence work: “They sent me out with hospice papers. What do you think about that?” “I think it may be best, because I don't want chemo.” She asked which funeral home (“Jagers”) and told his wife: when he dies, don't call 911, call us. His goal: “I want to be happy.” She gave two instructions: take pain medicine on a consistent schedule and log it, and never get up without help. The overdose swings stopped, the falls stopped, his decline halted, and he hosted parties again. At Ohio University's graduation, where his son gave the address, he refused the wheelchair and walked the length of the arena floor and up twenty steps. “Here is what having a hard conversation can do.”</div>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 8 · Courage</p>
+    <h2>Strength in the face of knowledge</h2>
+    <p>In Plato's <i>Laches</i>, two generals fail to define courage. Gawande offers: courage is <b>strength in the face of knowledge of what is to be feared or hoped</b>. Ageing and sickness need two kinds: the courage to confront the truth of mortality, and the harder courage to act on it, deciding whether our fears or our hopes should matter most.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 230" role="img" aria-label="Peak-end rule: two procedures with the same peak">
+        <line x1="40" y1="20" x2="40" y2="180" stroke="var(--muted)"/><line x1="40" y1="180" x2="620" y2="180" stroke="var(--muted)"/>
+        <text x="8" y="28" font-size="12.5" class="mut">pain</text>
+        <path d="M42,150 L90,110 L130,40 L170,100 L210,60 L250,40" fill="none" stroke="var(--warm)" stroke-width="3"/>
+        <circle cx="250" cy="40" r="5" fill="var(--warm)"/><text x="190" y="28" font-size="13.5">A ends at its peak</text>
+        <path d="M42,150 L90,110 L130,40 L170,100 L210,60 L250,40 L330,90 L410,130 L490,150 L560,165" fill="none" stroke="var(--cold)" stroke-width="3" stroke-dasharray="1 0"/>
+        <circle cx="560" cy="165" r="5" fill="var(--cold)"/><text x="420" y="150" font-size="13.5">B: longer, ends gently</text>
+        <text x="40" y="202" font-size="13" class="mut">time →</text>
+        <text x="40" y="222" font-size="13" class="mut">B contains more total pain, yet patients remember it as less bad (Kahneman &amp; Redelmeier).</text>
+      </svg>
+      <figcaption>The Peak-End rule (illustrative). Our <b>remembering self</b> judges by the worst moment and the end and ignores duration; our <b>experiencing self</b> lives every minute. We see life as a story, and “in stories, endings matter”.</figcaption>
+    </figure>
+    <div class="story"><b>“No risky chances.”</b> Jewel Douglass came back with her bowel blocked and her belly full of fluid, but still introduced her family “as if I'd just arrived at a cocktail party”. Asked her fears and goals, she said: no pain or vomiting, to eat, and above all her best friend's wedding that Saturday (she'd set them up). She went home and vomited in the car. The next morning she cancelled surgery: “I'm afraid… I don't want to take risky chances.” Gawande gave her a 75/25 chance of being better off. She was telling him how to operate: look in, unblock only if it's easy, otherwise just put in drains, a <b>palliative operation</b>. It wasn't easy, so they placed two tubes, which relieved her symptoms by “90 percent”. At home she said to a tube: “Thank you for being there.” Friends came all day. Two weeks later her daughter wrote: “She drifted quietly to sleep… My dad was alone by her side… such a perfect ending.”</div>
+    <h3>Assisted dying</h3>
+    <p>We already let people refuse food and treatment, switch off pacemakers, and receive sedation that may hasten death. The debate is about which mistake we fear more: prolonging suffering or cutting short a life still worth living. Gawande would support laws allowing lethal prescriptions (about half the people who get one never use it). His worry is less abuse than dependence: in the Netherlands, 1 in 35 deaths in 2012 involved a request for assisted suicide, “not a measure of success. It is a measure of failure”, while palliative care lagged.</p>
+    <div class="quote">Our ultimate goal, after all, is not a good death but a good life to the very end.<small>Chapter 8</small></div>
+    <div class="story"><b>One good day.</b> Peg Bachelder, his daughter Hunter's piano teacher, had a sarcoma (once misdiagnosed, with one doctor handing her a book on “how to let go of your pain”), then a leukaemia caused by radiation. In hospital she was hopeless: “Not much” could be done. Hospice offered just one good day. Days later she phoned: if Hunter was willing, she'd like to teach again. Her nurse timed extra morphine before each lesson; “She was more alive running up to a lesson.” She lived six weeks, gave Hunter four lessons, and two final recitals of Brahms, Dvořák, Chopin and Beethoven were played in her living room. To Hunter she whispered: “You're special.” Medicine has forgotten the <b>dying role</b>: sharing memories, passing on wisdom and keepsakes, settling relationships, making peace with God, making sure those left behind will be okay.</div>
+    <div class="story"><b>His father's end.</b> “Good enough” could be found: dinner parties, a dozen emails a day, Djokovic at Wimbledon. Then the emails came garbled (“sorry for scrambeled letth ter”), then pneumonia and an ER. The family declined intubation, though they disagreed: Atul feared prolonging suffering, his mother and sister feared letting go too soon. Back home: “Whatever happens, will you promise me you won't let me suffer?” “Yes.” He ate chapatis and dahl, looked at photos, and in his last waking hour asked to see pictures of his grandchildren. Of food he said: “This—this food prolongs the process… I don't want to experience this.” He died at home a little after six one evening, with his family around him.</div>
+  </section>
+
+  <section>
+    <p class="kick">Epilogue</p>
+    <h2>Well-being, not just survival</h2>
+    <p>“We've been wrong about what our job is in medicine. We think our job is to ensure health and survival. But really it is larger than that. It is to enable well-being.” Palliative care brought this thinking to the dying; it will be worth celebrating only when every clinician does it: “No separate specialty required.” Interventions are justified only if they serve the larger aims of a person's life. Forget that and “the suffering we inflict can be barbaric”; remember it and “the good we do can be breathtaking.”</p>
+    <p>The family scattered his father's ashes in Athens, in his village, and from a boat on the Ganges at Varanasi at dawn. Gawande, no believer, had taken antibiotics before the ritual sips of river water and still caught <i>Giardia</i>. He was moved anyway: his father had seen himself as a link in a chain of history. “He let us know he was at peace. That let us be at peace, too.”</p>
+
+    <div class="tool" id="talk">
+      <h3>Prepare a hard conversation</h3>
+      <p style="margin:0 0 4px;font-size:17px">The questions Gawande used with his father and Jewel Douglass, drawn from Susan Block. Use them for yourself, a parent or a patient. Notes stay only in this browser.</p>
+      <div class="tabs" id="who" role="group" aria-label="Who is this for">
+        <button type="button" data-w="self" aria-pressed="true">For me</button><button type="button" data-w="other" aria-pressed="false">For someone I love</button>
+      </div>
+      <div id="qs"></div>
+      <div class="toolbar"><button type="button" id="sum">Show summary</button><button type="button" class="sec" id="clr">Clear</button></div>
+      <div class="out" id="out" hidden></div>
+      <p class="note">Tips from the book: sit down and make time; listen more than half the time; say “I am worried”, “I wish things were different”; ask, tell, ask. It is a process, not one talk.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Pocket version</p>
+    <h2>What to keep</h2>
+    <ol class="keep">
+      <li>Death is normal, not a failure. Medicine's job is well-being, not just survival.</li>
+      <li>For the old and the frail, the goal is not safety alone but a life that is still their own: a home, choices, a reason to live.</li>
+      <li>Watch for falls; less medication, care for feet and nutrition, and company at meals can keep people independent longer.</li>
+      <li>Perspective shapes priorities: when time feels short, we choose close people and everyday pleasures.</li>
+      <li>We all need loyalty to something beyond ourselves, even a parakeet, a garden or a student.</li>
+      <li>Autonomy means remaining the author of your own story, not doing everything yourself.</li>
+      <li>Hope is not a plan. Prepare for the likely outcome while allowing for the long tail.</li>
+      <li>Have the hard conversation early: understanding, fears and hopes, tradeoffs, and who decides.</li>
+      <li>Say “I am worried”; ask, tell, ask; talk less than half the time.</li>
+      <li>Hospice and palliative care aim at the best possible day today, and often bring longer life too.</li>
+      <li>Endings matter: help people play their dying role and close their story on their own terms.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Summary of <em>Being Mortal: Illness, Medicine, and What Matters in the End</em> by Atul Gawande (2014). Trajectory graphs redrawn from the book (after Lunney et al., <i>JAMA</i> 2003); the survival and Peak-End charts are illustrative. Quotations are brief; stories condensed and paraphrased.</p>
+    <p>Related summaries:</p>
+    <div class="related"><a href="../four-things/">The Four Things That Matter Most</a><a href="../how-to-know-a-person/">How to Know a Person</a><a href="../difficult-conversations/">Difficult Conversations</a><a href="../4000-weeks/">Four Thousand Weeks</a><a href="../top-five-regrets/">The Top Five Regrets of the Dying</a><a href="../30-lessons/">30 Lessons for Living</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('bm-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('bm-theme',n);};
+
+var Q=[
+ ["Understanding","What is my understanding of where things stand, and of what might happen?","What is your understanding of where things are with your health, and what might be ahead?"],
+ ["Fears","What am I most afraid of?","What are your biggest fears and worries about the future?"],
+ ["Hopes and goals","If time becomes short, what is most important to me?","If time becomes short, what is most important to you?"],
+ ["Tradeoffs","What am I willing to go through for the chance of more time, and what not? (Block's father: chocolate ice cream and football.)","What are you willing to go through for the possibility of more time, and what not?"],
+ ["A good day","What would a good day look like for me now?","What would a good day look like for you now?"],
+ ["Who decides","Who should make decisions for me if I can't, and do they know all this?","Who should make decisions for you if you can't, and have you talked to them?"]];
+var who=get('bm-who')||'self',data={};
+try{data=JSON.parse(get('bm-talk')||'{}')||{}}catch(e){data={}}
+var box=document.getElementById('qs');
+function render(){box.innerHTML='';Q.forEach(function(q,i){var d=document.createElement('div');d.className='q';var id='q'+i;d.innerHTML='<label for="'+id+'">'+(i+1)+' · '+q[0]+'</label><p class="hint">'+(who==='self'?q[1]:q[2])+'</p><textarea id="'+id+'"></textarea>';var t=d.querySelector('textarea');t.value=data[who+i]||'';t.oninput=function(){data[who+i]=t.value;set('bm-talk',JSON.stringify(data))};box.appendChild(d)});
+ [].forEach.call(document.querySelectorAll('#who button'),function(b){b.setAttribute('aria-pressed',b.dataset.w===who)})}
+[].forEach.call(document.querySelectorAll('#who button'),function(b){b.onclick=function(){who=b.dataset.w;set('bm-who',who);document.getElementById('out').hidden=true;render()}});
+document.getElementById('sum').onclick=function(){var o=document.getElementById('out'),lines=[];Q.forEach(function(q,i){var v=(data[who+i]||'').trim();if(v)lines.push(q[0].toUpperCase()+': '+v)});o.textContent=lines.length?lines.join('\n\n'):'Nothing written yet. Start with question 1.';o.hidden=false};
+document.getElementById('clr').onclick=function(){Q.forEach(function(q,i){delete data[who+i]});set('bm-talk',JSON.stringify(data));document.getElementById('out').hidden=true;render()};
+render();
+})();
+</script>
+</body>
+</html>
