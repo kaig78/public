@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Culture Code by Daniel Coyle – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* The cover: a black ground with a sunburst of thin gold lines, each ending in a gold dot,
+   radiating from a solid gold disc that carries the subtitle in bold condensed capitals;
+   title and author in widely spaced white Roman capitals. The page keeps the black hero
+   and the sunburst, Cinzel for names, a condensed sans for labels, and gold as the accent.
+   The three skills get three tones: gold (safety), copper (vulnerability), ivory-blue (purpose). */
+:root{
+  --bg:#faf7f0; --card:#ffffff; --ink:#1a1814; --muted:#655e52; --line:#e9e2d4; --soft:#f3eee3;
+  --gold:#b58a2c; --goldl:#e7c26e; --s1:#b58a2c; --s2:#b4562f; --s3:#3d6b8c;
+  --cin:Cinzel,"Trajan Pro",Georgia,serif; --cond:"Barlow Semi Condensed","DIN Condensed",system-ui,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d0c0a; --card:#16140f; --ink:#f1ece0; --muted:#aaa291; --line:#2a261d; --soft:#1d1a14;
+  --gold:#e7c26e; --s1:#e7c26e; --s2:#f0905f; --s3:#8fc1e3; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d0c0a; --card:#16140f; --ink:#f1ece0; --muted:#aaa291; --line:#2a261d; --soft:#1d1a14;
+  --gold:#e7c26e; --s1:#e7c26e; --s2:#f0905f; --s3:#8fc1e3; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.62 var(--serif)}
+a{color:var(--gold)}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:600 14px var(--cond);letter-spacing:.03em}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:2px 13px;font:600 13px var(--cond);cursor:pointer}
+/* hero */
+.hero{position:relative;background:#000;color:#fff;border-radius:6px;overflow:hidden;text-align:center;padding:clamp(22px,5vw,40px) 12px clamp(18px,4vw,30px)}
+.hero .tt{font:500 clamp(1rem,3.2vw,1.5rem) var(--cin);letter-spacing:.35em}
+.hero h1{margin:0;font:500 clamp(2.2rem,9vw,4.4rem)/1.05 var(--cin);letter-spacing:.12em}
+.burst{position:relative;width:min(100%,430px);aspect-ratio:1;margin:6px auto}
+.burst canvas{position:absolute;inset:0;width:100%;height:100%}
+.burst .disc{position:absolute;left:50%;top:50%;width:43%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:#e7c26e;color:#111;display:flex;align-items:center;justify-content:center;font:700 clamp(.8rem,3vw,1.2rem)/1.2 var(--cond);letter-spacing:.06em;text-transform:uppercase;padding:8%}
+.hero .au{font:500 clamp(1.2rem,4.6vw,2.1rem) var(--cin);letter-spacing:.2em}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 10px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.intro p{margin:0}
+.facts{font:500 14px/1.5 var(--cond);color:var(--muted);margin-top:8px;letter-spacing:.02em}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:600 clamp(1.4rem,4.6vw,1.95rem)/1.2 var(--cin);margin:0 0 12px;letter-spacing:.02em}
+h3{font:700 1.1rem var(--cond);letter-spacing:.03em;margin:22px 0 6px;color:var(--c,var(--gold))}
+.kick{font:700 13px var(--cond);letter-spacing:.18em;text-transform:uppercase;margin:0 0 6px;color:var(--c,var(--gold))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-top:16px}
+.card h3:first-child{margin-top:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.grid2 .card,.grid3 .card{margin:0}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+.card.t{border-top:4px solid var(--c,var(--gold))}
+.quote{font:italic 400 1.22rem/1.5 var(--serif);margin:22px 0;padding-left:16px;border-left:4px solid var(--c,var(--gold))}
+.quote small{display:block;font:600 13.5px var(--cond);font-style:normal;color:var(--muted);margin-top:4px;letter-spacing:.03em}
+.story{background:var(--soft);border-radius:12px;padding:14px 18px;margin-top:16px;font-size:17.5px}
+.story b{font-family:var(--cond);font-size:1.05em;letter-spacing:.02em}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:16px;line-height:1.45}
+.stat b{display:block;font:700 1.7rem/1.1 var(--cond);color:var(--c,var(--gold));margin-bottom:4px}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.list{counter-reset:r;list-style:none;padding:0;margin:14px 0 0}
+.list li{counter-increment:r;position:relative;padding:9px 0 9px 46px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list li::before{content:counter(r);position:absolute;left:0;top:8px;width:32px;height:32px;border-radius:50%;background:var(--c,var(--gold));color:#111;font:700 16px/32px var(--cond);text-align:center}
+.list b{font-family:var(--cond);font-size:1.05em;letter-spacing:.02em}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips span{font:600 14px var(--cond);letter-spacing:.02em;border:1.5px solid var(--c,var(--gold));border-radius:999px;padding:3px 11px}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 14px 8px;margin-top:16px}
+.fig{overflow-x:auto}.fig svg{display:block;width:100%;min-width:520px;height:auto}
+.fig figcaption{font:500 14px/1.4 var(--cond);color:var(--muted);margin:6px 2px 4px;letter-spacing:.02em}
+.fig text{font-family:"Barlow Semi Condensed",system-ui,sans-serif;fill:var(--ink)}
+.fig .mut{fill:var(--muted)}
+.partHead{padding:48px 0 6px;text-align:center;border:0}
+.partHead .n{font:700 13px var(--cond);letter-spacing:.25em;text-transform:uppercase;color:var(--c)}
+.partHead h2{font-size:clamp(1.8rem,6vw,2.6rem);margin:4px 0}
+.partHead p{color:var(--muted);margin:0 auto;max-width:36em}
+.partHead .rule{width:80px;height:3px;background:var(--c);margin:14px auto 0;border-radius:2px}
+.vs{display:grid;grid-template-columns:1fr 1fr;margin-top:14px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.vs div{padding:10px 14px;font-size:16.5px;border-bottom:1px solid var(--line)}
+.vs .h{font:700 13.5px var(--cond);letter-spacing:.1em;text-transform:uppercase;background:var(--soft)}
+.vs div:nth-child(odd){border-right:1px solid var(--line)}
+@media (max-width:560px){.vs{grid-template-columns:1fr}.vs div:nth-child(odd){border-right:0}}
+.phr{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.phr span{background:var(--soft);border-radius:6px;padding:3px 9px;font:italic 400 16px var(--serif)}
+.qa{font:400 15.5px/1.5 var(--serif);background:var(--soft);border-radius:10px;padding:10px 14px;margin-top:10px}
+.qa p{margin:3px 0}.qa b{font-family:var(--cond)}
+/* tool */
+.tool{background:var(--card);border:2px solid var(--gold);border-radius:16px;padding:18px;margin-top:20px}
+.tool h3{margin-top:0;color:var(--ink);font-size:1.25rem}
+.st{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:16.5px}
+.st .sk{font:700 11.5px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block}
+.st .rt{display:flex;gap:4px}
+.st .rt button{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:700 14px var(--cond);cursor:pointer}
+.st .rt button[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#111}
+@media (max-width:520px){.st{grid-template-columns:1fr}}
+.bars{margin-top:14px}
+.bar{display:grid;grid-template-columns:110px 1fr 48px;gap:10px;align-items:center;margin:6px 0;font:600 15px var(--cond)}
+.bar .tr{height:12px;background:var(--soft);border-radius:99px;overflow:hidden}
+.bar .tr i{display:block;height:100%;width:0;background:var(--c);transition:width .3s}
+.advice{margin-top:12px;background:var(--soft);border-radius:12px;padding:12px 16px;font-size:16.5px;min-height:3em}
+.advice b{font-family:var(--cond)}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);font:500 1.3rem var(--cin);color:var(--gold)}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:15.5px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:600 14px var(--cond);text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+  <header class="hero">
+    <div class="tt">THE</div>
+    <h1>CULTURE<br>CODE</h1>
+    <div class="burst"><canvas id="burst" aria-hidden="true"></canvas><div class="disc">The Secrets of Highly Successful Groups</div></div>
+    <div class="au">DANIEL COYLE</div>
+  </header>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of The Culture Code by Daniel Coyle">
+    <div>
+      <p>Why do some groups add up to more than the sum of their parts, and others to less? Daniel Coyle spent four years inside eight of the world's most successful groups: Navy SEAL Team Six, Pixar, the San Antonio Spurs, a Harlem charter school, the Upright Citizens Brigade comedy troupe, IDEO, Danny Meyer's restaurants and even a gang of jewel thieves. His conclusion: culture isn't a trait a group <i>has</i>, like DNA. It is a set of learnable skills. <b>Build safety, share vulnerability, establish purpose</b>, built from the bottom up: first connection, then cooperation, then direction. Each part follows the same pattern: how the skill works, the groups and leaders who live it, then concrete ideas for action.</p>
+      <div class="facts">Bantam, 2018 · 3 parts, 17 chapters + epilogue · ~60,000 words · Epigraph: <i>culture</i>, from the Latin <i>cultus</i>, care</div>
+    </div>
+  </div>
+
+  <section>
+    <p class="kick">Introduction · When two plus two equals ten</p>
+    <h2>Kindergartners beat MBAs</h2>
+    <p>Designer Peter Skillman gave four-person teams twenty strands of dry spaghetti, a yard of tape, a yard of string and a marshmallow that had to end up on top of the tallest possible tower. Business students strategised, analysed, divided the tasks and built. Kindergartners barely talked, stood close together, grabbed materials, tried things and spoke in bursts: “Here! No, here!” Over dozens of trials the kindergartners won easily.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 210" role="img" aria-label="Bar chart of average spaghetti tower heights">
+        <g>
+          <text x="0" y="34" font-size="16">Kindergartners</text><rect x="150" y="18" width="416" height="24" rx="4" fill="var(--gold)"/><text x="574" y="36" font-size="16" font-weight="700">26 in</text>
+          <text x="0" y="78" font-size="16">CEOs</text><rect x="150" y="62" width="352" height="24" rx="4" fill="var(--gold)" opacity=".7"/><text x="510" y="80" font-size="16" font-weight="700">22 in</text>
+          <text x="0" y="122" font-size="16">Lawyers</text><rect x="150" y="106" width="240" height="24" rx="4" fill="var(--gold)" opacity=".5"/><text x="398" y="124" font-size="16" font-weight="700">15 in</text>
+          <text x="0" y="166" font-size="16">Business students</text><rect x="150" y="150" width="152" height="24" rx="4" fill="var(--gold)" opacity=".35"/><text x="310" y="168" font-size="16" font-weight="700">&lt;10 in</text>
+        </g>
+        <text x="150" y="202" font-size="13" class="mut">Average tower height in Skillman's spaghetti–marshmallow challenge</text>
+      </svg>
+    </figure>
+    <p>The students weren't really collaborating; they were doing <b>status management</b>: who's in charge, can I criticise this idea? The children were working “together in a smarter way”. “We focus on what we can see, individual skills. But individual skills are not what matters. What matters is the interaction.” A Harvard study of more than 200 companies found a strong culture raised net income by 756% over eleven years.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 230" role="img" aria-label="The three skills as stacked layers">
+        <rect x="20" y="160" width="600" height="56" rx="8" fill="var(--s1)" opacity=".9"/>
+        <text x="40" y="186" font-size="20" font-weight="700" fill="#111">1 · Build safety</text><text x="40" y="206" font-size="14" fill="#111">Signals of connection → belonging and identity (“the glue”)</text>
+        <rect x="70" y="92" width="500" height="56" rx="8" fill="var(--s2)" opacity=".9"/>
+        <text x="90" y="118" font-size="20" font-weight="700" fill="#111">2 · Share vulnerability</text><text x="90" y="138" font-size="14" fill="#111">Habits of mutual risk → trusting cooperation (“the muscle”)</text>
+        <rect x="120" y="24" width="400" height="56" rx="8" fill="var(--s3)" opacity=".9"/>
+        <text x="140" y="50" font-size="20" font-weight="700" fill="#111">3 · Establish purpose</text><text x="140" y="70" font-size="14" fill="#111">Narratives → shared goals and values (direction)</text>
+      </svg>
+      <figcaption>The three skills work from the bottom up: first connection, then cooperation, then a shared direction.</figcaption>
+    </figure>
+    <div class="quote">Culture is a set of living relationships working toward a shared goal. It's not something you are. It's something you do.<small>Daniel Coyle</small></div>
+  </section>
+
+  <div class="partHead" style="--c:var(--s1)"><div class="n">Skill 1</div><h2>Build Safety</h2><p>How small signals of connection tell the ancient brain “you are safe here”.</p><div class="rule"></div></div>
+
+  <section style="--c:var(--s1)">
+    <p class="kick">Chapter 1 · The good apples</p>
+    <h2>Safety, not smarts</h2>
+    <div class="story"><b>The bad apple experiment.</b> Will Felps planted an actor, Nick, in 40 four-person teams to play the Jerk, the Slacker or the Downer. In almost every group he cut performance by 30–40%, and people copied him; soon three others had their heads on the desk too. One group resisted, thanks to “Jonathan”, who didn't take charge or give speeches. When Nick was a jerk, Jonathan leaned forward, laughed, defused it, then turned to the others: “Hey, what do you think of this?” He even asked Nick. “Jonathan's group succeeds not because its members are smarter but because they are safer.”</div>
+    <p style="margin-top:16px">Members of top groups all describe each other with one word: <b>family</b>. In all of them Coyle saw the same small behaviours, and found them “almost physically addictive”:</p>
+    <div class="chips"><span>close physical proximity, often circles</span><span>lots of eye contact</span><span>physical touch</span><span>short, energetic exchanges</span><span>everyone talks to everyone</span><span>few interruptions</span><span>lots of questions</span><span>intensive, active listening</span><span>humour and laughter</span><span>small courtesies</span></div>
+    <h3>Belonging cues</h3>
+    <p>At MIT, Alex “Sandy” Pentland measures groups with “sociometer” badges that ignore <i>what</i> is said and track <i>how</i>: proximity, energy, turn-taking, mimicry. These <b>belonging cues</b> answer the brain's ancient questions: <i>Are we safe here? What's our future with these people? Are there dangers lurking?</i> Their message is one phrase: <b>You are safe here.</b> Amy Edmondson calls the resulting state psychological safety. Belonging is easy to destroy and hard to build. “Any jackass can kick down a barn,” said Sam Rayburn, “but it takes a good carpenter to build one.”</p>
+    <div class="grid3">
+      <div class="card t"><h3>Energy</h3>They invest in the exchange that's happening.</div>
+      <div class="card t"><h3>Individualisation</h3>They treat the person as unique and valued.</div>
+      <div class="card t"><h3>Future orientation</h3>They signal the relationship will continue.</div>
+    </div>
+    <div class="stat">
+      <div><b>5 min</b>The cues in the first five minutes of 46 mock salary negotiations predicted the outcomes.</div>
+      <div><b>≈100%</b>Cues alone predicted executives' ranking of business pitches almost perfectly. Investors reading the plans on paper ranked them differently.</div>
+      <div><b>5 factors</b>Pentland's predictors of team performance (below). None involves individual skill.</div>
+    </div>
+    <ol class="list">
+      <li>Everyone talks and listens in roughly equal measure, and keeps contributions short.</li>
+      <li>High eye contact; energetic conversations and gestures.</li>
+      <li>Members talk directly to one another, not only to the leader.</li>
+      <li>Back-channel and side conversations within the team.</li>
+      <li>Members periodically go exploring outside the team and bring information back.</li>
+    </ol>
+    <p style="margin-top:14px">“Individuals aren't really individuals. They're more like musicians in a jazz quartet.” And: words are noise; the signal is <i>we are safe and connected</i>.</p>
+  </section>
+
+  <section style="--c:var(--s1)">
+    <p class="kick">Chapter 2 · The billion-dollar day when nothing happened</p>
+    <h2>Belonging is a flame you keep feeding</h2>
+    <div class="story"><b>“THESE ADS SUCK.”</b> In 2002 Overture, which had invented pay-per-click advertising and had a billion-dollar IPO, was racing Google to match searches to ads. On Friday 24 May, Larry Page pinned bad AdWords results to the Google kitchen wall with that three-word note. Jeff Dean, an engineer from another department, saw it while making a cappuccino, worked through the weekend without asking anyone, and emailed a fix at 5:05 a.m. Monday. Google's profits went from $6 million to $99 million the next year; by 2014 AdWords earned $160 million a day. Dean barely remembered it: “It didn't feel special… That kind of thing happened all the time.” Google wasn't smarter than bureaucracy-bound Overture. “It won because it was safer.”</div>
+    <div class="stat">
+      <div><b>2×</b>A useless “tip” from a peer named Steve doubled motivation on a puzzle; people worked over 50% longer (Gregory Walton).</div>
+      <div><b>+422%</b>“I'm so sorry about the rain. Can I borrow your cellphone?” versus the plain request (Alison Wood Brooks).</div>
+      <div><b>½</b>Suicide-attempt patients who got a few friendly postcards from the hospital were readmitted at half the rate over two years (772 patients).</div>
+    </div>
+    <p style="margin-top:16px">Cues must be repeated, Walton says, like telling your partner you love them. The reason is the <b>amygdala</b>, the brain's vigilance device. On a belonging cue it flips from guard dog to guide dog and starts tracking your new group intensely (Jay Van Bavel). So belonging feels as if it comes from the inside out, but it actually works <b>from the outside in</b>: a flame fed by steady signals that <i>we are close, we are safe, we share a future</i>. (Footnote: in ~200 Silicon Valley start-ups, the “commitment model”, built on shared values and bonds, beat the “star” and “professional” models and reached IPO three times as often.)</p>
+  </section>
+
+  <section style="--c:var(--s1)">
+    <p class="kick">Chapter 3 · The Christmas Truce, the one-hour experiment and the missileers</p>
+    <h2>Belonging against the odds, and its opposite</h2>
+    <div class="story"><b>Flanders, Christmas 1914.</b> Trenches sometimes seven metres apart, mud, rats, German children reciting a “Hymn of Hate”, generals threatening court-martial for any truce. Yet on Christmas Eve soldiers sang carols back and forth, climbed out, shook hands, played football, swapped photos and buried the dead, along two-thirds of the British-held line. It wasn't a miracle. Since early November there had been <b>microtruces</b>: both sides stopped shooting at mealtimes, while gathering straw, near latrines; a “pet sniper” sent his nightly “good-night kiss” at 9:15; a British machine-gunner rapped out a song rhythm and the German answered. Each one meant one side left itself exposed and the other didn't exploit it: <i>they saw me</i>. Captain Edward Hulse swapped his silk scarf with a German major: “if I had seen it on a cinematograph film I should have sworn that it was faked!” (The generals ended it with raids and troop rotations; the next Christmas both sides fought as usual.)</div>
+    <figure class="fig">
+      <svg viewBox="0 0 640 200" role="img" aria-label="WIPRO retention after seven months">
+        <text x="0" y="22" font-size="15" font-weight="700">WIPRO call centre: one extra hour of onboarding</text>
+        <text x="0" y="62" font-size="15">Hour on the company</text><rect x="210" y="46" width="100" height="24" rx="4" fill="var(--gold)" opacity=".4"/><text x="318" y="64" font-size="14" class="mut">baseline</text>
+        <text x="0" y="104" font-size="15">Hour on the person</text><rect x="210" y="88" width="350" height="24" rx="4" fill="var(--gold)"/><text x="568" y="106" font-size="15" font-weight="700">+250%</text>
+        <text x="0" y="150" font-size="13" class="mut">After 7 months, “hour on the person” trainees were 250% more likely to still be there than</text>
+        <text x="0" y="168" font-size="13" class="mut">“hour on the company” trainees, and 157% more likely than the control group.</text>
+      </svg>
+    </figure>
+    <p>Attrition at WIPRO in Bangalore was 50–70% a year, and higher pay didn't help. In 2010 researchers gave new hires one extra hour. Group one learned about the company and got a company sweatshirt. Group two answered “What is unique about you that leads to your happiest times and best performances at work?” and got a sweatshirt with <i>their own name</i> on it. Individualised, future-oriented cues changed everything.</p>
+    <h3>The perfect storm of anti-belonging: the missileers</h3>
+    <p>About 750 US Air Force officers guard 450 Minuteman III nuclear missiles. Failures piled up: six nuclear warheads flown across the country by mistake (2007), failed inspections, burnout and court-martial rates twice the Air Force average (“We don't care if things go properly. We just don't want to get into trouble”), a commanding general fired after a drunken Moscow trip, and a cheating ring of 34 officers plus 60 who knew. Each time, leaders cracked down harder. Read through the belonging lens, the culture fails all three questions:</p>
+    <div class="grid3">
+      <div class="card t"><h3>Connected?</h3>No. 24-hour shifts in pairs in decaying Eisenhower-era silos, asbestos everywhere.</div>
+      <div class="card t"><h3>Shared future?</h3>No. A Cold War mission that no longer exists, no promotion path: “the island of misfit toys”.</div>
+      <div class="card t"><h3>Safe?</h3>No. Tests demanding 100%: “You're either perfect or you're a bum… Everyone walks around like scared puppies.”</div>
+    </div>
+    <p style="margin-top:14px">Nuclear submarine crews have the same isolation and tedium, but proximity, purposeful patrols and real careers, and they largely avoid these problems. The difference wasn't character. It was the cues.</p>
+  </section>
+
+  <section style="--c:var(--s1)">
+    <p class="kick">Chapters 4–5 · The relationship maker, the architect of the greenhouse</p>
+    <h2>Two ways leaders build belonging</h2>
+    <h3>Gregg Popovich: up close</h3>
+    <p>Analyst Neil Paine calculated every NBA coach's “wins above expectation” given his players' talent. Popovich's Spurs won 117 more games than expected, more than double the rate of the next-best coach. Paine titled his graph “Gregg Popovich Is Impossible”. Popovich is a volcanic, old-school authoritarian; his players say he “will tell you the truth, with no bullshit, and then he'll love you to death.” He spent four days on St. Croix with Tim Duncan before drafting him, talking about everything except basketball. He shows players documentaries on Selma or Syria and asks “What would you have done?” He builds relationships over food and wine (“hug 'em and hold 'em”).</p>
+    <div class="card t"><h3>“Magical feedback”</h3>Middle-school students whose essays came back with one sentence revised far more and improved significantly: <i>“I'm giving you these comments because I have very high expectations and I know that you can reach them.”</i> Nineteen words, three cues: <b>you are part of this group · this group is special, we have high standards · I believe you can reach them.</b> Popovich toggles three signals like a camera: up close (<i>I care about you</i>), middle distance (<i>here's the truth about your performance</i>), wide shot (<i>life is bigger than basketball</i>).</div>
+    <div class="story"><b>Game 6, 2013 Finals.</b> Up five with 28 seconds left (66:1 odds), champagne on ice, the Spurs lost to Ray Allen's corner three and then overtime. Tony Parker cried under a towel; Duncan lay on the floor. Popovich didn't send them to the hotel. “Family! Everybody to the restaurant.” He arrived first, rearranged the tables (team in the middle, families around), ordered food and wine, sat devastated, then visibly shifted and greeted every player like the father of a bride. No speeches. GM R. C. Buford: “the single greatest thing I've ever seen in sports.”</div>
+    <h3 style="margin-top:22px">Tony Hsieh: by design</h3>
+    <p>The Zappos founder (revenues $32m in 2002 to $1.1bn in 2009) bought 28 acres of rundown downtown Las Vegas to rebuild it. He is shy and anti-charismatic in conversation, but on a 45-minute walk he connected seven people with someone they should meet. His metric is <b>collisions</b>, serendipitous encounters: 1,000 “collisionable hours” a year for himself, 100,000 per acre for the project. He closed a side entrance at Zappos to funnel people together and once moved a sofa at a party to get people mixing. “My job is to architect the greenhouse.” He sent McKinsey consultant Maggie Hsu eight names: “Meet these people. Then ask them who else you should meet.” She moved there. About one in twenty visitors does.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 260" role="img" aria-label="The Allen Curve: communication frequency drops steeply with distance">
+        <line x1="60" y1="20" x2="60" y2="210" stroke="var(--muted)"/><line x1="60" y1="210" x2="620" y2="210" stroke="var(--muted)"/>
+        <text x="8" y="16" font-size="13" class="mut">How often</text><text x="8" y="31" font-size="13" class="mut">people talk</text>
+        <text x="560" y="232" font-size="13" class="mut">Distance</text>
+        <path d="M70,28 C90,32 105,60 118,120 C130,175 160,195 230,202 C320,206 450,208 610,208" fill="none" stroke="var(--gold)" stroke-width="4"/>
+        <line x1="120" y1="210" x2="120" y2="40" stroke="var(--gold)" stroke-dasharray="4 4"/>
+        <text x="126" y="52" font-size="14" font-weight="700">≈ 8 m: the cliff</text>
+        <text x="240" y="186" font-size="14">≈ 50 m: communication stops, “as if a tap has been shut off”</text>
+        <text x="66" y="230" font-size="13" class="mut">6 m</text><text x="110" y="230" font-size="13" class="mut">8 m</text><text x="250" y="230" font-size="13" class="mut">50 m</text>
+        <text x="320" y="110" font-size="14">A different floor “may as well be a different country”.</text>
+      </svg>
+      <figcaption>The Allen Curve (illustrative shape). Thomas Allen found the only factor behind the best engineering “clusters” was the distance between desks. Even email follows it: co-located colleagues emailed four times as often and finished projects 32% faster.</figcaption>
+    </figure>
+  </section>
+
+  <section style="--c:var(--s1)">
+    <p class="kick">Chapter 6 · Ideas for action</p>
+    <h2>Thirteen ways to build safety</h2>
+    <ol class="list">
+      <li><b>Overcommunicate your listening.</b> Head forward, eyebrows up, a stream of “yes, uh-huh, gotcha”. Avoid interruptions (top salespeople hardly ever interrupt), except bursts of shared excitement.</li>
+      <li><b>Spotlight your fallibility early, especially as a leader.</b> “This is just my two cents.” “I could be wrong.” “What am I missing?” The Spurs' GM told Coyle: “I'm absolutely terrified of the future.”</li>
+      <li><b>Embrace the messenger.</b> Don't just not shoot them: “hug the messenger” (Edmondson).</li>
+      <li><b>Preview future connection.</b> A minor-league coach pointing to a big-league star on the bus TV: “Three years ago he was sitting right in that seat where you are.”</li>
+      <li><b>Overdo thank-yous.</b> Popovich thanks stars “for allowing me to coach you”. People thanked for helping one student helped a different one twice as often (Grant &amp; Gino). Thomas Keller thanks the dishwasher at openings.</li>
+      <li><b>Be painstaking in hiring.</b> Zappos offers trainees $2,000 to quit; about 10% take it.</li>
+      <li><b>Eliminate bad apples.</b> The All Blacks' rule: “No Dickheads.”</li>
+      <li><b>Create safe, collision-rich spaces.</b> Bank of America synced call-centre coffee breaks: productivity +20%, turnover from 40% to 12%. Ten-person cafeteria tables instead of four: +10%. Pixar brought its food in-house.</li>
+      <li><b>Make sure everyone has a voice.</b> No meeting ends until everyone has spoken; Toyota's andon cord. Captain Abrashoff took the USS <i>Benfold</i> from worst to among the best after 30-minute talks with all 310 sailors: <i>What do you like most? Least? What would you change if you were captain?</i></li>
+      <li><b>Pick up trash.</b> John Wooden in the locker room, Ray Kroc cleaning a mop wringer with a toothbrush, the All Blacks “sweeping the sheds”: <i>muscular humility</i>.</li>
+      <li><b>Capitalise on threshold moments.</b> New Pixar hires, director or barista, sit in the directors' fifth row and hear: “Whatever you were before, you are a filmmaker now.”</li>
+      <li><b>Avoid sandwich feedback.</b> Handle negatives as a two-way conversation (first asking if they want feedback) and positives as clear bursts of delight.</li>
+      <li><b>Embrace fun.</b> Laughter is the most fundamental sign of safety and connection.</li>
+    </ol>
+  </section>
+
+  <div class="partHead" style="--c:var(--s2)"><div class="n">Skill 2</div><h2>Share Vulnerability</h2><p>Cooperation doesn't wait for trust. It grows out of repeated, mutual moments of risk.</p><div class="rule"></div></div>
+
+  <section style="--c:var(--s2)">
+    <p class="kick">Chapter 7 · “Tell me what you want, and I'll help you”</p>
+    <h2>Flight 232</h2>
+    <p>On 10 July 1989 the tail engine of United 232 exploded over Iowa and severed all hydraulic lines: no controls, a one-in-a-billion failure nobody trained for. Captain Al Haynes grabbed the yoke: “I got it” (later “the dumbest thing I've ever said in my life”). Then passenger Denny Fitch, a United flight instructor, came to the cockpit: <b>“Tell me what you want, and I'll help you.”</b> He knelt between the seats steering with the throttles, and Haynes asked his crew: <b>“Anybody have any ideas?”</b></p>
+    <div class="qa"><p><b>Haynes:</b> How do we get gear down?</p><p><b>Fitch:</b> Well, they can free-fall…</p><p><b>Records:</b> We're gonna have trouble stopping too.</p><p><b>Haynes:</b> Oh yeah. We don't have any brakes.</p><p><b>Records:</b> No brakes?</p><p><b>Fitch:</b> Just mash it, mash it once. That's all you get.</p></div>
+    <figure class="fig">
+      <svg viewBox="0 0 640 170" role="img" aria-label="Notifications per minute, normal crew versus Flight 232">
+        <text x="0" y="22" font-size="15" font-weight="700">“Notifications” per minute</text>
+        <text x="0" y="62" font-size="15">Proficient crew, normal landing</text><rect x="250" y="46" width="110" height="24" rx="4" fill="var(--s2)" opacity=".5"/><text x="368" y="64" font-size="15" font-weight="700">20</text>
+        <text x="0" y="104" font-size="15">Flight 232 after the explosion</text><rect x="250" y="88" width="330" height="24" rx="4" fill="var(--s2)"/><text x="588" y="106" font-size="15" font-weight="700">60+</text>
+        <text x="0" y="150" font-size="13" class="mut">Notification = a finger-point (“I see this”) with unspoken questions: do you agree? what else do you see?</text>
+      </svg>
+    </figure>
+    <div class="stat" style="--c:var(--s2)">
+      <div><b>185</b>people survived the cartwheeling crash landing in Sioux City, including the whole crew.</div>
+      <div><b>0 / 28</b>experienced crews who managed it in the NTSB's simulator re-runs. All 28 crashed.</div>
+      <div><b>“runway”</b>Even the jokes kept coming: “You want to be particular and make it a runway, huh?”</div>
+    </div>
+    <p style="margin-top:16px">The best groups build these clumsy, candid moments in on purpose: Pixar's <b>BrainTrust</b> (“All our movies suck at first”), the SEALs' <b>After-Action Review</b> (“close” to fistfights), and Gramercy Tavern, where a manager tells a new waiter on her first shift: “It's not going to go perfectly… If you ask for help ten times, then we'll know it was good.”</p>
+  </section>
+
+  <section style="--c:var(--s2)">
+    <p class="kick">Chapter 8 · The vulnerability loop</p>
+    <h2>Vulnerability comes before trust</h2>
+    <p>Strangers who ask each other Arthur Aron's deeper questions (“If a crystal ball could tell you the truth about yourself… what would you want to know?” “Is there something you've dreamed of doing for a long time? Why haven't you done it?”) feel about 24% closer than those who swap small talk (best gift, last pet, high school). Harvard's Jeff Polzer: vulnerability is “a really clear signal that you have weaknesses, that you could use help”, and “the second person is the key”: do they answer with their own, or cover up?</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 300" role="img" aria-label="The vulnerability loop, five steps in a circle">
+        <circle cx="320" cy="150" r="104" fill="none" stroke="var(--s2)" stroke-width="3" stroke-dasharray="6 6"/>
+        <g font-size="15">
+          <circle cx="320" cy="46" r="9" fill="var(--s2)"/><text x="336" y="40" font-weight="700">1 · A sends a signal of vulnerability</text>
+          <circle cx="419" cy="118" r="9" fill="var(--s2)"/><text x="436" y="122" font-weight="700">2 · B detects it</text>
+          <circle cx="381" cy="234" r="9" fill="var(--s2)"/><text x="398" y="252" font-weight="700">3 · B signals their own</text>
+          <circle cx="259" cy="234" r="9" fill="var(--s2)"/><text x="40" y="252" font-weight="700">4 · A detects it</text>
+          <circle cx="221" cy="118" r="9" fill="var(--s2)"/><text x="12" y="104" font-weight="700">5 · A norm forms:</text><text x="12" y="122">closeness and trust rise</text>
+        </g>
+        <text x="320" y="146" font-size="18" font-weight="700" text-anchor="middle">“I need you.”</text>
+        <text x="320" y="168" font-size="14" text-anchor="middle" class="mut">“You have a role here.”</text>
+      </svg>
+      <figcaption>The vulnerability loop, the basic building block of cooperation.</figcaption>
+    </figure>
+    <div class="stat" style="--c:var(--s2)">
+      <div><b>+50%</b>Cooperation in the Give-Some Game after people had to speak to a stone-faced, silent audience. Feeling powerful did the opposite.</div>
+      <div><b>Contagious</b>People helped by a stranger with a crashed computer cooperated more with the helper, and equally with complete strangers (David DeSteno).</div>
+      <div><b>8 h 52 min</b>MIT found all ten DARPA red balloons hidden across the US, with 4,665 helpers, using a four-day-old website.</div>
+    </div>
+    <div class="story"><b>The Red Balloon Challenge (2009).</b> Rival teams offered prize money to whoever found a balloon, so telling friends lowered your own chances. They asked participants to be vulnerable while staying invulnerable themselves. MIT, entering four days late, promised $2,000 per balloon to the finder, $1,000 to whoever invited them, $500 to the person who invited the inviter, and so on: <i>everyone</i> who helped would share. Every invitation became a vulnerability loop: “Hey, I'm doing this crazy balloon-hunting project and I need your help.” It was “a vulnerability-sharing contest”.</div>
+    <p style="margin-top:16px">Small versions are everywhere: a baseball coach opening the season with “I was so nervous about talking to you today”; a company “Failure Wall”; Steve Jobs starting meetings with “Here's a dopey idea” (Jony Ive: “Sometimes they were truly dreadful”). “Vulnerability doesn't come after trust. It precedes it. Leaping into the unknown, when done alongside others, causes the solid ground of trust to materialise beneath our feet.”</p>
+  </section>
+
+  <section style="--c:var(--s2)">
+    <p class="kick">Chapter 9 · The super-cooperators</p>
+    <h2>SEALs, comedians, jewel thieves</h2>
+    <div class="grid3">
+      <div class="card t"><h3>Navy SEALs</h3>Draper Kauffman, a nearsighted navy reject who saw the brotherhood of France's Corps Franc in 1940, designed their training: <b>Hell Week</b>; everything in <b>boat teams of six</b>; <b>no officer/enlisted distinction</b> (he did it all too). Its core is <b>Log PT</b>: six trainees, a 250-pound, ten-foot log, up to 90 minutes. Teammate falters → others take more pain → balance regained. A weaker team in sync beats a stronger one out of sync.</div>
+      <div class="card t"><h3>Upright Citizens Brigade</h3>Alumni include Amy Poehler, Donald Glover and Kate McKinnon. Their training is the <b>Harold</b>: 8 players, 9 interwoven scenes, ~40 minutes; usually it's “people tumbling down the stairs”. Del Close's rules: <i>You are all supporting actors · Never enter a scene unless you are needed · Save your fellow actor · No jokes · Trust · LISTEN.</i> Followed by blunt coaching: “You steamrollered your partner.”</div>
+      <div class="card t"><h3>The Pink Panthers</h3>Jewel thieves who robbed Harry Winston in London of $105m dressed as women, and rammed Audis into a Dubai mall, in under 45 seconds. Police imagined ex-commandos run by a mastermind. In fact they were friends from three Balkan towns, in teams of five or six with set roles (scout, muscle, logistics) and no orders: “We all depend on each other.” “My one mistake would be their fall.”</div>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 640 150" role="img" aria-label="Structure of a Harold">
+        <g font-size="14" text-anchor="middle">
+          <rect x="4" y="50" width="70" height="44" rx="6" fill="var(--s2)" opacity=".85"/><text x="39" y="77" fill="#111" font-weight="700">Opening</text>
+          <rect x="84" y="30" width="44" height="26" rx="5" fill="var(--soft)" stroke="var(--s2)"/><text x="106" y="48">1A</text>
+          <rect x="84" y="60" width="44" height="26" rx="5" fill="var(--soft)" stroke="var(--s2)"/><text x="106" y="78">1B</text>
+          <rect x="84" y="90" width="44" height="26" rx="5" fill="var(--soft)" stroke="var(--s2)"/><text x="106" y="108">1C</text>
+          <rect x="138" y="50" width="76" height="44" rx="6" fill="var(--s2)" opacity=".85"/><text x="176" y="77" fill="#111" font-weight="700">Group game</text>
+          <rect x="224" y="30" width="44" height="26" rx="5" fill="var(--soft)" stroke="var(--s2)"/><text x="246" y="48">2A</text>
+          <rect x="224" y="60" width="44" height="26" rx="5" fill="var(--soft)" stroke="var(--s2)"/><text x="246" y="78">2B</text>
+          <rect x="224" y="90" width="44" height="26" rx="5" fill="var(--soft)" stroke="var(--s2)"/><text x="246" y="108">2C</text>
+          <rect x="278" y="50" width="76" height="44" rx="6" fill="var(--s2)" opacity=".85"/><text x="316" y="77" fill="#111" font-weight="700">Group game</text>
+          <rect x="364" y="30" width="44" height="26" rx="5" fill="var(--soft)" stroke="var(--s2)"/><text x="386" y="48">3A</text>
+          <rect x="364" y="60" width="44" height="26" rx="5" fill="var(--soft)" stroke="var(--s2)"/><text x="386" y="78">3B</text>
+          <rect x="364" y="90" width="44" height="26" rx="5" fill="var(--soft)" stroke="var(--s2)"/><text x="386" y="108">3C</text>
+        </g>
+        <text x="424" y="56" font-size="14">All A scenes connect,</text><text x="424" y="76" font-size="14">all B scenes connect…</text><text x="424" y="104" font-size="13" class="mut">Two people per scene; the</text><text x="424" y="121" font-size="13" class="mut">“comedy version of Log PT”.</text>
+      </svg>
+    </figure>
+  </section>
+
+  <section style="--c:var(--s2)">
+    <p class="kick">Chapters 10–11 · Dave Cooper's rules, the Nyquist method</p>
+    <h2>Leaders who invite challenge, and people who draw others out</h2>
+    <p>The SEAL Team Six leader operators admire most, Dave Cooper, isn't the strongest or the best shot; he's the best at building teams. On New Year's Eve 2001 his commander overruled his objection and drove a night convoy from Jalalabad to Bagram; they were ambushed, surrendered, and were somehow spared. Lesson: <b>authority bias</b>. “Having one person tell other people what to do is not a reliable way to make good decisions.” His campaign against it: “You can call me Coop, Dave, or Fuckface.” “Now let's see if someone can poke holes in this.” Would a new guy tell him to move away from a window in Fallujah? “That's exactly how you should conduct yourself all the time.”</p>
+    <div class="card t"><h3>The After-Action Review</h3>Right after every mission: put the guns down, circle up. Led by enlisted men, no agenda, no minutes, “rank switched off, humility switched on”. Go through it chronologically, every decision, ask why and then why again. The goal isn't blame but a <b>shared mental model</b>. The most important four words a leader can say: <b>“I screwed that up.”</b> The tone: a “backbone of humility”.</div>
+    <div class="story"><b>The Bin Laden raid.</b> In March 2011 Cooper objected three times to using untested stealth helicopters (“I was pretty sure I was getting fired”). Overruled, he took a third path: in replica compounds in three states he ran downed-helicopter drills over and over (“You're going down, now”), each followed by an AAR, until the men joked about it. On 1 May one helicopter crashed in the courtyard. The command room went silent for three or four seconds; then the operators poured out and worked the problem. “They didn't miss a beat.” 38 minutes. “Being vulnerable together is the only way a team can become invulnerable.” “The real courage is seeing the truth and speaking the truth to each other.”</div>
+    <h3 style="margin-top:22px">Nyquists: the spark plugs</h3>
+    <p>At Bell Labs, home of the transistor and the laser, the ten scientists with the fattest patent binders shared one habit: lunch with Harry Nyquist, a quiet Swede who was warm (“fatherly”) and relentlessly curious, and who asked “Why don't you try that?” At IDEO, Roshi Givechi plays that role: she stands at the side of the room asking simple questions, listens with her eyes, and “surfaces” tensions. “It's not about decisiveness, it's about discovery.” To find a group's Nyquist, ask: <i>If I could meet just one person to understand your culture, who would it be?</i></p>
+    <div class="grid3">
+      <div class="card"><i>“The one thing that excites me about this particular opportunity is ___”</i></div>
+      <div class="card"><i>“I confess, the one thing I'm not so excited about is ___”</i></div>
+      <div class="card"><i>“On this project, I'd really like to get better at ___”</i></div>
+    </div>
+    <p style="margin-top:14px">Neurologist Carl Marci measured two people's arousal and found moments of perfect sync, <b>concordances</b>. They happen when one person talks and the other listens intently. His own therapist created several without saying a word. “It's very hard to be empathic when you're talking.” (Questions make up only 6% of what people say, but trigger 60% of the discussion that follows.)</p>
+  </section>
+
+  <section style="--c:var(--s2)">
+    <p class="kick">Chapter 12 · Ideas for action</p>
+    <h2>Workouts for group vulnerability</h2>
+    <ol class="list">
+      <li><b>The leader is vulnerable first and often.</b> Danny Meyer after his first TED talk: “Can you see my leg shaking?… almost a complete shit show… Thanks, Chip and Haley.”</li>
+      <li><b>Ask Laszlo Bock's three questions:</b> one thing I do that you'd like me to continue · one thing I don't do enough · what can I do to make you more effective? Ask for one thing each.</li>
+      <li><b>Overcommunicate expectations.</b> IDEO: “The more complex the problem, the more help you need.”</li>
+      <li><b>Deliver the negative stuff in person</b>, even a rejected expense item. The Cubs' Joe Maddon has rule-breakers draw an expensive wine from a bowl, buy it, and drink it with him: discipline tied to reconnection.</li>
+      <li><b>Watch two moments in a new group:</b> the first vulnerability and the first disagreement. “Hey, that's interesting. Why don't you agree? I might be wrong.”</li>
+      <li><b>Listen like a trampoline</b> (Zenger &amp; Folkman, 3,492 managers): make them feel safe, take a helping stance, gently challenge assumptions, offer occasional suggestions. The first answer isn't the answer.</li>
+      <li><b>Resist reflexively adding value.</b> “Say more about that.” Suggestions only after a “scaffold of thoughtfulness”.</li>
+      <li><b>Use candour-generating practices:</b> AARs, BrainTrusts (critique only, no solutions, so ownership stays put), Red Teams.</li>
+      <li><b>Aim for candour, avoid brutal honesty</b>: smaller, targeted, less personal.</li>
+      <li><b>Embrace the discomfort</b>: emotional pain and a sense of inefficiency are the workout.</li>
+      <li><b>Align language with action.</b> Carrier pilots are “recovered”, not landed; Pixar “pluses” films instead of giving notes.</li>
+      <li><b>Separate performance review from development.</b></li>
+      <li><b>Use flash mentoring</b>: shadow someone for a few hours.</li>
+      <li><b>Make the leader occasionally disappear.</b> About once a month Popovich calls a timeout and never walks over. Cooper's best teams were the ones he was least involved with.</li>
+    </ol>
+    <div class="grid2">
+      <div class="card t"><h3>After-Action Review</h3>1 What were our intended results? 2 What were our actual results? 3 What caused our results? 4 What will we do the same next time? 5 What will we do differently?</div>
+      <div class="card t"><h3>Before-Action Review</h3>1 What are our intended results? 2 What challenges can we anticipate? 3 What have we or others learned from similar situations? 4 What will make us successful this time?</div>
+    </div>
+  </section>
+
+  <div class="partHead" style="--c:var(--s3)"><div class="n">Skill 3</div><h2>Establish Purpose</h2><p>Stories and simple signals that link where we are to where we want to go.</p><div class="rule"></div></div>
+
+  <section style="--c:var(--s3)">
+    <p class="kick">Chapter 13 · Three hundred and eleven words</p>
+    <h2>The Credo and the Tylenol crisis</h2>
+    <p>In 1975 Johnson &amp; Johnson's president James Burke challenged his managers to debate the company's 1943 one-page Credo: customers first, then employees, community, and stockholders last. “If you can't live by its principles, we ought to tear it off the walls.” A chairman said it was like a Catholic challenging the pope; Burke: “I challenge [the pope] every day.” After a day-long, philosophy-seminar debate they recommitted, and he repeated the challenges throughout the company.</p>
+    <div class="story"><b>30 September 1982.</b> Seven people died in Chicago from cyanide-laced Extra-Strength Tylenol. The FBI and FDA advised recalling only in Chicago. Burke recalled every Tylenol product nationwide, 31 million pills, at a cost of $100 million, citing the Credo's first line. J&amp;J sent 2,000+ salespeople to doctors and had tamper-proof packaging out within six weeks. Market share recovered: “the greatest comeback since Lazarus”. Burke: thousands of decisions “all had a splendid consistency… the Credo ran that.”</div>
+    <p style="margin-top:16px">Successful groups signal purpose “as subtle as a punch in the nose”: a twisted World Trade Center girder at SEAL headquarters, a 20-foot Luxo lamp at Pixar, KIPP bathroom mirrors asking <i>Where will YOU go to college?</i>, and mottoes repeated endlessly (“Work hard, be nice”; “Shoot, move, and communicate”). Like starlings in a murmuration, each tracking only its six or seven nearest neighbours (University of Rome, 2007), groups move as one by watching a few clear signals. These <b>high-purpose environments</b> supply two locators: <b>here is where we are</b> and <b>here is where we want to go</b>.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 140" role="img" aria-label="Mental contrasting from present to goal past obstacles">
+        <circle cx="70" cy="70" r="40" fill="var(--s3)" opacity=".9"/><text x="70" y="66" font-size="15" font-weight="700" text-anchor="middle" fill="#111">Here is</text><text x="70" y="84" font-size="15" font-weight="700" text-anchor="middle" fill="#111">where we are</text>
+        <line x1="115" y1="70" x2="520" y2="70" stroke="var(--s3)" stroke-width="3" marker-end="url(#ar)"/>
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10z" fill="var(--s3)"/></marker></defs>
+        <rect x="250" y="40" width="110" height="60" rx="8" fill="var(--soft)" stroke="var(--s3)"/><text x="305" y="68" font-size="15" text-anchor="middle" font-weight="700">Obstacles</text><text x="305" y="86" font-size="13" text-anchor="middle" class="mut">seen vividly</text>
+        <circle cx="570" cy="70" r="45" fill="none" stroke="var(--s3)" stroke-width="3"/><text x="570" y="66" font-size="15" font-weight="700" text-anchor="middle">Where we</text><text x="570" y="84" font-size="15" font-weight="700" text-anchor="middle">want to go</text>
+      </svg>
+      <figcaption>Gabriele Oettingen's “mental contrasting”: picture the goal, then the obstacles. Teenagers preparing for the PSAT did 60% more practice questions; dieters ate less and lost more.</figcaption>
+    </figure>
+    <div class="grid2">
+      <div class="card t"><h3>Pygmalion</h3>In 1965 Robert Rosenthal told teachers a “Harvard Test of Inflected Acquisition” had identified 20% of pupils as high-potential. They were picked at random. First-graders labelled gifted gained 27 IQ points versus 12; second-graders 17 versus 7. The story changed teachers' <b>warmth, input, response opportunities and feedback</b>.</div>
+      <div class="card t"><h3>Five minutes of “why”</h3>Adam Grant's university fundraising callers faced 93% rejection. After a five-minute visit from a scholarship student explaining what the money meant, time on the phone rose 142% and weekly revenue 172%. Same pay, same task, a clearer beacon.</div>
+    </div>
+  </section>
+
+  <section style="--c:var(--s3)">
+    <p class="kick">Chapter 14 · The hooligans and the surgeons</p>
+    <h2>Consistent small signals beat big speeches</h2>
+    <div class="story"><b>Euro 2004, Portugal.</b> At Euro 2000 in Belgium, despite millions spent on riot gear, more than 1,000 English fans were arrested. Clifford Stott argued riot gear itself <i>triggers</i> hooliganism (95% of those arrested had no record). Portugal hid the riot gear and sent out liaison officers in light-blue vests chosen for “the gift of the gab”. When fans kicked footballs onto café tables, police waited until a ball came to them, then kept it: “you have to play by the shared rules.” The press mocked it as “Hug-a-Thug”. Over a million fans came; in Stott's areas, just <b>one</b> English fan was arrested, and 0.4% of 2,000 interactions were disorderly. Once, when an ordinary yellow-vested officer grabbed a fan, the fans called a liaison over: “Can you come and sort this policeman out for us?”</div>
+    <figure class="fig">
+      <svg viewBox="0 0 640 210" role="img" aria-label="Surgical teams learning a new procedure">
+        <text x="0" y="22" font-size="15" font-weight="700">16 surgical teams, identical 3-day MICS training (Edmondson)</text>
+        <text x="0" y="62" font-size="15">“Chelsea”: elite hospital, star surgeon (60+ procedures)</text>
+        <text x="0" y="82" font-size="14" class="mut">plateaued after 10 operations · ranked 10th of 16</text>
+        <text x="0" y="122" font-size="15">“Mountain Medical”: small rural team, young surgeon</text>
+        <text x="0" y="142" font-size="14" class="mut">faster than Chelsea's best by operation 5 · an hour faster by 20 · ranked 2nd</text>
+        <rect x="0" y="166" width="300" height="10" rx="5" fill="var(--s3)" opacity=".35"/><rect x="0" y="186" width="560" height="10" rx="5" fill="var(--s3)"/>
+        <text x="310" y="176" font-size="13" class="mut">Chelsea</text><text x="566" y="196" font-size="13" class="mut">Mountain</text>
+      </svg>
+      <figcaption>The results split in two, not a bell curve. Experience, status and organisational support mattered far less than five signals.</figcaption>
+    </figure>
+    <ol class="list">
+      <li><b>Framing:</b> a learning experience that helps patients, not an add-on.</li>
+      <li><b>Roles:</b> each member told why their skills matter to the team.</li>
+      <li><b>Rehearsal:</b> detailed dry runs.</li>
+      <li><b>Explicit encouragement to speak up.</b></li>
+      <li><b>Active reflection</b> between cases (Mountain's surgeon wore a head camera to review).</li>
+    </ol>
+    <div class="vs">
+      <div class="h">Successful teams</div><div class="h">Unsuccessful teams</div>
+      <div>“The surgeon has to become a partner, not a dictator.”</div><div>“Once I get a team set up, I never look up.”</div>
+      <div>“My circulating nurse said, ‘Sue, you grabbed the wrong wire.’”</div><div>“I wouldn't speak up if I weren't confident a mistake would lead to an adverse outcome.”</div>
+      <div>“I am so grateful I was picked.”</div><div>“Just get me a fresh blade so I can slash my wrists.”</div>
+    </div>
+    <p style="margin-top:14px">“What seems like repetition is, in fact, navigation.” Purpose needs consistency more than inspiration. And it depends on the work: <b>proficiency</b> (doing a known thing reliably) or <b>creativity</b> (making something new).</p>
+  </section>
+
+  <section style="--c:var(--s3)">
+    <p class="kick">Chapters 15–16 · How to lead for proficiency, how to lead for creativity</p>
+    <h2>The lighthouse and the ship's engineer</h2>
+    <h3>Danny Meyer: proficiency</h3>
+    <p>Of about 1,000 restaurants that open in New York each year, 800 are gone within five years. Meyer has opened 25, all but one successful (Union Square Cafe, Gramercy Tavern, Shake Shack). Their feeling is <b>home</b>. A waiter overheard a worried father mention a $42 glass of Château d'Yquem and brought the bottle and three glasses, on the house. When a beetle turned up in Senator Bob Kerrey's salad, his next salad at another Meyer restaurant arrived garnished with a slip reading “Ringo”.</p>
+    <p>When Meyer opened a second restaurant, it slipped. A regular returned a half-eaten salmon, was charged anyway and handed the leftovers in a doggy bag; her letter called it “insulting and passive-aggressive”. Everyone involved thought they'd done their job. Meyer: “I had to start naming stuff.” He and his staff ranked their priorities: <b>1 colleagues · 2 guests · 3 community · 4 suppliers · 5 investors</b>. Then he named the behaviours:</p>
+    <div class="phr"><span>Read the guest</span><span>Athletic hospitality</span><span>Writing a great final chapter</span><span>Turning up the Home Dial</span><span>Loving problems</span><span>Finding the yes</span><span>Collecting the dots and connecting the dots</span><span>Creating raves for guests</span><span>One size fits one</span><span>Skunking</span><span>Making the charitable assumption</span><span>Be aware of your emotional wake</span><span>To get a hug, you have to give a hug</span><span>The excellence reflex</span><span>Are you an agent or a gatekeeper?</span><span>Mistakes are like waves; servers are really surfers</span></div>
+    <div class="card t" style="margin-top:16px"><h3>Why catchphrases work: the slime mould</h3>Slime-mould amoebae cooperate brilliantly without any “organiser cell”, using three rules of thumb: <i>If there's no food, connect with one another · If connected, stay connected and move toward the light · If you reach the light, stay connected and climb.</i> Meyer's phrases are the same kind of <b>if/then heuristics</b>: if someone is rude, make the charitable assumption. A researcher who worked at Union Square Cafe for six months summed it up: “a simple set of rules that stimulate complex and intricate behaviors”. Newcomers find them corny, then they become “part of the oxygen”. Meyer broadcasts them “like a Wi-Fi signal at ten bars”.</div>
+    <h3>Ed Catmull: creativity</h3>
+    <p>Pixar's co-founder (17 films, 13 Oscars at the time) told Coyle the beautiful new Pixar building was “a mistake”: hallways too narrow, the café too small. “All the movies are bad at first.” <i>Frozen</i> and <i>Big Hero 6</i> were early disasters; the first Woody was “a sarcastic jerk”; from early <i>Up</i>, only the word “up” survived. So he invests in teams, not ideas: “Give a good idea to a mediocre team, and they'll find a way to screw it up. Give a mediocre idea to a good team, and they'll find a way to make it better.” The system: Dailies, research field trips, BrainTrusts, Pixar University, post-mortems. He stays out of creative decisions (“Now it's up to you”). His plain “Ed-isms”: <i>Hire people smarter than you · Fail early, fail often · Face toward the problems · B-level work is bad for your soul.</i></p>
+    <div class="story"><b>Disney Animation, 2006.</b> After a decade of flops, Disney bought Pixar and gave Catmull and John Lasseter the studio. Catmull spoke two sentences: “We're not going to turn Disney into a clone of Pixar. What we're going to do is build a studio on your talent and passion.” He regrouped people around a central “Caffeine Patch” and handed creative power from executives to directors, with a “Story Trust”. Then came <i>Tangled</i>, <i>Wreck-It Ralph</i>, <i>Frozen</i> ($1.2bn), <i>Big Hero 6</i> and <i>Zootopia</i>, with virtually the same people. “We put in some new systems, they learned new ways of interacting.”</div>
+    <div class="vs">
+      <div class="h">Lead for proficiency (lighthouse)</div><div class="h">Lead for creativity (ship's engineer)</div>
+      <div>Fill the windshield with clear models of excellence</div><div>Attend keenly to team composition and dynamics</div>
+      <div>High-repetition, high-feedback training</div><div>Define and fiercely protect creative autonomy</div>
+      <div>Vivid if/then rules of thumb</div><div>Make it safe to fail and to give feedback</div>
+      <div>Spotlight and honour the fundamentals</div><div>Celebrate hugely when the group takes initiative</div>
+    </div>
+  </section>
+
+  <section style="--c:var(--s3)">
+    <p class="kick">Chapter 17 · Ideas for action</p>
+    <h2>Building purpose</h2>
+    <p>Many great cultures were forged in a crisis: Pixar scrapping the straight-to-video <i>Toy Story 2</i> and starting over (the BrainTrust was born there), the SEALs after four men drowned in Grenada in 1983, Meyer's early near-disasters (including a fistfight with a drunk customer).</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 150" role="img" aria-label="Executives think 64 percent of staff know the top three priorities; 2 percent actually do">
+        <text x="0" y="22" font-size="15" font-weight="700">“Can your employees name the company's top three priorities?”</text>
+        <text x="0" y="62" font-size="15">What executives predicted</text><rect x="210" y="46" width="320" height="24" rx="4" fill="var(--s3)" opacity=".45"/><text x="538" y="64" font-size="15" font-weight="700">64%</text>
+        <text x="0" y="104" font-size="15">What employees could do</text><rect x="210" y="88" width="10" height="24" rx="3" fill="var(--s3)"/><text x="228" y="106" font-size="15" font-weight="700">2%</text>
+        <text x="0" y="138" font-size="13" class="mut">Inc. magazine survey of 600 companies. Hence: be ten times as clear as you think you need to be.</text>
+      </svg>
+    </figure>
+    <ol class="list">
+      <li><b>Name and rank your priorities</b>: five or fewer, often with “how we treat each other” at the top.</li>
+      <li><b>Be ten times as clear about them as you think you should be</b>, and test them regularly, as Burke did with the Credo: a “productive dissatisfaction”.</li>
+      <li><b>Sort skills into proficiency and creativity</b>, and lead each differently (table above).</li>
+      <li><b>Embrace catchphrases</b>: simple, action-oriented, a bit corny. “Create fun and a little weirdness” (Zappos), “Talk less, do more” (IDEO), “Pound the rock” (Spurs), “Leave the jersey in a better place” (All Blacks).</li>
+      <li><b>Measure what really matters.</b> Zappos dropped calls per hour for “Personal Emotional Connections”, and celebrated a record call of 10 hours 29 minutes (it sold one pair of Uggs).</li>
+      <li><b>Use artifacts</b>: the Spurs keep a rock and a sledgehammer behind glass.</li>
+      <li><b>Focus on bar-setting behaviours.</b> Quinnipiac hockey's “Forty for Forty”: all-out effort on every one of about 40 back-checks a game, though 39 rarely matter. On video the coach celebrates the back-checker, never the goal scorer. Meyer straightens salt shakers; Pixar makes money-losing shorts.</li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="kick">Epilogue</p>
+    <h2>Coyle tries it on a team of 13-year-olds</h2>
+    <p>Coyle coached the writing team at his daughters' tiny Montessori school (40 pupils) for a statewide competition. Instead of lecturing, he pushed four tables together so they sat elbow to elbow and asked: <i>What's your favourite book? Why?</i> (Carson: “Because the story makes you worry about them”; fist bump.) He showed them his own drafts of this book, covered in crossings-out: “Every time.” They read their stories aloud and gave “What Worked Well / Even Better If” feedback. He used catchphrases: “Power of the Problem” (Ahab doesn't chase minnows), “Use Your Camera”, VOW (voice, obstacles, wanting). In a blizzard on Valentine's Day they won the eighth-grade first-place trophy, and four students qualified for the state finals, the most in the school's history. The highlight for Coyle was quiet Carson's comic hero Johnny McTough, who believed he needed no one, and the team laughing together and then helping make the story better.</p>
+    <div class="tool" id="check">
+      <h3>Team culture check</h3>
+      <p style="margin:0 0 6px;font-size:16px">Think of a team you're in. Rate each statement from 1 (rarely true) to 5 (consistently true). You'll see which skill to work on first, with the book's ideas for it.</p>
+      <div id="stmts"></div>
+      <div class="bars" id="bars"></div>
+      <div class="advice" id="advice">Rate all twelve statements to see your result.</div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Pocket version</p>
+    <h2>What to keep</h2>
+    <ol class="keep">
+      <li>Culture is something you do, not something you are. It's built from small, repeated interactions.</li>
+      <li>Safety comes first: send belonging cues (energy, individual attention, a shared future) constantly.</li>
+      <li>Listen visibly, don't interrupt, thank too much, preview the future, pick up trash.</li>
+      <li>Spotlight your own fallibility early. “I screwed that up” and “Anybody have any ideas?”</li>
+      <li>Vulnerability creates trust, not the other way round. Watch the first vulnerability and the first disagreement.</li>
+      <li>Build candour into routines: After-Action Reviews, BrainTrusts, Red Teams. Candour, not brutal honesty.</li>
+      <li>Find and protect your Nyquists, the warm, curious people who draw others out.</li>
+      <li>Name and rank a few priorities, often with relationships first, and say them ten times more than feels necessary.</li>
+      <li>Turn values into vivid if/then catchphrases and bar-setting behaviours.</li>
+      <li>Lead proficiency like a lighthouse and creativity like a ship's engineer.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Summary of <em>The Culture Code: The Secrets of Highly Successful Groups</em> by Daniel Coyle (Bantam, 2018). Charts are redrawn from the figures given in the book; the Allen Curve shape is illustrative. Quotations are brief; stories condensed and paraphrased.</p>
+    <p>Related summaries:</p>
+    <div class="related"><a href="../radical-candor/">Radical Candor</a><a href="../crucial-conversations/">Crucial Conversations</a><a href="../coaching-habit/">The Coaching Habit</a><a href="../supercommunicators/">Supercommunicators</a><a href="../laws-of-connection/">The Laws of Connection</a><a href="../good-strategy/">Good Strategy/Bad Strategy</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('cc-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('cc-theme',n);};
+
+/* sunburst */
+var cv=document.getElementById('burst');
+function draw(){var r=cv.getBoundingClientRect(),d=Math.min(2,window.devicePixelRatio||1),W=Math.round(r.width*d);if(!W)return;cv.width=W;cv.height=W;var g=cv.getContext('2d'),c=W/2,seed=11;function rnd(){seed=(seed*16807)%2147483647;return(seed-1)/2147483646}
+g.strokeStyle='#e7c26e';g.fillStyle='#e7c26e';var n=78;for(var i=0;i<n;i++){var a=i/n*Math.PI*2+rnd()*.03,r0=W*.22,r1=W*(.3+rnd()*.19);g.globalAlpha=.85;g.lineWidth=Math.max(1,W/420);g.beginPath();g.moveTo(c+Math.cos(a)*r0,c+Math.sin(a)*r0);g.lineTo(c+Math.cos(a)*r1,c+Math.sin(a)*r1);g.stroke();g.beginPath();g.arc(c+Math.cos(a)*r1,c+Math.sin(a)*r1,W*(.006+rnd()*.012),0,7);g.fill();if(rnd()<.5){var rm=r0+(r1-r0)*(.4+rnd()*.4);g.beginPath();g.arc(c+Math.cos(a)*rm,c+Math.sin(a)*rm,W*(.004+rnd()*.006),0,7);g.fill()}}}
+draw();var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(draw,150)});
+
+/* culture check */
+var S=[
+ [0,"People feel safe to disagree with the leader."],[0,"Newcomers are welcomed deliberately in their first days."],[0,"We listen without interrupting and thank each other often."],[0,"We are physically or virtually close; people bump into each other."],
+ [1,"Leaders admit mistakes openly (“I screwed that up”)."],[1,"After projects we review honestly what went wrong, without blame."],[1,"People ask for help early rather than hiding problems."],[1,"Hard feedback is given in person, with care."],
+ [2,"Everyone could name our top three priorities."],[2,"We have a few vivid phrases that guide everyday decisions."],[2,"We tell stories that link today's work to why it matters."],[2,"We know where we need reliability and where we need creativity."]];
+var NAMES=["Safety","Vulnerability","Purpose"],COL=["var(--s1)","var(--s2)","var(--s3)"];
+var ADV=[
+ "<b>Start with safety.</b> Overcommunicate listening, spotlight your own fallibility early, hug the messenger, overdo thank-yous, use threshold moments, and make sure everyone has a voice. Remember Jonathan: “Hey, what do you think of this?”",
+ "<b>Start with vulnerability.</b> Go first: “I screwed that up”, “Anybody have any ideas?” Run short After-Action Reviews (intended vs actual results, causes, keep, change). Deliver negatives in person, and resist adding value: “Say more about that.”",
+ "<b>Start with purpose.</b> Name and rank up to five priorities (relationships first?), then repeat them ten times more than feels necessary. Turn them into if/then catchphrases and one bar-setting behaviour, like “Forty for Forty”."];
+var val=new Array(S.length).fill(0),box=document.getElementById('stmts');
+S.forEach(function(s,i){var d=document.createElement('div');d.className='st';d.style.setProperty('--c',COL[s[0]]);d.innerHTML='<div><span class="sk">'+NAMES[s[0]]+'</span>'+s[1]+'</div><div class="rt"></div>';var rt=d.querySelector('.rt');for(var v=1;v<=5;v++){(function(v){var b=document.createElement('button');b.type='button';b.textContent=v;b.setAttribute('aria-pressed','false');b.setAttribute('aria-label',v+' of 5');b.onclick=function(){val[i]=v;[].forEach.call(rt.children,function(x,k){x.setAttribute('aria-pressed',k+1===v)});upd()};rt.appendChild(b)})(v)}box.appendChild(d)});
+var bars=document.getElementById('bars');NAMES.forEach(function(n,k){var d=document.createElement('div');d.className='bar';d.style.setProperty('--c',COL[k]);d.innerHTML='<span>'+n+'</span><div class="tr"><i id="b'+k+'"></i></div><span id="v'+k+'">–</span>';bars.appendChild(d)});
+function upd(){var sums=[0,0,0],cnt=[0,0,0];S.forEach(function(s,i){if(val[i]){sums[s[0]]+=val[i];cnt[s[0]]++}});for(var k=0;k<3;k++){var avg=cnt[k]?sums[k]/cnt[k]:0;document.getElementById('b'+k).style.width=(avg/5*100)+'%';document.getElementById('v'+k).textContent=cnt[k]?avg.toFixed(1):'–'}
+ if(val.every(Boolean)){var avgs=sums.map(function(s){return s/4}),low=avgs.indexOf(Math.min.apply(null,avgs));var note=avgs[0]<3&&low!==0?'<br><br>Note: safety is also low. The skills build bottom-up, so shore up safety too.':'';document.getElementById('advice').innerHTML=ADV[low]+note}
+ else document.getElementById('advice').textContent='Rate all twelve statements to see your result ('+val.filter(Boolean).length+'/12).'}
+})();
+</script>
+</body>
+</html>
