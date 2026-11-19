@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Superforecasting by Philip E. Tetlock &amp; Dan Gardner – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<style>
+/* The cover: a white field streaked with thin speed lines that shade from violet on the
+   left to cyan on the right, all converging toward a vanishing point; the title in very
+   tall, condensed black capitals set in perspective, with heavy black rules between title,
+   subtitle and authors. The page keeps the white field, the violet-to-cyan streaks (drawn
+   in the hero), the condensed capitals (Oswald) with heavy rules, and uses violet and cyan
+   as the two accents (violet for "less likely", cyan for "more likely" in the charts). */
+:root{
+  --bg:#ffffff; --ink:#141418; --muted:#5e5f6b; --line:#e6e6ee; --soft:#f4f4fa; --card:#ffffff;
+  --v:#7b4fe0; --c:#14a9cf; --vl:#ece6fc; --cl:#e2f5fb;
+  --cond:Oswald,"Bebas Neue","Arial Narrow",system-ui,sans-serif; --serif:Newsreader,Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f0f14; --ink:#efeff6; --muted:#a2a3b3; --line:#272733; --soft:#191922; --card:#15151d;
+  --v:#a88bff; --c:#4fd3f2; --vl:#241c3d; --cl:#11303a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f0f14; --ink:#efeff6; --muted:#a2a3b3; --line:#272733; --soft:#191922; --card:#15151d;
+  --v:#a88bff; --c:#4fd3f2; --vl:#241c3d; --cl:#11303a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 18.5px/1.6 var(--serif)}
+a{color:var(--v)}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:500 14px var(--cond);letter-spacing:.05em;text-transform:uppercase}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:2px solid var(--ink);color:var(--ink);border-radius:999px;padding:1px 13px;font:500 13px var(--cond);letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:6px;padding:clamp(28px,6vw,54px) clamp(18px,5vw,48px)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero .t{position:relative;transform:perspective(900px) rotateY(-10deg);transform-origin:left center;color:#141418}
+.hero h1{margin:0;font:500 clamp(1.8rem,9.4vw,4.8rem)/.95 var(--cond);letter-spacing:0;text-transform:uppercase;white-space:nowrap}
+.hero .rule{height:clamp(4px,1vw,7px);background:#141418;margin:clamp(10px,2vw,16px) 0;width:min(100%,560px)}
+.hero .sub{font:400 clamp(1.3rem,4.6vw,2.4rem)/1.08 var(--cond);text-transform:uppercase;letter-spacing:.02em}
+.hero .au{font:400 clamp(1.3rem,4.6vw,2.3rem)/1.1 var(--cond);text-transform:uppercase}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 8px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.intro p{margin:0}
+.facts{font:400 14px/1.5 var(--cond);letter-spacing:.03em;color:var(--muted);margin-top:8px;text-transform:uppercase}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:500 clamp(1.6rem,5.4vw,2.35rem)/1.1 var(--cond);text-transform:uppercase;letter-spacing:.01em;margin:0 0 12px}
+h3{font:500 1.15rem var(--cond);letter-spacing:.04em;text-transform:uppercase;margin:24px 0 6px}
+.kick{font:500 13.5px var(--cond);letter-spacing:.16em;text-transform:uppercase;margin:0 0 6px;background:linear-gradient(90deg,var(--v),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.quote{font:italic 400 1.28rem/1.45 var(--serif);margin:24px 0;padding-left:16px;border-left:5px solid var(--ink)}
+.quote small{display:block;font:400 13.5px var(--cond);letter-spacing:.08em;text-transform:uppercase;font-style:normal;color:var(--muted);margin-top:6px}
+.story{background:var(--soft);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:17.5px}
+.story b{font:500 .95em var(--cond);letter-spacing:.04em;text-transform:uppercase}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:17px}
+.card h3{margin-top:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:16px;line-height:1.45}
+.stat b{display:block;font:500 1.9rem/1.05 var(--cond);margin-bottom:4px;color:var(--v)}
+.stat div:nth-child(2) b{color:var(--c)}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 8px;margin-top:16px;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:520px;height:auto}
+.fig text{font-family:Oswald,"Arial Narrow",sans-serif;fill:var(--ink)}
+.fig .mut{fill:var(--muted)}
+.fig figcaption{font:400 14.5px/1.45 var(--serif);color:var(--muted);margin:6px 2px 4px}
+.vs{display:grid;grid-template-columns:1fr 1fr;margin-top:16px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.vs div{padding:10px 14px;font-size:16.5px;border-bottom:1px solid var(--line);background:var(--card)}
+.vs div:nth-child(odd){border-right:1px solid var(--line)}
+.vs .h{font:500 15px var(--cond);letter-spacing:.06em;text-transform:uppercase}
+.vs .h.a{background:var(--vl)}.vs .h.b{background:var(--cl)}
+@media (max-width:560px){.vs{grid-template-columns:1fr}.vs div:nth-child(odd){border-right:0}}
+.list{counter-reset:r;list-style:none;padding:0;margin:14px 0 0}
+.list li{counter-increment:r;position:relative;padding:10px 0 10px 50px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list li::before{content:counter(r);position:absolute;left:0;top:8px;font:500 1.7rem/1 var(--cond);color:var(--v)}
+.list b{font:500 1.02em var(--cond);letter-spacing:.03em;text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:400 15px var(--cond);letter-spacing:.03em;border:1.5px solid var(--line);border-radius:999px;padding:3px 11px}
+.part{text-align:center;padding:50px 0 6px;border:0}
+.part .n{font:500 13.5px var(--cond);letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.part h2{font-size:clamp(2rem,7vw,3rem);margin:6px 0}
+.part p{color:var(--muted);margin:0 auto;max-width:34em}
+.part .bar{width:110px;height:6px;margin:14px auto 0;background:linear-gradient(90deg,var(--v),var(--c));border-radius:3px}
+.kent{display:grid;grid-template-columns:auto 1fr auto;gap:2px 12px;margin-top:14px;font-size:16.5px;align-items:center}
+.kent span:nth-child(3n+1){font:500 15px var(--cond);text-transform:uppercase;letter-spacing:.03em}
+.kent span:nth-child(3n+3){font:500 15px var(--cond);text-align:right}
+.kent i{display:block;height:10px;border-radius:5px;background:linear-gradient(90deg,var(--v),var(--c))}
+/* tool */
+.tool{border:2px solid var(--ink);border-radius:14px;padding:18px;margin-top:20px;background:var(--card)}
+.tool h3{margin-top:0;font-size:1.35rem}
+.qrow{padding:10px 0;border-bottom:1px solid var(--line)}
+.qrow p{margin:0 0 6px;font-size:17px}
+.qrow .ctl{display:flex;align-items:center;gap:12px}
+.qrow input[type=range]{flex:1;accent-color:var(--v)}
+.qrow output{font:500 17px var(--cond);min-width:48px;text-align:right}
+.qrow .fb{font-size:15px;margin-top:4px}
+.qrow .fb.ok{color:var(--c)}.qrow .fb.no{color:var(--v)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.toolbar button{font:500 14px var(--cond);letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+.toolbar button.sec{background:none;color:var(--ink);border:2px solid var(--line)}
+.res{margin-top:12px;background:var(--soft);border-radius:10px;padding:12px 16px;font-size:17px}
+.res b{font:500 1.5rem var(--cond)}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);font:500 1.35rem var(--cond);color:var(--c)}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:16px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:500 14px var(--cond);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:2px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+  <header class="hero">
+    <canvas id="streaks" aria-hidden="true"></canvas>
+    <div class="t">
+      <h1>Superforecasting</h1>
+      <div class="rule"></div>
+      <div class="sub">The Art and Science<br>of Prediction</div>
+      <div class="rule"></div>
+      <div class="au">Philip E. Tetlock<br>Dan Gardner</div>
+    </div>
+  </header>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of Superforecasting by Philip E. Tetlock and Dan Gardner">
+    <div>
+      <p>Philip Tetlock became famous for one punch line: the average expert forecaster was about as accurate as a dart-throwing chimpanzee. This book is about the people who weren't. In a four-year forecasting tournament run by the US intelligence community, Tetlock's Good Judgment Project found volunteers (retirees, a pharmacist, a filmmaker) who beat professional analysts with access to classified data. They aren't geniuses. What sets them apart is how they think: in fine-grained probabilities, from many angles, with constant small updates and ruthless self-scoring.</p>
+      <div class="facts">Crown, 2015 · 12 chapters + epilogue + “Ten Commandments” · ~85,000 words · co-written with journalist Dan Gardner</div>
+    </div>
+  </div>
+
+  <section>
+    <p class="kick">Chapter 1 · An optimistic skeptic</p>
+    <h2>Bill Flack versus Tom Friedman</h2>
+    <p>Tom Friedman advises presidents and speaks at Davos; nobody has ever measured how accurate his forecasts are. Bill Flack, a 55-year-old retired Department of Agriculture worker in Nebraska, has answered some 300 questions like “Will Russia officially annex additional Ukrainian territory in the next three months?”, and every one was dated, recorded and scored. His record is excellent. About 2% of the tournament's volunteers were this good.</p>
+    <div class="grid2">
+      <div class="card"><h3>The skeptic</h3>A fruit seller in Tunisia, Mohamed Bouazizi, set himself alight after police humiliation in December 2010, and the Arab Spring followed. No one could have foreseen that. Edward Lorenz's “butterfly effect” (1972) showed that in nonlinear systems tiny differences mushroom. Laplace's dream of a fully predictable, clocklike universe gave way to the cloud.</div>
+      <div class="card"><h3>The optimist</h3>Yet much of life is predictable: rush hour, restaurant opening times, insurance tables, sunrise. How predictable something is depends on what, how far ahead, and under which circumstances. Weather forecasts are good a few days out because meteorologists <b>forecast, measure, revise, repeat</b>. Most other forecasting never gets measured at all.</div>
+    </div>
+    <div class="stat">
+      <div><b>20,000+</b>volunteers in the Good Judgment Project, 2011–2015; nearly 500 questions; over a million forecasts.</div>
+      <div><b>+60% / +78%</b>How much the project beat IARPA's control group in years 1 and 2. The other university teams were dropped.</div>
+      <div><b>≈10%</b>Accuracy gain from reading a 60-minute tutorial (the “Ten Commandments” below) for the rest of the year.</div>
+    </div>
+    <div class="quote">Foresight isn't a mysterious gift bestowed at birth. It is the product of particular ways of thinking, of gathering information, of updating beliefs.<small>Chapter 1</small></div>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 2 · Illusions of knowledge</p>
+    <h2>The tip-of-your-nose perspective</h2>
+    <p>In 1956 a renowned specialist told Archie Cochrane, later a founder of evidence-based medicine, that his armpit was full of cancer and removed a chest muscle before the pathologist had reported. Cochrane sobbed, made a plan for his remaining time, and never doubted the surgeon. There was no cancer at all. For most of history, medicine ran on confident authority: Galen wrote that his remedy cured everyone “except those whom it does not help, who all die”. It took randomised trials, and “a tablespoon of doubt”, to change that.</p>
+    <div class="grid3">
+      <div class="card"><h3>System 1 &amp; 2</h3>“A bat and ball cost $1.10. The bat costs $1 more than the ball.” The fast answer, 10 cents, feels right and is wrong (it's 5). System 1 jumps to conclusions; System 2 checks, if we let it.</div>
+      <div class="card"><h3>WYSIATI</h3>“What You See Is All There Is.” We build coherent stories from whatever is at hand, like the split-brain patient who explained his hand pointing at a shovel: “you need a shovel to clean out the chicken shed.”</div>
+      <div class="card"><h3>Bait and switch</h3>Faced with a hard question, we quietly answer an easy one. Cochrane swapped “Do I have cancer?” for “Is this the sort of person who would know?”</div>
+    </div>
+    <p style="margin-top:16px">Intuition isn't worthless. Gary Klein's fire commander ordered his men out of a strangely hot, quiet living room seconds before the floor collapsed. Kahneman and Klein agreed that intuition is pattern recognition, and it is trustworthy only where the world offers valid cues and quick feedback: firefighters and nurses, yes; stock pickers, no. Even Magnus Carlsen double-checks: “I usually know what I am going to do after 10 seconds; the rest is double-checking.”</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 3 · Keeping score</p>
+    <h2>What does “a serious possibility” mean?</h2>
+    <p>Most forecasts can't be judged. Steve Ballmer's “no chance that the iPhone is going to get any significant market share” never said how significant, or in which market. The 2010 letter warning that QE “risks” inflation set no date. In 1951 a CIA estimate called a Soviet attack on Yugoslavia a “serious possibility”: Sherman Kent meant 65%, and his own team's readings ranged from 20% to 80%. Kennedy approved the Bay of Pigs on a “fair chance” whose author meant 3 to 1 <i>against</i>. Kent proposed fixed meanings. Analysts called it bookie talk. Kent: “I'd rather be a bookie than a goddamn poet.”</p>
+    <div class="kent" role="img" aria-label="Sherman Kent's probability words">
+      <span>Certain</span><i style="width:100%"></i><span>100%</span>
+      <span>Almost certain</span><i style="width:93%"></i><span>93% ±6</span>
+      <span>Probable</span><i style="width:75%"></i><span>75% ±12</span>
+      <span>Chances about even</span><i style="width:50%"></i><span>50% ±10</span>
+      <span>Probably not</span><i style="width:30%"></i><span>30% ±10</span>
+      <span>Almost certainly not</span><i style="width:7%"></i><span>7% ±5</span>
+      <span>Impossible</span><i style="width:1%;opacity:.3"></i><span>0%</span>
+    </div>
+    <p style="margin-top:16px">A single probabilistic forecast can't be scored either. If the forecast says 70% rain and it stays dry, that isn't necessarily wrong; judging it wrong is the <b>wrong-side-of-maybe fallacy</b>. But many forecasts can be scored, on two qualities:</p>
+    <figure class="fig">
+      <svg viewBox="0 0 660 300" role="img" aria-label="Calibration chart with overconfident and underconfident curves">
+        <g transform="translate(50,20)">
+          <rect x="0" y="0" width="240" height="240" fill="var(--soft)"/>
+          <line x1="0" y1="240" x2="240" y2="0" stroke="var(--ink)" stroke-width="2.5"/>
+          <path d="M0,240 C60,180 80,90 240,40" fill="none" stroke="var(--c)" stroke-width="3"/>
+          <path d="M0,200 C140,180 170,120 240,100" fill="none" stroke="var(--v)" stroke-width="3"/>
+          <text x="-8" y="244" font-size="12" text-anchor="end" class="mut">0</text><text x="-8" y="10" font-size="12" text-anchor="end" class="mut">100%</text>
+          <text x="120" y="262" font-size="13" text-anchor="middle" class="mut">What you said (probability)</text>
+          <text x="-34" y="120" font-size="13" text-anchor="middle" class="mut" transform="rotate(-90 -34 120)">How often it happened</text>
+          <text x="128" y="64" font-size="13" fill="var(--c)" font-weight="600">underconfident</text>
+          <text x="150" y="152" font-size="13" fill="var(--v)" font-weight="600">overconfident</text>
+          <text x="52" y="168" font-size="13" font-weight="600" transform="rotate(-45 52 168)">perfect calibration</text>
+        </g>
+        <g transform="translate(360,20)" font-size="14.5">
+          <text x="0" y="16" font-weight="600" font-size="16">Calibration</text>
+          <text x="0" y="38">Things you call 70% happen 70% of the time.</text>
+          <text x="0" y="82" font-weight="600" font-size="16">Resolution</text>
+          <text x="0" y="104">Daring to say 90% or 5%, and being right.</text>
+          <text x="0" y="126" class="mut">“Well-calibrated but cowardly” stays near 50%.</text>
+          <text x="0" y="170" font-weight="600" font-size="16">Brier score (Glenn Brier, 1950)</text>
+          <text x="0" y="192">Distance between forecast and reality. Like golf,</text>
+          <text x="0" y="212">lower is better: 0 = perfect, 0.5 = always 50/50,</text>
+          <text x="0" y="232">2.0 = always certain and always wrong.</text>
+        </g>
+      </svg>
+      <figcaption>Redrawn after the book's calibration figures. A score only means something against a benchmark: always forecasting “hot and sunny” in a Phoenix June would get a superb score.</figcaption>
+    </figure>
+    <h3>Foxes and hedgehogs</h3>
+    <p>Tetlock's first study (1984–2004): 284 experts, about 28,000 forecasts. On average they did about as well as chance, and accuracy fell to chimp level three to five years out. But one group had real, modest foresight. The difference was neither PhDs, nor access to secrets, nor left or right politics. It was <b>how they thought</b>.</p>
+    <div class="vs">
+      <div class="h a">Hedgehogs: “one big thing”</div><div class="h b">Foxes: “many things”</div>
+      <div>Organise everything around one Big Idea (doomster or boomster, socialist or free-marketeer).</div><div>Use many tools and sources; pick the tool that fits the problem.</div>
+      <div>“Furthermore… moreover…”; “certain” and “impossible”.</div><div>“However… but… on the other hand”; probabilities.</div>
+      <div>When wrong: “Just wait.”</div><div>Admit mistakes and change their minds.</div>
+      <div>Did <i>worse</i> on their own specialty, and the more famous, the less accurate.</div><div>Beat hedgehogs on both calibration and resolution.</div>
+    </div>
+    <div class="story"><b>Green-tinted glasses.</b> CNBC's Larry Kudlow saw everything through supply-side economics. In December 2007, the month the Great Recession began, he wrote: “There is no recession. In fact, we are about to enter the seventh consecutive year of the Bush boom.” He called it a “mental recession” until Lehman fell, and in 2009 he got a new show. Media love hedgehogs: simple, confident stories make good TV, even though they make bad forecasts.</div>
+    <h3>The dragonfly eye</h3>
+    <p>In 1906 Francis Galton watched fairgoers guess an ox's weight: the average guess was 1,197 lb, against a true 1,198. Scattered scraps of valid information point the same way, while errors cancel out. Foxes do this aggregation inside one skull, like the dragonfly's eye with up to 30,000 lenses. In the <i>Financial Times</i>' 1997 “guess two-thirds of the average” game, pure logic says 0, but the winning guess was 13. You had to combine Mr Spock's logic with Dr McCoy's lazy humans: the Captain Kirk view.</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 4 · Superforecasters</p>
+    <h2>Ordinary people beat the intelligence community</h2>
+    <p>In October 2002 the US intelligence community (16 agencies, roughly 100,000 people, a budget of more than $50 billion) stated flatly that “Iraq has” weapons of mass destruction. CIA director George Tenet called it a “slam dunk”. Robert Jervis concluded the judgment was reasonable but wrong. Its real failure was <b>certainty</b>: no red teams, no devil's advocates, and no alternative ever seriously considered. A 60–70% estimate might not have persuaded Congress. The shock led to IARPA's tournament: five research teams, daily forecasts from 2011 to 2015, and questions in the “Goldilocks zone” (“Will the euro fall below $1.20 in the next twelve months?”).</p>
+    <div class="story"><b>Doug Lorch.</b> A retired IBM programmer in Santa Barbara who drives a little red Miata and has a duck as his Facebook avatar. In year 1 he made about 1,000 forecasts on 104 questions, with a Brier score of 0.22 (5th of 2,800). In year 2, on a superforecaster team, he scored 0.14: best of all, 40% better than a prediction market and more than 60% better than the control crowd, beating IARPA's year-4 target for whole research programmes on his own. His pay: a $250 Amazon voucher.</div>
+    <div class="stat">
+      <div><b>300 vs 100</b>days: superforecasters looking 300 days ahead were more accurate than regular forecasters looking 100 days ahead.</div>
+      <div><b>≈30%</b>better than intelligence analysts with access to intercepts and classified data, according to a report in the <i>Washington Post</i>.</div>
+      <div><b>70%</b>of superforecasters stayed in the top 2% the following year. Coin-flippers would have a 1 in 100 million chance of that much consistency.</div>
+    </div>
+    <p style="margin-top:16px">Luck or skill? Regression to the mean is the test: luck fades fast, skill doesn't. Supers did the opposite of regressing. Once they were labelled and placed on teams together, they <i>increased</i> their lead. Year-to-year correlation was about 0.65: mostly skill, with some luck.</p>
+    <div class="story"><b>Extremising.</b> The winning formula: average many forecasts, give extra weight to the best forecasters, then push the result toward 0 or 100 (70% becomes about 85%). Each forecaster holds only part of the information; if everyone knew everything, they would all be more confident. A few hundred amateurs plus simple math beat a multibillion-dollar apparatus.</div>
+  </section>
+
+  <div class="part"><div class="n">What makes them super</div><h2>Not who they are, what they do</h2><p>Chapters 5 to 8: intelligence, numeracy, news habits, mindset.</p><div class="bar"></div></div>
+
+  <section>
+    <p class="kick">Chapter 5 · Supersmart?</p>
+    <h2>Fermi-ize, then outside view first</h2>
+    <p>Superforecasters are bright, but not geniuses. Regular forecasters scored above about 70% of the population on intelligence and knowledge tests, superforecasters above about 80%. Beyond a threshold, brains add little; Robert McNamara was one of “the best and the brightest”, and never seriously analysed the domino theory behind Vietnam. “It's not the crunching power that counts. It's how you use it.”</p>
+    <figure class="fig">
+      <svg viewBox="0 0 660 200" role="img" aria-label="Fermi estimate of piano tuners in Chicago">
+        <g font-size="14.5">
+          <rect x="0" y="10" width="190" height="56" rx="8" fill="var(--vl)"/><text x="12" y="34" font-weight="600">Pianos in Chicago</text><text x="12" y="54" class="mut">2.5m people × 2 per 100 = 50,000</text>
+          <rect x="0" y="76" width="190" height="56" rx="8" fill="var(--vl)"/><text x="12" y="100" font-weight="600">Tuned once a year</text><text x="12" y="120" class="mut">× 2 hours each</text>
+          <text x="208" y="80" font-size="22">→</text>
+          <rect x="236" y="42" width="170" height="56" rx="8" fill="var(--soft)"/><text x="248" y="66" font-weight="600">100,000 hours</text><text x="248" y="86" class="mut">of tuning work a year</text>
+          <text x="420" y="80" font-size="22">÷</text>
+          <rect x="446" y="10" width="200" height="56" rx="8" fill="var(--cl)"/><text x="458" y="34" font-weight="600">One tuner's year</text><text x="458" y="54" class="mut">2,000 h − 20% travel = 1,600 h</text>
+          <rect x="446" y="76" width="200" height="56" rx="8" fill="var(--ink)"/><text x="458" y="108" font-weight="600" fill="var(--bg)" font-size="19">≈ 63 piano tuners</text>
+          <text x="0" y="170" class="mut">A Chicago directory listed 83 tuners, some of them duplicate entries. The method: drag the guessing out of the black box into daylight.</text>
+        </g>
+      </svg>
+      <figcaption>Enrico Fermi's classroom puzzle, as worked in the book (after Daniel Levitin): break an unanswerable question into answerable parts and guess each part openly.</figcaption>
+    </figure>
+    <div class="story"><b>Arafat and polonium.</b> “Will French or Swiss inquiries find elevated polonium in Yasser Arafat's remains?” Most people answered a different question, “Did Israel poison him?”, with their gut. Bill Flack asked what would have to be true for a yes. First, could polonium even be detected after eight years? He read the Swiss report: yes. Then he listed the paths to a positive result: Israel, Palestinian rivals, or contamination after death to frame Israel. Each extra path raised the odds, and only one of two labs needed a positive result. (Later, when the Swiss delayed their results for “more testing”, he knew that lead decays into polonium and that labs re-test to rule it out, so he nudged up to 65%. The Swiss did find polonium. A prediction market inside the tournament had it at 4%.)</div>
+    <h3>Outside view first</h3>
+    <p>How likely is it that the Renzettis (Frank, 44, a bookkeeper; Mary, 35; little Tommy; grandmother Camila) have a pet? Don't start with the story. Start with the <b>base rate</b>: about 62% of US households own a pet, perhaps 73% of detached homes. Then adjust with the details. Starting from the inside view anchors you on a possibly meaningless number, and people underadjust. Peggy Noonan read deep meaning into George W. Bush's approval recovering after he left office; every president's approval recovers after leaving office.</p>
+    <div class="card" style="margin-top:14px"><h3>Worked example: David Rogg on terror in Europe</h3>Question (early 2015, after Charlie Hebdo): an Islamist attack in eight named European countries between 21 January and 31 March? <b>Outside view:</b> six attacks in five years = 1.2 a year. <b>Inside view:</b> ISIS recruitment, so drop the older data → 1.5; more security after Hebdo, so raise only modestly → 1.8 a year. <b>Math:</b> 69 days ÷ 365 × 1.8 = <b>34%</b>. Then he posted it to his team asking for more perspectives.</div>
+    <p style="margin-top:16px">More ways to get new perspectives: write your reasoning down and critique it as if it were someone else's; assume your first estimate is wrong and make a second one (the “crowd within”, nearly as good as asking another person); reverse the question (“Will South Africa <i>deny</i> the Dalai Lama a visa?”). Superforecasters think with three or more hands: “On the one hand… on the other… on the third hand… Net answer: feels no-ish, 80%.” Doug Lorch even wrote a program that picks his next news source to maximise ideological and geographic diversity.</p>
+    <div class="quote">For superforecasters, beliefs are hypotheses to be tested, not treasures to be guarded.<small>Chapter 5, the bumper-sticker version</small></div>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 6 · Superquants?</p>
+    <h2>Many grades of maybe</h2>
+    <p>Superforecasters are numerate, but they rarely use models. A Cornell maths professor among them made a point of never using any. Their advantage is <b>probabilistic thinking</b>. In <i>Zero Dark Thirty</i>, the fictional Leon Panetta hears 60%, 80%, 60% on whether bin Laden is in the Abbottabad compound and groans at the disagreement, then loves Maya's “a hundred percent”. The real Panetta welcomed the spread: “Nothing is one hundred percent.” Maya was “right but unreasonable”. In the real Situation Room, estimates ran from 30% to 95% (the crowd's average was around 70%), and Obama said: “This is fifty-fifty… a flip of the coin.”</p>
+    <div class="grid2">
+      <div class="card"><h3>The Stone-Age dial</h3>Amos Tversky joked that most people have three settings: “gonna happen”, “not gonna happen” and “maybe”. That made sense for lions in the grass. Today, people pay two to three times more to cut a risk from 5% to 0% than from 10% to 5%, and officials hear 80% as “will happen” (Robert Rubin: “You almost had to pound the table”).</div>
+      <div class="card"><h3>The fine dial</h3>Superforecaster Brian Labatte, asked what he reads: “70%… no, 65/35 nonfiction to fiction.” A third of superforecasters' forecasts used single percentage points. When their forecasts were rounded to the nearest 5%, they lost accuracy; regular forecasters didn't lose any even at the nearest 20%. Their granularity was real precision, not empty jargon.</div>
+    </div>
+    <p style="margin-top:16px">Superforecasters separate <b>epistemic</b> uncertainty (knowable in principle) from <b>aleatory</b> uncertainty (unknowable, like rain in Philadelphia a year from now), and stay between 35% and 65% on the latter. They also reject fate. On a 9-point scale of agreement with statements like “everything happens for a reason”, adult Americans sat in the middle and superforecasters lowest, and the more fatalistic a forecaster, the worse their accuracy. Kurt Vonnegut's question replaces “Why me?” with: “Why me? Why not me?”</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 7 · Supernewsjunkies?</p>
+    <h2>Update often, in small steps</h2>
+    <p>Superforecasters update far more often than others. Devyn Duffy, who joined after losing his factory job, made 2,271 forecasts on 140 questions in one season, driven by Google alerts. But updating isn't all there is: their <i>first</i> forecasts were already at least 50% more accurate. And updating is a skill with two failure modes.</p>
+    <div class="grid2">
+      <div class="card"><h3 style="color:var(--v)">Underreaction</h3>Bill Flack ignored a hint that Japanese PM Abe would visit the Yasukuni Shrine, because he had answered “Would <i>I</i> go, if I were PM?”. Belief perseverance at its extreme: General DeWitt in 1942: “The very fact that no sabotage has taken place to date is a disturbing and confirming indication that such action will be taken.” Beliefs tied to identity sit at the base of a Jenga tower.</div>
+      <div class="card"><h3 style="color:var(--c)">Overreaction</h3>Doug Lorch jumped from 55% to 95% on a month-old Arctic sea-ice report; the ice didn't shrink. Irrelevant details dilute judgment (the “dilution effect”). In one 1990s study, households that traded shares the most earned 11.4% a year while the market returned 17.9%.</div>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 660 260" role="img" aria-label="Tim Minto's 34 small forecast updates on the Syrian refugee question">
+        <g transform="translate(50,14)">
+          <rect x="0" y="0" width="580" height="200" fill="var(--soft)"/>
+          <line x1="0" y1="10" x2="580" y2="10" stroke="var(--ink)" stroke-dasharray="5 5"/>
+          <g class="mut" font-size="12"><text x="-8" y="14" text-anchor="end">100%</text><text x="-8" y="105" text-anchor="end">50%</text><text x="-8" y="204" text-anchor="end">0</text></g>
+          <line x1="193" y1="0" x2="193" y2="200" stroke="var(--bg)" stroke-width="2"/><line x1="386" y1="0" x2="386" y2="200" stroke="var(--bg)" stroke-width="2"/>
+          <polyline id="minto" fill="none" stroke="var(--v)" stroke-width="3" stroke-linejoin="round"/>
+          <g id="mintoDots" fill="var(--ink)"></g>
+          <g font-size="13" class="mut"><text x="96" y="222" text-anchor="middle">January</text><text x="290" y="222" text-anchor="middle">February</text><text x="483" y="222" text-anchor="middle">March</text></g>
+        </g>
+      </svg>
+      <figcaption>Tim Minto, season-3 champion, on “Will registered Syrian refugees be under 2.6 million on 1 April 2014?” (yes). 34 updates averaging just 3.5 points; Brier 0.07. Redrawn by eye from the book's chart.</figcaption>
+    </figure>
+    <p>This is Bayes in spirit: new belief = prior belief weighted by how diagnostic the new evidence is (posterior odds = likelihood ratio × prior odds). Jay Ulfelder showed how. A pundit put Chuck Hagel's confirmation as defence secretary at 50/50 after a bad hearing; the base rate was 23 of 24 nominees confirmed (96%), and even generous assumptions about the bad hearing only lowered that to 83%. Hagel was confirmed. Most superforecasters, like Minto, are “Bayesians who don't use Bayes' theorem”. And the rule isn't absolute: when Lorch saw that the sea-ice report was failing, he rightly jumped back to 55% and then 15%. As Orwell's last rule of writing put it: break any of these rules rather than say anything outright barbarous.</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 8 · Perpetual beta</p>
+    <h2>Try, fail, analyse, adjust, try again</h2>
+    <p>Mary Simpson, an economist, missed the 2008 crash and lost much of her retirement savings, so she set out to get better at forecasting. Carol Dweck would say she has a <b>growth mindset</b>. Keynes, the “consistently inconsistent” investor, lost big in 1920 and 1929 and learned from both: “There is no harm in being sometimes wrong, especially if one is promptly found out.” (When Churchill cabled “Am coming around to your point of view”, Keynes replied: “Sorry to hear it. Have started to change my mind.”)</p>
+    <div class="grid3">
+      <div class="card"><h3>Try</h3>Michael Polanyi's exact physics of cycling won't teach you to ride. Forecasting is tacit knowledge, learned by doing.</div>
+      <div class="card"><h3>Fail (clearly)</h3>Police grow more confident but not more accurate at spotting lies, because their feedback is slow and murky. Meteorologists and bridge players get clear feedback and are well calibrated. Vague words and hindsight bias are like taking free throws in the dark.</div>
+      <div class="card"><h3>Analyse &amp; adjust</h3>Hold postmortems on losses <i>and</i> wins. Devyn Duffy on a correct call: “So we lucked out, too.” Experts, by contrast, liked “I was almost right” stories but not “I was almost wrong” ones.</div>
+    </div>
+    <div class="story"><b>Hindsight bias in numbers.</b> In 1988 Tetlock asked experts the chance that the Soviet Communist Party would lose power within five years. After the USSR collapsed, they remembered their estimates as 31 points higher on average; one remembered 20% as 70%. Then there is grit. Anne Kilkenny, an Alaskan housewife (“four decades removed from having had a real intellectual challenge”), emailed the UN for refugee data and, when the reply came in French, asked politely for English. She forecast all 150 questions in a season, mostly alone.</div>
+    <h3>Portrait of the modal superforecaster</h3>
+    <div class="grid2">
+      <div class="card"><b>Outlook:</b> cautious (nothing is certain) · humble (reality is infinitely complex) · nondeterministic (nothing is meant to be).</div>
+      <div class="card"><b>Thinking:</b> actively open-minded · intelligent, with a “need for cognition” · reflective · numerate.</div>
+      <div class="card"><b>Method:</b> pragmatic · analytical · dragonfly-eyed · probabilistic · thoughtful updaters · good intuitive psychologists.</div>
+      <div class="card"><b>Work ethic:</b> growth mindset · grit. The strongest predictor of all was being in perpetual beta, about <b>3×</b> as powerful as intelligence.</div>
+    </div>
+  </section>
+
+  <div class="part"><div class="n">Chapters 9–12</div><h2>Teams, leaders, limits</h2><p>Superforecasting with other people, and its strongest critics.</p><div class="bar"></div></div>
+
+  <section>
+    <p class="kick">Chapter 9 · Superteams</p>
+    <h2>Neither groupthink nor flame war</h2>
+    <p>The same Kennedy team that bungled the Bay of Pigs (whose “escape route” to the mountains lay 80 miles away across swamp) handled the Cuban missile crisis brilliantly. In between, they changed the process: everyone was to speak as a generalist, Bobby Kennedy and Ted Sorensen acted as “intellectual watchdogs”, hierarchy was set aside, and JFK sometimes left the room. Irving Janis called the original disease <b>groupthink</b>.</p>
+    <div class="story"><b>Precision questioning.</b> “What happens if the plan falls apart?” “They retreat into the Escambray Mountains.” “How far is that from the landing site?” “Eighty miles.” “And the terrain?” “Mostly swamp and jungle.” The book's training advised: be cooperative but not deferential; practise Andy Grove's “constructive confrontation”; disagree without being disagreeable.</div>
+    <figure class="fig">
+      <svg viewBox="0 0 660 210" role="img" aria-label="Relative accuracy of individuals, teams, prediction markets and superteams">
+        <g font-size="14.5">
+          <text x="0" y="22" font-weight="600" font-size="15.5">Who forecast best? (relative accuracy, simplified from the book's percentages)</text>
+          <text x="0" y="58">Wisdom of the crowd</text><rect x="200" y="42" width="240" height="22" rx="3" fill="var(--soft)" stroke="var(--line)"/><text x="448" y="59" class="mut">baseline</text>
+          <text x="0" y="96">Teams of regulars</text><rect x="200" y="80" width="264" height="22" rx="3" fill="var(--vl)"/><text x="472" y="97">+10%</text>
+          <text x="0" y="134">Prediction markets</text><rect x="200" y="118" width="317" height="22" rx="3" fill="var(--v)" opacity=".7"/><text x="525" y="135">+20% on teams</text>
+          <text x="0" y="172">Superteams</text><rect x="200" y="156" width="390" height="22" rx="3" fill="var(--c)"/><text x="598" y="173" font-weight="600">+15–30%</text>
+          <text x="0" y="202" font-size="12.5" class="mut">Also: teams beat individuals by 23% in year 1, and superforecasters became 50% more accurate once they joined superteams.</text>
+        </g>
+      </svg>
+    </figure>
+    <p>What made superteams work: psychological safety (Amy Edmondson's nurse who tells the surgeon about the sponge), a shared purpose (they said “our” more than “my”), and a culture of giving. Polite “dancing around” gave way to “I want push-back from you”. Marty Rosenthal “led from behind” and hosted a barbecue. Paul Theron tracked down a Honduran politics expert and shared what he learned. A team's open-mindedness turned out to be a property of how the team talked, not the sum of its members. Diversity matters too: extremising only helps when members hold different information.</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 10 · The leader's dilemma</p>
+    <h2>Deliberate like a fox, act like a lion</h2>
+    <p>Leaders need confidence, decisiveness and vision; forecasters need doubt, slow thinking and humility. The way out comes from Helmuth von Moltke (“In war, everything is uncertain”; “no plan of operations extends with certainty beyond the first encounter with the enemy's main strength”) and his principle of <b>Auftragstaktik</b>, mission command: tell people <i>what</i> to achieve and <i>why</i>, never <i>how</i>. Debate freely, then commit: “at least one thing must be certain: one's own decision.”</p>
+    <div class="grid3">
+      <div class="card"><b>Seydlitz, 1758:</b> ordered three times by Frederick the Great to attack, on pain of death. “Tell the King that after the battle my head is at his disposal, but meanwhile I will make use of it.” He attacked when the moment was right and won.</div>
+      <div class="card"><b>Eisenhower &amp; Patton:</b> “Never tell people how to do things. Tell them what to do, and they will surprise you with their ingenuity.” Ike drafted a note taking the blame before D-Day.</div>
+      <div class="card"><b>Petraeus:</b> “The bold move is the right move except when it's the wrong move.” Unscripted exercises, graduate school for officers: “The most powerful tool any soldier carries is not his weapon but his mind.”</div>
+    </div>
+    <p style="margin-top:16px">Business versions: 3M (“we do not tell them how”), Amazon's “disagree and commit”, Walmart's mission-command leadership academy. The humility needed is <b>intellectual humility</b>, not self-doubt. Annie Duke, a poker champion: “humility in the face of the game is extremely different than humility in the face of your opponents.” Lincoln put it this way: “With firmness in the right, as God gives us to see the right.” (Why use the Wehrmacht as the example? “Precisely because it makes us squirm.” Good forecasters must be able to separate their moral judgments from their factual ones.)</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 11 · Are they really so super?</p>
+    <h2>Kahneman's doubt and Taleb's black swans</h2>
+    <p>Even experts slip back into System 1: a head of US defence intelligence called today's conflict levels “pretty unprecedented” when the data show long declines. A Müller-Lyer illusion can't be switched off, only checked with a ruler. But superforecasters resist some biases unusually well:</p>
+    <figure class="fig">
+      <svg viewBox="0 0 660 190" role="img" aria-label="Scope sensitivity: chance Assad falls in 3 vs 6 months">
+        <g font-size="14.5">
+          <text x="0" y="22" font-weight="600" font-size="15.5">“Will the Assad regime fall within…?” (early 2012, separate groups)</text>
+          <text x="0" y="60">Regulars · 3 months</text><rect x="200" y="44" width="160" height="22" fill="var(--v)" opacity=".45"/><text x="368" y="61">40%</text>
+          <text x="0" y="90">Regulars · 6 months</text><rect x="200" y="74" width="164" height="22" fill="var(--v)" opacity=".45"/><text x="372" y="91">41%</text>
+          <text x="0" y="130">Supers · 3 months</text><rect x="200" y="114" width="60" height="22" fill="var(--c)"/><text x="268" y="131">15%</text>
+          <text x="0" y="160">Supers · 6 months</text><rect x="200" y="144" width="96" height="22" fill="var(--c)"/><text x="304" y="161">24%</text>
+          <text x="420" y="110" font-size="13.5" class="mut">Like paying the same to save</text><text x="420" y="128" font-size="13.5" class="mut">2,000 or 200,000 birds:</text><text x="420" y="146" font-size="13.5" class="mut">scope insensitivity.</text>
+        </g>
+      </svg>
+    </figure>
+    <p>Nassim Taleb's objection: history jumps through unforeseeable “black swans”, so what matters can't be forecast and what can be forecast doesn't matter. Tetlock's replies: many “black swans” were imaginable (9/11 had precedents in plots and planning scenarios); history also crawls (1–2% annual growth transformed the world); and black swans are defined by their consequences, which unfold through forecastable steps (would the Taliban hand over bin Laden?). But he concedes that the tournament says nothing about rare, extreme events, and that nobody can forecast much beyond five years.</p>
+    <div class="grid2">
+      <div class="card"><h3>Fat tails</h3>Height follows a bell curve; wealth doesn't (about 1 in 700,000 Americans is a billionaire, where a bell curve would say 1 in trillions). War deaths are fat-tailed too. In 1914, a mega-war killing 10 million and then 60 million would have looked thousands of times likelier on a fat-tailed view than a bell-curve one.</div>
+      <div class="card"><h3>Plan for surprise</h3>Eisenhower: “Plans are useless, but planning is indispensable.” Build resilience, even antifragility, but preparation costs money, so priorities, and therefore probabilities, return: Tokyo's earthquake codes, the two-war doctrine. Make those probability judgments explicit.</div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 12 &amp; epilogue · What's next?</p>
+    <h2>Keep score</h2>
+    <p>After Scotland voted no (55.3% to 44.7%; superforecasters beat British betting markets), Daniel Drezner admitted he hadn't really made a forecast at all, and resolved: “make a clear prediction, and offer a confidence interval… I want to keep score.” The enemy of change is Lenin's <i>kto, kogo</i>, “who does what to whom”: forecasts serve power and tribe, not accuracy. Yet Ernest Codman's “End Result System”, which got him thrown out of Massachusetts General Hospital, eventually remade medicine, and sport and policy have since become evidence-based too.</p>
+    <div class="grid2">
+      <div class="card"><h3>Question clusters</h3>“How does this all turn out?” in Korea can't be scored. But many small, scorable questions can be: another nuclear test? artillery fire? talks refused? Like the dots of a pointillist painting, they add up to an answer.</div>
+      <div class="card"><h3>Superquestioners</h3>Good judgment also needs good questions, ones that pass the “smack-the-forehead test”. Friedman asked in 2002 whether Iraq was the way it was because of Saddam, or Saddam because of Iraq. Hedgehogs may ask the best questions; foxes give the best answers. We need both, Tom and Bill.</div>
+    </div>
+    <p style="margin-top:16px">Asked in 2014, the signatories of the 2010 QE letter all said they had been right: “Note the word ‘risk.’ And note the absence of a date.” Tetlock's proposal is <b>adversarial collaboration</b>: opponents agree on precise, scorable questions in advance (how much inflation, by which measure, over what period), so that debates teach something. And Bill Flack doesn't think he belongs at Davos either: those seats, he says, belong to people who know Fanatistan's politics in depth. He uses pundits the way a judge uses lawyers, and then forms his own view: “I know well that luck played a part in the success that I've had.”</p>
+  </section>
+
+  <section>
+    <p class="kick">Appendix</p>
+    <h2>Ten commandments for aspiring superforecasters</h2>
+    <ol class="list">
+      <li><b>Triage.</b> Spend effort where it pays off: not on easy “clocklike” questions or hopeless “cloud-like” ones, but on those in the Goldilocks zone. (Nobody in 1940 could have named the 1952 winner, Eisenhower.)</li>
+      <li><b>Break problems into tractable sub-problems.</b> Fermi-ize: flush out your ignorance and dare to be wrong. Peter Backus estimated his London dating pool at about 26 women.</li>
+      <li><b>Balance inside and outside views.</b> Ask: “How often do things of this sort happen in situations of this sort?” Larry Summers took an assistant's time estimate, doubled it and moved to the next unit: 1 hour becomes 2 days.</li>
+      <li><b>Balance under- and overreaction to evidence.</b> Usually update in small steps (0.40 → 0.35), but jump when a signal is truly diagnostic.</li>
+      <li><b>Look for clashing causal forces.</b> List in advance the signs that would move you toward the other side; become a “dove-hawk”.</li>
+      <li><b>Distinguish as many degrees of doubt as the problem permits, and no more.</b> Separate 55/45 from 45/55. “Slam dunk” implies infinite odds.</li>
+      <li><b>Balance under- and overconfidence, prudence and decisiveness.</b> Nobody wants a waffler or a blowhard; good forecasters manage both misses and false alarms.</li>
+      <li><b>Look for the errors behind your mistakes, but beware hindsight.</b> Own your failures, don't overlearn from them, and hold postmortems on your successes too.</li>
+      <li><b>Bring out the best in others.</b> Perspective-taking (state the other side's case to their satisfaction), precision questioning, constructive confrontation. Tommy Lasorda: managing is like holding a dove.</li>
+      <li><b>Master the error-balancing bicycle.</b> Deliberate practice with clear feedback.</li>
+      <li><b>Don't treat commandments as commandments.</b> Moltke: “It is impossible to lay down binding rules.”</li>
+    </ol>
+
+    <div class="tool" id="calib">
+      <h3>Test your calibration</h3>
+      <p style="margin:0 0 6px;font-size:16.5px">For each statement, set how likely you think it is to be <b>true</b>, from 0% (sure it's false) to 100% (sure it's true). Then score yourself with the book's Brier score: 0 is perfect, 0.5 is always saying 50%, 2.0 is confidently wrong every time.</p>
+      <div id="qs"></div>
+      <div class="toolbar"><button type="button" id="score">Score me</button><button type="button" class="sec" id="reset">Reset</button></div>
+      <div class="res" id="res" hidden></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Pocket version</p>
+    <h2>What to keep</h2>
+    <ol class="keep">
+      <li>Foresight is real but limited: good to about a year, close to chance beyond five.</li>
+      <li>It's not who you are, it's what you do: method beats IQ, and perpetual beta beats everything.</li>
+      <li>Use numbers, not “serious possibility”. Vague words can't be scored and therefore can't be improved.</li>
+      <li>Fermi-ize: break the question into parts, guess each one openly.</li>
+      <li>Start from the outside view (the base rate), then adjust with the specifics.</li>
+      <li>Collect perspectives like a dragonfly, including from your own second guess.</li>
+      <li>Think in fine grades of maybe; distrust certainty and fate.</li>
+      <li>Update often and mostly in small steps, but jump when the evidence is diagnostic.</li>
+      <li>Keep score, hold postmortems on wins and losses, and beware hindsight.</li>
+      <li>In teams: precise questions, constructive confrontation, shared purpose. Leaders: deliberate, then commit.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Summary of <em>Superforecasting: The Art and Science of Prediction</em> by Philip E. Tetlock and Dan Gardner (Crown, 2015). Charts are redrawn from figures given in the book; the Minto chart is traced by eye and the team chart is simplified. Quotations are brief; stories condensed and paraphrased. Calibration quiz statements written for this page.</p>
+    <p>Related summaries:</p>
+    <div class="related"><a href="../noise/">Noise</a><a href="../art-of-uncertainty/">The Art of Uncertainty</a><a href="../art-of-statistics/">The Art of Statistics</a><a href="../great-mental-models/">The Great Mental Models</a><a href="../good-thinking/">Good Thinking</a><a href="../culture-code/">The Culture Code</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('sf-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('sf-theme',n);};
+
+/* hero streaks */
+var cv=document.getElementById('streaks');
+function draw(){var r=cv.getBoundingClientRect(),d=Math.min(2,window.devicePixelRatio||1),W=Math.round(r.width*d),H=Math.round(r.height*d);if(!W)return;cv.width=W;cv.height=H;var g=cv.getContext('2d'),seed=7;function rnd(){seed=(seed*16807)%2147483647;return(seed-1)/2147483646}
+var vx=W*1.25,vy=H*.45;for(var i=0;i<120;i++){var y0=rnd()*H*1.4-H*.2,x0=rnd()*W*.9,len=W*(.04+rnd()*.12),t=x0/W;var dx=vx-x0,dy=vy-y0,m=Math.hypot(dx,dy);var c1=[123,79,224],c2=[20,169,207],c=c1.map(function(a,k){return Math.round(a+(c2[k]-a)*Math.min(1,t*1.1))});g.strokeStyle='rgba('+c.join(',')+','+(.55+rnd()*.4)+')';g.lineWidth=Math.max(1,W/700);g.beginPath();g.moveTo(x0,y0);g.lineTo(x0+dx/m*len,y0+dy/m*len);g.stroke()}}
+draw();var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(draw,150)});
+
+/* Minto chart */
+var P=[.56,.60,.66,.68,.75,.73,.68,.61,.64,.67,.74,.70,.58,.56,.55,.72,.76,.73,.76,.78,.80,.84,.86,.88,.89,.90,.92,.94,.95,.97,.98,.99,1.0,1.0];
+var pts=P.map(function(p,i){return [12+i*(560/(P.length-1)),10+(1-p)*190]});
+document.getElementById('minto').setAttribute('points',pts.map(function(q){return q[0].toFixed(1)+','+q[1].toFixed(1)}).join(' '));
+document.getElementById('mintoDots').innerHTML=pts.map(function(q){return '<circle cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="2.6"/>'}).join('');
+
+/* calibration quiz */
+var Q=[["Mount Everest is more than 8,000 metres high.",1,"True: about 8,849 m."],
+["Canada has more inhabitants than Spain.",0,"False: Canada about 41 million, Spain about 48 million."],
+["Rome lies further north than New York City.",1,"True: Rome about 41.9°N, New York about 40.7°N."],
+["The Great Wall of China is visible from the Moon with the naked eye.",0,"False: it is far too narrow."],
+["A day on Venus (one rotation) lasts longer than its year.",1,"True: about 243 Earth days versus 225."],
+["Bananas are botanically berries.",1,"True; strawberries are not."],
+["Teaching at Oxford began before the Aztecs founded Tenochtitlan.",1,"True: Oxford by 1096, Tenochtitlan 1325."],
+["Germany has more inhabitants than France.",1,"True: about 84 versus 68 million."],
+["Australia is wider from east to west than the Moon's diameter.",1,"True: about 4,000 km versus 3,474 km."],
+["The Pacific Ocean is smaller than Earth's total land area.",0,"False: the Pacific alone is larger than all land combined."]];
+var box=document.getElementById('qs'),vals=Q.map(function(){return 50});
+Q.forEach(function(q,i){var d=document.createElement('div');d.className='qrow';d.innerHTML='<p>'+(i+1)+'. '+q[0]+'</p><div class="ctl"><input type="range" min="0" max="100" step="5" value="50" aria-label="Probability statement '+(i+1)+' is true"><output>50%</output></div><div class="fb" hidden></div>';var r=d.querySelector('input'),o=d.querySelector('output');r.oninput=function(){vals[i]=+r.value;o.textContent=r.value+'%'};box.appendChild(d)});
+document.getElementById('score').onclick=function(){var tot=0,rows=box.querySelectorAll('.qrow');Q.forEach(function(q,i){var p=vals[i]/100,b=2*Math.pow(p-q[1],2);tot+=b;var fb=rows[i].querySelector('.fb');fb.hidden=false;var good=b<.5;fb.className='fb '+(good?'ok':'no');fb.textContent=q[2]+' Your Brier: '+b.toFixed(2)+'.'});
+ var avg=tot/Q.length,hi=vals.filter(function(v){return v>=90||v<=10}).length,wrongHi=Q.filter(function(q,i){return (vals[i]>=90&&!q[1])||(vals[i]<=10&&q[1])}).length,mid=vals.filter(function(v){return v>=40&&v<=60}).length;
+ var msg=avg<.25?'Excellent: sharp and well calibrated.':avg<.5?'Better than always saying 50%.':avg<.7?'About coin-flip level.':'Worse than always saying 50%: your confident calls cost you.';
+ var tip=wrongHi?' You were 90%+ sure of '+wrongHi+' wrong answer'+(wrongHi>1?'s':'')+': a sign of overconfidence. Remember the wrong-side-of-maybe and keep some doubt.':(mid>=6?' You stayed near 50% a lot: well-calibrated but cowardly? Where you have real knowledge, dare more resolution.':' Your confident calls held up.');
+ var res=document.getElementById('res');res.hidden=false;res.innerHTML='Average Brier score: <b>'+avg.toFixed(2)+'</b><br>'+msg+tip};
+document.getElementById('reset').onclick=function(){box.querySelectorAll('.qrow').forEach(function(row,i){vals[i]=50;row.querySelector('input').value=50;row.querySelector('output').textContent='50%';row.querySelector('.fb').hidden=true});document.getElementById('res').hidden=true};
+})();
+</script>
+</body>
+</html>
