@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Principles for Dealing with the Changing World Order by Ray Dalio – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+/* Design note: the epub I worked from carried an unofficial knock-off cover, so the page is not
+   drawn from a cover at all but from the book's own charts, which carry most of its argument.
+   Dalio's signature image is "Changes to the World Order": overlapping arcs for the Dutch (orange),
+   British (black), American (blue) and now Chinese (red) empires, each rising as the last declines.
+   Those four colours run through every chart here, and red also marks danger (debt, conflict, war).
+   The charts use plain heavy sans headings on a warm off-white field, like a research report, with
+   a calm serif for reading. */
+:root{
+  --bg:#fbfaf7; --ink:#1b1b1d; --muted:#5f5f66; --line:#e6e3dc; --soft:#f2efe8; --card:#ffffff;
+  --nl:#e0861f; --uk:#1b1b1d; --us:#1f6fb5; --cn:#d6312b; --ok:#2c8a57;
+  --nll:#fbecd9; --usl:#e0ecf8; --cnl:#fbe3e1; --okl:#e0f2e8;
+  --sans:"Libre Franklin",system-ui,sans-serif; --serif:"Newsreader",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121214; --ink:#ecebe8; --muted:#a6a5ab; --line:#2b2b30; --soft:#1b1b1f; --card:#17171a;
+  --nl:#f2a14a; --uk:#ecebe8; --us:#6fa8ef; --cn:#ff6b5f; --ok:#5fd193;
+  --nll:#3a2a14; --usl:#16263c; --cnl:#3a1c1a; --okl:#14301f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121214; --ink:#ecebe8; --muted:#a6a5ab; --line:#2b2b30; --soft:#1b1b1f; --card:#17171a;
+  --nl:#f2a14a; --uk:#ecebe8; --us:#6fa8ef; --cn:#ff6b5f; --ok:#5fd193;
+  --nll:#3a2a14; --usl:#16263c; --cnl:#3a1c1a; --okl:#14301f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 19.5px/1.6 var(--serif)}
+a{color:var(--us)}
+.wrap{max-width:840px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:700 13px var(--sans);letter-spacing:.1em;text-transform:uppercase}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:3px 14px;font:700 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.hero{background:#fbfaf7;color:#1b1b1d;border:1px solid var(--line);border-radius:8px;overflow:hidden;padding:clamp(20px,4vw,36px) clamp(16px,4vw,36px) 0}
+.hero .k{font:700 clamp(.7rem,2.4vw,.85rem) var(--sans);letter-spacing:.2em;color:#d6312b;text-transform:uppercase}
+.hero h1{margin:8px 0 6px;font:800 clamp(1.9rem,7.4vw,3.6rem)/1.02 var(--sans);text-transform:uppercase;letter-spacing:-.01em}
+.hero .au{font:700 clamp(.95rem,3.4vw,1.25rem) var(--sans);letter-spacing:.24em}
+.hero svg{display:block;width:100%;height:auto;margin-top:clamp(10px,3vw,20px)}
+.hero svg text{font-family:"Libre Franklin",sans-serif}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 8px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.intro p{margin:0}
+.facts{font:600 13px/1.6 var(--sans);letter-spacing:.06em;color:var(--muted);margin-top:8px;text-transform:uppercase}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:800 clamp(1.5rem,5vw,2.1rem)/1.15 var(--sans);margin:0 0 12px;letter-spacing:-.01em}
+h3{font:700 1.02rem/1.35 var(--sans);margin:22px 0 6px}
+.kick{font:700 12.5px var(--sans);letter-spacing:.18em;color:var(--cn);margin:0 0 6px;text-transform:uppercase}
+.quote{font:italic 400 1.35rem/1.45 var(--serif);margin:24px 0;padding-left:18px;border-left:4px solid var(--cn)}
+.quote small{display:block;font:600 12.5px var(--sans);letter-spacing:.08em;font-style:normal;color:var(--muted);margin-top:6px;text-transform:uppercase}
+.story{background:var(--soft);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:18px}
+.story b{font:700 .92em var(--sans)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:17.5px}
+.card h3{margin-top:0}
+.cn{border-top:4px solid var(--cn)}.cu{border-top:4px solid var(--us)}.cl{border-top:4px solid var(--nl)}.ck{border-top:4px solid var(--uk)}.cg{border-top:4px solid var(--ok)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:16.5px;line-height:1.4}
+.stat b{display:block;font:800 1.9rem/1.05 var(--sans);color:var(--cn);margin-bottom:4px}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 8px;margin-top:16px;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:520px;height:auto}
+.fig text{font-family:"Libre Franklin",system-ui,sans-serif;fill:var(--ink)}
+.fig .mut{fill:var(--muted)}
+.fig .w{fill:#fff}
+.fig figcaption{font:400 15.5px/1.45 var(--serif);color:var(--muted);margin:8px 2px 4px}
+.tbl{display:grid;grid-template-columns:1fr 1fr;margin-top:16px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tbl.t3{grid-template-columns:1.1fr 1fr 1fr}.tbl.t4{grid-template-columns:1.2fr 1fr 1fr 1fr}
+.tbl div{padding:8px 12px;font-size:16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);background:var(--card)}
+.tbl .h{font:700 12.5px var(--sans);letter-spacing:.06em;text-transform:uppercase;background:var(--soft)}
+@media (max-width:560px){.tbl,.tbl.t3{grid-template-columns:1fr}.tbl.t4{grid-template-columns:1.3fr 1fr 1fr 1fr;font-size:14px}}
+.part{text-align:center;padding:52px 0 8px;border:0}
+.part .n{font:800 12.5px var(--sans);letter-spacing:.24em;color:var(--cn);text-transform:uppercase}
+.part h2{font-size:clamp(1.9rem,7vw,2.8rem);text-transform:uppercase;margin:6px 0}
+.part p{color:var(--muted);margin:0 auto;max-width:32em}
+.list{counter-reset:r;list-style:none;padding:0;margin:14px 0 0}
+.list li{counter-increment:r;position:relative;padding:9px 0 9px 44px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list li::before{content:counter(r);position:absolute;left:0;top:8px;font:800 1.4rem/1 var(--sans);color:var(--cn)}
+.tool{border:2px solid var(--ink);border-radius:14px;padding:18px;margin-top:20px;background:var(--card)}
+.tool h3{margin-top:0;font-size:1.2rem}
+.qrow{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:17px}
+.qrow .rt{display:flex;gap:4px}
+.qrow button{width:34px;height:34px;border-radius:8px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:700 14px var(--sans);cursor:pointer}
+.qrow button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.qrow small{display:block;color:var(--muted);font-size:14px}
+@media (max-width:540px){.qrow{grid-template-columns:1fr}}
+.scale{display:flex;justify-content:space-between;font:700 11.5px var(--sans);letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin:6px 0}
+.res{margin-top:14px}
+.res svg{width:100%;height:auto;display:block}
+.res svg text{font-family:"Libre Franklin",sans-serif;fill:var(--ink)}
+.res .txt{font-size:17.5px;margin-top:8px}
+.note{font-size:15.5px;color:var(--muted);margin-top:10px}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);font:800 1.3rem var(--sans);color:var(--cn)}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:16.5px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:700 12.5px var(--sans);letter-spacing:.04em;text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+<header class="hero">
+  <div class="k">Why nations succeed and fail</div>
+  <h1>Principles for Dealing with the Changing World Order</h1>
+  <div class="au">Ray Dalio</div>
+  <svg viewBox="0 0 760 230" role="img" aria-label="Four overlapping arcs: the Dutch, British, American and Chinese empires rising and falling in turn">
+    <g fill="none" stroke-width="6" stroke-linecap="round">
+      <path d="M-10 210 C60 210 90 60 160 60 S250 210 320 210" stroke="#e0861f"/>
+      <path d="M150 210 C240 210 270 40 350 40 S450 210 530 210" stroke="#1b1b1d"/>
+      <path d="M380 210 C470 210 500 25 580 25 S690 170 760 205" stroke="#1f6fb5"/>
+      <path d="M600 215 C660 215 700 120 750 60" stroke="#d6312b"/>
+    </g>
+    <g font-size="13" font-weight="700"><text x="122" y="48" fill="#e0861f">DUTCH</text><text x="310" y="28" fill="#1b1b1d">BRITISH</text><text x="530" y="15" fill="#1f6fb5">AMERICAN</text><text x="618" y="200" fill="#d6312b">CHINESE</text></g>
+    <g font-size="11" fill="#5f5f66"><text x="0" y="226">1600</text><text x="250" y="226">1800</text><text x="470" y="226">1945</text><text x="690" y="226">now</text></g>
+  </svg>
+</header>
+
+<div class="intro">
+  <img src="cover.jpg" alt="Typographic cover tile for Principles for Dealing with the Changing World Order">
+  <div>
+    <p>Ray Dalio built Bridgewater, the world's biggest hedge fund, by studying how economies behaved long before he was born. A few years before publishing, he saw three things happening together that had never happened in his lifetime: huge debts with near-zero interest rates and mass money printing, the deepest internal divisions in about a century, and a rising power challenging the leading one. The last time all three coincided was 1930–45. So he studied the rise and fall of every major empire since 1500, and of Chinese dynasties since 600, and found the same <b>Big Cycle</b> each time.</p>
+    <p class="facts">2021 · 3 parts · 14 chapters + appendix · ~150,000 words · hundreds of charts</p>
+  </div>
+</div>
+
+<section>
+  <p class="kick">The thesis</p>
+  <h2>The times ahead will be different from our lifetimes, but not from history</h2>
+  <div class="quote">The times ahead will be radically different from those we've experienced in our lifetimes, though similar to many times in history.<small>Opening line</small></div>
+  <p>Dalio learned this the hard way. On 15 August 1971, aged 22 and clerking on the floor of the New York Stock Exchange, he heard Nixon end the dollar's convertibility into gold. He expected stocks to crash. They rose about 4 percent instead, because a devaluation was something he had never seen. His costliest mistakes always came from events that hadn't happened in his lifetime but had happened many times before. So, as a doctor studies many cases of one disease, he studies many cases of each event, writes the pattern down as a principle, and tests it with computers. Only the clothes, the languages and the technologies change.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230">
+      <line x1="40" y1="200" x2="620" y2="200" stroke="var(--line)" stroke-width="2"/>
+      <path d="M40 190 L620 40" stroke="var(--muted)" stroke-width="2" stroke-dasharray="6 6"/>
+      <path d="M40 190 C70 150 90 210 120 170 S170 140 200 150 S240 100 270 120 S320 90 350 110 S390 50 430 75 S480 40 510 60 S560 20 620 38" fill="none" stroke="var(--cn)" stroke-width="3.5"/>
+      <text x="400" y="150" font-size="13" class="mut">evolution: learning, productivity</text>
+      <text x="60" y="60" font-size="13" font-weight="700" style="fill:var(--cn)">cycles around it: booms, busts, wars</text>
+      <text x="40" y="222" font-size="12" class="mut">time →</text>
+    </svg>
+    <figcaption>Dalio's "upward-pointing corkscrew". Real GDP per person and life expectancy rise steadily over 500 years, so depressions and wars barely register on the long trend. To the people living through them, though, they decide everything.</figcaption>
+  </figure>
+  <div class="grid3">
+    <div class="card cn"><h3>1 · Debt &amp; money</h3>The long-term debt cycle: debts build until they can't be repaid in hard money, so money is printed and devalued.</div>
+    <div class="card ck"><h3>2 · Internal order</h3>Wealth and values gaps grow until bad times turn class tension into revolution, peaceful or violent.</div>
+    <div class="card cu"><h3>3 · External order</h3>A rising power challenges the leading one. With no world court that works, power decides.</div>
+  </div>
+  <p>Add <b>innovation</b> (which lifts everything) and <b>acts of nature</b> (droughts, floods and pandemics have killed more people than wars) and you have Dalio's "Big Five". When they move in the same direction, everything else follows. Peaceful, creative periods outlast the destructive ones by about 5 to 1. The destructive ones work like "cleansing storms" that clear away excess debt and lead to a new order.</p>
+</section>
+
+<div class="part"><div class="n">Part I</div><h2>How the World Works</h2><p>An archetype distilled from 11 empires over 500 years.</p></div>
+
+<section>
+  <p class="kick">Chapter 1 · The Big Cycle in a tiny nutshell</p>
+  <h2>Who led the world, and for how long</h2>
+  <figure class="fig">
+    <svg viewBox="0 0 660 280">
+      <line x1="40" y1="250" x2="640" y2="250" stroke="var(--line)" stroke-width="2"/>
+      <g font-size="11.5" class="mut" text-anchor="middle"><text x="40" y="268">1500</text><text x="160" y="268">1600</text><text x="280" y="268">1700</text><text x="400" y="268">1800</text><text x="520" y="268">1900</text><text x="640" y="268">2000</text></g>
+      <g fill="none" stroke-width="3.2">
+        <path d="M40 90 C70 70 100 120 130 115 S190 170 230 150 S280 130 320 160 S380 210 430 230 S520 240 560 235 S620 200 640 110" stroke="var(--cn)"/>
+        <path d="M130 200 C170 130 200 105 240 100 S310 150 360 200 S420 225 460 230" stroke="var(--nl)"/>
+        <path d="M60 240 C150 230 200 180 280 140 S400 70 470 60 S560 150 600 200 S630 205 640 205" stroke="var(--uk)"/>
+        <path d="M420 245 C470 200 520 140 560 80 S600 30 610 25 S630 40 640 50" stroke="var(--us)"/>
+      </g>
+      <g font-size="13" font-weight="700"><text x="44" y="82" style="fill:var(--cn)">China</text><text x="196" y="90" style="fill:var(--nl)">Netherlands</text><text x="430" y="50" style="fill:var(--uk)">United Kingdom</text><text x="560" y="18" style="fill:var(--us)">US</text><text x="602" y="132" style="fill:var(--cn)">China</text></g>
+    </svg>
+    <figcaption>Simplified from Dalio's chart of the relative standing of great empires (each index blends eight measures of power). China led for centuries, fell steeply from about 1840, and is rising again. The Dutch peaked around 1650, the British in the 1800s, the US after 1945. The US is now in relative decline. Shapes are approximate.</figcaption>
+  </figure>
+  <h3>Eight measures of power, rising in order</h3>
+  <p>Dalio scores each empire on <b>education, competitiveness, innovation and technology, economic output, share of world trade, military strength, financial-centre strength</b> and <b>reserve-currency status</b>. They rise in roughly that order, and they fall in roughly that order too. Education comes first. The reserve currency comes last and outlives the rest, much as a common language stays in use after the empire that spread it has faded.</p>
+  <div class="grid3">
+    <div class="card cg"><h3>The rise</h3>Low debt, small gaps, strong leaders, good education that includes character and civility, inventiveness (the Dutch made a quarter of the world's major inventions), capital markets, then a financial centre and a reserve currency.</div>
+    <div class="card cl"><h3>The top</h3>Wages rise and rivals copy the know-how (Britain hired Dutch ship designers). Generations raised in comfort replace those who fought. Bubbles form, gaps widen, and the "exorbitant privilege" of a reserve currency invites over-borrowing. The rich start borrowing from poorer savers, as the US did from China from the 1980s, when its income per head was 40 times China's.</div>
+    <div class="card cn"><h3>The decline</h3>Debts can't be serviced, so money is printed. Conflict between rich and poor brings populism of the left and right, taxes on the rich and capital flight. A rival exploits the weakness. The cycle ends when holders of the reserve currency lose faith and sell.</div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 680 350">
+      <path d="M30 230 C150 230 200 40 340 40 S530 230 650 230" fill="none" stroke="var(--cn)" stroke-width="3"/>
+      <g font-size="11" font-weight="700" text-anchor="middle">
+        <g fill="var(--ok)"><circle cx="70" cy="228" r="11"/><circle cx="110" cy="220" r="11"/><circle cx="145" cy="203" r="11"/><circle cx="175" cy="178" r="11"/><circle cx="200" cy="150" r="11"/><circle cx="222" cy="122" r="11"/><circle cx="246" cy="94" r="11"/><circle cx="272" cy="68" r="11"/></g>
+        <g fill="var(--nl)"><circle cx="305" cy="48" r="11"/><circle cx="340" cy="40" r="11"/><circle cx="375" cy="48" r="11"/><circle cx="408" cy="68" r="11"/></g>
+        <g fill="var(--cn)"><circle cx="434" cy="94" r="11"/><circle cx="458" cy="122" r="11"/><circle cx="480" cy="150" r="11"/><circle cx="505" cy="178" r="11"/><circle cx="535" cy="203" r="11"/><circle cx="570" cy="220" r="11"/></g>
+        <g class="w"><text x="70" y="232">1</text><text x="110" y="224">2</text><text x="145" y="207">3</text><text x="175" y="182">4</text><text x="200" y="154">5</text><text x="222" y="126">6</text><text x="246" y="98">7</text><text x="272" y="72">8</text><text x="305" y="52">9</text><text x="340" y="44">10</text><text x="375" y="52">11</text><text x="408" y="72">12</text><text x="434" y="98">13</text><text x="458" y="126">14</text><text x="480" y="154">15</text><text x="505" y="182">16</text><text x="535" y="207">17</text><text x="570" y="224">18</text></g>
+      </g>
+      <g font-size="12">
+        <text x="30" y="262" font-weight="700" style="fill:var(--ok)">RISE</text><text x="30" y="280">1 strong leadership · 2 inventiveness · 3 education · 4 strong culture</text><text x="30" y="298">5 resource allocation · 6 competitiveness · 7 income growth · 8 markets &amp; financial centre</text>
+        <text x="30" y="318"><tspan font-weight="700" style="fill:var(--nl)">TOP</tspan> 9 less productive · 10 overextended · 11 losing competitiveness · 12 wealth gaps</text><text x="30" y="338"><tspan font-weight="700" style="fill:var(--cn)">DECLINE</tspan> 13 large debts · 14 printing money · 15 internal conflict · 16 loss of reserve currency · 17 weak leaders · 18 civil war</text>
+      </g>
+    </svg>
+    <figcaption>The 18-step archetype, redrawn from chapter 1. Destruction periods (depression, revolution, war) usually last 10–20 years. Peace and prosperity between them lasts 40–80. A whole empire lasts about 250 years, give or take 150.</figcaption>
+  </figure>
+  <p>When the Dutch gave way to the British, and the British to the Americans, the same five things happened: a <b>debt crisis</b>, an <b>internal revolution</b> transferring wealth from haves to have-nots (peaceful or violent), an <b>external war</b>, a <b>currency breakdown</b>, and a <b>new domestic and world order</b>. The 1945 order was built at Bretton Woods (1944), with the UN in New York and the IMF and World Bank in Washington. At that point the US held two-thirds of the world's gold, produced about half of its output and had a monopoly on nuclear weapons.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 2 · The determinants</p>
+  <h2>A perpetual-motion machine with 18 levers</h2>
+  <p>Dalio models history as cause and effect, like a chess player who codes up their own rules and plays alongside the computer. The <b>inherited</b> determinants are geography, geology, acts of nature, and genes (which explain at most about 15 percent of behavioural differences between populations). Most of the rest is <b>human capital</b>: whether people hold themselves to high standards, are self-disciplined and civil, and are "self-sufficient plus", producing more than they consume. That is how the Netherlands, England, Switzerland and Singapore grew rich, and how Tesla took on General Motors.</p>
+  <div class="grid2">
+    <div class="card cu"><h3>Which "self"?</h3>Self-interest drives everyone, but for <i>which</i> self: individual, family, tribe, state, country, humankind? "What are… you, willing to die for?" Before about 1650, tribes and states mattered more than countries. Today the world is turning nationalist, and Americans are sorting themselves into like-minded states.</div>
+    <div class="card cl"><h3>Five generations of money</h3>1 <b>Poor and think poor.</b> 2 <b>Rich but think poor</b>: they save, invest and work hard, the best time to invest (Asian Tigers, then China). 3 <b>Rich and think rich</b>: a Renaissance, as in the US 1950–65 and China now. 4 <b>Poorer but still think rich</b>: debt, twin deficits, bubbles. 5 <b>Poor and think poor again.</b> As the saying goes, "shirtsleeves to shirtsleeves in three generations".</div>
+  </div>
+  <p>The other determinants: capital markets, the <b>ability to learn from history</b> (the Chinese excel; Dalio says you should understand everything since 1900), short-term gratification (most dangerous in politicians), <b>culture</b> ("culture is destiny"), <b>openness</b> (isolation, as in the late Ming and Edo Japan, is among the most common reasons empires fail), <b>leadership</b> (a few hundred people per generation make the difference), wealth gaps, values gaps, class struggle, a left–right swing roughly every ten years, the prisoner's dilemma, win-win versus lose-lose relationships, and the balance of power. Dalio suggests an exercise: rate a country from 1 to 10 on each and add up the scores.</p>
+  <div class="story"><b>The balance-of-power loop.</b> 1) The weaker side forms alliances ("the enemy of my enemy"). 2) A war decides the winner, typically when the sides are roughly equal and their differences existential. 3) The winners fight each other: the Reign of Terror, the Red Terror, the US and USSR after 1945, China's communists and nationalists. 4) Peace and prosperity breed excess. 5) Conflict leads to a new order. Societies that hand out roles by merit rather than privilege, drawing on the widest range of people, last longest.</div>
+</section>
+
+<section>
+  <p class="kick">Chapters 3–4 · Money, credit, debt · The changing value of money</p>
+  <h2>Debt eats equity, but central banks can feed debt</h2>
+  <p>Every person, company and government has an income statement and a balance sheet. One party's spending is another's income, and one party's debt is another's asset, so cuts and defaults spread. Dalio's exercise: how long would you last if your income stopped and your assets halved? The trap is that money and credit can be <b>created</b>. They stimulate when they are handed out and depress when they must be repaid. That produces <b>short-term debt cycles</b> (about 8 years, the business cycle) inside <b>long-term debt cycles</b> (50–75 years). Those come once in a lifetime and so catch almost everyone out. The current one began in 1945.</p>
+  <div class="quote">Debt eats equity but central banks can feed debt by printing money instead.<small>Chapter 3</small></div>
+  <ol class="list">
+    <li><b>Hard money, little debt.</b> After the last cycle's debts have been wiped out, trust is low, so money is gold, silver or a hard peg. "Gold is the only financial asset that isn't someone else's liability."</li>
+    <li><b>Paper claims on hard money.</b> Banks, and in China temples, store the metal and issue notes. People treat the notes as money.</li>
+    <li><b>More debt.</b> Lending feels good to everyone, until the claims vastly exceed the hard money and the goods there are to buy.</li>
+    <li><b>Crisis, run, devaluation.</b> Faced with a choice between default and printing, a central bank nearly always prints. Done well, this is a "beautiful deleveraging".</li>
+    <li><b>Fiat money.</b> The link to hard money is cut (as on 15 August 1971), and money and debt grow until people lose faith.</li>
+    <li><b>Flight into hard assets.</b> People move into gold, real assets and foreign currencies. Governments ban those flows, then eventually return to some hard anchor. From the Song dynasty to Weimar, the circle repeats.</li>
+  </ol>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230">
+      <defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>
+      <g text-anchor="middle">
+        <rect x="20" y="130" width="180" height="70" rx="10" fill="var(--nll)"/><text x="110" y="158" font-size="15" font-weight="800" style="fill:var(--nl)">TYPE 1 · HARD</text><text x="110" y="180" font-size="12">metal coins: credible, no credit</text>
+        <rect x="230" y="20" width="180" height="70" rx="10" fill="var(--soft)"/><text x="320" y="48" font-size="15" font-weight="800">TYPE 2 · CLAIMS</text><text x="320" y="70" font-size="12">notes backed by metal</text>
+        <rect x="440" y="130" width="180" height="70" rx="10" fill="var(--cnl)"/><text x="530" y="158" font-size="15" font-weight="800" style="fill:var(--cn)">TYPE 3 · FIAT</text><text x="530" y="180" font-size="12">lots of credit, little credibility</text>
+      </g>
+      <path d="M150 128 L250 92" stroke="var(--muted)" stroke-width="2" marker-end="url(#m)"/><path d="M390 92 L490 128" stroke="var(--muted)" stroke-width="2" marker-end="url(#m)"/><path d="M438 175 L204 175" stroke="var(--muted)" stroke-width="2" marker-end="url(#m)"/>
+      <text x="320" y="215" text-anchor="middle" font-size="12" class="mut">after hyperinflation or default: back to hard money</text>
+    </svg>
+    <figcaption>The three monetary systems and how countries rotate between them, after Dalio's diagram. Each currency regime typically survives two to four big debt crises (write-downs of 30 percent or more) before it breaks.</figcaption>
+  </figure>
+  <h3>Four ways to cut a debt burden</h3>
+  <div class="tbl t3">
+    <div class="h">Lever</div><div class="h">Effect</div><div class="h">Why it ends</div>
+    <div>Austerity</div><div>Deflationary</div><div>Too painful to last</div>
+    <div>Default / restructure</div><div>Deflationary</div><div>One party's debt is another's asset</div>
+    <div>Transfers (tax the rich)</div><div>Redistributive</div><div>Politically hard, but usually part of the fix</div>
+    <div><b>Print and devalue</b></div><div>Inflationary</div><div>"Most expedient, least well-understood, and most common". Nobody objects, because holders of cash and bonds don't notice the loss.</div>
+  </div>
+  <p>That is why Dalio thinks the main risk to savers is not default but the falling value of money itself. Holding bonds late in the cycle is "like holding a ticking time bomb that rewards you while it is still ticking". The Old Testament scheduled a Jubilee, a general forgiveness of debts, every 50 years.</p>
+  <div class="stat">
+    <div><b>~20%</b>of the roughly 750 currencies in use since 1700 still exist, and every one of those has been devalued</div>
+    <div><b>−0.1%</b>average real return a year on cash (bills) since 1912, against +1.6 percent for gold</div>
+    <div><b>$35 → $850</b>gold price: fixed from 1944 to 1971, then $850 by 1980</div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 210">
+      <g font-size="12.5"><text x="20" y="40">Cash, 1850–now</text><text x="20" y="80">Gold, 1850–now</text><text x="20" y="130">Cash, fiat era since 1912</text><text x="20" y="170">Gold, fiat era since 1912</text></g>
+      <line x1="300" y1="20" x2="300" y2="190" stroke="var(--muted)" stroke-width="1.5"/>
+      <rect x="300" y="26" width="120" height="20" fill="var(--us)"/><text x="428" y="41" font-size="13" font-weight="700">+1.2%</text>
+      <rect x="300" y="66" width="90" height="20" fill="var(--nl)"/><text x="398" y="81" font-size="13" font-weight="700">+0.9%</text>
+      <rect x="290" y="116" width="10" height="20" fill="var(--cn)"/><text x="284" y="131" font-size="13" font-weight="700" text-anchor="end" style="fill:var(--cn)">−0.1%</text>
+      <rect x="300" y="156" width="160" height="20" fill="var(--nl)"/><text x="468" y="171" font-size="13" font-weight="700">+1.6%</text>
+      <text x="300" y="205" font-size="11" class="mut" text-anchor="middle">0</text>
+    </svg>
+    <figcaption>Average annual real returns from chapter 4. In the fiat era German cash lost more than 18 percent a year, and French, Italian and Japanese cash more than 2 percent. Six big devaluations since 1850: the US Civil War, the First World War, 1919–23, the 1930s, the Second World War and 1971.</figcaption>
+  </figure>
+  <p>A currency loses reserve status after the economic and political lead has already gone to a rival, when big debts are being monetised. A bank run follows, usually tied to war debts, and countries often suspend convertibility before they devalue (Britain in 1947, the US in 1971). The losers of wars see their currencies collapse outright. Indebted winners, like Britain after the world wars, lose reserve status more slowly.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 5 · The Big Cycle of internal order and disorder</p>
+  <h2>Six stages, like the stages of a disease</h2>
+  <div class="quote">How people are with each other is the primary driver of the outcomes they get.<small>Chapter 5</small></div>
+  <figure class="fig">
+    <svg viewBox="0 0 680 300">
+      <path d="M20 200 C140 200 190 40 330 40 S520 200 660 200" fill="none" stroke="var(--cn)" stroke-width="3"/>
+      <g font-weight="800" font-size="13" text-anchor="middle">
+        <circle cx="100" cy="190" r="14" fill="var(--ok)"/><text x="100" y="195" class="w">1</text>
+        <circle cx="190" cy="105" r="14" fill="var(--ok)"/><text x="190" y="110" class="w">2</text>
+        <circle cx="290" cy="45" r="14" fill="var(--nl)"/><text x="290" y="50" class="w">3</text>
+        <circle cx="380" cy="47" r="14" fill="var(--nl)"/><text x="380" y="52" class="w">4</text>
+        <circle cx="480" cy="110" r="14" fill="var(--cn)"/><text x="480" y="115" class="w">5</text>
+        <circle cx="580" cy="190" r="14" fill="var(--cn)"/><text x="580" y="195" class="w">6</text>
+      </g>
+      <g font-size="12" text-anchor="middle"><text x="100" y="222">new order,</text><text x="100" y="238">consolidate</text><text x="190" y="140">build systems</text><text x="290" y="80">peace &amp; prosperity</text><text x="390" y="80">excess, gaps</text><text x="500" y="146">bad finances,</text><text x="500" y="162">intense conflict</text><text x="580" y="222">civil war /</text><text x="580" y="238">revolution</text></g>
+      <g font-size="11.5" class="mut" text-anchor="middle"><text x="100" y="262">consolidator</text><text x="190" y="262">civil engineer</text><text x="300" y="262">inspirational visionary</text><text x="400" y="278">disciplined leader</text><text x="490" y="262">strong peacemaker</text><text x="590" y="262">inspirational general</text></g>
+      <path d="M480 128 L480 165" stroke="var(--us)" stroke-width="2"/><text x="470" y="290" font-size="12" font-weight="800" style="fill:var(--us)" text-anchor="middle">US now</text>
+      <text x="300" y="28" font-size="12" font-weight="800" style="fill:var(--cn)" text-anchor="middle">China now (stage 3)</text>
+    </svg>
+    <figcaption>The internal cycle takes about 100 years, give or take a lot. Each stage calls for a different kind of leader: Tang Taizong and Caesar Augustus as consolidators; Adenauer, Lee Kuan Yew and Deng as "civil engineers"; Gladstone, Bismarck, Kennedy and Deng as visionaries. Churchill and Mao were great "inspirational generals" and poor civil engineers.</figcaption>
+  </figure>
+  <div class="grid2">
+    <div class="card cl"><h3>Stage 4 · Bubble prosperity</h3>Credit-fuelled bets that the trend will continue (Japan 1988–90, the US in 1929 and 2006–07). Consumption and luxury crowd out investment. Leaders turn decadent: Nero used Rome's fire to grab land for a palace, Louis XIV expanded Versailles, and the Wanli Emperor stopped governing to build his tomb.</div>
+    <div class="card cn"><h3>Stage 5 · The classic toxic mix</h3>1) Weak finances, 2) large income, wealth and values gaps, 3) a severe shock (a burst bubble, a pandemic, a war). Across more than 50 civil wars, the most reliable leading indicator was <b>bankrupt government finances combined with big wealth gaps</b>.</div>
+  </div>
+  <p>Late in stage 5 the familiar markers appear. Decadent spending starts to look grotesque, and bureaucracy blocks obvious fixes (in the US, schools are funded by local taxes, so rich towns get better schools). <b>Populists</b> of the left and right rise, and moderates shrink to a minority before disappearing altogether. Classes are stereotyped, then <b>demonised and scapegoated</b>. Truth drains out of public life: in 1976, 72 percent of Americans trusted the media; by 2019, 41 percent did. Finally rules stop being followed, police and courts are turned into weapons, and paramilitaries form. When people die in the fighting, stage 6 has begun.</p>
+  <div class="stat">
+    <div><b>1 in 6</b>chance of severe internal conflict when 60–80 percent of Dalio's economic red flags are present. The US is in that range.</div>
+    <div><b>1 in 3</b>chance of civil war or revolution when more than 80 percent are present</div>
+    <div><b>~30%</b>Dalio's estimate of a civil-war-like stage 6 in the US within ten years</div>
+  </div>
+  <div class="story"><b>Connecticut, up close.</b> Dalio's home state has the highest income per head in the US, the widest wealth and income gaps, and huge unfunded pensions. His wife's foundation found that 22 percent of its high-school students are "disengaged" (absent more than a quarter of the time and failing) or "disconnected" (dropped out). The haves don't feel rich, the have-nots see decadence, and each stereotypes the other. In his words: "Averages don't matter as much as the number of people who are suffering and their power."</div>
+  <div class="quote">When in doubt, get out.<small>Chapter 5: the doors close, for people and capital, once things get bad</small></div>
+  <p>Revolutionary leaders tend to be educated, middle-class and charismatic (Danton, Robespierre, Lenin, Trotsky, Mao, Zhou Enlai), and their coalitions split once they win. Civil wars are more brutal than seemed possible beforehand, because "moderates lose out in knife fights". Foreign powers almost always join in. Democracies bend more than autocracies, because people can only blame themselves. Their danger is gridlock, which leads people to call for a strongman. Dalio's conclusion is that no system is always best, and that working together to grow and share the pie beats any civil war.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 6 · The Big Cycle of external order and disorder</p>
+  <h2>Between countries, the law of the jungle</h2>
+  <p>Inside countries there are laws, police, judges and penalties. Between them there are none that work: the League of Nations and the UN were weaker than the great powers. So disputes end in threats, deals or fights, and an economic war comes first, typically about a decade before the shooting starts.</p>
+  <div class="grid3">
+    <div class="card cu"><h3>Trade &amp; economic</h3>Tariffs and import or export bans, from Smoot-Hawley (1930) to today.</div>
+    <div class="card cu"><h3>Technology</h3>What is shared and what is protected. Whoever wins this war probably wins the others.</div>
+    <div class="card cu"><h3>Capital</h3>Asset freezes, blocked capital markets, embargoes. "No money = no power."</div>
+    <div class="card cl"><h3>Geopolitical</h3>Territory and alliances, settled by negotiation and commitments.</div>
+    <div class="card cn"><h3>Military</h3>Once it starts, every other weapon is used to the full.</div>
+    <div class="card ck"><h3>+ culture &amp; ourselves</h3>Added in chapter 13: what each side would die for, and how well each manages itself.</div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 660 230">
+      <line x1="40" y1="190" x2="640" y2="190" stroke="var(--line)" stroke-width="2"/>
+      <g font-size="11.5" class="mut" text-anchor="middle"><text x="40" y="208">1400</text><text x="160" y="208">1500</text><text x="280" y="208">1600</text><text x="400" y="208">1700</text><text x="520" y="208">1800</text><text x="640" y="208">2000</text></g>
+      <path d="M40 185 C120 185 180 180 220 160 S260 40 290 40 S330 180 370 185 S450 185 470 160 S500 90 510 95 S540 180 560 185 S600 185 610 30 S630 160 640 185" fill="none" stroke="var(--cn)" stroke-width="3"/>
+      <g font-size="12" text-anchor="middle"><text x="290" y="30" font-weight="700">Wars of Religion, Thirty Years' War</text><text x="505" y="80" font-weight="700">Napoleonic Wars</text><text x="596" y="22" font-weight="700">World Wars</text><text x="150" y="150" class="mut">Renaissance</text><text x="400" y="160" class="mut">Enlightenment</text><text x="570" y="150" class="mut">Pax Britannica</text></g>
+    </svg>
+    <figcaption>Simplified from Dalio's chart of European deaths from conflict as a share of the population: three big cycles of about 150 years each, with peaceful creative eras sowing the seeds of terrible wars. Shape approximate.</figcaption>
+  </figure>
+  <div class="grid2">
+    <div class="card cn"><h3>When war is likeliest</h3>When military power is roughly comparable <i>and</i> the differences are irreconcilable and existential. Today the most explosive case is the US and China over Taiwan. Two things are certain about any war: it "won't go as planned" and it "will be far worse than imagined".</div>
+    <div class="card cg"><h3>Have power, respect power, use power wisely</h3>Power beats agreements. Don't fight a war you will lose. Generosity and trust are power too. Fight early if your power is declining and later if it is rising. Keep power like a hidden knife. Being able to outspend your rival is how the US won the Cold War without shooting.</div>
+  </div>
+  <div class="story"><b>The 1930s as a template.</b> The Depression pushed Germany, Japan, Italy and Spain towards fascism ("autocratic, capitalist, collectivist") and the USSR and China towards communism, while the US and UK redistributed wealth and kept their democracies. Under Hitler, German unemployment fell from 25 percent to almost zero and stocks rose about 70 percent, financed by borrowing. Japan's exports halved and it went broke in 1931, then took the oil, coal and rubber it needed by force. In July and August 1941 the US froze Japan's assets, closed the Panama Canal to its ships and embargoed oil. That cut off three-quarters of Japan's trade and 80 percent of its oil, leaving about two years' supply. Japan faced a choice between backing down and attacking, and Pearl Harbor followed. "In war one's ability to withstand pain is even more important than one's ability to inflict pain."</div>
+</section>
+
+<section>
+  <p class="kick">Chapter 7 · Investing in light of the Big Cycle</p>
+  <h2>US and UK returns are the exception, not the rule</h2>
+  <p>All markets come down to four drivers: <b>growth, inflation, risk premiums and discount rates</b>. Most investors look back only to the 1950s, and only at the US and UK, the two countries that won both world wars, during the best stretch of the cycle. That is survivorship bias. Lending at interest was forbidden until about 1350. Then Italian bankers such as the Medici invented deposits, bonds and stocks, which Dalio calls the alchemy of "financial wealth". Financial claims now so dwarf real assets that they could never all be cashed in.</p>
+  <div class="stat">
+    <div><b>7 of 10</b>leading powers of 1900 saw their wealth virtually wiped out at least once</div>
+    <div><b>~25%</b>of real US equity returns lost to taxes over a typical 20-year period</div>
+    <div><b>1.5%</b>a year by which US investors trailed US stocks from 2000 to 2020, by selling low and buying high</div>
+  </div>
+  <p>Risk, for Dalio, is not volatility. It is failing to earn what you need, being ruined, or having your wealth taken. Before 1945 wealth was confiscated, capital controlled and stock markets closed for years, and in many countries capitalists were jailed or killed. Those events seem implausible now only because no one alive remembers them. He also notes that in 2021 a US bond would take about 45 years to return what you paid for it in nominal terms (and in real terms might never), so he asks why not buy real things instead.</p>
+</section>
+
+<div class="part"><div class="n">Part II</div><h2>The Last 500 Years</h2><p>The Dutch, the British, the Americans and the Chinese: the same story in different costumes.</p></div>
+
+<section>
+  <p class="kick">Chapters 8–9 · The world in 1500 · The Dutch Empire and the guilder</p>
+  <h2>A country of 1–2 million that led the world</h2>
+  <p>In 1500 a day's ride was 25 miles, there were no countries, only family dynasties, and Ming China was far ahead of Europe: a population of 100–130 million against Europe's 50–55 million, Confucian examinations, smallpox inoculation, the world's largest navy. Then China turned inward, scrapping Zheng He's treasure fleets in favour of comfortable isolation. Meanwhile Europe went through the Commercial Revolution (Venice issued a perpetual 5 percent bond for centuries), the Renaissance, the voyages of discovery, the Reformation, the Peace of Westphalia (1648, which invented sovereign countries), the Scientific Revolution and the Enlightenment.</p>
+  <div class="grid2">
+    <div class="card cl"><h3>The rise</h3>The Dutch gained independence from a decadent, over-stretched Habsburg Spain (Philip II defaulted four times) in 1581. They valued education, saving, merit and tolerance. Their ships could sail around the world. In 1602 they created the first publicly listed company, the Dutch East India Company, at one point about a third of world trade, and the first stock exchange. In 1609 came the Bank of Amsterdam and the guilder, the first reserve currency. Income per head reached twice that of other European powers.</div>
+    <div class="card cn"><h3>The fall</h3>The good life made them complacent. Wages rose, the Company missed the tea trade, and Britain learned Dutch methods. William III's accession to the English throne in 1688 moved Dutch merchants to London. After the Fourth Anglo-Dutch War (1780–84) the Company, too big to fail, borrowed heavily from the bank, and a run began.</div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 600 190">
+      <rect x="40" y="40" width="360" height="40" fill="var(--nl)"/><text x="410" y="66" font-size="14" font-weight="800">17 million guilders</text>
+      <rect x="40" y="110" width="8" height="40" fill="var(--cn)"/><text x="58" y="136" font-size="14" font-weight="800" style="fill:var(--cn)">0.3 million</text>
+      <g font-size="12.5" class="mut"><text x="40" y="30">March 1780: coin-backed accounts at the Bank of Amsterdam</text><text x="40" y="100">January 1783</text></g>
+      <text x="40" y="178" font-size="12.5">1791 city takeover · 1795 French conquest · 1799 the Company's charter lapses</text>
+    </svg>
+    <figcaption>The end of the first reserve currency. Depositors eventually recovered only about 20 percent of their metal. Investors who had moved into British assets did far better.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <p class="kick">Chapter 10 · The British Empire and the pound</p>
+  <h2>2.5 percent of the world's people, 20 percent of its income</h2>
+  <p>Britain's rise began with civil war and the Glorious Revolution, which strengthened Parliament and established the rule of law. Leaders such as Pitt, Peel and Gladstone came from merchant families. Britain taxed twice as effectively as France, and the Bank of England (1694) made its bonds cheap and liquid. Then came iron, coal and inventions: the steam engine in 1712, the spinning jenny in 1764, the power loom in 1785, and the Manchester–Liverpool railway in 1825. France had the Enlightenment but also John Law's Mississippi bubble, borrowed at twice Britain's interest rates, and had a court living in Marie Antoinette's mock village. That led to revolution, the assignat hyperinflation, and in 1796 a ceremony at which the money presses were destroyed. Then came Napoleon. After the Congress of Vienna, Britain enjoyed a century of peace.</p>
+  <div class="stat">
+    <div><b>~40%</b>of world exports at the peak around 1850; about 60 percent of world trade was priced in pounds from 1850 to 1914</div>
+    <div><b>&gt;70%</b>of wealth owned by the richest 1 percent in the late 1800s, and 93 percent by the top 10 percent</div>
+    <div><b>30%</b>devaluation against the dollar in 1949, followed by another in 1967. Sterling then disappeared from central banks' reserves within two years</div>
+  </div>
+  <p>The decline was classic. The US and Germany industrialised faster in the Second Industrial Revolution, and Bismarck's compulsory schooling lifted Germany's share of manufacturing from 5 to 13 percent. Inequality brought unions and the Labour Party. Wilhelm II started a naval arms race, and the First World War killed about 8.5 million soldiers and 13 million civilians. The Versailles settlement "made a second war inevitable". Britain ended the Second World War bankrupt. It was lent $3.75 billion in 1946, and when it reopened convertibility in 1947 a run forced it to shut again within weeks, despite Attlee calling for "another battle for Britain". Afterwards, Robert Schuman and Konrad Adenauer set out to make European war "not merely unthinkable, but materially impossible", starting with the coal and steel union that grew into today's EU, now a secondary power.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 11 · The United States and the dollar</p>
+  <h2>About 70 percent of the way through its Big Cycle</h2>
+  <p>The US founded itself peacefully, grew through the Gilded Age (eight New York banking panics between 1836 and 1913, then the Federal Reserve), kept gold convertibility through the First World War, and emerged from the Second as the big winner. It had two-thirds of the world's gold, the Marshall and Dodge plans, NATO and Bretton Woods. Dalio, who started investing at 12 in 1961, says he was born in the right place at the right time: most people were middle class, and most were happy.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 660 250">
+      <line x1="40" y1="200" x2="640" y2="200" stroke="var(--line)" stroke-width="2"/>
+      <g font-size="11.5" class="mut" text-anchor="middle"><text x="60" y="218">1945</text><text x="160" y="218">1960s</text><text x="250" y="218">1971</text><text x="330" y="218">1979–82</text><text x="420" y="218">1990s</text><text x="510" y="218">2008</text><text x="600" y="218">2020</text></g>
+      <path d="M40 150 C100 130 130 120 160 120 S220 140 250 110 S300 40 330 40 S390 120 420 140 S480 175 510 185 S580 195 640 198" fill="none" stroke="var(--us)" stroke-width="3"/>
+      <g font-size="12"><text x="70" y="110">boom, Bretton Woods</text><text x="160" y="160" class="mut">guns &amp; butter</text><text x="220" y="90" font-weight="700" style="fill:var(--cn)">gold window closes</text><text x="300" y="28" font-weight="700">Volcker: rates "since Jesus Christ"</text><text x="400" y="122" class="mut">disinflationary boom</text><text x="470" y="170" font-weight="700" style="fill:var(--cn)">0% rates, QE</text><text x="560" y="182" font-weight="700" style="fill:var(--cn)">MP3</text></g>
+      <text x="20" y="110" font-size="11" class="mut" transform="rotate(-90 20 110)">interest rates</text>
+    </svg>
+    <figcaption>A schematic of the US interest-rate cycle since 1945: up through the inflation of the 1970s to Volcker's peak, then down to zero in 2008 and 2020. Gold went from $35 to $850. Monetary Policy 1 means interest rates, MP2 means printing money to buy bonds, and MP3 means central banks financing government spending directly, which is where the US now is.</figcaption>
+  </figure>
+  <div class="story"><b>Dalio's own crash, 1982.</b> He predicted the debt crisis correctly, then bet on a depression that never came. He had to let everyone at Bridgewater go and borrowed $4,000 from his father to pay the family's bills. The lesson changed how he worked. Debts in a currency the central bank can print can be managed, and "the value of assets is the reciprocal of the value of money and credit". He calls it one of the best things that ever happened to him.</div>
+  <p>After the Cold War came globalisation: production moved to wherever it was cheapest, China joined the WTO in 2001, and "workers in other countries… and machines replaced middle-class workers in the United States". Each crisis brought lower rates and more debt. After 2008 the printed money lifted asset prices, which favoured those who already owned assets, and wealth gaps reached their widest since 1930–45. Political polarisation is now the highest on record: in 1960 about 5 percent of parents would have minded their child marrying someone from the other party, and by 2010 nearly half of Republican parents and a third of Democratic ones would.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 12 · The rise of China and the renminbi</p>
+  <h2>A long decline, then the fastest rise in history</h2>
+  <p>Many people urged Dalio not to publish this chapter. He did anyway, after nearly 40 years of visiting China, because "to not speak honestly would cost me my self-respect". Chinese dynasties follow the same arc, lasting about 250 years. They decline the same way: elites with land escape taxes, money gets printed (the Song invented paper money, and later its notes lost more than 90 percent of their value), infrastructure decays, floods and droughts trigger peasant revolts, and isolation hands the advantage to "barbarians". Chinese leaders know this history intimately. Mao read the 20-volume <i>Comprehensive Mirror</i> several times, and Chinese leaders plan in centuries rather than election cycles.</p>
+  <div class="grid3">
+    <div class="card cn"><h3>1949–76 · Mao</h3>Consolidation and the "iron rice bowl", which gave security but little motivation. The Korean War. The Great Leap Forward (the economy shrank 25 percent and 16–40 million people died in the famine) and the Cultural Revolution. Then the opening to Kissinger and Nixon in 1971–72.</div>
+    <div class="card cl"><h3>1978–2012 · Deng and successors</h3>"Reform and opening up". Income per head was under $200. Deng planned 70 years ahead and quadrupled GDP per head by 1995, five years early. Term limits came in 1982. Lee Kuan Yew called Deng the greatest leader of the 20th century.</div>
+    <div class="card cu"><h3>2012– · Xi</h3>Fighting corruption and debt, investing in technology, Belt and Road, tighter party control (term limits scrapped in 2018), and a target of a "modern socialist country" by 2049. Rising tension with the US.</div>
+  </div>
+  <div class="story"><b>Calculators and skyscrapers.</b> On his first visit in 1984, Dalio's $10 calculators were treated as miraculous gifts even by senior officials. Lecturing in CITIC's "Chocolate Building", he pointed at the low courtyard houses below and predicted skyscrapers. "You don't know China," his hosts said. In 1995 he sent his 11-year-old son Matt to a poor Beijing school with no heating until late November, where Matt got an excellent education, character included. Dalio reckons that over the reform era output per person rose 25-fold, the share of people in extreme poverty fell from 96 percent to under 1 percent, and life expectancy rose by about ten years.</div>
+  <p>Dalio also took the trouble to understand Marx. He found dialectical materialism, progress through the clash of opposites, close to his own "looping" process, while still preferring what capitalism has delivered. China's mix of Confucian hierarchy ("country" in Chinese is written "state" plus "family") and market incentives is, he argues, something to study rather than caricature.</p>
+</section>
+
+<section>
+  <p class="kick">Chapter 13 · US–China relations and wars</p>
+  <h2>Five wars under way, with the shooting war still avoidable</h2>
+  <div class="grid2">
+    <div class="card cu"><h3>Technology</h3>The US is still ahead overall (in AI chips, though behind in 5G) and its tech companies are worth about four times China's. But China has 40 percent of the world's largest civilian supercomputers, far more data, about eight times as many STEM graduates entering tech, and "big data + big AI + big computing = superior decision making". Taiwan's TSMC is one flashpoint.</div>
+    <div class="card cn"><h3>Taiwan</h3>For China it is about sovereignty, the Century of Humiliation and fear of regime change, which it would fight to the death over. If the US backed down, it would be "a great humiliation", like Britain at Suez. If it fought, it would probably lose regionally, and the war would be unpopular.</div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230">
+      <g font-size="13"><text x="20" y="36">US dollar</text><text x="20" y="66">Euro</text><text x="20" y="96">Gold</text><text x="20" y="126">Japanese yen</text><text x="20" y="156">British pound</text><text x="20" y="186">Chinese renminbi</text></g>
+      <g><rect x="150" y="22" width="408" height="20" fill="var(--us)"/><rect x="150" y="52" width="160" height="20" fill="var(--muted)"/><rect x="150" y="82" width="96" height="20" fill="var(--nl)"/><rect x="150" y="112" width="48" height="20" fill="var(--muted)"/><rect x="150" y="142" width="40" height="20" fill="var(--uk)"/><rect x="150" y="172" width="16" height="20" fill="var(--cn)"/></g>
+      <g font-size="13" font-weight="800"><text x="566" y="37">51%</text><text x="318" y="67">20%</text><text x="254" y="97">12%</text><text x="206" y="127">6%</text><text x="198" y="157">5%</text><text x="174" y="187">2%</text></g>
+      <text x="20" y="220" font-size="12" class="mut">Share of central bank reserves (data to 2019), as given in chapter 13</text>
+    </svg>
+    <figcaption>None of the alternatives is attractive: the euro is "weakly structured", gold is "a relatively dead asset", the yen carries similar debt problems, and the pound is held "anachronistically". The renminbi is the only one chosen on its fundamentals, but it remains closed to free capital flows. A currency doesn't need a strong rival to be devalued. Money simply moves into gold, commodities, stocks and property.</figcaption>
+  </figure>
+  <p>The US has about 8,000 sanctions in force and its strongest weapon is the dollar, yet the dollar is at risk. Foreigners hold disproportionately large amounts of US debt, the Fed must buy more of it while paying negative real yields, and China (holding about $1 trillion) and Russia are building other payment systems. Most countries told Dalio they would choose China for economics and the US for security, but doubt the US would actually fight for them. Meanwhile the Pew survey found 73 percent of Americans with an unfavourable view of China.</p>
+  <div class="story"><b>Culture can't be negotiated away.</b> In 2019 a Houston Rockets manager tweeted support for Hong Kong's protesters. Americans attacked him for deleting it, while China punished the entire NBA, because it holds the group responsible for the individual. Americans would die for free speech; China puts collective stability first. Yet the same Chinese friends got Connecticut protective equipment in the first COVID wave when no American source could. Neither side will change the other's core values, so they can either respect each other's choices or fight to the death over them.</div>
+  <div class="quote">Deserve Victory!<small>Churchill, quoted at the close of chapter 13: the war that matters most is the one with ourselves</small></div>
+</section>
+
+<div class="part"><div class="n">Part III</div><h2>The Future</h2><p>"He who lives by the crystal ball is destined to eat ground glass."</p></div>
+
+<section>
+  <p class="kick">Chapter 14 · The future</p>
+  <h2>Bet on evolution, but don't let the cycles knock you out</h2>
+  <p>Extrapolate the trends (in ten years: about 10–15 percent more people, about 20 percent more output per person, about 30 percent more wealth per person), but expect paradigm shifts. Anyone extrapolating in 1750 would have assumed monarchies, peasants and 30-year life expectancies forever. Dalio is very optimistic about innovation: computers and humans together, quantum computing with AI as "the greatest shift in wealth and power that the world has ever seen", and lifespans perhaps 20–25 percent longer within two decades. "If humanity doesn't kill itself first."</p>
+  <figure class="fig">
+    <svg viewBox="0 0 660 360">
+      <g font-size="12.5" text-anchor="end"><text x="130" y="34">India</text><text x="130" y="62">China</text><text x="130" y="90">Russia</text><text x="130" y="118">US</text><text x="130" y="146">Netherlands</text><text x="130" y="174">UK</text><text x="130" y="202">France</text><text x="130" y="230">Germany</text><text x="130" y="258">Eurozone</text><text x="130" y="286">Japan</text><text x="130" y="314">Spain</text></g>
+      <g><rect x="140" y="22" width="378" height="17" fill="var(--ok)"/><rect x="140" y="50" width="258" height="17" fill="var(--cn)"/><rect x="140" y="78" width="150" height="17" fill="var(--muted)"/><rect x="140" y="106" width="66" height="17" fill="var(--us)"/><rect x="140" y="134" width="60" height="17" fill="var(--nl)"/><rect x="140" y="162" width="54" height="17" fill="var(--uk)"/><rect x="140" y="190" width="24" height="17" fill="var(--muted)"/><rect x="140" y="218" width="18" height="17" fill="var(--muted)"/><rect x="140" y="246" width="18" height="17" fill="var(--muted)"/><rect x="140" y="274" width="1" height="17" fill="var(--muted)"/><rect x="140" y="302" width="1" height="17" fill="var(--muted)"/></g>
+      <g font-size="12.5" font-weight="700"><text x="526" y="35">6.3%</text><text x="406" y="63">4.3%</text><text x="298" y="91">2.5%</text><text x="214" y="119">1.1%</text><text x="208" y="147">1.0%</text><text x="202" y="175">0.9%</text><text x="172" y="203">0.4%</text><text x="166" y="231">0.3%</text><text x="166" y="259">0.3%</text><text x="148" y="287">0%</text><text x="148" y="315">0%</text></g>
+      <text x="140" y="348" font-size="12" class="mut">Expected real growth a year over the next ten years (Dalio's computer readings, August 2021)</text>
+    </svg>
+    <figcaption>From the appendix. In backtests these projections came within 1 percentage point of actual decade growth 59 percent of the time and within 2 points about 90 percent of the time. Government debt: Japan 241 percent of GDP, the US 128 percent, China 48 percent, Russia 14 percent.</figcaption>
+  </figure>
+  <div class="tbl t3">
+    <div class="h"></div><div class="h">United States (No. 1, declining)</div><div class="h">China (No. 2, rising fast)</div>
+    <div>Strengths</div><div>Capital markets (55 percent of world equity value), reserve currency, innovation (26 percent of global R&amp;D), education, military</div><div>Output (22 percent of world, adjusted for prices) and trade (14 percent of exports), infrastructure, education, work ethic, military</div>
+    <div>Weaknesses</div><div>Debt, internal conflict, wealth gaps (top 1 percent take 19 percent of income), slow expected growth</div><div>Reserve currency, rule of law and corruption, wealth gaps (top 1 percent take 14 percent)</div>
+    <div>Net foreign position</div><div>−64 percent of GDP</div><div>+12 percent of GDP</div>
+  </div>
+  <div class="stat">
+    <div><b>~35%</b>Dalio's estimate of a big war in the next ten years, which he calls "essentially a wild guess" but dangerously high. Graham Allison found war in 12 of 16 cases of rival powers.</div>
+    <div><b>~4 yrs</b>after publication: his guess for the next downturn, to be followed quickly by more money printing</div>
+    <div><b>~5 yrs</b>to the next big risk point for US–China conflict, give or take two, with Taiwan as the likeliest trigger</div>
+  </div>
+  <p>Climate-related extreme events rose from fewer than 50 a year in 1970 to nearly 200 in 2020. Dalio expects humans to adapt "slowly and reactively". His overall picture is a race between human inventiveness and four forces: debt, internal conflict, external conflict and nature.</p>
+  <h3>How to bet when you can't know</h3>
+  <ol class="list">
+    <li><b>Imagine the worst cases and eliminate the intolerable ones first.</b> After 1982 Dalio worked out how many weeks, then months, then years his family could live with no income. He now keeps an "end of the world" portfolio, and says covering the worst cases is what frees him to go for great results.</li>
+    <li><b>Diversify.</b> A set of good, unrelated bets can cut risk by up to 80 percent without cutting the upside. As the Chinese saying goes, "a smart rabbit has three burrows".</li>
+    <li><b>Put deferred gratification ahead of immediate gratification.</b></li>
+    <li><b>Triangulate with the smartest people you can find.</b></li>
+  </ol>
+</section>
+
+<section>
+  <p class="kick">Try it</p>
+  <h2>Where is a country in the Big Cycle?</h2>
+  <div class="tool">
+    <h3>Rate a country on Dalio's key markers</h3>
+    <p style="margin:0;font-size:16px;color:var(--muted)">Pick a country and score each marker from 1 (weak or bad) to 5 (strong or good). The dot shows where the readings place it on the arc. This is a way to apply the archetype, not Dalio's actual model, which uses hundreds of statistics.</p>
+    <div class="scale"><span>1 = bad</span><span>5 = good</span></div>
+    <div id="qs"></div>
+    <div class="res">
+      <svg viewBox="0 0 600 170"><path d="M20 150 C130 150 180 25 300 25 S470 150 580 150" fill="none" stroke="var(--cn)" stroke-width="3"/><text x="40" y="168" font-size="12">rise</text><text x="285" y="16" font-size="12">top</text><text x="530" y="168" font-size="12">decline</text><circle id="dot" cx="300" cy="25" r="11" fill="var(--us)" opacity="0"/></svg>
+      <div class="txt" id="txt">Score all ten markers to place the country.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="kick">Pocket version</p>
+  <h2>The Changing World Order on one card</h2>
+  <ol class="keep">
+    <li>History rhymes. The big events come about once in a lifetime, so they always surprise people.</li>
+    <li>Watch three cycles: debt and money, internal order and external order. Then add innovation and acts of nature.</li>
+    <li>Empires rise on education, character, innovation and capital markets, and fall on debt, wealth gaps, decadence and rivals.</li>
+    <li>Reserve status lasts longest and then collapses fastest. All currencies are devalued or die.</li>
+    <li>"Debt eats equity but central banks can feed debt": printing is the most common and least understood way out.</li>
+    <li>The real risk for savers is the falling value of money, not default.</li>
+    <li>The toxic mix is weak finances, big gaps and a shock. The surest warning of civil war is a bankrupt government combined with big wealth gaps.</li>
+    <li>Late in the cycle: populism, scapegoats, propaganda, broken rules. When in doubt, get out.</li>
+    <li>Between countries power rules, and an economic war comes about a decade before a shooting war.</li>
+    <li>Have power, respect power and use it wisely. Seek win-win deals and know each side's red lines.</li>
+    <li>The US is about 70 percent through its cycle and China is rising. Taiwan is the most dangerous issue. The decisive war is the one with ourselves.</li>
+    <li>Bet on evolution, protect against the worst case, diversify, and triangulate.</li>
+  </ol>
+</section>
+
+<footer>
+  <p>Summary of <i>Principles for Dealing with the Changing World Order: Why Nations Succeed and Fail</i> by Ray Dalio (Avid Reader Press / Simon &amp; Schuster, 2021). The epub file was labelled as a "Summary of…" and carried an unofficial cover, but its contents are Dalio's full book. The cover tile here is a typographic stand-in. Charts are redrawn from the book: the empire and conflict curves are approximate shapes, and the data charts use the figures stated in the text. Readings reflect Dalio's data as of 2021. Quotes are kept brief.</p>
+  <div class="related"><a href="../new-cold-wars/">New Cold Wars</a><a href="../world-on-the-brink/">World on the Brink</a><a href="../fabulous-debt/">Fabulous Debt</a><a href="../breakneck/">Breakneck</a><a href="../china-incorporated/">China Incorporated</a><a href="../21-lessons/">21 Lessons</a><a href="../superforecasting/">Superforecasting</a></div>
+</footer>
+</div>
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('cwo-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('cwo-theme',n);};
+/* g: growth-side marker (strength); r: excess marker (top); d: decline marker */
+var Q=[
+["Education and skills","Quantity and quality, including character and civility"],
+["Innovation and technology","Share of patents, research, venture capital"],
+["Cost competitiveness","What the world gets for what it pays"],
+["Debt burden","5 = low debt, own currency, savings; 1 = heavy and rising"],
+["Government finances","5 = surpluses; 1 = deficits only the central bank will finance"],
+["Wealth and opportunity gaps","5 = narrow; 1 = very wide"],
+["Internal conflict and polarisation","5 = civil, rules respected; 1 = demonisation, rules ignored"],
+["Rule of law and corruption","5 = clean and predictable"],
+["Work ethic and self-sufficiency","5 = save, invest, produce more than consume"],
+["Standing against rivals","5 = unchallenged; 1 = a rising rival is overtaking"]];
+var v=new Array(Q.length).fill(0),box=document.getElementById('qs');
+Q.forEach(function(q,i){var d=document.createElement('div');d.className='qrow';d.innerHTML='<div>'+q[0]+'<small>'+q[1]+'</small></div><div class="rt"></div>';var rt=d.querySelector('.rt');for(var k=1;k<=5;k++){(function(k){var b=document.createElement('button');b.type='button';b.textContent=k;b.setAttribute('aria-pressed','false');b.setAttribute('aria-label',q[0]+': '+k+' of 5');b.onclick=function(){v[i]=k;[].forEach.call(rt.children,function(x,j){x.setAttribute('aria-pressed',j+1===k)});upd()};rt.appendChild(b)})(k)}box.appendChild(d)});
+function pt(t){/* t 0..1 along arc, approximate with cubic segments */var x=20+560*t;var y=150-125*Math.sin(Math.PI*t);return [x,y]}
+function upd(){var n=v.filter(Boolean).length,dot=document.getElementById('dot'),t=document.getElementById('txt');if(!n){return}
+ var cap=(avg([0,1,2,8,7])), fin=(avg([3,4])), soc=(avg([5,6])), riv=v[9]||3;
+ function avg(ix){var s=0,c=0;ix.forEach(function(j){if(v[j]){s+=v[j];c++}});return c?s/c:3}
+ /* capability high + finances good + cohesion good -> rise; capability high but finances/cohesion weak -> top/decline */
+ var health=(fin+soc+riv)/3, pos;
+ if(health>=3.6) pos=cap>=3.6?0.38:0.22; else if(health>=2.8) pos=cap>=3?0.5:0.6; else if(health>=2.1) pos=cap>=3?0.68:0.78; else pos=0.9;
+ var p=pt(pos);dot.setAttribute('cx',p[0].toFixed(1));dot.setAttribute('cy',p[1].toFixed(1));dot.setAttribute('opacity',n===Q.length?'1':'.4');
+ if(n<Q.length){t.textContent='Score all ten markers to place the country ('+n+'/10).';return}
+ var msg=pos<0.3?'<b>Rising.</b> Strong capabilities, sound finances and cohesion: stages 2–3. Keep investing, keep debts low, and avoid complacency.':pos<0.45?'<b>Near the top.</b> Still strong. The classic risk now is bubble prosperity: debt-financed consumption and widening gaps.':pos<0.65?'<b>Top to early decline.</b> Strengths remain but finances or cohesion are slipping, around stage 4. Watch debt growth and inequality.':pos<0.85?'<b>Decline, stage 5 territory.</b> Weak finances plus gaps plus a rival is Dalio’s toxic mix. Watch populism, rule-breaking and capital controls.':'<b>Late decline.</b> Most markers are weak. In Dalio’s cases this is when restructuring, devaluation and sometimes revolution come.';
+ t.innerHTML=msg+'<br><span style="color:var(--muted);font-size:15px">Capabilities '+cap.toFixed(1)+' · finances '+fin.toFixed(1)+' · cohesion '+soc.toFixed(1)+' · vs rivals '+riv+'</span>'}
+})();
+</script>
+</body>
+</html>
