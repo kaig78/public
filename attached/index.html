@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Attached by Amir Levine &amp; Rachel Heller – Summary</title>
+<link rel="icon" href="https://kaig78.github.io/public/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://kaig78.github.io/public/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://kaig78.github.io/public/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+SC:wght@500;600&display=swap">
+<style>
+/* The cover: a clean white field with a heart formed by two red horseshoe magnets whose
+   silver tips almost touch at the top and bottom, a large red serif "Attached", a sober
+   black serif question as subtitle, and the authors in widely spaced small capitals.
+   The page keeps the white field, the red serif title, the spaced small-cap labels, and
+   draws the magnet heart in the hero. Red stands for anxious, steel (the magnet tips) for
+   avoidant, and a calm green for secure, the colours used in every chart and card. */
+:root{
+  --bg:#ffffff; --ink:#1d1a1a; --muted:#625b5b; --line:#ece6e4; --soft:#f8f4f2; --card:#ffffff;
+  --red:#cf2129; --anx:#cf2129; --avo:#5f6f7e; --sec:#2c7a58; --anxl:#fbe7e7; --avol:#e9eef2; --secl:#e3f2ea;
+  --serif:"Crimson Pro",Georgia,serif; --sc:"Cormorant SC",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141212; --ink:#f1ecea; --muted:#ada4a2; --line:#2c2727; --soft:#1d1a1a; --card:#191616;
+  --red:#ff6b6b; --anx:#ff6b6b; --avo:#9fb2c4; --sec:#6fd3a3; --anxl:#3a1f20; --avol:#222a31; --secl:#18302a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141212; --ink:#f1ecea; --muted:#ada4a2; --line:#2c2727; --soft:#1d1a1a; --card:#191616;
+  --red:#ff6b6b; --anx:#ff6b6b; --avo:#9fb2c4; --sec:#6fd3a3; --anxl:#3a1f20; --avol:#222a31; --secl:#18302a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 20px/1.55 var(--serif)}
+a{color:var(--red)}
+.wrap{max-width:800px;margin:0 auto;padding:0 16px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:600 16px var(--sc);letter-spacing:.08em}
+.top a{color:var(--ink);text-decoration:none}
+.theme{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:1px 14px 3px;font:600 15px var(--sc);letter-spacing:.06em;cursor:pointer}
+.hero{text-align:center;padding:clamp(18px,4vw,34px) 12px clamp(20px,4vw,34px);background:#fff;border:1px solid var(--line);border-radius:6px;color:#1d1a1a}
+.hero svg{width:min(62%,300px);height:auto;display:block;margin:0 auto}
+.hero h1{margin:6px 0 4px;font:500 clamp(3rem,13vw,5.6rem)/1 var(--serif);color:#cf2129;letter-spacing:-.01em}
+.hero .sub{font:400 clamp(1.05rem,3.8vw,1.45rem)/1.35 var(--serif);max-width:24em;margin:0 auto}
+.hero .au{font:500 clamp(.95rem,3.2vw,1.25rem) var(--sc);letter-spacing:.18em;margin-top:clamp(16px,4vw,26px)}
+.intro{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0 8px}
+.intro img{width:120px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.intro p{margin:0}
+.facts{font:600 15px/1.5 var(--sc);letter-spacing:.05em;color:var(--muted);margin-top:8px}
+@media (max-width:560px){.intro{grid-template-columns:1fr;justify-items:center;text-align:center}}
+section{padding:38px 0;border-bottom:1px solid var(--line)}
+h2{font:500 clamp(1.7rem,5.4vw,2.35rem)/1.15 var(--serif);margin:0 0 12px}
+h3{font:600 1.1rem var(--sc);letter-spacing:.06em;margin:22px 0 6px}
+.kick{font:600 15px var(--sc);letter-spacing:.14em;color:var(--red);margin:0 0 4px}
+.quote{font:italic 400 1.4rem/1.4 var(--serif);margin:24px 0;padding-left:18px;border-left:3px solid var(--red)}
+.quote small{display:block;font:600 14px var(--sc);letter-spacing:.08em;font-style:normal;color:var(--muted);margin-top:6px}
+.story{background:var(--soft);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:19px}
+.story b{font:600 1em var(--sc);letter-spacing:.04em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:18.5px}
+.card h3{margin-top:0}
+.card.anx{border-top:4px solid var(--anx)}.card.avo{border-top:4px solid var(--avo)}.card.sec{border-top:4px solid var(--sec)}
+.card.anx h3{color:var(--anx)}.card.avo h3{color:var(--avo)}.card.sec h3{color:var(--sec)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:17.5px;line-height:1.4}
+.stat b{display:block;font:500 2rem/1.05 var(--serif);color:var(--red);margin-bottom:4px}
+@media (max-width:640px){.stat{grid-template-columns:1fr}}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 8px;margin-top:16px;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:520px;height:auto}
+.fig text{font-family:"Crimson Pro",Georgia,serif;fill:var(--ink)}
+.fig .mut{fill:var(--muted)}
+.fig figcaption{font:400 16px/1.4 var(--serif);color:var(--muted);margin:6px 2px 4px}
+.list{counter-reset:r;list-style:none;padding:0;margin:14px 0 0}
+.list li{counter-increment:r;position:relative;padding:9px 0 9px 46px;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list li::before{content:counter(r);position:absolute;left:0;top:6px;font:500 1.8rem/1 var(--serif);color:var(--red)}
+.list b{font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font:400 17px var(--serif);border:1.5px solid var(--line);border-radius:999px;padding:2px 12px}
+.chips.anx span{border-color:var(--anx)}.chips.avo span{border-color:var(--avo)}.chips.sec span{border-color:var(--sec)}
+.tbl{display:grid;grid-template-columns:1fr 1fr;margin-top:16px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tbl div{padding:9px 14px;font-size:17.5px;border-bottom:1px solid var(--line);background:var(--card)}
+.tbl div:nth-child(odd){border-right:1px solid var(--line)}
+.tbl .h{font:600 15.5px var(--sc);letter-spacing:.06em}
+.tbl .no{color:var(--muted)}
+@media (max-width:560px){.tbl{grid-template-columns:1fr}.tbl div:nth-child(odd){border-right:0}}
+.part{text-align:center;padding:50px 0 6px;border:0}
+.part .n{font:600 15px var(--sc);letter-spacing:.2em;color:var(--red)}
+.part h2{font-size:clamp(2rem,7vw,2.9rem);margin:6px 0}
+.part p{color:var(--muted);margin:0 auto;max-width:32em}
+/* tool */
+.tool{border:2px solid var(--red);border-radius:14px;padding:18px;margin-top:20px;background:var(--card)}
+.tool h3{margin-top:0;font-size:1.3rem;color:var(--ink)}
+.qrow{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:18px}
+.qrow .rt{display:flex;gap:4px}
+.qrow button{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:600 15px var(--serif);cursor:pointer}
+.qrow button[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
+@media (max-width:540px){.qrow{grid-template-columns:1fr}}
+.scale{display:flex;justify-content:space-between;font:600 14px var(--sc);letter-spacing:.05em;color:var(--muted);margin:6px 0}
+.res{display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:center;margin-top:14px}
+.res svg{width:100%;height:auto}
+.res svg text{font-family:"Crimson Pro",Georgia,serif;fill:var(--ink)}
+.res .txt{font-size:18px}
+.res .txt b{font:600 1.15em var(--sc);letter-spacing:.04em}
+@media (max-width:560px){.res{grid-template-columns:1fr}}
+.note{font-size:16px;color:var(--muted);margin-top:10px}
+.keep{counter-reset:k;list-style:none;padding:0;margin:16px 0 0}
+.keep li{counter-increment:k;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.keep li::before{content:counter(k);font:500 1.5rem var(--serif);color:var(--red)}
+.keep li:last-child{border-bottom:0}
+footer{padding:30px 0 50px;font-size:17px;color:var(--muted)}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.related a{font:600 15px var(--sc);letter-spacing:.05em;text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:2px 12px 4px;color:var(--ink)}
+</style>
+<script>(function(){try{fetch("https://gym-calendar-tau.vercel.app/api/s?p="+encodeURIComponent(location.pathname)+"&t="+encodeURIComponent(document.title)+"&r="+encodeURIComponent(document.referrer)+"&s="+screen.width,{keepalive:true,mode:"no-cors"})}catch(e){}})()</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← All summaries</a><button class="theme" id="theme" type="button">Theme</button></div>
+
+  <header class="hero">
+    <svg viewBox="0 0 300 230" aria-hidden="true">
+      <defs>
+        <linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ef3b3f"/><stop offset="1" stop-color="#b3141c"/></linearGradient>
+        <linearGradient id="s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6f7f8"/><stop offset=".5" stop-color="#c3c9cf"/><stop offset="1" stop-color="#8f979f"/></linearGradient>
+      </defs>
+      <!-- left magnet half -->
+      <path d="M140,62 C122,26 64,14 40,48 C16,82 50,128 96,160 L120,176" fill="none" stroke="url(#r)" stroke-width="26" stroke-linecap="butt"/>
+      <path d="M140,62 L128,40" stroke="url(#s)" stroke-width="26"/>
+      <path d="M118,174 L140,190" stroke="url(#s)" stroke-width="26"/>
+      <!-- right magnet half -->
+      <path d="M160,62 C178,26 236,14 260,48 C284,82 250,128 204,160 L180,176" fill="none" stroke="url(#r)" stroke-width="26" stroke-linecap="butt"/>
+      <path d="M160,62 L172,40" stroke="url(#s)" stroke-width="26"/>
+      <path d="M182,174 L160,190" stroke="url(#s)" stroke-width="26"/>
+    </svg>
+    <h1>Attached</h1>
+    <div class="sub">Are you Anxious, Avoidant or Secure? How the science of adult attachment can help you find, and keep, love</div>
+    <div class="au">Amir Levine &amp; Rachel Heller</div>
+  </header>
+
+  <div class="intro">
+    <img src="cover.jpg" alt="Cover of Attached by Amir Levine and Rachel Heller">
+    <div>
+      <p>A psychiatrist (Levine, Columbia) and a psychologist (Heller) translate decades of research on <b>adult attachment</b> into a practical dating and relationship guide. We are wired, as babies are, to depend on a few special people, and we differ in how we handle that need: <b>secure</b>, <b>anxious</b> or <b>avoidant</b>. Knowing your style and your partner's explains baffling behaviour, shows whom to date, and gives concrete skills for communicating and fighting the secure way.</p>
+      <div class="facts">Tarcher, 2010; new edition 2019 · 12 chapters in four parts + epilogue · ~60,000 words</div>
+    </div>
+  </div>
+
+  <section>
+    <p class="kick">Chapter 1 · Decoding relationship behaviour</p>
+    <h2>Tamara and Greg</h2>
+    <div class="story"><b>Love conquers all?</b> The authors' friend Tamara fell for Greg: handsome, flattering, full of promises (“You can come and work over at my place”). He also said he'd never had a stable relationship and always tired of girlfriends. Soon his work week was “crazy”, the signals got mixed, and she became anxious, cancelled plans with friends in case he called, and her work suffered. She knew she'd be happier without him but couldn't leave. Attachment research described both of them “down to the last detail”: Greg pushed her away <i>because</i> they were getting closer, not because she wasn't good enough.</div>
+    <div class="grid3">
+      <div class="card sec"><h3>Secure · just over 50%</h3>Comfortable with intimacy, usually warm and loving. Not overly worried about the relationship or about rejection.</div>
+      <div class="card anx"><h3>Anxious · about 20%</h3>Crave intimacy, are preoccupied with the relationship, and worry that the partner won't love them back.</div>
+      <div class="card avo"><h3>Avoidant · about 25%</h3>Equate intimacy with a loss of independence and keep trying to minimise closeness.</div>
+    </div>
+    <p style="margin-top:14px">The remaining 3–5% combine anxiety and avoidance. Styles differ in how people see intimacy, fight, approach sex, voice needs and what they expect of a partner. They come partly from childhood, partly from genes, and partly from adult relationships: on average about one in four people change style over four years, mostly without noticing. None of them is pathological; each was an evolutionary bet. In danger, avoiding attachment or clinging hard both made sense, while in peaceful conditions secure investment paid off. Tamara later met Tom, who was secure, and the drama simply stopped.</p>
+    <p>John Bowlby's insight: evolution programmed us with an <b>attachment system</b> that keeps us close to a few precious people. When the bond feels threatened, it fires <b>protest behaviour</b>, the infant's frantic search for its mother. Imagine news of a plane crash on the night your partner is flying to London: the sinking feeling is your attachment system, and the frantic calls to the airline are protest behaviour.</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 2 · Dependency is not a bad word</p>
+    <h2>The dependency paradox</h2>
+    <div class="story"><b>Karen and Tim.</b> On a reality race show, Karen needed Tim to hold her hand under pressure; Tim found it too close. After they lost at the finish line, Karen blamed herself: “I was too needy.” Neither mentioned that Tim had nearly quit at the bungee jump, which cost them the lead. Had he held her hand early, he'd have spent less time “putting out fires”, and with her support he might have jumped sooner.</div>
+    <div class="quote">Most people are only as needy as their unmet needs.<small>Chapter 2</small></div>
+    <p>Only decades ago, experts warned against “too much mother love” (John B. Watson, 1928): leave babies to cry, feed them on schedule, let hospitalised children see their parents only through glass. Ainsworth and Bowlby showed that a bond is as vital as food. Today, popular advice and the language of “codependency” make the same mistake about adults: happiness should come from within, keep the focus on yourself, set boundaries, needing your partner is addiction.</p>
+    <div class="grid2">
+      <div class="card"><h3>One physiological unit</h3>Partners regulate each other's blood pressure, heart rate, breathing and hormones. In James Coan's fMRI study, married women awaiting a mild shock showed strong stress activity alone, less while holding a stranger's hand, and barely any while holding their husband's, especially in the happiest marriages. “Dependency is a fact; it is not a choice or a preference.”</div>
+      <div class="card"><h3>A secure base</h3>In Mary Ainsworth's “strange situation”, one-year-old Kimmy explores a room of toys while her mother is there, falls apart when she leaves, and returns to play once she's back. Adults work the same way: partners who supported each other's goals in Brooke Feeney's lab felt better and rated their goals as more achievable. In an unhappy marriage, your partner's presence even <i>raises</i> your blood pressure.</div>
+    </div>
+    <div class="quote">If you want to take the road to independence and happiness, find the right person to depend on and travel down it with that person.<small>The book's one-sentence summary of attachment theory</small></div>
+  </section>
+
+  <div class="part"><div class="n">Part one</div><h2>Your relationship toolkit</h2><p>Work out your own style, then learn to read other people's.</p></div>
+
+  <section>
+    <p class="kick">Chapter 3 · What is my attachment style?</p>
+    <h2>Two dimensions</h2>
+    <p>The book's 42-item true/false quiz is adapted from the research questionnaire ECR-R (Fraley, Waller &amp; Brennan). Underneath, every style is a position on two axes: how comfortable you are with closeness, and how anxious you are about your partner's love.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 640 380" role="img" aria-label="The two attachment dimensions and four styles">
+        <g transform="translate(110,20)">
+          <rect x="0" y="0" width="200" height="150" fill="var(--anxl)"/><rect x="200" y="0" width="200" height="150" fill="var(--soft)"/>
+          <rect x="0" y="150" width="200" height="150" fill="var(--secl)"/><rect x="200" y="150" width="200" height="150" fill="var(--avol)"/>
+          <line x1="0" y1="300" x2="400" y2="300" stroke="var(--ink)" stroke-width="2"/><line x1="0" y1="0" x2="0" y2="300" stroke="var(--ink)" stroke-width="2"/>
+          <text x="100" y="70" font-size="24" font-weight="600" text-anchor="middle" fill="var(--anx)">Anxious</text>
+          <text x="100" y="94" font-size="15" text-anchor="middle" class="mut">wants closeness, fears losing it</text>
+          <text x="300" y="70" font-size="21" font-weight="600" text-anchor="middle">Anxious + avoidant</text>
+          <text x="300" y="94" font-size="15" text-anchor="middle" class="mut">rare (3–5%)</text>
+          <text x="100" y="220" font-size="24" font-weight="600" text-anchor="middle" fill="var(--sec)">Secure</text>
+          <text x="100" y="244" font-size="15" text-anchor="middle" class="mut">close and calm</text>
+          <text x="300" y="220" font-size="24" font-weight="600" text-anchor="middle" fill="var(--avo)">Avoidant</text>
+          <text x="300" y="244" font-size="15" text-anchor="middle" class="mut">keeps distance, rarely worries</text>
+          <text x="200" y="330" font-size="16" text-anchor="middle">Avoidance of intimacy →</text>
+          <text x="-60" y="150" font-size="16" text-anchor="middle" transform="rotate(-90 -60 150)">Anxiety about the relationship →</text>
+        </g>
+      </svg>
+      <figcaption>After Brennan, Clark &amp; Shaver's two-dimension model, as shown in the book.</figcaption>
+    </figure>
+    <div class="grid3">
+      <div class="card anx"><h3>Anxious baby</h3>Extremely distressed when mother leaves; on reunion happy <i>and</i> angry, slow to calm, pushes her away.</div>
+      <div class="card sec"><h3>Secure baby</h3>Visibly upset at the separation; eager greeting, quickly soothed, back to play.</div>
+      <div class="card avo"><h3>Avoidant baby</h3>Acts as if nothing happened and ignores mother on return, yet its heart rate and cortisol are as high as the crying babies'.</div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 4 · What is my partner's style?</p>
+    <h2>Reading the signs</h2>
+    <p>Most people reveal their style in everyday words and actions. The question changes from “Does he like me?” to “Is this someone I should invest in, someone able to give me what I need?”. The book's 33-item partner questionnaire boils down to this cheat sheet:</p>
+    <div class="grid3">
+      <div class="card avo"><h3>Avoidant</h3><div class="chips avo"><span>mixed signals</span><span>“I need a lot of space”</span><span>jokingly devalues you</span><span>separate beds, solo holidays, vague plans</span><span>walks a stride ahead</span><span>“MY friends, keep out”</span><span>dreams of the perfect one</span><span>fears being trapped or exploited</span><span>rigid rules, a “type”</span><span>leaves or explodes in a fight</span><span>no “I love you”</span><span>topics off-limits</span></div></div>
+      <div class="card sec"><h3>Secure</h3><div class="chips sec"><span>reliable and consistent</span><span>decides with you</span><span>flexible</span><span>talks about the relationship easily</span><span>compromises in fights</span><span>unafraid of commitment</span><span>relationship isn't “hard work”</span><span>closeness breeds closeness</span><span>introduces friends and family</span><span>says how they feel</span><span>no games</span></div></div>
+      <div class="card anx"><h3>Anxious</h3><div class="chips anx"><span>wants lots of closeness</span><span>insecure about exes</span><span>unhappy single</span><span>plays games for attention</span><span>expects you to guess</span><span>acts out, threatens to leave</span><span>takes things personally</span><span>lets you set the pace</span><span>preoccupied</span><span>fears small acts ruin it</span><span>suspicious</span></div></div>
+    </div>
+    <h3>Five golden rules</h3>
+    <ol class="list">
+      <li><b>Does s/he seek intimacy and closeness?</b> The master question. No means avoidant; yes means secure or anxious. Personality doesn't tell you; a cocky person can crave closeness.</li>
+      <li><b>How preoccupied with the relationship, how sensitive to rejection?</b> High on both suggests anxious.</li>
+      <li><b>Don't rely on one symptom.</b> Look for a coherent pattern. (Not introducing you to her children is sensible at first; after two years, ask what it means.)</li>
+      <li><b>Watch the reaction to effective communication.</b> Secure partners accommodate; anxious ones open up; avoidant ones say “You're too sensitive”, “Stop analyzing everything!”, “Geez, I said I was sorry.”</li>
+      <li><b>Notice what is <i>not</i> said or done.</b> At midnight on New Year's Eve Rob said he hoped it was “the first of many new years for us together”. She kissed him and said nothing. Two months later they split.</li>
+    </ol>
+    <p style="margin-top:14px">The workshop cases repay study: Paul, 37, is still looking for the woman whose smile he can already “see”, and dropped Amanda for suspected cosmetic surgery. That is avoidant: an idealised phantom, blaming circumstances, devaluing someone as closeness grows. Anxious people blame themselves for being alone; secure people are realistic; avoidant people blame circumstances. Logan, who has dated only three people and said “I love you” early without keeping score, is secure.</p>
+  </section>
+
+  <div class="part"><div class="n">Part two</div><h2>The three styles in everyday life</h2><p>A sixth sense for danger, love at arm's length, and the quiet “supermates”.</p></div>
+
+  <section>
+    <p class="kick">Chapter 5 · The anxious style</p>
+    <h2>Living with a sixth sense for danger</h2>
+    <div class="story"><b>Emily.</b> She was a psychiatry resident so composed that her analyst expected her training analysis to finish in record time. Then she met David, an aspiring actor full of mixed signals. Soon she was checking her pager and phone every few minutes while running around the reservoir, and had invented an online persona to chat him up. Her analyst diagnosed “masochistic borderline personality traits”. It was simply a constantly <b>activated attachment system</b>. Once she married a reliable man, she was her old resilient self again.</div>
+    <p style="margin-top:16px">Anxious people really do notice more. In “morph movie” studies, they spotted a face's change of emotion earlier than others did. But when they reacted instantly they misread it; forced to wait a little, they outperformed everyone. Lesson: wait before you act, and your sensitivity becomes a gift. Brain scans show why calming down is hard: thinking of loss lights up emotional areas more, while regulating areas (the orbitofrontal cortex) are under-recruited.</p>
+    <div class="grid2">
+      <div class="card anx"><h3>Activating strategies</h3>(thoughts that push you toward the partner) can't concentrate on anything else · remember only their good qualities · put them on a pedestal and run yourself down · anxiety that eases only on contact · “I'll never find anyone else” · “He can change”, “All couples have problems”, “If she leaves me, she'll turn into a great partner, for someone else.”</div>
+      <div class="card anx"><h3>Protest behaviour</h3>(actions to win attention back) calling and texting over and over · withdrawing, back turned · keeping score (“If she's not answering, I won't leave a message”) · eye-rolling hostility · threatening to leave, hoping to be stopped · acting busy · making them jealous.</div>
+    </div>
+    <div class="story"><b>Ryan and Shauna.</b> On his first business trip, Ryan's call went to voicemail after two rings (she pressed “ignore”), then straight to voicemail. He couldn't concentrate. An hour later Shauna, who is secure, texted that her boss had been standing next to her. One text settled it. A little reassurance given early saves a great deal of firefighting later.</div>
+    <h3>Why anxious people end up with avoidant partners</h3>
+    <ul style="margin:6px 0 0;padding-left:20px">
+      <li><b>Familiar scripts:</b> each confirms the other's beliefs (Pietromonaco &amp; Carnelley; anxious women do date avoidant men more often).</li>
+      <li><b>The roller coaster:</b> mixed signals activate you, a compliment brings elation, then doubt returns. Over time you learn to equate an activated attachment system with passion.</li>
+      <li><b>The law of large numbers:</b> avoidants break up more, get over it quickly and re-enter the dating pool; secures pair off and leave it; avoidants rarely date each other (one study found no avoidant–avoidant couples at all). So a new date is far more likely to be avoidant than their 25% share suggests.</li>
+    </ul>
+    <div class="quote">An activated attachment system is not passionate love… True love, in the evolutionary sense, means peace of mind.<small>Chapter 5</small></div>
+    <p>So Chloe found secure, handsome, funny Trevor “missing the spark”, married Tony, who put her down constantly, and needed years and a divorce to learn to value calm. And common dating advice (play hard to get, act busy, never call first) does make you more attractive, but to avoidants, because it lets them set the distance.</p>
+    <h3>Coaching for the anxious single</h3>
+    <ol class="list">
+      <li><b>Accept your needs as legitimate.</b> Ask “Can this person give me what I need?”, not “How do I change to please them?”.</li>
+      <li><b>Rule out avoidants early</b> by watching for “smoking guns”: mixed messages; longing for an ideal partner who is clearly not you; always finding fault with “the one”; disregarding your feelings even when told; calling you “too needy”; ignoring what's inconvenient; answering you “as in a court of law”; your messages never getting through.</li>
+      <li><b>Be authentic and communicate.</b> When Brian came back after leaving, Janet again let him set the pace, and it slowly fizzled out without even a break-up talk. Saying plainly “I need to know I can talk to you every day, not just when it's convenient” would have settled it either way.</li>
+      <li><b>The abundance philosophy.</b> Date several people. Nicky, 31, told friends to look out for her and joined dating sites. She saw that many people liked her, moved on fast from avoidant behaviour, and within a year met George and had “the happiest, most secure relationship” of all her friends.</li>
+      <li><b>Give secure people a chance.</b> Calm may feel like boredom at first. Wait.</li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 6 · The avoidant style</p>
+    <h2>Keeping love at arm's length</h2>
+    <p>The lonesome traveller: Chris McCandless in <i>Into the Wild</i> turned down an adoption, a girl's love and a family's home, and told the man who gave him his last lift he could handle anything alone. Trapped by a swollen river, he died in the Alaskan bush. In his journal: “Happiness only real when shared.” Avoidance may have helped our species survive hostile times, but it doesn't make individuals happy; avoidant people report lower satisfaction in relationships.</p>
+    <div class="story"><b>The need is suppressed, not missing.</b> In word-recognition studies, avoidants were quick to see “need” and “enmeshed” and slow to see “separation” and “loss”. Give them a distracting puzzle at the same time and they recognised the loss words as fast as anyone. Under heavy stress (divorce, a disabled child, combat) their defences break down and they look anxious.</div>
+    <div class="grid2">
+      <div class="card avo"><h3>Deactivating strategies</h3>“I'm not ready to commit” (for years) · fixating on small flaws (how they talk, dress, eat) · the phantom ex · flirting · never saying “I love you” · pulling away after a great date · choosing impossible partners · mentally checking out · secrets and fog · avoiding physical closeness (separate bed, walking ahead).</div>
+      <div class="card avo"><h3>Thought patterns</h3><b>Self-reliance mistaken for independence:</b> Joe's father's mantra was “You can only count on yourself!” His therapist: “That's nonsense… you do it all the time anyway.” <b>Seeing the worm, not the apple:</b> Carole left tender, patient Bob for his clothes and lack of sophistication, then mourned him as the best she'd ever had. <b>Not reading signals</b>, and seeing that as not their job.</div>
+    </div>
+    <div class="story"><b>“Stop, please don't leave.”</b> John Gray (<i>Men Are from Mars</i>) came home to find his wife in pain all day with a newborn, her painkillers run out. He got defensive and was about to storm out when she said: “This is when I need you most.” He stayed and held her: “That day, for the first time, I didn't leave her.” Her well-being became his responsibility, a step toward a secure working model.</div>
+    <p style="margin-top:16px"><b>The phantom ex and “the one”.</b> At a safe distance, admiration for an ex returns and the reasons for leaving fade, so every new partner looks small by comparison. With someone new, a sudden chill after the early high (“the way she eats”) feels like proof they're not the one; it is a deactivating strategy.</p>
+    <h3>Eight things to stop pushing love away</h3>
+    <div class="chips avo"><span>1 spot deactivating strategies, don't act on the urge</span><span>2 mutual support over self-reliance</span><span>3 choose a secure partner</span><span>4 question your negative readings</span><span>5 a nightly gratitude list</span><span>6 nix the phantom ex</span><span>7 make someone your soul mate instead of waiting for “the one”</span><span>8 get close while doing something together</span></div>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 7 · The secure style</p>
+    <h2>The supermates of evolution</h2>
+    <p>Secure people are not necessarily the most charming. They come in every personality: introverted Aaron, social-hub Brenda, divorced Gregory. What they share is invisible: they expect love and responsiveness, aren't worried about losing it, and so stay calm. In word-recognition studies, threatening words simply didn't register with them, even under distraction; when asked to think about loss they got stressed, and the stress vanished as soon as they stopped.</p>
+    <div class="stat">
+      <div><b>Buffer</b>Couples with even one secure partner functioned as well as couples where both were secure, and better than insecure pairs.</div>
+      <div><b>4 months</b>Secure students kept their satisfaction, commitment and trust; insecure ones declined on all three (Keelan, Dion &amp; Dion).</div>
+      <div><b>70–75%</b>of adults keep the same style over time; the other 25–30% change, in either direction.</div>
+    </div>
+    <div class="story"><b>Stan's gift.</b> Overwhelmed by work, Janet woke up and attacked her husband's business prospects. Stan answered without animosity: “I understand that you're frightened… but if you're trying to encourage me to be more efficient at work… this isn't the best way to do it.” Then he drove her to work. A counter-attack would have started World War III.</div>
+    <div class="chips sec" style="margin-top:14px"><span>great conflict busters</span><span>mentally flexible</span><span>effective communicators</span><span>not game players</span><span>comfortable with closeness</span><span>quick to forgive</span><span>sex and intimacy as one</span><span>treat partners like royalty</span><span>confident they can improve things</span><span>responsible for the partner's well-being</span></div>
+    <div class="grid2">
+      <div class="card sec"><h3>Be a secure base (Feeney &amp; Thrush)</h3><b>Be available</b> (respond to distress, check in) · <b>don't interfere</b> (support behind the scenes, don't micromanage) · <b>encourage</b> (accept their growth, boost their self-esteem).</div>
+      <div class="card sec"><h3>Choosing the secure way</h3>Tanya, 28: the two men who waited two days to call were screened out immediately, and she didn't blame herself. Treat smoking guns as deal breakers, state needs from day one, believe there are many good partners, never take the blame for a date's bad behaviour, and expect respect.</div>
+    </div>
+    <p style="margin-top:16px">But secure people aren't immune. Nathan endured eight years of Shelly's tantrums, a slap and affairs, believing it was a “rough patch”, because secure people forgive and feel responsible. Warning sign: if you, though secure, start feeling jealous, holding back or playing games, you're probably with the wrong person. “Just because you can get along with anyone doesn't mean you have to.”</p>
+  </section>
+
+  <div class="part"><div class="n">Part three</div><h2>When styles clash</h2><p>The anxious–avoidant trap, how to escape it, and how to leave.</p></div>
+
+  <section>
+    <p class="kick">Chapter 8 · The anxious–avoidant trap</p>
+    <h2>Are we really fighting about this?</h2>
+    <div class="grid3">
+      <div class="card"><b>The washing machine.</b> Mark has wanted one for two years; Janet refuses. She does the laundry at her sister's, around the block, and stays all day. The fight is about closeness.</div>
+      <div class="card"><b>The B&amp;B in Vermont.</b> Paul wants the twin beds for the view; Susan the queen bed. He never cuddles before sleep, and she knows he'd retreat to his own bed after sex.</div>
+      <div class="card"><b>Facebook exes.</b> Kevin keeps exes as friends and screens Naomi's calls when out with his pals, then tells her she has “abandonment issues”.</div>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 640 230" role="img" aria-label="The anxious-avoidant cycle">
+        <g font-size="17">
+          <rect x="20" y="70" width="200" height="90" rx="45" fill="var(--anxl)" stroke="var(--anx)" stroke-width="2"/>
+          <text x="120" y="108" text-anchor="middle" font-weight="600" fill="var(--anx)">Anxious activates</text><text x="120" y="132" text-anchor="middle" class="mut" font-size="15">calls, pursues, protests</text>
+          <rect x="420" y="70" width="200" height="90" rx="45" fill="var(--avol)" stroke="var(--avo)" stroke-width="2"/>
+          <text x="520" y="108" text-anchor="middle" font-weight="600" fill="var(--avo)">Avoidant deactivates</text><text x="520" y="132" text-anchor="middle" class="mut" font-size="15">distances, devalues</text>
+          <path d="M230,95 C300,50 340,50 410,95" fill="none" stroke="var(--ink)" stroke-width="2" marker-end="url(#ah)"/>
+          <path d="M410,140 C340,185 300,185 230,140" fill="none" stroke="var(--ink)" stroke-width="2" marker-end="url(#ah)"/>
+          <text x="320" y="44" text-anchor="middle" font-size="15">the closer one gets…</text>
+          <text x="320" y="200" text-anchor="middle" font-size="15">…the further the other pulls</text>
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10z" fill="var(--ink)"/></marker></defs>
+        </g>
+      </svg>
+      <figcaption>Each partner's coping strategy is the other's trigger, keeping both in the “danger zone”.</figcaption>
+    </figure>
+    <div class="chips"><span>the roller-coaster effect</span><span>an emotional counterbalance (the avoidant feels strong only while the partner feels needy)</span><span>stable instability</span><span>fights about trivia</span><span>the inner circle as the enemy</span><span>feeling it's wrong but too attached to leave</span></div>
+    <p style="margin-top:14px">Why it rarely resolves: the differences spread to every new stage of life (marriage, children, money, illness). Resolving a conflict would create closeness, so the avoidant grows more hostile as the argument goes on. And the anxious partner loses ground in every clash: after a fight they're flooded with good memories and reach out, while the avoidant remembers only the worst. The anxious partner ends up pleading to get back to the same unsatisfying status quo.</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 9 · Escaping the trap</p>
+    <h2>Stable but plastic</h2>
+    <p>Styles can shift. Being with a secure partner helps most, but even <b>security priming</b> works: recalling secure people and moments. Build an <b>integrated secure role model</b>: a manager who turned a disagreement into dialogue, a friend who backed his wife's switch from law to social work despite the pay cut, even the way you treat your pet (no grudges, a warm welcome home).</p>
+    <div class="card"><h3>The relationship inventory</h3>List every partner, then work down each column, one column at a time: what you remember → situations that activated or deactivated you → what you did, thought and felt → the attachment principle at play (protest behaviour? deactivation?) → how it hurt you → what your secure role model would do. Each time you recall a memory you rewrite it a little, so the exercise can reshape your working model. An “attachment-designated person” (a friend or therapist) can check you when you're activated.</div>
+    <div class="grid2">
+      <div class="story" style="margin-top:12px"><b>The text that saved the day.</b> Georgia's calls frustrated Henry, a busy doctor, and his silence frightened her. Solution: whenever he thought of her, he'd send a pre-written “thinking of you” text. A second of his time, and her worry was gone.</div>
+      <div class="story" style="margin-top:12px"><b>The toothpaste incident.</b> Sam exploded when Grace squeezed the toothpaste from the middle; his flat felt invaded. She sublet a friend's studio for six months as a buffer, barely used it, and they adjusted.</div>
+    </div>
+    <p style="margin-top:16px">If security isn't reached, knowledge still helps: the fights are a built-in clash, not your failing, and the avoidant partner would withdraw from anyone. Some people make peace by letting go of the dream: Doug greets his late-coming wife warmly instead of with anger, Natalie makes weekend plans of her own, Janis no longer expects Larry to help with the children. The authors are frank that this compromise is one-sided. It makes sense in a committed relationship you want to keep; early on, with many intimacy collisions, think hard before signing up.</p>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 10 · Breaking up</p>
+    <h2>When abnormal becomes the norm</h2>
+    <div class="story"><b>Marsha and Craig.</b> Craig ignored her at his track practice (“they don't need to know we're a couple”) and was surprised she'd stopped seeing her ex (“this might not lead to anything!”). He compared her to his perfect ex, belittled her intelligence and body (“You're what there is right now”), and introduced her as his “‘genius’ girlfriend”. On their Paris honeymoon he swore at her over a wrong metro line. She cried daily for years, threatened to leave, and was talked back each time, until he finally kept his promise and said “Okay!”. The $10,000 lost on their apartment was “the best money I ever spent.” Marsha came from a loving family and went on to an adoring partner. She was simply anxious, and he avoidant.</div>
+    <div class="tbl">
+      <div class="h">Signs you've become “the enemy”</div><div class="h">The inner circle with a secure partner</div>
+      <div>You're ashamed to tell friends how you're treated; people describe your partner as sweet</div><div>Your well-being comes second to none</div>
+      <div>They consult others first; you're unsure they'd come in an emergency</div><div>You are confided in first; your opinion matters most</div>
+      <div>Strangers get the good impression; you get the put-downs</div><div>You feel admired and protected</div>
+      <div>Your health is low on their list</div><div>Your need for closeness is rewarded with more closeness</div>
+    </div>
+    <p style="margin-top:16px">Sex can be another tool of distance: avoidants have less of it, especially with anxious partners, and may set rules such as “no kissing”. Leaving is so hard because breakups activate the same brain regions as physical pain, and because of the <b>rebound effect</b>. Myron Hofer's separated rat pups could be helped symptom by symptom with warmth, food and stroking, but only the mother's return fixed everything at once. One person can remove all the pain in a second.</p>
+    <h3>Surviving a breakup</h3>
+    <ol class="list">
+      <li>Ask: am I treated like royalty or like the enemy?</li>
+      <li>Build a support network beforehand, and stop hiding how things really are.</li>
+      <li>Stay somewhere comforting for the first nights.</li>
+      <li>Meet attachment needs in other ways: friends, massage, exercise, good food.</li>
+      <li>If you slip back to “the scene of the crime”, be compassionate with yourself; self-loathing reactivates the system.</li>
+      <li>The pain is real; treat yourself as you would a broken leg.</li>
+      <li>When flooded with good memories, ask a friend for a reality check.</li>
+      <li>Deactivate on purpose: write down every reason you wanted to leave, and reread it.</li>
+      <li>Know that it will pass.</li>
+    </ol>
+  </section>
+
+  <div class="part"><div class="n">Part four</div><h2>The secure way</h2><p>Effective communication, and five principles for fighting well.</p></div>
+
+  <section>
+    <p class="kick">Chapter 11 · Effective communication</p>
+    <h2>Say what you need, and watch the response</h2>
+    <p>After three romantic but untouched dates, Lauren asked Ethan: “I'm looking for more than something platonic. What is it that you have in mind?” He dodged, and she knew there was no future (he turned out to be unsure of his sexual orientation). Tina simply asked shy Serge on their third date, “Can I have a kiss?”; three years later they're still together. Jena, at 40, told first dates she wanted children soon; most ran, Nate found it refreshing, and they now have two. Either way, the response tells you more in five minutes than months of guessing.</p>
+    <div class="grid2">
+      <div class="card"><h3>Judging the response</h3>Does s/he try to get to the bottom of your concern, or dodge it? Take it seriously or belittle it? Try to make you feel better, or just defend? Answer only the facts “as in a court of law”, or also your feelings?</div>
+      <div class="card"><h3>When to use it</h3><b>Anxious:</b> the moment you're about to protest (silence, threats), but only once you've calmed down, which may take a day or two. <b>Avoidant:</b> when you feel the urge to bolt; ask for space, say it's your need in any relationship, and offer options that also look after your partner.</div>
+    </div>
+    <h3>The five principles</h3>
+    <ol class="list">
+      <li><b>Wear your heart on your sleeve.</b> Be emotionally brave and honest.</li>
+      <li><b>Focus on your needs</b>, with words like need, feel, want: “I need to feel confident in the relationship. When you chat up the waitress, I feel like I'm on thin ice.”</li>
+      <li><b>Be specific</b>: “When you don't stay the night…”</li>
+      <li><b>Don't blame.</b> Never make your partner feel selfish or inadequate, and talk when you're calm.</li>
+      <li><b>Be assertive and non-apologetic.</b> Your needs are valid, full stop.</li>
+    </ol>
+    <div class="tbl">
+      <div class="h no">Protest behaviour</div><div class="h">Effective communication</div>
+      <div class="no">He's swamped at work: call him every couple of hours.</div><div>“I miss you, and I'm finding your new schedule hard, even though I know it's temporary.”</div>
+      <div class="no">He keeps talking about his ex: call it pathetic, or mention your own exes.</div><div>“Talk about her makes me feel unsure where I stand, and I need to feel secure to be happy.”</div>
+      <div class="no">He always plans at the last minute: say you're busy, so he learns.</div><div>“Not knowing when I'll see you unsettles me; I'd like at least a rough plan ahead.”</div>
+      <div class="no">He vanished for days: when he calls, be “busy”. That'll show him.</div><div>“It hurts when you disappear. I need to be a priority whenever possible.”</div>
+    </div>
+    <div class="story"><b>Greg and the Fourth of July.</b> Hints (“I've had a few offers…”) only made Monique try to help him choose. The direct version, “I'd like to spend the Fourth together. Shall I join you, or would you like to come with my friends?”, got an instant yes: she simply hadn't thought he'd enjoy her high-school crowd. Many “Mirandize” their dates (“I'm not ready for commitment”); the authors suggest your own secure version: in love we put our soul in each other's hands for safekeeping.</div>
+  </section>
+
+  <section>
+    <p class="kick">Chapter 12 · Working things out</p>
+    <h2>Five secure principles for conflict</h2>
+    <p>All couples fight. What matters is how they fight and what about: everyday “bread-and-butter” disputes (which channel, Chinese or Indian) can build closeness, while intimacy-centred ones are the trap. Secure people's knack can be learned:</p>
+    <ol class="list">
+      <li><b>Show basic concern for the other's well-being.</b> Frank loves the family cottage in the Berkshires, Sandy hates the packing and the traffic. Each gives way when the other is struggling, because it isn't a zero-sum game.</li>
+      <li><b>Keep to the problem at hand.</b> Kelly assumed George hid another woman when he wouldn't invite her up; the next night he flung the door open: “Welcome, welcome, welcome!” It really was just a mess.</li>
+      <li><b>Don't generalise.</b> Terry and Alex have fought over the wrong pasta brand for 30 years, but never escalate to “I've had it with you”. (Better: she calls him at the store, or orders online.)</li>
+      <li><b>Be willing to engage</b>, physically and emotionally present, instead of digging in or walking away.</li>
+      <li><b>Communicate feelings and needs.</b> Not “You're selfish” but “I know you hate going to my sister's, but it would mean the world to me this once. I've hardly seen you all week.”</li>
+    </ol>
+    <p style="margin-top:14px">Biology helps: oxytocin, the “cuddle hormone”, boosts trust and cooperation, so the Sunday-morning cuddle you skip for work may be your best protection against conflict. In the middle of a fight, remember: a single fight doesn't end a relationship; voice your fear instead of acting it out; your partner's mood probably isn't about you; they can't read your mind; and when in doubt, ask. Expecting the worst becomes a self-fulfilling prophecy. Sometimes all it takes is a sincere apology, like Shannon's when she forgot to greet the sister-in-law who had babysat: “Did I really not even say hello? I'm so sorry.”</p>
+  </section>
+
+  <section>
+    <p class="kick">Epilogue</p>
+    <h2>Don't leave love to chance</h2>
+    <p>Even the authors fell for a film's free-spirited heroine who strings the hero along and then marries “the one”. Three myths were at work: that everyone has the same capacity for intimacy; that marriage transforms people; and that only you are responsible for your emotional needs. Seen through attachment, it's simply avoidant meets anxious, and the hero probably became her phantom ex.</p>
+    <div class="quote">A relationship, from an attachment perspective, should make you feel more self-confident and give you peace of mind. If it doesn't, this is a wake-up call!<small>Epilogue</small></div>
+
+    <div class="tool" id="quiz">
+      <h3>Where are you on the map?</h3>
+      <p style="margin:0 0 4px;font-size:17.5px">Ten statements written for this page along the book's two dimensions (not the book's own quiz). Rate each from 1 (not me) to 5 (very me), thinking of your romantic relationships. For a validated test, see Chris Fraley's online ECR-R.</p>
+      <div class="scale"><span>1 = not me</span><span>5 = very me</span></div>
+      <div id="qs"></div>
+      <div class="res" id="res">
+        <svg viewBox="0 0 220 220" aria-label="Your position on anxiety and avoidance">
+          <rect x="10" y="10" width="100" height="100" fill="var(--anxl)"/><rect x="110" y="10" width="100" height="100" fill="var(--soft)"/>
+          <rect x="10" y="110" width="100" height="100" fill="var(--secl)"/><rect x="110" y="110" width="100" height="100" fill="var(--avol)"/>
+          <text x="60" y="30" font-size="14" text-anchor="middle" fill="var(--anx)">Anxious</text><text x="160" y="30" font-size="12" text-anchor="middle">Both</text>
+          <text x="60" y="203" font-size="14" text-anchor="middle" fill="var(--sec)">Secure</text><text x="160" y="203" font-size="14" text-anchor="middle" fill="var(--avo)">Avoidant</text>
+          <circle id="dot" cx="110" cy="110" r="9" fill="var(--ink)" stroke="var(--bg)" stroke-width="3" opacity=".25"/>
+        </svg>
+        <div class="txt" id="txt">Rate all ten statements to see your position.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">Pocket version</p>
+    <h2>What to keep</h2>
+    <ol class="keep">
+      <li>Needing your partner is biology, not weakness: the dependency paradox makes you more independent.</li>
+      <li>Know the three styles (secure, anxious, avoidant), the two dimensions behind them, and your own place.</li>
+      <li>The master question about anyone: do they seek intimacy and closeness?</li>
+      <li>An activated attachment system is not love. Peace of mind is.</li>
+      <li>Anxious? Wait before reacting, avoid protest behaviour, date several people, and give secure ones time.</li>
+      <li>Avoidant? Spot your deactivating strategies, drop the phantom ex and “the one”, and practise gratitude.</li>
+      <li>Watch for smoking guns, and for becoming “the enemy” in someone's inner circle.</li>
+      <li>Use effective communication: honest, specific, need-focused, blame-free, unapologetic. Judge the response.</li>
+      <li>Fight securely: care for their well-being, stay on topic, don't generalise, stay engaged, say what you need.</li>
+      <li>Secure partners are the supermates; choosing one is not settling.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Summary of <em>Attached: The New Science of Adult Attachment and How It Can Help You Find—and Keep—Love</em> by Amir Levine and Rachel Heller (2010; new edition 2019). The two-dimension chart follows the book's diagram; the self-check statements were written for this page and are not a diagnostic test. Quotations are brief; stories condensed and paraphrased.</p>
+    <p>Related summaries:</p>
+    <div class="related"><a href="../seven-principles/">The Seven Principles for Making Marriage Work</a><a href="../laws-of-connection/">The Laws of Connection</a><a href="../platonic/">Platonic</a><a href="../nonviolent-communication/">Nonviolent Communication</a><a href="../difficult-conversations/">Difficult Conversations</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+var th=get('at-theme'); if(th) root.setAttribute('data-theme',th);
+document.getElementById('theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);set('at-theme',n);};
+
+/* a: anxiety item, v: avoidance item, r: reverse-scored */
+var Q=[["a","When my partner doesn't reply for a while, I start imagining what went wrong."],
+["v","When someone gets very close, part of me wants to step back."],
+["a","I often need reassurance that I'm loved."],
+["v","I prefer not to depend on a partner; I'd rather handle things myself."],
+["a","Small changes in my partner's mood can unsettle me for hours."],
+["v","After an intimate evening I sometimes feel a need for space."],
+["a","When I'm single I feel incomplete."],
+["v","I find it hard to share my deepest feelings."],
+["ar","Disagreements don't make me question the whole relationship."],
+["vr","I'm comfortable when a partner leans on me."]];
+var vals=new Array(Q.length).fill(0),box=document.getElementById('qs');
+Q.forEach(function(q,i){var d=document.createElement('div');d.className='qrow';d.innerHTML='<div>'+(i+1)+'. '+q[1]+'</div><div class="rt"></div>';var rt=d.querySelector('.rt');for(var v=1;v<=5;v++){(function(v){var b=document.createElement('button');b.type='button';b.textContent=v;b.setAttribute('aria-pressed','false');b.setAttribute('aria-label',v+' of 5');b.onclick=function(){vals[i]=v;[].forEach.call(rt.children,function(x,k){x.setAttribute('aria-pressed',k+1===v)});upd()};rt.appendChild(b)})(v)}box.appendChild(d)});
+var ADV={
+ secure:"<b>Mostly secure.</b> Closeness comes fairly easily and worry stays low. Keep it that way: choose partners who are consistent, and remember that being able to get along with anyone doesn't mean you have to.",
+ anxious:"<b>Leaning anxious.</b> Your attachment system is sensitive. Wait before you react, swap protest behaviour for effective communication, date with an abundance mindset, and give calm, secure people time to grow on you.",
+ avoidant:"<b>Leaning avoidant.</b> Closeness may trigger an urge for distance. Learn your deactivating strategies, keep a nightly gratitude list, let go of the phantom ex, and get close while doing things together.",
+ both:"<b>Anxious and avoidant both high.</b> You may long for closeness and fear it at once. The advice for both styles applies, and a secure partner or a therapist can be a real help."};
+function upd(){var a=0,na=0,v=0,nv=0;Q.forEach(function(q,i){if(!vals[i])return;var s=q[0].length>1?6-vals[i]:vals[i];if(q[0][0]==='a'){a+=s;na++}else{v+=s;nv++}});
+ var done=vals.every(Boolean),dot=document.getElementById('dot');
+ if(na&&nv){var ax=(v/nv-1)/4,ay=(a/na-1)/4;dot.setAttribute('cx',(10+ax*200).toFixed(1));dot.setAttribute('cy',(210-ay*200).toFixed(1));dot.setAttribute('opacity',done?'1':'.45')}
+ var t=document.getElementById('txt');
+ if(!done){t.textContent='Rate all ten statements to see your position ('+vals.filter(Boolean).length+'/10).';return}
+ var A=a/na,V=v/nv,k=A<3&&V<3?'secure':A>=3&&V<3?'anxious':A<3&&V>=3?'avoidant':'both';
+ t.innerHTML=ADV[k]+'<br><span style="color:var(--muted);font-size:16px">Anxiety '+A.toFixed(1)+' / 5 · Avoidance '+V.toFixed(1)+' / 5</span>'}
+})();
+</script>
+</body>
+</html>
